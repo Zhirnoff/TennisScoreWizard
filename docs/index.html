@@ -189,7 +189,7 @@ h2 {
   margin: 0 0 16px;
 }
 .section-subtitle {
-  max-width: 740px;
+  max-width: 760px;
   margin: -6px 0 22px;
   color: var(--muted);
   font-size: 16px;
@@ -403,13 +403,14 @@ footer {
     </div>
     <h1>Score your tennis match from your wrist.</h1>
     <p>
-      Tennis Score Wizard helps you score real tennis matches on Apple Watch with fast taps,
-      clear match status, and local match history.
+      Tennis Score Wizard helps you run a real tennis scoreboard on Apple Watch:
+      set up the match, pick the first server, score every point, undo mistakes,
+      stop unfinished matches, and review saved results later.
     </p>
     <div class="badges">
       <span class="badge">Singles & Doubles</span>
       <span class="badge">Best of 3 / Best of 5</span>
-      <span class="badge">Advantage or Tie-break sets</span>
+      <span class="badge">Coin toss server picker</span>
       <span class="badge">Serve-side guidance</span>
       <span class="badge">Undo & local history</span>
     </div>
@@ -428,19 +429,19 @@ footer {
   <div class="grid">
     <article class="card">
       <h3>Fast point input</h3>
-      <p>Tap your score or the opponent score directly. Large targets keep scoring quick during real rallies.</p>
+      <p>Tap your score or the opponent score directly. Large cards keep point tracking quick during rallies.</p>
     </article>
     <article class="card">
-      <h3>Flexible match setup</h3>
+      <h3>Flexible setup</h3>
       <p>Choose singles or doubles, Best of 3 or Best of 5, and advantage or tie-break set rules.</p>
     </article>
     <article class="card">
-      <h3>Smart match state</h3>
-      <p>The app tracks games, sets, tie-breaks, side-change hints, stopped matches, and finished results.</p>
+      <h3>First server picker</h3>
+      <p>Use the built-in coin toss flow to pick the first server before the match starts.</p>
     </article>
     <article class="card">
-      <h3>Local-first history</h3>
-      <p>Review previous matches without an account. Match history stays on your device.</p>
+      <h3>Local match history</h3>
+      <p>Finished and stopped matches are saved on your device, with no account required.</p>
     </article>
   </div>
 </section>
@@ -453,32 +454,32 @@ footer {
     <article class="screenshot-card">
       <img src="assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Match setup screen">
       <h3>Configurable setup</h3>
-      <p>Pick the match type, match length, set rule, and first server before the first point.</p>
+      <p>Select the match type, match length, set rule, and first server before scoring starts.</p>
     </article>
     <article class="screenshot-card">
       <img src="assets/02_live_match_scoring_40_30.png" alt="Live match scoring screen">
-      <h3>Large live scoreboard</h3>
-      <p>Score points from two large cards with current games, sets, server, and undo always close.</p>
+      <h3>Live scoreboard</h3>
+      <p>Track points from two large cards while games, sets, current server, and undo stay visible.</p>
     </article>
     <article class="screenshot-card">
       <img src="assets/03_live_match_serve_position_marker.png" alt="Serve position marker screen">
-      <h3>Serve-side guidance</h3>
-      <p>The glowing tennis ball in the header indicates the next serve side during normal games and tie-breaks.</p>
+      <h3>Serve-side marker</h3>
+      <p>The header ball highlights the next serve side for you or for the opponent, based on the current point.</p>
     </article>
     <article class="screenshot-card">
       <img src="assets/04_tiebreak_scoring_6_6.png" alt="Tie-break scoring screen">
-      <h3>Tie-break flow</h3>
-      <p>At 6–6, the app switches into tie-break scoring and keeps the side-change hint visible when needed.</p>
+      <h3>Tie-break mode</h3>
+      <p>At 6–6, tie-break scoring is shown clearly with side-change guidance when it is time to switch.</p>
     </article>
     <article class="screenshot-card">
       <img src="assets/05_match_finished_result.png" alt="Match finished screen">
-      <h3>Clear final result</h3>
-      <p>When the match is decided, the final result appears immediately with quick access to history or a new match.</p>
+      <h3>Final result</h3>
+      <p>When the match is decided, the app shows the winner, final sets, and quick actions for History or New.</p>
     </article>
     <article class="screenshot-card">
       <img src="assets/06_match_history_details.png" alt="Match history details screen">
-      <h3>Detailed history</h3>
-      <p>Open saved matches to review set scores, tie-break points, result status, and delete old records.</p>
+      <h3>Match details</h3>
+      <p>Review set scores, tie-break points, result status, and delete old records when needed.</p>
     </article>
   </div>
 </section>
@@ -486,28 +487,60 @@ footer {
   <h2>Quick help</h2>
   <div class="help">
     <div class="help-item">
-      <strong>How do I score a point?</strong>
-      <p>Tap your side when you win a point. Tap the opponent side when your opponent wins a point.</p>
+      <strong>How do I start a match?</strong>
+      <p>Choose Singles or Doubles, select Best of 3 or Best of 5, choose the set rule, then pick the first server manually or use the coin toss flow.</p>
+    </div>
+    <div class="help-item">
+      <strong>How do I score points?</strong>
+      <p>Tap your large score card when you win a point. Tap the opponent card when your opponent wins a point. The app updates points, games, sets, and tie-breaks automatically.</p>
+    </div>
+    <div class="help-item">
+      <strong>What does Menu do?</strong>
+      <p>Menu gives access to match actions such as stopping the current match, opening history, or starting a new match depending on the current match state.</p>
     </div>
     <div class="help-item">
       <strong>How does Undo work?</strong>
-      <p>Undo reverses the last scored point and restores the previous match state.</p>
+      <p>Undo reverses the last scored point and restores the previous match state, including points, games, sets, server, and serve position.</p>
     </div>
     <div class="help-item">
       <strong>How does the serve marker work?</strong>
       <p>When you serve, the tennis ball highlights the side you should serve from. When the opponent serves, it highlights the opponent’s serve side from your watch view.</p>
     </div>
     <div class="help-item">
-      <strong>How do tie-breaks work?</strong>
-      <p>If tie-break is enabled, a tie-break starts at 6–6 and is played to 7 points, win by 2.</p>
+      <strong>What happens in a tie-break?</strong>
+      <p>If tie-break is enabled, a tie-break starts at 6–6 and is played to 7 points, win by 2. The serve-side marker continues to follow tie-break point order.</p>
+    </div>
+  </div>
+</section>
+<section id="history-help">
+  <h2>Understanding match history</h2>
+  <p class="section-subtitle">
+    Saved matches use compact tennis notation so results stay readable on Apple Watch.
+  </p>
+  <div class="help">
+    <div class="help-item">
+      <strong>What do Win and Loss mean?</strong>
+      <p>Win means you won the completed match by sets. Loss means the opponent won the completed match by sets.</p>
     </div>
     <div class="help-item">
-      <strong>What happens if I stop a match?</strong>
-      <p>Stopped matches are saved with completed sets and the current unfinished set, so the history keeps the real match context.</p>
+      <strong>What does Stopped mean?</strong>
+      <p>Stopped means the match was saved before normal completion. The app keeps the completed sets and also saves the current unfinished set if it had progress.</p>
     </div>
     <div class="help-item">
-      <strong>Where is my data stored?</strong>
-      <p>Match history is stored locally on your device. The app does not require an account or login.</p>
+      <strong>What are S1, S2, and S3?</strong>
+      <p>S1, S2, and S3 mean Set 1, Set 2, and Set 3. For example, S1 6–3 means the first set ended 6 games to 3.</p>
+    </div>
+    <div class="help-item">
+      <strong>What does TB 7–3 mean?</strong>
+      <p>TB shows the tie-break points inside a 7–6 set. For example, 7–6 · TB 7–3 means the set was won 7–6 and the tie-break points were 7–3.</p>
+    </div>
+    <div class="help-item">
+      <strong>How are stopped matches evaluated?</strong>
+      <p>If a stopped match has a clear set lead, history shows who was leading by sets. If sets are equal, the app compares games and then tie-break points where available.</p>
+    </div>
+    <div class="help-item">
+      <strong>Where is match history stored?</strong>
+      <p>Match history is stored locally on your device. Tennis Score Wizard does not require an account, login, or internet connection for scoring.</p>
     </div>
   </div>
 </section>
