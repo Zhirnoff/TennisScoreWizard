@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tennis Score Wizard — Support</title>
+  <meta name="description" content="Tennis Score Wizard support page. Learn how to track tennis points, games, sets, tie-breaks, serve position, and match history on Apple Watch.">
+  <style>
+    :root {
+      --bg: #050505;
+      --card: #111114;
+      --card2: #17171c;
+      --text: #ffffff;
+      --muted: #a1a1aa;
+      --line: rgba(255,255,255,0.12);
+      --green: #79ff14;
+      --green2: #38e000;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(121,255,20,0.16), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(56,224,0,0.10), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 56px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 56px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .ball {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 34% 28%, #eaff1f, #8cff00 45%, #2a8d00 100%);
+      box-shadow: 0 0 18px rgba(121,255,20,0.35);
+      position: relative;
+    }
+
+    .ball::after {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      border-left: 2px solid rgba(255,255,255,0.75);
+      border-right: 2px solid rgba(255,255,255,0.75);
+      transform: rotate(-28deg);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.94;
+      letter-spacing: -0.065em;
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .badge {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+      color: #e7e7ea;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .watch-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      border-radius: 34px;
+      padding: 24px;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.40);
+    }
+
+    .watch-screen {
+      width: 190px;
+      height: 230px;
+      border-radius: 44px;
+      background: #000;
+      border: 8px solid #24242a;
+      padding: 22px 16px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08), 0 18px 50px rgba(0,0,0,0.55);
+    }
+
+    .mini-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .mini-score {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .tile {
+      height: 72px;
+      border-radius: 14px;
+      background: linear-gradient(#202026, #09090b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: 900;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tile::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    .mini-labels {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    section {
+      margin-top: 42px;
+    }
+
+    h2 {
+      font-size: 28px;
+      letter-spacing: -0.035em;
+      margin: 0 0 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--card2), var(--card));
+      border-radius: 22px;
+      padding: 20px;
+      min-height: 150px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      letter-spacing: -0.02em;
+    }
+
+    .card p,
+    .faq p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .help {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .help-item,
+    .faq {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.045);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .help-item strong,
+    .faq strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .privacy-box {
+      border: 1px solid rgba(121,255,20,0.25);
+      background: rgba(121,255,20,0.07);
+      border-radius: 22px;
+      padding: 20px;
+      color: #eaffdf;
+    }
+
+    .privacy-box p {
+      color: #d8f7d0;
+      margin: 8px 0 0;
+    }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: min(100% - 24px, 1080px);
+        padding-top: 28px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 36px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .grid,
+      .help {
+        grid-template-columns: 1fr;
+      }
+
+      .watch-card {
+        min-height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="nav">
+      <div class="brand">
+        <span class="ball" aria-hidden="true"></span>
+        <span>Tennis Score Wizard</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#help">Help</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <h1>Apple Watch tennis scoring made simple.</h1>
+        <p>
+          Track points, games, sets, tie-breaks, serve position, and match history directly from your wrist.
+          Built for quick use during real tennis matches.
+        </p>
+
+        <div class="badges">
+          <span class="badge">Singles & Doubles</span>
+          <span class="badge">Best of 3 / Best of 5</span>
+          <span class="badge">Tie-break support</span>
+          <span class="badge">Local match history</span>
+        </div>
+      </div>
+
+      <div class="watch-card" aria-label="Apple Watch score preview">
+        <div class="watch-screen">
+          <div class="mini-top">
+            <span>Set 3</span>
+            <span>3–2</span>
+          </div>
+
+          <div class="mini-score">
+            <div class="tile">40</div>
+            <div class="tile">30</div>
+          </div>
+
+          <div class="mini-labels">
+            <span>You</span>
+            <span>Opponent</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What it does</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Live scoring</h3>
+          <p>Large tappable score areas make it fast to track every point during a match.</p>
+        </article>
+
+        <article class="card">
+          <h3>Real tennis rules</h3>
+          <p>Games, sets, advantage scoring, tie-break at 6–6, Best of 3, and Best of 5.</p>
+        </article>
+
+        <article class="card">
+          <h3>Serve position</h3>
+          <p>A small tennis ball marker shows where the next serve should start.</p>
+        </article>
+
+        <article class="card">
+          <h3>Match history</h3>
+          <p>Finished and stopped matches are saved locally on your Apple Watch.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="help">
+      <h2>Quick help</h2>
+
+      <div class="help">
+        <div class="help-item">
+          <strong>How do I score a point?</strong>
+          <p>Tap your side when you win a point. Tap the opponent side when your opponent wins a point.</p>
+        </div>
+
+        <div class="help-item">
+          <strong>How does Undo work?</strong>
+          <p>Undo reverses the last scored point and restores the previous match state.</p>
+        </div>
+
+        <div class="help-item">
+          <strong>What does the tennis ball mean?</strong>
+          <p>The tennis ball marker shows the serve position for the next point.</p>
+        </div>
+
+        <div class="help-item">
+          <strong>How do tie-breaks work?</strong>
+          <p>If tie-break is enabled, a tie-break starts at 6–6 and is played to 7 points, win by 2.</p>
+        </div>
+
+        <div class="help-item">
+          <strong>Can I stop a match?</strong>
+          <p>Yes. If you stop a match before it is completed, the current unfinished set is saved in match history.</p>
+        </div>
+
+        <div class="help-item">
+          <strong>Can I use it for doubles?</strong>
+          <p>Yes. Select Singles or Doubles before starting the match.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+
+      <div class="help">
+        <div class="faq">
+          <strong>Does the app collect data?</strong>
+          <p>No. Match history is stored locally on your device.</p>
+        </div>
+
+        <div class="faq">
+          <strong>Does it require an account?</strong>
+          <p>No. Tennis Score Wizard does not require login or registration.</p>
+        </div>
+
+        <div class="faq">
+          <strong>Can I play without a tie-break?</strong>
+          <p>Yes. Choose No Tie-break during setup.</p>
+        </div>
+
+        <div class="faq">
+          <strong>Can I delete match history?</strong>
+          <p>Yes. Saved matches can be deleted from the history screen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+
+      <div class="privacy-box">
+        <strong>Tennis Score Wizard does not collect personal data.</strong>
+        <p>Match history is stored locally on your device. The app does not require an account and does not transmit, sell, or share personal data.</p>
+        <p><a href="privacy.html">Read the Privacy Policy</a></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Support</h2>
+
+      <div class="card">
+        <h3>Need help or want to suggest a feature?</h3>
+        <p>
+          Contact:
+          <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Tennis Score Wizard</span>
+      <span>Apple Watch is a trademark of Apple Inc.</span>
+    </footer>
+  </main>
+</body>
+</html>
