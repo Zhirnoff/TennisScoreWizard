@@ -9,21 +9,18 @@
   <style>
     :root {
       --bg: #000000;
-      --bg-soft: #050705;
       --panel: #0b0d0b;
       --panel-2: #111511;
-      --panel-3: #171c17;
       --text: #ffffff;
-      --muted: #9b9ba3;
-      --muted-2: #6f7178;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
       --line: rgba(255,255,255,0.12);
-      --line-green: rgba(40, 255, 92, 0.35);
+      --line-green: rgba(40,255,95,0.34);
       --green: #28ff5f;
       --green-2: #00d84a;
-      --green-dark: #06240f;
+      --green-soft: rgba(40,255,95,0.10);
       --yellow: #ffe34d;
       --red: #ff4b55;
-      --shadow: rgba(0,0,0,0.72);
     }
 * {
   box-sizing: border-box;
@@ -37,10 +34,10 @@ body {
   color: var(--text);
   line-height: 1.55;
   background:
-    radial-gradient(circle at 18% 0%, rgba(40,255,95,0.18), transparent 30rem),
-    radial-gradient(circle at 88% 18%, rgba(120,255,20,0.11), transparent 28rem),
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
     radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
-    linear-gradient(180deg, #000000 0%, #020402 46%, #000000 100%);
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
   min-height: 100vh;
 }
 a {
@@ -61,12 +58,12 @@ a:hover {
   align-items: center;
   gap: 18px;
   padding: 14px 16px;
-  margin-bottom: 44px;
+  margin-bottom: 52px;
   border: 1px solid var(--line);
   border-radius: 28px;
   background:
     linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
-    rgba(5,7,5,0.82);
+    rgba(5,7,5,0.84);
   backdrop-filter: blur(18px);
   box-shadow: 0 24px 70px rgba(0,0,0,0.32);
 }
@@ -101,10 +98,10 @@ a:hover {
 }
 .hero {
   display: grid;
-  grid-template-columns: 0.98fr 1.02fr;
-  gap: 38px;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 66px;
 }
 .eyebrow {
   display: inline-flex;
@@ -129,7 +126,7 @@ a:hover {
 }
 h1 {
   margin: 0;
-  max-width: 720px;
+  max-width: 740px;
   font-size: clamp(46px, 7.4vw, 88px);
   line-height: 0.91;
   letter-spacing: -0.078em;
@@ -157,35 +154,34 @@ h1 {
 }
 .hero-visual {
   position: relative;
-  min-height: 560px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.hero-ball {
-  position: absolute;
-  width: min(500px, 80vw);
-  height: min(500px, 80vw);
-  object-fit: cover;
-  border-radius: 118px;
-  opacity: 0.92;
-  filter: saturate(1.2) contrast(1.05);
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
   box-shadow:
     0 42px 130px rgba(0,0,0,0.72),
     0 0 90px rgba(40,255,95,0.16);
 }
-.hero-shot {
-  position: relative;
-  width: min(280px, 58vw);
-  border-radius: 42px;
-  transform: translateY(34px);
-  box-shadow:
-    0 34px 110px rgba(0,0,0,0.82),
-    0 0 0 1px rgba(255,255,255,0.12),
-    0 0 52px rgba(40,255,95,0.16);
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
 }
 section {
-  margin-top: 58px;
+  margin-top: 60px;
 }
 h2 {
   font-size: 32px;
@@ -331,7 +327,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .hero-visual {
-    min-height: 470px;
+    min-height: 420px;
   }
   .grid {
     grid-template-columns: 1fr 1fr;
@@ -365,17 +361,16 @@ footer {
     font-size: 18px;
   }
   .hero-visual {
-    min-height: 380px;
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
   }
   .hero-ball {
-    width: min(340px, 88vw);
-    height: min(340px, 88vw);
-    border-radius: 78px;
-  }
-  .hero-shot {
-    width: min(220px, 58vw);
-    border-radius: 32px;
-    transform: translateY(26px);
+    border-radius: 66px;
   }
   .grid,
   .help,
@@ -408,81 +403,82 @@ footer {
     </div>
     <h1>Score your tennis match from your wrist.</h1>
     <p>
-      Tennis Score Wizard helps you track points, games, sets, tie-breaks, serve position,
-      and match history directly on Apple Watch.
+      Tennis Score Wizard helps you score real tennis matches on Apple Watch with fast taps,
+      clear match status, and local match history.
     </p>
     <div class="badges">
       <span class="badge">Singles & Doubles</span>
       <span class="badge">Best of 3 / Best of 5</span>
-      <span class="badge">Tie-break support</span>
-      <span class="badge">Serve position marker</span>
-      <span class="badge">Local match history</span>
+      <span class="badge">Advantage or Tie-break sets</span>
+      <span class="badge">Serve-side guidance</span>
+      <span class="badge">Undo & local history</span>
     </div>
   </div>
-  <div class="hero-visual" aria-label="Tennis Score Wizard preview">
-    <img class="hero-ball" src="assets/tennis_ball_app_icon_1024.png" alt="">
-    <img class="hero-shot" src="assets/02_live_match_scoring_40_30.png" alt="Live match scoring screen on Apple Watch">
+  <div class="hero-visual" aria-label="Tennis Score Wizard app icon">
+    <div class="hero-ball-frame">
+      <img class="hero-ball" src="assets/tennis_ball_app_icon_1024.png" alt="">
+    </div>
   </div>
 </section>
 <section id="features">
   <h2>Built for real matches</h2>
   <p class="section-subtitle">
-    Fast controls, readable scoring, and real tennis logic designed for quick use during play.
+    A compact watch-first scoring flow for players who need quick controls during play.
   </p>
   <div class="grid">
     <article class="card">
-      <h3>Live scoring</h3>
-      <p>Large tappable score areas make it fast to track every point during a match.</p>
+      <h3>Fast point input</h3>
+      <p>Tap your score or the opponent score directly. Large targets keep scoring quick during real rallies.</p>
     </article>
     <article class="card">
-      <h3>Real tennis rules</h3>
-      <p>Games, sets, advantage scoring, tie-break at 6–6, Best of 3, and Best of 5.</p>
+      <h3>Flexible match setup</h3>
+      <p>Choose singles or doubles, Best of 3 or Best of 5, and advantage or tie-break set rules.</p>
     </article>
     <article class="card">
-      <h3>Serve position</h3>
-      <p>A tennis ball marker shows where the next serve should start.</p>
+      <h3>Smart match state</h3>
+      <p>The app tracks games, sets, tie-breaks, side-change hints, stopped matches, and finished results.</p>
     </article>
     <article class="card">
-      <h3>Match history</h3>
-      <p>Finished and stopped matches are saved locally on your Apple Watch.</p>
+      <h3>Local-first history</h3>
+      <p>Review previous matches without an account. Match history stays on your device.</p>
     </article>
   </div>
 </section>
 <section id="screenshots">
   <h2>Screenshots</h2>
   <p class="section-subtitle">
-    Setup, live scoring, tie-breaks, finished matches, and match history.
+    Key screens from setup to match history.
   </p>
   <div class="screenshots">
     <article class="screenshot-card">
       <img src="assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Match setup screen">
-      <h3>Match setup</h3>
-      <p>Choose singles or doubles, match length, set rule, and first server.</p>
+      <h3>Configurable setup</h3>
+      <p>Pick the match type, match length, set rule, and first server before the first point.</p>
     </article>
     <article class="screenshot-card">
       <img src="assets/02_live_match_scoring_40_30.png" alt="Live match scoring screen">
-      <h3>Live scoring</h3>
-      <p>Track points, games, sets, and serve position during the match.</p>
+      <h3>Large live scoreboard</h3>
+      <p>Score points from two large cards with current games, sets, server, and undo always close.</p>
     </article>
     <article class="screenshot-card">
       <img src="assets/03_live_match_serve_position_marker.png" alt="Serve position marker screen">
-      <h3>Serve position</h3>
-      <p>The tennis ball marker helps show where the next serve should start.</p>
+      <h3>Serve-side guidance</h3>
+      <p>The glowing tennis ball in the header indicates the next serve side during normal games and tie-breaks.</p>
     </article>
     <article class="screenshot-card">
       <img src="assets/04_tiebreak_scoring_6_6.png" alt="Tie-break scoring screen">
-      <h3>Tie-breaks</h3>
-      <p>Play tie-breaks at 6–6, to 7 points, win by 2.</p>
+      <h3>Tie-break flow</h3>
+      <p>At 6–6, the app switches into tie-break scoring and keeps the side-change hint visible when needed.</p>
     </article>
     <article class="screenshot-card">
       <img src="assets/05_match_finished_result.png" alt="Match finished screen">
-      <h3>Match finished</h3>
-      <p>Finished matches show the final result and set scores.</p>
+      <h3>Clear final result</h3>
+      <p>When the match is decided, the final result appears immediately with quick access to history or a new match.</p>
     </article>
     <article class="screenshot-card">
       <img src="assets/06_match_history_details.png" alt="Match history details screen">
-      <h3>Match history</h3>
-      <p>Review saved matches, set scores, and previous results.</p>
+      <h3>Detailed history</h3>
+      <p>Open saved matches to review set scores, tie-break points, result status, and delete old records.</p>
     </article>
   </div>
 </section>
@@ -498,20 +494,20 @@ footer {
       <p>Undo reverses the last scored point and restores the previous match state.</p>
     </div>
     <div class="help-item">
-      <strong>What does the tennis ball mean?</strong>
-      <p>The tennis ball marker shows the serve position for the next point.</p>
+      <strong>How does the serve marker work?</strong>
+      <p>When you serve, the tennis ball highlights the side you should serve from. When the opponent serves, it highlights the opponent’s serve side from your watch view.</p>
     </div>
     <div class="help-item">
       <strong>How do tie-breaks work?</strong>
       <p>If tie-break is enabled, a tie-break starts at 6–6 and is played to 7 points, win by 2.</p>
     </div>
     <div class="help-item">
-      <strong>Can I stop a match?</strong>
-      <p>Yes. If you stop a match before it is completed, the current unfinished set is saved in match history.</p>
+      <strong>What happens if I stop a match?</strong>
+      <p>Stopped matches are saved with completed sets and the current unfinished set, so the history keeps the real match context.</p>
     </div>
     <div class="help-item">
-      <strong>Can I use it for doubles?</strong>
-      <p>Yes. Select Singles or Doubles before starting the match.</p>
+      <strong>Where is my data stored?</strong>
+      <p>Match history is stored locally on your device. The app does not require an account or login.</p>
     </div>
   </div>
 </section>
@@ -523,12 +519,12 @@ footer {
       <p>No. Match history is stored locally on your device.</p>
     </div>
     <div class="faq">
-      <strong>Does it require an account?</strong>
-      <p>No. Tennis Score Wizard does not require login or registration.</p>
+      <strong>Can I use it for doubles?</strong>
+      <p>Yes. Select Doubles during setup before starting the match.</p>
     </div>
     <div class="faq">
       <strong>Can I play without a tie-break?</strong>
-      <p>Yes. Choose No Tie-break during setup.</p>
+      <p>Yes. Choose No Tie-break during setup to play an advantage set.</p>
     </div>
     <div class="faq">
       <strong>Can I delete match history?</strong>
