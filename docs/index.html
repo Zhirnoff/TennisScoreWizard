@@ -137,6 +137,60 @@ h1 {
   color: var(--muted);
   font-size: 20px;
 }
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
 .badges {
   display: flex;
   flex-wrap: wrap;
@@ -564,6 +618,13 @@ footer {
       set up the match, pick the first server, score every point, undo mistakes,
       stop unfinished matches, and review saved results later.
     </p>
+    <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="Download on the App Store">
+      <span class="app-store-logo"></span>
+      <span class="app-store-text">
+        <small>Download on the</small>
+        <strong>App Store</strong>
+      </span>
+    </a>
     <div class="badges">
       <span class="badge">Singles & Doubles</span>
       <span class="badge">Best of 3 / Best of 5</span>
