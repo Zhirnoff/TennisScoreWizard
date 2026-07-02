@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tennis Score Wizard — Поддержка</title>
-  <meta name="description" content="Страница поддержки Tennis Score Wizard. Узнайте, как вести счёт в теннисе на Apple Watch: очки, геймы, сеты, тай-брейки, сторону подачи и историю матчей.">
+  <meta name="description" content="Страница поддержки Tennis Score Wizard. Ведите реальный теннисный счёт на Apple Watch с тренировками Apple Health, пульсом, tie-break, подсказкой подачи, сменой подающего, Undo и локальной историей.">
   <style>
     :root {
       --bg: #000000;
@@ -310,6 +310,31 @@ h2 {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
 }
 .help {
   display: grid;
@@ -638,13 +663,11 @@ footer {
   <div class="hero-copy">
     <div class="eyebrow">
       <span class="eyebrow-dot"></span>
-      Теннисный счёт на Apple Watch
+      Теннисный счёт + тренировки на Apple Watch
     </div>
     <h1>Ведите счёт теннисного матча с запястья.</h1>
     <p>
-      Tennis Score Wizard помогает вести настоящий теннисный счёт на Apple Watch:
-      настройте формат матча, выберите первого подающего, считайте каждое очко, отменяйте ошибки,
-      останавливайте незавершённые матчи и позже просматривайте сохранённые результаты.
+      Tennis Score Wizard превращает Apple Watch в быстрый теннисный счётчик для реальных матчей. Отслеживайте очки, геймы, сеты, tie-break, порядок подачи, сторону подачи, время тренировки, пульс и локальную историю матчей без телефона.
     </p>
     <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="Скачать в App Store">
       <span class="app-store-logo"></span>
@@ -656,8 +679,9 @@ footer {
     <div class="badges">
       <span class="badge">Одиночная и парная игра</span>
       <span class="badge">Best of 3 / Best of 5</span>
-      <span class="badge">Выбор подачи через жребий</span>
-      <span class="badge">Подсказка стороны подачи</span>
+      <span class="badge">Тренировки Apple Health</span>
+      <span class="badge">Пульс во время матча</span>
+      <span class="badge">Смена подающего</span>
       <span class="badge">Undo и локальная история</span>
     </div>
   </div>
@@ -668,64 +692,73 @@ footer {
   </div>
 </section>
 <section id="features">
-  <h2>Сделано для реальных матчей</h2>
+  <h2>Сделано для реальных теннисных матчей</h2>
   <p class="section-subtitle">
-    Компактный сценарий для Apple Watch, когда во время игры нужны быстрые и понятные действия.
+    Интерфейс для Apple Watch: быстрые действия, корректные теннисные правила и полезная история матчей прямо во время игры.
   </p>
   <div class="grid">
     <article class="card">
-      <h3>Быстрый ввод очков</h3>
-      <p>Нажимайте прямо на свой счёт или счёт соперника. Большие карточки помогают быстро вести счёт во время игры.</p>
+      <h3>Настоящий теннисный счёт</h3>
+      <p>Автоматически ведите 0–15–30–40, deuce, advantage, геймы, сеты и tie-break через большие кнопки счёта.</p>
     </article>
     <article class="card">
-      <h3>Гибкая настройка</h3>
-      <p>Выберите одиночную или парную игру, Best of 3 или Best of 5, а также правила сета: advantage или tie-break.</p>
+      <h3>Запись тренировки</h3>
+      <p>При желании записывайте теннисный матч как тренировку Apple Health и смотрите время тренировки во время игры.</p>
     </article>
     <article class="card">
-      <h3>Выбор первого подающего</h3>
-      <p>Используйте встроенный жребий, чтобы выбрать первого подающего перед началом матча.</p>
+      <h3>Пульс в реальном времени</h3>
+      <p>Если разрешение Apple Health выдано, приложение может показывать текущий пульс во время записываемого матча.</p>
     </article>
     <article class="card">
-      <h3>Локальная история матчей</h3>
-      <p>Завершённые и остановленные матчи сохраняются на устройстве. Аккаунт не нужен.</p>
+      <h3>Контроль матча</h3>
+      <p>Используйте жребий для выбора подачи, подсказку стороны подачи, Switch Server, Undo, автофиниш матча и локальную историю.</p>
     </article>
   </div>
 </section>
 <section id="screenshots">
   <h2>Скриншоты</h2>
   <p class="section-subtitle">
-    Ключевые экраны: от настройки матча до истории.
+    Полный сценарий матча: настройка, запись тренировки, живой счёт, tie-break, завершение матча и подробная история.
   </p>
   <div class="screenshots">
-    <article class="screenshot-card">
-      <img src="../assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Match setup screen">
-      <h3>Настройка матча</h3>
-      <p>Выберите тип матча, формат, правило сета и первого подающего до начала счёта.</p>
+    <article class="screenshot-card wide">
+      <div class="screenshot-pair">
+        <img src="../assets/07_match_setup_options.png" alt="Параметры настройки матча">
+        <img src="../assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Настройка тренировки и первого подающего">
+      </div>
+      <h3>Настройка и тренировка</h3>
+      <p>Выберите одиночный или парный матч, длину матча, правило сета, первого подающего, жребий и необязательную запись тренировки Apple Health.</p>
+    </article>
+    <article class="screenshot-card wide">
+      <div class="screenshot-pair">
+        <img src="../assets/02_live_match_scoring_40_30.png" alt="Живой счёт с пульсом">
+        <img src="../assets/03_live_match_serve_position_marker.png" alt="Живой счёт tie-break с пульсом">
+      </div>
+      <h3>Живой счёт и tie-break</h3>
+      <p>Считайте очки большими кнопками, пока на экране остаются геймы, сеты, подающий, сторона подачи, Undo, статус тренировки и пульс.</p>
     </article>
     <article class="screenshot-card">
-      <img src="../assets/02_live_match_scoring_40_30.png" alt="Live match scoring screen">
-      <h3>Живой счёт</h3>
-      <p>Ведите очки с двух больших карточек, при этом геймы, сеты, текущий подающий и Undo остаются видимыми.</p>
+      <img src="../assets/04_tiebreak_scoring_6_6.png" alt="Матч завершён и сохранён в Health">
+      <h3>Финиш и сохранение</h3>
+      <p>Когда матч завершён, приложение показывает победителя, счёт по сетам и статус сохранения тренировки в Apple Health.</p>
     </article>
     <article class="screenshot-card">
-      <img src="../assets/03_live_match_serve_position_marker.png" alt="Serve position marker screen">
-      <h3>Индикатор стороны подачи</h3>
-      <p>Мяч в заголовке показывает сторону следующей подачи для вас или соперника с учётом текущего счёта.</p>
+      <img src="../assets/05_match_finished_result.png" alt="Обзор истории матчей">
+      <h3>Обзор истории</h3>
+      <p>Смотрите победы, поражения, остановленные матчи, процент побед и последние сохранённые матчи прямо на Apple Watch.</p>
     </article>
-    <article class="screenshot-card">
-      <img src="../assets/04_tiebreak_scoring_6_6.png" alt="Tie-break scoring screen">
-      <h3>Режим tie-break</h3>
-      <p>При 6–6 счёт tie-break отображается понятно, а приложение подсказывает смену сторон, когда это нужно.</p>
-    </article>
-    <article class="screenshot-card">
-      <img src="../assets/05_match_finished_result.png" alt="Match finished screen">
-      <h3>Итоговый результат</h3>
-      <p>Когда матч завершён, приложение показывает победителя, итог по сетам и быстрые действия: History или New.</p>
-    </article>
-    <article class="screenshot-card">
-      <img src="../assets/06_match_history_details.png" alt="Match history details screen">
+    <article class="screenshot-card wide">
+      <div class="screenshot-pair">
+        <img src="../assets/06_match_history_details.png" alt="Детали матча со статусом тренировки">
+        <img src="../assets/08_match_sets_detail.png" alt="Счёт по сетам в деталях матча">
+      </div>
       <h3>Детали матча</h3>
-      <p>Просматривайте счёт по сетам, очки tie-break, статус результата и удаляйте старые записи при необходимости.</p>
+      <p>Откройте сохранённый матч, чтобы посмотреть результат, геймы, длительность, время начала и окончания, статус Health-тренировки и счёт по сетам.</p>
+    </article>
+    <article class="screenshot-card">
+      <img src="../assets/09_tiebreak_sets_detail.png" alt="Детали сетов с tie-break">
+      <h3>Детали tie-break</h3>
+      <p>Для сетов 7–6 история сохраняет очки tie-break, чтобы было видно, как именно закончился каждый tie-break.</p>
     </article>
   </div>
 </section>
@@ -734,27 +767,27 @@ footer {
   <div class="help">
     <div class="help-item">
       <strong>Как начать матч?</strong>
-      <p>Выберите Singles или Doubles, затем Best of 3 или Best of 5, правило сета и первого подающего вручную или через жребий.</p>
+      <p>Выберите Singles или Doubles, Best of 3 или Best of 5, правило сета, первого подающего вручную или через жребий, затем начните счёт.</p>
     </div>
     <div class="help-item">
-      <strong>Как считать очки?</strong>
-      <p>Нажмите на свою большую карточку, когда выиграли очко. Нажмите на карточку соперника, когда очко выиграл соперник. Приложение автоматически обновляет очки, геймы, сеты и tie-break.</p>
+      <strong>Как записать тренировку?</strong>
+      <p>Включите Record Workout при настройке. Если вы дадите разрешение Apple Health, матч можно записать как теннисную тренировку и сохранить в Apple Health.</p>
+    </div>
+    <div class="help-item">
+      <strong>Как работает пульс?</strong>
+      <p>Пульс отображается во время записываемой тренировки, если Apple Health разрешён и Apple Watch предоставляет данные пульса.</p>
     </div>
     <div class="help-item">
       <strong>Что делает Menu?</strong>
-      <p>Во время матча Menu открывает действия: остановить незавершённый матч, открыть историю или начать новый матч. Завершённые матчи определяются автоматически, когда выиграно нужное число сетов.</p>
-    </div>
-    <div class="help-item">
-      <strong>Как сохраняются завершённые матчи?</strong>
-      <p>Когда одна сторона выигрывает нужное число сетов, приложение автоматически показывает Match Finished и сохраняет результат в History. Завершённый матч не нужно закрывать вручную.</p>
+      <p>Во время матча Menu открывает действия: Switch Server, остановить незавершённый матч, открыть историю или начать новый матч.</p>
     </div>
     <div class="help-item">
       <strong>Как работает Undo?</strong>
-      <p>Undo отменяет последнее засчитанное очко и возвращает предыдущее состояние матча: очки, геймы, сеты, подающего и сторону подачи.</p>
+      <p>Undo отменяет последнее очко и восстанавливает предыдущее состояние: очки, геймы, сеты, подающего, сторону подачи и tie-break.</p>
     </div>
     <div class="help-item">
       <strong>Как работает индикатор подачи?</strong>
-      <p>Когда подаёте вы, теннисный мяч показывает сторону вашей подачи. Когда подаёт соперник, он показывает сторону подачи соперника с точки зрения ваших часов.</p>
+      <p>Когда подаёте вы, мяч показывает сторону вашей подачи. Когда подаёт соперник, он показывает сторону подачи соперника с вашей точки зрения.</p>
     </div>
   </div>
 </section>
@@ -795,15 +828,15 @@ footer {
   <div class="help">
     <div class="faq">
       <strong>Приложение собирает данные?</strong>
-      <p>Нет. История матчей хранится локально на вашем устройстве.</p>
+      <p>Нет. История матчей хранится локально на устройстве. Аккаунт не нужен, история матчей не отправляется на сервер.</p>
     </div>
     <div class="faq">
-      <strong>Можно использовать для парной игры?</strong>
-      <p>Да. Выберите Doubles во время настройки перед началом матча.</p>
+      <strong>Apple Health обязательно включать?</strong>
+      <p>Нет. Доступ к Health необязателен. Можно вести счёт матчей без записи тренировки.</p>
     </div>
     <div class="faq">
-      <strong>Можно играть без tie-break?</strong>
-      <p>Да. Выберите No Tie-break во время настройки, чтобы играть advantage set.</p>
+      <strong>Можно играть в doubles и tie-break?</strong>
+      <p>Да. Приложение поддерживает одиночные и парные матчи, Best of 3, Best of 5, advantage sets и tie-break sets.</p>
     </div>
     <div class="faq">
       <strong>Можно удалить историю матчей?</strong>
@@ -815,8 +848,9 @@ footer {
   <h2>Конфиденциальность</h2>
   <div class="privacy-box">
     <strong>Tennis Score Wizard не собирает персональные данные.</strong>
-    <p>История матчей хранится локально на вашем устройстве. Приложению не нужен аккаунт, и оно не передаёт, не продаёт и не раскрывает персональные данные.</p>
-    <p><a href="privacy.html">Читать Политику конфиденциальности</a></p>
+    <p>История матчей хранится локально на устройстве. Приложение не требует аккаунта и не передаёт, не продаёт и не раскрывает персональные данные.</p>
+    <p>Доступ к Apple Health необязателен и используется только для записи теннисных тренировок и показа пульса во время записываемых матчей.</p>
+    <p><a href="privacy.html">Открыть политику конфиденциальности</a></p>
   </div>
 </section>
 <section id="contact">

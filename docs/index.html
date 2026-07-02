@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tennis Score Wizard — Support</title>
-  <meta name="description" content="Tennis Score Wizard support page. Learn how to track tennis points, games, sets, tie-breaks, serve position, and match history on Apple Watch.">
+  <meta name="description" content="Tennis Score Wizard support page. Track real tennis scoring on Apple Watch with Apple Health workouts, live heart rate, tie-breaks, serve guidance, server switching, undo, and local match history.">
   <style>
     :root {
       --bg: #000000;
@@ -310,6 +310,31 @@ h2 {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
 }
 .help {
   display: grid;
@@ -638,13 +663,11 @@ footer {
   <div class="hero-copy">
     <div class="eyebrow">
       <span class="eyebrow-dot"></span>
-      Apple Watch tennis scoring
+      Apple Watch tennis scoring + workouts
     </div>
     <h1>Score your tennis match from your wrist.</h1>
     <p>
-      Tennis Score Wizard helps you run a real tennis scoreboard on Apple Watch:
-      set up the match, pick the first server, score every point, undo mistakes,
-      stop unfinished matches, and review saved results later.
+      Tennis Score Wizard turns Apple Watch into a fast tennis scoreboard for real matches. Track points, games, sets, tie-breaks, server order, serve position, workout time, live heart rate, and local match history without taking out your phone.
     </p>
     <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="Download on the App Store">
       <span class="app-store-logo"></span>
@@ -656,8 +679,9 @@ footer {
     <div class="badges">
       <span class="badge">Singles & Doubles</span>
       <span class="badge">Best of 3 / Best of 5</span>
-      <span class="badge">Coin toss server picker</span>
-      <span class="badge">Serve-side guidance</span>
+      <span class="badge">Apple Health workouts</span>
+      <span class="badge">Live heart rate</span>
+      <span class="badge">Switch Server</span>
       <span class="badge">Undo & local history</span>
     </div>
   </div>
@@ -668,64 +692,73 @@ footer {
   </div>
 </section>
 <section id="features">
-  <h2>Built for real matches</h2>
+  <h2>Built for real tennis matches</h2>
   <p class="section-subtitle">
-    A compact watch-first scoring flow for players who need quick controls during play.
+    A watch-first scoring flow for players who need quick controls, correct tennis rules, and useful match records during play.
   </p>
   <div class="grid">
     <article class="card">
-      <h3>Fast point input</h3>
-      <p>Tap your score or the opponent score directly. Large cards keep point tracking quick during rallies.</p>
+      <h3>Real tennis scoring</h3>
+      <p>Track 0–15–30–40, deuce, advantage, games, sets, and tie-breaks automatically with large tappable score cards.</p>
     </article>
     <article class="card">
-      <h3>Flexible setup</h3>
-      <p>Choose singles or doubles, Best of 3 or Best of 5, and advantage or tie-break set rules.</p>
+      <h3>Workout recording</h3>
+      <p>Optionally record a tennis match as an Apple Health workout and view workout time during play.</p>
     </article>
     <article class="card">
-      <h3>First server picker</h3>
-      <p>Use the built-in coin toss flow to pick the first server before the match starts.</p>
+      <h3>Live heart rate</h3>
+      <p>When Health permission is granted, the app can show live heart rate during a recorded match.</p>
     </article>
     <article class="card">
-      <h3>Local match history</h3>
-      <p>Finished and stopped matches are saved on your device, with no account required.</p>
+      <h3>Match control</h3>
+      <p>Use coin toss server selection, serve-side guidance, Switch Server, Undo, automatic match finish, and local match history.</p>
     </article>
   </div>
 </section>
 <section id="screenshots">
   <h2>Screenshots</h2>
   <p class="section-subtitle">
-    Key screens from setup to match history.
+    Follow the full match flow: setup, workout recording, live scoring, tie-breaks, finished matches, and history details.
   </p>
   <div class="screenshots">
-    <article class="screenshot-card">
-      <img src="assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Match setup screen">
-      <h3>Configurable setup</h3>
-      <p>Select the match type, match length, set rule, and first server before scoring starts.</p>
+    <article class="screenshot-card wide">
+      <div class="screenshot-pair">
+        <img src="assets/07_match_setup_options.png" alt="Match setup options">
+        <img src="assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Workout and first server setup">
+      </div>
+      <h3>Setup and workout options</h3>
+      <p>Choose singles or doubles, match length, set rule, first server, coin toss, and optional Apple Health workout recording before the match starts.</p>
+    </article>
+    <article class="screenshot-card wide">
+      <div class="screenshot-pair">
+        <img src="assets/02_live_match_scoring_40_30.png" alt="Live scoring with heart rate">
+        <img src="assets/03_live_match_serve_position_marker.png" alt="Tie-break live scoring with heart rate">
+      </div>
+      <h3>Live scoring and tie-breaks</h3>
+      <p>Score from large cards while games, sets, server, serve side, undo, workout status, and live heart rate remain visible.</p>
     </article>
     <article class="screenshot-card">
-      <img src="assets/02_live_match_scoring_40_30.png" alt="Live match scoring screen">
-      <h3>Live scoreboard</h3>
-      <p>Track points from two large cards while games, sets, current server, and undo stay visible.</p>
+      <img src="assets/04_tiebreak_scoring_6_6.png" alt="Match finished and saved to Health">
+      <h3>Finished and saved</h3>
+      <p>When the match is decided, the app shows the winner, set result, and Apple Health workout save status.</p>
     </article>
     <article class="screenshot-card">
-      <img src="assets/03_live_match_serve_position_marker.png" alt="Serve position marker screen">
-      <h3>Serve-side marker</h3>
-      <p>The header ball highlights the next serve side for you or for the opponent, based on the current point.</p>
+      <img src="assets/05_match_finished_result.png" alt="Match history overview">
+      <h3>History overview</h3>
+      <p>Review wins, losses, stopped matches, win rate, and recently saved matches directly on Apple Watch.</p>
     </article>
-    <article class="screenshot-card">
-      <img src="assets/04_tiebreak_scoring_6_6.png" alt="Tie-break scoring screen">
-      <h3>Tie-break mode</h3>
-      <p>At 6–6, tie-break scoring is shown clearly with side-change guidance when it is time to switch.</p>
-    </article>
-    <article class="screenshot-card">
-      <img src="assets/05_match_finished_result.png" alt="Match finished screen">
-      <h3>Final result</h3>
-      <p>When the match is decided, the app shows the winner, final sets, and quick actions for History or New.</p>
-    </article>
-    <article class="screenshot-card">
-      <img src="assets/06_match_history_details.png" alt="Match history details screen">
+    <article class="screenshot-card wide">
+      <div class="screenshot-pair">
+        <img src="assets/06_match_history_details.png" alt="Match detail with workout status">
+        <img src="assets/08_match_sets_detail.png" alt="Set-by-set match detail">
+      </div>
       <h3>Match details</h3>
-      <p>Review set scores, tie-break points, result status, and delete old records when needed.</p>
+      <p>Open a saved match to review result, games, duration, started and finished time, Health workout status, and set-by-set scores.</p>
+    </article>
+    <article class="screenshot-card">
+      <img src="assets/09_tiebreak_sets_detail.png" alt="Tie-break set details">
+      <h3>Tie-break details</h3>
+      <p>For 7–6 sets, history keeps the tie-break points so you can see exactly how each tie-break finished.</p>
     </article>
   </div>
 </section>
@@ -734,23 +767,23 @@ footer {
   <div class="help">
     <div class="help-item">
       <strong>How do I start a match?</strong>
-      <p>Choose Singles or Doubles, select Best of 3 or Best of 5, choose the set rule, then pick the first server manually or use the coin toss flow.</p>
+      <p>Choose Singles or Doubles, select Best of 3 or Best of 5, choose the set rule, pick the first server manually or with coin toss, then start scoring.</p>
     </div>
     <div class="help-item">
-      <strong>How do I score points?</strong>
-      <p>Tap your large score card when you win a point. Tap the opponent card when your opponent wins a point. The app updates points, games, sets, and tie-breaks automatically.</p>
+      <strong>How do I record a workout?</strong>
+      <p>Enable Record Workout during setup. If you grant Apple Health permission, the match can be recorded as a tennis workout and saved to Apple Health.</p>
+    </div>
+    <div class="help-item">
+      <strong>How does live heart rate work?</strong>
+      <p>Live heart rate is shown during recorded workouts when Apple Health permission is granted and heart rate data is available from Apple Watch.</p>
     </div>
     <div class="help-item">
       <strong>What does Menu do?</strong>
-      <p>During a live match, Menu gives access to match actions such as stopping an unfinished match, opening history, or starting a new match. Completed matches are detected automatically when the required number of sets is won.</p>
-    </div>
-    <div class="help-item">
-      <strong>How are completed matches saved?</strong>
-      <p>When one side wins enough sets for the selected match length, the app automatically shows Match Finished and saves the result to History. You do not need to finish a completed match manually.</p>
+      <p>During a live match, Menu gives access to actions such as Switch Server, stopping an unfinished match, opening history, or starting a new match.</p>
     </div>
     <div class="help-item">
       <strong>How does Undo work?</strong>
-      <p>Undo reverses the last scored point and restores the previous match state, including points, games, sets, server, and serve position.</p>
+      <p>Undo reverses the last scored point and restores the previous match state, including points, games, sets, server, serve position, and tie-break state.</p>
     </div>
     <div class="help-item">
       <strong>How does the serve marker work?</strong>
@@ -795,15 +828,15 @@ footer {
   <div class="help">
     <div class="faq">
       <strong>Does the app collect data?</strong>
-      <p>No. Match history is stored locally on your device.</p>
+      <p>No. Match history is stored locally on your device. The app does not require an account and does not send your match history to a server.</p>
     </div>
     <div class="faq">
-      <strong>Can I use it for doubles?</strong>
-      <p>Yes. Select Doubles during setup before starting the match.</p>
+      <strong>Does Apple Health access have to be enabled?</strong>
+      <p>No. Health access is optional. You can score tennis matches without recording a workout.</p>
     </div>
     <div class="faq">
-      <strong>Can I play without a tie-break?</strong>
-      <p>Yes. Choose No Tie-break during setup to play an advantage set.</p>
+      <strong>Can I use it for doubles and tie-breaks?</strong>
+      <p>Yes. The app supports singles, doubles, Best of 3, Best of 5, advantage sets, and tie-break sets.</p>
     </div>
     <div class="faq">
       <strong>Can I delete match history?</strong>
@@ -816,6 +849,7 @@ footer {
   <div class="privacy-box">
     <strong>Tennis Score Wizard does not collect personal data.</strong>
     <p>Match history is stored locally on your device. The app does not require an account and does not transmit, sell, or share personal data.</p>
+    <p>Apple Health access is optional and is used only to record tennis workouts and show live heart rate during recorded matches when permission is granted.</p>
     <p><a href="privacy.html">Read the Privacy Policy</a></p>
   </div>
 </section>

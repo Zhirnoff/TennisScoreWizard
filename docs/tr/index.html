@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tennis Score Wizard — Destek</title>
-  <meta name="description" content="Tennis Score Wizard destek sayfası. Apple Watch üzerinde tenis puanlarını, oyunları, setleri, tie-breakleri, servis tarafını ve maç geçmişini nasıl takip edeceğinizi öğrenin.">
+  <meta name="description" content="Tennis Score Wizard destek sayfası. Apple Watch’ta gerçek tenis skoru, Apple Health antrenmanları, canlı nabız, tie-break, servis rehberi, servis değiştirme, Undo ve yerel geçmiş.">
   <style>
     :root {
       --bg: #000000;
@@ -310,6 +310,31 @@ h2 {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
 }
 .help {
   display: grid;
@@ -638,26 +663,25 @@ footer {
   <div class="hero-copy">
     <div class="eyebrow">
       <span class="eyebrow-dot"></span>
-      Apple Watch için tenis skor takibi
+      Apple Watch tenis skoru + antrenmanlar
     </div>
     <h1>Tenis maçının skorunu bileğinizden takip edin.</h1>
     <p>
-      Tennis Score Wizard, Apple Watch üzerinde gerçek bir tenis skorbordu kullanmanıza yardımcı olur:
-      maçı ayarlayın, ilk servis atacak kişiyi seçin, her puanı işleyin, hataları geri alın,
-      tamamlanmamış maçları durdurun ve kaydedilen sonuçları daha sonra inceleyin.
+      Tennis Score Wizard, Apple Watch’u gerçek maçlar için hızlı bir tenis skor ekranına dönüştürür. Puanları, oyunları, setleri, tie-break’leri, servis sırasını, servis tarafını, antrenman süresini, canlı nabzı ve yerel maç geçmişini iPhone’u çıkarmadan takip edin.
     </p>
-    <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="İndir’dan İndir">
+    <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="App Store’dan indir">
       <span class="app-store-logo"></span>
       <span class="app-store-text">
-        <small>İndir’dan</small>
+        <small>App Store’dan</small>
         <strong>İndir</strong>
       </span>
     </a>
     <div class="badges">
       <span class="badge">Tekler ve Çiftler</span>
       <span class="badge">Best of 3 / Best of 5</span>
-      <span class="badge">Yazı tura ile servis seçimi</span>
-      <span class="badge">Servis tarafı rehberi</span>
+      <span class="badge">Apple Health antrenmanları</span>
+      <span class="badge">Canlı nabız</span>
+      <span class="badge">Servis değiştir</span>
       <span class="badge">Undo ve yerel geçmiş</span>
     </div>
   </div>
@@ -668,64 +692,73 @@ footer {
   </div>
 </section>
 <section id="features">
-  <h2>Gerçek maçlar için tasarlandı</h2>
+  <h2>Gerçek tenis maçları için tasarlandı</h2>
   <p class="section-subtitle">
-    Oyun sırasında hızlı kontrollere ihtiyaç duyan oyuncular için Apple Watch odaklı kompakt bir skor akışı.
+    Oyun sırasında hızlı kontroller, doğru tenis kuralları ve kullanışlı maç kayıtları isteyen oyuncular için Apple Watch odaklı skor akışı.
   </p>
   <div class="grid">
     <article class="card">
-      <h3>Hızlı puan girişi</h3>
-      <p>Kendi skorunuza veya rakibin skoruna doğrudan dokunun. Büyük kartlar oyun sırasında puan takibini hızlı tutar.</p>
+      <h3>Gerçek tenis skoru</h3>
+      <p>0–15–30–40, deuce, advantage, oyunlar, setler ve tie-break’leri büyük dokunulabilir skor kartlarıyla otomatik takip edin.</p>
     </article>
     <article class="card">
-      <h3>Esnek kurulum</h3>
-      <p>Tekler veya çiftler, Best of 3 veya Best of 5 ve advantage ya da tie-break set kurallarını seçin.</p>
+      <h3>Antrenman kaydı</h3>
+      <p>İsterseniz tenis maçını Apple Health antrenmanı olarak kaydedin ve oyun sırasında antrenman süresini görün.</p>
     </article>
     <article class="card">
-      <h3>İlk servis seçimi</h3>
-      <p>Maç başlamadan önce ilk servis atacak kişiyi seçmek için yerleşik yazı tura akışını kullanın.</p>
+      <h3>Canlı nabız</h3>
+      <p>Health izni verildiğinde uygulama kayıtlı maç sırasında canlı nabzı gösterebilir.</p>
     </article>
     <article class="card">
-      <h3>Yerel maç geçmişi</h3>
-      <p>Tamamlanan ve durdurulan maçlar cihazınızda saklanır. Hesap gerekmez.</p>
+      <h3>Maç kontrolü</h3>
+      <p>Yazı tura ile ilk servis seçimi, servis tarafı rehberi, servis değiştirme, Undo, otomatik maç bitişi ve yerel geçmiş kullanın.</p>
     </article>
   </div>
 </section>
 <section id="screenshots">
   <h2>Ekran Görüntüleri</h2>
   <p class="section-subtitle">
-    Kurulumdan maç geçmişine kadar temel ekranlar.
+    Kurulum, antrenman kaydı, canlı skor, tie-break, maç bitişi ve detaylı geçmiş dahil tam maç akışı.
   </p>
   <div class="screenshots">
-    <article class="screenshot-card">
-      <img src="../assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Match setup screen">
-      <h3>Ayarlanabilir kurulum</h3>
-      <p>Skor takibi başlamadan önce maç türünü, maç uzunluğunu, set kuralını ve ilk servis atacak kişiyi seçin.</p>
+    <article class="screenshot-card wide">
+      <div class="screenshot-pair">
+        <img src="../assets/07_match_setup_options.png" alt="Maç kurulum seçenekleri">
+        <img src="../assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Antrenman ve ilk servis kurulumu">
+      </div>
+      <h3>Kurulum ve antrenman seçenekleri</h3>
+      <p>Tekler veya çiftler, maç uzunluğu, set kuralı, ilk servis, yazı tura ve isteğe bağlı Apple Health antrenman kaydını seçin.</p>
+    </article>
+    <article class="screenshot-card wide">
+      <div class="screenshot-pair">
+        <img src="../assets/02_live_match_scoring_40_30.png" alt="Nabızlı canlı skor">
+        <img src="../assets/03_live_match_serve_position_marker.png" alt="Nabızlı tie-break canlı skoru">
+      </div>
+      <h3>Canlı skor ve tie-break</h3>
+      <p>Oyunlar, setler, servis atan, servis tarafı, Undo, antrenman durumu ve nabız görünürken büyük kartlarla skor girin.</p>
     </article>
     <article class="screenshot-card">
-      <img src="../assets/02_live_match_scoring_40_30.png" alt="Live match scoring screen">
-      <h3>Canlı skor ekranı</h3>
-      <p>Oyunlar, setler, mevcut servis ve Undo görünür kalırken puanları iki büyük karttan takip edin.</p>
+      <img src="../assets/04_tiebreak_scoring_6_6.png" alt="Maç bitti ve Health’e kaydedildi">
+      <h3>Bitti ve kaydedildi</h3>
+      <p>Maç sonuçlandığında uygulama kazananı, set sonucunu ve Apple Health antrenman kayıt durumunu gösterir.</p>
     </article>
     <article class="screenshot-card">
-      <img src="../assets/03_live_match_serve_position_marker.png" alt="Serve position marker screen">
-      <h3>Servis tarafı göstergesi</h3>
-      <p>Üstteki top, mevcut puana göre sizin veya rakibin bir sonraki servis tarafını gösterir.</p>
+      <img src="../assets/05_match_finished_result.png" alt="Maç geçmişi özeti">
+      <h3>Geçmiş özeti</h3>
+      <p>Galibiyetleri, yenilgileri, durdurulan maçları, kazanma oranını ve son kayıtları doğrudan Apple Watch’ta inceleyin.</p>
     </article>
-    <article class="screenshot-card">
-      <img src="../assets/04_tiebreak_scoring_6_6.png" alt="Tie-break scoring screen">
-      <h3>Tie-break modu</h3>
-      <p>6–6 olduğunda tie-break skoru net şekilde gösterilir ve taraf değiştirme zamanı geldiğinde rehberlik edilir.</p>
-    </article>
-    <article class="screenshot-card">
-      <img src="../assets/05_match_finished_result.png" alt="Match finished screen">
-      <h3>Final sonucu</h3>
-      <p>Maç sonuçlandığında uygulama kazananı, final setlerini ve History ya da New için hızlı işlemleri gösterir.</p>
-    </article>
-    <article class="screenshot-card">
-      <img src="../assets/06_match_history_details.png" alt="Match history details screen">
+    <article class="screenshot-card wide">
+      <div class="screenshot-pair">
+        <img src="../assets/06_match_history_details.png" alt="Antrenman durumlu maç detayı">
+        <img src="../assets/08_match_sets_detail.png" alt="Set set maç detayı">
+      </div>
       <h3>Maç detayları</h3>
-      <p>Set skorlarını, tie-break puanlarını, sonuç durumunu inceleyin ve gerektiğinde eski kayıtları silin.</p>
+      <p>Kayıtlı maçı açarak sonucu, oyunları, süreyi, başlangıç ve bitiş saatini, Health antrenman durumunu ve set skorlarını inceleyin.</p>
+    </article>
+    <article class="screenshot-card">
+      <img src="../assets/09_tiebreak_sets_detail.png" alt="Tie-break set detayları">
+      <h3>Tie-break detayları</h3>
+      <p>7–6 setlerde geçmiş, her tie-break’in tam olarak kaç puanla bittiğini saklar.</p>
     </article>
   </div>
 </section>
@@ -733,28 +766,28 @@ footer {
   <h2>Hızlı yardım</h2>
   <div class="help">
     <div class="help-item">
-      <strong>Maçı nasıl başlatırım?</strong>
-      <p>Singles veya Doubles seçin, Best of 3 ya da Best of 5 belirleyin, set kuralını seçin ve ilk servis atacak kişiyi manuel olarak ya da yazı tura ile belirleyin.</p>
+      <strong>Maça nasıl başlarım?</strong>
+      <p>Tekler veya Çiftler, Best of 3 veya Best of 5, set kuralı ve ilk servisi manuel ya da yazı tura ile seçin, sonra skora başlayın.</p>
     </div>
     <div class="help-item">
-      <strong>Puanları nasıl işlerim?</strong>
-      <p>Puan kazandığınızda kendi büyük skor kartınıza dokunun. Rakip puan kazandığında rakip kartına dokunun. Uygulama puanları, oyunları, setleri ve tie-breakleri otomatik günceller.</p>
+      <strong>Antrenman nasıl kaydedilir?</strong>
+      <p>Kurulumda Record Workout’u açın. Apple Health izni verirseniz maç tenis antrenmanı olarak kaydedilip Apple Health’e yazılabilir.</p>
+    </div>
+    <div class="help-item">
+      <strong>Canlı nabız nasıl çalışır?</strong>
+      <p>Apple Health izni verildiğinde ve Apple Watch’tan nabız verisi alınabildiğinde kayıtlı antrenman sırasında canlı nabız gösterilir.</p>
     </div>
     <div class="help-item">
       <strong>Menu ne işe yarar?</strong>
-      <p>Canlı maç sırasında Menu; tamamlanmamış maçı durdurma, geçmişi açma veya yeni maç başlatma gibi işlemlere erişim sağlar. Gerekli set sayısı kazanıldığında tamamlanan maçlar otomatik algılanır.</p>
-    </div>
-    <div class="help-item">
-      <strong>Tamamlanan maçlar nasıl kaydedilir?</strong>
-      <p>Bir taraf seçilen maç formatı için yeterli seti kazandığında uygulama otomatik olarak Match Finished gösterir ve sonucu History’ye kaydeder. Tamamlanan maçı manuel bitirmeniz gerekmez.</p>
+      <p>Canlı maç sırasında Menu; servis değiştirme, tamamlanmamış maçı durdurma, geçmişi açma veya yeni maç başlatma gibi işlemlere erişim sağlar.</p>
     </div>
     <div class="help-item">
       <strong>Undo nasıl çalışır?</strong>
-      <p>Undo son işlenen puanı geri alır ve puanlar, oyunlar, setler, servis atan kişi ve servis pozisyonu dahil önceki maç durumunu geri yükler.</p>
+      <p>Undo son girilen puanı geri alır ve önceki maç durumunu; puanlar, oyunlar, setler, servis atan, servis tarafı ve tie-break dahil geri yükler.</p>
     </div>
     <div class="help-item">
       <strong>Servis göstergesi nasıl çalışır?</strong>
-      <p>Siz servis atarken tenis topu servis atmanız gereken tarafı gösterir. Rakip servis atarken, saat görünümünüzden rakibin servis tarafını gösterir.</p>
+      <p>Siz servis atarken tenis topu servis atmanız gereken tarafı gösterir. Rakip servis atarken, sizin saat görünümünüzden rakibin servis tarafını gösterir.</p>
     </div>
   </div>
 </section>
@@ -795,19 +828,19 @@ footer {
   <div class="help">
     <div class="faq">
       <strong>Uygulama veri toplar mı?</strong>
-      <p>Hayır. Maç geçmişi cihazınızda yerel olarak saklanır.</p>
+      <p>Hayır. Maç geçmişi cihazınızda yerel olarak saklanır. Hesap gerekmez ve maç geçmişiniz sunucuya gönderilmez.</p>
     </div>
     <div class="faq">
-      <strong>Çiftlerde kullanabilir miyim?</strong>
-      <p>Evet. Maçı başlatmadan önce kurulumda Doubles seçin.</p>
+      <strong>Apple Health erişimi zorunlu mu?</strong>
+      <p>Hayır. Health erişimi isteğe bağlıdır. Antrenman kaydetmeden tenis maçlarının skorunu tutabilirsiniz.</p>
     </div>
     <div class="faq">
-      <strong>Tie-break olmadan oynayabilir miyim?</strong>
-      <p>Evet. Advantage set oynamak için kurulumda No Tie-break seçin.</p>
+      <strong>Çiftler ve tie-break destekleniyor mu?</strong>
+      <p>Evet. Uygulama tekler, çiftler, Best of 3, Best of 5, advantage set ve tie-break set destekler.</p>
     </div>
     <div class="faq">
       <strong>Maç geçmişini silebilir miyim?</strong>
-      <p>Evet. Kaydedilen maçlar geçmiş ekranından silinebilir.</p>
+      <p>Evet. Kayıtlı maçlar geçmiş ekranından silinebilir.</p>
     </div>
   </div>
 </section>
@@ -816,7 +849,8 @@ footer {
   <div class="privacy-box">
     <strong>Tennis Score Wizard kişisel veri toplamaz.</strong>
     <p>Maç geçmişi cihazınızda yerel olarak saklanır. Uygulama hesap gerektirmez ve kişisel verileri iletmez, satmaz veya paylaşmaz.</p>
-    <p><a href="privacy.html">Gizlilik Politikasını Oku</a></p>
+    <p>Apple Health erişimi isteğe bağlıdır ve yalnızca tenis antrenmanlarını kaydetmek ve kayıtlı maçlarda canlı nabız göstermek için kullanılır.</p>
+    <p><a href="privacy.html">Gizlilik Politikasını oku</a></p>
   </div>
 </section>
 <section id="contact">
