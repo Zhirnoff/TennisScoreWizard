@@ -357,6 +357,40 @@ h2 {
   font-size: 16px;
   color: #ffffff;
 }
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .privacy-box {
   border: 1px solid rgba(40,255,95,0.34);
   background:
@@ -586,6 +620,56 @@ footer {
 }
 
   
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
 /* Keep language dropdown above hero content */
 .nav {
   position: relative;
@@ -643,18 +727,25 @@ footer {
   <div class="nav-links">
     <a href="#features">Features</a>
     <a href="#screenshots">Screenshots</a>
+    <a href="#stats-guide">Stats Guide</a>
     <a href="#help">Help</a>
     <a href="privacy.html">Privacy</a>
     <a href="#contact">Contact</a>
     <details class="language-menu">
       <summary>🇺🇸 English</summary>
       <div class="language-options">
-        <a class="active" href="index.html">🇺🇸 English</a>
-        <a href="ja/index.html">🇯🇵 日本語</a>
-        <a href="de/index.html">🇩🇪 Deutsch</a>
-        <a href="fr/index.html">🇫🇷 Français</a>
-        <a href="ru/index.html">🇷🇺 Русский</a>
-        <a href="tr/index.html">🇹🇷 Türkçe</a>
+        
+            
+            <a class="active" href="index.html">🇺🇸 English</a>
+            <a href="ja/index.html">🇯🇵 日本語</a>
+            <a href="de/index.html">🇩🇪 Deutsch</a>
+            <a href="fr/index.html">🇫🇷 Français</a>
+            <a href="ru/index.html">🇷🇺 Русский</a>
+            <a href="tr/index.html">🇹🇷 Türkçe</a>
+            <a href="es/index.html">🇪🇸 Español</a>
+            <a href="zh-Hans/index.html">🇨🇳 简体中文</a>
+          
+          
       </div>
     </details>
   </div>
@@ -663,11 +754,11 @@ footer {
   <div class="hero-copy">
     <div class="eyebrow">
       <span class="eyebrow-dot"></span>
-      Apple Watch tennis scoring + workouts
+      Apple Watch tennis scoring + automatic match stats
     </div>
-    <h1>Score your tennis match from your wrist.</h1>
+    <h1>Score your tennis match. Understand it after.</h1>
     <p>
-      Tennis Score Wizard turns Apple Watch into a fast tennis scoreboard for real matches. Track points, games, sets, tie-breaks, server order, serve position, workout time, live heart rate, and local match history without taking out your phone.
+      Tennis Score Wizard turns Apple Watch into a fast tennis scoreboard for real matches. Track points, games, sets, tie-breaks, serve position, workout time, live heart rate, match history, and automatic post-match stats directly from your wrist.
     </p>
     <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="Download on the App Store">
       <span class="app-store-logo"></span>
@@ -677,12 +768,12 @@ footer {
       </span>
     </a>
     <div class="badges">
-      <span class="badge">Singles & Doubles</span>
-      <span class="badge">Best of 3 / Best of 5</span>
+      <span class="badge">Automatic match stats</span>
+      <span class="badge">Serve & return insights</span>
+      <span class="badge">Pressure points</span>
       <span class="badge">Apple Health workouts</span>
       <span class="badge">Live heart rate</span>
-      <span class="badge">Switch Server</span>
-      <span class="badge">Undo & local history</span>
+      <span class="badge">Local match history</span>
     </div>
   </div>
   <div class="hero-visual" aria-label="Tennis Score Wizard app icon">
@@ -691,10 +782,11 @@ footer {
     </div>
   </div>
 </section>
+
 <section id="features">
   <h2>Built for real tennis matches</h2>
   <p class="section-subtitle">
-    A watch-first scoring flow for players who need quick controls, correct tennis rules, and useful match records during play.
+    A watch-first scoring flow for players who need quick controls, correct tennis rules, useful history, and clear post-match insight.
   </p>
   <div class="grid">
     <article class="card">
@@ -702,12 +794,12 @@ footer {
       <p>Track 0–15–30–40, deuce, advantage, games, sets, and tie-breaks automatically with large tappable score cards.</p>
     </article>
     <article class="card">
-      <h3>Workout recording</h3>
-      <p>Optionally record a tennis match as an Apple Health workout and view workout time during play.</p>
+      <h3>Automatic match stats</h3>
+      <p>After a match, History can show points, serve, return, pressure, tie-break, and game flow stats generated from normal scoring taps.</p>
     </article>
     <article class="card">
-      <h3>Live heart rate</h3>
-      <p>When Health permission is granted, the app can show live heart rate during a recorded match.</p>
+      <h3>Workout recording</h3>
+      <p>Optionally record a tennis match as an Apple Health workout and review average heart rate, max heart rate, and active calories.</p>
     </article>
     <article class="card">
       <h3>Match control</h3>
@@ -715,59 +807,173 @@ footer {
     </article>
   </div>
 </section>
+
 <section id="screenshots">
   <h2>Screenshots</h2>
   <p class="section-subtitle">
-    Follow the full match flow: setup, workout recording, live scoring, tie-breaks, finished matches, and history details.
+    Follow the full match flow: setup, workout recording, live scoring, tie-breaks, finished matches, history, and automatic stats.
   </p>
+
   <div class="screenshots">
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="assets/07_match_setup_options.png" alt="Match setup options">
-        <img src="assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Workout and first server setup">
-      </div>
-      <h3>Setup and workout options</h3>
-      <p>Choose singles or doubles, match length, set rule, first server, coin toss, and optional Apple Health workout recording before the match starts.</p>
-    </article>
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="assets/02_live_match_scoring_40_30.png" alt="Live scoring with heart rate">
-        <img src="assets/03_live_match_serve_position_marker.png" alt="Tie-break live scoring with heart rate">
-      </div>
-      <h3>Live scoring and tie-breaks</h3>
-      <p>Score from large cards while games, sets, server, serve side, undo, workout status, and live heart rate remain visible.</p>
-    </article>
     <article class="screenshot-card">
-      <img src="assets/04_tiebreak_scoring_6_6.png" alt="Match finished and saved to Health">
-      <h3>Finished and saved</h3>
-      <p>When the match is decided, the app shows the winner, set result, and Apple Health workout save status.</p>
+      <img src="assets/01_match_setup_rules.png" alt="Match setup with singles, doubles, match length, and tie-break rule">
+      <h3>Match setup</h3>
+      <p>Choose singles or doubles, Best of 3 or Best of 5, and your set rule before the match starts.</p>
     </article>
+
     <article class="screenshot-card">
-      <img src="assets/05_match_finished_result.png" alt="Match history overview">
+      <img src="assets/02_match_setup_workout_start.png" alt="First server, coin toss, Record Workout, and Start Match">
+      <h3>Server and workout</h3>
+      <p>Pick the first server, use coin toss, enable Record Workout, and start the match from one screen.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="assets/03_live_scoring_ad_40.png" alt="Live scoring screen with advantage, heart rate, and serve indicator">
+      <h3>Live scoring</h3>
+      <p>Score from large cards while server, serve side, sets, workout status, and live heart rate stay visible.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="assets/04_tiebreak_scoring.png" alt="Tie-break scoring at 6–6">
+      <h3>Tie-breaks</h3>
+      <p>Track tie-break points at 6–6 with the same large, fast Apple Watch scoring controls.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="assets/05_match_finished.png" alt="Match finished screen">
+      <h3>Match finished</h3>
+      <p>When the match is decided, the app shows the winner, set result, and quick access to History or Done.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="assets/06_history_list.png" alt="Match history list with win rate">
       <h3>History overview</h3>
-      <p>Review wins, losses, stopped matches, win rate, and recently saved matches directly on Apple Watch.</p>
+      <p>Review wins, losses, stopped matches, win rate, and saved matches directly on Apple Watch.</p>
     </article>
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="assets/06_match_history_details.png" alt="Match detail with workout status">
-        <img src="assets/08_match_sets_detail.png" alt="Set-by-set match detail">
-      </div>
-      <h3>Match details</h3>
-      <p>Open a saved match to review result, games, duration, started and finished time, Health workout status, and set-by-set scores.</p>
-    </article>
+
     <article class="screenshot-card">
-      <img src="assets/09_tiebreak_sets_detail.png" alt="Tie-break set details">
-      <h3>Tie-break details</h3>
-      <p>For 7–6 sets, history keeps the tie-break points so you can see exactly how each tie-break finished.</p>
+      <img src="assets/07_match_summary.png" alt="Saved match summary with duration, points, and workout saved to Health">
+      <h3>Match summary</h3>
+      <p>Open a saved match to review score, games, duration, total points, workout status, and stopped-match context.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="assets/08_stats_workout.png" alt="Workout stats with average heart rate, max heart rate, and active calories">
+      <h3>Workout stats</h3>
+      <p>Recorded workouts can show average heart rate, max heart rate, and active calories after the match is saved.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="assets/09_stats_points_serve.png" alt="Points and serve stats">
+      <h3>Points and serve</h3>
+      <p>See total points played, points won by each side, service games, and service points won.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="assets/10_stats_return_pressure.png" alt="Return and pressure stats">
+      <h3>Return and pressure</h3>
+      <p>Review return games, return points, break points saved, and break points converted.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="assets/11_stats_game_flow.png" alt="Game flow stats">
+      <h3>Game flow</h3>
+      <p>See longest game, average points per game, total games, and tie-breaks won or lost.</p>
     </article>
   </div>
 </section>
+
+<section id="stats-guide">
+  <h2>Match Stats Guide</h2>
+  <p class="section-subtitle">
+    Version 1.2 adds automatic stats in History. They are calculated from your normal scoring taps, so you do not need to enter aces, winners, rally length, or any extra match data.
+  </p>
+  <div class="help">
+    <div class="help-item">
+      <strong>Points</strong>
+      <p>Shows total points played and how many points each side won. A close points total usually means the match was tighter than the set score may look.</p>
+    </div>
+
+    <div class="help-item">
+      <strong>Serve</strong>
+      <p>Shows how well you performed in your own service games. Service games are games where you served. Service points are individual points played on your serve.</p>
+    </div>
+
+    <div class="help-item">
+      <strong>Return</strong>
+      <p>Shows how well you performed when the opponent served. Return games won are breaks of serve. Return points won show how often you won points against the opponent’s serve.</p>
+    </div>
+
+    <div class="help-item">
+      <strong>Pressure</strong>
+      <p>Break points saved are break points you survived on your serve. Break points converted are chances you won when the opponent was serving.</p>
+    </div>
+
+    <div class="help-item">
+      <strong>Game Flow</strong>
+      <p>Shows the rhythm of the match: longest game, average points per game, total games, and tie-breaks won or lost.</p>
+    </div>
+
+    <div class="help-item">
+      <strong>Workout</strong>
+      <p>If Record Workout is enabled and Health permission is granted, History can show average heart rate, max heart rate, and active calories for the saved tennis workout.</p>
+    </div>
+
+    <div class="help-item stat-guide-wide">
+      <strong>Quick examples</strong>
+      <p>Here is how to read common stat lines after a real match.</p>
+
+      <div class="stat-examples-grid">
+        <div class="stat-example-card">
+          <strong>Points 67–72</strong>
+          <p>You won 67 points and the opponent won 72. A small gap usually means the match was closer than the set score may look.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Service games 3/10</strong>
+          <p>You served in 10 games and won 3 of them. This shows how often you held your own serve.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Return games 6/11</strong>
+          <p>The opponent served in 11 games and you broke serve 6 times.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Break points saved 4/11</strong>
+          <p>You faced 11 break points on your serve and saved 4.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Break points converted 6/13</strong>
+          <p>You had 13 chances to break the opponent’s serve and converted 6.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Avg points/game 6.3</strong>
+          <p>Each game lasted about 6 points on average. Higher numbers usually mean longer, tighter games.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="help-item">
+      <strong>Older matches</strong>
+      <p>Matches saved before automatic stats were added may not include stats. New matches saved with version 1.2 or later can include the new History stats.</p>
+    </div>
+
+    <div class="help-item">
+      <strong>Privacy</strong>
+      <p>Match history stays local on your device. Health access is optional and used only for workout recording and heart-rate related workout details.</p>
+    </div>
+  </div>
+</section>
+
 <section id="help">
   <h2>Quick help</h2>
   <div class="help">
     <div class="help-item">
       <strong>How do I start a match?</strong>
-      <p>Choose Singles or Doubles, select Best of 3 or Best of 5, choose the set rule, pick the first server manually or with coin toss, then start scoring.</p>
+      <p>Choose Singles or Doubles, select Best of 3 or Best of 5, choose the set rule, pick the first server manually or with coin toss, optionally enable Record Workout, then start scoring.</p>
     </div>
     <div class="help-item">
       <strong>How do I record a workout?</strong>
@@ -783,7 +989,7 @@ footer {
     </div>
     <div class="help-item">
       <strong>How does Undo work?</strong>
-      <p>Undo reverses the last scored point and restores the previous match state, including points, games, sets, server, serve position, and tie-break state.</p>
+      <p>Undo reverses the last scored point and restores the previous match state, including points, games, sets, server, serve position, tie-break state, and automatic stats counters.</p>
     </div>
     <div class="help-item">
       <strong>How does the serve marker work?</strong>
@@ -791,10 +997,11 @@ footer {
     </div>
   </div>
 </section>
+
 <section id="history-help">
   <h2>Understanding match history</h2>
   <p class="section-subtitle">
-    Saved matches use compact tennis notation so results stay readable on Apple Watch.
+    Saved matches use compact tennis notation so results and stats stay readable on Apple Watch.
   </p>
   <div class="help">
     <div class="help-item">
@@ -803,7 +1010,7 @@ footer {
     </div>
     <div class="help-item">
       <strong>What does Stopped mean?</strong>
-      <p>Stopped means the match was saved before normal completion. Use Menu to stop a match that was not completed.</p>
+      <p>Stopped means the match was saved before normal completion. The app keeps the real match context, including sets, games, duration, points, and stats collected so far.</p>
     </div>
     <div class="help-item">
       <strong>What are S1, S2, and S3?</strong>
@@ -823,6 +1030,7 @@ footer {
     </div>
   </div>
 </section>
+
 <section id="faq">
   <h2>FAQ</h2>
   <div class="help">
@@ -833,6 +1041,10 @@ footer {
     <div class="faq">
       <strong>Does Apple Health access have to be enabled?</strong>
       <p>No. Health access is optional. You can score tennis matches without recording a workout.</p>
+    </div>
+    <div class="faq">
+      <strong>Do match stats require extra taps?</strong>
+      <p>No. Stats are generated from normal scoring taps. The app does not ask you to enter aces, winners, unforced errors, or rally length.</p>
     </div>
     <div class="faq">
       <strong>Can I use it for doubles and tie-breaks?</strong>

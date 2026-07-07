@@ -1,11 +1,10 @@
 <!doctype html>
-
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tennis Score Wizard — Assistance</title>
-  <meta name="description" content="Page d’assistance Tennis Score Wizard. Suivez le vrai score de tennis sur Apple Watch avec entraînements Apple Health, fréquence cardiaque en direct, tie-breaks, guide de service, changement de serveur, annulation et historique local.">
+  <title>Tennis Score Wizard — Support</title>
+  <meta name="description" content="Tennis Score Wizard pour Apple Watch : score de tennis, entraînements, fréquence cardiaque, historique et statistiques automatiques.">
   <style>
     :root {
       --bg: #000000;
@@ -357,6 +356,40 @@ h2 {
   font-size: 16px;
   color: #ffffff;
 }
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .privacy-box {
   border: 1px solid rgba(40,255,95,0.34);
   background:
@@ -586,6 +619,56 @@ footer {
 }
 
   
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
 /* Keep language dropdown above hero content */
 .nav {
   position: relative;
@@ -637,173 +720,280 @@ footer {
   <main class="page">
     <nav class="nav">
       <div class="brand">
-        <img class="app-icon" src="../assets/tennis_ball_app_icon_1024.png" alt="Tennis Score Wizard app icon">
+        <img class="app-icon" src="../assets/tennis_ball_app_icon_1024.png" alt="Tennis Score Wizard">
         <span>Tennis Score Wizard</span>
       </div>
-  <div class="nav-links">
-    <a href="#features">Fonctionnalités</a>
-    <a href="#screenshots">Captures</a>
-    <a href="#help">Aide</a>
-    <a href="privacy.html">Confidentialité</a>
-    <a href="#contact">Contact</a>
-    <details class="language-menu">
-      <summary>🇫🇷 Français</summary>
-      <div class="language-options">
-        <a href="../index.html">🇺🇸 English</a>
-        <a href="../ja/index.html">🇯🇵 日本語</a>
-        <a href="../de/index.html">🇩🇪 Deutsch</a>
-        <a class="active" href="index.html">🇫🇷 Français</a>
-        <a href="../ru/index.html">🇷🇺 Русский</a>
-        <a href="../tr/index.html">🇹🇷 Türkçe</a>
+      <div class="nav-links">
+        <a href="#features">Fonctionnalités</a>
+        <a href="#screenshots">Captures</a>
+        <a href="#stats-guide">Guide stats</a>
+        <a href="#help">Aide</a>
+        <a href="privacy.html">Confidentialité</a>
+        <a href="#contact">Contact</a>
+        <details class="language-menu">
+          <summary>🇫🇷 Français</summary>
+          <div class="language-options">
+        
+            
+            <a href="../index.html">🇺🇸 English</a>
+            <a href="../ja/index.html">🇯🇵 日本語</a>
+            <a href="../de/index.html">🇩🇪 Deutsch</a>
+            <a class="active" href="index.html">🇫🇷 Français</a>
+            <a href="../ru/index.html">🇷🇺 Русский</a>
+            <a href="../tr/index.html">🇹🇷 Türkçe</a>
+            <a href="../es/index.html">🇪🇸 Español</a>
+            <a href="../zh-Hans/index.html">🇨🇳 简体中文</a>
+          
+          
+          </div>
+        </details>
       </div>
-    </details>
-  </div>
-</nav>
-<section class="hero">
-  <div class="hero-copy">
-    <div class="eyebrow">
-      <span class="eyebrow-dot"></span>
-      Score de tennis + entraînements sur Apple Watch
-    </div>
-    <h1>Comptez votre match de tennis depuis votre poignet.</h1>
-    <p>
-      Tennis Score Wizard transforme l’Apple Watch en tableau de score rapide pour les vrais matchs. Suivez les points, jeux, sets, tie-breaks, ordre de service, côté de service, temps d’entraînement, fréquence cardiaque en direct et historique local sans sortir votre iPhone.
-    </p>
-    <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="Télécharger sur l’App Store">
-      <span class="app-store-logo"></span>
-      <span class="app-store-text">
-        <small>Télécharger sur</small>
-        <strong>App Store</strong>
-      </span>
-    </a>
-    <div class="badges">
-      <span class="badge">Simple & double</span>
-      <span class="badge">Meilleur des 3 / 5 sets</span>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Score de tennis sur Apple Watch + statistiques automatiques
+        </div>
+        <h1>Marquez votre match. Comprenez-le ensuite.</h1>
+        <p>Tennis Score Wizard transforme l’Apple Watch en tableau de score rapide pour les vrais matchs. Suivez les points, jeux, sets, tie-breaks, position de service, temps d’entraînement, fréquence cardiaque, historique et statistiques automatiques directement depuis votre poignet.</p>
+        <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="App Store">
+          <span class="app-store-logo"></span>
+          <span class="app-store-text">
+            <small>Télécharger sur</small>
+            <strong>App Store</strong>
+          </span>
+        </a>
+        <div class="badges">
+          <span class="badge">Statistiques automatiques</span>
+      <span class="badge">Service et retour</span>
+      <span class="badge">Points de pression</span>
       <span class="badge">Entraînements Apple Health</span>
       <span class="badge">Fréquence cardiaque en direct</span>
-      <span class="badge">Changer de serveur</span>
-      <span class="badge">Annulation & historique local</span>
-    </div>
-  </div>
-  <div class="hero-visual" aria-label="Tennis Score Wizard app icon">
-    <div class="hero-ball-frame">
-      <img class="hero-ball" src="../assets/tennis_ball_app_icon_1024.png" alt="">
-    </div>
-  </div>
-</section>
-<section id="features">
-  <h2>Conçu pour les vrais matchs de tennis</h2>
-  <p class="section-subtitle">
-    Un flux pensé pour l’Apple Watch, avec des contrôles rapides, des règles de tennis correctes et des enregistrements utiles pendant le jeu.
-  </p>
-  <div class="grid">
+      <span class="badge">Historique local</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Tennis Score Wizard">
+        <div class="hero-ball-frame">
+          <img class="hero-ball" src="../assets/tennis_ball_app_icon_1024.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>Conçu pour les vrais matchs de tennis</h2>
+      <p class="section-subtitle">Un flux pensé d’abord pour l’Apple Watch, avec commandes rapides, règles de tennis correctes, historique utile et analyse claire après le match.</p>
+      <div class="grid">
     <article class="card">
-      <h3>Vrai score de tennis</h3>
-      <p>Suivez automatiquement 0–15–30–40, égalité, avantage, jeux, sets et tie-breaks grâce à de grandes cartes de score.</p>
+      <h3>Score de tennis réel</h3>
+      <p>Suivez automatiquement 0–15–30–40, égalité, avantage, jeux, sets et tie-breaks avec de grandes cartes faciles à toucher.</p>
+    </article>
+    <article class="card">
+      <h3>Statistiques automatiques</h3>
+      <p>Après un match, History peut afficher les points, le service, le retour, les situations de pression, les tie-breaks et le déroulement du match, calculés à partir du score normal.</p>
     </article>
     <article class="card">
       <h3>Enregistrement d’entraînement</h3>
-      <p>Enregistrez facultativement un match de tennis comme entraînement Apple Health et consultez le temps d’entraînement pendant le jeu.</p>
-    </article>
-    <article class="card">
-      <h3>Fréquence cardiaque en direct</h3>
-      <p>Lorsque l’autorisation Health est accordée, l’app peut afficher la fréquence cardiaque en direct pendant un match enregistré.</p>
+      <p>Enregistrez éventuellement un match comme entraînement Apple Health et consultez la fréquence cardiaque moyenne, maximale et les calories actives.</p>
     </article>
     <article class="card">
       <h3>Contrôle du match</h3>
-      <p>Utilisez le tirage au sort du serveur, le guide du côté de service, le changement de serveur, l’annulation, la fin automatique et l’historique local.</p>
+      <p>Utilisez le tirage au sort du serveur, l’aide de côté au service, Switch Server, Undo, la fin automatique du match et l’historique local.</p>
     </article>
-  </div>
-</section>
-<section id="screenshots">
-  <h2>Captures d’écran</h2>
-  <p class="section-subtitle">
-    Le parcours complet du match : configuration, entraînement, score en direct, tie-breaks, fin de match et historique détaillé.
-  </p>
-  <div class="screenshots">
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="../assets/07_match_setup_options.png" alt="Options de configuration du match">
-        <img src="../assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Configuration entraînement et premier serveur">
       </div>
-      <h3>Configuration et entraînement</h3>
-      <p>Choisissez simple ou double, format du match, règle du set, premier serveur, tirage au sort et enregistrement facultatif Apple Health.</p>
-    </article>
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="../assets/02_live_match_scoring_40_30.png" alt="Score en direct avec fréquence cardiaque">
-        <img src="../assets/03_live_match_serve_position_marker.png" alt="Tie-break en direct avec fréquence cardiaque">
-      </div>
-      <h3>Score en direct et tie-breaks</h3>
-      <p>Marquez les points avec de grandes cartes pendant que jeux, sets, serveur, côté de service, annulation, entraînement et fréquence cardiaque restent visibles.</p>
-    </article>
+    </section>
+
+    <section id="screenshots">
+      <h2>Captures d’écran</h2>
+      <p class="section-subtitle">Le parcours complet du match : configuration, enregistrement d’entraînement, score en direct, tie-breaks, matchs terminés, historique et statistiques automatiques.</p>
+      <div class="screenshots">
     <article class="screenshot-card">
-      <img src="../assets/04_tiebreak_scoring_6_6.png" alt="Match terminé et enregistré dans Health">
-      <h3>Terminé et enregistré</h3>
-      <p>Quand le match est décidé, l’app affiche le gagnant, le résultat des sets et le statut d’enregistrement Apple Health.</p>
+      <img src="../assets/01_match_setup_rules.png" alt="Configuration du match">
+      <h3>Configuration du match</h3>
+      <p>Choisissez simple ou double, Best of 3 ou Best of 5, et la règle du set avant le début du match.</p>
     </article>
+
     <article class="screenshot-card">
-      <img src="../assets/05_match_finished_result.png" alt="Vue de l’historique">
+      <img src="../assets/02_match_setup_workout_start.png" alt="Serveur et entraînement">
+      <h3>Serveur et entraînement</h3>
+      <p>Choisissez le premier serveur, utilisez le tirage au sort, activez Record Workout et démarrez le match depuis un seul écran.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/03_live_scoring_ad_40.png" alt="Score en direct">
+      <h3>Score en direct</h3>
+      <p>Marquez avec de grandes cartes tout en gardant visibles serveur, côté de service, sets, statut d’entraînement et fréquence cardiaque.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/04_tiebreak_scoring.png" alt="Tie-breaks">
+      <h3>Tie-breaks</h3>
+      <p>Suivez les points du tie-break à 6–6 avec les mêmes commandes Apple Watch rapides et lisibles.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/05_match_finished.png" alt="Match terminé">
+      <h3>Match terminé</h3>
+      <p>Quand le match est décidé, l’app affiche le vainqueur, le résultat des sets et un accès rapide à History ou Done.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/06_history_list.png" alt="Vue de l’historique">
       <h3>Vue de l’historique</h3>
-      <p>Consultez victoires, défaites, matchs arrêtés, pourcentage de victoire et matchs récents directement sur l’Apple Watch.</p>
+      <p>Consultez victoires, défaites, matchs arrêtés, taux de victoire et matchs enregistrés directement sur Apple Watch.</p>
     </article>
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="../assets/06_match_history_details.png" alt="Détails du match avec statut d’entraînement">
-        <img src="../assets/08_match_sets_detail.png" alt="Détails set par set">
-      </div>
-      <h3>Détails du match</h3>
-      <p>Ouvrez un match enregistré pour consulter résultat, jeux, durée, heure de début et de fin, statut Health et scores par set.</p>
-    </article>
+
     <article class="screenshot-card">
-      <img src="../assets/09_tiebreak_sets_detail.png" alt="Détails des sets avec tie-break">
-      <h3>Détails du tie-break</h3>
-      <p>Pour les sets 7–6, l’historique conserve les points du tie-break afin de voir exactement comment il s’est terminé.</p>
+      <img src="../assets/07_match_summary.png" alt="Résumé du match">
+      <h3>Résumé du match</h3>
+      <p>Ouvrez un match enregistré pour consulter score, jeux, durée, points totaux, statut d’entraînement et contexte d’un match arrêté.</p>
     </article>
-  </div>
-</section>
-<section id="help">
-  <h2>Aide rapide</h2>
-  <div class="help">
+
+    <article class="screenshot-card">
+      <img src="../assets/08_stats_workout.png" alt="Statistiques d’entraînement">
+      <h3>Statistiques d’entraînement</h3>
+      <p>Les entraînements enregistrés peuvent afficher la fréquence cardiaque moyenne, maximale et les calories actives après sauvegarde du match.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/09_stats_points_serve.png" alt="Points et service">
+      <h3>Points et service</h3>
+      <p>Consultez les points totaux, les points gagnés par chaque côté, les jeux de service et les points gagnés au service.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/10_stats_return_pressure.png" alt="Retour et pression">
+      <h3>Retour et pression</h3>
+      <p>Consultez les jeux de retour, les points en retour, les balles de break sauvées et converties.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/11_stats_game_flow.png" alt="Déroulement du match">
+      <h3>Déroulement du match</h3>
+      <p>Consultez le jeu le plus long, les points moyens par jeu, le total des jeux et les tie-breaks gagnés ou perdus.</p>
+    </article>
+      </div>
+    </section>
+
+    <section id="stats-guide">
+      <h2>Guide des statistiques de match</h2>
+      <p class="section-subtitle">La version 1.2 ajoute des statistiques automatiques dans History. Elles sont calculées à partir de vos touches de score normales : pas besoin de saisir les aces, les coups gagnants, la longueur des échanges ou d’autres données.</p>
+      <div class="help">
+    <div class="help-item">
+      <strong>Points</strong>
+      <p>Affiche le nombre total de points joués et le nombre de points gagnés par chaque côté. Un total de points serré signifie souvent que le match était plus disputé que le score des sets ne le suggère.</p>
+    </div>
+    <div class="help-item">
+      <strong>Service</strong>
+      <p>Affiche votre performance dans vos propres jeux de service. Les jeux de service sont les jeux où vous servez. Les points de service sont les points individuels joués sur votre service.</p>
+    </div>
+    <div class="help-item">
+      <strong>Retour</strong>
+      <p>Affiche votre performance lorsque l’adversaire sert. Les jeux de retour gagnés sont des breaks. Les points gagnés en retour montrent à quelle fréquence vous gagnez des points sur le service adverse.</p>
+    </div>
+    <div class="help-item">
+      <strong>Pression</strong>
+      <p>Les balles de break sauvées sont les balles de break auxquelles vous avez résisté sur votre service. Les balles de break converties sont les occasions gagnées lorsque l’adversaire servait.</p>
+    </div>
+    <div class="help-item">
+      <strong>Déroulement</strong>
+      <p>Affiche le rythme du match : jeu le plus long, moyenne de points par jeu, nombre total de jeux et tie-breaks gagnés ou perdus.</p>
+    </div>
+    <div class="help-item">
+      <strong>Entraînement</strong>
+      <p>Si Record Workout est activé et que l’autorisation Health est accordée, History peut afficher la fréquence cardiaque moyenne, maximale et les calories actives de l’entraînement tennis enregistré.</p>
+    </div>
+
+        <div class="help-item stat-guide-wide">
+          <strong>Exemples rapides</strong>
+          <p>Voici comment lire des lignes de statistiques courantes après un vrai match.</p>
+          <div class="stat-examples-grid">
+        <div class="stat-example-card">
+          <strong>Points 67–72</strong>
+          <p>Vous avez gagné 67 points et l’adversaire 72. Un petit écart signifie souvent que le match était plus serré que le score des sets ne le montre.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Jeux de service 3/10</strong>
+          <p>Vous avez servi dans 10 jeux et en avez gagné 3. Cela montre à quelle fréquence vous avez conservé votre service.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Jeux de retour 6/11</strong>
+          <p>L’adversaire a servi dans 11 jeux et vous avez réalisé 6 breaks.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Balles de break sauvées 4/11</strong>
+          <p>Vous avez fait face à 11 balles de break sur votre service et en avez sauvé 4.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Balles de break converties 6/13</strong>
+          <p>Vous avez eu 13 occasions de breaker le service adverse et en avez converti 6.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Points moyens/jeu 6,3</strong>
+          <p>Chaque jeu a duré environ 6 points en moyenne. Des valeurs plus élevées indiquent souvent des jeux plus longs et plus serrés.</p>
+        </div>
+          </div>
+        </div>
+
+        <div class="help-item">
+          <strong>Anciens matchs</strong>
+          <p>Les matchs enregistrés avant l’ajout des statistiques automatiques peuvent ne pas inclure de statistiques. Les nouveaux matchs enregistrés avec la version 1.2 ou ultérieure peuvent inclure les nouvelles statistiques History.</p>
+        </div>
+
+        <div class="help-item">
+          <strong>Confidentialité</strong>
+          <p>L’historique des matchs reste local sur votre appareil. L’accès à Health est optionnel et utilisé uniquement pour l’enregistrement d’entraînement et les détails liés à la fréquence cardiaque.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="help">
+      <h2>Aide rapide</h2>
+      <div class="help">
     <div class="help-item">
       <strong>Comment démarrer un match ?</strong>
-      <p>Choisissez Simple ou Double, Meilleur des 3 ou 5 sets, la règle du set, puis le premier serveur manuellement ou par tirage au sort.</p>
+      <p>Choisissez simple ou double, Best of 3 ou Best of 5, la règle du set, le premier serveur manuellement ou par tirage au sort, activez éventuellement Record Workout, puis commencez le score.</p>
     </div>
     <div class="help-item">
       <strong>Comment enregistrer un entraînement ?</strong>
-      <p>Activez Record Workout pendant la configuration. Si vous autorisez Apple Health, le match peut être enregistré comme entraînement de tennis.</p>
+      <p>Activez Record Workout lors de la configuration. Si vous autorisez Apple Health, le match peut être enregistré comme entraînement de tennis et sauvegardé dans Apple Health.</p>
     </div>
     <div class="help-item">
       <strong>Comment fonctionne la fréquence cardiaque en direct ?</strong>
-      <p>Elle s’affiche pendant les entraînements enregistrés lorsque Apple Health est autorisé et que les données de fréquence cardiaque sont disponibles sur l’Apple Watch.</p>
+      <p>La fréquence cardiaque en direct est affichée pendant les entraînements enregistrés lorsque l’autorisation Apple Health est accordée et que les données sont disponibles depuis l’Apple Watch.</p>
     </div>
     <div class="help-item">
-      <strong>À quoi sert Menu ?</strong>
-      <p>Pendant un match, Menu donne accès à Changer de serveur, arrêter un match non terminé, ouvrir l’historique ou démarrer un nouveau match.</p>
+      <strong>Que fait Menu ?</strong>
+      <p>Pendant un match en direct, Menu donne accès à Switch Server, à l’arrêt d’un match non terminé, à l’historique ou au démarrage d’un nouveau match.</p>
     </div>
     <div class="help-item">
-      <strong>Comment fonctionne l’annulation ?</strong>
-      <p>L’annulation revient sur le dernier point et restaure l’état précédent du match, y compris points, jeux, sets, serveur, côté de service et tie-break.</p>
+      <strong>Comment fonctionne Undo ?</strong>
+      <p>Undo annule le dernier point marqué et restaure l’état précédent du match, y compris points, jeux, sets, serveur, position de service, état du tie-break et compteurs statistiques.</p>
     </div>
     <div class="help-item">
       <strong>Comment fonctionne le marqueur de service ?</strong>
-      <p>Quand vous servez, la balle indique votre côté de service. Quand l’adversaire sert, elle indique son côté de service depuis votre vue sur la montre.</p>
+      <p>Lorsque vous servez, la balle de tennis indique le côté depuis lequel servir. Lorsque l’adversaire sert, elle indique le côté de service adverse depuis la perspective de votre montre.</p>
     </div>
-  </div>
-</section>
-<section id="history-help">
-  <h2>Comprendre l’historique des matchs</h2>
-  <p class="section-subtitle">
-    Les matchs enregistrés utilisent une notation tennis compacte pour rester lisibles sur Apple Watch.
-  </p>
-  <div class="help">
+      </div>
+    </section>
+
+    <section id="history-help">
+      <h2>Comprendre l’historique</h2>
+      <p class="section-subtitle">Les matchs enregistrés utilisent une notation tennis compacte pour que les résultats et statistiques restent lisibles sur Apple Watch.</p>
+      <div class="help">
     <div class="help-item">
       <strong>Que signifient Win et Loss ?</strong>
       <p>Win signifie que vous avez gagné le match terminé aux sets. Loss signifie que l’adversaire a gagné le match terminé aux sets.</p>
     </div>
     <div class="help-item">
       <strong>Que signifie Stopped ?</strong>
-      <p>Stopped signifie que le match a été enregistré avant sa fin normale. Utilisez Menu pour arrêter un match non terminé.</p>
+      <p>Stopped signifie que le match a été sauvegardé avant sa fin normale. L’app conserve le contexte réel : sets, jeux, durée, points et statistiques collectées.</p>
     </div>
     <div class="help-item">
       <strong>Que sont S1, S2 et S3 ?</strong>
@@ -811,62 +1001,70 @@ footer {
     </div>
     <div class="help-item">
       <strong>Que signifie TB 7–3 ?</strong>
-      <p>TB indique les points du tie-break dans un set gagné 7–6. Par exemple, 7–6 · TB 7–3 signifie que le set a été gagné 7–6 et que le tie-break s’est terminé 7–3.</p>
+      <p>TB affiche les points du tie-break dans un set à 7–6. Par exemple, 7–6 · TB 7–3 signifie que le set a été gagné 7–6 et le tie-break 7–3.</p>
     </div>
     <div class="help-item">
       <strong>Comment les matchs arrêtés sont-ils évalués ?</strong>
-      <p>Si un match arrêté présente une avance claire en sets, l’historique indique qui menait aux sets. Si les sets sont à égalité, l’app compare les jeux puis les points de tie-break si disponibles.</p>
+      <p>Si un match arrêté présente une avance claire aux sets, History affiche qui menait aux sets. Si les sets sont à égalité, l’app compare les jeux puis les points de tie-break disponibles.</p>
     </div>
     <div class="help-item">
-      <strong>Que devient un set inachevé ?</strong>
-      <p>Pour les matchs arrêtés, le set en cours est enregistré s’il avait commencé, afin de conserver le contexte réel du match, par exemple S3 0–1.</p>
+      <strong>Que devient un set non terminé ?</strong>
+      <p>Pour les matchs arrêtés, le set en cours est sauvegardé s’il avait commencé, afin de conserver le vrai contexte du match, par exemple S3 0–1.</p>
     </div>
-  </div>
-</section>
-<section id="faq">
-  <h2>FAQ</h2>
-  <div class="help">
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="help">
     <div class="faq">
       <strong>L’app collecte-t-elle des données ?</strong>
-      <p>Non. L’historique des matchs est stocké localement sur votre appareil. Aucun compte n’est requis et l’historique n’est pas envoyé à un serveur.</p>
+      <p>Non. L’historique des matchs est stocké localement sur votre appareil. L’app ne nécessite pas de compte et n’envoie pas votre historique à un serveur.</p>
     </div>
     <div class="faq">
-      <strong>Apple Health est-il obligatoire ?</strong>
-      <p>Non. L’accès Health est facultatif. Vous pouvez compter les matchs sans enregistrer d’entraînement.</p>
+      <strong>L’accès à Apple Health est-il obligatoire ?</strong>
+      <p>Non. L’accès à Health est optionnel. Vous pouvez compter les matchs sans enregistrer d’entraînement.</p>
     </div>
     <div class="faq">
-      <strong>Puis-je jouer en double et avec tie-break ?</strong>
-      <p>Oui. L’app prend en charge simple, double, meilleurs des 3 ou 5 sets, sets avec avantage et sets avec tie-break.</p>
+      <strong>Les statistiques nécessitent-elles des touches supplémentaires ?</strong>
+      <p>Non. Les statistiques sont générées à partir des touches de score normales. L’app ne demande pas de saisir les aces, coups gagnants, fautes directes ou longueur des échanges.</p>
+    </div>
+    <div class="faq">
+      <strong>Puis-je l’utiliser pour le double et les tie-breaks ?</strong>
+      <p>Oui. L’app prend en charge simple, double, Best of 3, Best of 5, sets avec avantage et sets avec tie-break.</p>
     </div>
     <div class="faq">
       <strong>Puis-je supprimer l’historique ?</strong>
-      <p>Oui. Les matchs enregistrés peuvent être supprimés depuis l’écran d’historique.</p>
+      <p>Oui. Les matchs enregistrés peuvent être supprimés depuis l’écran History.</p>
     </div>
-  </div>
-</section>
-<section>
-  <h2>Confidentialité</h2>
-  <div class="privacy-box">
-    <strong>Tennis Score Wizard ne collecte pas de données personnelles.</strong>
-    <p>L’historique des matchs est stocké localement sur votre appareil. L’app ne nécessite pas de compte et ne transmet, vend ni partage de données personnelles.</p>
-    <p>L’accès à Apple Health est facultatif et sert uniquement à enregistrer des entraînements de tennis et afficher la fréquence cardiaque pendant les matchs enregistrés.</p>
-    <p><a href="privacy.html">Lire la politique de confidentialité</a></p>
-  </div>
-</section>
-<section id="contact">
-  <h2>Assistance</h2>
-  <div class="support-card">
-    <h3>Besoin d’aide ou envie de suggérer une fonctionnalité ?</h3>
-    <p>
-      Contact :
-      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
-    </p>
-  </div>
-</section>
-<footer>
-  <span>© 2026 Tennis Score Wizard</span>
-  <span>Apple Watch est une marque commerciale d’Apple Inc.</span>
-</footer>
+      </div>
+    </section>
+
+    <section>
+      <h2>Confidentialité</h2>
+      <div class="privacy-box">
+        <strong>Tennis Score Wizard ne collecte pas de données personnelles.</strong>
+        <p>L’historique des matchs est stocké localement sur votre appareil. L’app ne nécessite pas de compte et ne transmet, ne vend ni ne partage de données personnelles.</p>
+        <p>L’accès à Apple Health est optionnel et utilisé uniquement pour enregistrer des entraînements de tennis et afficher la fréquence cardiaque en direct pendant les matchs enregistrés avec autorisation.</p>
+        <p><a href="privacy.html">Lire la politique de confidentialité</a></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Support</h2>
+      <div class="support-card">
+        <h3>Besoin d’aide ou envie de suggérer une fonctionnalité ?</h3>
+        <p>
+          Contact :
+          <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Tennis Score Wizard</span>
+      <span>Apple Watch est une marque commerciale d’Apple Inc.</span>
+    </footer>
   </main>
 </body>
 </html>
