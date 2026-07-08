@@ -1,11 +1,10 @@
 <!doctype html>
-
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tennis Score Wizard — サポート</title>
-  <meta name="description" content="Tennis Score Wizard サポートページ。Apple Watchで実際のテニススコア、Apple Healthワークアウト、ライブ心拍数、タイブレーク、サーブガイド、サーバー切り替え、Undo、ローカル履歴を記録できます。">
+  <meta name="description" content="Apple Watch 向け Tennis Score Wizard：テニススコア、ワークアウト、心拍数、試合履歴、自動試合スタッツ。">
   <style>
     :root {
       --bg: #000000;
@@ -357,6 +356,40 @@ h2 {
   font-size: 16px;
   color: #ffffff;
 }
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .privacy-box {
   border: 1px solid rgba(40,255,95,0.34);
   background:
@@ -586,6 +619,56 @@ footer {
 }
 
   
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
 /* Keep language dropdown above hero content */
 .nav {
   position: relative;
@@ -637,236 +720,351 @@ footer {
   <main class="page">
     <nav class="nav">
       <div class="brand">
-        <img class="app-icon" src="../assets/tennis_ball_app_icon_1024.png" alt="Tennis Score Wizard app icon">
+        <img class="app-icon" src="../assets/tennis_ball_app_icon_1024.png" alt="Tennis Score Wizard">
         <span>Tennis Score Wizard</span>
       </div>
-  <div class="nav-links">
-    <a href="#features">機能</a>
-    <a href="#screenshots">スクリーンショット</a>
-    <a href="#help">ヘルプ</a>
-    <a href="privacy.html">プライバシー</a>
-    <a href="#contact">お問い合わせ</a>
-    <details class="language-menu">
-      <summary>🇯🇵 日本語</summary>
-      <div class="language-options">
-        <a href="../index.html">🇺🇸 English</a>
-        <a class="active" href="index.html">🇯🇵 日本語</a>
-        <a href="../de/index.html">🇩🇪 Deutsch</a>
-        <a href="../fr/index.html">🇫🇷 Français</a>
-        <a href="../ru/index.html">🇷🇺 Русский</a>
-        <a href="../tr/index.html">🇹🇷 Türkçe</a>
+      <div class="nav-links">
+        <a href="#features">機能</a>
+        <a href="#screenshots">スクリーンショット</a>
+        <a href="#stats-guide">スタッツガイド</a>
+        <a href="#help">ヘルプ</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="#contact">連絡先</a>
+        <details class="language-menu">
+          <summary>🇯🇵 日本語</summary>
+          <div class="language-options">
+        
+            
+            <a href="../index.html">🇺🇸 English</a>
+            <a class="active" href="index.html">🇯🇵 日本語</a>
+            <a href="../de/index.html">🇩🇪 Deutsch</a>
+            <a href="../fr/index.html">🇫🇷 Français</a>
+            <a href="../ru/index.html">🇷🇺 Русский</a>
+            <a href="../tr/index.html">🇹🇷 Türkçe</a>
+            <a href="../es/index.html">🇪🇸 Español</a>
+            <a href="../zh-Hans/index.html">🇨🇳 简体中文</a>
+          
+          
+          </div>
+        </details>
       </div>
-    </details>
-  </div>
-</nav>
-<section class="hero">
-  <div class="hero-copy">
-    <div class="eyebrow">
-      <span class="eyebrow-dot"></span>
-      Apple Watch テニススコア + ワークアウト
-    </div>
-    <h1>手元のApple Watchでテニスの試合を記録。</h1>
-    <p>
-      Tennis Score Wizardは、Apple Watchを実際の試合で使いやすいテニススコアボードにします。ポイント、ゲーム、セット、タイブレーク、サーバー順、サーブ位置、ワークアウト時間、ライブ心拍数、ローカルの試合履歴を、iPhoneを取り出さずに記録できます。
-    </p>
-    <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="App Storeからダウンロード">
-      <span class="app-store-logo"></span>
-      <span class="app-store-text">
-        <small>Download on the</small>
-        <strong>App Store</strong>
-      </span>
-    </a>
-    <div class="badges">
-      <span class="badge">シングルス & ダブルス</span>
-      <span class="badge">3セット / 5セット</span>
-      <span class="badge">Apple Healthワークアウト</span>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Apple Watch のテニススコア + 自動試合スタッツ
+        </div>
+        <h1>試合を記録し、あとで内容を理解する。</h1>
+        <p>Tennis Score Wizard は Apple Watch を実際の試合用の高速なテニススコアボードにします。ポイント、ゲーム、セット、タイブレーク、サーブ位置、ワークアウト時間、ライブ心拍数、試合履歴、自動試合スタッツを手首で確認できます。</p>
+        <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="App Store">
+          <span class="app-store-logo"></span>
+          <span class="app-store-text">
+            <small>App Store で</small>
+            <strong>App Store</strong>
+          </span>
+        </a>
+        <div class="badges">
+          <span class="badge">自動試合スタッツ</span>
+      <span class="badge">サーブとリターン</span>
+      <span class="badge">プレッシャーポイント</span>
+      <span class="badge">Apple Health ワークアウト</span>
       <span class="badge">ライブ心拍数</span>
-      <span class="badge">サーバー切り替え</span>
-      <span class="badge">Undoとローカル履歴</span>
-    </div>
-  </div>
-  <div class="hero-visual" aria-label="Tennis Score Wizard app icon">
-    <div class="hero-ball-frame">
-      <img class="hero-ball" src="../assets/tennis_ball_app_icon_1024.png" alt="">
-    </div>
-  </div>
-</section>
-<section id="features">
-  <h2>実際のテニスの試合のために設計</h2>
-  <p class="section-subtitle">
-    試合中にすばやく操作でき、正しいテニスルールと便利な試合記録をApple Watch上で扱えるスコアリングフローです。
-  </p>
-  <div class="grid">
+      <span class="badge">ローカル試合履歴</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Tennis Score Wizard">
+        <div class="hero-ball-frame">
+          <img class="hero-ball" src="../assets/tennis_ball_app_icon_1024.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>実際のテニス試合向けに設計</h2>
+      <p class="section-subtitle">素早い操作、正しいテニスルール、便利な履歴、試合後のわかりやすい分析を必要とするプレイヤー向けの Apple Watch 中心のスコア体験です。</p>
+      <div class="grid">
     <article class="card">
-      <h3>本格的なテニススコア</h3>
-      <p>0–15–30–40、デュース、アドバンテージ、ゲーム、セット、タイブレークを大きなスコアカードで自動的に記録します。</p>
+      <h3>実際のテニススコア</h3>
+      <p>0–15–30–40、デュース、アドバンテージ、ゲーム、セット、タイブレークを大きなタップ領域で自動的に記録します。</p>
+    </article>
+    <article class="card">
+      <h3>自動試合スタッツ</h3>
+      <p>試合後、History でポイント、サーブ、リターン、プレッシャー、タイブレーク、試合の流れを通常のスコア入力から自動表示できます。</p>
     </article>
     <article class="card">
       <h3>ワークアウト記録</h3>
-      <p>必要に応じてテニスの試合をApple Healthのワークアウトとして記録し、プレー中にワークアウト時間を確認できます。</p>
-    </article>
-    <article class="card">
-      <h3>ライブ心拍数</h3>
-      <p>Healthの許可がある場合、記録中の試合でライブ心拍数を表示できます。</p>
+      <p>必要に応じてテニスの試合を Apple Health ワークアウトとして記録し、平均心拍数、最大心拍数、アクティブカロリーを確認できます。</p>
     </article>
     <article class="card">
       <h3>試合コントロール</h3>
-      <p>コイントスによるサーバー選択、サーブサイド表示、サーバー切り替え、Undo、自動終了、ローカル履歴を利用できます。</p>
+      <p>コイントスによる最初のサーバー選択、サーブ位置ガイド、Switch Server、Undo、自動試合終了、ローカル履歴を使用できます。</p>
     </article>
-  </div>
-</section>
-<section id="screenshots">
-  <h2>スクリーンショット</h2>
-  <p class="section-subtitle">
-    設定、ワークアウト記録、ライブスコア、タイブレーク、試合終了、詳細な履歴までの流れです。
-  </p>
-  <div class="screenshots">
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="../assets/07_match_setup_options.png" alt="試合設定オプション">
-        <img src="../assets/01_match_setup_best_of_5_no_tiebreak.png" alt="ワークアウトと最初のサーバー設定">
       </div>
-      <h3>設定とワークアウト</h3>
-      <p>シングルス/ダブルス、試合形式、セットルール、最初のサーバー、コイントス、任意のApple Healthワークアウト記録を選択できます。</p>
-    </article>
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="../assets/02_live_match_scoring_40_30.png" alt="心拍数付きライブスコア">
-        <img src="../assets/03_live_match_serve_position_marker.png" alt="心拍数付きタイブレークスコア">
-      </div>
-      <h3>ライブスコアとタイブレーク</h3>
-      <p>大きなカードでスコアを入力しながら、ゲーム、セット、サーバー、サーブ側、Undo、ワークアウト状態、心拍数を確認できます。</p>
-    </article>
+    </section>
+
+    <section id="screenshots">
+      <h2>スクリーンショット</h2>
+      <p class="section-subtitle">試合設定、ワークアウト記録、ライブスコア、タイブレーク、試合終了、履歴、自動スタッツまでの流れを確認できます。</p>
+      <div class="screenshots">
     <article class="screenshot-card">
-      <img src="../assets/04_tiebreak_scoring_6_6.png" alt="試合終了とHealth保存">
-      <h3>終了と保存</h3>
-      <p>試合が決まると、勝者、セット結果、Apple Healthワークアウトの保存状態を表示します。</p>
+      <img src="../assets/01_match_setup_rules.png" alt="試合設定">
+      <h3>試合設定</h3>
+      <p>試合開始前にシングルスまたはダブルス、Best of 3 または Best of 5、セットルールを選択します。</p>
     </article>
+
     <article class="screenshot-card">
-      <img src="../assets/05_match_finished_result.png" alt="試合履歴の概要">
+      <img src="../assets/02_match_setup_workout_start.png" alt="サーバーとワークアウト">
+      <h3>サーバーとワークアウト</h3>
+      <p>最初のサーバーを選び、コイントスを使い、Record Workout を有効にして、同じ画面から試合を開始します。</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/03_live_scoring_ad_40.png" alt="ライブスコア">
+      <h3>ライブスコア</h3>
+      <p>大きなカードでスコアを入力しながら、サーバー、サーブ側、セット、ワークアウト状態、ライブ心拍数を確認できます。</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/04_tiebreak_scoring.png" alt="タイブレーク">
+      <h3>タイブレーク</h3>
+      <p>6–6 のタイブレークポイントも、同じ大きく素早い Apple Watch スコア操作で記録できます。</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/05_match_finished.png" alt="試合終了">
+      <h3>試合終了</h3>
+      <p>試合が決まると、勝者、セット結果、History または Done へのクイックアクセスが表示されます。</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/06_history_list.png" alt="履歴の概要">
       <h3>履歴の概要</h3>
-      <p>勝利、敗北、中断した試合、勝率、最近保存した試合をApple Watch上で確認できます。</p>
+      <p>勝利、敗戦、中断試合、勝率、保存済み試合を Apple Watch 上で確認できます。</p>
     </article>
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="../assets/06_match_history_details.png" alt="ワークアウト状態付き試合詳細">
-        <img src="../assets/08_match_sets_detail.png" alt="セットごとの試合詳細">
-      </div>
-      <h3>試合詳細</h3>
-      <p>保存した試合を開いて、結果、ゲーム数、時間、開始/終了時刻、Healthワークアウト状態、セットごとのスコアを確認できます。</p>
-    </article>
+
     <article class="screenshot-card">
-      <img src="../assets/09_tiebreak_sets_detail.png" alt="タイブレークセット詳細">
-      <h3>タイブレーク詳細</h3>
-      <p>7–6のセットでは、各タイブレークが何点で終わったかを履歴に保存します。</p>
+      <img src="../assets/07_match_summary.png" alt="試合サマリー">
+      <h3>試合サマリー</h3>
+      <p>保存済みの試合を開くと、スコア、ゲーム、時間、総ポイント、ワークアウト状態、中断試合の状況を確認できます。</p>
     </article>
-  </div>
-</section>
-<section id="help">
-  <h2>クイックヘルプ</h2>
-  <div class="help">
+
+    <article class="screenshot-card">
+      <img src="../assets/08_stats_workout.png" alt="ワークアウトスタッツ">
+      <h3>ワークアウトスタッツ</h3>
+      <p>記録されたワークアウトでは、試合保存後に平均心拍数、最大心拍数、アクティブカロリーを表示できます。</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/09_stats_points_serve.png" alt="ポイントとサーブ">
+      <h3>ポイントとサーブ</h3>
+      <p>総ポイント、各サイドの獲得ポイント、サービスゲーム、獲得サービスポイントを確認できます。</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/10_stats_return_pressure.png" alt="リターンとプレッシャー">
+      <h3>リターンとプレッシャー</h3>
+      <p>リターンゲーム、リターンポイント、セーブしたブレークポイント、成功したブレークポイントを確認できます。</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/11_stats_game_flow.png" alt="試合の流れ">
+      <h3>試合の流れ</h3>
+      <p>最長ゲーム、ゲーム平均ポイント、総ゲーム数、勝敗したタイブレークを確認できます。</p>
+    </article>
+      </div>
+    </section>
+
+    <section id="stats-guide">
+      <h2>試合スタッツガイド</h2>
+      <p class="section-subtitle">バージョン 1.2 では History に自動スタッツが追加されます。通常のスコア入力から計算されるため、エース、ウィナー、ラリーの長さ、追加データを入力する必要はありません。</p>
+      <div class="help">
     <div class="help-item">
-      <strong>試合を始めるには？</strong>
-      <p>シングルスまたはダブルス、3セットまたは5セット、セットルールを選び、最初のサーバーを手動またはコイントスで決めてから開始します。</p>
+      <strong>ポイント</strong>
+      <p>総プレーポイント数と各サイドが獲得したポイント数を表示します。ポイント差が小さい場合、セットスコアよりも接戦だった可能性があります。</p>
+    </div>
+    <div class="help-item">
+      <strong>サーブ</strong>
+      <p>自分のサービスゲームでどれだけ良くプレーしたかを示します。サービスゲームは自分がサーブしたゲーム、サービスポイントは自分のサーブで行われた個々のポイントです。</p>
+    </div>
+    <div class="help-item">
+      <strong>リターン</strong>
+      <p>相手がサーブしたときのプレー内容を示します。獲得したリターンゲームはブレークです。リターンポイントは相手サーブでどれだけポイントを取れたかを示します。</p>
+    </div>
+    <div class="help-item">
+      <strong>プレッシャー</strong>
+      <p>セーブしたブレークポイントは自分のサーブでしのいだブレークポイントです。成功したブレークポイントは相手サーブで勝ち取ったチャンスです。</p>
+    </div>
+    <div class="help-item">
+      <strong>試合の流れ</strong>
+      <p>試合のリズムを示します：最長ゲーム、ゲーム平均ポイント、総ゲーム数、勝敗したタイブレーク。</p>
+    </div>
+    <div class="help-item">
+      <strong>ワークアウト</strong>
+      <p>Record Workout が有効で Health 権限がある場合、History で保存されたテニスワークアウトの平均心拍数、最大心拍数、アクティブカロリーを表示できます。</p>
+    </div>
+
+        <div class="help-item stat-guide-wide">
+          <strong>短い例</strong>
+          <p>実際の試合後によくあるスタッツ行を読む方法です。</p>
+          <div class="stat-examples-grid">
+        <div class="stat-example-card">
+          <strong>ポイント 67–72</strong>
+          <p>自分が 67 ポイント、相手が 72 ポイントを獲得しました。差が小さい場合、セットスコアよりも接戦だったことが多いです。</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>サービスゲーム 3/10</strong>
+          <p>10 ゲームでサーブし、そのうち 3 ゲームを取りました。自分のサーブをどれだけキープできたかを示します。</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>リターンゲーム 6/11</strong>
+          <p>相手が 11 ゲームでサーブし、自分が 6 回ブレークしました。</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>ブレークポイントセーブ 4/11</strong>
+          <p>自分のサーブで 11 回のブレークポイントを迎え、そのうち 4 回をセーブしました。</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>ブレークポイント成功 6/13</strong>
+          <p>相手サーブをブレークするチャンスが 13 回あり、そのうち 6 回成功しました。</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>ゲーム平均ポイント 6.3</strong>
+          <p>各ゲームは平均で約 6 ポイント続きました。数値が高いほど、長く接戦のゲームが多い傾向があります。</p>
+        </div>
+          </div>
+        </div>
+
+        <div class="help-item">
+          <strong>古い試合</strong>
+          <p>自動スタッツ追加前に保存された試合にはスタッツが含まれない場合があります。バージョン 1.2 以降で保存された新しい試合には新しい History スタッツを含めることができます。</p>
+        </div>
+
+        <div class="help-item">
+          <strong>プライバシー</strong>
+          <p>試合履歴はデバイス上にローカル保存されます。Health アクセスは任意で、ワークアウト記録と心拍数関連のワークアウト詳細にのみ使用されます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="help">
+      <h2>クイックヘルプ</h2>
+      <div class="help">
+    <div class="help-item">
+      <strong>試合を開始するには？</strong>
+      <p>Singles または Doubles、Best of 3 または Best of 5、セットルールを選び、最初のサーバーを手動またはコイントスで決め、必要なら Record Workout を有効にしてスコアを開始します。</p>
     </div>
     <div class="help-item">
       <strong>ワークアウトを記録するには？</strong>
-      <p>設定でRecord Workoutを有効にします。Apple Healthの許可を与えると、試合をテニスワークアウトとして記録し、Apple Healthに保存できます。</p>
+      <p>設定時に Record Workout を有効にします。Apple Health を許可すると、試合をテニスワークアウトとして記録し Apple Health に保存できます。</p>
     </div>
     <div class="help-item">
       <strong>ライブ心拍数はどう動作しますか？</strong>
-      <p>Apple Healthの許可があり、Apple Watchから心拍数データを取得できる場合、記録中のワークアウトでライブ心拍数が表示されます。</p>
+      <p>Apple Health の許可があり、Apple Watch から心拍数データが利用できる場合、記録中のワークアウトでライブ心拍数が表示されます。</p>
     </div>
     <div class="help-item">
-      <strong>Menuでは何ができますか？</strong>
-      <p>試合中のMenuから、サーバー切り替え、未完了試合の停止、履歴表示、新しい試合の開始などを行えます。</p>
+      <strong>Menu は何をしますか？</strong>
+      <p>試合中、Menu から Switch Server、未完了試合の停止、履歴の表示、新しい試合の開始などにアクセスできます。</p>
     </div>
     <div class="help-item">
-      <strong>Undoはどう動作しますか？</strong>
-      <p>Undoは最後に入力したポイントを取り消し、ポイント、ゲーム、セット、サーバー、サーブ位置、タイブレーク状態を復元します。</p>
+      <strong>Undo はどう動作しますか？</strong>
+      <p>Undo は最後に入力したポイントを取り消し、ポイント、ゲーム、セット、サーバー、サーブ位置、タイブレーク状態、スタッツカウンターを含む前の状態を復元します。</p>
     </div>
     <div class="help-item">
       <strong>サーブマーカーはどう動作しますか？</strong>
-      <p>自分がサーブする時はサーブする側を表示します。相手がサーブする時は、あなたのWatch表示から見た相手のサーブ側を示します。</p>
+      <p>自分がサーブするときは、テニスボールがサーブする側を示します。相手がサーブするときは、Watch から見た相手のサーブ側を示します。</p>
     </div>
-  </div>
-</section>
-<section id="history-help">
-  <h2>試合履歴の見方</h2>
-  <p class="section-subtitle">
-    保存された試合は、Apple Watchでも読みやすいコンパクトなテニス表記で表示されます。
-  </p>
-  <div class="help">
+      </div>
+    </section>
+
+    <section id="history-help">
+      <h2>試合履歴の見方</h2>
+      <p class="section-subtitle">保存済み試合は Apple Watch で結果とスタッツを読みやすくするため、コンパクトなテニス表記を使用します。</p>
+      <div class="help">
     <div class="help-item">
-      <strong>WinとLossの意味は？</strong>
-      <p>Winはセット数であなたが試合に勝ったことを意味します。Lossは相手がセット数で試合に勝ったことを意味します。</p>
-    </div>
-    <div class="help-item">
-      <strong>Stoppedの意味は？</strong>
-      <p>Stoppedは、試合が通常終了する前に保存されたことを意味します。未完了の試合を保存するにはMenuを使います。</p>
+      <strong>Win と Loss は何ですか？</strong>
+      <p>Win は完了した試合にセットで勝ったことを意味します。Loss は相手が完了した試合にセットで勝ったことを意味します。</p>
     </div>
     <div class="help-item">
-      <strong>S1、S2、S3とは？</strong>
-      <p>S1、S2、S3はそれぞれ第1セット、第2セット、第3セットを意味します。例：S1 6–3は第1セットが6ゲーム対3で終わったことを示します。</p>
+      <strong>Stopped は何ですか？</strong>
+      <p>Stopped は通常終了前に試合が保存されたことを意味します。アプリはセット、ゲーム、時間、ポイント、その時点までのスタッツを保持します。</p>
     </div>
     <div class="help-item">
-      <strong>TB 7–3とは？</strong>
-      <p>TBは7–6のセット内のタイブレークポイントを示します。例：7–6 · TB 7–3は、そのセットを7–6で取り、タイブレークポイントが7–3だったことを意味します。</p>
+      <strong>S1、S2、S3 は何ですか？</strong>
+      <p>S1、S2、S3 は Set 1、Set 2、Set 3 を意味します。たとえば S1 6–3 は第1セットが 6–3 で終わったことを示します。</p>
     </div>
     <div class="help-item">
-      <strong>中断した試合はどう判定されますか？</strong>
-      <p>中断した試合でセット数に明確なリードがある場合、履歴にはセットでリードしていた側が表示されます。セットが同じ場合はゲーム数、必要に応じてタイブレークポイントを比較します。</p>
+      <strong>TB 7–3 は何ですか？</strong>
+      <p>TB は 7–6 セット内のタイブレークポイントです。たとえば 7–6 · TB 7–3 は、セットを 7–6、タイブレークを 7–3 で取ったことを意味します。</p>
+    </div>
+    <div class="help-item">
+      <strong>中断試合はどう評価されますか？</strong>
+      <p>中断試合に明確なセットリードがある場合、History はセットでリードしていた側を表示します。セットが同数の場合はゲーム数、その後利用可能なタイブレークポイントを比較します。</p>
     </div>
     <div class="help-item">
       <strong>未完了セットはどうなりますか？</strong>
-      <p>中断した試合では、進行中の未完了セットも保存されます。たとえばS3 0–1のように、実際の試合状況が履歴に残ります。</p>
+      <p>中断試合では、進行があった現在の未完了セットも保存されます。これにより、たとえば S3 0–1 のように実際の試合状況が残ります。</p>
     </div>
-  </div>
-</section>
-<section id="faq">
-  <h2>FAQ</h2>
-  <div class="help">
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="help">
     <div class="faq">
       <strong>アプリはデータを収集しますか？</strong>
       <p>いいえ。試合履歴はデバイス上にローカル保存されます。アカウントは不要で、試合履歴をサーバーに送信しません。</p>
     </div>
     <div class="faq">
-      <strong>Apple Healthアクセスは必須ですか？</strong>
-      <p>いいえ。Healthアクセスは任意です。ワークアウトを記録しなくてもテニスのスコアを記録できます。</p>
+      <strong>Apple Health アクセスは必須ですか？</strong>
+      <p>いいえ。Health アクセスは任意です。ワークアウトを記録せずにテニスのスコアを付けることができます。</p>
     </div>
     <div class="faq">
-      <strong>ダブルスやタイブレークに対応していますか？</strong>
-      <p>はい。シングルス、ダブルス、3セット、5セット、アドバンテージセット、タイブレークセットに対応しています。</p>
+      <strong>試合スタッツに追加タップは必要ですか？</strong>
+      <p>いいえ。スタッツは通常のスコア入力から生成されます。エース、ウィナー、アンフォーストエラー、ラリーの長さを入力する必要はありません。</p>
+    </div>
+    <div class="faq">
+      <strong>ダブルスやタイブレークに使えますか？</strong>
+      <p>はい。シングルス、ダブルス、Best of 3、Best of 5、アドバンテージセット、タイブレークセットに対応しています。</p>
     </div>
     <div class="faq">
       <strong>試合履歴を削除できますか？</strong>
-      <p>はい。保存した試合は履歴画面から削除できます。</p>
+      <p>はい。保存済み試合は History 画面から削除できます。</p>
     </div>
-  </div>
-</section>
-<section>
-  <h2>プライバシー</h2>
-  <div class="privacy-box">
-    <strong>Tennis Score Wizardは個人データを収集しません。</strong>
-    <p>試合履歴はデバイス上にローカル保存されます。アカウントは不要で、個人データを送信、販売、共有しません。</p>
-    <p>Apple Healthアクセスは任意で、許可された場合のみテニスワークアウトの記録と記録中のライブ心拍数表示に使用されます。</p>
-    <p><a href="privacy.html">プライバシーポリシーを読む</a></p>
-  </div>
-</section>
-<section id="contact">
-  <h2>サポート</h2>
-  <div class="support-card">
-    <h3>ヘルプが必要ですか？機能の提案がありますか？</h3>
-    <p>
-      お問い合わせ:
-      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
-    </p>
-  </div>
-</section>
-<footer>
-  <span>© 2026 Tennis Score Wizard</span>
-  <span>Apple WatchはApple Inc.の商標です。</span>
-</footer>
+      </div>
+    </section>
+
+    <section>
+      <h2>プライバシー</h2>
+      <div class="privacy-box">
+        <strong>Tennis Score Wizard は個人データを収集しません。</strong>
+        <p>試合履歴はデバイス上にローカル保存されます。アプリはアカウントを必要とせず、個人データを送信、販売、共有しません。</p>
+        <p>Apple Health アクセスは任意で、許可された場合にのみテニスワークアウトの記録と記録中のライブ心拍数表示に使用されます。</p>
+        <p><a href="privacy.html">プライバシーポリシーを読む</a></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>サポート</h2>
+      <div class="support-card">
+        <h3>サポートが必要ですか？機能を提案しますか？</h3>
+        <p>
+          連絡先：
+          <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Tennis Score Wizard</span>
+      <span>Apple Watch は Apple Inc. の商標です。</span>
+    </footer>
   </main>
 </body>
 </html>

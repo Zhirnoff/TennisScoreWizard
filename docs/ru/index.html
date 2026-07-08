@@ -1,11 +1,10 @@
 <!doctype html>
-
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tennis Score Wizard — Поддержка</title>
-  <meta name="description" content="Страница поддержки Tennis Score Wizard. Ведите реальный теннисный счёт на Apple Watch с тренировками Apple Health, пульсом, tie-break, подсказкой подачи, сменой подающего, Undo и локальной историей.">
+  <meta name="description" content="Tennis Score Wizard для Apple Watch: теннисный счёт, тренировки, пульс, история матчей и автоматическая статистика.">
   <style>
     :root {
       --bg: #000000;
@@ -357,6 +356,40 @@ h2 {
   font-size: 16px;
   color: #ffffff;
 }
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .privacy-box {
   border: 1px solid rgba(40,255,95,0.34);
   background:
@@ -586,6 +619,56 @@ footer {
 }
 
   
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
 /* Keep language dropdown above hero content */
 .nav {
   position: relative;
@@ -637,236 +720,351 @@ footer {
   <main class="page">
     <nav class="nav">
       <div class="brand">
-        <img class="app-icon" src="../assets/tennis_ball_app_icon_1024.png" alt="Tennis Score Wizard app icon">
+        <img class="app-icon" src="../assets/tennis_ball_app_icon_1024.png" alt="Tennis Score Wizard">
         <span>Tennis Score Wizard</span>
       </div>
-  <div class="nav-links">
-    <a href="#features">Функции</a>
-    <a href="#screenshots">Скриншоты</a>
-    <a href="#help">Помощь</a>
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="#contact">Контакты</a>
-    <details class="language-menu">
-      <summary>🇷🇺 Русский</summary>
-      <div class="language-options">
-        <a href="../index.html">🇺🇸 English</a>
-        <a href="../ja/index.html">🇯🇵 日本語</a>
-        <a href="../de/index.html">🇩🇪 Deutsch</a>
-        <a href="../fr/index.html">🇫🇷 Français</a>
-        <a class="active" href="index.html">🇷🇺 Русский</a>
-        <a href="../tr/index.html">🇹🇷 Türkçe</a>
+      <div class="nav-links">
+        <a href="#features">Возможности</a>
+        <a href="#screenshots">Скриншоты</a>
+        <a href="#stats-guide">Гид по статистике</a>
+        <a href="#help">Помощь</a>
+        <a href="privacy.html">Конфиденциальность</a>
+        <a href="#contact">Контакты</a>
+        <details class="language-menu">
+          <summary>🇷🇺 Русский</summary>
+          <div class="language-options">
+        
+            
+            <a href="../index.html">🇺🇸 English</a>
+            <a href="../ja/index.html">🇯🇵 日本語</a>
+            <a href="../de/index.html">🇩🇪 Deutsch</a>
+            <a href="../fr/index.html">🇫🇷 Français</a>
+            <a class="active" href="index.html">🇷🇺 Русский</a>
+            <a href="../tr/index.html">🇹🇷 Türkçe</a>
+            <a href="../es/index.html">🇪🇸 Español</a>
+            <a href="../zh-Hans/index.html">🇨🇳 简体中文</a>
+          
+          
+          </div>
+        </details>
       </div>
-    </details>
-  </div>
-</nav>
-<section class="hero">
-  <div class="hero-copy">
-    <div class="eyebrow">
-      <span class="eyebrow-dot"></span>
-      Теннисный счёт + тренировки на Apple Watch
-    </div>
-    <h1>Ведите счёт теннисного матча с запястья.</h1>
-    <p>
-      Tennis Score Wizard превращает Apple Watch в быстрый теннисный счётчик для реальных матчей. Отслеживайте очки, геймы, сеты, tie-break, порядок подачи, сторону подачи, время тренировки, пульс и локальную историю матчей без телефона.
-    </p>
-    <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="Скачать в App Store">
-      <span class="app-store-logo"></span>
-      <span class="app-store-text">
-        <small>Скачать в</small>
-        <strong>App Store</strong>
-      </span>
-    </a>
-    <div class="badges">
-      <span class="badge">Одиночная и парная игра</span>
-      <span class="badge">Best of 3 / Best of 5</span>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Теннисный счёт на Apple Watch + автоматическая статистика
+        </div>
+        <h1>Веди счёт матча. Понимай его после игры.</h1>
+        <p>Tennis Score Wizard превращает Apple Watch в быстрый теннисный счётчик для реальных матчей. Отслеживай очки, геймы, сеты, тай-брейки, позицию подачи, время тренировки, пульс, историю матчей и автоматическую статистику прямо с запястья.</p>
+        <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="App Store">
+          <span class="app-store-logo"></span>
+          <span class="app-store-text">
+            <small>Загрузить в</small>
+            <strong>App Store</strong>
+          </span>
+        </a>
+        <div class="badges">
+          <span class="badge">Автоматическая статистика</span>
+      <span class="badge">Подача и приём</span>
+      <span class="badge">Брейк-пойнты</span>
       <span class="badge">Тренировки Apple Health</span>
-      <span class="badge">Пульс во время матча</span>
-      <span class="badge">Смена подающего</span>
-      <span class="badge">Undo и локальная история</span>
-    </div>
-  </div>
-  <div class="hero-visual" aria-label="Tennis Score Wizard app icon">
-    <div class="hero-ball-frame">
-      <img class="hero-ball" src="../assets/tennis_ball_app_icon_1024.png" alt="">
-    </div>
-  </div>
-</section>
-<section id="features">
-  <h2>Сделано для реальных теннисных матчей</h2>
-  <p class="section-subtitle">
-    Интерфейс для Apple Watch: быстрые действия, корректные теннисные правила и полезная история матчей прямо во время игры.
-  </p>
-  <div class="grid">
+      <span class="badge">Пульс в реальном времени</span>
+      <span class="badge">Локальная история</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Tennis Score Wizard">
+        <div class="hero-ball-frame">
+          <img class="hero-ball" src="../assets/tennis_ball_app_icon_1024.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>Создано для реальных теннисных матчей</h2>
+      <p class="section-subtitle">Интерфейс сначала для Apple Watch: быстрые действия, правильные теннисные правила, полезная история и понятный разбор после матча.</p>
+      <div class="grid">
     <article class="card">
       <h3>Настоящий теннисный счёт</h3>
-      <p>Автоматически ведите 0–15–30–40, deuce, advantage, геймы, сеты и tie-break через большие кнопки счёта.</p>
+      <p>Отслеживай 0–15–30–40, ровно, больше, геймы, сеты и тай-брейки автоматически с большими зонами нажатия.</p>
+    </article>
+    <article class="card">
+      <h3>Автоматическая статистика</h3>
+      <p>После матча History может показать очки, подачу, приём, брейк-пойнты, тай-брейки и ход матча — всё рассчитывается из обычных нажатий счёта.</p>
     </article>
     <article class="card">
       <h3>Запись тренировки</h3>
-      <p>При желании записывайте теннисный матч как тренировку Apple Health и смотрите время тренировки во время игры.</p>
+      <p>По желанию записывай теннисный матч как тренировку Apple Health и смотри средний пульс, максимальный пульс и активные калории.</p>
     </article>
     <article class="card">
-      <h3>Пульс в реальном времени</h3>
-      <p>Если разрешение Apple Health выдано, приложение может показывать текущий пульс во время записываемого матча.</p>
+      <h3>Управление матчем</h3>
+      <p>Используй выбор первого подающего монеткой, подсказку стороны подачи, Switch Server, Undo, автофиниш матча и локальную историю.</p>
     </article>
-    <article class="card">
-      <h3>Контроль матча</h3>
-      <p>Используйте жребий для выбора подачи, подсказку стороны подачи, Switch Server, Undo, автофиниш матча и локальную историю.</p>
-    </article>
-  </div>
-</section>
-<section id="screenshots">
-  <h2>Скриншоты</h2>
-  <p class="section-subtitle">
-    Полный сценарий матча: настройка, запись тренировки, живой счёт, tie-break, завершение матча и подробная история.
-  </p>
-  <div class="screenshots">
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="../assets/07_match_setup_options.png" alt="Параметры настройки матча">
-        <img src="../assets/01_match_setup_best_of_5_no_tiebreak.png" alt="Настройка тренировки и первого подающего">
       </div>
-      <h3>Настройка и тренировка</h3>
-      <p>Выберите одиночный или парный матч, длину матча, правило сета, первого подающего, жребий и необязательную запись тренировки Apple Health.</p>
-    </article>
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="../assets/02_live_match_scoring_40_30.png" alt="Живой счёт с пульсом">
-        <img src="../assets/03_live_match_serve_position_marker.png" alt="Живой счёт tie-break с пульсом">
-      </div>
-      <h3>Живой счёт и tie-break</h3>
-      <p>Считайте очки большими кнопками, пока на экране остаются геймы, сеты, подающий, сторона подачи, Undo, статус тренировки и пульс.</p>
-    </article>
+    </section>
+
+    <section id="screenshots">
+      <h2>Скриншоты</h2>
+      <p class="section-subtitle">Полный путь матча: настройка, запись тренировки, живой счёт, тай-брейки, завершённые матчи, история и автоматическая статистика.</p>
+      <div class="screenshots">
     <article class="screenshot-card">
-      <img src="../assets/04_tiebreak_scoring_6_6.png" alt="Матч завершён и сохранён в Health">
-      <h3>Финиш и сохранение</h3>
-      <p>Когда матч завершён, приложение показывает победителя, счёт по сетам и статус сохранения тренировки в Apple Health.</p>
+      <img src="../assets/01_match_setup_rules.png" alt="Настройка матча">
+      <h3>Настройка матча</h3>
+      <p>Выбери одиночный или парный матч, Best of 3 или Best of 5 и правило сета перед началом игры.</p>
     </article>
+
     <article class="screenshot-card">
-      <img src="../assets/05_match_finished_result.png" alt="Обзор истории матчей">
+      <img src="../assets/02_match_setup_workout_start.png" alt="Подающий и тренировка">
+      <h3>Подающий и тренировка</h3>
+      <p>Выбери первого подающего, используй монетку, включи Record Workout и начни матч с одного экрана.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/03_live_scoring_ad_40.png" alt="Живой счёт">
+      <h3>Живой счёт</h3>
+      <p>Веди счёт большими карточками, пока подающий, сторона подачи, сеты, статус тренировки и пульс остаются на экране.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/04_tiebreak_scoring.png" alt="Тай-брейки">
+      <h3>Тай-брейки</h3>
+      <p>Отслеживай очки тай-брейка при 6–6 теми же крупными и быстрыми контролами Apple Watch.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/05_match_finished.png" alt="Матч завершён">
+      <h3>Матч завершён</h3>
+      <p>Когда матч завершён, приложение показывает победителя, счёт по сетам и быстрый переход в History или Done.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/06_history_list.png" alt="Обзор истории">
       <h3>Обзор истории</h3>
-      <p>Смотрите победы, поражения, остановленные матчи, процент побед и последние сохранённые матчи прямо на Apple Watch.</p>
+      <p>Смотри победы, поражения, остановленные матчи, процент побед и сохранённые матчи прямо на Apple Watch.</p>
     </article>
-    <article class="screenshot-card wide">
-      <div class="screenshot-pair">
-        <img src="../assets/06_match_history_details.png" alt="Детали матча со статусом тренировки">
-        <img src="../assets/08_match_sets_detail.png" alt="Счёт по сетам в деталях матча">
-      </div>
-      <h3>Детали матча</h3>
-      <p>Откройте сохранённый матч, чтобы посмотреть результат, геймы, длительность, время начала и окончания, статус Health-тренировки и счёт по сетам.</p>
-    </article>
+
     <article class="screenshot-card">
-      <img src="../assets/09_tiebreak_sets_detail.png" alt="Детали сетов с tie-break">
-      <h3>Детали tie-break</h3>
-      <p>Для сетов 7–6 история сохраняет очки tie-break, чтобы было видно, как именно закончился каждый tie-break.</p>
+      <img src="../assets/07_match_summary.png" alt="Сводка матча">
+      <h3>Сводка матча</h3>
+      <p>Открой сохранённый матч, чтобы посмотреть счёт, геймы, длительность, очки, статус тренировки и контекст остановленного матча.</p>
     </article>
-  </div>
-</section>
-<section id="help">
-  <h2>Краткая помощь</h2>
-  <div class="help">
+
+    <article class="screenshot-card">
+      <img src="../assets/08_stats_workout.png" alt="Статистика тренировки">
+      <h3>Статистика тренировки</h3>
+      <p>Для записанных тренировок после сохранения матча могут отображаться средний пульс, максимальный пульс и активные калории.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/09_stats_points_serve.png" alt="Очки и подача">
+      <h3>Очки и подача</h3>
+      <p>Смотри общее число очков, очки каждой стороны, геймы на подаче и выигранные очки на подаче.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/10_stats_return_pressure.png" alt="Приём и давление">
+      <h3>Приём и давление</h3>
+      <p>Смотри геймы на приёме, очки на приёме, спасённые и реализованные брейк-пойнты.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/11_stats_game_flow.png" alt="Ход матча">
+      <h3>Ход матча</h3>
+      <p>Смотри самый длинный гейм, среднее число очков за гейм, общее число геймов и выигранные или проигранные тай-брейки.</p>
+    </article>
+      </div>
+    </section>
+
+    <section id="stats-guide">
+      <h2>Гид по статистике матча</h2>
+      <p class="section-subtitle">Версия 1.2 добавляет автоматическую статистику в History. Она считается из обычных нажатий счёта, поэтому не нужно отдельно вводить эйсы, виннерсы, длину розыгрыша или другие данные.</p>
+      <div class="help">
+    <div class="help-item">
+      <strong>Очки</strong>
+      <p>Показывает общее число сыгранных очков и сколько выиграла каждая сторона. Близкое число очков часто означает, что матч был плотнее, чем кажется по счёту сетов.</p>
+    </div>
+    <div class="help-item">
+      <strong>Подача</strong>
+      <p>Показывает, как ты играл в своих геймах на подаче. Service games — геймы, где подавал ты. Service points — отдельные очки на твоей подаче.</p>
+    </div>
+    <div class="help-item">
+      <strong>Приём</strong>
+      <p>Показывает, как ты играл, когда подавал соперник. Выигранные геймы на приёме — это брейки. Выигранные очки на приёме показывают, как часто ты выигрывал очки на подаче соперника.</p>
+    </div>
+    <div class="help-item">
+      <strong>Давление</strong>
+      <p>Break points saved — брейк-пойнты, которые ты спас на своей подаче. Break points converted — шансы, которые ты реализовал на подаче соперника.</p>
+    </div>
+    <div class="help-item">
+      <strong>Ход матча</strong>
+      <p>Показывает ритм матча: самый длинный гейм, среднее число очков за гейм, общее число геймов и тай-брейки.</p>
+    </div>
+    <div class="help-item">
+      <strong>Тренировка</strong>
+      <p>Если включён Record Workout и выдано разрешение Health, History может показать средний пульс, максимальный пульс и активные калории сохранённой теннисной тренировки.</p>
+    </div>
+
+        <div class="help-item stat-guide-wide">
+          <strong>Короткие примеры</strong>
+          <p>Вот как читать типичные строки статистики после реального матча.</p>
+          <div class="stat-examples-grid">
+        <div class="stat-example-card">
+          <strong>Очки 67–72</strong>
+          <p>Ты выиграл 67 очков, соперник — 72. Небольшая разница часто означает, что матч был ближе, чем кажется по счёту сетов.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Геймы на подаче 3/10</strong>
+          <p>Ты подавал в 10 геймах и выиграл 3 из них. Это показывает, как часто ты удерживал свою подачу.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Геймы на приёме 6/11</strong>
+          <p>Соперник подавал в 11 геймах, и ты сделал брейк 6 раз.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Спасённые брейк-пойнты 4/11</strong>
+          <p>На своей подаче ты столкнулся с 11 брейк-пойнтами и спас 4.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Реализованные брейк-пойнты 6/13</strong>
+          <p>У тебя было 13 шансов взять подачу соперника, и ты реализовал 6.</p>
+        </div>
+
+        <div class="stat-example-card">
+          <strong>Среднее очков за гейм 6.3</strong>
+          <p>Каждый гейм в среднем длился около 6 очков. Более высокие значения обычно означают более длинные и плотные геймы.</p>
+        </div>
+          </div>
+        </div>
+
+        <div class="help-item">
+          <strong>Старые матчи</strong>
+          <p>Матчи, сохранённые до появления автоматической статистики, могут не содержать статистику. Новые матчи версии 1.2 и выше могут включать новую статистику History.</p>
+        </div>
+
+        <div class="help-item">
+          <strong>Конфиденциальность</strong>
+          <p>История матчей остаётся локально на устройстве. Доступ к Health необязателен и используется только для записи тренировок и связанных с пульсом деталей.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="help">
+      <h2>Быстрая помощь</h2>
+      <div class="help">
     <div class="help-item">
       <strong>Как начать матч?</strong>
-      <p>Выберите Singles или Doubles, Best of 3 или Best of 5, правило сета, первого подающего вручную или через жребий, затем начните счёт.</p>
+      <p>Выбери Singles или Doubles, Best of 3 или Best of 5, правило сета, первого подающего вручную или монеткой, при желании включи Record Workout и начинай счёт.</p>
     </div>
     <div class="help-item">
       <strong>Как записать тренировку?</strong>
-      <p>Включите Record Workout при настройке. Если вы дадите разрешение Apple Health, матч можно записать как теннисную тренировку и сохранить в Apple Health.</p>
+      <p>Включи Record Workout при настройке. Если дать разрешение Apple Health, матч можно записать как теннисную тренировку и сохранить в Apple Health.</p>
     </div>
     <div class="help-item">
-      <strong>Как работает пульс?</strong>
-      <p>Пульс отображается во время записываемой тренировки, если Apple Health разрешён и Apple Watch предоставляет данные пульса.</p>
+      <strong>Как работает пульс в реальном времени?</strong>
+      <p>Пульс показывается во время записываемых тренировок, если выдано разрешение Apple Health и Apple Watch предоставляет данные пульса.</p>
     </div>
     <div class="help-item">
       <strong>Что делает Menu?</strong>
-      <p>Во время матча Menu открывает действия: Switch Server, остановить незавершённый матч, открыть историю или начать новый матч.</p>
+      <p>Во время матча Menu открывает действия: Switch Server, остановка незавершённого матча, History или начало нового матча.</p>
     </div>
     <div class="help-item">
       <strong>Как работает Undo?</strong>
-      <p>Undo отменяет последнее очко и восстанавливает предыдущее состояние: очки, геймы, сеты, подающего, сторону подачи и tie-break.</p>
+      <p>Undo отменяет последнее очко и возвращает предыдущее состояние матча, включая очки, геймы, сеты, подающего, позицию подачи, тай-брейк и счётчики статистики.</p>
     </div>
     <div class="help-item">
-      <strong>Как работает индикатор подачи?</strong>
-      <p>Когда подаёте вы, мяч показывает сторону вашей подачи. Когда подаёт соперник, он показывает сторону подачи соперника с вашей точки зрения.</p>
+      <strong>Как работает маркер подачи?</strong>
+      <p>Когда подаёшь ты, теннисный мяч показывает сторону подачи. Когда подаёт соперник, он показывает сторону подачи соперника с точки зрения твоих часов.</p>
     </div>
-  </div>
-</section>
-<section id="history-help">
-  <h2>Как читать историю матчей</h2>
-  <p class="section-subtitle">
-    Сохранённые матчи используют компактную теннисную запись, чтобы результаты было удобно читать на Apple Watch.
-  </p>
-  <div class="help">
+      </div>
+    </section>
+
+    <section id="history-help">
+      <h2>Как понимать историю матчей</h2>
+      <p class="section-subtitle">Сохранённые матчи используют компактную теннисную запись, чтобы результаты и статистика читались на Apple Watch.</p>
+      <div class="help">
     <div class="help-item">
       <strong>Что означают Win и Loss?</strong>
-      <p>Win означает, что вы выиграли завершённый матч по сетам. Loss означает, что матч по сетам выиграл соперник.</p>
+      <p>Win означает, что ты выиграл завершённый матч по сетам. Loss означает, что соперник выиграл завершённый матч по сетам.</p>
     </div>
     <div class="help-item">
       <strong>Что означает Stopped?</strong>
-      <p>Stopped означает, что матч был сохранён до обычного завершения. Используйте Menu, чтобы остановить незавершённый матч.</p>
+      <p>Stopped означает, что матч сохранён до обычного завершения. Приложение сохраняет контекст: сеты, геймы, длительность, очки и статистику на момент остановки.</p>
     </div>
     <div class="help-item">
       <strong>Что такое S1, S2 и S3?</strong>
-      <p>S1, S2 и S3 означают Set 1, Set 2 и Set 3. Например, S1 6–3 означает, что первый сет закончился 6 геймов к 3.</p>
+      <p>S1, S2 и S3 означают Set 1, Set 2 и Set 3. Например, S1 6–3 означает, что первый сет закончился 6–3 по геймам.</p>
     </div>
     <div class="help-item">
       <strong>Что означает TB 7–3?</strong>
-      <p>TB показывает очки tie-break внутри сета 7–6. Например, 7–6 · TB 7–3 означает, что сет выигран 7–6, а tie-break закончился 7–3.</p>
+      <p>TB показывает очки тай-брейка внутри сета 7–6. Например, 7–6 · TB 7–3 означает, что сет выигран 7–6, а тай-брейк — 7–3.</p>
     </div>
     <div class="help-item">
       <strong>Как оцениваются остановленные матчи?</strong>
-      <p>Если в остановленном матче есть явное преимущество по сетам, история показывает, кто вёл по сетам. Если сеты равны, приложение сравнивает геймы, а затем очки tie-break, если они есть.</p>
+      <p>Если в остановленном матче есть явное лидерство по сетам, History показывает, кто вёл по сетам. Если сеты равны, приложение сравнивает геймы, а затем очки тай-брейка, если они есть.</p>
     </div>
     <div class="help-item">
       <strong>Что происходит с незавершённым сетом?</strong>
-      <p>Для остановленных матчей текущий незавершённый сет сохраняется, если в нём был прогресс. Так история сохраняет реальный контекст матча, например S3 0–1.</p>
+      <p>Для остановленных матчей текущий незавершённый сет сохраняется, если в нём был прогресс, чтобы история сохраняла реальный контекст, например S3 0–1.</p>
     </div>
-  </div>
-</section>
-<section id="faq">
-  <h2>FAQ</h2>
-  <div class="help">
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="help">
     <div class="faq">
       <strong>Приложение собирает данные?</strong>
-      <p>Нет. История матчей хранится локально на устройстве. Аккаунт не нужен, история матчей не отправляется на сервер.</p>
+      <p>Нет. История матчей хранится локально на устройстве. Приложение не требует аккаунта и не отправляет историю матчей на сервер.</p>
     </div>
     <div class="faq">
-      <strong>Apple Health обязательно включать?</strong>
-      <p>Нет. Доступ к Health необязателен. Можно вести счёт матчей без записи тренировки.</p>
+      <strong>Нужно ли включать Apple Health?</strong>
+      <p>Нет. Доступ к Health необязателен. Можно вести счёт теннисных матчей без записи тренировки.</p>
     </div>
     <div class="faq">
-      <strong>Можно играть в doubles и tie-break?</strong>
+      <strong>Требует ли статистика дополнительных нажатий?</strong>
+      <p>Нет. Статистика создаётся из обычных нажатий счёта. Приложение не просит вводить эйсы, виннерсы, невынужденные ошибки или длину розыгрыша.</p>
+    </div>
+    <div class="faq">
+      <strong>Можно использовать для пар и тай-брейков?</strong>
       <p>Да. Приложение поддерживает одиночные и парные матчи, Best of 3, Best of 5, advantage sets и tie-break sets.</p>
     </div>
     <div class="faq">
       <strong>Можно удалить историю матчей?</strong>
-      <p>Да. Сохранённые матчи можно удалить на экране истории.</p>
+      <p>Да. Сохранённые матчи можно удалить на экране History.</p>
     </div>
-  </div>
-</section>
-<section>
-  <h2>Конфиденциальность</h2>
-  <div class="privacy-box">
-    <strong>Tennis Score Wizard не собирает персональные данные.</strong>
-    <p>История матчей хранится локально на устройстве. Приложение не требует аккаунта и не передаёт, не продаёт и не раскрывает персональные данные.</p>
-    <p>Доступ к Apple Health необязателен и используется только для записи теннисных тренировок и показа пульса во время записываемых матчей.</p>
-    <p><a href="privacy.html">Открыть политику конфиденциальности</a></p>
-  </div>
-</section>
-<section id="contact">
-  <h2>Support</h2>
-  <div class="support-card">
-    <h3>Нужна помощь или хотите предложить функцию?</h3>
-    <p>
-      Контакт:
-      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
-    </p>
-  </div>
-</section>
-<footer>
-  <span>© 2026 Tennis Score Wizard</span>
-  <span>Apple Watch является товарным знаком Apple Inc.</span>
-</footer>
+      </div>
+    </section>
+
+    <section>
+      <h2>Конфиденциальность</h2>
+      <div class="privacy-box">
+        <strong>Tennis Score Wizard не собирает персональные данные.</strong>
+        <p>История матчей хранится локально на вашем устройстве. Приложение не требует аккаунта и не передаёт, не продаёт и не раскрывает персональные данные.</p>
+        <p>Доступ к Apple Health необязателен и используется только для записи теннисных тренировок и показа пульса во время записываемых матчей, если выдано разрешение.</p>
+        <p><a href="privacy.html">Читать политику конфиденциальности</a></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Поддержка</h2>
+      <div class="support-card">
+        <h3>Нужна помощь или хочешь предложить функцию?</h3>
+        <p>
+          Контакт:
+          <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Tennis Score Wizard</span>
+      <span>Apple Watch является товарным знаком Apple Inc.</span>
+    </footer>
   </main>
 </body>
 </html>
