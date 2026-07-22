@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>帮助 – Tennis Score Wizard</title>
+<meta content="Tennis Score Wizard for Apple Watch：网球计分、体能训练、心率、比赛历史和自动比赛统计。" name="description"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --panel-2: #111511;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-2: #00d84a;
+      --green-soft: rgba(40,255,95,0.10);
+      --yellow: #ffe34d;
+      --red: #ff4b55;
+    }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+  min-height: 100vh;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 16px;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    rgba(5,7,5,0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: 21px;
+}
+.app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14),
+    0 0 32px rgba(40,255,95,0.20),
+    0 14px 34px rgba(0,0,0,0.52);
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 0 28px rgba(40,255,95,0.10);
+}
+.eyebrow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(40,255,95,0.75);
+}
+h1 {
+  margin: 0;
+  max-width: 740px;
+  font-size: clamp(46px, 7.4vw, 88px);
+  line-height: 0.91;
+  letter-spacing: -0.078em;
+}
+.hero-copy p {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  color: #e9e9ed;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 780;
+}
+.hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  box-shadow:
+    0 42px 130px rgba(0,0,0,0.72),
+    0 0 90px rgba(40,255,95,0.16);
+}
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
+}
+section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px;
+}
+.section-subtitle {
+  max-width: 760px;
+  margin: -6px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 158px;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.card p,
+.faq p,
+.help-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.screenshot-card {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(40,255,95,0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 30px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.26);
+}
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(255,255,255,0.11);
+}
+.screenshot-card h3 {
+  margin: 17px 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.help-item,
+.faq {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.028);
+  border-radius: 23px;
+  padding: 18px;
+}
+.help-item strong,
+.faq strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacy-box {
+  border: 1px solid rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at top left, rgba(40,255,95,0.16), transparent 22rem),
+    rgba(40,255,95,0.06);
+  border-radius: 25px;
+  padding: 22px;
+  color: #eaffdf;
+  box-shadow: 0 0 46px rgba(40,255,95,0.08);
+}
+.privacy-box p {
+  color: #d8f7d0;
+  margin: 8px 0 0;
+}
+.support-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 22px;
+  min-height: 142px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+}
+footer {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .hero-copy p {
+    font-size: 18px;
+  }
+  .hero-visual {
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
+  }
+  .hero-ball {
+    border-radius: 66px;
+  }
+  .grid,
+  .help,
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Language selector */
+.nav {
+  overflow: visible;
+}
+
+.nav-links {
+  align-items: center;
+  overflow: visible;
+}
+
+.language-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  cursor: pointer;
+  color: #f5f7f5;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.045);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.language-menu summary::marker {
+  content: "";
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+.language-menu[open] summary {
+  border-color: var(--line-green);
+  background:
+    linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+    rgba(255,255,255,0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 0 24px rgba(40,255,95,0.13);
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: 210px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+    rgba(7,9,7,0.98);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,24,20,0.98);
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: #f2f4f2;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.language-options a:hover {
+  background: rgba(40,255,95,0.10);
+  text-decoration: none;
+}
+
+.language-options a.active {
+  color: var(--green);
+  background: rgba(40,255,95,0.11);
+}
+
+.language-options a.active::after {
+  content: "✓";
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
+/* Keep language dropdown above hero content */
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.language-menu {
+  z-index: 1100;
+}
+
+.language-options {
+  z-index: 1200;
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .language-menu {
+    position: relative;
+  }
+
+  .language-options {
+    left: 0;
+    right: auto;
+    width: min(210px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+  }
+
+  .language-options::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+/* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+/* Clickable brand and Help badge */
+.brand-home-link,
+.help-badge-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  min-width: 0;
+}
+
+.brand-home-link:hover,
+.brand-home-link:focus-visible,
+.help-badge-home-link:hover,
+.help-badge-home-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link:focus-visible,
+.help-badge-home-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.help-home-badge {
+  cursor: pointer;
+}
+
+/* CJK headings need a slightly clearer gap below the badge. */
+html[lang="ja"] .hero .help-home-badge,
+html[lang="zh-Hans"] .hero .help-home-badge {
+  margin-bottom: 22px;
+}
+</style>
+</head>
+<body>
+<main class="page">
+<nav class="nav">
+<div class="brand"><a aria-label="Tennis Score Wizard — Home" class="brand-home-link" href="index.html">
+<img alt="Tennis Score Wizard" class="app-icon" src="../assets/tennis_ball_app_icon_1024.png"/>
+<span>Tennis Score Wizard</span>
+</a></div>
+<div class="nav-links">
+<a href="index.html#features">功能</a>
+<a href="index.html#screenshots">截图</a>
+<a href="index.html#complications">从表盘启动</a>
+<a href="index.html#stats-guide">统计指南</a>
+<a href="help.html">帮助</a>
+<a href="privacy.html">隐私</a>
+<a href="index.html#contact">联系</a>
+<details class="language-menu">
+<summary>🇨🇳 简体中文</summary>
+<div class="language-options">
+<a href="../help.html">🇺🇸 English</a>
+<a href="../ja/help.html">🇯🇵 日本語</a>
+<a href="../de/help.html">🇩🇪 Deutsch</a>
+<a href="../fr/help.html">🇫🇷 Français</a>
+<a href="../ru/help.html">🇷🇺 Русский</a>
+<a href="../tr/help.html">🇹🇷 Türkçe</a>
+<a href="../es/help.html">🇪🇸 Español</a>
+<a class="active" href="help.html">🇨🇳 简体中文</a>
+</div>
+</details>
+</div>
+</nav>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Home" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
+<h1>帮助中心</h1>
+<p>了解如何开始比赛、记录体能训练、使用比分控制，以及查看已保存的比赛结果。</p>
+</div>
+</section>
+<section id="getting-started">
+<h2>开始使用</h2>
+<p class="section-subtitle">
+    设置 Tennis Score Wizard 并开始记录第一场比赛所需的基本信息。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>使用 Tennis Score Wizard 需要什么？</strong>
+<p>你需要一块兼容的 Apple Watch，并已安装 Tennis Score Wizard。Apple Health 权限并非必需，只有在你希望将比赛记录为体能训练并采集可用健康数据时才需要授权。</p>
+</div>
+<div class="help-item">
+<strong>如何开始第一场比赛？</strong>
+<p>打开应用，选择单打或双打、比赛赛制、盘数规则和首先发球的一方。如有需要，请启用“记录体能训练”，然后开始比赛。</p>
+</div>
+<div class="help-item">
+<strong>应用会记住我的设置吗？</strong>
+<p>会。应用会保存最近一次使用的比赛设置，以便下次更快地准备相同类型的比赛。在比赛开始前，你仍然可以修改任何选项。</p>
+</div>
+<div class="help-item">
+<strong>不使用 Apple Health 也可以记分吗？</strong>
+<p>可以。记分、比赛统计和历史记录都不依赖 Apple Health 权限。只有记录体能训练以及心率、活动能量等健康数据时才需要授权。</p>
+</div>
+</div>
+</section>
+
+<section id="match-setup">
+<h2>比赛设置</h2>
+<p class="section-subtitle">
+    根据实际比赛选择正确的比赛形式和规则。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>单打和双打有什么区别？</strong>
+<p>每方一名球员时请选择单打，每方两名球员时请选择双打。所选形式会随比赛一起保存，并在记录体能训练时使用。</p>
+</div>
+<div class="help-item">
+<strong>三盘两胜和五盘三胜是什么意思？</strong>
+<p>三盘两胜中，率先赢得两盘的一方获胜。五盘三胜中，率先赢得三盘的一方获胜。</p>
+</div>
+<div class="help-item">
+<strong>盘数规则如何工作？</strong>
+<p>请选择与实际比赛相符的规则。应用会根据该规则自动判断一盘何时结束，以及是否需要进行抢七。</p>
+</div>
+<div class="help-item">
+<strong>如何选择首先发球的一方？</strong>
+<p>你可以在设置过程中手动选择，也可以使用内置的掷硬币功能随机决定。</p>
+</div>
+<div class="help-item">
+<strong>掷硬币功能有什么作用？</strong>
+<p>它会生成一个随机结果，帮助决定首先发球的一方。比赛开始前，你可以确认结果或继续调整设置。</p>
+</div>
+<div class="help-item">
+<strong>“记录体能训练”有什么作用？</strong>
+<p>启用该选项并授予 Apple Health 权限后，比赛开始时会同时启动一项网球体能训练。可用的心率、活动能量和时长数据可以记录并保存到 Apple Health。</p>
+</div>
+</div>
+</section>
+
+<section id="scoring">
+<h2>比赛记分</h2>
+<p class="section-subtitle">
+    记录每一分，应用会自动处理网球比赛中的比分变化。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>如何记录一分？</strong>
+<p>使用记分按钮选择这一分由你还是对手赢得。选择后，比分会立即更新。</p>
+</div>
+<div class="help-item">
+<strong>应用会自动计算局数和盘数吗？</strong>
+<p>会。应用会根据所选规则自动处理分、局、盘、平分、占先和抢七。</p>
+</div>
+<div class="help-item">
+<strong>平分和占先如何处理？</strong>
+<p>比分到达 40–40 后进入平分。之后一方必须先取得占先，再赢得下一分才能拿下该局。如果另一方赢得下一分，比分会回到平分。</p>
+</div>
+<div class="help-item">
+<strong>抢七如何记分？</strong>
+<p>当所选规则要求进行抢七时，应用会从普通网球计分切换为数字抢七比分。</p>
+</div>
+<div class="help-item">
+<strong>发球位置指示器如何工作？</strong>
+<p>当你发球时，网球图标会显示正确的发球侧。当对手发球时，应用会从你查看手表的视角显示对手的发球侧。</p>
+</div>
+<div class="help-item">
+<strong>应用如何跟踪发球方？</strong>
+<p>发球方会随着每局和抢七中的比分进程自动切换。如果显示与实际比赛不一致，可以在菜单中手动修正。</p>
+</div>
+<div class="help-item">
+<strong>什么时候需要交换场地？</strong>
+<p>在适当的局数结束后，应用会显示交换场地提醒。该提醒仅用于提示，并会在继续记录下一分后消失。</p>
+</div>
+</div>
+</section>
+
+<section id="match-controls">
+<h2>比赛控制</h2>
+<p class="section-subtitle">
+    修正输入错误、管理当前比赛，并安全地停止未完成的比赛。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>撤销如何工作？</strong>
+<p>撤销会移除最后记录的一分，并恢复之前的分数、局数、盘数、发球方、发球位置、抢七状态和相关统计数据。</p>
+</div>
+<div class="help-item">
+<strong>可以通过菜单执行哪些操作？</strong>
+<p>比赛进行中，可以通过菜单修正发球方、查看历史记录、停止当前比赛或准备一场新比赛。</p>
+</div>
+<div class="help-item">
+<strong>什么时候使用“切换发球方”？</strong>
+<p>当应用显示的发球方与实际比赛不一致时使用。该操作只修正当前发球方，不会改变比分。</p>
+</div>
+<div class="help-item">
+<strong>停止比赛后会发生什么？</strong>
+<p>未完成的比赛可以连同当前比分、比赛时长、已完成的盘、正在进行的盘、得分和可用统计数据一起保存。在历史记录中会显示为“已停止”。</p>
+</div>
+<div class="help-item">
+<strong>比赛结束或停止后可以开始新比赛吗？</strong>
+<p>可以。返回设置界面即可开始一场新比赛。上一次的比赛配置也可以再次使用。</p>
+</div>
+<div class="help-item">
+<strong>如果记录错了一分，该怎么办？</strong>
+<p>请尽快使用撤销。这样可以准确恢复到错误输入之前的完整状态，而不是通过再添加一分来抵消错误。</p>
+</div>
+</div>
+</section>
+
+<section id="statistics">
+<h2>了解比赛统计</h2>
+<p class="section-subtitle">
+    了解已保存的统计数据代表什么，以及它们如何计算。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>总得分是什么？</strong>
+<p>它表示比赛中记录的全部得分数量。统计摘要会分别显示你赢得的分数和对手赢得的分数。</p>
+</div>
+<div class="help-item">
+<strong>连续得分是什么？</strong>
+<p>连续得分是同一方连续赢得的一系列分数。最长连续得分表示比赛中最长的不间断得分序列。</p>
+</div>
+<div class="help-item">
+<strong>关键分统计是什么？</strong>
+<p>它汇总对局、盘或整场比赛结果影响较大的重要分数情形。</p>
+</div>
+<div class="help-item">
+<strong>统计数据会自动更新吗？</strong>
+<p>会。统计数据根据已记录的得分自动计算。使用撤销时，最后一分对统计数据产生的影响也会一并撤销。</p>
+</div>
+<div class="help-item">
+<strong>为什么停止比赛后的统计可能不完整？</strong>
+<p>已停止的比赛只包含停止之前实际发生的得分和比赛情况。需要后续比赛进程或正常结束才能计算的数据可能不会显示。</p>
+</div>
+<div class="help-item">
+<strong>为什么旧比赛显示的统计数据较少？</strong>
+<p>由旧版本应用保存的比赛可能不包含后来新增的数据字段。应用会保留当时实际保存的信息，而不会推测缺失的数据。</p>
+</div>
+</div>
+</section>
+
+<section id="health-workouts">
+<h2>Apple Health 与体能训练</h2>
+<p class="section-subtitle">
+    记录网球体能训练，并了解比赛结束后显示的健康数据。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>如何记录网球体能训练？</strong>
+<p>在比赛设置中启用“记录体能训练”，并授予 Apple Health 权限。体能训练会随比赛开始，并在比赛完成或停止时结束。</p>
+</div>
+<div class="help-item">
+<strong>实时心率如何工作？</strong>
+<p>在体能训练记录期间，如果 Apple Health 已授权并且 Apple Watch 提供了心率测量值，应用会显示当前心率。</p>
+</div>
+<div class="help-item">
+<strong>平均心率和最高心率是什么？</strong>
+<p>平均心率根据体能训练期间可用的心率测量值计算。最高心率是该次体能训练中记录到的最高值。</p>
+</div>
+<div class="help-item">
+<strong>什么是活动能量？</strong>
+<p>活动能量是体能训练期间因身体活动而消耗的估算能量。Apple Watch 和 Apple Health 会根据可用的健康和运动数据进行计算。</p>
+</div>
+<div class="help-item">
+<strong>体能训练保存在哪里？</strong>
+<p>成功结束后，体能训练会保存到 Apple Health。根据权限和同步状态，它也可能显示在 Apple 的“健身”应用中。</p>
+</div>
+<div class="help-item">
+<strong>为什么体能训练统计有时会延迟显示？</strong>
+<p>部分数据会在体能训练结束后由 Apple Health 完成最终计算。请等待一段时间完成处理和同步，然后重新打开已完成的比赛。</p>
+</div>
+<div class="help-item">
+<strong>为什么某项健康数据没有显示？</strong>
+<p>可能的原因包括未授予权限、传感器收集的测量值不足、未启用体能训练记录，或 Apple Health 尚未完成数据处理。</p>
+</div>
+<div class="help-item">
+<strong>如果体能训练记录失败，比赛还会保存吗？</strong>
+<p>会。比赛比分和历史记录与 Apple Health 分开保存。Health 权限或体能训练数据出现问题不会阻止比赛记录保存。</p>
+</div>
+</div>
+</section>
+
+<section id="match-history">
+<h2>比赛历史</h2>
+<p class="section-subtitle">
+    使用简洁的网球格式查看已完成和已停止的比赛。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>“胜利”和“失败”是什么意思？</strong>
+<p>“胜利”表示你在一场正常结束的比赛中按盘数获胜。“失败”表示对手按盘数获胜。</p>
+</div>
+<div class="help-item">
+<strong>“已停止”是什么意思？</strong>
+<p>表示比赛在正常结束之前被保存。停止时已经记录的真实比赛状态会被保留。</p>
+</div>
+<div class="help-item">
+<strong>S1、S2 和 S3 是什么意思？</strong>
+<p>它们分别表示第一盘、第二盘和第三盘。例如，“S1 6–3”表示第一盘以六局比三局结束。</p>
+</div>
+<div class="help-item">
+<strong>TB 7–3 是什么意思？</strong>
+<p>TB 表示该盘中的抢七比分。例如，“7–6 · TB 7–3”表示该盘以 7–6 结束，抢七比分为 7–3。</p>
+</div>
+<div class="help-item">
+<strong>已停止的比赛如何判断当前状态？</strong>
+<p>如果一方在盘数上明确领先，历史记录会显示领先方。如果盘数相同，则会使用可用的局数和抢七数据描述比赛状态。</p>
+</div>
+<div class="help-item">
+<strong>未完成的一盘会怎样保存？</strong>
+<p>如果当前一盘已经开始，其进行中的比分会与比赛一起保存，例如“S3 0–1”。</p>
+</div>
+<div class="help-item">
+<strong>比赛会保存哪些信息？</strong>
+<p>历史记录可以包含比赛结果、各盘比分、抢七比分、得分、比赛时长、开始和结束时间、比赛统计以及可用的体能训练数据。</p>
+</div>
+<div class="help-item">
+<strong>可以删除已保存的比赛吗？</strong>
+<p>可以。在比赛历史中选择删除操作并确认。之后该历史记录会从应用中移除。</p>
+</div>
+</div>
+</section>
+
+<section id="complications-help">
+<h2>Apple Watch 表盘复杂功能</h2>
+<p class="section-subtitle">
+    从支持的表盘快速打开 Tennis Score Wizard。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Tennis Score Wizard 复杂功能有什么作用？</strong>
+<p>它可以作为应用快捷入口。轻点后会在 Apple Watch 上打开 Tennis Score Wizard。</p>
+</div>
+<div class="help-item">
+<strong>支持哪些复杂功能系列？</strong>
+<p>Tennis Score Wizard 在兼容的表盘和位置上支持 accessoryCircular 和 accessoryCorner。</p>
+</div>
+<div class="help-item">
+<strong>如何添加复杂功能？</strong>
+<p>在 Apple Watch 或 iPhone 的 Watch 应用中编辑兼容表盘，选择一个受支持的位置，然后从可用复杂功能中选择 Tennis Score Wizard。</p>
+</div>
+<div class="help-item">
+<strong>为什么找不到该复杂功能？</strong>
+<p>请确认应用已安装到 Apple Watch，并且所选表盘位置支持相应的复杂功能系列。不同表盘提供的位置可能不同。</p>
+</div>
+<div class="help-item">
+<strong>为什么它在不同表盘上的外观不同？</strong>
+<p>每个表盘位置的形状和可用空间由 Apple Watch 决定。Tennis Score Wizard 会自动适配圆形或角落位置。</p>
+</div>
+</div>
+</section>
+
+<section id="troubleshooting">
+<h2>故障排除</h2>
+<p class="section-subtitle">
+    当记分、体能训练数据或表盘快捷入口未按预期工作时，可检查以下项目。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>实时心率没有显示。</strong>
+<p>请确认已启用体能训练记录、Apple Health 已授权，并且手表正确佩戴在手腕上。只有 Apple Watch 提供测量值后，心率才会显示。</p>
+</div>
+<div class="help-item">
+<strong>体能训练没有出现在 Apple Health 中。</strong>
+<p>请等待数据处理完成，检查 Health 权限并确认比赛设置中已启用体能训练记录。同时确保比赛已正常完成或停止。</p>
+</div>
+<div class="help-item">
+<strong>平均心率、最高心率或活动能量没有显示。</strong>
+<p>请等待 Apple Health 完成体能训练数据处理，然后重新打开已完成的比赛。如果原始数据不足，相应数值可能仍然不可用。</p>
+</div>
+<div class="help-item">
+<strong>显示的发球方不正确。</strong>
+<p>打开菜单并使用“切换发球方”。该操作会修正发球方，但不会改变比分。</p>
+</div>
+<div class="help-item">
+<strong>我记录错了一分。</strong>
+<p>请使用撤销。应用会恢复到最后一分输入之前的状态，包括比分、发球方、抢七状态和相关统计数据。</p>
+</div>
+<div class="help-item">
+<strong>我的表盘无法使用该复杂功能。</strong>
+<p>请尝试支持 accessoryCircular 或 accessoryCorner 的位置。并非所有表盘上的所有位置都支持相同的复杂功能系列。</p>
+</div>
+<div class="help-item">
+<strong>重新安装应用后，历史记录还会保留吗？</strong>
+<p>不要假设删除或重新安装应用后本地历史记录仍会保留。如果已保存的比赛记录很重要，请不要删除应用。</p>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2>支持</h2>
+<div class="support-card">
+<h3>需要帮助或想建议新功能？</h3>
+<p>联系： <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a></p>
+</div>
+</section>
+<footer>
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch 是 Apple Inc. 的商标。</span>
+</footer>
+</main>
+</body>
+</html>

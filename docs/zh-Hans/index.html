@@ -714,7 +714,71 @@ footer {
   }
 }
 
-  </style>
+  /* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+</style>
 </head>
 <body>
   <main class="page">
@@ -725,9 +789,11 @@ footer {
       </div>
       <div class="nav-links">
         <a href="#features">功能</a>
+        <a href="#complications">表盘</a>
         <a href="#screenshots">截图</a>
         <a href="#stats-guide">统计指南</a>
-        <a href="#help">帮助</a>
+        <a href="whats-new.html">新增功能</a>
+        <a href="help.html">帮助</a>
         <a href="privacy.html">隐私</a>
         <a href="#contact">联系</a>
         <details class="language-menu">
@@ -746,7 +812,8 @@ footer {
           </div>
         </details>
       </div>
-    </nav>
+
+</nav>
 
     <section class="hero">
       <div class="hero-copy">
@@ -874,7 +941,37 @@ footer {
       </div>
     </section>
 
-    <section id="stats-guide">
+    
+
+<section id="complications">
+  <h2>从 Apple Watch 表盘快速启动</h2>
+
+  <p class="section-subtitle">
+    将 Tennis Score Wizard 添加到 Apple Watch 表盘，一点即可启动。
+  </p>
+
+  <div class="screenshots">
+
+    <article class="screenshot-card">
+      <img src="../assets/complication_accessory_corner.png"
+           alt="Apple Watch Ultra 角落图标"
+           loading="lazy">
+      <h3>角落图标</h3>
+      <p>将 Tennis Score Wizard 放在表盘角落，比赛前一键启动。</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/complication_accessory_circular.png"
+           alt="Apple Watch 圆形图标"
+           loading="lazy">
+      <h3>圆形图标</h3>
+      <p>将 Tennis Score Wizard 放在圆形区域，一点即可开始记分。</p>
+    </article>
+
+  </div>
+</section>
+
+<section id="stats-guide">
       <h2>比赛统计指南</h2>
       <p class="section-subtitle">1.2 版本在 History 中加入自动统计。它们由你的正常计分点击计算得出，因此不需要额外输入 ACE、制胜分、回合长度或其他比赛数据。</p>
       <div class="help">

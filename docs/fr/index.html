@@ -714,7 +714,71 @@ footer {
   }
 }
 
-  </style>
+  /* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+</style>
 </head>
 <body>
   <main class="page">
@@ -725,9 +789,11 @@ footer {
       </div>
       <div class="nav-links">
         <a href="#features">Fonctionnalités</a>
+        <a href="#complications">Cadran</a>
         <a href="#screenshots">Captures</a>
         <a href="#stats-guide">Guide stats</a>
-        <a href="#help">Aide</a>
+        <a href="whats-new.html">Nouveautés</a>
+        <a href="help.html">Aide</a>
         <a href="privacy.html">Confidentialité</a>
         <a href="#contact">Contact</a>
         <details class="language-menu">
@@ -748,7 +814,8 @@ footer {
           </div>
         </details>
       </div>
-    </nav>
+
+</nav>
 
     <section class="hero">
       <div class="hero-copy">
@@ -876,7 +943,37 @@ footer {
       </div>
     </section>
 
-    <section id="stats-guide">
+    
+
+<section id="complications">
+  <h2>Accès rapide depuis le cadran Apple Watch</h2>
+
+  <p class="section-subtitle">
+    Lancez Tennis Score Wizard directement depuis le cadran de votre Apple Watch en un seul toucher.
+  </p>
+
+  <div class="screenshots">
+
+    <article class="screenshot-card">
+      <img src="../assets/complication_accessory_corner.png"
+           alt="Apple Watch Ultra Icône d’angle"
+           loading="lazy">
+      <h3>Icône d’angle</h3>
+      <p>Placez Tennis Score Wizard dans le coin du cadran pour un accès instantané avant le match.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/complication_accessory_circular.png"
+           alt="Apple Watch Icône ronde"
+           loading="lazy">
+      <h3>Icône ronde</h3>
+      <p>Placez Tennis Score Wizard dans la zone ronde du cadran et commencez le score d'un simple toucher.</p>
+    </article>
+
+  </div>
+</section>
+
+<section id="stats-guide">
       <h2>Guide des statistiques de match</h2>
       <p class="section-subtitle">La version 1.2 ajoute des statistiques automatiques dans History. Elles sont calculées à partir de vos touches de score normales : pas besoin de saisir les aces, les coups gagnants, la longueur des échanges ou d’autres données.</p>
       <div class="help">

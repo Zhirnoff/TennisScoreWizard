@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Novedades — Tennis Score Wizard</title>
+<meta content="See what was added in each version of Tennis Score Wizard for Apple Watch." name="description"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --panel-2: #111511;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-2: #00d84a;
+      --green-soft: rgba(40,255,95,0.10);
+      --yellow: #ffe34d;
+      --red: #ff4b55;
+    }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+  min-height: 100vh;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 16px;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    rgba(5,7,5,0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: 21px;
+}
+.app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14),
+    0 0 32px rgba(40,255,95,0.20),
+    0 14px 34px rgba(0,0,0,0.52);
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 0 28px rgba(40,255,95,0.10);
+}
+.eyebrow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(40,255,95,0.75);
+}
+h1 {
+  margin: 0;
+  max-width: 740px;
+  font-size: clamp(46px, 7.4vw, 88px);
+  line-height: 0.91;
+  letter-spacing: -0.078em;
+}
+.hero-copy p {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  color: #e9e9ed;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 780;
+}
+.hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  box-shadow:
+    0 42px 130px rgba(0,0,0,0.72),
+    0 0 90px rgba(40,255,95,0.16);
+}
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
+}
+section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px;
+}
+.section-subtitle {
+  max-width: 760px;
+  margin: -6px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 158px;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.card p,
+.faq p,
+.help-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.screenshot-card {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(40,255,95,0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 30px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.26);
+}
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(255,255,255,0.11);
+}
+.screenshot-card h3 {
+  margin: 17px 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.help-item,
+.faq {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.028);
+  border-radius: 23px;
+  padding: 18px;
+}
+.help-item strong,
+.faq strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacy-box {
+  border: 1px solid rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at top left, rgba(40,255,95,0.16), transparent 22rem),
+    rgba(40,255,95,0.06);
+  border-radius: 25px;
+  padding: 22px;
+  color: #eaffdf;
+  box-shadow: 0 0 46px rgba(40,255,95,0.08);
+}
+.privacy-box p {
+  color: #d8f7d0;
+  margin: 8px 0 0;
+}
+.support-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 22px;
+  min-height: 142px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+}
+footer {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .hero-copy p {
+    font-size: 18px;
+  }
+  .hero-visual {
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
+  }
+  .hero-ball {
+    border-radius: 66px;
+  }
+  .grid,
+  .help,
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Language selector */
+.nav {
+  overflow: visible;
+}
+
+.nav-links {
+  align-items: center;
+  overflow: visible;
+}
+
+.language-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  cursor: pointer;
+  color: #f5f7f5;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.045);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.language-menu summary::marker {
+  content: "";
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+.language-menu[open] summary {
+  border-color: var(--line-green);
+  background:
+    linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+    rgba(255,255,255,0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 0 24px rgba(40,255,95,0.13);
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: 210px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+    rgba(7,9,7,0.98);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,24,20,0.98);
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: #f2f4f2;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.language-options a:hover {
+  background: rgba(40,255,95,0.10);
+  text-decoration: none;
+}
+
+.language-options a.active {
+  color: var(--green);
+  background: rgba(40,255,95,0.11);
+}
+
+.language-options a.active::after {
+  content: "✓";
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
+/* Keep language dropdown above hero content */
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.language-menu {
+  z-index: 1100;
+}
+
+.language-options {
+  z-index: 1200;
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .language-menu {
+    position: relative;
+  }
+
+  .language-options {
+    left: 0;
+    right: auto;
+    width: min(210px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+  }
+
+  .language-options::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+/* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+/* Clickable brand and Help badge */
+.brand-home-link,
+.help-badge-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  min-width: 0;
+}
+
+.brand-home-link:hover,
+.brand-home-link:focus-visible,
+.help-badge-home-link:hover,
+.help-badge-home-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link:focus-visible,
+.help-badge-home-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.help-home-badge {
+  cursor: pointer;
+}
+
+/* CJK headings need a slightly clearer gap below the badge. */
+html[lang="ja"] .hero .help-home-badge,
+html[lang="zh-Hans"] .hero .help-home-badge {
+  margin-bottom: 22px;
+}
+</style>
+<style>
+    .whats-new-page {
+        width: min(920px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0 80px;
+    }
+
+    .whats-new-hero {
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    .whats-new-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(48, 209, 88, 0.14);
+        color: #30d158;
+        font-size: 0.92rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+    }
+
+    .whats-new-title {
+        margin: 0;
+        font-size: clamp(2.4rem, 7vw, 4.5rem);
+        line-height: 1.04;
+        letter-spacing: -0.045em;
+    }
+
+    .whats-new-intro {
+        max-width: 680px;
+        margin: 20px auto 0;
+        font-size: 1.08rem;
+        line-height: 1.65;
+        opacity: 0.78;
+    }
+
+    .release-list {
+        display: grid;
+        gap: 24px;
+    }
+
+    .release-card {
+        padding: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.045);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+    }
+
+    .release-version {
+        margin: 0 0 18px;
+        color: #30d158;
+        font-size: 1.55rem;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    .release-card ul {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+
+    .release-card li {
+        margin: 10px 0;
+        line-height: 1.55;
+    }
+
+    .release-card li::marker {
+        color: #30d158;
+    }
+
+    .whats-new-actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 42px;
+    }
+
+    .whats-new-home-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 20px;
+        border: 1px solid rgba(48, 209, 88, 0.45);
+        border-radius: 999px;
+        color: #30d158;
+        font-weight: 700;
+        text-decoration: none;
+        transition:
+            transform 160ms ease,
+            background-color 160ms ease;
+    }
+
+    .whats-new-home-link:hover {
+        transform: translateY(-1px);
+        background: rgba(48, 209, 88, 0.1);
+    }
+
+    @media (max-width: 640px) {
+        .whats-new-page {
+            width: min(100% - 24px, 920px);
+            padding-top: 40px;
+        }
+
+        .release-card {
+            padding: 22px 20px;
+            border-radius: 18px;
+        }
+    }
+</style><style data-whats-new-refinement="true">
+/* What's New layout refinement */
+
+.whats-new-page {
+    box-sizing: border-box;
+    width: min(1040px, calc(100% - 40px));
+    margin-inline: auto;
+    padding: 64px 0 80px;
+}
+
+.whats-new-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.whats-new-badge {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto 22px;
+    padding: 8px 16px;
+    border: 1px solid rgba(48, 209, 88, 0.26);
+    border-radius: 999px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(48, 209, 88, 0.12),
+            rgba(48, 209, 88, 0.07)
+        );
+    color: #30d158;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 8px 28px rgba(0, 0, 0, 0.14);
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+    text-decoration: none;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.whats-new-badge:hover {
+    border-color: rgba(48, 209, 88, 0.42);
+    background: rgba(48, 209, 88, 0.14);
+}
+
+.whats-new-title {
+    width: 100%;
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    text-align: center;
+}
+
+.whats-new-intro {
+    width: min(100%, 700px);
+    margin: 24px auto 0;
+    font-size: 1.08rem;
+    line-height: 1.62;
+    text-align: center;
+    opacity: 0.76;
+}
+
+.release-list {
+    display: grid;
+    width: 100%;
+    gap: 16px;
+}
+
+.release-card {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px 28px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.025)
+        );
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025),
+        0 16px 42px rgba(0, 0, 0, 0.13);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.release-version {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 0 0 18px;
+    color: #30d158;
+    font-size: 1.42rem;
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+.release-version-icon {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    padding: 7px;
+    overflow: visible;
+    border: 1px solid rgba(48, 209, 88, 0.24);
+    border-radius: 10px;
+    background: rgba(48, 209, 88, 0.11);
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.release-card ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 34px;
+    row-gap: 9px;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.release-card li {
+    min-width: 0;
+    margin: 0;
+    padding-left: 2px;
+    line-height: 1.52;
+}
+
+.release-card li::marker {
+    color: #30d158;
+}
+
+.whats-new-actions {
+    margin-top: 36px;
+}
+
+@media (max-width: 900px) {
+    .release-card ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .whats-new-page {
+        width: min(100% - 24px, 1040px);
+        padding: 42px 0 64px;
+    }
+
+    .whats-new-hero {
+        margin-bottom: 34px;
+    }
+
+    .whats-new-badge {
+        margin-bottom: 18px;
+    }
+
+    .whats-new-title {
+        font-size: clamp(2.7rem, 14vw, 3.6rem);
+    }
+
+    .whats-new-intro {
+        margin-top: 19px;
+        font-size: 1rem;
+    }
+
+    .release-card {
+        padding: 21px 20px 23px;
+        border-radius: 17px;
+    }
+
+    .release-version {
+        gap: 11px;
+        margin-bottom: 17px;
+        font-size: 1.3rem;
+    }
+
+    .release-version-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .release-card ul {
+        grid-template-columns: 1fr;
+        row-gap: 9px;
+    }
+}
+</style>
+<style>
+/* RELEASE LIST FLOW FIX START */
+.release-card ul {
+    display: block;
+    column-count: 3;
+    column-gap: 34px;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.release-card li {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    margin: 0 0 9px;
+    padding-left: 2px;
+    line-height: 1.52;
+}
+
+.release-card li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .release-card ul {
+        column-count: 2;
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 620px) {
+    .release-card ul {
+        column-count: 1;
+    }
+}
+/* RELEASE LIST FLOW FIX END */
+</style>
+</head>
+<body>
+<main class="page"><nav class="nav">
+      <div class="brand">
+        <img class="app-icon" src="../assets/tennis_ball_app_icon_1024.png" alt="Tennis Score Wizard">
+        <span>Tennis Score Wizard</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Funciones</a>
+        <a href="#complications">Esfera</a>
+        <a href="#screenshots">Capturas</a>
+        <a href="#stats-guide">Guía de estadísticas</a>
+        <a href="whats-new.html">Novedades</a>
+        <a href="help.html">Ayuda</a>
+        <a href="privacy.html">Privacidad</a>
+        <a href="#contact">Contacto</a>
+        <details class="language-menu">
+          <summary>🇪🇸 Español</summary>
+          <div class="language-options">
+<a href="../whats-new.html">🇺🇸 English</a>
+<a href="../ja/whats-new.html">🇯🇵 日本語</a>
+<a href="../de/whats-new.html">🇩🇪 Deutsch</a>
+<a href="../fr/whats-new.html">🇫🇷 Français</a>
+<a href="../ru/whats-new.html">🇷🇺 Русский</a>
+<a href="../tr/whats-new.html">🇹🇷 Türkçe</a>
+<a class="active" href="whats-new.html">🇪🇸 Español</a>
+<a href="../zh-Hans/whats-new.html">🇨🇳 简体中文</a>
+</div>
+        </details>
+      </div>
+
+</nav><div class="whats-new-page">
+<section aria-labelledby="whats-new-title" class="whats-new-hero">
+<a class="whats-new-badge" href="index.html">
+                Tennis Score Wizard
+            </a>
+<h1 class="whats-new-title" id="whats-new-title">Novedades</h1>
+<p class="whats-new-intro">
+                Descubre las funciones, mejoras y ajustes incorporados a lo largo de la evolución de Tennis Score Wizard.
+            </p>
+</section>
+<div class="release-list">
+<section aria-labelledby="version-1-3" class="release-card">
+<h2 class="release-version" id="version-1-3"><svg aria-hidden="true" class="release-version-icon" focusable="false" viewbox="0 0 24 24">
+<rect height="14" rx="3" width="16" x="4" y="5.5"></rect>
+<path d="M8 3.5v4"></path>
+<path d="M16 3.5v4"></path>
+<path d="M4 9.5h16"></path>
+</svg>
+                    Version 1.3
+                </h2>
+<ul>
+<li>Complicaciones para las esferas del Apple Watch.</li>
+<li>Compatibilidad con las familias de complicaciones accessoryCircular y accessoryCorner.</li>
+<li>Abre Tennis Score Wizard directamente desde las esferas compatibles.</li>
+<li>Nuevo Centro de ayuda.</li>
+<li>Documentación en línea mejorada.</li>
+</ul>
+</section>
+<section aria-labelledby="version-1-2-1" class="release-card">
+<h2 class="release-version" id="version-1-2-1"><svg aria-hidden="true" class="release-version-icon" focusable="false" viewbox="0 0 24 24">
+<rect height="14" rx="3" width="16" x="4" y="5.5"></rect>
+<path d="M8 3.5v4"></path>
+<path d="M16 3.5v4"></path>
+<path d="M4 9.5h16"></path>
+</svg>
+                    Version 1.2.1
+                </h2>
+<ul>
+<li>Mayor fiabilidad de las estadísticas de entrenamiento.</li>
+<li>Datos más fiables de frecuencia cardiaca y energía activa.</li>
+<li>Mejoras en la finalización de entrenamientos y en la actualización del historial.</li>
+</ul>
+</section>
+<section aria-labelledby="version-1-2" class="release-card">
+<h2 class="release-version" id="version-1-2"><svg aria-hidden="true" class="release-version-icon" focusable="false" viewbox="0 0 24 24">
+<rect height="14" rx="3" width="16" x="4" y="5.5"></rect>
+<path d="M8 3.5v4"></path>
+<path d="M16 3.5v4"></path>
+<path d="M4 9.5h16"></path>
+</svg>
+                    Version 1.2
+                </h2>
+<ul>
+<li>Estadísticas del partido.</li>
+<li>Estadísticas de puntos bajo presión.</li>
+<li>Resúmenes de puntos en el historial de partidos.</li>
+<li>Presentación mejorada de las estadísticas de entrenamiento.</li>
+<li>Ayuda de la aplicación actualizada.</li>
+<li>Mejoras en la interfaz y la facilidad de uso.</li>
+</ul>
+</section>
+<section aria-labelledby="version-1-1" class="release-card">
+<h2 class="release-version" id="version-1-1"><svg aria-hidden="true" class="release-version-icon" focusable="false" viewbox="0 0 24 24">
+<rect height="14" rx="3" width="16" x="4" y="5.5"></rect>
+<path d="M8 3.5v4"></path>
+<path d="M16 3.5v4"></path>
+<path d="M4 9.5h16"></path>
+</svg>
+                    Version 1.1
+                </h2>
+<ul>
+<li>Registro de entrenamientos en Apple Health.</li>
+<li>Frecuencia cardiaca en directo durante los partidos.</li>
+<li>Duración del partido y detalles del entrenamiento.</li>
+<li>Se recuerda la configuración del partido anterior.</li>
+<li>Ayuda en la pantalla de inicio.</li>
+<li>Nueva sección Acerca de.</li>
+</ul>
+</section>
+<section aria-labelledby="version-1-0" class="release-card">
+<h2 class="release-version" id="version-1-0"><svg aria-hidden="true" class="release-version-icon" focusable="false" viewbox="0 0 24 24">
+<rect height="14" rx="3" width="16" x="4" y="5.5"></rect>
+<path d="M8 3.5v4"></path>
+<path d="M16 3.5v4"></path>
+<path d="M4 9.5h16"></path>
+</svg>
+                    Version 1.0
+                </h2>
+<ul>
+<li>Puntuación para individuales y dobles.</li>
+<li>Partidos al mejor de 3 y al mejor de 5.</li>
+<li>Reglas de tie-break configurables.</li>
+<li>Lanzamiento de moneda para elegir quién saca primero.</li>
+<li>Historial de partidos.</li>
+<li>Deshacer el último punto.</li>
+<li>Una interfaz optimizada para Apple Watch.</li>
+</ul>
+</section>
+</div>
+<div class="whats-new-actions">
+<a class="whats-new-home-link" href="index.html">
+                Back to Home
+            </a>
+</div>
+</div><footer>
+      <span>© 2026 Tennis Score Wizard</span>
+      <span>Apple Watch es una marca comercial de Apple Inc.</span>
+    </footer></main>
+</body>
+</html>

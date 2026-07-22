@@ -714,7 +714,71 @@ footer {
   }
 }
 
-  </style>
+  /* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+</style>
 </head>
 <body>
   <main class="page">
@@ -725,9 +789,11 @@ footer {
       </div>
       <div class="nav-links">
         <a href="#features">Funktionen</a>
+        <a href="#complications">Zifferblatt</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#stats-guide">Statistik-Guide</a>
-        <a href="#help">Hilfe</a>
+        <a href="whats-new.html">Neuigkeiten</a>
+        <a href="help.html">Hilfe</a>
         <a href="privacy.html">Datenschutz</a>
         <a href="#contact">Kontakt</a>
         <details class="language-menu">
@@ -748,7 +814,8 @@ footer {
           </div>
         </details>
       </div>
-    </nav>
+
+</nav>
 
     <section class="hero">
       <div class="hero-copy">
@@ -876,7 +943,37 @@ footer {
       </div>
     </section>
 
-    <section id="stats-guide">
+    
+
+<section id="complications">
+  <h2>Schnellzugriff über das Apple Watch Zifferblatt</h2>
+
+  <p class="section-subtitle">
+    Starte Tennis Score Wizard direkt vom Apple Watch Zifferblatt mit nur einem Fingertipp.
+  </p>
+
+  <div class="screenshots">
+
+    <article class="screenshot-card">
+      <img src="../assets/complication_accessory_corner.png"
+           alt="Apple Watch Ultra Ecksymbol"
+           loading="lazy">
+      <h3>Ecksymbol</h3>
+      <p>Platziere Tennis Score Wizard im Eckbereich des Zifferblatts für einen schnellen Start vor dem Match.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img src="../assets/complication_accessory_circular.png"
+           alt="Apple Watch Rundes Symbol"
+           loading="lazy">
+      <h3>Rundes Symbol</h3>
+      <p>Platziere Tennis Score Wizard im runden Bereich des Zifferblatts und beginne die Spielstandserfassung mit einem Fingertipp.</p>
+    </article>
+
+  </div>
+</section>
+
+<section id="stats-guide">
       <h2>Guide zu Match-Statistiken</h2>
       <p class="section-subtitle">Version 1.2 fügt automatische Statistiken in History hinzu. Sie werden aus deinen normalen Scoring-Tipps berechnet, sodass du keine Asse, Winner, Ballwechsellänge oder zusätzliche Matchdaten eingeben musst.</p>
       <div class="help">

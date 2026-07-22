@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ヘルプ – Tennis Score Wizard</title>
+<meta content="Apple Watch 向け Tennis Score Wizard：テニススコア、ワークアウト、心拍数、試合履歴、自動試合スタッツ。" name="description"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --panel-2: #111511;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-2: #00d84a;
+      --green-soft: rgba(40,255,95,0.10);
+      --yellow: #ffe34d;
+      --red: #ff4b55;
+    }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+  min-height: 100vh;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 16px;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    rgba(5,7,5,0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: 21px;
+}
+.app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14),
+    0 0 32px rgba(40,255,95,0.20),
+    0 14px 34px rgba(0,0,0,0.52);
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 0 28px rgba(40,255,95,0.10);
+}
+.eyebrow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(40,255,95,0.75);
+}
+h1 {
+  margin: 0;
+  max-width: 740px;
+  font-size: clamp(46px, 7.4vw, 88px);
+  line-height: 0.91;
+  letter-spacing: -0.078em;
+}
+.hero-copy p {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  color: #e9e9ed;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 780;
+}
+.hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  box-shadow:
+    0 42px 130px rgba(0,0,0,0.72),
+    0 0 90px rgba(40,255,95,0.16);
+}
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
+}
+section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px;
+}
+.section-subtitle {
+  max-width: 760px;
+  margin: -6px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 158px;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.card p,
+.faq p,
+.help-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.screenshot-card {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(40,255,95,0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 30px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.26);
+}
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(255,255,255,0.11);
+}
+.screenshot-card h3 {
+  margin: 17px 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.help-item,
+.faq {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.028);
+  border-radius: 23px;
+  padding: 18px;
+}
+.help-item strong,
+.faq strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacy-box {
+  border: 1px solid rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at top left, rgba(40,255,95,0.16), transparent 22rem),
+    rgba(40,255,95,0.06);
+  border-radius: 25px;
+  padding: 22px;
+  color: #eaffdf;
+  box-shadow: 0 0 46px rgba(40,255,95,0.08);
+}
+.privacy-box p {
+  color: #d8f7d0;
+  margin: 8px 0 0;
+}
+.support-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 22px;
+  min-height: 142px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+}
+footer {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .hero-copy p {
+    font-size: 18px;
+  }
+  .hero-visual {
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
+  }
+  .hero-ball {
+    border-radius: 66px;
+  }
+  .grid,
+  .help,
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Language selector */
+.nav {
+  overflow: visible;
+}
+
+.nav-links {
+  align-items: center;
+  overflow: visible;
+}
+
+.language-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  cursor: pointer;
+  color: #f5f7f5;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.045);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.language-menu summary::marker {
+  content: "";
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+.language-menu[open] summary {
+  border-color: var(--line-green);
+  background:
+    linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+    rgba(255,255,255,0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 0 24px rgba(40,255,95,0.13);
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: 210px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+    rgba(7,9,7,0.98);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,24,20,0.98);
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: #f2f4f2;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.language-options a:hover {
+  background: rgba(40,255,95,0.10);
+  text-decoration: none;
+}
+
+.language-options a.active {
+  color: var(--green);
+  background: rgba(40,255,95,0.11);
+}
+
+.language-options a.active::after {
+  content: "✓";
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
+/* Keep language dropdown above hero content */
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.language-menu {
+  z-index: 1100;
+}
+
+.language-options {
+  z-index: 1200;
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .language-menu {
+    position: relative;
+  }
+
+  .language-options {
+    left: 0;
+    right: auto;
+    width: min(210px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+  }
+
+  .language-options::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+/* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+/* Clickable brand and Help badge */
+.brand-home-link,
+.help-badge-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  min-width: 0;
+}
+
+.brand-home-link:hover,
+.brand-home-link:focus-visible,
+.help-badge-home-link:hover,
+.help-badge-home-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link:focus-visible,
+.help-badge-home-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.help-home-badge {
+  cursor: pointer;
+}
+
+/* CJK headings need a slightly clearer gap below the badge. */
+html[lang="ja"] .hero .help-home-badge,
+html[lang="zh-Hans"] .hero .help-home-badge {
+  margin-bottom: 22px;
+}
+</style>
+</head>
+<body>
+<main class="page">
+<nav class="nav">
+<div class="brand"><a aria-label="Tennis Score Wizard — Home" class="brand-home-link" href="index.html">
+<img alt="Tennis Score Wizard" class="app-icon" src="../assets/tennis_ball_app_icon_1024.png"/>
+<span>Tennis Score Wizard</span>
+</a></div>
+<div class="nav-links">
+<a href="index.html#features">機能</a>
+<a href="index.html#screenshots">スクリーンショット</a>
+<a href="index.html#complications">文字盤から起動</a>
+<a href="index.html#stats-guide">スタッツガイド</a>
+<a href="help.html">ヘルプ</a>
+<a href="privacy.html">プライバシー</a>
+<a href="index.html#contact">連絡先</a>
+<details class="language-menu">
+<summary>🇯🇵 日本語</summary>
+<div class="language-options">
+<a href="../help.html">🇺🇸 English</a>
+<a class="active" href="help.html">🇯🇵 日本語</a>
+<a href="../de/help.html">🇩🇪 Deutsch</a>
+<a href="../fr/help.html">🇫🇷 Français</a>
+<a href="../ru/help.html">🇷🇺 Русский</a>
+<a href="../tr/help.html">🇹🇷 Türkçe</a>
+<a href="../es/help.html">🇪🇸 Español</a>
+<a href="../zh-Hans/help.html">🇨🇳 简体中文</a>
+</div>
+</details>
+</div>
+</nav>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Home" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
+<h1>ヘルプセンター</h1>
+<p>試合の開始方法、ワークアウトの記録、スコア操作、保存された試合結果の見方を確認できます。</p>
+</div>
+</section>
+<section id="getting-started">
+<h2>はじめに</h2>
+<p class="section-subtitle">
+    Tennis Score Wizardを準備し、最初の試合を記録するための基本情報です。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Tennis Score Wizardを使うには何が必要ですか？</strong>
+<p>Tennis Score Wizardがインストールされた対応Apple Watchが必要です。Apple Healthの許可は任意で、試合をワークアウトとして記録し、利用可能なヘルスデータを取得する場合にのみ必要です。</p>
+</div>
+<div class="help-item">
+<strong>最初の試合を始めるには？</strong>
+<p>アプリを開き、シングルスまたはダブルス、試合形式、セットルール、最初のサーバーを選択します。必要に応じて「ワークアウトを記録」を有効にしてから試合を開始します。</p>
+</div>
+<div class="help-item">
+<strong>前回の設定は記憶されますか？</strong>
+<p>はい。前回使用した試合設定が保存されるため、次回は同じ形式の試合をすばやく準備できます。開始前に各項目を変更することもできます。</p>
+</div>
+<div class="help-item">
+<strong>Apple Healthなしでもスコアを記録できますか？</strong>
+<p>はい。スコアリング、試合スタッツ、履歴はApple Healthの許可がなくても利用できます。許可が必要なのは、ワークアウト、心拍数、アクティブエネルギーなどを記録する場合だけです。</p>
+</div>
+</div>
+</section>
+
+<section id="match-setup">
+<h2>試合設定</h2>
+<p class="section-subtitle">
+    実際にプレーする形式とルールに合わせて試合を設定します。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>シングルスとダブルスの違いは？</strong>
+<p>1対1の試合ではシングルス、2対2の試合ではダブルスを選択します。選択した形式は試合情報に保存され、ワークアウトを記録する場合にも使用されます。</p>
+</div>
+<div class="help-item">
+<strong>3セットマッチと5セットマッチとは？</strong>
+<p>3セットマッチでは先に2セットを取った側が勝者です。5セットマッチでは先に3セットを取った側が勝者です。</p>
+</div>
+<div class="help-item">
+<strong>セットルールはどのように機能しますか？</strong>
+<p>実際の試合形式に合うセットルールを選択します。アプリはそのルールに従ってセットの終了やタイブレークの開始を自動判定します。</p>
+</div>
+<div class="help-item">
+<strong>最初のサーバーはどう選びますか？</strong>
+<p>設定画面で手動選択するか、内蔵のコイントスを使ってランダムに決めることができます。</p>
+</div>
+<div class="help-item">
+<strong>コイントスは何をしますか？</strong>
+<p>コイントスはランダムな結果を表示し、最初のサーバーを決める手助けをします。試合開始前に結果を確認し、設定を調整できます。</p>
+</div>
+<div class="help-item">
+<strong>「ワークアウトを記録」とは？</strong>
+<p>有効にしてApple Healthの許可を与えると、試合と同時にテニスワークアウトが開始されます。利用可能な心拍数、アクティブエネルギー、時間が記録され、Apple Healthに保存されます。</p>
+</div>
+</div>
+</section>
+
+<section id="scoring">
+<h2>試合のスコアリング</h2>
+<p class="section-subtitle">
+    各ポイントを入力すると、テニスのスコア進行はアプリが自動管理します。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>ポイントを記録するには？</strong>
+<p>自分または相手のどちらがポイントを取ったかをスコア操作で選択します。選択後、スコアはすぐに更新されます。</p>
+</div>
+<div class="help-item">
+<strong>ゲームとセットは自動計算されますか？</strong>
+<p>はい。選択したルールに従って、ポイント、ゲーム、セット、デュース、アドバンテージ、タイブレークが自動的に進行します。</p>
+</div>
+<div class="help-item">
+<strong>デュースとアドバンテージはどう処理されますか？</strong>
+<p>40–40になるとデュースに入ります。その後、アドバンテージを取り、次のポイントも取るとゲーム獲得です。相手が次のポイントを取るとデュースに戻ります。</p>
+</div>
+<div class="help-item">
+<strong>タイブレークはどのように記録されますか？</strong>
+<p>選択したルールでタイブレークが必要になると、通常のテニスポイントから数字によるタイブレーク得点に切り替わります。</p>
+</div>
+<div class="help-item">
+<strong>サーブ位置マーカーはどう機能しますか？</strong>
+<p>自分のサービス時は、サーブすべき側をテニスボールで表示します。相手のサービス時は、時計を見ている自分の視点から相手側の位置を示します。</p>
+</div>
+<div class="help-item">
+<strong>サーバーはどのように追跡されますか？</strong>
+<p>ゲームやタイブレークの進行に合わせてサーバーは自動で切り替わります。実際の試合と表示がずれた場合は、メニューから手動修正できます。</p>
+</div>
+<div class="help-item">
+<strong>エンドチェンジはいつ行いますか？</strong>
+<p>適切なゲーム終了時にコートチェンジの通知が表示されます。通知は案内用で、次のポイントを記録すると消えます。</p>
+</div>
+</div>
+</section>
+
+<section id="match-controls">
+<h2>試合中の操作</h2>
+<p class="section-subtitle">
+    入力ミスの修正、現在の試合の管理、未完了試合の安全な終了に使用します。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>取り消しはどのように機能しますか？</strong>
+<p>最後に入力したポイントを取り消し、ポイント、ゲーム、セット、サーバー、サーブ位置、タイブレーク状態、関連スタッツを直前の状態へ戻します。</p>
+</div>
+<div class="help-item">
+<strong>メニューでは何ができますか？</strong>
+<p>試合中のメニューから、サーバーの修正、試合履歴の表示、現在の試合の停止、新しい試合の準備などを行えます。</p>
+</div>
+<div class="help-item">
+<strong>「サーバーを切り替える」はいつ使いますか？</strong>
+<p>アプリに表示されるサーバーが実際の試合と一致しない場合に使用します。スコアを変更せず、現在のサービス側だけを修正します。</p>
+</div>
+<div class="help-item">
+<strong>試合を停止するとどうなりますか？</strong>
+<p>未完了の試合は現在のスコア、経過時間、完了セット、進行中セット、ポイント、利用可能なスタッツとともに保存できます。履歴では勝敗ではなく「中止」と表示されます。</p>
+</div>
+<div class="help-item">
+<strong>終了後に新しい試合を始められますか？</strong>
+<p>はい。試合を完了または停止した後、設定画面に戻って新しい試合を開始できます。前回の設定も再利用できます。</p>
+</div>
+<div class="help-item">
+<strong>ポイントを間違えて入力した場合は？</strong>
+<p>できるだけ早く取り消しを使用してください。別のポイントを加えて帳尻を合わせるよりも、誤入力前の完全な状態へ正確に戻せます。</p>
+</div>
+</div>
+</section>
+
+<section id="statistics">
+<h2>試合スタッツの見方</h2>
+<p class="section-subtitle">
+    保存された数値が何を表し、どのように計算されるかを説明します。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>総ポイントとは？</strong>
+<p>試合中に記録された得点の合計です。ポイント内訳では、自分が取ったポイントと相手が取ったポイントを分けて表示します。</p>
+</div>
+<div class="help-item">
+<strong>連続ポイントとは？</strong>
+<p>同じ側が連続して獲得したポイントの並びです。最長連続ポイントは、試合中に記録された最も長い連続獲得数を示します。</p>
+</div>
+<div class="help-item">
+<strong>プレッシャーポイントのスタッツとは？</strong>
+<p>ゲーム、セット、試合の結果に大きく影響する重要な局面での成績をまとめたものです。重要なポイントで双方がどのようにプレーしたかを確認できます。</p>
+</div>
+<div class="help-item">
+<strong>スタッツは自動更新されますか？</strong>
+<p>はい。入力したポイントから自動更新されます。取り消しを使うと最後のポイントによるスタッツへの影響も戻されます。</p>
+</div>
+<div class="help-item">
+<strong>中止した試合でスタッツが不完全な理由は？</strong>
+<p>中止時点までに発生したポイントと状況のみが含まれます。試合後半や正常終了を必要とする項目は表示されない場合があります。</p>
+</div>
+<div class="help-item">
+<strong>古い試合で表示されるスタッツが少ない理由は？</strong>
+<p>以前のアプリバージョンで保存された試合には、後から追加された項目が含まれていない場合があります。アプリは存在しないデータを推測せず、当時保存された情報をそのまま保持します。</p>
+</div>
+</div>
+</section>
+
+<section id="health-workouts">
+<h2>Apple Healthとワークアウト</h2>
+<p class="section-subtitle">
+    テニスワークアウトの記録方法と、試合後に表示されるヘルス情報について説明します。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>テニスワークアウトを記録するには？</strong>
+<p>試合設定で「ワークアウトを記録」を有効にし、Apple Healthの許可を与えます。ワークアウトは試合開始時に始まり、試合の完了または停止時に終了します。</p>
+</div>
+<div class="help-item">
+<strong>ライブ心拍数はどのように機能しますか？</strong>
+<p>ワークアウト記録中、Apple Healthの許可があり、Apple Watchから心拍数サンプルが提供されると現在の心拍数が表示されます。</p>
+</div>
+<div class="help-item">
+<strong>平均心拍数と最大心拍数とは？</strong>
+<p>平均心拍数はワークアウト中に取得できた心拍数サンプルの平均です。最大心拍数は、そのワークアウトで記録された最も高い心拍数です。</p>
+</div>
+<div class="help-item">
+<strong>アクティブエネルギーとは？</strong>
+<p>ワークアウト中の活動によって消費したと推定されるエネルギーです。Apple WatchとApple Healthが利用可能な健康情報とモーション情報から計算します。</p>
+</div>
+<div class="help-item">
+<strong>ワークアウトはどこに保存されますか？</strong>
+<p>正常に完了するとApple Healthに保存され、端末の許可と同期状況に応じてAppleのフィットネスアプリにも表示されます。</p>
+</div>
+<div class="help-item">
+<strong>ワークアウトスタッツの表示が遅れることがあるのはなぜ？</strong>
+<p>一部の測定値はワークアウト終了後にApple Healthで確定されます。完了した試合を確認する前に、処理と同期のため少し時間を置いてください。</p>
+</div>
+<div class="help-item">
+<strong>ヘルススタッツが表示されない理由は？</strong>
+<p>許可がない、センサーから十分なサンプルが得られない、ワークアウト記録が無効だった、またはApple Healthの処理が完了していない場合があります。</p>
+</div>
+<div class="help-item">
+<strong>ワークアウト記録に失敗しても試合は保存されますか？</strong>
+<p>はい。試合スコアと履歴はApple Healthとは別に保存されます。Healthの許可やワークアウトデータの問題があっても、スコア記録自体は保存できます。</p>
+</div>
+</div>
+</section>
+
+<section id="match-history">
+<h2>試合履歴</h2>
+<p class="section-subtitle">
+    完了した試合と中止した試合を、簡潔なテニス表記で確認できます。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>「勝利」と「敗戦」とは？</strong>
+<p>勝利は完了した試合で自分がセット数で勝ったことを示します。敗戦は相手がセット数で勝ったことを示します。</p>
+</div>
+<div class="help-item">
+<strong>「中止」とは？</strong>
+<p>試合が通常の終了前に保存されたことを示します。中止時点までに記録された実際の試合状況は保持されます。</p>
+</div>
+<div class="help-item">
+<strong>S1、S2、S3とは？</strong>
+<p>それぞれ第1セット、第2セット、第3セットを意味します。たとえば「S1 6–3」は第1セットが6ゲーム対3ゲームで終了したことを示します。</p>
+</div>
+<div class="help-item">
+<strong>TB 7–3とは？</strong>
+<p>TBはセット内のタイブレーク得点です。たとえば「7–6 · TB 7–3」はセットが7–6で終了し、タイブレークが7–3だったことを示します。</p>
+</div>
+<div class="help-item">
+<strong>中止した試合はどのように評価されますか？</strong>
+<p>セット数に明確なリードがある場合は、その時点でどちらがリードしていたかを表示します。セットが同数なら、ゲーム数やタイブレークの状況を使って試合状態を表します。</p>
+</div>
+<div class="help-item">
+<strong>未完了セットはどうなりますか？</strong>
+<p>試合停止時に進行中のセットがある場合、その途中経過も保存されます。たとえば「S3 0–1」のように実際の状況を保持します。</p>
+</div>
+<div class="help-item">
+<strong>試合にはどの情報が保存されますか？</strong>
+<p>結果、セットスコア、タイブレーク、ポイント、試合時間、開始・終了時刻、試合スタッツ、利用可能なワークアウトスタッツが保存されます。</p>
+</div>
+<div class="help-item">
+<strong>保存した試合を削除できますか？</strong>
+<p>はい。試合履歴の削除操作を選び、確認してください。削除すると、その履歴項目はアプリから取り除かれます。</p>
+</div>
+</div>
+</section>
+
+<section id="complications-help">
+<h2>Apple Watch文字盤コンプリケーション</h2>
+<p class="section-subtitle">
+    対応する文字盤からTennis Score Wizardをすばやく起動できます。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Tennis Score Wizardのコンプリケーションは何をしますか？</strong>
+<p>アプリをすばやく開くためのランチャーです。タップするとApple Watch上のTennis Score Wizardが起動します。</p>
+</div>
+<div class="help-item">
+<strong>どのコンプリケーションファミリーに対応していますか？</strong>
+<p>対応するApple Watch文字盤と配置で、accessoryCircularとaccessoryCornerを利用できます。</p>
+</div>
+<div class="help-item">
+<strong>コンプリケーションを追加するには？</strong>
+<p>Apple WatchまたはiPhoneのWatchアプリで対応文字盤を編集し、対応する位置を選択して、利用可能なコンプリケーションからTennis Score Wizardを選びます。</p>
+</div>
+<div class="help-item">
+<strong>コンプリケーションが見つからないのはなぜ？</strong>
+<p>アプリがApple Watchにインストールされていることと、選択した文字盤の位置が対応ファミリーをサポートしていることを確認してください。利用可能な位置は文字盤によって異なります。</p>
+</div>
+<div class="help-item">
+<strong>文字盤によって見た目が異なるのはなぜ？</strong>
+<p>各配置の形状と使用可能な領域はApple Watchによって決まります。Tennis Score Wizardは円形またはコーナー表示に合わせて自動調整されます。</p>
+</div>
+</div>
+</section>
+
+<section id="troubleshooting">
+<h2>トラブルシューティング</h2>
+<p class="section-subtitle">
+    スコア、ワークアウト情報、文字盤からの起動が期待どおり動作しない場合の確認事項です。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>ライブ心拍数が表示されません。</strong>
+<p>「ワークアウトを記録」が有効で、Apple Healthの許可があり、時計を手首にしっかり装着していることを確認してください。心拍数はApple Watchからサンプルが提供されたときのみ表示されます。</p>
+</div>
+<div class="help-item">
+<strong>ワークアウトがApple Healthに表示されません。</strong>
+<p>処理が完了するまで少し待ち、Healthの許可と試合設定を確認してください。また、試合を完了または停止してワークアウトが正しく終了していることも確認してください。</p>
+</div>
+<div class="help-item">
+<strong>平均心拍数、最大心拍数、またはアクティブエネルギーがありません。</strong>
+<p>Apple Healthがワークアウトを確定するまで待ってから、完了した試合を再度開いてください。十分な元データがない場合、値は表示されないことがあります。</p>
+</div>
+<div class="help-item">
+<strong>表示されるサーバーが間違っています。</strong>
+<p>メニューから「サーバーを切り替える」を使って実際の試合と合わせてください。スコアを変えずにサービス側だけを修正できます。</p>
+</div>
+<div class="help-item">
+<strong>間違ったポイントを入力しました。</strong>
+<p>取り消しを使用してください。スコア、サーバー、タイブレーク状態、関連スタッツを含め、最後のポイント入力前の状態に戻ります。</p>
+</div>
+<div class="help-item">
+<strong>選択した文字盤でコンプリケーションを使えません。</strong>
+<p>accessoryCircularまたはaccessoryCornerに対応する位置を試してください。すべての文字盤のすべての位置が同じファミリーに対応しているわけではありません。</p>
+</div>
+<div class="help-item">
+<strong>アプリを再インストールしても履歴は残りますか？</strong>
+<p>アプリの削除や再インストール後にローカル履歴が残るとは限りません。保存した履歴が重要な場合はアプリを削除しないでください。</p>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2>サポート</h2>
+<div class="support-card">
+<h3>サポートが必要ですか？機能を提案しますか？</h3>
+<p>
+          連絡先：
+          <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+</p>
+</div>
+</section>
+<footer>
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch は Apple Inc. の商標です。</span>
+</footer>
+</main>
+</body>
+</html>

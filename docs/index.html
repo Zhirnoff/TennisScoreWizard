@@ -715,7 +715,71 @@ footer {
   }
 }
 
-  </style>
+  /* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+</style>
 </head>
 <body>
   <main class="page">
@@ -727,8 +791,10 @@ footer {
   <div class="nav-links">
     <a href="#features">Features</a>
     <a href="#screenshots">Screenshots</a>
+    <a href="#complications">Complications</a>
     <a href="#stats-guide">Stats Guide</a>
-    <a href="#help">Help</a>
+    <a href="whats-new.html">What’s New</a>
+    <a href="help.html">Help</a>
     <a href="privacy.html">Privacy</a>
     <a href="#contact">Contact</a>
     <details class="language-menu">
@@ -880,6 +946,36 @@ footer {
       <h3>Game flow</h3>
       <p>See longest game, average points per game, total games, and tie-breaks won or lost.</p>
     </article>
+  </div>
+</section>
+
+<section id="complications">
+  <h2>Apple Watch Complications</h2>
+
+  <p class="section-subtitle">
+    Keep Tennis Score Wizard just one tap away with Apple Watch complications.
+  </p>
+
+  <div class="screenshots">
+
+    <article class="screenshot-card">
+      <img
+        src="assets/complication_accessory_corner.png"
+        alt="Apple Watch Ultra Corner Complication"
+        loading="lazy">
+      <h3>Corner Complication</h3>
+      <p>Pin Tennis Score Wizard to an accessory corner complication for instant match access.</p>
+    </article>
+
+    <article class="screenshot-card">
+      <img
+        src="assets/complication_accessory_circular.png"
+        alt="Apple Watch Circular Complication"
+        loading="lazy">
+      <h3>Circular Complication</h3>
+      <p>Add Tennis Score Wizard to a circular complication and start scoring with a single tap.</p>
+    </article>
+
   </div>
 </section>
 
