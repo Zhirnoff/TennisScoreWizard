@@ -714,7 +714,71 @@ footer {
   }
 }
 
-  </style>
+  /* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+</style>
 </head>
 <body>
   <main class="page">
@@ -725,9 +789,11 @@ footer {
       </div>
       <div class="nav-links">
         <a href="#features">機能</a>
+        <a href="#complications">文字盤</a>
         <a href="#screenshots">スクリーンショット</a>
         <a href="#stats-guide">スタッツガイド</a>
-        <a href="#help">ヘルプ</a>
+        <a href="whats-new.html">新機能</a>
+        <a href="help.html">ヘルプ</a>
         <a href="privacy.html">プライバシー</a>
         <a href="#contact">連絡先</a>
         <details class="language-menu">
@@ -748,7 +814,7 @@ footer {
           </div>
         </details>
       </div>
-        <a href="#complications">Complications</a>
+
 </nav>
 
     <section class="hero">
