@@ -4,8 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../assets/tennis_ball_app_icon_1024.png" rel="icon"/>
 <title>帮助 – Tennis Score Wizard</title>
-<meta content="Tennis Score Wizard for Apple Watch：网球计分、体能训练、心率、比赛历史和自动比赛统计。" name="description"/>
+<meta content="Tennis Score Wizard Standalone和 Companion 版帮助：Apple Watch 记分、iPhone 同步、比赛历史记录、统计数据、Apple Health 锻炼记录、表盘复杂功能以及故障排除。" name="description"/>
 <style>
     :root {
       --bg: #000000;
@@ -39,6 +40,7 @@ body {
     radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
     linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
   min-height: 100vh;
+  overflow-x: clip;
 }
 a {
   color: var(--green);
@@ -816,23 +818,343 @@ html[lang="ja"] .hero .help-home-badge,
 html[lang="zh-Hans"] .hero .help-home-badge {
   margin-bottom: 22px;
 }
+
+
+/* Unified global product navigation */
+.nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "brand links language";
+  align-items: center;
+  column-gap: 26px;
+  min-height: 92px;
+  padding: 14px 16px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-links > a[aria-current="page"] {
+  color: var(--green);
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+.footer-meta,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    column-gap: 14px;
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: grid;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    font-size: 12px;
+  }
+
+  .nav-links > a[aria-current="page"] {
+    border-color: var(--line-green);
+    background: var(--green-soft);
+  }
+
+  .language-options {
+    right: 0;
+    left: auto;
+  }
+
+  .language-options::before {
+    right: 22px;
+    left: auto;
+  }
+
+  footer,
+  .footer-meta,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Five-link mobile navigation */
+@media (max-width: 640px) {
+  .nav-links > a:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Shared animated brand treatment */
+.brand-title {
+  display: inline-block;
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-home-link {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .hero-copy,
+  .hero-copy > *,
+  .help,
+  .help-item,
+  .faq {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1,
+  section > h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero-copy p,
+  .help-item,
+  .faq {
+    overflow-wrap: break-word;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
 </style>
 </head>
 <body>
 <main class="page">
-<nav class="nav">
-<div class="brand"><a aria-label="Tennis Score Wizard — Home" class="brand-home-link" href="index.html">
+<nav aria-label="主要导航" class="nav">
+<div class="brand">
+<a aria-label="Tennis Score Wizard — Home" class="brand-home-link" href="index.html">
 <img alt="Tennis Score Wizard" class="app-icon" src="../assets/tennis_ball_app_icon_1024.png"/>
-<span>Tennis Score Wizard</span>
-</a></div>
+<span class="brand-title">Tennis Score Wizard</span>
+</a>
+</div>
 <div class="nav-links">
-<a href="index.html#features">功能</a>
-<a href="index.html#screenshots">截图</a>
-<a href="index.html#complications">从表盘启动</a>
-<a href="index.html#stats-guide">统计指南</a>
-<a href="help.html">帮助</a>
-<a href="privacy.html">隐私</a>
-<a href="index.html#contact">联系</a>
+<a href="index.html#versions">版本</a>
+<a href="index.html#companion-benefits">Companion</a>
+<a href="index.html#standalone">Standalone</a>
+<a href="index.html#comparison">比较</a>
+<a aria-current="page" href="help.html">帮助</a>
+</div>
 <details class="language-menu">
 <summary>🇨🇳 简体中文</summary>
 <div class="language-options">
@@ -846,13 +1168,16 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <a class="active" href="help.html">🇨🇳 简体中文</a>
 </div>
 </details>
-</div>
 </nav>
 <section class="hero">
 <div class="hero-copy">
 <p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Home" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
 <h1>帮助中心</h1>
-<p>了解如何开始比赛、记录体能训练、使用比分控制，以及查看已保存的比赛结果。</p>
+<p>
+      了解如何配置和记录比赛、将 Companion 与 iPhone 同步、
+      解读统计数据、记录 Apple Health 锻炼数据、使用表盘复杂功能，
+      以及排查常见问题。
+    </p>
 </div>
 </section>
 <section id="getting-started">
@@ -879,7 +1204,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="match-setup">
 <h2>比赛设置</h2>
 <p class="section-subtitle">
@@ -912,7 +1236,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="scoring">
 <h2>比赛记分</h2>
 <p class="section-subtitle">
@@ -936,7 +1259,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <p>当所选规则要求进行抢七时，应用会从普通网球计分切换为数字抢七比分。</p>
 </div>
 <div class="help-item">
-<strong>发球位置指示器如何工作？</strong>
+<strong>发球标记如何工作？</strong>
 <p>当你发球时，网球图标会显示正确的发球侧。当对手发球时，应用会从你查看手表的视角显示对手的发球侧。</p>
 </div>
 <div class="help-item">
@@ -949,7 +1272,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="match-controls">
 <h2>比赛控制</h2>
 <p class="section-subtitle">
@@ -957,11 +1279,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
   </p>
 <div class="help">
 <div class="help-item">
-<strong>撤销如何工作？</strong>
+<strong>Undo 如何工作？</strong>
 <p>撤销会移除最后记录的一分，并恢复之前的分数、局数、盘数、发球方、发球位置、抢七状态和相关统计数据。</p>
 </div>
 <div class="help-item">
-<strong>可以通过菜单执行哪些操作？</strong>
+<strong>Menu 有什么作用？</strong>
 <p>比赛进行中，可以通过菜单修正发球方、查看历史记录、停止当前比赛或准备一场新比赛。</p>
 </div>
 <div class="help-item">
@@ -982,7 +1304,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="statistics">
 <h2>了解比赛统计</h2>
 <p class="section-subtitle">
@@ -1015,7 +1336,38 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
+<section id="companion-sync">
+<h2>Companion 与 iPhone 同步</h2>
+<p class="section-subtitle">
+    在 Apple Watch 上记录比分，随后在 iPhone 上查看同步的比赛历史、结果、统计数据和锻炼洞察。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>如何在 Companion 中设置和记录比赛？</strong>
+<p>比赛设置和实时计分功能仍保留在 Apple Watch 上。Companion包含完整的 Watch 应用，并新增了 iPhone 视图，供您在训练结束后或训练间隙查看已保存的比赛记录。</p>
+</div>
+<div class="help-item">
+<strong>iPhone 上会显示什么内容？</strong>
+<p>iPhone 应用可显示最新赛果、近期及完整比赛历史、盘分与抢七比分、比赛时长、得分，以及发球、接发球、关键分和比赛走势统计，还可查看可用的训练摘要。</p>
+</div>
+<div class="help-item">
+<strong>比赛历史如何同步？</strong>
+<p>已保存的比赛会在已配对的 Apple Watch 和 iPhone 之间直接传输。请将两台设备放在附近，并稍等片刻，系统会将新保存的比赛同步过来。</p>
+</div>
+<div class="help-item">
+<strong>如果比赛未在 iPhone 上显示，该怎么办？</strong>
+<p>请确认已与正确的 Apple Watch 配对，将两台设备放在附近，并在 Apple Watch 和 iPhone 上打开“Tennis Score Wizard”应用。该场比赛仍保存在本地，待连接恢复后即可同步。</p>
+</div>
+<div class="help-item">
+<strong>训练详情也会同步吗？</strong>
+<p>当 Apple Health 提供数据时，Companion 可在两台设备上显示已保存比赛的锻炼时长、平均心率和最高心率，以及活动消耗的卡路里。</p>
+</div>
+<div class="help-item">
+<strong>删除比赛记录会有什么影响？</strong>
+<p>在 Companion 中删除单场比赛或全部记录时，该更改会在 iPhone 和 Apple Watch 之间同步。删除全部记录前，应用会要求您确认。</p>
+</div>
+</div>
+</section>
 <section id="health-workouts">
 <h2>Apple Health 与体能训练</h2>
 <p class="section-subtitle">
@@ -1056,7 +1408,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="match-history">
 <h2>比赛历史</h2>
 <p class="section-subtitle">
@@ -1064,15 +1415,15 @@ html[lang="zh-Hans"] .hero .help-home-badge {
   </p>
 <div class="help">
 <div class="help-item">
-<strong>“胜利”和“失败”是什么意思？</strong>
-<p>“胜利”表示你在一场正常结束的比赛中按盘数获胜。“失败”表示对手按盘数获胜。</p>
+<strong>Win 和 Loss 是什么意思？</strong>
+<p>Win 表示你按盘数赢下了已完成比赛。Loss 表示对手按盘数赢下了已完成比赛。</p>
 </div>
 <div class="help-item">
-<strong>“已停止”是什么意思？</strong>
+<strong>Stopped 是什么意思？</strong>
 <p>表示比赛在正常结束之前被保存。停止时已经记录的真实比赛状态会被保留。</p>
 </div>
 <div class="help-item">
-<strong>S1、S2 和 S3 是什么意思？</strong>
+<strong>S1、S2、S3 是什么？</strong>
 <p>它们分别表示第一盘、第二盘和第三盘。例如，“S1 6–3”表示第一盘以六局比三局结束。</p>
 </div>
 <div class="help-item">
@@ -1080,11 +1431,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <p>TB 表示该盘中的抢七比分。例如，“7–6 · TB 7–3”表示该盘以 7–6 结束，抢七比分为 7–3。</p>
 </div>
 <div class="help-item">
-<strong>已停止的比赛如何判断当前状态？</strong>
+<strong>中止比赛如何判断？</strong>
 <p>如果一方在盘数上明确领先，历史记录会显示领先方。如果盘数相同，则会使用可用的局数和抢七数据描述比赛状态。</p>
 </div>
 <div class="help-item">
-<strong>未完成的一盘会怎样保存？</strong>
+<strong>未完成的一盘会怎样？</strong>
 <p>如果当前一盘已经开始，其进行中的比分会与比赛一起保存，例如“S3 0–1”。</p>
 </div>
 <div class="help-item">
@@ -1097,7 +1448,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="complications-help">
 <h2>Apple Watch 表盘复杂功能</h2>
 <p class="section-subtitle">
@@ -1126,7 +1476,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="troubleshooting">
 <h2>故障排除</h2>
 <p class="section-subtitle">
@@ -1167,13 +1516,48 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <h2>支持</h2>
 <div class="support-card">
 <h3>需要帮助或想建议新功能？</h3>
-<p>联系： <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a></p>
+<p>
+      联系：
+      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+</p>
 </div>
 </section>
 <footer>
+<div class="footer-meta">
 <span>© 2026 Tennis Score Wizard</span>
 <span>Apple Watch 是 Apple Inc. 的商标。</span>
+</div>
+<nav aria-label="次级导航" class="footer-links">
+<a href="index.html#stats-guide">统计指南</a>
+<a href="whats-new.html">产品更新</a>
+<a href="privacy.html">隐私</a>
+<a href="index.html#contact">联系</a>
+</nav>
 </footer>
 </main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
 </body>
 </html>
