@@ -1,10 +1,33 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>新機能 — Tennis Score Wizard</title>
-<meta content="See what was added in each version of Tennis Score Wizard for Apple Watch." name="description"/>
+<link href="../assets/tennis_ball_app_icon_1024.png" rel="icon"/>
+<title>製品のアップデート — Tennis Score Wizard</title>
+<meta content="「Tennis Score Wizard」StandaloneおよびCompanionのリリースノート。Apple Watchの機能改善や、iPhoneとの同期機能などが含まれます。" name="description"/>
+<link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/ja/whats-new.html">
+<link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
+<link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/whats-new.html">
+<link rel="alternate" hreflang="es" href="https://zhirnoff.github.io/TennisScoreWizard/es/whats-new.html">
+<link rel="alternate" hreflang="fr" href="https://zhirnoff.github.io/TennisScoreWizard/fr/whats-new.html">
+<link rel="alternate" hreflang="ja" href="https://zhirnoff.github.io/TennisScoreWizard/ja/whats-new.html">
+<link rel="alternate" hreflang="ru" href="https://zhirnoff.github.io/TennisScoreWizard/ru/whats-new.html">
+<link rel="alternate" hreflang="tr" href="https://zhirnoff.github.io/TennisScoreWizard/tr/whats-new.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/whats-new.html">
+<link rel="alternate" hreflang="x-default" href="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tennis Score Wizard">
+<meta property="og:title" content="製品のアップデート — Tennis Score Wizard">
+<meta property="og:description" content="「Tennis Score Wizard」StandaloneおよびCompanionのリリースノート。Apple Watchの機能改善や、iPhoneとの同期機能などが含まれます。">
+<meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/ja/whats-new.html">
+<meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
+<meta property="og:image:alt" content="Tennis Score Wizard app icon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="製品のアップデート — Tennis Score Wizard">
+<meta name="twitter:description" content="「Tennis Score Wizard」StandaloneおよびCompanionのリリースノート。Apple Watchの機能改善や、iPhoneとの同期機能などが含まれます。">
+<meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
       --bg: #000000;
@@ -38,6 +61,7 @@ body {
     radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
     linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
   min-height: 100vh;
+  overflow-x: clip;
 }
 a {
   color: var(--green);
@@ -815,6 +839,406 @@ html[lang="ja"] .hero .help-home-badge,
 html[lang="zh-Hans"] .hero .help-home-badge {
   margin-bottom: 22px;
 }
+
+
+/* Unified global navigation and two-product release page */
+.nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "brand links language";
+  align-items: center;
+  column-gap: 26px;
+  min-height: 92px;
+  padding: 14px 16px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+.updates-page {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+}
+
+.updates-hero {
+  margin: 92px 0 0;
+  text-align: center;
+}
+
+.updates-kicker,
+.updates-section-kicker {
+  display: inline-flex;
+  width: fit-content;
+  padding: 7px 11px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: var(--green-soft);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.updates-hero h1 {
+  max-width: 880px;
+  margin: 22px auto 0;
+  font-size: clamp(52px, 8vw, 92px);
+  line-height: 0.92;
+  letter-spacing: -0.075em;
+}
+
+.updates-hero > p {
+  max-width: 720px;
+  margin: 26px auto 0;
+  color: var(--muted);
+  font-size: 19px;
+}
+
+.updates-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 42px;
+  text-align: left;
+}
+
+.updates-product-card {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  color: #ffffff;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.018)),
+    var(--panel);
+  box-shadow: 0 26px 74px rgba(0,0,0,0.30);
+}
+
+.updates-product-card:hover,
+.updates-product-card:focus-visible {
+  border-color: rgba(40,255,95,0.46);
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.updates-product-companion {
+  border-color: rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(40,255,95,0.14), transparent 40%),
+    linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.018)),
+    var(--panel);
+}
+
+.updates-product-label {
+  margin-bottom: auto;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.updates-product-card strong {
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.updates-product-card small {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.updates-chapter {
+  margin-top: 110px;
+  padding: 42px;
+  border: 1px solid var(--line);
+  border-radius: 38px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.016)),
+    var(--panel);
+  box-shadow:
+    0 32px 90px rgba(0,0,0,0.34),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.updates-companion-chapter {
+  border-color: rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at 88% 8%, rgba(40,255,95,0.12), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.016)),
+    var(--panel);
+}
+
+.updates-chapter-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.updates-chapter-heading h2 {
+  max-width: 740px;
+  margin: 18px 0 0;
+  font-size: clamp(38px, 5.6vw, 64px);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.updates-status {
+  flex: 0 0 auto;
+  padding: 8px 11px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: var(--green-soft);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.updates-status-live {
+  color: #001407;
+  background: var(--green);
+}
+
+.updates-chapter-intro {
+  max-width: 760px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.updates-history-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255,255,255,0.028);
+}
+
+.updates-history-card > span,
+.updates-release-title > span {
+  display: block;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.updates-history-card h3 {
+  margin: 24px 0 8px;
+  font-size: 20px;
+  letter-spacing: -0.035em;
+}
+
+.updates-latest-release {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+  gap: 28px;
+  margin-top: 34px;
+  padding: 28px;
+  border: 1px solid rgba(40,255,95,0.30);
+  border-radius: 28px;
+  background: rgba(40,255,95,0.055);
+}
+
+.updates-release-title h3 {
+  margin: 10px 0 0;
+  font-size: 32px;
+  letter-spacing: -0.05em;
+}
+
+.updates-latest-release ul,
+.updates-history-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.updates-latest-release li + li,
+.updates-history-card li + li {
+  margin-top: 8px;
+}
+
+.updates-latest-release li::marker,
+.updates-history-card li::marker {
+  color: var(--green);
+}
+
+.updates-history-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.updates-history-card h3 {
+  margin-top: 16px;
+}
+
+.updates-history-card ul {
+  font-size: 14px;
+}
+
+.footer-meta,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    column-gap: 14px;
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .updates-hero {
+    margin-top: 72px;
+  }
+
+  .updates-hero h1 {
+    font-size: clamp(48px, 15vw, 68px);
+  }
+
+  .updates-hero > p {
+    font-size: 16px;
+  }
+
+  .updates-product-grid,
+  .updates-history-grid,
+  .updates-latest-release {
+    grid-template-columns: 1fr;
+  }
+
+  .updates-chapter {
+    margin-top: 84px;
+    padding: 24px;
+    border-radius: 28px;
+  }
+
+  .updates-chapter-heading {
+    flex-direction: column;
+  }
+
+  .updates-chapter-heading h2 {
+    font-size: clamp(38px, 12vw, 54px);
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: grid;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    font-size: 12px;
+  }
+
+  .language-options {
+    right: 0;
+    left: auto;
+  }
+
+  .language-options::before {
+    right: 22px;
+    left: auto;
+  }
+
+  footer,
+  .footer-meta,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
 </style>
 <style>
     .whats-new-page {
@@ -1169,26 +1593,259 @@ html[lang="zh-Hans"] .hero .help-home-badge {
     }
 }
 /* RELEASE LIST FLOW FIX END */
+/* Shared animated brand treatment */
+.brand-title {
+  display: inline-block;
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-home-link {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 700px) {
+  .updates-page,
+  .updates-hero,
+  .updates-product-grid,
+  .updates-product-card,
+  .updates-chapter,
+  .updates-chapter-heading,
+  .updates-chapter-heading > div,
+  .updates-latest-release,
+  .updates-release-title,
+  .updates-history-grid,
+  .updates-history-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .updates-hero h1,
+  .updates-chapter-heading h2,
+  .updates-history-card h3 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .updates-hero h1 {
+    font-size: clamp(42px, 12.5vw, 58px);
+    line-height: 0.96;
+  }
+
+  .updates-chapter-heading h2 {
+    font-size: clamp(34px, 10vw, 46px);
+    line-height: 1;
+  }
+
+  .updates-kicker,
+  .updates-section-kicker,
+  .updates-status {
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .updates-chapter-intro,
+  .updates-latest-release li,
+  .updates-history-card li {
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 360px) {
+  .updates-hero h1 {
+    font-size: clamp(38px, 12vw, 44px);
+  }
+
+  .updates-chapter-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
+
+.nav-links > a[aria-current="page"] {
+  color: var(--green);
+}
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
 </style>
 </head>
 <body>
-<main class="page"><nav class="nav">
-      <div class="brand">
-        <img class="app-icon" src="../assets/tennis_ball_app_icon_1024.png" alt="Tennis Score Wizard">
-        <span>Tennis Score Wizard</span>
-      </div>
-      <div class="nav-links">
-        <a href="#features">機能</a>
-        <a href="#complications">文字盤</a>
-        <a href="#screenshots">スクリーンショット</a>
-        <a href="#stats-guide">スタッツガイド</a>
-        <a href="whats-new.html">新機能</a>
-        <a href="help.html">ヘルプ</a>
-        <a href="privacy.html">プライバシー</a>
-        <a href="#contact">連絡先</a>
-        <details class="language-menu">
-          <summary>🇯🇵 日本語</summary>
-          <div class="language-options">
+<main class="page"><nav aria-label="メインナビゲーション" class="nav">
+<div class="brand">
+<a aria-label="Tennis Score Wizard — Home" class="brand-home-link" href="index.html">
+<img alt="Tennis Score Wizard" class="app-icon" src="../assets/tennis_ball_app_icon_1024.png"/>
+<span class="brand-title">Tennis Score Wizard</span>
+</a>
+</div>
+<div class="nav-links">
+<a href="index.html#versions">バージョン</a>
+<a href="index.html#comparison">比較</a>
+<a href="index.html#stats-guide">スタッツガイド</a>
+<a aria-current="page" href="whats-new.html">製品アップデート</a>
+<a href="help.html">ヘルプ</a>
+<a href="index.html#contact">お問い合わせ</a>
+</div>
+<details class="language-menu">
+<summary>🇯🇵 日本語</summary>
+<div class="language-options">
 <a href="../whats-new.html">🇺🇸 English</a>
 <a class="active" href="whats-new.html">🇯🇵 日本語</a>
 <a href="../de/whats-new.html">🇩🇪 Deutsch</a>
@@ -1198,116 +1855,156 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <a href="../es/whats-new.html">🇪🇸 Español</a>
 <a href="../zh-Hans/whats-new.html">🇨🇳 简体中文</a>
 </div>
-        </details>
-      </div>
-
-</nav><div class="whats-new-page">
-<section aria-labelledby="whats-new-title" class="whats-new-hero">
-<a class="whats-new-badge" href="index.html">
-                Tennis Score Wizard
-            </a>
-<h1 class="whats-new-title" id="whats-new-title">新機能</h1>
-<p class="whats-new-intro">
-                Tennis Score Wizardのこれまでのアップデートで追加された機能、改善点、調整内容をご覧いただけます。
-            </p>
+</details>
+</nav><div class="updates-page">
+<section aria-labelledby="updates-title" class="updates-hero">
+<span class="updates-kicker">製品のアップデート</span>
+<h1 id="updates-title">ふたつの製品、それぞれのアップデート。</h1>
+<p>
+      Apple Watch専用のStandaloneと、iPhone + Apple Watchで使うCompanionのアップデートをご案内します。
+    </p>
+<div class="updates-product-grid">
+<a class="updates-product-card updates-product-companion" href="#companion-updates">
+<span class="updates-product-label">Companion</span>
+<strong>iPhone + Apple Watch</strong>
+<small>初回リリース · バージョン 1.0</small>
+</a>
+<a class="updates-product-card" href="#standalone-updates">
+<span class="updates-product-label">Standalone</span>
+<strong>Apple Watch専用</strong>
+<small>最新リリース · バージョン 1.3.1</small>
+</a>
+</div>
 </section>
-<div class="release-list">
-<section aria-labelledby="version-1-3" class="release-card">
-<h2 class="release-version" id="version-1-3"><svg aria-hidden="true" class="release-version-icon" focusable="false" viewbox="0 0 24 24">
-<rect height="14" rx="3" width="16" x="4" y="5.5"></rect>
-<path d="M8 3.5v4"></path>
-<path d="M16 3.5v4"></path>
-<path d="M4 9.5h16"></path>
-</svg>
-                    Version 1.3
-                </h2>
+<section class="updates-chapter updates-companion-chapter" id="companion-updates">
+<div class="updates-chapter-heading">
+<div>
+<span class="updates-section-kicker">Companionのリリース</span>
+<h2>iPhoneと連携する、完全なWatchアプリ。</h2>
+</div>
+<span class="updates-status updates-status-live">現在利用可能</span>
+</div>
+<p class="updates-chapter-intro">
+      バージョン1.0では、Apple Watchでのスコア管理機能をすべて網羅するとともに、試合履歴、結果、詳細な統計データ、ワークアウトの分析情報をiPhoneのホーム画面と同期して表示します。
+    </p>
+<article class="updates-latest-release">
+<div class="updates-release-title">
+<span>初回リリース</span>
+<h3>バージョン 1.0</h3>
+</div>
+<ul>
+<li>試合設定、ライブスコアリング、サーブガイド、元に戻す機能、履歴、自動統計、ワークアウト、コンプリケーションを網羅した完全なApple Watchアプリ。</li>
+<li>Apple WatchからペアリングされたiPhoneへの、ローカルな試合履歴の自動同期。</li>
+<li>最新の結果、最近の試合、保存された試合履歴のすべてを表示するiPhoneのホーム画面。</li>
+<li>勝敗、セットとタイブレークのスコア、試合時間、ポイント、サーブ、リターン、重要局面、試合の流れを詳しく振り返れます。</li>
+<li>Apple Healthから取得可能な場合、平均心拍数、最大心拍数、活動による消費カロリーを含むワークアウトの概要。</li>
+<li>個々の試合や履歴全体を削除でき、変更内容はiPhoneとApple Watch間で同期されます。</li>
+</ul>
+</article>
+</section>
+<section class="updates-chapter" id="standalone-updates">
+<div class="updates-chapter-heading">
+<div>
+<span class="updates-section-kicker">Standalone</span>
+<h2>改良を重ねて進化するApple Watchアプリ。</h2>
+</div>
+<span class="updates-status updates-status-live">現在利用可能</span>
+</div>
+<p class="updates-chapter-intro">
+      Standaloneは、Apple Watch専用の完全な体験を提供し続けています。バージョン1.0以降、どのように進化してきたかをご紹介します。
+    </p>
+<article class="updates-latest-release">
+<div class="updates-release-title">
+<span>最新リリース</span>
+<h3>バージョン 1.3.1</h3>
+</div>
+<ul>
+<li>Apple Watchの履歴から保存されたすべての試合を一度の操作で削除できます。</li>
+<li>明確な確認手順により、履歴全体の誤削除を防ぐことができます。</li>
+<li>バージョン 1.3 で導入された Apple Watch 文字盤のコンプリケーションが含まれています。</li>
+</ul>
+</article>
+<div class="updates-history-grid">
+<article class="updates-history-card">
+<span>Version 1.3</span>
+<h3>Apple Watchの文字盤からアクセス</h3>
 <ul>
 <li>Apple Watchの文字盤用コンプリケーション。</li>
-<li>accessoryCircularおよびaccessoryCornerのコンプリケーションに対応。</li>
-<li>対応する文字盤からTennis Score Wizardを直接起動できます。</li>
-<li>新しいヘルプセンター。</li>
-<li>オンラインドキュメントを改善。</li>
+<li>accessoryCircularおよびaccessoryCornerコンプリケーションファミリーに対応。</li>
+<li>対応するウォッチフェイスからの直接起動。</li>
+<li>新しいヘルプセンターと改良されたオンラインドキュメント。</li>
 </ul>
-</section>
-<section aria-labelledby="version-1-2-1" class="release-card">
-<h2 class="release-version" id="version-1-2-1"><svg aria-hidden="true" class="release-version-icon" focusable="false" viewbox="0 0 24 24">
-<rect height="14" rx="3" width="16" x="4" y="5.5"></rect>
-<path d="M8 3.5v4"></path>
-<path d="M16 3.5v4"></path>
-<path d="M4 9.5h16"></path>
-</svg>
-                    Version 1.2.1
-                </h2>
+</article>
+<article class="updates-history-card">
+<span>Version 1.2.1</span>
+<h3>ワークアウトの信頼性</h3>
 <ul>
-<li>ワークアウト統計の信頼性を向上。</li>
-<li>心拍数とアクティブエネルギーのデータ精度を改善。</li>
-<li>ワークアウト終了処理と履歴更新の信頼性を改善。</li>
+<li>より信頼性の高いワークアウト統計。</li>
+<li>心拍数およびアクティブエネルギーデータの精度向上。</li>
+<li>ワークアウトの完了処理および履歴の更新が改善されました。</li>
 </ul>
-</section>
-<section aria-labelledby="version-1-2" class="release-card">
-<h2 class="release-version" id="version-1-2"><svg aria-hidden="true" class="release-version-icon" focusable="false" viewbox="0 0 24 24">
-<rect height="14" rx="3" width="16" x="4" y="5.5"></rect>
-<path d="M8 3.5v4"></path>
-<path d="M16 3.5v4"></path>
-<path d="M4 9.5h16"></path>
-</svg>
-                    Version 1.2
-                </h2>
+</article>
+<article class="updates-history-card">
+<span>Version 1.2</span>
+<h3>自動マッチ統計</h3>
 <ul>
-<li>試合統計。</li>
-<li>プレッシャーポイントの統計。</li>
+<li>ポイント、サーブ、リターン、重要局面、試合の流れに関する統計。</li>
 <li>試合履歴でのポイント概要。</li>
-<li>ワークアウト統計の表示を改善。</li>
-<li>アプリ内ヘルプを更新。</li>
-<li>インターフェースと操作性を改善。</li>
+<li>アプリ内ヘルプの更新およびインターフェースの改良。</li>
 </ul>
-</section>
-<section aria-labelledby="version-1-1" class="release-card">
-<h2 class="release-version" id="version-1-1"><svg aria-hidden="true" class="release-version-icon" focusable="false" viewbox="0 0 24 24">
-<rect height="14" rx="3" width="16" x="4" y="5.5"></rect>
-<path d="M8 3.5v4"></path>
-<path d="M16 3.5v4"></path>
-<path d="M4 9.5h16"></path>
-</svg>
-                    Version 1.1
-                </h2>
+</article>
+<article class="updates-history-card">
+<span>Version 1.1</span>
+<h3>Apple Health ワークアウト</h3>
 <ul>
-<li>Apple Healthへのワークアウト記録。</li>
-<li>試合中のリアルタイム心拍数。</li>
+<li>テニスワークアウトの記録とリアルタイム心拍数。</li>
 <li>試合時間とワークアウトの詳細。</li>
-<li>前回の試合設定を記憶。</li>
-<li>スタート画面にヘルプを追加。</li>
-<li>新しい「このアプリについて」セクション。</li>
+<li>試合設定の記憶機能と新しい「アプリについて」セクション。</li>
 </ul>
-</section>
-<section aria-labelledby="version-1-0" class="release-card">
-<h2 class="release-version" id="version-1-0"><svg aria-hidden="true" class="release-version-icon" focusable="false" viewbox="0 0 24 24">
-<rect height="14" rx="3" width="16" x="4" y="5.5"></rect>
-<path d="M8 3.5v4"></path>
-<path d="M16 3.5v4"></path>
-<path d="M4 9.5h16"></path>
-</svg>
-                    Version 1.0
-                </h2>
+</article>
+<article class="updates-history-card">
+<span>バージョン 1.0</span>
+<h3>初の完全版リリース</h3>
 <ul>
-<li>シングルスとダブルスのスコア記録。</li>
-<li>3セットマッチと5セットマッチ。</li>
-<li>設定可能なタイブレークルール。</li>
-<li>最初のサーバーを決めるコイントス。</li>
-<li>試合履歴。</li>
-<li>直前のポイントを取り消す機能。</li>
-<li>Apple Watchに最適化されたインターフェース。</li>
+<li>シングルス、ダブルス、3セットマッチ、5セットマッチ。</li>
+<li>カスタマイズ可能なタイブレークルールとコイントス。</li>
+<li>試合履歴、元に戻す機能、およびApple Watch向けに最適化されたインターフェース。</li>
 </ul>
+</article>
+</div>
 </section>
-</div>
-<div class="whats-new-actions">
-<a class="whats-new-home-link" href="index.html">
-                Back to Home
-            </a>
-</div>
 </div><footer>
-      <span>© 2026 Tennis Score Wizard</span>
-      <span>Apple Watch は Apple Inc. の商標です。</span>
-    </footer></main>
+<div class="footer-meta">
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch は Apple Inc. の商標です。</span>
+</div>
+<nav aria-label="サブナビゲーション" class="footer-links">
+<a href="privacy.html">プライバシー</a>
+</nav>
+</footer></main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
 </body>
 </html>

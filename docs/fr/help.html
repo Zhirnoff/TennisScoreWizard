@@ -4,8 +4,30 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../assets/tennis_ball_app_icon_1024.png" rel="icon"/>
 <title>Aide – Tennis Score Wizard</title>
-<meta content="Tennis Score Wizard pour Apple Watch : score de tennis, entraînements, fréquence cardiaque, historique et statistiques automatiques." name="description"/>
+<meta content="Aide pour Tennis Score Wizard Standalone et Companion : comptage des points sur l’Apple Watch, synchronisation avec l’iPhone, historique des matchs, statistiques, séances d’entraînement Apple Health, complications et dépannage." name="description"/>
+<link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/fr/help.html">
+<link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/help.html">
+<link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html">
+<link rel="alternate" hreflang="es" href="https://zhirnoff.github.io/TennisScoreWizard/es/help.html">
+<link rel="alternate" hreflang="fr" href="https://zhirnoff.github.io/TennisScoreWizard/fr/help.html">
+<link rel="alternate" hreflang="ja" href="https://zhirnoff.github.io/TennisScoreWizard/ja/help.html">
+<link rel="alternate" hreflang="ru" href="https://zhirnoff.github.io/TennisScoreWizard/ru/help.html">
+<link rel="alternate" hreflang="tr" href="https://zhirnoff.github.io/TennisScoreWizard/tr/help.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/help.html">
+<link rel="alternate" hreflang="x-default" href="https://zhirnoff.github.io/TennisScoreWizard/help.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tennis Score Wizard">
+<meta property="og:title" content="Aide – Tennis Score Wizard">
+<meta property="og:description" content="Aide pour Tennis Score Wizard Standalone et Companion : comptage des points sur l’Apple Watch, synchronisation avec l’iPhone, historique des matchs, statistiques, séances d’entraînement Apple Health, complications et dépannage.">
+<meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/fr/help.html">
+<meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
+<meta property="og:image:alt" content="Tennis Score Wizard app icon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Aide – Tennis Score Wizard">
+<meta name="twitter:description" content="Aide pour Tennis Score Wizard Standalone et Companion : comptage des points sur l’Apple Watch, synchronisation avec l’iPhone, historique des matchs, statistiques, séances d’entraînement Apple Health, complications et dépannage.">
+<meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
       --bg: #000000;
@@ -39,6 +61,7 @@ body {
     radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
     linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
   min-height: 100vh;
+  overflow-x: clip;
 }
 a {
   color: var(--green);
@@ -816,23 +839,368 @@ html[lang="ja"] .hero .help-home-badge,
 html[lang="zh-Hans"] .hero .help-home-badge {
   margin-bottom: 22px;
 }
+
+
+/* Unified global product navigation */
+.nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "brand links language";
+  align-items: center;
+  column-gap: 26px;
+  min-height: 92px;
+  padding: 14px 16px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-links > a[aria-current="page"] {
+  color: var(--green);
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+.footer-meta,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    column-gap: 14px;
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: grid;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    font-size: 12px;
+  }
+
+  .nav-links > a[aria-current="page"] {
+    border-color: var(--line-green);
+    background: var(--green-soft);
+  }
+
+  .language-options {
+    right: 0;
+    left: auto;
+  }
+
+  .language-options::before {
+    right: 22px;
+    left: auto;
+  }
+
+  footer,
+  .footer-meta,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Shared animated brand treatment */
+.brand-title {
+  display: inline-block;
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-home-link {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .hero-copy,
+  .hero-copy > *,
+  .help,
+  .help-item,
+  .faq {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1,
+  section > h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero-copy p,
+  .help-item,
+  .faq {
+    overflow-wrap: break-word;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
 </style>
 </head>
 <body>
 <main class="page">
-<nav class="nav">
-<div class="brand"><a aria-label="Tennis Score Wizard — Home" class="brand-home-link" href="index.html">
+<nav aria-label="Navigation principale" class="nav">
+<div class="brand">
+<a aria-label="Tennis Score Wizard — Home" class="brand-home-link" href="index.html">
 <img alt="Tennis Score Wizard" class="app-icon" src="../assets/tennis_ball_app_icon_1024.png"/>
-<span>Tennis Score Wizard</span>
-</a></div>
+<span class="brand-title">Tennis Score Wizard</span>
+</a>
+</div>
 <div class="nav-links">
-<a href="index.html#features">Fonctionnalités</a>
-<a href="index.html#screenshots">Captures</a>
-<a href="index.html#complications">Ouvrir depuis le cadran</a>
+<a href="index.html#versions">Versions</a>
+<a href="index.html#comparison">Comparer</a>
 <a href="index.html#stats-guide">Guide stats</a>
-<a href="help.html">Aide</a>
-<a href="privacy.html">Confidentialité</a>
+<a href="whats-new.html">Mises à jour</a>
+<a aria-current="page" href="help.html">Aide</a>
 <a href="index.html#contact">Contact</a>
+</div>
 <details class="language-menu">
 <summary>🇫🇷 Français</summary>
 <div class="language-options">
@@ -846,13 +1214,16 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <a href="../zh-Hans/help.html">🇨🇳 简体中文</a>
 </div>
 </details>
-</div>
 </nav>
 <section class="hero">
 <div class="hero-copy">
 <p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Home" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
 <h1>Centre d’aide</h1>
-<p>Découvrez comment démarrer un match, enregistrer un entraînement, utiliser les commandes de score et comprendre les résultats enregistrés.</p>
+<p>
+      Découvrez comment configurer et noter les matchs, synchroniser Companion avec l’iPhone,
+      comprendre les statistiques, enregistrer les entraînements dans Apple Health, utiliser les complications du cadran,
+      et résoudre les problèmes courants.
+    </p>
 </div>
 </section>
 <section id="getting-started">
@@ -879,7 +1250,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="match-setup">
 <h2>Configurer un match</h2>
 <p class="section-subtitle">
@@ -912,7 +1282,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="scoring">
 <h2>Compter un match</h2>
 <p class="section-subtitle">
@@ -936,7 +1305,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <p>Lorsque la règle sélectionnée impose un tie-break, l’app passe des points de tennis habituels à un score numérique de tie-break.</p>
 </div>
 <div class="help-item">
-<strong>Comment fonctionne l’indicateur de côté au service ?</strong>
+<strong>Comment fonctionne le marqueur de service ?</strong>
 <p>Lorsque vous servez, la balle indique le côté depuis lequel vous devez servir. Quand l’adversaire sert, elle montre son côté depuis votre point de vue sur la montre.</p>
 </div>
 <div class="help-item">
@@ -949,7 +1318,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="match-controls">
 <h2>Commandes du match</h2>
 <p class="section-subtitle">
@@ -957,11 +1325,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
   </p>
 <div class="help">
 <div class="help-item">
-<strong>Comment fonctionne Annuler ?</strong>
+<strong>Comment fonctionne Undo ?</strong>
 <p>Annuler retire le dernier point et restaure l’état précédent : points, jeux, sets, serveur, côté de service, tie-break et statistiques associées.</p>
 </div>
 <div class="help-item">
-<strong>À quoi sert le menu ?</strong>
+<strong>Que fait Menu ?</strong>
 <p>Pendant le match, le menu permet notamment de corriger le serveur, ouvrir l’historique, arrêter le match ou préparer une nouvelle partie.</p>
 </div>
 <div class="help-item">
@@ -982,7 +1350,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="statistics">
 <h2>Comprendre les statistiques du match</h2>
 <p class="section-subtitle">
@@ -1015,7 +1382,38 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
+<section id="companion-sync">
+<h2>Synchronisation entre Companion et l’iPhone</h2>
+<p class="section-subtitle">
+    Enregistrez le score sur l’Apple Watch, puis consultez l’historique des matchs synchronisés, les résultats, les statistiques et les informations sur l’entraînement sur l’iPhone.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Où puis-je configurer et enregistrer les scores des matchs dans Companion ?</strong>
+<p>La configuration des matchs et le suivi des scores en direct restent sur l'Apple Watch. L'Companion comprend l'application Watch complète et ajoute un affichage sur iPhone permettant de consulter les matchs enregistrés après les sessions et entre celles-ci.</p>
+</div>
+<div class="help-item">
+<strong>Que voit-on sur l'iPhone ?</strong>
+<p>L’app iPhone affiche votre dernier résultat, l’historique récent et complet, les scores par set et au tie-break, la durée, les points, ainsi que les statistiques de service, de retour, des moments clés et du déroulement du match, sans oublier les résumés d’entraînement disponibles.</p>
+</div>
+<div class="help-item">
+<strong>Comment l’historique des matchs se synchronise-t-il ?</strong>
+<p>Les matchs enregistrés sont transférés directement entre votre Apple Watch et votre iPhone appairés. Gardez les deux appareils à proximité l’un de l’autre et patientez quelques instants pour que le système transfère un match nouvellement enregistré.</p>
+</div>
+<div class="help-item">
+<strong>Que faire si un match n'apparaît pas sur l'iPhone ?</strong>
+<p>Vérifiez que la bonne Apple Watch est appairée, gardez les deux appareils à proximité l'un de l'autre, puis ouvrez Tennis Score Wizard sur l'Apple Watch et l'iPhone. Le match reste stocké localement et pourra se synchroniser dès qu'une connexion sera disponible.</p>
+</div>
+<div class="help-item">
+<strong>Les détails des séances d'entraînement sont-ils également synchronisés ?</strong>
+<p>Lorsque les données sont fournies par Apple Health, Companion peut afficher la durée de la séance, la fréquence cardiaque moyenne et maximale, ainsi que les calories brûlées, en association avec le match enregistré sur les deux appareils.</p>
+</div>
+<div class="help-item">
+<strong>Que se passe-t-il lorsque je supprime l’historique des matchs ?</strong>
+<p>La suppression d’un match individuel ou de l’historique complet dans Companion synchronise cette modification entre l’iPhone et l’Apple Watch. L’application demande une confirmation avant de supprimer l’historique complet.</p>
+</div>
+</div>
+</section>
 <section id="health-workouts">
 <h2>Apple Health et entraînements</h2>
 <p class="section-subtitle">
@@ -1056,7 +1454,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="match-history">
 <h2>Historique des matchs</h2>
 <p class="section-subtitle">
@@ -1064,15 +1461,15 @@ html[lang="zh-Hans"] .hero .help-home-badge {
   </p>
 <div class="help">
 <div class="help-item">
-<strong>Que signifient Victoire et Défaite ?</strong>
-<p>Victoire signifie que vous avez remporté le match terminé au nombre de sets. Défaite signifie que l’adversaire l’a remporté.</p>
+<strong>Que signifient Win et Loss ?</strong>
+<p>Win signifie que vous avez gagné le match terminé aux sets. Loss signifie que l’adversaire a gagné le match terminé aux sets.</p>
 </div>
 <div class="help-item">
-<strong>Que signifie Arrêté ?</strong>
+<strong>Que signifie Stopped ?</strong>
 <p>Le match a été enregistré avant sa fin normale. Le contexte réel enregistré jusqu’à cet instant est conservé.</p>
 </div>
 <div class="help-item">
-<strong>Que signifient S1, S2 et S3 ?</strong>
+<strong>Que sont S1, S2 et S3 ?</strong>
 <p>Ils désignent le set 1, le set 2 et le set 3. Par exemple, « S1 6–3 » signifie que le premier set s’est terminé par six jeux à trois.</p>
 </div>
 <div class="help-item">
@@ -1084,7 +1481,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <p>Si un camp mène clairement en sets, l’historique indique qui menait. Si les sets sont à égalité, les jeux et tie-breaks disponibles servent à décrire la situation.</p>
 </div>
 <div class="help-item">
-<strong>Que devient un set inachevé ?</strong>
+<strong>Que devient un set non terminé ?</strong>
 <p>Si le set en cours a déjà commencé, son état est enregistré avec le match, par exemple « S3 0–1 ».</p>
 </div>
 <div class="help-item">
@@ -1097,7 +1494,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="complications-help">
 <h2>Complications de cadran Apple Watch</h2>
 <p class="section-subtitle">
@@ -1126,7 +1522,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-
 <section id="troubleshooting">
 <h2>Dépannage</h2>
 <p class="section-subtitle">
@@ -1168,15 +1563,44 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="support-card">
 <h3>Besoin d’aide ou envie de suggérer une fonctionnalité ?</h3>
 <p>
-          Contact :
-          <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+      Contact :
+      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
 </p>
 </div>
 </section>
 <footer>
+<div class="footer-meta">
 <span>© 2026 Tennis Score Wizard</span>
 <span>Apple Watch est une marque commerciale d’Apple Inc.</span>
+</div>
+<nav aria-label="Navigation secondaire" class="footer-links">
+<a href="privacy.html">Confidentialité</a>
+</nav>
 </footer>
 </main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
 </body>
 </html>
