@@ -7,6 +7,27 @@
 <link href="../assets/tennis_ball_app_icon_1024.png" rel="icon"/>
 <title>Tennis Score Wizard — Apple Watch 与 iPhone 网球记分</title>
 <meta content="请根据需求选择适用于 Apple Watch 的《Tennis Score Wizard》Standalone，或适用于 iPhone + Apple Watch 的 Companion 版。您可以在手腕上记录比赛比分，并在 iPhone 上查看同步的历史记录、统计数据和训练分析。" name="description"/>
+<link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/">
+<link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/">
+<link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/">
+<link rel="alternate" hreflang="es" href="https://zhirnoff.github.io/TennisScoreWizard/es/">
+<link rel="alternate" hreflang="fr" href="https://zhirnoff.github.io/TennisScoreWizard/fr/">
+<link rel="alternate" hreflang="ja" href="https://zhirnoff.github.io/TennisScoreWizard/ja/">
+<link rel="alternate" hreflang="ru" href="https://zhirnoff.github.io/TennisScoreWizard/ru/">
+<link rel="alternate" hreflang="tr" href="https://zhirnoff.github.io/TennisScoreWizard/tr/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/">
+<link rel="alternate" hreflang="x-default" href="https://zhirnoff.github.io/TennisScoreWizard/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tennis Score Wizard">
+<meta property="og:title" content="Tennis Score Wizard — Apple Watch 与 iPhone 网球记分">
+<meta property="og:description" content="请根据需求选择适用于 Apple Watch 的《Tennis Score Wizard》Standalone，或适用于 iPhone + Apple Watch 的 Companion 版。您可以在手腕上记录比赛比分，并在 iPhone 上查看同步的历史记录、统计数据和训练分析。">
+<meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/">
+<meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
+<meta property="og:image:alt" content="Tennis Score Wizard app icon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tennis Score Wizard — Apple Watch 与 iPhone 网球记分">
+<meta name="twitter:description" content="请根据需求选择适用于 Apple Watch 的《Tennis Score Wizard》Standalone，或适用于 iPhone + Apple Watch 的 Companion 版。您可以在手腕上记录比赛比分，并在 iPhone 上查看同步的历史记录、统计数据和训练分析。">
+<meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
       --bg: #000000;
@@ -1132,6 +1153,12 @@ footer {
   font-weight: 750;
 }
 
+.versions-compare-link {
+  display: flex;
+  width: fit-content;
+  margin: 28px auto 0;
+}
+
 @media (max-width: 760px) {
   .version-grid {
     grid-template-columns: 1fr;
@@ -1982,13 +2009,6 @@ footer {
 }
 
 
-/* Five-link mobile navigation */
-@media (max-width: 640px) {
-  .nav-links > a:last-child {
-    grid-column: 1 / -1;
-  }
-}
-
 /* Keep the animated brand compact and consistent on mobile */
 @media (max-width: 640px) {
   .brand-title {
@@ -2146,10 +2166,22 @@ footer {
 
   .badges {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 10px;
   }
 
   .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     max-width: 100%;
+    min-height: 54px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.25;
     overflow-wrap: break-word;
   }
 
@@ -2205,6 +2237,37 @@ footer {
 }
 
 /* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
 </style>
 </head>
 <body>
@@ -2216,10 +2279,11 @@ footer {
 </div>
 <div class="nav-links">
 <a href="#versions">版本</a>
-<a href="#companion-benefits">Companion</a>
-<a href="#standalone">Standalone</a>
 <a href="#comparison">比较</a>
+<a href="#stats-guide">统计指南</a>
+<a href="whats-new.html">产品更新</a>
 <a href="help.html">帮助</a>
+<a href="#contact">联系我们</a>
 </div>
 <details class="language-menu">
 <summary>🇨🇳 简体中文</summary>
@@ -2242,12 +2306,12 @@ footer {
 <span class="eyebrow-copy-full">Apple Watch 网球记分 — 支持搭配或不搭配 iPhone 使用</span>
 <span class="eyebrow-copy-compact">用手表记分 · 在 iPhone 深入查看</span>
 </div>
-<h1>一套记分，两种玩法。</h1>
+<h1>记录每一分，读懂每场比赛。</h1>
 <p>
       选择“Standalone”以获得完整的 Apple Watch 体验，或选择“Companion”将 Apple Watch 的实时记分与 iPhone 上的比赛历史和统计数据相结合。
     </p>
 <a class="hero-version-link" href="#versions">
-      版本对比
+      查看不同版本
       <span aria-hidden="true">↓</span>
 </a>
 <div class="badges">
@@ -2285,8 +2349,8 @@ footer {
 <a aria-label="在 App Store 下载“Tennis Score Wizard Standalone”" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004">
 <span class="app-store-logo"></span>
 <span class="app-store-text">
-<small>下载于</small>
-<strong>App Store</strong>
+<small>从 App Store</small>
+<strong>下载</strong>
 </span>
 </a>
 <span class="version-availability">现已上线</span>
@@ -2295,7 +2359,7 @@ footer {
 <span class="version-kicker">Companion</span>
 <h3>iPhone + Apple Watch</h3>
 <p>
-        获取与Standalone完全相同的 Apple Watch 应用，连接 iPhone 后可同步比赛历史、结果、锻炼数据和详细统计信息。
+        获取与 Standalone 完全相同的 Apple Watch 应用，连接 iPhone 后可同步比赛历史、结果、训练数据和详细统计信息。
       </p>
 <ul class="version-list">
 <li>在 Apple Watch 上进行完整的比赛设置和实时计分</li>
@@ -2305,20 +2369,21 @@ footer {
 <a aria-label="在 App Store 下载“Tennis Score Wizard Companion”" class="app-store-button" href="https://apps.apple.com/app/id6789285015">
 <span class="app-store-logo"></span>
 <span class="app-store-text">
-<small>支持</small>
-<strong>App Store</strong>
+<small>从 App Store</small>
+<strong>下载</strong>
 </span>
 </a>
 <span class="version-availability">1.0 版 · 现已发布</span>
 </article>
 </div>
+<a class="hero-version-link versions-compare-link" href="#comparison">比较功能 <span aria-hidden="true">↓</span></a>
 </section>
 <section class="companion-showcase" id="companion-benefits">
 <div class="companion-heading">
 <span class="companion-section-kicker">Companion 体验</span>
 <h2>完整体验，双屏呈现。</h2>
 <p class="section-subtitle">
-      Companion包含 Apple Watch Standalone中的所有功能。iPhone 作为更大、更同步的中心平台，汇集了比赛历史、结果、统计数据和训练数据，进一步丰富了使用体验。
+      Companion 包含 Standalone 在 Apple Watch 上的全部功能。iPhone 则提供更宽敞的同步视图，用于查看比赛历史、结果、统计数据和训练数据。
     </p>
 </div>
 <div class="companion-system">
@@ -2327,7 +2392,7 @@ footer {
 <span class="companion-device-label">赛场 · Apple Watch</span>
 <h3>完整的比赛体验尽在您的腕间。</h3>
 <p>
-          设置比赛、记录每分得分、追踪发球位置、使用“撤销”功能、记录训练数据、查看历史和统计数据，以及通过复杂功能启动应用——与Standalone完全一致。
+          设置比赛、记录每分得分、追踪发球位置、使用“撤销”功能、记录训练数据、查看历史和统计数据，以及通过复杂功能启动应用——与 Standalone 完全一致。
         </p>
 </div>
 <div aria-label="在 Apple Watch 上体验完整的“Tennis Score Wizard”功能" class="companion-watch-preview">
@@ -2371,7 +2436,7 @@ footer {
 </article>
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">02</span>
-<h3>关联的比赛历史记录</h3>
+<h3>同步的比赛历史记录</h3>
 <p>您保存的比赛数据可在 Apple Watch 和 iPhone 之间同步。</p>
 </article>
 <article class="card companion-benefit-card">
@@ -2382,7 +2447,7 @@ footer {
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">04</span>
 <h3>训练详情</h3>
-<p>在任意一台设备上查看训练时长、心率和活动消耗的卡路里。</p>
+<p>在任意一台设备上查看训练时长、心率和活动卡路里。</p>
 </article>
 </div>
 </section>
@@ -2408,7 +2473,7 @@ footer {
 </div>
 <h3>完整比赛历史记录</h3>
 <p>
-        浏览已完成和已中止的比赛，查看比赛类型、时长、结果及比赛总数据。
+        浏览已完成和已中止的比赛，查看比赛类型、时长、结果及总局数。
       </p>
 </article>
 <article class="iphone-screenshot-card">
@@ -2417,7 +2482,7 @@ footer {
 </div>
 <h3>得分和关键数据</h3>
 <p>
-        查看各盘比分、交手局数、获胜局数、胜率以及抢七结果。
+        查看各盘比分、总计分数、赢得分数、胜率以及抢七结果。
       </p>
 </article>
 <article class="iphone-screenshot-card">
@@ -2435,7 +2500,7 @@ footer {
 </div>
 <h3>训练洞察</h3>
 <p>
-        在 iPhone 上查看训练时长、平均心率和最高心率，以及活动消耗的卡路里。
+        在 iPhone 上查看训练时长、平均心率、最高心率和活动卡路里。
       </p>
 </article>
 </div>
@@ -2460,7 +2525,7 @@ footer {
 </article>
 <article class="card">
 <h3>自动比赛统计</h3>
-<p>比赛结束后，History 可以显示分数、发球、接发球、关键分、抢七和比赛节奏统计，这些都来自正常计分点击。</p>
+<p>比赛结束后，History 可以显示分数、发球、接发球、关键分、抢七和比赛节奏统计，这些都来自日常记分操作。</p>
 </article>
 <article class="card">
 <h3>训练记录</h3>
@@ -2476,7 +2541,7 @@ footer {
 <span class="product-section-kicker">Standalone 图库</span>
 <h2>Apple Watch 上的 Standalone</h2>
 <p class="section-subtitle">
-    体验完整的 Standalone流程：比赛设置、训练记录、实时记分、抢七局、已结束的比赛、历史记录和自动统计数据——全部在 Apple Watch 上完成。
+    体验完整的 Standalone 流程：比赛设置、训练记录、实时记分、抢七局、已结束的比赛、历史记录和自动统计数据——全部在 Apple Watch 上完成。
   </p>
 <div class="screenshots">
 <article class="screenshot-card">
@@ -2497,7 +2562,7 @@ footer {
 <article class="screenshot-card">
 <img alt="抢七" decoding="async" loading="lazy" src="../assets/04_tiebreak_scoring.png"/>
 <h3>抢七</h3>
-<p>在 6–6 时，用同样大而快速的 Apple Watch 控件记录抢七分数。</p>
+<p>在 6–6 时，用同样醒目、易操作的记分按钮记录抢七分数。</p>
 </article>
 <article class="screenshot-card">
 <img alt="比赛结束" decoding="async" loading="lazy" src="../assets/05_match_finished.png"/>
@@ -2512,7 +2577,7 @@ footer {
 <article class="screenshot-card">
 <img alt="比赛摘要" decoding="async" loading="lazy" src="../assets/07_match_summary.png"/>
 <h3>比赛摘要</h3>
-<p>打开已保存比赛，查看比分、局数、时长、总分、训练状态和中止比赛上下文。</p>
+<p>打开已保存比赛，查看比分、局数、时长、总分、训练状态和比赛中止时的状态。</p>
 </article>
 <article class="screenshot-card">
 <img alt="训练统计" decoding="async" loading="lazy" src="../assets/08_stats_workout.png"/>
@@ -2537,10 +2602,9 @@ footer {
 </div>
 </section>
 <section id="complications">
-<span class="product-section-kicker">Standalone 快捷方式</span>
 <h2>从 Apple Watch 表盘快速启动</h2>
 <p class="section-subtitle">
-    通过 Apple Watch 复杂功能，只需轻点一下即可启动Standalone 应用。
+    将 Tennis Score Wizard 添加到受支持的 Apple Watch 表盘，轻点一下即可打开应用。
   </p>
 <div class="screenshots">
 <article class="screenshot-card">
@@ -2560,7 +2624,7 @@ footer {
 <div class="comparison-heading">
 <h2>Apple Watch 上的使用体验完全一致。区别在于配套内容。</h2>
 <p class="section-subtitle">
-      Standalone提供完整的 Apple Watch 体验。Companion包含同样完整的 Apple Watch 应用，并额外提供与 iPhone 同步的界面。
+      Standalone 提供完整的 Apple Watch 体验。Companion 包含同样完整的 Apple Watch 应用，并额外提供与 iPhone 同步的界面。
     </p>
 </div>
 <div aria-label="Tennis Score Wizard Standalone与 Companion 版对比" class="comparison-grid" role="table">
@@ -2805,11 +2869,7 @@ footer {
 <span>Apple Watch 是 Apple Inc. 的商标。</span>
 </div>
 <nav aria-label="次级导航" class="footer-links">
-<a href="#stats-guide">统计指南</a>
-<a href="whats-new.html">产品更新</a>
-<a href="help.html">帮助</a>
 <a href="privacy.html">隐私</a>
-<a href="#contact">联系</a>
 </nav>
 </footer>
 </main>

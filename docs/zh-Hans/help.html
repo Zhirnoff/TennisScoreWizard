@@ -7,6 +7,27 @@
 <link href="../assets/tennis_ball_app_icon_1024.png" rel="icon"/>
 <title>帮助 – Tennis Score Wizard</title>
 <meta content="Tennis Score Wizard Standalone和 Companion 版帮助：Apple Watch 记分、iPhone 同步、比赛历史记录、统计数据、Apple Health 锻炼记录、表盘复杂功能以及故障排除。" name="description"/>
+<link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/help.html">
+<link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/help.html">
+<link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html">
+<link rel="alternate" hreflang="es" href="https://zhirnoff.github.io/TennisScoreWizard/es/help.html">
+<link rel="alternate" hreflang="fr" href="https://zhirnoff.github.io/TennisScoreWizard/fr/help.html">
+<link rel="alternate" hreflang="ja" href="https://zhirnoff.github.io/TennisScoreWizard/ja/help.html">
+<link rel="alternate" hreflang="ru" href="https://zhirnoff.github.io/TennisScoreWizard/ru/help.html">
+<link rel="alternate" hreflang="tr" href="https://zhirnoff.github.io/TennisScoreWizard/tr/help.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/help.html">
+<link rel="alternate" hreflang="x-default" href="https://zhirnoff.github.io/TennisScoreWizard/help.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tennis Score Wizard">
+<meta property="og:title" content="帮助 – Tennis Score Wizard">
+<meta property="og:description" content="Tennis Score Wizard Standalone和 Companion 版帮助：Apple Watch 记分、iPhone 同步、比赛历史记录、统计数据、Apple Health 锻炼记录、表盘复杂功能以及故障排除。">
+<meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/help.html">
+<meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
+<meta property="og:image:alt" content="Tennis Score Wizard app icon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="帮助 – Tennis Score Wizard">
+<meta name="twitter:description" content="Tennis Score Wizard Standalone和 Companion 版帮助：Apple Watch 记分、iPhone 同步、比赛历史记录、统计数据、Apple Health 锻炼记录、表盘复杂功能以及故障排除。">
+<meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
       --bg: #000000;
@@ -963,13 +984,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 }
 
 
-/* Five-link mobile navigation */
-@media (max-width: 640px) {
-  .nav-links > a:last-child {
-    grid-column: 1 / -1;
-  }
-}
-
 /* Shared animated brand treatment */
 .brand-title {
   display: inline-block;
@@ -1137,6 +1151,37 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 }
 
 /* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
 </style>
 </head>
 <body>
@@ -1150,10 +1195,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="nav-links">
 <a href="index.html#versions">版本</a>
-<a href="index.html#companion-benefits">Companion</a>
-<a href="index.html#standalone">Standalone</a>
 <a href="index.html#comparison">比较</a>
+<a href="index.html#stats-guide">统计指南</a>
+<a href="whats-new.html">产品更新</a>
 <a aria-current="page" href="help.html">帮助</a>
+<a href="index.html#contact">联系我们</a>
 </div>
 <details class="language-menu">
 <summary>🇨🇳 简体中文</summary>
@@ -1528,10 +1574,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <span>Apple Watch 是 Apple Inc. 的商标。</span>
 </div>
 <nav aria-label="次级导航" class="footer-links">
-<a href="index.html#stats-guide">统计指南</a>
-<a href="whats-new.html">产品更新</a>
 <a href="privacy.html">隐私</a>
-<a href="index.html#contact">联系</a>
 </nav>
 </footer>
 </main>

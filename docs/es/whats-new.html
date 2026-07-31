@@ -7,6 +7,27 @@
 <link href="../assets/tennis_ball_app_icon_1024.png" rel="icon"/>
 <title>Actualizaciones del producto — Tennis Score Wizard</title>
 <meta content="Notas de la versión de Tennis Score Wizard Standalone y Companion, que incluyen mejoras para el Apple Watch y la experiencia sincronizada con el iPhone." name="description"/>
+<link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/es/whats-new.html">
+<link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
+<link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/whats-new.html">
+<link rel="alternate" hreflang="es" href="https://zhirnoff.github.io/TennisScoreWizard/es/whats-new.html">
+<link rel="alternate" hreflang="fr" href="https://zhirnoff.github.io/TennisScoreWizard/fr/whats-new.html">
+<link rel="alternate" hreflang="ja" href="https://zhirnoff.github.io/TennisScoreWizard/ja/whats-new.html">
+<link rel="alternate" hreflang="ru" href="https://zhirnoff.github.io/TennisScoreWizard/ru/whats-new.html">
+<link rel="alternate" hreflang="tr" href="https://zhirnoff.github.io/TennisScoreWizard/tr/whats-new.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/whats-new.html">
+<link rel="alternate" hreflang="x-default" href="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tennis Score Wizard">
+<meta property="og:title" content="Actualizaciones del producto — Tennis Score Wizard">
+<meta property="og:description" content="Notas de la versión de Tennis Score Wizard Standalone y Companion, que incluyen mejoras para el Apple Watch y la experiencia sincronizada con el iPhone.">
+<meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/es/whats-new.html">
+<meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
+<meta property="og:image:alt" content="Tennis Score Wizard app icon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Actualizaciones del producto — Tennis Score Wizard">
+<meta name="twitter:description" content="Notas de la versión de Tennis Score Wizard Standalone y Companion, que incluyen mejoras para el Apple Watch y la experiencia sincronizada con el iPhone.">
+<meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
       --bg: #000000;
@@ -1200,10 +1221,6 @@ html[lang="zh-Hans"] .hero .help-home-badge {
     font-size: 12px;
   }
 
-  .nav-links > a:last-child {
-    grid-column: 1 / -1;
-  }
-
   .language-options {
     right: 0;
     left: auto;
@@ -1773,6 +1790,41 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 }
 
 /* MOBILE_LOCALIZATION_SAFE_END */
+
+.nav-links > a[aria-current="page"] {
+  color: var(--green);
+}
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
 </style>
 </head>
 <body>
@@ -1785,10 +1837,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="nav-links">
 <a href="index.html#versions">Versiones</a>
-<a href="index.html#companion-benefits">Companion</a>
-<a href="index.html#standalone">Standalone</a>
 <a href="index.html#comparison">Comparar</a>
+<a href="index.html#stats-guide">Estadísticas</a>
+<a aria-current="page" href="whats-new.html">Actualizaciones</a>
 <a href="help.html">Ayuda</a>
+<a href="index.html#contact">Contacto</a>
 </div>
 <details class="language-menu">
 <summary>🇪🇸 Español</summary>
@@ -1926,10 +1979,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <span>Apple Watch es una marca comercial de Apple Inc.</span>
 </div>
 <nav aria-label="Navegación secundaria" class="footer-links">
-<a href="index.html#stats-guide">Guía de estadísticas</a>
-<a href="help.html">Ayuda</a>
 <a href="privacy.html">Privacidad</a>
-<a href="index.html#contact">Contacto</a>
 </nav>
 </footer></main>
 <script>

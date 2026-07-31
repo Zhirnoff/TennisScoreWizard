@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zhirnoff.github.io/TennisScoreWizard/sitemap.xml

@@ -7,6 +7,27 @@
 <link href="../assets/tennis_ball_app_icon_1024.png" rel="icon"/>
 <title>Tennis Score Wizard — Anotación de partidos de tenis para Apple Watch y iPhone</title>
 <meta content="Elige Tennis Score Wizard Standalone para el Apple Watch o Companion para el iPhone y el Apple Watch. Anota los resultados de los partidos desde tu muñeca y consulta el historial sincronizado, las estadísticas y la información sobre tus entrenamientos en el iPhone." name="description"/>
+<link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/es/">
+<link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/">
+<link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/">
+<link rel="alternate" hreflang="es" href="https://zhirnoff.github.io/TennisScoreWizard/es/">
+<link rel="alternate" hreflang="fr" href="https://zhirnoff.github.io/TennisScoreWizard/fr/">
+<link rel="alternate" hreflang="ja" href="https://zhirnoff.github.io/TennisScoreWizard/ja/">
+<link rel="alternate" hreflang="ru" href="https://zhirnoff.github.io/TennisScoreWizard/ru/">
+<link rel="alternate" hreflang="tr" href="https://zhirnoff.github.io/TennisScoreWizard/tr/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/">
+<link rel="alternate" hreflang="x-default" href="https://zhirnoff.github.io/TennisScoreWizard/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tennis Score Wizard">
+<meta property="og:title" content="Tennis Score Wizard — Anotación de partidos de tenis para Apple Watch y iPhone">
+<meta property="og:description" content="Elige Tennis Score Wizard Standalone para el Apple Watch o Companion para el iPhone y el Apple Watch. Anota los resultados de los partidos desde tu muñeca y consulta el historial sincronizado, las estadísticas y la información sobre tus entrenamientos en el iPhone.">
+<meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/es/">
+<meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
+<meta property="og:image:alt" content="Tennis Score Wizard app icon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tennis Score Wizard — Anotación de partidos de tenis para Apple Watch y iPhone">
+<meta name="twitter:description" content="Elige Tennis Score Wizard Standalone para el Apple Watch o Companion para el iPhone y el Apple Watch. Anota los resultados de los partidos desde tu muñeca y consulta el historial sincronizado, las estadísticas y la información sobre tus entrenamientos en el iPhone.">
+<meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
       --bg: #000000;
@@ -1132,6 +1153,12 @@ footer {
   font-weight: 750;
 }
 
+.versions-compare-link {
+  display: flex;
+  width: fit-content;
+  margin: 28px auto 0;
+}
+
 @media (max-width: 760px) {
   .version-grid {
     grid-template-columns: 1fr;
@@ -1982,13 +2009,6 @@ footer {
 }
 
 
-/* Five-link mobile navigation */
-@media (max-width: 640px) {
-  .nav-links > a:last-child {
-    grid-column: 1 / -1;
-  }
-}
-
 /* Keep the animated brand compact and consistent on mobile */
 @media (max-width: 640px) {
   .brand-title {
@@ -2146,10 +2166,22 @@ footer {
 
   .badges {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 10px;
   }
 
   .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     max-width: 100%;
+    min-height: 54px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.25;
     overflow-wrap: break-word;
   }
 
@@ -2205,6 +2237,37 @@ footer {
 }
 
 /* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
 </style>
 </head>
 <body>
@@ -2216,10 +2279,11 @@ footer {
 </div>
 <div class="nav-links">
 <a href="#versions">Versiones</a>
-<a href="#companion-benefits">Companion</a>
-<a href="#standalone">Standalone</a>
 <a href="#comparison">Comparar</a>
+<a href="#stats-guide">Estadísticas</a>
+<a href="whats-new.html">Actualizaciones</a>
 <a href="help.html">Ayuda</a>
+<a href="#contact">Contacto</a>
 </div>
 <details class="language-menu">
 <summary>🇪🇸 Español</summary>
@@ -2242,12 +2306,12 @@ footer {
 <span class="eyebrow-copy-full">Anotación de partidos de tenis para Apple Watch — con o sin iPhone</span>
 <span class="eyebrow-copy-compact">Anota en el reloj · Explora más en el iPhone</span>
 </div>
-<h1>Un marcador. Dos formas de jugar.</h1>
+<h1>Registra cada punto. Entiende mejor cada partido.</h1>
 <p>
       Elige «Standalone» para disfrutar de una experiencia completa en el Apple Watch, o «Companion» para combinar el marcador en directo del Apple Watch con el historial de partidos y las estadísticas en el iPhone.
     </p>
 <a class="hero-version-link" href="#versions">
-      Comparar versiones
+      Explorar versiones
       <span aria-hidden="true">↓</span>
 </a>
 <div class="badges">
@@ -2285,7 +2349,7 @@ footer {
 <a aria-label="Descarga Tennis Score Wizard Standalone en la App Store" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004">
 <span class="app-store-logo"></span>
 <span class="app-store-text">
-<small>Descargar en</small>
+<small>Descargar en el</small>
 <strong>App Store</strong>
 </span>
 </a>
@@ -2305,20 +2369,21 @@ footer {
 <a aria-label="Descarga Tennis Score Wizard Companion en la App Store" class="app-store-button" href="https://apps.apple.com/app/id6789285015">
 <span class="app-store-logo"></span>
 <span class="app-store-text">
-<small>Disponible en el</small>
+<small>Descargar en el</small>
 <strong>App Store</strong>
 </span>
 </a>
 <span class="version-availability">Versión 1.0 · Ya disponible</span>
 </article>
 </div>
+<a class="hero-version-link versions-compare-link" href="#comparison">Comparar funciones <span aria-hidden="true">↓</span></a>
 </section>
 <section class="companion-showcase" id="companion-benefits">
 <div class="companion-heading">
 <span class="companion-section-kicker">Experiencia Companion</span>
 <h2>Una experiencia completa. Dos pantallas.</h2>
 <p class="section-subtitle">
-      La Companion incluye todo lo que ofrece la Standalone en el Apple Watch. El iPhone se suma a la experiencia como una plataforma principal más amplia y sincronizada para el historial de partidos, los resultados, las estadísticas y los datos de entrenamiento.
+      La versión Companion incluye todo lo que ofrece la versión Standalone en el Apple Watch. El iPhone completa la experiencia con una vista más amplia y sincronizada del historial de partidos, los resultados, las estadísticas y los datos de entrenamiento.
     </p>
 </div>
 <div class="companion-system">
@@ -2397,7 +2462,7 @@ footer {
 <div class="iphone-screenshot-frame">
 <img alt="Pantalla de inicio de Tennis Score Wizard Companion con el último partido y los partidos recientes sincronizados desde el Apple Watch" decoding="async" height="1564" loading="lazy" src="../assets/companion_home_latest_matches.png" width="720"/>
 </div>
-<h3>Partidos más recientes y anteriores</h3>
+<h3>Último resultado y partidos recientes</h3>
 <p>
         Abre Companion para ver tu último resultado y los partidos recientes sincronizados desde el Apple Watch.
       </p>
@@ -2444,7 +2509,7 @@ footer {
 <span class="standalone-kicker">Standalone para el Apple Watch</span>
 <h2>Todo lo que necesitas. Justo en tu muñeca.</h2>
 <p>
-    Configura el partido, anota cada punto, sigue al servidor y la posición de saque, registra un entrenamiento opcional y revisa tu historial y tus estadísticas: todo en el Apple Watch, sin necesidad de un iPhone.
+    Configura el partido, anota cada punto, sigue quién saca y el lado de saque, registra un entrenamiento opcional y revisa tu historial y tus estadísticas: todo en el Apple Watch, sin necesidad de un iPhone.
   </p>
 </section>
 <section id="features">
@@ -2460,7 +2525,7 @@ footer {
 </article>
 <article class="card">
 <h3>Estadísticas automáticas</h3>
-<p>Después del partido, History puede mostrar puntos, saque, resto, presión, tie-breaks y ritmo del partido calculados a partir de tus toques normales de marcador.</p>
+<p>Después del partido, History puede mostrar puntos, saque, resto, presión, tie-breaks y ritmo del partido calculados a partir de tus pulsaciones habituales al llevar el marcador.</p>
 </article>
 <article class="card">
 <h3>Registro de entrenamiento</h3>
@@ -2532,15 +2597,14 @@ footer {
 <article class="screenshot-card">
 <img alt="Ritmo del partido" decoding="async" loading="lazy" src="../assets/11_stats_game_flow.png"/>
 <h3>Ritmo del partido</h3>
-<p>Consulta el juego más largo, puntos medios por juego, juegos totales y tie-breaks ganados o perdidos.</p>
+<p>Consulta el juego más largo, el promedio de puntos por juego, los juegos totales y los tie-breaks ganados o perdidos.</p>
 </article>
 </div>
 </section>
 <section id="complications">
-<span class="product-section-kicker">Atajos de Standalone</span>
 <h2>Acceso rápido desde la esfera del Apple Watch</h2>
 <p class="section-subtitle">
-    Ten la app Standalone a solo un toque de distancia gracias a las complicaciones del Apple Watch.
+    Añade Tennis Score Wizard a una esfera compatible del Apple Watch y abre la app con un solo toque.
   </p>
 <div class="screenshots">
 <article class="screenshot-card">
@@ -2805,11 +2869,7 @@ footer {
 <span>Apple Watch es una marca comercial de Apple Inc.</span>
 </div>
 <nav aria-label="Navegación secundaria" class="footer-links">
-<a href="#stats-guide">Guía de estadísticas</a>
-<a href="whats-new.html">Actualizaciones del producto</a>
-<a href="help.html">Ayuda</a>
 <a href="privacy.html">Privacidad</a>
-<a href="#contact">Contacto</a>
 </nav>
 </footer>
 </main>

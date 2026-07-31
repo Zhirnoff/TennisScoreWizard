@@ -7,6 +7,27 @@
 <link href="../assets/tennis_ball_app_icon_1024.png" rel="icon"/>
 <title>Tennis Score Wizard — ведение счёта в теннисе на Apple Watch и iPhone</title>
 <meta content="Выберите Tennis Score Wizard Standalone для Apple Watch или Companion для iPhone + Apple Watch. Ведите счёт матчей прямо на запястье и просматривайте синхронизированную историю, статистику и аналитику тренировок на iPhone." name="description"/>
+<link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/ru/">
+<link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/">
+<link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/">
+<link rel="alternate" hreflang="es" href="https://zhirnoff.github.io/TennisScoreWizard/es/">
+<link rel="alternate" hreflang="fr" href="https://zhirnoff.github.io/TennisScoreWizard/fr/">
+<link rel="alternate" hreflang="ja" href="https://zhirnoff.github.io/TennisScoreWizard/ja/">
+<link rel="alternate" hreflang="ru" href="https://zhirnoff.github.io/TennisScoreWizard/ru/">
+<link rel="alternate" hreflang="tr" href="https://zhirnoff.github.io/TennisScoreWizard/tr/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/">
+<link rel="alternate" hreflang="x-default" href="https://zhirnoff.github.io/TennisScoreWizard/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tennis Score Wizard">
+<meta property="og:title" content="Tennis Score Wizard — ведение счёта в теннисе на Apple Watch и iPhone">
+<meta property="og:description" content="Выберите Tennis Score Wizard Standalone для Apple Watch или Companion для iPhone + Apple Watch. Ведите счёт матчей прямо на запястье и просматривайте синхронизированную историю, статистику и аналитику тренировок на iPhone.">
+<meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/ru/">
+<meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
+<meta property="og:image:alt" content="Tennis Score Wizard app icon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tennis Score Wizard — ведение счёта в теннисе на Apple Watch и iPhone">
+<meta name="twitter:description" content="Выберите Tennis Score Wizard Standalone для Apple Watch или Companion для iPhone + Apple Watch. Ведите счёт матчей прямо на запястье и просматривайте синхронизированную историю, статистику и аналитику тренировок на iPhone.">
+<meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
       --bg: #000000;
@@ -1132,6 +1153,12 @@ footer {
   font-weight: 750;
 }
 
+.versions-compare-link {
+  display: flex;
+  width: fit-content;
+  margin: 28px auto 0;
+}
+
 @media (max-width: 760px) {
   .version-grid {
     grid-template-columns: 1fr;
@@ -1982,13 +2009,6 @@ footer {
 }
 
 
-/* Five-link mobile navigation */
-@media (max-width: 640px) {
-  .nav-links > a:last-child {
-    grid-column: 1 / -1;
-  }
-}
-
 /* Keep the animated brand compact and consistent on mobile */
 @media (max-width: 640px) {
   .brand-title {
@@ -2146,10 +2166,22 @@ footer {
 
   .badges {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 10px;
   }
 
   .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     max-width: 100%;
+    min-height: 54px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.25;
     overflow-wrap: break-word;
   }
 
@@ -2205,6 +2237,37 @@ footer {
 }
 
 /* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
 </style>
 </head>
 <body>
@@ -2216,10 +2279,11 @@ footer {
 </div>
 <div class="nav-links">
 <a href="#versions">Версии</a>
-<a href="#companion-benefits">Companion</a>
-<a href="#standalone">Standalone</a>
 <a href="#comparison">Сравнить</a>
+<a href="#stats-guide">Гид по статистике</a>
+<a href="whats-new.html">Обновления</a>
 <a href="help.html">Помощь</a>
+<a href="#contact">Контакты</a>
 </div>
 <details class="language-menu">
 <summary>🇷🇺 Русский</summary>
@@ -2242,12 +2306,12 @@ footer {
 <span class="eyebrow-copy-full">Ведение счёта в теннисе на Apple Watch — с iPhone или без него</span>
 <span class="eyebrow-copy-compact">Счёт на часах · Аналитика на iPhone</span>
 </div>
-<h1>Одно приложение для счёта. Два способа играть.</h1>
+<h1>Ведите счёт. Анализируйте каждый матч.</h1>
 <p>
       Выберите версию «Standalone» для полноценного использования на Apple Watch или «Companion», чтобы объединить ведение счёта в реальном времени на Apple Watch с историей матчей и статистикой на iPhone.
     </p>
 <a class="hero-version-link" href="#versions">
-      Сравнить версии
+      Посмотреть версии
       <span aria-hidden="true">↓</span>
 </a>
 <div class="badges">
@@ -2305,20 +2369,21 @@ footer {
 <a aria-label="Загрузите Tennis Score Wizard Companion в App Store" class="app-store-button" href="https://apps.apple.com/app/id6789285015">
 <span class="app-store-logo"></span>
 <span class="app-store-text">
-<small>Доступно на</small>
+<small>Загрузить в</small>
 <strong>App Store</strong>
 </span>
 </a>
 <span class="version-availability">Версия 1.0 · Уже доступно</span>
 </article>
 </div>
+<a class="hero-version-link versions-compare-link" href="#comparison">Сравнить функции <span aria-hidden="true">↓</span></a>
 </section>
 <section class="companion-showcase" id="companion-benefits">
 <div class="companion-heading">
 <span class="companion-section-kicker">Возможности Companion</span>
 <h2>Одно целое. Два экрана.</h2>
 <p class="section-subtitle">
-      Приложение Companion включает в себя все функции Standalone на Apple Watch. iPhone дополняет этот опыт, выступая в роли более просторного синхронизированного центра для хранения истории матчей, результатов, статистики и данных о тренировках.
+      Приложение Companion включает все функции Standalone на Apple Watch. iPhone дополняет их удобным синхронизированным экраном для просмотра истории матчей, результатов, статистики и данных тренировок.
     </p>
 </div>
 <div class="companion-system">
@@ -2397,9 +2462,9 @@ footer {
 <div class="iphone-screenshot-frame">
 <img alt="Главный экран приложения «Tennis Score Wizard Companion» с текущим матчем и недавними матчами, синхронизированными с Apple Watch" decoding="async" height="1564" loading="lazy" src="../assets/companion_home_latest_matches.png" width="720"/>
 </div>
-<h3>Последние и недавние матчи</h3>
+<h3>Последний результат и недавние матчи</h3>
 <p>
-        Откройте приложение Companion, чтобы увидеть свои последние результаты и недавние матчи, синхронизированные с Apple Watch.
+        Откройте Companion, чтобы увидеть последний результат и недавние матчи, синхронизированные с Apple Watch.
       </p>
 </article>
 <article class="iphone-screenshot-card">
@@ -2456,7 +2521,7 @@ footer {
 <div class="grid">
 <article class="card">
 <h3>Классическая система счёта</h3>
-<p>Отслеживай 0–15–30–40, ровно, больше, геймы, сеты и тай-брейки автоматически с большими зонами нажатия.</p>
+<p>Отслеживайте 0–15–30–40, ровно, больше, геймы, сеты и тай-брейки автоматически с помощью крупных зон нажатия.</p>
 </article>
 <article class="card">
 <h3>Автоматическая статистика</h3>
@@ -2464,11 +2529,11 @@ footer {
 </article>
 <article class="card">
 <h3>Запись тренировки</h3>
-<p>По желанию записывай теннисный матч как тренировку Apple Health и смотри средний пульс, максимальный пульс и активные калории.</p>
+<p>При желании записывайте теннисный матч как тренировку Apple Health и просматривайте средний и максимальный пульс, а также активные калории.</p>
 </article>
 <article class="card">
 <h3>Управление матчем</h3>
-<p>Используй выбор первого подающего монеткой, подсказку стороны подачи, Switch Server, Undo, автофиниш матча и локальную историю.</p>
+<p>Используйте выбор первого подающего монеткой, подсказку стороны подачи, Switch Server, Undo, автоматическое завершение матча и локальную историю.</p>
 </article>
 </div>
 </section>
@@ -2482,22 +2547,22 @@ footer {
 <article class="screenshot-card">
 <img alt="Настройка матча" decoding="async" loading="lazy" src="../assets/01_match_setup_rules.png"/>
 <h3>Настройка матча</h3>
-<p>Выбери одиночный или парный матч, Best of 3 или Best of 5 и правило сета перед началом игры.</p>
+<p>Выберите одиночный или парный матч, Best of 3 или Best of 5 и правило сета перед началом игры.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Подающий и тренировка" decoding="async" loading="lazy" src="../assets/02_match_setup_workout_start.png"/>
 <h3>Подающий и тренировка</h3>
-<p>Выбери первого подающего, используй монетку, включи Record Workout и начни матч с одного экрана.</p>
+<p>Выберите первого подающего, используйте монетку, включите Record Workout и начните матч с одного экрана.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Живой счёт" decoding="async" loading="lazy" src="../assets/03_live_scoring_ad_40.png"/>
 <h3>Живой счёт</h3>
-<p>Веди счёт большими карточками, пока подающий, сторона подачи, сеты, статус тренировки и пульс остаются на экране.</p>
+<p>Ведите счёт с помощью больших карточек, пока подающий, сторона подачи, сеты, статус тренировки и пульс остаются на экране.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Тай-брейки" decoding="async" loading="lazy" src="../assets/04_tiebreak_scoring.png"/>
 <h3>Тай-брейки</h3>
-<p>Отслеживай очки тай-брейка при 6–6 теми же крупными и быстрыми контролами Apple Watch.</p>
+<p>Отслеживайте очки тай-брейка при 6–6 с помощью тех же крупных и удобных элементов управления.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Матч завершён" decoding="async" loading="lazy" src="../assets/05_match_finished.png"/>
@@ -2507,12 +2572,12 @@ footer {
 <article class="screenshot-card">
 <img alt="Обзор истории" decoding="async" loading="lazy" src="../assets/06_history_list.png"/>
 <h3>Обзор истории</h3>
-<p>Смотри победы, поражения, остановленные матчи, процент побед и сохранённые матчи прямо на Apple Watch.</p>
+<p>Просматривайте победы, поражения, остановленные матчи, процент побед и сохранённые матчи прямо на Apple Watch.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Сводка матча" decoding="async" loading="lazy" src="../assets/07_match_summary.png"/>
 <h3>Сводка матча</h3>
-<p>Открой сохранённый матч, чтобы посмотреть счёт, геймы, длительность, очки, статус тренировки и контекст остановленного матча.</p>
+<p>Откройте сохранённый матч, чтобы посмотреть счёт, геймы, длительность, очки, статус тренировки и состояние матча на момент остановки.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Статистика тренировки" decoding="async" loading="lazy" src="../assets/08_stats_workout.png"/>
@@ -2522,25 +2587,24 @@ footer {
 <article class="screenshot-card">
 <img alt="Очки и подача" decoding="async" loading="lazy" src="../assets/09_stats_points_serve.png"/>
 <h3>Очки и подача</h3>
-<p>Смотри общее число очков, очки каждой стороны, геймы на подаче и выигранные очки на подаче.</p>
+<p>Просматривайте общее число очков, очки каждой стороны, геймы на подаче и выигранные очки на подаче.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Статистика приёма и ключевых моментов" decoding="async" loading="lazy" src="../assets/10_stats_return_pressure.png"/>
 <h3>Приём и ключевые моменты</h3>
-<p>Смотри геймы на приёме, очки на приёме, спасённые и реализованные брейк-пойнты.</p>
+<p>Просматривайте геймы и очки на приёме, а также спасённые и реализованные брейк-пойнты.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Ход матча" decoding="async" loading="lazy" src="../assets/11_stats_game_flow.png"/>
 <h3>Ход матча</h3>
-<p>Смотри самый длинный гейм, среднее число очков за гейм, общее число геймов и выигранные или проигранные тай-брейки.</p>
+<p>Просматривайте самый длинный гейм, среднее число очков за гейм, общее число геймов и выигранные или проигранные тай-брейки.</p>
 </article>
 </div>
 </section>
 <section id="complications">
-<span class="product-section-kicker">Горячие клавиши Standalone</span>
 <h2>Запуск с циферблата Apple Watch</h2>
 <p class="section-subtitle">
-    С помощью расширений Apple Watch приложение Standalone всегда под рукой — всего одно касание.
+    Добавьте Tennis Score Wizard на поддерживаемый циферблат Apple Watch и открывайте приложение одним касанием.
   </p>
 <div class="screenshots">
 <article class="screenshot-card">
@@ -2558,7 +2622,7 @@ footer {
 <section class="comparison-section" id="comparison">
 <span class="product-section-kicker">Сравнение версий</span>
 <div class="comparison-heading">
-<h2>На Apple Watch возможности одинаковы. Отличается только то, что вы получаете дополнительно.</h2>
+<h2>На Apple Watch всё одинаково. Разница — за пределами часов.</h2>
 <p class="section-subtitle">
       Standalone — это полноценный функционал на Apple Watch. Версия Companion включает то же самое полнофункциональное приложение для часов и дополняется синхронизированным интерфейсом для iPhone.
     </p>
@@ -2635,15 +2699,15 @@ footer {
 </div>
 <div class="help-item">
 <strong>Подача</strong>
-<p>Показывает, как ты играл в своих геймах на подаче. Service games — геймы, где подавал ты. Service points — отдельные очки на твоей подаче.</p>
+<p>Показывает, как вы играли в своих геймах на подаче. Service games — геймы, в которых подавали вы. Service points — отдельные очки на вашей подаче.</p>
 </div>
 <div class="help-item">
 <strong>Приём</strong>
-<p>Показывает, как ты играл, когда подавал соперник. Выигранные геймы на приёме — это брейки. Выигранные очки на приёме показывают, как часто ты выигрывал очки на подаче соперника.</p>
+<p>Показывает, как вы играли, когда подавал соперник. Выигранные геймы на приёме — это брейки. Выигранные очки на приёме показывают, как часто вы выигрывали очки на подаче соперника.</p>
 </div>
 <div class="help-item">
 <strong>Ключевые моменты</strong>
-<p>Break points saved — брейк-пойнты, которые ты спас на своей подаче. Break points converted — шансы, которые ты реализовал на подаче соперника.</p>
+<p>Break points saved — брейк-пойнты, которые вы спасли на своей подаче. Break points converted — шансы, которые вы реализовали на подаче соперника.</p>
 </div>
 <div class="help-item">
 <strong>Ход матча</strong>
@@ -2659,23 +2723,23 @@ footer {
 <div class="stat-examples-grid">
 <div class="stat-example-card">
 <strong>Очки 67–72</strong>
-<p>Ты выиграл 67 очков, соперник — 72. Небольшая разница часто означает, что матч был ближе, чем кажется по счёту сетов.</p>
+<p>Вы выиграли 67 очков, соперник — 72. Небольшая разница часто означает, что матч был ближе, чем кажется по счёту сетов.</p>
 </div>
 <div class="stat-example-card">
 <strong>Геймы на подаче 3/10</strong>
-<p>Ты подавал в 10 геймах и выиграл 3 из них. Это показывает, как часто ты удерживал свою подачу.</p>
+<p>Вы подавали в 10 геймах и выиграли 3 из них. Это показывает, как часто вы удерживали свою подачу.</p>
 </div>
 <div class="stat-example-card">
 <strong>Геймы на приёме 6/11</strong>
-<p>Соперник подавал в 11 геймах, и ты сделал брейк 6 раз.</p>
+<p>Соперник подавал в 11 геймах, и вы сделали брейк 6 раз.</p>
 </div>
 <div class="stat-example-card">
 <strong>Спасённые брейк-пойнты 4/11</strong>
-<p>На своей подаче ты столкнулся с 11 брейк-пойнтами и спас 4.</p>
+<p>На своей подаче вы столкнулись с 11 брейк-пойнтами и спасли 4.</p>
 </div>
 <div class="stat-example-card">
 <strong>Реализованные брейк-пойнты 6/13</strong>
-<p>У тебя было 13 шансов взять подачу соперника, и ты реализовал 6.</p>
+<p>У вас было 13 шансов взять подачу соперника, и вы реализовали 6.</p>
 </div>
 <div class="stat-example-card">
 <strong>Среднее очков за гейм 6.3</strong>
@@ -2698,11 +2762,11 @@ footer {
 <div class="help">
 <div class="help-item">
 <strong>Как начать матч?</strong>
-<p>Выбери Singles или Doubles, Best of 3 или Best of 5, правило сета, первого подающего вручную или монеткой, при желании включи Record Workout и начинай счёт.</p>
+<p>Выберите Singles или Doubles, Best of 3 или Best of 5, правило сета, первого подающего вручную или монеткой, при желании включите Record Workout и начинайте вести счёт.</p>
 </div>
 <div class="help-item">
 <strong>Как записать тренировку?</strong>
-<p>Включи Record Workout при настройке. Если дать разрешение Apple Health, матч можно записать как теннисную тренировку и сохранить в Apple Health.</p>
+<p>Включите Record Workout при настройке. Если предоставить доступ к Apple Health, матч можно записать как теннисную тренировку и сохранить в Apple Health.</p>
 </div>
 <div class="help-item">
 <strong>Как работает пульс в реальном времени?</strong>
@@ -2718,7 +2782,7 @@ footer {
 </div>
 <div class="help-item">
 <strong>Как работает маркер подачи?</strong>
-<p>Когда подаёшь ты, теннисный мяч показывает сторону подачи. Когда подаёт соперник, он показывает сторону подачи соперника с точки зрения твоих часов.</p>
+<p>Когда подаёте вы, теннисный мяч показывает нужную сторону подачи. Когда подаёт соперник, маркер показывает сторону его подачи так, как вы видите её со своей стороны корта.</p>
 </div>
 </div>
 </section>
@@ -2730,7 +2794,7 @@ footer {
 <div class="help">
 <div class="help-item">
 <strong>Что означают Win и Loss?</strong>
-<p>Win означает, что ты выиграл завершённый матч по сетам. Loss означает, что соперник выиграл завершённый матч по сетам.</p>
+<p>Win означает, что вы выиграли завершённый матч по сетам. Loss означает, что завершённый матч по сетам выиграл соперник.</p>
 </div>
 <div class="help-item">
 <strong>Что означает Stopped?</strong>
@@ -2805,11 +2869,7 @@ footer {
 <span>Apple Watch является товарным знаком Apple Inc.</span>
 </div>
 <nav aria-label="Вспомогательная навигация" class="footer-links">
-<a href="#stats-guide">Гид по статистике</a>
-<a href="whats-new.html">Обновления продукта</a>
-<a href="help.html">Помощь</a>
 <a href="privacy.html">Конфиденциальность</a>
-<a href="#contact">Контакты</a>
 </nav>
 </footer>
 </main>
