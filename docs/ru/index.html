@@ -2269,6 +2269,7 @@ footer {
   }
 }
 </style>
+<link rel="stylesheet" href="../release-1-1.css">
 </head>
 <body>
 <main class="page">
@@ -2353,7 +2354,7 @@ footer {
 <strong>App Store</strong>
 </span>
 </a>
-<span class="version-availability">Уже доступно</span>
+<span class="version-availability">Версия 1.4 · Уже доступно</span>
 </article>
 <article class="card version-card version-card-companion">
 <span class="version-kicker">Companion</span>
@@ -2373,7 +2374,7 @@ footer {
 <strong>App Store</strong>
 </span>
 </a>
-<span class="version-availability">Версия 1.0 · Уже доступно</span>
+<span class="version-availability">Версия 1.1 · Уже доступно</span>
 </article>
 </div>
 <a class="hero-version-link versions-compare-link" href="#comparison">Сравнить функции <span aria-hidden="true">↓</span></a>
@@ -2505,6 +2506,31 @@ footer {
 </article>
 </div>
 </section>
+<section id="companion-11">
+  <span class="companion-section-kicker">Новое в Companion 1.1</span>
+  <h2>От отдельного матча — к общей картине</h2>
+  <p class="section-subtitle">Календарь помогает увидеть, когда и как вы играли, сводная статистика собирает результаты вместе, а графики показывают, как меняется ваша игра со временем.</p>
+  <div class="iphone-gallery">
+    <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_calendar_month.png" alt="Календарь матчей за месяц" width="1320" height="2868" loading="lazy" decoding="async"/></div><h3>Календарь по месяцам</h3><p>Победы, поражения и остановленные матчи отмечены в день игры. Если за день было несколько матчей, они собраны вместе.</p></article>
+    <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_calendar_year.png" alt="Годовой обзор теннисных матчей" width="1320" height="2868" loading="lazy" decoding="async"/></div><h3>Весь сезон</h3><p>Оцените год целиком: сколько матчей сыграно в каждом месяце и чем они закончились.</p></article>
+    <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_stats_overview.png" alt="Обзор игры с балансом матчей, временем на корте и сетами" width="1320" height="2868" loading="lazy" decoding="async"/></div><h3>Обзор игры</h3><p>Выберите период и одиночные, парные или все матчи, чтобы увидеть баланс, время на корте, сеты и последние результаты.</p></article>
+    <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_stats_profile.png" alt="Текущая форма, профиль матчей, подача и приём" width="1320" height="2868" loading="lazy" decoding="async"/></div><h3>Форма и профиль матчей</h3><p>Оцените серии, решающие сеты, долю выигранных сетов и геймов, победы после выигранного первого сета и камбэки.</p></article>
+    <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_trends_win.png" alt="График динамики побед и активности по месяцам" width="1320" height="2868" loading="lazy" decoding="async"/></div><h3>Динамика побед</h3><p>Следите за последними результатами по скользящему отрезку до пяти подходящих матчей.</p></article>
+    <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_trends_serve.png" alt="График выигранных геймов на подаче" width="1320" height="2868" loading="lazy" decoding="async"/></div><h3>Тенденции на подаче и приёме</h3><p>Переключайтесь между победами, очками, геймами на своей подаче и геймами на приёме.</p></article>
+  </div>
+</section>
+
+<section id="share-results" class="share-showcase">
+  <span class="companion-section-kicker">Можно поделиться</span>
+  <h2>Делитесь не только счётом</h2>
+  <p class="section-subtitle">Отправьте короткую текстовую сводку или создайте красивую карточку по выбранному матчу, периоду, формату игры и открытому разделу статистики.</p>
+  <div class="share-gallery">
+    <article class="share-card"><img src="../assets/companion_share_match.png" alt="Карточка результата с подробной статистикой матча" width="1266" height="1576" loading="lazy" decoding="async"/><h3>Результат матча</h3><p>Счёт, подача, приём, брейк-пойнты, ход матча и данные тренировки — на одной карточке.</p></article>
+    <article class="share-card"><img src="../assets/companion_share_stats.png" alt="Карточка со сводной статистикой игры" width="1262" height="1576" loading="lazy" decoding="async"/><h3>Обзор игры</h3><p>В карточку попадут выбранный период и фильтр: одиночные, парные или все матчи.</p></article>
+    <article class="share-card"><img src="../assets/companion_share_trends.png" alt="Карточка с графиками игровой динамики" width="1262" height="1580" loading="lazy" decoding="async"/><h3>Динамика игры</h3><p>Поделитесь выбранным графиком вместе с активностью и краткой статистикой по месяцам.</p></article>
+  </div>
+</section>
+
 <section class="standalone-intro" id="standalone">
 <span class="standalone-kicker">Standalone для Apple Watch</span>
 <h2>Всё, что вам нужно. Прямо на вашем запястье.</h2>
@@ -2570,35 +2596,37 @@ footer {
 <p>Когда матч завершён, приложение показывает победителя, счёт по сетам и быстрый переход в History или Done.</p>
 </article>
 <article class="screenshot-card">
-<img alt="Обзор истории" decoding="async" loading="lazy" src="../assets/06_history_list.png"/>
+<img alt="Обзор истории" decoding="async" loading="lazy" src="../assets/watch_history_overview.png"/>
 <h3>Обзор истории</h3>
 <p>Просматривайте победы, поражения, остановленные матчи, процент побед и сохранённые матчи прямо на Apple Watch.</p>
 </article>
 <article class="screenshot-card">
-<img alt="Сводка матча" decoding="async" loading="lazy" src="../assets/07_match_summary.png"/>
+<img alt="Сводка матча" decoding="async" loading="lazy" src="../assets/watch_match_summary.png"/>
 <h3>Сводка матча</h3>
 <p>Откройте сохранённый матч, чтобы посмотреть счёт, геймы, длительность, очки, статус тренировки и состояние матча на момент остановки.</p>
 </article>
 <article class="screenshot-card">
-<img alt="Статистика тренировки" decoding="async" loading="lazy" src="../assets/08_stats_workout.png"/>
+<img alt="Статистика тренировки" decoding="async" loading="lazy" src="../assets/watch_workout_stats.png"/>
 <h3>Статистика тренировки</h3>
 <p>Для записанных тренировок после сохранения матча могут отображаться средняя и максимальная частота пульса, а также активная энергия.</p>
 </article>
 <article class="screenshot-card">
-<img alt="Очки и подача" decoding="async" loading="lazy" src="../assets/09_stats_points_serve.png"/>
-<h3>Очки и подача</h3>
-<p>Просматривайте общее число очков, очки каждой стороны, геймы на подаче и выигранные очки на подаче.</p>
+<img alt="Статистика матча" decoding="async" loading="lazy" src="../assets/watch_match_stats.png"/>
+<h3>Статистика матча</h3>
+<p>Просматривайте общее число очков, выигранные очки, процент выигранных очков и баланс тай-брейков.</p>
 </article>
 <article class="screenshot-card">
-<img alt="Статистика приёма и брейк-пойнтов" decoding="async" loading="lazy" src="../assets/10_stats_return_pressure.png"/>
-<h3>Приём и брейк-пойнты</h3>
-<p>Просматривайте геймы и очки на приёме, а также спасённые и реализованные брейк-пойнты.</p>
+<img alt="Статистика подачи и приёма" decoding="async" loading="lazy" src="../assets/watch_serve_return_stats.png"/>
+<h3>Подача и приём</h3>
+<p>Просматривайте выигранные геймы и очки на своей подаче, а также геймы и очки на приёме.</p>
 </article>
 <article class="screenshot-card">
-<img alt="Ход матча" decoding="async" loading="lazy" src="../assets/11_stats_game_flow.png"/>
+<img alt="Ход матча" decoding="async" loading="lazy" src="../assets/watch_match_flow_stats.png"/>
 <h3>Ход матча</h3>
-<p>Просматривайте самый длинный гейм, среднее число очков за гейм, учтённые геймы и баланс тай-брейков.</p>
+<p>Просматривайте учтённые геймы, самый длинный гейм, среднее число очков за гейм и длительность матча.</p>
 </article>
+<article class="screenshot-card"><img alt="Счёт по сетам и результат тай-брейка" decoding="async" loading="lazy" src="../assets/watch_sets_detail.png"/><h3>Сеты и тай-брейки</h3><p>Посмотрите каждый сет и записанный счёт тай-брейка в итоговом результате матча.</p></article>
+<article class="screenshot-card"><img alt="Статистика брейк-пойнтов" decoding="async" loading="lazy" src="../assets/watch_break_point_stats.png"/><h3>Брейк-пойнты</h3><p>Просматривайте брейк-пойнты на своей подаче, спасённые брейк-пойнты, шансы на приёме и их реализацию.</p></article>
 </div>
 </section>
 <section id="complications">
@@ -2671,6 +2699,21 @@ footer {
 <div class="comparison-feature" role="rowheader">Синхронизированный интерфейс на iPhone</div>
 <div role="cell"><span class="comparison-muted">Не требуется</span></div>
 <div role="cell"><span class="comparison-check">✓</span> В комплекте</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Календарь матчей по месяцам и годам</div>
+<div role="cell"><span class="comparison-muted">Не входит</span></div>
+<div role="cell">На iPhone</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Долгосрочная статистика и тренды игры</div>
+<div role="cell"><span class="comparison-muted">Не входят</span></div>
+<div role="cell">На iPhone</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Текстовые итоги и визуальные карточки для публикации</div>
+<div role="cell"><span class="comparison-muted">Не входят</span></div>
+<div role="cell">На iPhone</div>
 </div>
 <div class="comparison-row comparison-best-for" role="row">
 <div class="comparison-feature" role="rowheader">Идеально подходит для</div>

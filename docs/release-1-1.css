@@ -1,0 +1,89 @@
+/* Companion 1.1 and Standalone 1.4 release galleries */
+.iphone-screenshot-card:nth-child(4),
+.iphone-screenshot-card:nth-child(5) {
+  grid-column: span 2;
+}
+
+.release-gallery-heading {
+  grid-column: 1 / -1;
+  margin: 18px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.release-gallery-heading:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.release-gallery-heading h3 {
+  margin: 0 0 7px;
+  font-size: clamp(24px, 3vw, 34px);
+  letter-spacing: -0.04em;
+}
+
+.release-gallery-heading p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.share-showcase {
+  padding: 40px;
+  border: 1px solid var(--line-green);
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at 18% 5%, rgba(40,255,95,0.10), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
+    var(--panel);
+}
+
+.share-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.share-card {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: rgba(3,5,3,0.82);
+  box-shadow: 0 22px 58px rgba(0,0,0,0.30);
+}
+
+.share-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  background: #000;
+}
+
+.share-card h3 {
+  margin: 16px 4px 7px;
+  font-size: 18px;
+}
+
+.share-card p {
+  margin: 0 4px 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 980px) {
+  .share-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .share-showcase {
+    padding: 22px;
+    border-radius: 26px;
+  }
+}
