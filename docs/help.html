@@ -1343,7 +1343,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>What happens when I stop a match?</strong>
-<p>An unfinished match can be saved with its current score, elapsed time, completed sets, current set progress, points, and available statistics. History marks it as Stopped rather than Win or Loss.</p>
+<p>An unfinished match can be saved with its current score, elapsed time, completed sets, current set progress, points, and available statistics. History keeps the Stopped label. If one side led when play stopped, the result also counts toward Match Record, Win Rate, and streaks; a tied stopped match is neutral.</p>
 </div>
 <div class="help-item">
 <strong>Can I start a new match after finishing or stopping one?</strong>
@@ -1475,7 +1475,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>What does Stopped mean?</strong>
-<p>Stopped means the match was saved before normal completion. The app keeps the real match context collected up to that moment.</p>
+<p>Stopped means the match was saved before normal completion. The app keeps the real match context collected up to that moment. A stopped match with a leader counts toward Match Record, Win Rate, and streaks; a tied stopped match is neutral.</p>
 </div>
 <div class="help-item">
 <strong>What are S1, S2, and S3?</strong>
@@ -1487,7 +1487,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>How are stopped matches evaluated?</strong>
-<p>If a stopped match has a clear set leader, history shows who was leading by sets. If sets are equal, the app uses the available game and tie-break context to describe the match state.</p>
+<p>The app compares completed sets first, then saved games, and finally available tie-break points. If one side leads, the result counts as a win or loss in statistics while the match remains labeled Stopped. If the score is still tied, the result is neutral.</p>
 </div>
 <div class="help-item">
 <strong>What happens to an unfinished set?</strong>

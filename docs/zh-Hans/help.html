@@ -1338,7 +1338,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>停止比赛后会发生什么？</strong>
-<p>未完成的比赛可以连同当前比分、比赛时长、已完成的盘、正在进行的盘、得分和可用统计数据一起保存。在历史记录中会显示为“已停止”。</p>
+<p>未完成的比赛可以连同当前比分、比赛时长、已完成的盘、正在进行的盘、得分和可用统计数据一起保存。在历史记录中仍会显示为“已停止”。如果一方领先，结果还会计入胜负记录、胜率和连胜或连败；如果比分相同，则按中立结果处理。</p>
 </div>
 <div class="help-item">
 <strong>比赛结束或停止后可以开始新比赛吗？</strong>
@@ -1466,7 +1466,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Stopped 是什么意思？</strong>
-<p>表示比赛在正常结束之前被保存。停止时已经记录的真实比赛状态会被保留。</p>
+<p>表示比赛在正常结束之前被保存。停止时已经记录的真实比赛状态会被保留。如果一方领先，结果会计入胜负记录、胜率和连胜或连败；如果比分相同，则按中立结果处理。</p>
 </div>
 <div class="help-item">
 <strong>S1、S2、S3 是什么？</strong>
@@ -1478,7 +1478,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>中止比赛如何判断？</strong>
-<p>如果一方在盘数上明确领先，历史记录会显示领先方。如果盘数相同，则会使用可用的局数和抢七数据描述比赛状态。</p>
+<p>App 会先比较已完成的盘数，再比较已保存的局数，最后比较已有的抢七分数。如果一方领先，比赛仍标记为“已停止”，但该结果会在统计中计为胜或负。若仍为平局，则按中立结果处理。</p>
 </div>
 <div class="help-item">
 <strong>未完成的一盘会怎样？</strong>

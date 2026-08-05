@@ -2842,7 +2842,7 @@ footer {
 </div>
 <div class="help-item">
 <strong>Stopped 是什么意思？</strong>
-<p>Stopped 表示比赛在正常结束前被保存。App 会保留真实比赛上下文，包括盘、局、时长、分数和已收集统计。</p>
+<p>Stopped 表示比赛在正常结束前被保存。App 会保留真实比赛上下文，包括盘、局、时长、分数和已收集统计。如果停止时一方领先，结果会计入胜负记录、胜率和连胜或连败；停止时仍为平局的比赛按中立结果处理。</p>
 </div>
 <div class="help-item">
 <strong>S1、S2、S3 是什么？</strong>
@@ -2854,7 +2854,7 @@ footer {
 </div>
 <div class="help-item">
 <strong>中止比赛如何判断？</strong>
-<p>如果中止比赛有明确的盘数领先，History 会显示谁按盘数领先。如果盘数相同，App 会比较局数，然后比较可用的抢七分数。</p>
+<p>App 会先比较已完成的盘数，再比较已保存的局数，最后比较已有的抢七分数。如果一方领先，比赛仍标记为 Stopped，但该结果会在统计中计为胜或负。若仍为平局，则按中立结果处理。</p>
 </div>
 <div class="help-item">
 <strong>未完成的一盘会怎样？</strong>
