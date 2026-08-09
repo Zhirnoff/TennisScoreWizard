@@ -367,7 +367,7 @@
   display: grid;
   justify-items: center;
   min-width: 0;
-  min-height: 240px;
+  min-height: 180px;
   align-content: center;
   gap: 12px;
   padding: 28px 22px;
@@ -375,20 +375,6 @@
   border-radius: 28px;
   background: rgba(0, 0, 0, 0.48);
   text-align: center;
-}
-
-.icloud-endpoint-icon {
-  display: grid;
-  place-items: center;
-  width: 96px;
-  height: 96px;
-}
-
-.icloud-endpoint-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0.9;
 }
 
 .icloud-endpoint strong {
