@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Help Center — Tennis Score Wizard</title>
-<meta content="Help for Tennis Score Wizard Standalone and Companion: Apple Watch scoring, private iCloud match-history sync and restore, iPhone synchronization, statistics, Health workouts, and troubleshooting." name="description"/>
+<meta content="Help for Tennis Score Wizard Standalone and Companion: Apple Watch scoring, iCloud match sync, iPhone synchronization, statistics, Health workouts, and troubleshooting." name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/help.html">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/help.html">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html">
@@ -20,13 +20,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Help Center — Tennis Score Wizard">
-<meta property="og:description" content="Help for Apple Watch scoring, private iCloud match-history sync and restore, iPhone synchronization, statistics, Health workouts, and troubleshooting.">
+<meta property="og:description" content="Help for Apple Watch scoring, iCloud match sync, iPhone synchronization, statistics, Health workouts, and troubleshooting.">
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/help.html">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Help Center — Tennis Score Wizard">
-<meta name="twitter:description" content="Help for Apple Watch scoring, private iCloud match-history sync and restore, iPhone synchronization, statistics, Health workouts, and troubleshooting.">
+<meta name="twitter:description" content="Help for Apple Watch scoring, iCloud match sync, iPhone synchronization, statistics, Health workouts, and troubleshooting.">
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -1223,7 +1223,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Home" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
 <h1>Help Center</h1>
 <p>
-      Learn how to configure and score matches, synchronize private match history through iCloud,
+      Learn how to configure and score matches, synchronize saved matches through iCloud,
       connect Companion with iPhone,
       understand statistics, record Apple Health workouts, use watch-face complications,
       and troubleshoot common issues.
@@ -1407,7 +1407,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>How does match history synchronize?</strong>
-<p>Companion first transfers newly saved matches between the paired Apple Watch and iPhone. It can then reconcile the same match history through the user’s private iCloud database, so another supported device or the Standalone app can receive it under the same Apple Account.</p>
+<p>Companion first transfers newly saved matches between the paired Apple Watch and iPhone. It can also synchronize saved matches through iCloud, allowing Standalone and Companion to use the same history under the same Apple Account.</p>
 </div>
 <div class="help-item">
 <strong>What should I do if a match has not appeared on iPhone?</strong>
@@ -1425,22 +1425,22 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </section>
 
 <section id="icloud-sync">
-<h2>Private iCloud sync and restore</h2>
+<h2>iCloud match sync and restore</h2>
 <p class="section-subtitle">
-    Keep one match history across Standalone, Companion, and supported devices without creating a separate Tennis Score Wizard account.
+    Synchronize saved matches between Standalone and Companion without creating a Tennis Score Wizard account.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>What is required for iCloud match sync?</strong>
-<p>Sign in to the same Apple Account on the devices you want to use, enable iCloud Drive, keep an internet connection available, and allow the app a little time to finish its first reconciliation. Core scoring still works when iCloud is temporarily unavailable.</p>
+<p>Make sure Apple Watch and, for Companion, iPhone use the same Apple Account. Enable iCloud Drive, keep an internet connection available, and allow time for the first sync to finish. You can continue scoring when iCloud is unavailable.</p>
 </div>
 <div class="help-item">
 <strong>Can Standalone and Companion share matches?</strong>
-<p>Yes. The new releases use the same private CloudKit container. When both apps use the same Apple Account, a match saved by Standalone can appear in Companion and a Companion match can remain available if you later move to Standalone.</p>
+<p>Yes. Both releases use the same iCloud storage for saved matches. When both apps use the same Apple Account, a match saved in Standalone can appear in Companion, and a match saved in Companion can appear in Standalone.</p>
 </div>
 <div class="help-item">
 <strong>How do I know synchronization finished?</strong>
-<p>Open History and check the compact iCloud row. <strong>Synced</strong> shows the latest successful sync date and time. <strong>Syncing</strong> means work is in progress. <strong>Sync paused</strong> with <strong>Check iCloud</strong> means the app could not currently reach the private database.</p>
+<p>Open History and check the compact iCloud row. <strong>Synced</strong> shows the latest successful sync date and time. <strong>Syncing</strong> means work is in progress. <strong>Sync paused</strong> means the app cannot currently reach the private database. If no successful sync has completed yet, the detail reads <strong>Check iCloud</strong>.</p>
 </div>
 <div class="help-item">
 <strong>Will reinstalling the app restore my matches?</strong>
@@ -1448,11 +1448,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Does deleting the app delete the iCloud history?</strong>
-<p>No. Removing an app from a device does not by itself remove its private CloudKit records, which is what allows a later reinstall to restore synchronized history. Deleting matches from inside Tennis Score Wizard synchronizes those deletions when iCloud becomes available.</p>
+<p>No. Removing the app does not by itself delete match records that have already synchronized with iCloud. Those records can download again after reinstalling. Deleting matches from inside Tennis Score Wizard synchronizes those deletions when iCloud becomes available.</p>
 </div>
 <div class="help-item">
 <strong>Can the developer see my synchronized matches?</strong>
-<p>No. Match records use the private CloudKit database associated with your Apple Account. By default, only the user can access that private database, and its records are not visible in the developer portal.</p>
+<p>No. Synchronized match records are stored in the private CloudKit database associated with your Apple Account. By default, only the signed-in user can access that database, and its records are not visible in the developer portal.</p>
 </div>
 </div>
 </section>
@@ -1608,7 +1608,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>History shows Check iCloud or Sync paused.</strong>
-<p>Confirm that the device is signed in to an Apple Account, iCloud Drive is enabled, the network is available, and iCloud storage is not full. Open the app again and leave History visible for a moment. Local matches are not removed merely because iCloud is unavailable.</p>
+<p>Confirm that the device is signed in to an Apple Account, iCloud Drive is enabled, the network is available, and iCloud storage is not full. Reopen the app and allow time for synchronization. Local matches are not removed merely because iCloud is unavailable.</p>
 </div>
 </div>
 </section>
