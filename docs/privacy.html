@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/tennis_ball_app_icon_128.png">
   <title>Privacy Policy — Tennis Score Wizard</title>
-  <meta name="description" content="Privacy Policy for Tennis Score Wizard Standalone and Companion, including local match history, direct Apple Watch and iPhone synchronization, and optional Apple Health workout access.">
+  <meta name="description" content="Privacy Policy for Tennis Score Wizard Standalone and Companion, including local storage, private iCloud match-history sync, paired-device transfer, and optional Apple Health workout access.">
   <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/privacy.html">
   <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/privacy.html">
   <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/privacy.html">
@@ -19,13 +19,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Tennis Score Wizard">
   <meta property="og:title" content="Privacy Policy — Tennis Score Wizard">
-  <meta property="og:description" content="Privacy Policy for Tennis Score Wizard Standalone and Companion, including local match history, direct Apple Watch and iPhone synchronization, and optional Apple Health workout access.">
+  <meta property="og:description" content="Privacy Policy covering local storage, private iCloud match-history sync, paired-device transfer, and optional Apple Health workout access.">
   <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/privacy.html">
   <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
   <meta property="og:image:alt" content="Tennis Score Wizard app icon">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Privacy Policy — Tennis Score Wizard">
-  <meta name="twitter:description" content="Privacy Policy for Tennis Score Wizard Standalone and Companion, including local match history, direct Apple Watch and iPhone synchronization, and optional Apple Health workout access.">
+  <meta name="twitter:description" content="Privacy Policy covering local storage, private iCloud match-history sync, paired-device transfer, and optional Apple Health workout access.">
   <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
   <style>
     :root {
@@ -658,6 +658,7 @@
 
 /* MOBILE_LOCALIZATION_SAFE_END */
 </style>
+<link rel="stylesheet" href="release-1-1.css">
 </head>
 <body>
   <main class="page">
@@ -695,12 +696,12 @@
       <header class="privacy-hero">
         <span class="eyebrow">Tennis Score Wizard</span>
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: July 2026</p>
+        <p class="updated">Last updated: August 9, 2026</p>
       </header>
 
       <div class="card">
         <p>
-          This Privacy Policy applies to both <strong>Tennis Score Wizard</strong> and <strong>Tennis Score Wizard Companion</strong>. The apps are designed to keep tennis scoring, match history, match statistics, and workout information on your own devices. We do not collect, transmit, sell, or share personal data.
+          This Privacy Policy applies to both <strong>Tennis Score Wizard</strong> and <strong>Tennis Score Wizard Companion</strong>. The apps store match information locally and can synchronize it through the private CloudKit database associated with your Apple Account. Tennis Score Wizard does not operate an account system or external server for match history, and the developer does not receive, sell, or use synchronized match data for advertising.
         </p>
       </div>
 
@@ -708,14 +709,24 @@
         <section class="privacy-section">
           <h2>Data Collection</h2>
           <p>
-            Tennis Score Wizard and Tennis Score Wizard Companion do not collect personal data from users. The apps do not require an account, login, registration, email address, or profile.
+            Tennis Score Wizard and Tennis Score Wizard Companion do not require a developer account, registration, email address, or profile. The developer does not receive match history, match statistics, workout summaries, or Health data through a developer-operated server. Apple may process data required to provide iCloud, the App Store, and operating-system services under Apple’s own terms and privacy policy.
           </p>
         </section>
 
         <section class="privacy-section">
-          <h2>Match History, Match Stats, and Device Sync</h2>
+          <h2>Local Match History and Paired-Device Sync</h2>
           <p>
-            Match history is stored locally on your Apple Watch and, when using Tennis Score Wizard Companion, on your paired iPhone. Automatic match stats, including points, serve, return, break points, match flow, tie-break, and workout summary values, are stored locally as part of your saved match history. Tennis Score Wizard Companion may transfer match data directly between your Apple Watch and iPhone using Apple’s WatchConnectivity framework. We do not receive or access your match history or match stats.
+            Match history is stored locally on your Apple Watch and, when using Tennis Score Wizard Companion, on your paired iPhone. Automatic match stats, including points, serve, return, break points, match flow, tie-break, and available workout summary values, are stored as part of a saved match. Companion may also transfer match data directly between your paired Apple Watch and iPhone using Apple’s WatchConnectivity framework.
+          </p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>Private iCloud Synchronization</h2>
+          <p>
+            When an Apple Account and iCloud Drive are available, the apps can synchronize saved match records through Apple CloudKit. Records are stored in the user’s private CloudKit database, count toward the user’s iCloud storage, and are accessible only through that user’s iCloud account by default. Private records are not visible in the developer portal. Standalone and Companion use the same CloudKit container so a person using the same Apple Account can continue the same match history across both products and supported devices.
+          </p>
+          <p class="privacy-source-note">
+            iCloud processing is provided by Apple and is subject to the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a> and applicable <a href="https://www.apple.com/legal/internet-services/icloud/" target="_blank" rel="noopener noreferrer">iCloud Terms of Service</a>.
           </p>
         </section>
 
@@ -736,7 +747,7 @@
         <section class="privacy-section">
           <h2>Network Access</h2>
           <p>
-            The apps do not require network access for core scoring functionality. They do not upload your tennis scores, match history, match stats, workout data, or heart rate data to developer-operated external servers.
+            Core scoring does not require network access. Network access is used when the operating system communicates with Apple services such as iCloud synchronization. The apps do not upload tennis scores, match history, match stats, workout data, or heart-rate data to developer-operated external servers.
           </p>
         </section>
 
@@ -750,7 +761,14 @@
         <section class="privacy-section">
           <h2>Data Sharing</h2>
           <p>
-            We do not sell, rent, or share personal data, match history, match stats, workout data, heart rate data, or active energy data with third parties.
+            The developer does not sell, rent, or disclose match history, match stats, workout data, heart-rate data, or active-energy data to advertisers or data brokers. Match records are sent only to Apple services needed for the user-requested iCloud synchronization described above, and paired-device transfers remain within Apple’s device frameworks.
+          </p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>Deletion, Reinstallation, and Retention</h2>
+          <p>
+            Deleting a saved match inside the app synchronizes that deletion when iCloud is available. Removing the app from a device does not necessarily remove records already stored in the user’s private CloudKit database; this allows synchronized history to return after reinstallation under the same Apple Account. A match that has not completed a successful iCloud sync may exist only on the original device.
           </p>
         </section>
 

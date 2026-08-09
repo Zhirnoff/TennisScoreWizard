@@ -305,3 +305,243 @@
     padding: 14px;
   }
 }
+
+/* Companion 1.2 and Standalone 1.5 — private iCloud match history */
+.icloud-showcase {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 5vw, 52px);
+  border: 1px solid rgba(86, 180, 255, 0.34);
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at 50% 8%, rgba(86, 180, 255, 0.18), transparent 34%),
+    radial-gradient(circle at 8% 88%, rgba(40, 255, 95, 0.10), transparent 32%),
+    linear-gradient(145deg, rgba(12, 24, 34, 0.96), rgba(3, 7, 8, 0.98));
+  box-shadow: 0 28px 78px rgba(0, 0, 0, 0.34);
+}
+
+.icloud-heading {
+  max-width: 780px;
+  margin-bottom: 30px;
+}
+
+.icloud-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #7cc7ff;
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.icloud-kicker::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #56b4ff;
+  box-shadow: 0 0 18px rgba(86, 180, 255, 0.76);
+  content: "";
+}
+
+.icloud-heading h2 {
+  margin: 0 0 12px;
+}
+
+.icloud-heading p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.icloud-ecosystem {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(220px, 0.65fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(18px, 3vw, 34px);
+}
+
+.icloud-device {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.icloud-device img {
+  display: block;
+  width: 100%;
+  max-height: 410px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #000;
+}
+
+.icloud-device figcaption {
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.icloud-hub {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.icloud-cloud-icon {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  border: 1px solid rgba(86, 180, 255, 0.48);
+  border-radius: 34px;
+  color: #8fd0ff;
+  background:
+    radial-gradient(circle at 36% 22%, rgba(255, 255, 255, 0.16), transparent 34%),
+    rgba(86, 180, 255, 0.12);
+  box-shadow: 0 0 48px rgba(86, 180, 255, 0.20);
+}
+
+.icloud-cloud-icon svg {
+  width: 65px;
+  height: 65px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.icloud-hub strong {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.icloud-hub p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.icloud-status-sample {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(86, 180, 255, 0.34);
+  border-radius: 999px;
+  color: #b9e1ff;
+  background: rgba(86, 180, 255, 0.09);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.icloud-status-sample span {
+  color: #ffffff;
+}
+
+.icloud-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.icloud-benefit {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.32);
+}
+
+.icloud-benefit strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.icloud-benefit p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.release-preview-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(86, 180, 255, 0.30);
+  border-radius: 18px;
+  color: #d3ecff;
+  background: rgba(86, 180, 255, 0.08);
+  font-size: 14px;
+}
+
+.release-preview-note strong {
+  color: #ffffff;
+}
+
+.release-preview-note a {
+  flex: 0 0 auto;
+  font-weight: 800;
+}
+
+.privacy-source-note {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.updates-status-preview {
+  border-color: rgba(86, 180, 255, 0.38);
+  color: #b9e1ff;
+  background: rgba(86, 180, 255, 0.10);
+}
+
+@media (max-width: 980px) {
+  .icloud-ecosystem {
+    grid-template-columns: 1fr 180px 1fr;
+  }
+
+  .icloud-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .icloud-showcase {
+    border-radius: 28px;
+  }
+
+  .icloud-ecosystem {
+    grid-template-columns: 1fr;
+  }
+
+  .icloud-device {
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  .icloud-hub {
+    padding-block: 4px;
+  }
+
+  .icloud-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .release-preview-note {
+    display: grid;
+  }
+}

@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Product Updates — Tennis Score Wizard</title>
-<meta content="Release notes for Tennis Score Wizard Standalone and Companion, including Apple Watch improvements and the synchronized iPhone experience." name="description"/>
+<meta content="What’s new in Tennis Score Wizard Companion 1.2 and Standalone 1.5: private iCloud match-history sync, restore, visible sync status, and interface refinements." name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/whats-new.html">
@@ -19,13 +19,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Product Updates — Tennis Score Wizard">
-<meta property="og:description" content="Release notes for Tennis Score Wizard Standalone and Companion, including Apple Watch improvements and the synchronized iPhone experience.">
+<meta property="og:description" content="Companion 1.2 and Standalone 1.5 add private iCloud match-history sync, restore, visible sync status, and interface refinements.">
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Product Updates — Tennis Score Wizard">
-<meta name="twitter:description" content="Release notes for Tennis Score Wizard Standalone and Companion, including Apple Watch improvements and the synchronized iPhone experience.">
+<meta name="twitter:description" content="Companion 1.2 and Standalone 1.5 add private iCloud match-history sync, restore, visible sync status, and interface refinements.">
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -1825,6 +1825,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
   }
 }
 </style>
+<link rel="stylesheet" href="release-1-1.css">
 </head>
 <body>
 <main class="page"><nav class="nav" aria-label="Primary navigation">
@@ -1860,51 +1861,67 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </nav><div class="updates-page">
   <section class="updates-hero" aria-labelledby="updates-title">
     <span class="updates-kicker">Product updates</span>
-    <h1 id="updates-title">Two products. Two release paths.</h1>
+    <h1 id="updates-title">Two products. One private match history.</h1>
     <p>
-      Follow updates for the Apple Watch-only Standalone app and the connected Companion experience for iPhone + Apple Watch.
+      Companion 1.2 and Standalone 1.5 bring both products into the same private iCloud ecosystem while keeping their distinct Apple Watch-only and iPhone + Apple Watch experiences.
     </p>
 
     <div class="updates-product-grid">
       <a class="updates-product-card updates-product-companion" href="#companion-updates">
         <span class="updates-product-label">Companion</span>
         <strong>iPhone + Apple Watch</strong>
-        <small>Latest release · Version 1.1.2</small>
+        <small>In TestFlight · Version 1.2</small>
       </a>
 
       <a class="updates-product-card" href="#standalone-updates">
         <span class="updates-product-label">Standalone</span>
         <strong>Apple Watch only</strong>
-        <small>Latest release · Version 1.4.1</small>
+        <small>In TestFlight · Version 1.5</small>
       </a>
     </div>
   </section>
+
+  <div class="release-preview-note">
+    <span><strong>Release candidate:</strong> both builds are currently in TestFlight. These notes are prepared for the App Store release and may be refined before publication.</span>
+    <a href="index.html#icloud-sync">Explore iCloud sync →</a>
+  </div>
 
   <section id="companion-updates" class="updates-chapter updates-companion-chapter">
     <div class="updates-chapter-heading">
       <div>
         <span class="updates-section-kicker">Companion releases</span>
-        <h2>Calendar, performance, trends, and sharing.</h2>
+        <h2>Private continuity across Watch and iPhone.</h2>
       </div>
-      <span class="updates-status updates-status-live">Available now</span>
+      <span class="updates-status updates-status-preview">In TestFlight</span>
     </div>
     <p class="updates-chapter-intro">
-      Version 1.1 introduced Calendar, Performance Stats, Trends, and sharing. Version 1.1.2 makes stopped-match results clearer and more consistent across statistics.
+      Version 1.2 adds private iCloud match-history synchronization and makes several everyday details more predictable across History, Trends, and shared result cards.
     </p>
 
     <article class="updates-latest-release">
       <div class="updates-release-title">
-        <span>Latest release</span>
-        <h3>Version 1.1.2</h3>
+        <span>Release candidate</span>
+        <h3>Version 1.2</h3>
       </div>
       <ul>
-        <li>Stopped matches with a leader now count toward Match Record, Win Rate, streaks, and rolling performance trends.</li>
-        <li>Tied stopped matches remain neutral and are clearly identified as Tied.</li>
-        <li>Current and best streak values now use explicit Win, Wins, Loss, and Losses labels.</li>
-        <li>Deleting a match now shows clear Delete Match and Cancel actions.</li>
+        <li>Private iCloud synchronization keeps match history available across Companion, Standalone, and devices using the same Apple Account.</li>
+        <li>A compact History indicator shows whether iCloud is Synced, Syncing, needs attention, or is paused, together with the latest successful sync time.</li>
+        <li>After a successful sync, match history can be restored from iCloud following app reinstallation.</li>
+        <li>Performance Trends remembers the last selected Win, Points, Serve, or Return view.</li>
+        <li>Recent Results now read chronologically from left to right, with the newest result on the right.</li>
+        <li>Shared match cards use clearer spacing and compact ATP-style tie-break notation.</li>
       </ul>
     </article>
     <div class="updates-history-grid">
+      <article class="updates-history-card">
+        <span>Version 1.1.2</span>
+        <h3>Clearer stopped-match statistics</h3>
+        <ul>
+          <li>Stopped matches with a leader count toward Match Record, Win Rate, streaks, and rolling performance trends.</li>
+          <li>Tied stopped matches remain neutral and are clearly identified as Tied.</li>
+          <li>Clearer streak labels and match-deletion actions.</li>
+        </ul>
+      </article>
       <article class="updates-history-card">
         <span>Version 1.1.1</span>
         <h3>Clearer match details and sharing</h3>
@@ -1939,28 +1956,38 @@ html[lang="zh-Hans"] .hero .help-home-badge {
     <div class="updates-chapter-heading">
       <div>
         <span class="updates-section-kicker">Standalone releases</span>
-        <h2>The Apple Watch app, refined over time.</h2>
+        <h2>Standalone joins the shared iCloud ecosystem.</h2>
       </div>
-      <span class="updates-status updates-status-live">Available now</span>
+      <span class="updates-status updates-status-preview">In TestFlight</span>
     </div>
     <p class="updates-chapter-intro">
-      Standalone remains the complete Apple Watch-only experience. Version 1.4.1 improves stopped-match statistics and lets Apple Health workouts finish saving in the background.
+      Standalone remains the complete Apple Watch-only experience. Version 1.5 adds the same private iCloud match-history layer used by Companion, making a future move between the two products straightforward.
     </p>
 
     <article class="updates-latest-release">
       <div class="updates-release-title">
-        <span>Latest release</span>
-        <h3>Version 1.4.1</h3>
+        <span>Release candidate</span>
+        <h3>Version 1.5</h3>
       </div>
       <ul>
-        <li>Stopped matches with a leader now count as a statistical win or loss; tied stopped matches remain neutral.</li>
-        <li>Tied replaces Level for clearer stopped-match result wording.</li>
-        <li>Done now returns to setup immediately while Apple Health finishes saving the workout in the background.</li>
-        <li>Saved match workout details update automatically when Health finalization completes.</li>
+        <li>Private iCloud synchronization keeps saved matches available across supported devices and both Tennis Score Wizard products.</li>
+        <li>A compact status in Watch History shows the latest successful sync or explains when iCloud needs attention.</li>
+        <li>After a successful sync, saved match history can return following app reinstallation on the same Apple Account.</li>
+        <li>Local scoring and local history remain available when iCloud is temporarily unavailable; synchronization resumes when service returns.</li>
+        <li>Match deletions synchronize so removed history does not reappear on another device.</li>
       </ul>
     </article>
 
     <div class="updates-history-grid">
+      <article class="updates-history-card">
+        <span>Version 1.4.1</span>
+        <h3>Stopped-match and workout reliability</h3>
+        <ul>
+          <li>Stopped matches with a leader count as a statistical win or loss; tied stopped matches remain neutral.</li>
+          <li>Done returns to setup while Apple Health finishes saving the workout in the background.</li>
+          <li>Saved workout details update automatically after Health finalization.</li>
+        </ul>
+      </article>
       <article class="updates-history-card">
         <span>Version 1.4</span>
         <h3>Redesigned History and match statistics</h3>

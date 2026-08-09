@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Help Center — Tennis Score Wizard</title>
-<meta content="Help for Tennis Score Wizard Standalone and Companion: Apple Watch scoring, iPhone synchronization, match history, statistics, Apple Health workouts, complications, and troubleshooting." name="description"/>
+<meta content="Help for Tennis Score Wizard Standalone and Companion: Apple Watch scoring, private iCloud match-history sync and restore, iPhone synchronization, statistics, Health workouts, and troubleshooting." name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/help.html">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/help.html">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html">
@@ -20,13 +20,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Help Center — Tennis Score Wizard">
-<meta property="og:description" content="Help for Tennis Score Wizard Standalone and Companion: Apple Watch scoring, iPhone synchronization, match history, statistics, Apple Health workouts, complications, and troubleshooting.">
+<meta property="og:description" content="Help for Apple Watch scoring, private iCloud match-history sync and restore, iPhone synchronization, statistics, Health workouts, and troubleshooting.">
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/help.html">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Help Center — Tennis Score Wizard">
-<meta name="twitter:description" content="Help for Tennis Score Wizard Standalone and Companion: Apple Watch scoring, iPhone synchronization, match history, statistics, Apple Health workouts, complications, and troubleshooting.">
+<meta name="twitter:description" content="Help for Apple Watch scoring, private iCloud match-history sync and restore, iPhone synchronization, statistics, Health workouts, and troubleshooting.">
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -1183,6 +1183,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
   }
 }
 </style>
+<link rel="stylesheet" href="release-1-1.css">
 </head>
 <body>
 <main class="page">
@@ -1222,7 +1223,8 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Home" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
 <h1>Help Center</h1>
 <p>
-      Learn how to configure and score matches, synchronize Companion with iPhone,
+      Learn how to configure and score matches, synchronize private match history through iCloud,
+      connect Companion with iPhone,
       understand statistics, record Apple Health workouts, use watch-face complications,
       and troubleshoot common issues.
     </p>
@@ -1405,11 +1407,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>How does match history synchronize?</strong>
-<p>Saved matches transfer directly between your paired Apple Watch and iPhone. Keep both devices nearby and allow a moment for the system to deliver a newly saved match.</p>
+<p>Companion first transfers newly saved matches between the paired Apple Watch and iPhone. It can then reconcile the same match history through the user’s private iCloud database, so another supported device or the Standalone app can receive it under the same Apple Account.</p>
 </div>
 <div class="help-item">
 <strong>What should I do if a match has not appeared on iPhone?</strong>
-<p>Confirm that the correct Apple Watch is paired, keep both devices nearby, and open Tennis Score Wizard on Apple Watch and iPhone. The match remains stored locally and can synchronize when the connection becomes available.</p>
+<p>Confirm that the correct Apple Watch is paired, keep both devices nearby, and open Tennis Score Wizard on Apple Watch and iPhone. Also check the iCloud status in History. The match remains stored locally and can synchronize when either the paired-device connection or iCloud becomes available.</p>
 </div>
 <div class="help-item">
 <strong>Are workout details synchronized too?</strong>
@@ -1417,7 +1419,40 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>What happens when I delete match history?</strong>
-<p>Deleting an individual match or the complete history in Companion synchronizes that change between iPhone and Apple Watch. The app asks for confirmation before deleting the complete history.</p>
+<p>Deleting an individual match or the complete history in Companion synchronizes that change between iPhone and Apple Watch and, when available, through iCloud. The app asks for confirmation before deleting the complete history.</p>
+</div>
+</div>
+</section>
+
+<section id="icloud-sync">
+<h2>Private iCloud sync and restore</h2>
+<p class="section-subtitle">
+    Keep one match history across Standalone, Companion, and supported devices without creating a separate Tennis Score Wizard account.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>What is required for iCloud match sync?</strong>
+<p>Sign in to the same Apple Account on the devices you want to use, enable iCloud Drive, keep an internet connection available, and allow the app a little time to finish its first reconciliation. Core scoring still works when iCloud is temporarily unavailable.</p>
+</div>
+<div class="help-item">
+<strong>Can Standalone and Companion share matches?</strong>
+<p>Yes. The new releases use the same private CloudKit container. When both apps use the same Apple Account, a match saved by Standalone can appear in Companion and a Companion match can remain available if you later move to Standalone.</p>
+</div>
+<div class="help-item">
+<strong>How do I know synchronization finished?</strong>
+<p>Open History and check the compact iCloud row. <strong>Synced</strong> shows the latest successful sync date and time. <strong>Syncing</strong> means work is in progress. <strong>Sync paused</strong> with <strong>Check iCloud</strong> means the app could not currently reach the private database.</p>
+</div>
+<div class="help-item">
+<strong>Will reinstalling the app restore my matches?</strong>
+<p>It can, but confirm that History shows <strong>Synced</strong> before deleting the app. After reinstalling, sign in to the same Apple Account, keep iCloud Drive enabled, open the app, and allow time for the private match history to download.</p>
+</div>
+<div class="help-item">
+<strong>Does deleting the app delete the iCloud history?</strong>
+<p>No. Removing an app from a device does not by itself remove its private CloudKit records, which is what allows a later reinstall to restore synchronized history. Deleting matches from inside Tennis Score Wizard synchronizes those deletions when iCloud becomes available.</p>
+</div>
+<div class="help-item">
+<strong>Can the developer see my synchronized matches?</strong>
+<p>No. Match records use the private CloudKit database associated with your Apple Account. By default, only the user can access that private database, and its records are not visible in the developer portal.</p>
 </div>
 </div>
 </section>
@@ -1484,6 +1519,10 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="help-item">
 <strong>What does TB 7–3 mean?</strong>
 <p>TB shows the tie-break points recorded inside the set. For example, 7–6 · TB 7–3 means the set ended 7–6 and the tie-break score was 7–3.</p>
+</div>
+<div class="help-item">
+<strong>What does 7–6<sup>(6)</sup> mean?</strong>
+<p>The small parenthesized number is the losing player’s tie-break score, following standard compact tennis notation. For example, 7–6<sup>(6)</sup> means the tie-break was won 8–6. Match details still show the complete tie-break score explicitly.</p>
 </div>
 <div class="help-item">
 <strong>How are stopped matches evaluated?</strong>
@@ -1565,7 +1604,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Will reinstalling the app preserve match history?</strong>
-<p>Do not assume local match history will survive deletion or reinstallation of the app. Keep the app installed when saved history is important to you.</p>
+<p>First open History and confirm that the iCloud row shows <strong>Synced</strong>. After reinstalling, use the same Apple Account with iCloud Drive enabled and allow time for restoration. Matches that never completed an iCloud sync remain only on the original device.</p>
+</div>
+<div class="help-item">
+<strong>History shows Check iCloud or Sync paused.</strong>
+<p>Confirm that the device is signed in to an Apple Account, iCloud Drive is enabled, the network is available, and iCloud storage is not full. Open the app again and leave History visible for a moment. Local matches are not removed merely because iCloud is unavailable.</p>
 </div>
 </div>
 </section>

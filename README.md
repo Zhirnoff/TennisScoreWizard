@@ -5,6 +5,8 @@ This repository contains the public website, Help Center, Privacy Policy, releas
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
 - **Companion** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
 
+Companion 1.2 and Standalone 1.5 are currently represented on the English pages as TestFlight release candidates. Their website content must remain on the release branch until both App Store releases are confirmed. This review branch intentionally updates English first; localized pages remain pending until the English content is approved.
+
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
 ## Repository structure
@@ -53,4 +55,4 @@ For questions, bug reports, or feedback, open a GitHub issue or email tennisscor
 
 When reporting an app issue, include the device model, operating-system version, app version, steps to reproduce, expected result, and actual result.
 
-Tennis Score Wizard does not require an account and does not send match history to developer-operated servers. Companion transfers match data directly between the paired Apple Watch and iPhone.
+Tennis Score Wizard does not require a developer account and does not send match history to developer-operated servers. Companion can transfer match data directly between the paired Apple Watch and iPhone. Companion 1.2 and Standalone 1.5 can also synchronize the same history through the private CloudKit database associated with the user’s Apple Account.
