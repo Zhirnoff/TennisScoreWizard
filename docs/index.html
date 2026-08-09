@@ -2349,7 +2349,7 @@ footer {
 <section id="versions">
   <h2>Choose your Tennis Score Wizard</h2>
   <p class="section-subtitle">
-    Both versions include the complete Apple Watch experience. Choose Standalone for Apple Watch only, or Companion for the same full watch app connected to iPhone. With the next releases, both can join the same private iCloud match history.
+    Both versions include the complete Apple Watch experience. Choose Standalone for Apple Watch only, or Companion for the same full watch app connected to iPhone. Both can use the same private iCloud match history.
   </p>
 
   <div class="version-grid">
@@ -2371,7 +2371,7 @@ footer {
           <strong>App Store</strong>
         </span>
       </a>
-      <span class="version-availability">Version 1.4.1 · Version 1.5 in TestFlight</span>
+      <span class="version-availability">Version 1.5 · Available now</span>
     </article>
 
     <article class="card version-card version-card-companion">
@@ -2392,12 +2392,8 @@ footer {
           <strong>App Store</strong>
         </span>
       </a>
-      <span class="version-availability">Version 1.1.2 · Version 1.2 in TestFlight</span>
+      <span class="version-availability">Version 1.2 · Available now</span>
     </article>
-  </div>
-  <div class="release-preview-note">
-    <span><strong>Release preview:</strong> Companion 1.2 and Standalone 1.5 add the shared private iCloud match-history ecosystem.</span>
-    <a href="whats-new.html">See what’s new →</a>
   </div>
   <a class="hero-version-link versions-compare-link" href="#comparison">Compare features <span aria-hidden="true">↓</span></a>
 </section>
@@ -2412,10 +2408,13 @@ footer {
   </div>
 
   <div class="icloud-ecosystem">
-    <figure class="icloud-device">
-      <img src="assets/watch_history_overview.webp" alt="Tennis Score Wizard match history on Apple Watch" width="416" height="496" loading="lazy" decoding="async">
-      <figcaption>Score and review on Apple Watch</figcaption>
-    </figure>
+    <div class="icloud-endpoint">
+      <div class="icloud-endpoint-icon" aria-hidden="true">
+        <img src="assets/sf-apple-watch.png" alt="" width="256" height="256">
+      </div>
+      <strong>Apple Watch</strong>
+      <p>Score with Standalone or the Companion Watch app.</p>
+    </div>
 
     <div class="icloud-hub">
       <div class="icloud-cloud-icon" aria-hidden="true">
@@ -2426,13 +2425,16 @@ footer {
       </div>
       <strong>Your private CloudKit database</strong>
       <p>Available only through the user’s iCloud account by default. Match records are not stored on developer-operated servers.</p>
-      <div class="icloud-status-sample">✓ <span>Synced</span> · Today 18:42</div>
+      <div class="icloud-status-sample">✓ <span>Synced</span></div>
     </div>
 
-    <figure class="icloud-device">
-      <img src="assets/companion_match_history-720.webp" alt="Tennis Score Wizard Companion match history on iPhone" width="720" height="1564" loading="lazy" decoding="async">
-      <figcaption>Explore the same history on iPhone</figcaption>
-    </figure>
+    <div class="icloud-endpoint">
+      <div class="icloud-endpoint-icon" aria-hidden="true">
+        <img src="assets/sf-iphone.png" alt="" width="256" height="256">
+      </div>
+      <strong>Your supported devices</strong>
+      <p>Use the same Apple Account to continue with the same match history.</p>
+    </div>
   </div>
 
   <div class="icloud-benefits">
@@ -2449,8 +2451,8 @@ footer {
       <p>Once a successful sync is confirmed, the same iCloud history can return after reinstalling the app.</p>
     </article>
     <article class="icloud-benefit">
-      <strong>Local-first scoring</strong>
-      <p>Core scoring continues on the watch. iCloud availability affects synchronization, not the ability to score a match.</p>
+      <strong>Scoring still works</strong>
+      <p>You can keep scoring on Apple Watch if iCloud is temporarily unavailable. iCloud affects only when match history synchronizes.</p>
     </article>
   </div>
 </section>
