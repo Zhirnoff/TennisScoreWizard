@@ -692,3 +692,135 @@ body {
     font-size: 11px;
   }
 }
+
+/*
+ * Shared mobile type and layout safeguards
+ *
+ * Translated copy must wrap at natural word boundaries. Avoid emergency
+ * character breaks and automatic hyphenation: both technically fit the box,
+ * but produce unstable, hard-to-read mobile layouts when labels change length.
+ */
+@media (max-width: 700px) {
+  .page,
+  .page > *,
+  .page :where(section, article, header, footer, nav, div, ul, ol, li),
+  .page :where([class*="grid"], [class*="cards"], [class*="gallery"]) > * {
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .page :where(h1, h2, h3, h4, .brand-title, .nav-links > a, summary, button) {
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+
+  .page :where(h1, h2, h3, h4) {
+    text-wrap: balance;
+  }
+
+  .page :where(p, li, dd, td) {
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
+  }
+
+  .nav-links > a {
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  .eyebrow:has(> .eyebrow-copy-compact) {
+    display: grid !important;
+    grid-template-columns: 10px minmax(0, 1fr);
+    column-gap: 9px;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: start !important;
+  }
+
+  .eyebrow:has(> .eyebrow-copy-compact) > .eyebrow-dot {
+    margin-top: 0.25em !important;
+  }
+
+  .eyebrow-copy-compact {
+    display: grid !important;
+    gap: 2px;
+    min-width: 0;
+    text-wrap: balance;
+  }
+
+  .eyebrow-segment {
+    min-width: 0;
+  }
+
+  .eyebrow-separator {
+    display: none;
+  }
+
+  .companion-connection {
+    grid-template-columns: minmax(16px, 1fr) auto minmax(16px, 1fr) !important;
+  }
+
+  .companion-connection strong {
+    width: auto !important;
+    max-width: 160px;
+    padding-inline: 9px !important;
+    white-space: normal !important;
+    line-height: 1.15 !important;
+    text-wrap: balance;
+  }
+
+  .companion-watch-card figcaption {
+    font-size: clamp(7px, 2.2vw, 9px) !important;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  html[lang="de"] .privacy-hero h1 {
+    font-size: clamp(29px, 9.8vw, 38px) !important;
+    letter-spacing: -0.055em;
+  }
+
+  html[lang="ru"] .privacy-hero h1 {
+    font-size: clamp(29px, 9.3vw, 38px) !important;
+    letter-spacing: -0.055em;
+  }
+
+  html[lang="de"] .updates-hero h1 {
+    letter-spacing: -0.045em !important;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-title {
+    font-size: 11.5px !important;
+  }
+
+  html[lang="ru"] .comparison-best-for > div:not(.comparison-feature) {
+    padding-inline: 8px !important;
+    font-size: 9.8px !important;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .companion-connection {
+    grid-template-columns: minmax(16px, 1fr) auto minmax(16px, 1fr) !important;
+  }
+
+  .companion-connection strong {
+    width: auto !important;
+    max-width: 160px;
+    padding-inline: 9px !important;
+    white-space: normal !important;
+    line-height: 1.15 !important;
+    text-wrap: balance;
+  }
+}
