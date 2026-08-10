@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
+<title>도움말 센터 — Tennis Score Wizard</title>
+<meta content="Tennis Score Wizard Standalone 및 Companion 도움말: Apple Watch 점수 기록, iCloud 경기 동기화, Apple Watch와 iPhone 동기화, 통계, 건강 운동 및 문제 해결." name="description"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ko/help.html" rel="canonical"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="en" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html" hreflang="de" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/es/help.html" hreflang="es" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/fr/help.html" hreflang="fr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ja/help.html" hreflang="ja" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ko/help.html" hreflang="ko" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ru/help.html" hreflang="ru" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/tr/help.html" hreflang="tr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/help.html" hreflang="zh-Hans" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Tennis Score Wizard" property="og:site_name"/>
+<meta content="도움말 센터 — Tennis Score Wizard" property="og:title"/>
+<meta content="Apple Watch 점수 기록, iCloud 경기 동기화, Apple Watch와 iPhone 동기화, 통계, 건강 운동 및 문제 해결 도움말." property="og:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/ko/help.html" property="og:url"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
+<meta content="Tennis Score Wizard 앱 아이콘" property="og:image:alt"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="도움말 센터 — Tennis Score Wizard" name="twitter:title"/>
+<meta content="Apple Watch 점수 기록, iCloud 경기 동기화, Apple Watch와 iPhone 동기화, 통계, 건강 운동 및 문제 해결 도움말." name="twitter:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --panel-2: #111511;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-2: #00d84a;
+      --green-soft: rgba(40,255,95,0.10);
+      --yellow: #ffe34d;
+      --red: #ff4b55;
+    }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 16px;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    rgba(5,7,5,0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: 21px;
+}
+.app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14),
+    0 0 32px rgba(40,255,95,0.20),
+    0 14px 34px rgba(0,0,0,0.52);
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 0 28px rgba(40,255,95,0.10);
+}
+.eyebrow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(40,255,95,0.75);
+}
+h1 {
+  margin: 0;
+  max-width: 740px;
+  font-size: clamp(46px, 7.4vw, 88px);
+  line-height: 0.91;
+  letter-spacing: -0.078em;
+}
+.hero-copy p {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  color: #e9e9ed;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 780;
+}
+.hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  box-shadow:
+    0 42px 130px rgba(0,0,0,0.72),
+    0 0 90px rgba(40,255,95,0.16);
+}
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
+}
+section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px;
+}
+.section-subtitle {
+  max-width: 760px;
+  margin: -6px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 158px;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.card p,
+.faq p,
+.help-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.screenshot-card {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(40,255,95,0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 30px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.26);
+}
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(255,255,255,0.11);
+}
+.screenshot-card h3 {
+  margin: 17px 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.help-item,
+.faq {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.028);
+  border-radius: 23px;
+  padding: 18px;
+}
+.help-item strong,
+.faq strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacy-box {
+  border: 1px solid rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at top left, rgba(40,255,95,0.16), transparent 22rem),
+    rgba(40,255,95,0.06);
+  border-radius: 25px;
+  padding: 22px;
+  color: #eaffdf;
+  box-shadow: 0 0 46px rgba(40,255,95,0.08);
+}
+.privacy-box p {
+  color: #d8f7d0;
+  margin: 8px 0 0;
+}
+.support-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 22px;
+  min-height: 142px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+}
+footer {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .hero-copy p {
+    font-size: 18px;
+  }
+  .hero-visual {
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
+  }
+  .hero-ball {
+    border-radius: 66px;
+  }
+  .grid,
+  .help,
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Language selector */
+.nav {
+  overflow: visible;
+}
+
+.nav-links {
+  align-items: center;
+  overflow: visible;
+}
+
+.language-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  cursor: pointer;
+  color: #f5f7f5;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.045);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.language-menu summary::marker {
+  content: "";
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+.language-menu[open] summary {
+  border-color: var(--line-green);
+  background:
+    linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+    rgba(255,255,255,0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 0 24px rgba(40,255,95,0.13);
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: 210px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+    rgba(7,9,7,0.98);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,24,20,0.98);
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: #f2f4f2;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.language-options a:hover {
+  background: rgba(40,255,95,0.10);
+  text-decoration: none;
+}
+
+.language-options a.active {
+  color: var(--green);
+  background: rgba(40,255,95,0.11);
+}
+
+.language-options a.active::after {
+  content: "✓";
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
+/* Keep language dropdown above hero content */
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.language-menu {
+  z-index: 1100;
+}
+
+.language-options {
+  z-index: 1200;
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .language-menu {
+    position: relative;
+  }
+
+  .language-options {
+    left: 0;
+    right: auto;
+    width: min(210px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+  }
+
+  .language-options::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+/* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+/* Clickable brand and Help badge */
+.brand-home-link,
+.help-badge-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  min-width: 0;
+}
+
+.brand-home-link:hover,
+.brand-home-link:focus-visible,
+.help-badge-home-link:hover,
+.help-badge-home-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link:focus-visible,
+.help-badge-home-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.help-home-badge {
+  cursor: pointer;
+}
+
+/* CJK headings need a slightly clearer gap below the badge. */
+html[lang="ja"] .hero .help-home-badge,
+html[lang="zh-Hans"] .hero .help-home-badge {
+  margin-bottom: 22px;
+}
+
+
+/* Unified global product navigation */
+.nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "brand links language";
+  align-items: center;
+  column-gap: 26px;
+  min-height: 92px;
+  padding: 14px 16px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-links > a[aria-current="page"] {
+  color: var(--green);
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+.footer-meta,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    column-gap: 14px;
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: grid;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    font-size: 12px;
+  }
+
+  .nav-links > a[aria-current="page"] {
+    border-color: var(--line-green);
+    background: var(--green-soft);
+  }
+
+  .language-options {
+    right: 0;
+    left: auto;
+  }
+
+  .language-options::before {
+    right: 22px;
+    left: auto;
+  }
+
+  footer,
+  .footer-meta,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Shared animated brand treatment */
+.brand-title {
+  display: inline-block;
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-home-link {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .hero-copy,
+  .hero-copy > *,
+  .help,
+  .help-item,
+  .faq {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1,
+  section > h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero-copy p,
+  .help-item,
+  .faq {
+    overflow-wrap: break-word;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+</style>
+<link href="../release-1-1.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="page">
+<nav aria-label="주요 탐색" class="nav">
+<div class="brand">
+<a aria-label="Tennis Score Wizard — 홈" class="brand-home-link" href="index.html">
+<img alt="Tennis Score Wizard 앱 아이콘" class="app-icon" decoding="async" height="1024" sizes="62px" src="../assets/tennis_ball_app_icon_1024-128.webp" srcset="../assets/tennis_ball_app_icon_1024-128.webp 128w, ../assets/tennis_ball_app_icon_1024-256.webp 256w" width="1024"/>
+<span class="brand-title">Tennis Score Wizard</span>
+</a>
+</div>
+<div class="nav-links">
+<a href="index.html#versions">버전</a>
+<a href="index.html#comparison">비교</a>
+<a href="index.html#stats-guide">통계 가이드</a>
+<a href="whats-new.html">업데이트</a>
+<a aria-current="page" href="help.html">도움말</a>
+<a href="index.html#contact">문의</a>
+</div>
+<details class="language-menu">
+<summary>🇰🇷 한국어</summary>
+<div class="language-options">
+  <a href="../help.html">🇺🇸 English</a>
+  <a href="../ja/help.html">🇯🇵 日本語</a>
+  <a href="../de/help.html">🇩🇪 Deutsch</a>
+  <a href="../fr/help.html">🇫🇷 Français</a>
+  <a href="../ru/help.html">🇷🇺 Русский</a>
+  <a href="../tr/help.html">🇹🇷 Türkçe</a>
+  <a href="../es/help.html">🇪🇸 Español</a>
+  <a href="../zh-Hans/help.html">🇨🇳 简体中文</a>
+  <a class="active" href="help.html">🇰🇷 한국어</a>
+</div>
+</details>
+</nav>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — 홈" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
+<h1>도움말 센터</h1>
+<p>
+      경기를 설정하고 점수를 기록하는 방법, iCloud로 저장된 경기를 동기화하는 방법, Companion을 iPhone과 연결하는 방법, 통계를 이해하는 방법, 건강 앱에 운동을 기록하는 방법, 시계 페이스 컴플리케이션을 사용하는 방법 및 일반적인 문제 해결 방법을 알아보세요.
+    </p>
+</div>
+</section>
+<section id="getting-started">
+<h2>시작하기</h2>
+<p class="section-subtitle">
+    Tennis Score Wizard를 준비하고 첫 경기 점수 기록을 시작하는 데 필요한 내용을 안내합니다.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Tennis Score Wizard를 사용하려면 무엇이 필요한가요?</strong>
+<p>Tennis Score Wizard가 설치된 호환 Apple Watch가 필요합니다. 건강 데이터 접근은 선택 사항이며 경기를 운동으로 기록하고 사용 가능한 운동 데이터를 수집하려는 경우에만 필요합니다.</p>
+</div>
+<div class="help-item">
+<strong>첫 경기는 어떻게 시작하나요?</strong>
+<p>앱을 열고 단식 또는 복식을 선택한 뒤 경기 길이와 세트 규칙을 정하세요. 첫 서버를 선택하고 필요하면 운동 기록을 켠 다음 경기를 시작하세요.</p>
+</div>
+<div class="help-item">
+<strong>앱이 경기 설정을 기억하나요?</strong>
+<p>앱은 이전 경기 설정을 기억하므로 다음에 비슷한 경기를 더 빠르게 준비할 수 있습니다. 시작 전에는 모든 옵션을 자유롭게 변경할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>건강 데이터 접근 없이도 경기 점수를 기록할 수 있나요?</strong>
+<p>예. 경기 점수 기록, 통계 및 경기 기록은 건강 데이터 접근 없이도 작동합니다. 권한은 운동 기록과 심박수 및 활동 에너지 같은 관련 측정값을 사용할 때만 필요합니다.</p>
+</div>
+</div>
+</section>
+<section id="match-setup">
+<h2>경기 설정</h2>
+<p class="section-subtitle">
+    실제 플레이 방식에 맞는 경기 형식과 규칙을 선택하세요.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>단식과 복식의 차이는 무엇인가요?</strong>
+<p>양쪽에 한 명씩 경기하면 단식, 두 명씩 경기하면 복식을 선택하세요. 선택한 형식은 경기와 함께 저장되며 운동을 기록할 때도 사용됩니다.</p>
+</div>
+<div class="help-item">
+<strong>3세트 매치와 5세트 매치는 무엇을 뜻하나요?</strong>
+<p>3세트 매치는 먼저 2세트를 이긴 쪽이 경기에서 승리합니다. 5세트 매치는 먼저 3세트를 이긴 쪽이 승리합니다.</p>
+</div>
+<div class="help-item">
+<strong>세트 규칙은 어떻게 적용되나요?</strong>
+<p>경기 형식에 맞는 세트 규칙을 선택하세요. 앱은 세트 승리 여부와 타이브레이크 필요 여부를 판단할 때 선택한 규칙을 자동으로 적용합니다.</p>
+</div>
+<div class="help-item">
+<strong>첫 서버는 어떻게 선택하나요?</strong>
+<p>설정 중에 첫 서버를 직접 선택하거나 무작위로 정하려면 내장 동전 던지기를 사용할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>동전 던지기는 어떤 기능인가요?</strong>
+<p>동전 던지기는 결과를 무작위로 정해 누가 먼저 서브할지 결정하도록 도와줍니다. 경기 시작 전에 결과에 따른 설정을 확인할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>운동 기록은 어떤 기능인가요?</strong>
+<p>운동 기록을 켜고 권한을 허용하면 경기와 함께 테니스 운동이 시작됩니다. 사용 가능한 심박수, 활동 에너지 및 시간 데이터를 수집해 건강 앱에 운동을 저장할 수 있습니다.</p>
+</div>
+</div>
+</section>
+<section id="scoring">
+<h2>경기 점수 기록</h2>
+<p class="section-subtitle">
+    각 포인트만 기록하면 앱이 테니스 점수를 자동으로 관리합니다.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>포인트는 어떻게 기록하나요?</strong>
+<p>점수 컨트롤에서 나 또는 상대 중 포인트를 이긴 쪽을 선택하세요. 선택할 때마다 점수가 즉시 업데이트됩니다.</p>
+</div>
+<div class="help-item">
+<strong>앱이 게임과 세트를 자동으로 계산하나요?</strong>
+<p>예. Tennis Score Wizard는 선택한 경기 규칙에 따라 포인트, 게임, 세트, 듀스, 어드밴티지 및 타이브레이크 상태를 자동으로 진행합니다.</p>
+</div>
+<div class="help-item">
+<strong>듀스와 어드밴티지는 어떻게 처리하나요?</strong>
+<p>40–40이 되면 듀스로 들어갑니다. 한쪽이 어드밴티지를 얻은 뒤 다음 포인트까지 이겨야 게임에서 승리합니다. 반대쪽이 다음 포인트를 이기면 다시 듀스가 됩니다.</p>
+</div>
+<div class="help-item">
+<strong>타이브레이크 점수는 어떻게 기록하나요?</strong>
+<p>선택한 규칙에 따라 타이브레이크가 필요하면 앱은 일반 테니스 포인트에서 숫자 타이브레이크 포인트로 전환하고 설정된 타이브레이크 규칙으로 승자를 결정합니다.</p>
+</div>
+<div class="help-item">
+<strong>서브 표시는 어떻게 작동하나요?</strong>
+<p>내가 서브할 때 테니스 공이 서브해야 할 위치를 강조합니다. 상대가 서브할 때는 시계에서 보이는 상대의 서브 위치를 보여 줍니다.</p>
+</div>
+<div class="help-item">
+<strong>앱은 서버를 어떻게 추적하나요?</strong>
+<p>게임과 타이브레이크 포인트가 끝날 때 앱이 서버를 자동으로 전환합니다. 실제 경기와 시계의 서버가 맞지 않으면 경기 메뉴에서 직접 수정할 수도 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>선수는 언제 코트를 바꿔야 하나요?</strong>
+<p>앱은 적절한 게임 전환 시점에 코트 교대 알림을 표시합니다. 안내용 알림이며 경기가 다시 시작되면 사라집니다.</p>
+</div>
+</div>
+</section>
+<section id="match-controls">
+<h2>경기 제어</h2>
+<p class="section-subtitle">
+    실수를 수정하고 진행 중인 경기를 관리하며 미완료 경기를 안전하게 중단하세요.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>실행 취소는 어떻게 작동하나요?</strong>
+<p>실행 취소는 가장 최근에 기록한 포인트를 되돌리고 포인트, 게임, 세트, 서버, 서브 위치, 타이브레이크 상태 및 관련 자동 통계 카운터를 포함한 이전 경기 상태를 복원합니다.</p>
+</div>
+<div class="help-item">
+<strong>메뉴에서는 무엇을 할 수 있나요?</strong>
+<p>진행 중인 경기의 메뉴에서 서버 수정, 경기 기록 열기, 현재 경기 중단 또는 새 경기 준비 같은 추가 동작을 사용할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>서버 전환은 언제 사용하나요?</strong>
+<p>앱에 표시된 서버가 실제 경기와 다를 때 서버 전환을 사용하세요. 포인트를 추가하거나 제거하지 않고 현재 서브하는 쪽만 수정합니다.</p>
+</div>
+<div class="help-item">
+<strong>경기를 중단하면 어떻게 되나요?</strong>
+<p>미완료 경기는 현재 점수, 경과 시간, 완료된 세트, 진행 중인 세트, 포인트 및 사용 가능한 통계와 함께 저장할 수 있습니다. 경기 기록에는 중단됨 표시가 유지됩니다. 중단 시점에 한쪽이 앞섰다면 경기 전적, 승률 및 연승·연패에도 반영되고, 동점으로 중단된 경기는 중립 결과입니다.</p>
+</div>
+<div class="help-item">
+<strong>경기를 끝내거나 중단한 뒤 새 경기를 시작할 수 있나요?</strong>
+<p>예. 현재 경기를 완료하거나 중단한 뒤 설정으로 돌아가 이전 구성을 다시 사용해 새 경기를 시작할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>포인트를 잘못 기록했다면 어떻게 하나요?</strong>
+<p>가능한 한 빨리 실행 취소를 사용하세요. 잘못된 포인트 이전의 전체 상태를 복원하므로 반대쪽에 포인트를 추가해 보정하는 것보다 안전합니다.</p>
+</div>
+</div>
+</section>
+<section id="statistics">
+<h2>경기 통계 이해하기</h2>
+<p class="section-subtitle">
+    저장된 경기의 숫자가 무엇을 뜻하고 어떻게 계산되는지 알아보세요.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>전체 포인트란 무엇인가요?</strong>
+<p>전체 포인트는 경기 중 기록된 득점 포인트 수를 보여 줍니다. 포인트 요약은 내가 획득한 포인트와 상대가 획득한 포인트를 구분합니다.</p>
+</div>
+<div class="help-item">
+<strong>기록된 게임이란 무엇인가요?</strong>
+<p>기록된 게임은 포인트별 데이터가 있는 게임입니다. 중단된 경기에서는 현재 끝나지 않은 게임이 포함될 수 있으므로 이 값은 공식 게임 스코어와 다를 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>브레이크 포인트 통계란 무엇인가요?</strong>
+<p>내 서브에서 맞은 브레이크 포인트와 방어한 브레이크 포인트, 리턴에서 얻은 브레이크 기회와 성공 횟수를 보여 줍니다. 타이브레이크 포인트는 제외됩니다.</p>
+</div>
+<div class="help-item">
+<strong>통계는 자동으로 업데이트되나요?</strong>
+<p>예. 통계는 기록한 포인트를 바탕으로 업데이트됩니다. 실행 취소는 마지막 포인트가 통계에 미친 영향도 되돌리므로 복원된 점수와 수치가 계속 일치합니다.</p>
+</div>
+<div class="help-item">
+<strong>중단된 경기의 통계가 불완전할 수 있는 이유는 무엇인가요?</strong>
+<p>중단된 경기에는 중단되기 전까지 발생한 포인트와 상황만 포함됩니다. 이후 경기 이벤트나 정상 종료가 필요한 통계는 표시되지 않거나 불완전할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>이전에 저장한 경기의 통계가 더 적게 표시되는 이유는 무엇인가요?</strong>
+<p>이전 앱 버전에서 저장된 경기에는 나중에 추가된 모든 통계가 들어 있지 않을 수 있습니다. 앱은 누락된 값을 임의로 만들지 않고 원래 기록된 정보를 그대로 보존합니다.</p>
+</div>
+</div>
+</section>
+<section id="companion-sync">
+<h2>Companion과 iPhone 동기화</h2>
+<p class="section-subtitle">
+    Apple Watch에서 점수를 기록한 뒤 iPhone에서 동기화된 경기 기록, 결과, 통계 및 운동 정보를 살펴보세요.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Companion에서는 어디에서 경기를 설정하고 점수를 기록하나요?</strong>
+<p>경기 설정과 실시간 점수 기록은 Apple Watch에서 이루어집니다. Companion은 완전한 Watch 앱에 더해 경기 후 또는 경기 사이에 저장된 경기를 확인하는 iPhone 보기를 제공합니다.</p>
+</div>
+<div class="help-item">
+<strong>iPhone에는 어떤 정보가 표시되나요?</strong>
+<p>iPhone 앱에는 최신 결과, 최근 및 전체 경기 기록, 세트와 타이브레이크 점수, 경기 시간, 포인트, 서브, 리턴, 브레이크 포인트, 경기 흐름 통계 및 사용 가능한 운동 요약이 표시됩니다.</p>
+</div>
+<div class="help-item">
+<strong>경기 기록은 어떻게 동기화되나요?</strong>
+<p>Companion은 먼저 새로 저장된 경기를 페어링된 Apple Watch와 iPhone 사이에서 전송합니다. 또한 저장된 경기를 iCloud로 동기화할 수 있어 동일한 Apple 계정에서 Standalone과 Companion이 같은 기록을 사용할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>경기가 iPhone에 나타나지 않으면 어떻게 해야 하나요?</strong>
+<p>올바른 Apple Watch가 페어링되어 있는지 확인하고 두 기기를 가까이 둔 뒤 Apple Watch와 iPhone에서 Tennis Score Wizard를 여세요. 경기 기록의 iCloud 상태도 확인하세요. 경기는 로컬에 계속 저장되며 페어링된 기기 연결 또는 iCloud를 사용할 수 있게 되면 동기화할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>운동 세부 정보도 동기화되나요?</strong>
+<p>운동 데이터를 사용할 수 있으면 Companion은 두 기기의 저장된 경기에서 경기 시간, 평균 심박수, 최대 심박수 및 활동 에너지를 표시할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>경기 기록을 삭제하면 어떻게 되나요?</strong>
+<p>Companion에서 개별 경기 또는 전체 기록을 삭제하면 해당 변경 내용이 iPhone과 Apple Watch 사이에서 동기화되고, 사용할 수 있는 경우 iCloud를 통해서도 동기화됩니다. 전체 기록을 삭제하기 전에는 앱이 확인을 요청합니다.</p>
+</div>
+</div>
+</section>
+<section id="icloud-sync">
+<h2>iCloud 경기 동기화 및 복원</h2>
+<p class="section-subtitle">
+    Tennis Score Wizard 계정을 만들지 않고 Standalone과 Companion 사이에서 저장된 경기를 동기화하세요.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>iCloud 경기 동기화에는 무엇이 필요한가요?</strong>
+<p>Apple Watch와 Companion의 경우 iPhone이 동일한 Apple 계정을 사용하는지 확인하세요. iCloud Drive를 켜고 인터넷 연결을 유지한 뒤 첫 동기화가 끝날 때까지 기다리세요. iCloud를 사용할 수 없어도 점수 기록은 계속할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>Standalone과 Companion이 경기를 공유할 수 있나요?</strong>
+<p>예. 두 버전은 저장된 경기에 동일한 iCloud 저장 공간을 사용합니다. 두 앱이 같은 Apple 계정을 사용하면 Standalone에서 저장한 경기가 Companion에, Companion에서 저장한 경기가 Standalone에 나타날 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>동기화가 끝났는지 어떻게 알 수 있나요?</strong>
+<p>경기 기록을 열고 iCloud 상태 행을 확인하세요. <b>동기화됨</b>은 최근 동기화가 성공적으로 끝났다는 뜻이며 날짜와 시간이 함께 표시됩니다. <b>동기화 중</b>은 동기화가 진행 중이라는 뜻입니다. <b>동기화 일시 중지</b>는 최근 동기화를 완료하지 못했다는 뜻입니다. 아직 성공한 동기화가 없다면 세부 정보에는 <b>iCloud 확인</b> 상태가 표시됩니다.</p>
+</div>
+<div class="help-item">
+<strong>앱을 재설치하면 경기가 복원되나요?</strong>
+<p>예. 앱을 제거하기 전에 경기가 성공적으로 동기화되었다면 복원됩니다. 경기 기록에 <b>동기화됨</b>이 먼저 표시되는지 확인하세요. 재설치 후 동일한 Apple 계정을 사용하고 iCloud Drive를 켠 상태로 앱을 연 뒤 경기가 다운로드될 때까지 기다리세요.</p>
+</div>
+<div class="help-item">
+<strong>앱을 삭제하면 iCloud 경기 기록도 삭제되나요?</strong>
+<p>아니요. 앱을 제거해도 이미 iCloud와 동기화된 경기 기록은 자동으로 삭제되지 않습니다. 재설치 후 해당 기록을 다시 다운로드할 수 있습니다. Tennis Score Wizard 안에서 경기를 삭제하면 iCloud를 사용할 수 있을 때 삭제 내용도 동기화됩니다.</p>
+</div>
+<div class="help-item">
+<strong>개발자가 동기화된 경기를 볼 수 있나요?</strong>
+<p>아니요. CloudKit은 동기화된 기록을 Apple 계정의 비공개 데이터베이스에 저장합니다. 기본적으로 해당 사용자만 비공개 데이터베이스에 접근할 수 있습니다.</p>
+</div>
+</div>
+</section>
+<section id="health-workouts">
+<h2>건강 및 운동</h2>
+<p class="section-subtitle">
+    테니스 세션을 기록하고 경기 후 표시되는 건강 정보를 이해하세요.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>테니스 운동은 어떻게 기록하나요?</strong>
+<p>경기 설정에서 운동 기록을 켜고 요청된 건강 데이터 접근을 허용하세요. 운동은 경기와 함께 시작되며 경기를 완료하거나 중단하면 종료됩니다.</p>
+</div>
+<div class="help-item">
+<strong>실시간 심박수는 어떻게 작동하나요?</strong>
+<p>기록 중인 운동에서 접근이 허용되어 있고 Apple Watch가 현재 심박수 샘플을 제공하면 앱에 실시간 심박수가 표시됩니다.</p>
+</div>
+<div class="help-item">
+<strong>평균 심박수와 최대 심박수는 무엇인가요?</strong>
+<p>평균 심박수는 운동 중 수집된 사용 가능한 심박수 샘플의 평균입니다. 최대 심박수는 해당 운동에서 기록된 사용 가능한 심박수 샘플 중 가장 높은 값입니다.</p>
+</div>
+<div class="help-item">
+<strong>활동 에너지란 무엇인가요?</strong>
+<p>활동 에너지는 운동 중 활동으로 소모한 것으로 추정되는 에너지입니다. Apple Watch가 사용 가능한 건강 및 동작 정보를 바탕으로 값을 추정하며 앱은 HealthKit이 제공하는 운동 합계를 표시합니다.</p>
+</div>
+<div class="help-item">
+<strong>운동은 어디에 저장되나요?</strong>
+<p>운동이 정상적으로 완료되면 건강 앱에 저장되며 기기의 권한 및 동기화 상태에 따라 iPhone의 피트니스 앱에도 나타날 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>운동 통계가 늦게 나타날 수 있는 이유는 무엇인가요?</strong>
+<p>운동이 끝난 뒤 건강 앱이 측정값 저장을 마치는 데 잠시 시간이 필요할 수 있습니다. 잠시 기다렸다가 완료된 경기를 다시 확인하세요.</p>
+</div>
+<div class="help-item">
+<strong>건강 통계가 표시되지 않는 이유는 무엇인가요?</strong>
+<p>권한을 허용하지 않았거나 센서가 충분한 샘플을 제공하지 않았거나 운동 기록이 꺼져 있거나 건강 앱이 아직 운동 데이터 저장을 마치지 않았다면 값이 표시되지 않을 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>운동 기록에 실패해도 경기는 저장되나요?</strong>
+<p>경기 점수와 경기 기록은 건강 데이터와 별개입니다. 권한 또는 운동 데이터 문제는 경기 점수 기록 자체의 저장을 방해하지 않습니다.</p>
+</div>
+</div>
+</section>
+<section id="match-history">
+<h2>경기 기록</h2>
+<p class="section-subtitle">
+    간결한 테니스 표기로 완료된 경기와 미완료 경기의 결과를 확인하세요.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>승리와 패배는 무엇을 뜻하나요?</strong>
+<p>승리는 완료된 경기에서 세트 기준으로 이긴 경우이고, 패배는 상대가 세트 기준으로 이긴 경우입니다.</p>
+</div>
+<div class="help-item">
+<strong>중단됨은 무엇을 뜻하나요?</strong>
+<p>중단됨은 경기가 정상적으로 끝나기 전에 저장되었다는 뜻입니다. 앱은 그때까지 수집한 실제 경기 상황을 보존합니다. 중단 시점에 한쪽이 앞선 경기는 경기 전적, 승률 및 연승·연패에 반영되고, 동점으로 중단된 경기는 중립 결과입니다.</p>
+</div>
+<div class="help-item">
+<strong>S1, S2, S3는 무엇인가요?</strong>
+<p>S1, S2, S3는 각각 1세트, 2세트, 3세트를 뜻합니다. 예를 들어 S1 6–3은 첫 세트가 게임 스코어 6–3으로 끝났다는 의미입니다.</p>
+</div>
+<div class="help-item">
+<strong>TB 7–3은 무엇을 뜻하나요?</strong>
+<p>TB는 세트 안에서 기록된 타이브레이크 포인트를 보여 줍니다. 예를 들어 7–6 · TB 7–3은 세트가 7–6으로 끝났고 타이브레이크 점수는 7–3이었다는 뜻입니다.</p>
+</div>
+<div class="help-item">
+<strong>7–6<sup>(6)</sup> 은 무엇을 뜻하나요?</strong>
+<p>괄호 안의 작은 숫자는 표준 간결 테니스 표기에 따른 타이브레이크 패자의 점수입니다. 예를 들어 7–6<sup>(6)</sup> 은 타이브레이크를 8–6으로 이겼다는 뜻입니다. 경기 상세 정보에는 전체 타이브레이크 점수가 명확히 표시됩니다.</p>
+</div>
+<div class="help-item">
+<strong>중단된 경기는 어떻게 판정하나요?</strong>
+<p>앱은 먼저 완료된 세트를 비교하고, 다음으로 저장된 게임, 마지막으로 사용 가능한 타이브레이크 포인트를 비교합니다. 한쪽이 앞서면 경기는 중단됨으로 표시된 채 통계상 승리 또는 패배로 반영됩니다. 여전히 동점이면 중립 결과입니다.</p>
+</div>
+<div class="help-item">
+<strong>끝나지 않은 세트는 어떻게 되나요?</strong>
+<p>경기를 중단할 때 현재 세트가 진행된 상태라면 해당 세트도 경기와 함께 저장됩니다. 따라서 S3 0–1과 같은 실제 경기 상황이 보존됩니다.</p>
+</div>
+<div class="help-item">
+<strong>경기와 함께 어떤 정보가 저장되나요?</strong>
+<p>경기 기록에는 결과, 세트 점수, 타이브레이크 점수, 포인트, 경기 시간, 시작 및 종료 시각, 경기 통계 및 사용 가능한 운동 통계가 포함될 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>저장된 경기를 삭제할 수 있나요?</strong>
+<p>예. 경기 기록에서 삭제 동작을 사용하고 삭제를 확인하세요. 경기를 삭제하면 앱에서 해당 저장 기록 항목이 제거됩니다.</p>
+</div>
+</div>
+</section>
+<section id="complications-help">
+<h2>Apple Watch 페이스 컴플리케이션</h2>
+<p class="section-subtitle">
+    지원되는 시계 페이스에서 Tennis Score Wizard를 바로 열 수 있도록 추가하세요.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Tennis Score Wizard 컴플리케이션은 어떤 기능인가요?</strong>
+<p>컴플리케이션은 빠른 실행 버튼으로 작동합니다. 탭하면 Apple Watch에서 Tennis Score Wizard가 열리므로 시계 페이스에서 앱으로 바로 이동할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>어떤 컴플리케이션 유형을 지원하나요?</strong>
+<p>Tennis Score Wizard는 호환되는 Apple Watch 페이스의 원형 및 모서리 컴플리케이션 위치를 지원합니다.</p>
+</div>
+<div class="help-item">
+<strong>컴플리케이션은 어떻게 추가하나요?</strong>
+<p>Apple Watch 또는 iPhone의 Watch 앱에서 호환되는 시계 페이스를 편집하고 지원되는 컴플리케이션 위치를 선택한 뒤 사용 가능한 컴플리케이션에서 Tennis Score Wizard를 선택하세요.</p>
+</div>
+<div class="help-item">
+<strong>컴플리케이션을 찾을 수 없는 이유는 무엇인가요?</strong>
+<p>앱이 Apple Watch에 설치되어 있고 선택한 시계 페이스 위치가 지원되는 컴플리케이션 유형 중 하나를 사용할 수 있는지 확인하세요. 사용 가능한 위치는 시계 페이스마다 다릅니다.</p>
+</div>
+<div class="help-item">
+<strong>다른 시계 페이스에서 컴플리케이션 모양이 다른 이유는 무엇인가요?</strong>
+<p>Apple Watch가 각 컴플리케이션 위치의 모양과 사용 가능한 공간을 결정합니다. Tennis Score Wizard는 지원되는 원형 또는 모서리 표시 방식에 맞춰 실행 버튼을 조정합니다.</p>
+</div>
+</div>
+</section>
+<section id="troubleshooting">
+<h2>문제 해결</h2>
+<p class="section-subtitle">
+    점수 기록, 운동 정보 또는 시계 페이스 접근이 예상대로 작동하지 않을 때 확인할 항목입니다.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>실시간 심박수가 표시되지 않습니다. 무엇을 확인해야 하나요?</strong>
+<p>운동 기록이 켜져 있고 건강 데이터 접근이 허용되었으며 시계를 손목에 안정적으로 착용했는지 확인하세요. Apple Watch가 사용 가능한 샘플을 제공할 때만 심박수가 표시됩니다.</p>
+</div>
+<div class="help-item">
+<strong>건강 앱에 운동이 보이지 않습니다. 어떻게 해야 하나요?</strong>
+<p>처리할 시간을 준 뒤 건강 권한을 확인하고 해당 경기에서 운동 기록이 켜져 있었는지 확인하세요. 경기를 끝내거나 중단해 운동이 정상적으로 완료되었는지도 확인하세요.</p>
+</div>
+<div class="help-item">
+<strong>평균 심박수, 최대 심박수 또는 활동 에너지가 표시되지 않습니다.</strong>
+<p>건강 앱이 운동 저장을 마칠 시간을 준 뒤 완료된 경기를 다시 여세요. 건강 앱이 충분한 기초 데이터를 제공하지 않았다면 측정값이 계속 표시되지 않을 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>표시된 서버가 실제 경기와 다릅니다.</strong>
+<p>메뉴를 열고 서버 전환을 사용해 앱을 실제 경기와 맞추세요. 점수는 바꾸지 않고 서브하는 쪽만 변경합니다.</p>
+</div>
+<div class="help-item">
+<strong>포인트를 잘못 입력했습니다.</strong>
+<p>실행 취소를 사용해 점수, 서버, 타이브레이크 상태 및 관련 통계를 포함한 마지막 포인트 이전의 정확한 상태를 복원하세요.</p>
+</div>
+<div class="help-item">
+<strong>선택한 시계 페이스에서 컴플리케이션을 사용할 수 없습니다.</strong>
+<p>원형 또는 모서리 컴플리케이션 위치를 사용해 보세요. 모든 시계 페이스의 모든 위치가 같은 컴플리케이션 유형을 지원하는 것은 아닙니다.</p>
+</div>
+<div class="help-item">
+<strong>앱을 재설치해도 경기 기록이 유지되나요?</strong>
+<p>먼저 경기 기록을 열고 iCloud 행에 <b>동기화됨</b>이 표시되는지 확인하세요. 재설치 후 iCloud Drive를 켠 동일한 Apple 계정을 사용하고 복원이 끝날 때까지 기다리세요. iCloud 동기화를 완료하지 못한 경기는 원래 기기에만 남습니다.</p>
+</div>
+<div class="help-item">
+<strong>경기 기록에 iCloud 확인 또는 동기화 일시 중지가 표시됩니다.</strong>
+<p>기기가 Apple 계정에 로그인되어 있고 iCloud Drive가 켜져 있으며 네트워크를 사용할 수 있고 iCloud 저장 공간이 가득 차지 않았는지 확인하세요. 앱을 다시 열고 동기화할 시간을 주세요. iCloud를 사용할 수 없다는 이유만으로 로컬 경기가 삭제되지는 않습니다.</p>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2>지원</h2>
+<div class="support-card">
+<h3>도움이 필요하거나 기능을 제안하고 싶으신가요?</h3>
+<p>
+      문의:
+      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+</p>
+</div>
+</section>
+<footer>
+<div class="footer-meta">
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch는 Apple Inc.의 상표입니다.</span>
+</div>
+<nav aria-label="보조 탐색" class="footer-links">
+<a href="privacy.html">개인정보 처리방침</a>
+</nav>
+</footer>
+</main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
+</body>
+</html>

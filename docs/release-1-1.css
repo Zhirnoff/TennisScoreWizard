@@ -334,7 +334,31 @@
   font-size: 13px;
   font-weight: 850;
   letter-spacing: 0.11em;
-  text-transform: uppercase;
+  text-transform: none;
+}
+
+/* All locales share the same balanced language picker. */
+.language-options {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  width: min(360px, calc(100vw - 24px)) !important;
+  min-width: 0 !important;
+  max-width: calc(100vw - 24px) !important;
+  max-height: min(420px, calc(100vh - 120px)) !important;
+  gap: 4px !important;
+}
+
+.language-options > a {
+  min-width: 0 !important;
+  justify-content: space-between !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.language-options > a:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 2px);
 }
 
 .icloud-kicker::before {
@@ -535,6 +559,52 @@ html,
 body {
   max-width: 100%;
   overflow-x: clip;
+}
+
+/*
+ * The content column has a fixed maximum width, so an extra-wide viewport does
+ * not create extra room inside the header. Keep the desktop typography within
+ * that column and never let translated navigation labels form an accidental
+ * second row.
+ */
+@media (min-width: 1181px) {
+  .nav {
+    grid-template-columns: max-content minmax(0, 1fr) max-content !important;
+    grid-template-areas: "brand links language" !important;
+    column-gap: clamp(14px, 1.5vw, 20px) !important;
+    row-gap: 0 !important;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 12px !important;
+  }
+
+  .app-icon {
+    width: 54px !important;
+    height: 54px !important;
+    border-radius: 15px !important;
+  }
+
+  .brand-title {
+    font-size: clamp(30px, 2.25vw, 34px) !important;
+    letter-spacing: -0.05em !important;
+  }
+
+  .nav-links {
+    justify-content: flex-end !important;
+    flex-wrap: nowrap !important;
+    gap: clamp(8px, 0.9vw, 13px) !important;
+  }
+
+  .nav-links > a {
+    font-size: clamp(12px, 0.9vw, 13px) !important;
+  }
+
+  .language-menu summary {
+    padding-inline: 12px !important;
+    font-size: 13px !important;
+  }
 }
 
 @media (min-width: 981px) and (max-width: 1180px) {
