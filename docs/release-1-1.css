@@ -341,24 +341,20 @@
 .language-options {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  width: min(360px, calc(100vw - 24px)) !important;
+  width: min(316px, calc(100vw - 24px)) !important;
   min-width: 0 !important;
   max-width: calc(100vw - 24px) !important;
   max-height: min(420px, calc(100vh - 120px)) !important;
-  gap: 4px !important;
+  gap: 2px !important;
+  padding: 6px !important;
 }
 
 .language-options > a {
   min-width: 0 !important;
   justify-content: space-between !important;
+  padding: 8px 9px !important;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.language-options > a:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: calc(50% - 2px);
 }
 
 .icloud-kicker::before {
