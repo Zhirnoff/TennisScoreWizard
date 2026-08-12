@@ -2401,13 +2401,17 @@ footer {
 <span class="icloud-kicker">iCloud 경기 동기화</span>
 <h2 id="icloud-title">Apple Watch와 iPhone에서 이어지는 경기 기록</h2>
 <p>
-      Standalone과 Companion은 동일한 Apple 계정을 사용할 때 같은 저장 경기 기록을 iCloud로 동기화할 수 있습니다. Apple Watch에서 점수를 기록하고, iPhone에서 경기를 확인하며, 앱을 다시 설치한 뒤 성공적으로 동기화된 경기를 복원할 수 있습니다.
+      Standalone과 Companion은 동일한 Apple 계정을 사용할 때 같은 저장 경기 기록을 iCloud로 동기화할 수 있습니다. Apple 계정마다 별도의 비공개 경기 기록이 유지됩니다. Apple Watch에서 점수를 기록하고, iPhone에서 경기를 확인하며, 앱을 다시 설치한 뒤 성공적으로 동기화된 경기를 복원할 수 있습니다.
     </p>
 </div>
 <div class="icloud-ecosystem">
 <div class="icloud-endpoint">
+<picture class="icloud-ui-proof icloud-ui-proof-watch">
+<source srcset="../assets/watch_history_synced.webp" type="image/webp"/>
+<img alt="iCloud 동기화가 완료된 Apple Watch 경기 기록 화면" decoding="async" height="496" loading="lazy" src="../assets/watch_history_synced.png" width="416"/>
+</picture>
 <strong>Apple Watch</strong>
-<p>Standalone 또는 Companion으로 경기 점수를 기록하세요.</p>
+<p>Standalone 또는 Companion으로 경기 점수를 기록하고 경기 기록에서 최근 동기화 상태를 확인하세요.</p>
 </div>
 <div class="icloud-hub">
 <div aria-hidden="true" class="icloud-cloud-icon">
@@ -2418,29 +2422,33 @@ footer {
 </div>
 <strong>비공개 iCloud 동기화</strong>
 <p>성공적으로 동기화된 경기 기록은 Tennis Score Wizard 서버가 아니라 Apple 계정의 비공개 CloudKit 데이터베이스에 저장됩니다.</p>
-<div class="icloud-status-sample">✓ <span>동기화됨</span></div>
+<div class="icloud-status-sample">✓ <span>Synced</span></div>
 </div>
 <div class="icloud-endpoint">
+<picture class="icloud-ui-proof icloud-ui-proof-phone">
+<source srcset="../assets/companion_icloud_synced-720.webp" type="image/webp"/>
+<img alt="비공개 저장 방식과 최근 동기화 시간을 보여 주는 Companion의 iCloud 경기 기록 카드" decoding="async" height="650" loading="lazy" src="../assets/companion_icloud_synced.png" width="1224"/>
+</picture>
 <strong>iPhone</strong>
-<p>Companion에서 경기 기록, 통계 및 운동 요약을 확인하세요.</p>
+<p>Companion에서 경기 기록, 통계 및 운동 요약을 살펴보고 비공개 iCloud 동기화 상태를 확인하세요.</p>
 </div>
 </div>
 <div class="icloud-benefits">
 <article class="icloud-benefit">
-<strong>어느 앱이든 사용 가능</strong>
-<p>Standalone과 Companion은 동일한 Apple 계정을 사용하면 같은 저장 경기 기록을 동기화할 수 있습니다.</p>
+<strong>독립적인 두 동기화 경로</strong>
+<p>Companion은 페어링된 기기 사이에서 직접 전송하고, CloudKit은 별도로 안정적인 iCloud 동기화와 복원을 제공합니다. 어느 경로가 먼저 완료되어도 됩니다.</p>
 </article>
 <article class="icloud-benefit">
 <strong>동기화 상태 확인</strong>
-<p>Apple Watch의 경기 기록에는 <b>동기화됨</b>, <b>동기화 중</b>또는 <b>동기화 일시 중지</b>상태가 표시되며, 확인 가능한 경우 최근 동기화 성공 시간도 함께 표시됩니다.</p>
+<p>경기 기록에는 <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> 또는 <b>Sync paused</b> / <b>Retry</b> 상태가 표시됩니다.</p>
 </article>
 <article class="icloud-benefit">
-<strong>동기화된 경기 복원</strong>
-<p>동일한 Apple 계정을 사용하면 앱을 재설치한 뒤 성공적으로 동기화된 경기를 다시 다운로드할 수 있습니다.</p>
+<strong>계정별로 경기 기록 분리</strong>
+<p>Apple 계정을 변경해도 경기 기록이 섞이지 않습니다. 이전 계정에서 아직 동기화되지 않은 경기는 암호화된 로컬 복구 사본에 보관됩니다.</p>
 </article>
 <article class="icloud-benefit">
-<strong>iCloud 없이도 점수 기록</strong>
-<p>iCloud를 사용할 수 없는 동안에도 점수 기록과 로컬 경기 기록은 계속 이용할 수 있습니다. 동기화는 나중에 이어집니다.</p>
+<strong>지금 기록하고 나중에 복원</strong>
+<p>iCloud를 사용할 수 없어도 점수 기록은 계속할 수 있습니다. 성공적으로 동기화된 경기는 동일한 Apple 계정으로 재설치한 뒤 다시 다운로드할 수 있습니다.</p>
 </article>
 </div>
 </section>

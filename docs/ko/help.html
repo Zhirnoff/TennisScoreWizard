@@ -1401,11 +1401,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>경기 기록은 어떻게 동기화되나요?</strong>
-<p>Companion은 먼저 새로 저장된 경기를 페어링된 Apple Watch와 iPhone 사이에서 전송합니다. 또한 저장된 경기를 iCloud로 동기화할 수 있어 동일한 Apple 계정에서 Standalone과 Companion이 같은 기록을 사용할 수 있습니다.</p>
+<p>Companion에는 서로 독립적인 두 가지 동기화 경로가 있습니다. Watch Connectivity는 저장된 경기를 페어링된 Apple Watch와 iPhone 사이에서 직접 전송하며, 두 기기를 사용할 수 있을 때 일반적으로 가장 빠른 로컬 경로입니다. CloudKit은 이와 별도로 동일한 Apple 계정의 Standalone과 Companion에 안정적인 iCloud 동기화와 복원을 제공합니다. 한 경로가 끝날 때까지 다른 경로가 기다릴 필요는 없습니다. 두 경로에서 같은 경기가 전달되면 앱은 최신 기록 하나만 유지합니다.</p>
 </div>
 <div class="help-item">
 <strong>경기가 iPhone에 나타나지 않으면 어떻게 해야 하나요?</strong>
-<p>올바른 Apple Watch가 페어링되어 있는지 확인하고 두 기기를 가까이 둔 뒤 Apple Watch와 iPhone에서 Tennis Score Wizard를 여세요. 경기 기록의 iCloud 상태도 확인하세요. 경기는 로컬에 계속 저장되며 페어링된 기기 연결 또는 iCloud를 사용할 수 있게 되면 동기화할 수 있습니다.</p>
+<p>올바른 Apple Watch가 페어링되어 있는지 확인하고 두 기기를 가까이 둔 뒤 Apple Watch와 iPhone에서 Tennis Score Wizard를 여세요. 두 기기에서 사용하려는 Apple 계정에 로그인되어 있는지 확인하고 경기 기록의 iCloud 상태도 확인하세요. 저장된 경기는 대기 중에도 로컬에서 보호되며 페어링된 기기 연결 또는 iCloud를 사용할 수 있게 되면 동기화할 수 있습니다.</p>
 </div>
 <div class="help-item">
 <strong>운동 세부 정보도 동기화되나요?</strong>
@@ -1433,11 +1433,15 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>동기화가 끝났는지 어떻게 알 수 있나요?</strong>
-<p>경기 기록을 열고 iCloud 상태 행을 확인하세요. <b>동기화됨</b>은 최근 동기화가 성공적으로 끝났다는 뜻이며 날짜와 시간이 함께 표시됩니다. <b>동기화 중</b>은 동기화가 진행 중이라는 뜻입니다. <b>동기화 일시 중지</b>는 최근 동기화를 완료하지 못했다는 뜻입니다. 아직 성공한 동기화가 없다면 세부 정보에는 <b>iCloud 확인</b> 상태가 표시됩니다.</p>
+<p>경기 기록을 열고 iCloud 상태 행을 확인하세요. <b>Synced</b>는 최근 동기화가 성공했으며 날짜와 시간이 표시된다는 뜻입니다. <b>Syncing</b>은 동기화가 진행 중인 상태입니다. <b>Waiting</b>과 <b>Saving</b>은 로컬 변경 내용이 안전하게 iCloud 전송 대기열에 들어갔다는 뜻입니다. <b>Sync paused</b>와 <b>Retry</b>는 최근 시도를 완료하지 못한 상태이며, 해당 행을 탭하면 다시 시도할 수 있습니다.</p>
+</div>
+<div class="help-item">
+<strong>Apple 계정을 변경하면 어떻게 되나요?</strong>
+<p>Apple 계정마다 별도의 비공개 CloudKit 경기 기록이 유지됩니다. 서로 다른 계정의 기록은 분리되며 하나로 합쳐지지 않습니다. 앱이 계정 변경을 감지하면 현재 Apple 계정의 로컬 및 iCloud 경기 기록을 표시합니다. 이전 계정으로 돌아가면 동기화 후 해당 계정의 기록이 다시 표시됩니다. 기기에서 이전 계정의 로컬 캐시를 제거하기 전에 아직 동기화를 기다리는 경기는 그 계정에 연결된 암호화된 복구 사본에 보관됩니다. 해당 경기는 새 계정에 업로드되지 않으며, 계정을 변경해도 어느 계정의 iCloud 데이터베이스에 이미 저장된 기록도 삭제되지 않습니다.</p>
 </div>
 <div class="help-item">
 <strong>앱을 재설치하면 경기가 복원되나요?</strong>
-<p>예. 앱을 제거하기 전에 경기가 성공적으로 동기화되었다면 복원됩니다. 경기 기록에 <b>동기화됨</b>이 먼저 표시되는지 확인하세요. 재설치 후 동일한 Apple 계정을 사용하고 iCloud Drive를 켠 상태로 앱을 연 뒤 경기가 다운로드될 때까지 기다리세요.</p>
+<p>예. 앱을 제거하기 전에 경기가 성공적으로 동기화되었다면 복원됩니다. 경기 기록에 <b>Synced</b>가 먼저 표시되는지 확인하세요. 재설치 후 동일한 Apple 계정을 사용하고 iCloud Drive를 켠 상태로 앱을 연 뒤 경기가 다운로드될 때까지 기다리세요.</p>
 </div>
 <div class="help-item">
 <strong>앱을 삭제하면 iCloud 경기 기록도 삭제되나요?</strong>
@@ -1593,11 +1597,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>앱을 재설치해도 경기 기록이 유지되나요?</strong>
-<p>먼저 경기 기록을 열고 iCloud 행에 <b>동기화됨</b>이 표시되는지 확인하세요. 재설치 후 iCloud Drive를 켠 동일한 Apple 계정을 사용하고 복원이 끝날 때까지 기다리세요. iCloud 동기화를 완료하지 못한 경기는 원래 기기에만 남습니다.</p>
+<p>먼저 경기 기록을 열고 iCloud 행에 <b>Synced</b>가 표시되는지 확인하세요. 재설치 후 iCloud Drive를 켠 동일한 Apple 계정을 사용하고 복원이 끝날 때까지 기다리세요. iCloud 동기화를 완료하지 못한 경기는 원래 기기에만 남습니다.</p>
 </div>
 <div class="help-item">
-<strong>경기 기록에 iCloud 확인 또는 동기화 일시 중지가 표시됩니다.</strong>
-<p>기기가 Apple 계정에 로그인되어 있고 iCloud Drive가 켜져 있으며 네트워크를 사용할 수 있고 iCloud 저장 공간이 가득 차지 않았는지 확인하세요. 앱을 다시 열고 동기화할 시간을 주세요. iCloud를 사용할 수 없다는 이유만으로 로컬 경기가 삭제되지는 않습니다.</p>
+<strong>경기 기록에 Waiting, Saving 또는 Sync paused와 Retry가 표시됩니다.</strong>
+<p><b>Waiting</b>과 <b>Saving</b>은 로컬 변경 내용이 대기 중이며 iCloud를 사용할 수 있게 되면 업로드할 수 있다는 뜻입니다. <b>Sync paused</b>와 <b>Retry</b>가 표시되면 기기가 사용하려는 Apple 계정에 로그인되어 있고 iCloud Drive가 켜져 있으며 네트워크를 사용할 수 있고 iCloud 저장 공간이 가득 차지 않았는지 확인한 뒤 상태 행을 탭하세요. iCloud를 사용할 수 없다는 이유만으로 로컬 경기가 삭제되지는 않습니다.</p>
 </div>
 </div>
 </section>

@@ -715,13 +715,16 @@
 <section class="privacy-section">
 <h2>로컬 경기 기록 및 페어링된 기기 간 동기화</h2>
 <p>
-            경기 기록은 Apple Watch에 로컬로 저장되며 Tennis Score Wizard Companion을 사용하는 경우 페어링된 iPhone에도 저장됩니다. 포인트, 서브, 리턴, 브레이크 포인트, 경기 흐름, 타이브레이크 및 사용 가능한 운동 요약값을 포함한 자동 경기 통계가 저장된 경기의 일부로 보관됩니다. Companion은 Apple의 Watch Connectivity 프레임워크를 사용해 페어링된 Apple Watch와 iPhone 사이에서 경기 데이터를 직접 전송할 수도 있습니다.
+            경기 기록은 Apple Watch에 로컬로 저장되며 Tennis Score Wizard Companion을 사용하는 경우 페어링된 iPhone에도 저장됩니다. 포인트, 서브, 리턴, 브레이크 포인트, 경기 흐름, 타이브레이크 및 사용 가능한 운동 요약값을 포함한 자동 경기 통계가 저장된 경기의 일부로 보관됩니다. Companion은 Apple의 Watch Connectivity 프레임워크를 사용해 페어링된 Apple Watch와 iPhone 사이에서 경기 데이터를 직접 전송할 수도 있습니다. 이 페어링된 기기 간 전송과 CloudKit 동기화는 서로 독립적이며 어느 쪽이 먼저 완료될 수도 있습니다.
           </p>
 </section>
 <section class="privacy-section">
 <h2>비공개 iCloud 동기화</h2>
 <p>
-            기기가 Apple 계정에 로그인되어 있고 iCloud Drive가 켜져 있으면 앱은 Apple CloudKit을 통해 저장된 경기 기록을 동기화할 수 있습니다. 기록은 해당 Apple 계정의 비공개 데이터베이스에 저장되며 사용자의 iCloud 저장 공간을 사용합니다. 기본적으로 해당 사용자만 비공개 데이터베이스에 접근할 수 있고 개발자는 기록을 볼 수 없습니다. Standalone과 Companion은 같은 CloudKit 컨테이너를 사용하므로 동일한 Apple 계정을 사용하는 Apple Watch와 iPhone의 두 앱 사이에서 저장된 경기를 동기화할 수 있습니다.
+            기기가 Apple 계정에 로그인되어 있고 iCloud Drive가 켜져 있으면 앱은 Apple CloudKit을 통해 저장된 경기 기록을 동기화할 수 있습니다. 기록은 해당 Apple 계정의 비공개 데이터베이스에 저장되며 사용자의 iCloud 저장 공간을 사용합니다. 기본적으로 해당 사용자만 비공개 데이터베이스에 접근할 수 있고 개발자는 기록을 볼 수 없습니다. Standalone과 Companion은 같은 CloudKit 컨테이너를 사용하므로 동일한 Apple 계정을 사용하는 Apple Watch와 iPhone의 두 앱 사이에서 저장된 경기를 동기화할 수 있습니다. Apple 계정마다 별도의 비공개 경기 기록이 유지되며, 계정을 변경해도 기록이 서로 합쳐지거나 다른 계정으로 전송되지 않습니다.
+          </p>
+<p>
+            앱이 Apple 계정 변경을 감지하면 현재 계정의 로컬 캐시로 전환합니다. 기기에서 이전 계정의 로컬 캐시를 제거하기 전에 아직 동기화를 기다리는 기록은 이전 계정에 연결된 암호화된 로컬 복구 사본에 보관됩니다. 해당 기록은 새 계정에 업로드되지 않습니다. 계정을 변경해도 어느 계정의 비공개 CloudKit 데이터베이스에 이미 저장된 기록도 삭제되지 않습니다.
           </p>
 <p class="privacy-source-note">
             Apple은 iCloud 서비스를 다음 정책과 약관에 따라 제공합니다: <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">Apple 개인정보 처리방침</a> 및 해당 <a href="https://www.apple.com/legal/internet-services/icloud/" rel="noopener noreferrer" target="_blank">iCloud 이용 약관</a>.

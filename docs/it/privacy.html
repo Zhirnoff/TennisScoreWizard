@@ -715,13 +715,16 @@
 <section class="privacy-section">
 <h2>Cronologia locale e sincronizzazione dei dispositivi abbinati</h2>
 <p>
-            La cronologia viene archiviata localmente su Apple Watch e, quando usi Tennis Score Wizard Companion, sull’iPhone abbinato. Le statistiche automatiche, inclusi punti, servizio, risposta, palle break, andamento della partita, tie-break e i dati disponibili dell’allenamento, vengono salvate con la partita. Companion può anche trasferire direttamente i dati tra Apple Watch e iPhone abbinati tramite il framework Watch Connectivity di Apple.
+            La cronologia viene archiviata localmente su Apple Watch e, quando usi Tennis Score Wizard Companion, sull’iPhone abbinato. Le statistiche automatiche, inclusi punti, servizio, risposta, palle break, andamento della partita, tie-break e i dati disponibili dell’allenamento, vengono salvate con la partita. Companion può anche trasferire direttamente i dati tra Apple Watch e iPhone abbinati tramite il framework Watch Connectivity di Apple. Questo trasferimento tra dispositivi abbinati e la sincronizzazione tramite CloudKit sono percorsi indipendenti e possono completarsi in qualsiasi ordine.
           </p>
 </section>
 <section class="privacy-section">
 <h2>Sincronizzazione privata con iCloud</h2>
 <p>
-            Quando un dispositivo ha effettuato l’accesso a un Apple Account e iCloud Drive è attivo, le app possono sincronizzare le partite salvate tramite Apple CloudKit. I record vengono conservati nel database privato di quell’Apple Account e occupano spazio di archiviazione su iCloud. Per impostazione predefinita, solo il titolare dell’Apple Account può accedere al database privato; lo sviluppatore non può visualizzarne i record. Standalone e Companion usano lo stesso container CloudKit, quindi le partite salvate possono sincronizzarsi tra le due app su Apple Watch e iPhone quando usano lo stesso Apple Account.
+            Quando un dispositivo ha effettuato l’accesso a un Apple Account e iCloud Drive è attivo, le app possono sincronizzare le partite salvate tramite Apple CloudKit. I record vengono conservati nel database privato di quell’Apple Account e occupano spazio di archiviazione su iCloud. Per impostazione predefinita, solo il titolare dell’Apple Account può accedere al database privato; lo sviluppatore non può visualizzarne i record. Standalone e Companion usano lo stesso container CloudKit, quindi le partite salvate possono sincronizzarsi tra le due app su Apple Watch e iPhone quando usano lo stesso Apple Account. Ogni Apple Account ha una cronologia privata separata; cambiando account, i record non vengono uniti né trasferiti da un account all’altro.
+          </p>
+<p>
+            Quando le app rilevano un cambio di Apple Account, passano la cache locale visibile all’account attuale. Prima di rimuovere da quel dispositivo la cache locale dell’account precedente, i record ancora in attesa di sincronizzazione vengono conservati in una copia locale di ripristino crittografata e associata all’account precedente. Questi record non vengono caricati sul nuovo account. Cambiare account non elimina i record già archiviati nel database CloudKit privato di nessuno dei due account.
           </p>
 <p class="privacy-source-note">
             Apple fornisce i servizi iCloud secondo l’ <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">Informativa sulla privacy di Apple</a> e i <a href="https://www.apple.com/legal/internet-services/icloud/" rel="noopener noreferrer" target="_blank">Termini e condizioni di iCloud applicabili</a>.

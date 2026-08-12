@@ -1401,11 +1401,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Come si sincronizza la cronologia delle partite?</strong>
-<p>Companion trasferisce innanzitutto le nuove partite salvate tra Apple Watch e iPhone abbinati. Può anche sincronizzarle tramite iCloud, consentendo a Standalone e Companion di usare la stessa cronologia con lo stesso Apple Account.</p>
+<p>Companion dispone di due percorsi di sincronizzazione indipendenti. Watch Connectivity può inviare una partita salvata direttamente tra Apple Watch e iPhone abbinati: di solito è il percorso locale più rapido quando entrambi i dispositivi sono disponibili. CloudKit assicura separatamente una sincronizzazione iCloud duratura e il ripristino tra Standalone e Companion con lo stesso Apple Account. Nessun percorso deve completarsi prima dell’altro; se entrambi consegnano la stessa partita, le app mantengono un unico record aggiornato.</p>
 </div>
 <div class="help-item">
 <strong>Cosa devo fare se una partita non compare su iPhone?</strong>
-<p>Verifica che sia abbinato l’Apple Watch corretto, tieni i due dispositivi vicini e apri Tennis Score Wizard su Apple Watch e iPhone. Controlla anche lo stato di iCloud nella Cronologia. La partita resta archiviata localmente e può sincronizzarsi quando torna disponibile la connessione tra i dispositivi abbinati o iCloud.</p>
+<p>Verifica che sia abbinato l’Apple Watch corretto, tieni i due dispositivi vicini e apri Tennis Score Wizard su Apple Watch e iPhone. Assicurati inoltre che entrambi i dispositivi usino l’Apple Account desiderato e controlla lo stato di iCloud nella Cronologia. Durante l’attesa, la partita salvata resta protetta localmente e può sincronizzarsi quando torna disponibile la connessione tra i dispositivi abbinati o iCloud.</p>
 </div>
 <div class="help-item">
 <strong>Vengono sincronizzati anche i dettagli degli allenamenti?</strong>
@@ -1433,7 +1433,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Come faccio a sapere se la sincronizzazione è terminata?</strong>
-<p>Apri Cronologia e controlla la riga di stato di iCloud. <b>Sincronizzato</b> indica che l’ultima sincronizzazione è terminata correttamente; la riga ne mostra data e ora. <b>Sincronizzazione in corso</b> indica che è in corso una sincronizzazione. <b>Sincronizzazione in pausa</b> indica che l’ultima sincronizzazione non è stata completata. Se nessuna sincronizzazione è ancora riuscita, la riga mostra <b>Controlla iCloud</b> al suo posto.</p>
+<p>Apri Cronologia e controlla la riga di stato di iCloud. <b>Sincronizzato</b> indica che l’ultima sincronizzazione è terminata correttamente e ne mostra data e ora. <b>Sincronizzazione in corso</b> indica che la sincronizzazione è attiva. <b>In attesa</b> con <b>Salvataggio</b> indica che una modifica locale è al sicuro nella coda di iCloud. <b>Sincronizzazione in pausa</b> con <b>Riprova</b> indica che l’ultimo tentativo non è stato completato; tocca la riga per riprovare.</p>
+</div>
+<div class="help-item">
+<strong>Cosa succede se cambio Apple Account?</strong>
+<p>Ogni Apple Account ha una propria cronologia privata delle partite in CloudKit. Le cronologie di account diversi restano separate e non vengono unite. Quando l’app rileva un cambio, mostra la cronologia locale e iCloud dell’Apple Account attuale; tornando all’account precedente, la relativa cronologia ricompare dopo la sincronizzazione. Prima di rimuovere da quel dispositivo la cache locale dell’account precedente, le partite ancora in attesa di sincronizzazione vengono conservate in una copia di ripristino crittografata e associata a quell’account. Non vengono caricate sul nuovo account e cambiare account non elimina i record già archiviati nel database iCloud di nessuno dei due account.</p>
 </div>
 <div class="help-item">
 <strong>La reinstallazione dell’app ripristinerà le mie partite?</strong>
@@ -1596,8 +1600,8 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <p>Prima apri Cronologia e verifica che la riga di iCloud mostri <b>Sincronizzato</b>. Dopo la reinstallazione, usa lo stesso Apple Account con iCloud Drive attivo e attendi il completamento del ripristino. Le partite che non hanno mai completato una sincronizzazione con iCloud restano solo sul dispositivo originale.</p>
 </div>
 <div class="help-item">
-<strong>La Cronologia mostra Controlla iCloud o Sincronizzazione in pausa.</strong>
-<p>Verifica che il dispositivo abbia effettuato l’accesso a un Apple Account, che iCloud Drive sia attivo, che la rete sia disponibile e che lo spazio di archiviazione su iCloud non sia esaurito. Riapri l’app e attendi la sincronizzazione. Le partite locali non vengono rimosse solo perché iCloud non è disponibile.</p>
+<strong>La Cronologia mostra In attesa, Salvataggio o Sincronizzazione in pausa con Riprova.</strong>
+<p><b>In attesa</b> con <b>Salvataggio</b> indica che una modifica locale è in coda e potrà essere caricata quando iCloud sarà disponibile. Se compare <b>Sincronizzazione in pausa</b> con <b>Riprova</b>, verifica che il dispositivo abbia effettuato l’accesso all’Apple Account desiderato, che iCloud Drive sia attivo, che la rete sia disponibile e che lo spazio di archiviazione su iCloud non sia esaurito, quindi tocca la riga di stato. Le partite locali non vengono rimosse solo perché iCloud non è disponibile.</p>
 </div>
 </div>
 </section>
