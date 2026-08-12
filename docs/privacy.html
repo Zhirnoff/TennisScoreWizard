@@ -720,14 +720,17 @@
         <section class="privacy-section">
           <h2>Local Match History and Paired-Device Sync</h2>
           <p>
-            Match history is stored locally on your Apple Watch and, when using Tennis Score Wizard Companion, on your paired iPhone. Automatic match stats, including points, serve, return, break points, match flow, tie-break, and available workout summary values, are stored as part of a saved match. Companion may also transfer match data directly between your paired Apple Watch and iPhone using Apple’s Watch Connectivity framework.
+            Match history is stored locally on your Apple Watch and, when using Tennis Score Wizard Companion, on your paired iPhone. Automatic match stats, including points, serve, return, break points, match flow, tie-break, and available workout summary values, are stored as part of a saved match. Companion may also transfer match data directly between your paired Apple Watch and iPhone using Apple’s Watch Connectivity framework. This paired-device transfer and CloudKit synchronization are independent paths and may complete in either order.
           </p>
         </section>
 
         <section class="privacy-section">
           <h2>Private iCloud Synchronization</h2>
           <p>
-            When a device is signed in to an Apple Account and iCloud Drive is enabled, the apps can synchronize saved match records through Apple CloudKit. Records are stored in the private database for that Apple Account and count toward the user’s iCloud storage. By default, only that user can access the private database; the developer cannot view its records. Standalone and Companion use the same CloudKit container, allowing saved matches to synchronize between the two apps on Apple Watch and iPhone when they use the same Apple Account.
+            When a device is signed in to an Apple Account and iCloud Drive is enabled, the apps can synchronize saved match records through Apple CloudKit. Records are stored in the private database for that Apple Account and count toward the user’s iCloud storage. By default, only that user can access the private database; the developer cannot view its records. Standalone and Companion use the same CloudKit container, allowing saved matches to synchronize between the two apps on Apple Watch and iPhone when they use the same Apple Account. Each Apple Account has a separate private history; changing accounts does not merge or transfer records between them.
+          </p>
+          <p>
+            When the apps detect an Apple Account change, they switch the visible local cache to the current account. Before removing the previous account’s local cache from that device, records still waiting to synchronize are retained in an encrypted local recovery copy tied to the previous account. Those records are not uploaded to the new account. Changing accounts does not delete records already stored in either account’s private CloudKit database.
           </p>
           <p class="privacy-source-note">
             Apple provides iCloud services under the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a> and applicable <a href="https://www.apple.com/legal/internet-services/icloud/" target="_blank" rel="noopener noreferrer">iCloud Terms of Service</a>.

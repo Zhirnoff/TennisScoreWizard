@@ -1411,11 +1411,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>How does match history synchronize?</strong>
-<p>Companion first transfers newly saved matches between the paired Apple Watch and iPhone. It can also synchronize saved matches through iCloud, allowing Standalone and Companion to use the same history under the same Apple Account.</p>
+<p>Companion has two independent synchronization paths. Watch Connectivity can send a saved match directly between the paired Apple Watch and iPhone, which is usually the fastest local path when both devices are available. CloudKit separately provides durable iCloud synchronization and restore across Standalone and Companion under the same Apple Account. Neither path has to finish before the other; if both deliver the same match, the apps keep one up-to-date record.</p>
 </div>
 <div class="help-item">
 <strong>What should I do if a match has not appeared on iPhone?</strong>
-<p>Confirm that the correct Apple Watch is paired, keep both devices nearby, and open Tennis Score Wizard on Apple Watch and iPhone. Also check the iCloud status in History. The match remains stored locally and can synchronize when either the paired-device connection or iCloud becomes available.</p>
+<p>Confirm that the correct Apple Watch is paired, keep both devices nearby, and open Tennis Score Wizard on Apple Watch and iPhone. Also confirm that both devices use the intended Apple Account and check the iCloud status in History. A saved match remains protected locally while it is waiting and can synchronize when either the paired-device connection or iCloud becomes available.</p>
 </div>
 <div class="help-item">
 <strong>Are workout details synchronized too?</strong>
@@ -1444,7 +1444,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>How do I know synchronization finished?</strong>
-<p>Open History and check the iCloud status row. <b>Synced</b> means the latest sync finished successfully; the row shows its date and time. <b>Syncing</b> means a sync is in progress. <b>Sync paused</b> means the latest sync could not finish. If no sync has succeeded yet, the row shows <b>Check iCloud</b> instead.</p>
+<p>Open History and check the iCloud status row. <b>Synced</b> means the latest sync finished successfully and shows its date and time. <b>Syncing</b> means synchronization is active. <b>Waiting</b> with <b>Saving</b> means a local change is safely queued for iCloud. <b>Sync paused</b> with <b>Retry</b> means the latest attempt could not finish; tap the row to try again.</p>
+</div>
+<div class="help-item">
+<strong>What happens if I change my Apple Account?</strong>
+<p>Each Apple Account has its own private CloudKit match history. Histories from different accounts are kept separate and are not merged. When the app detects a change, it shows the local and iCloud history for the current Apple Account; switching back restores the previous account’s view after synchronization. Before the previous account’s local cache is removed from that device, matches still waiting to sync are preserved in an encrypted recovery copy tied to that account. They are not uploaded to the new account, and changing accounts does not delete records already stored in either account’s iCloud database.</p>
 </div>
 <div class="help-item">
 <strong>Will reinstalling the app restore my matches?</strong>
@@ -1611,8 +1615,8 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <p>First open History and confirm that the iCloud row shows <b>Synced</b>. After reinstalling, use the same Apple Account with iCloud Drive enabled and allow time for restoration. Matches that never completed an iCloud sync remain only on the original device.</p>
 </div>
 <div class="help-item">
-<strong>History shows Check iCloud or Sync paused.</strong>
-<p>Confirm that the device is signed in to an Apple Account, iCloud Drive is enabled, the network is available, and iCloud storage is not full. Reopen the app and allow time for synchronization. Local matches are not removed merely because iCloud is unavailable.</p>
+<strong>History shows Waiting, Saving, or Sync paused with Retry.</strong>
+<p><b>Waiting</b> with <b>Saving</b> means a local change is queued and can upload when iCloud becomes available. For <b>Sync paused</b> with <b>Retry</b>, confirm that the device is signed in to the intended Apple Account, iCloud Drive is enabled, the network is available, and iCloud storage is not full, then tap the status row. Local matches are not removed merely because iCloud is unavailable.</p>
 </div>
 </div>
 </section>
