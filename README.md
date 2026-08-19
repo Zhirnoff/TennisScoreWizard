@@ -5,6 +5,8 @@ This repository contains the public website, Help Center, Privacy Policy, releas
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
 - **Companion** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
 
+The website reflects the public Companion 1.2 and Standalone 1.5 releases, including private iCloud synchronization, localized Help and Privacy pages, and current release notes.
+
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
 ## Repository structure
@@ -16,9 +18,9 @@ The GitHub Pages site is stored in `docs/`:
 - `docs/privacy.html` — Privacy Policy
 - `docs/whats-new.html` — Standalone and Companion release history
 - `docs/assets/` — app icons, Apple Watch screenshots, Companion screenshots, and optimized image variants
-- `docs/de`, `docs/es`, `docs/fr`, `docs/ja`, `docs/ru`, `docs/tr`, `docs/zh-Hans` — localized pages
+- `docs/de`, `docs/es`, `docs/fr`, `docs/it`, `docs/ja`, `docs/ko`, `docs/ru`, `docs/tr`, `docs/zh-Hans` — localized pages
 
-The site currently supports English, German, Spanish, French, Japanese, Russian, Turkish, and Simplified Chinese.
+The site currently supports English, German, Spanish, French, Italian, Japanese, Korean, Russian, Turkish, and Simplified Chinese.
 
 ## Local preview
 
@@ -53,4 +55,4 @@ For questions, bug reports, or feedback, open a GitHub issue or email tennisscor
 
 When reporting an app issue, include the device model, operating-system version, app version, steps to reproduce, expected result, and actual result.
 
-Tennis Score Wizard does not require an account and does not send match history to developer-operated servers. Companion transfers match data directly between the paired Apple Watch and iPhone.
+Tennis Score Wizard does not require a Tennis Score Wizard account and does not send match history to a developer-operated server. Companion can transfer match data directly between a paired Apple Watch and iPhone. Companion 1.2 and Standalone 1.5 can also synchronize saved matches through the private CloudKit database associated with the user’s Apple Account.

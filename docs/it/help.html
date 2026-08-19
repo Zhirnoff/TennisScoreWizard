@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
+<title>Centro assistenza — Tennis Score Wizard</title>
+<meta content="Guida a Tennis Score Wizard Standalone e Companion: punteggio su Apple Watch, sincronizzazione con iCloud e tra Apple Watch e iPhone, statistiche, allenamenti nell’app Salute e risoluzione dei problemi." name="description"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/it/help.html" rel="canonical"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="en" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html" hreflang="de" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/es/help.html" hreflang="es" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/fr/help.html" hreflang="fr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ja/help.html" hreflang="ja" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ko/help.html" hreflang="ko" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ru/help.html" hreflang="ru" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/tr/help.html" hreflang="tr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/help.html" hreflang="zh-Hans" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/it/help.html" hreflang="it" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Tennis Score Wizard" property="og:site_name"/>
+<meta content="Centro assistenza — Tennis Score Wizard" property="og:title"/>
+<meta content="Guida al punteggio su Apple Watch, alla sincronizzazione con iCloud e tra Apple Watch e iPhone, alle statistiche, agli allenamenti nell’app Salute e alla risoluzione dei problemi." property="og:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/it/help.html" property="og:url"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
+<meta content="Icona dell’app Tennis Score Wizard" property="og:image:alt"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Centro assistenza — Tennis Score Wizard" name="twitter:title"/>
+<meta content="Guida al punteggio su Apple Watch, alla sincronizzazione con iCloud e tra Apple Watch e iPhone, alle statistiche, agli allenamenti nell’app Salute e alla risoluzione dei problemi." name="twitter:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --panel-2: #111511;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-2: #00d84a;
+      --green-soft: rgba(40,255,95,0.10);
+      --yellow: #ffe34d;
+      --red: #ff4b55;
+    }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 16px;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    rgba(5,7,5,0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: 21px;
+}
+.app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14),
+    0 0 32px rgba(40,255,95,0.20),
+    0 14px 34px rgba(0,0,0,0.52);
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 0 28px rgba(40,255,95,0.10);
+}
+.eyebrow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(40,255,95,0.75);
+}
+h1 {
+  margin: 0;
+  max-width: 740px;
+  font-size: clamp(46px, 7.4vw, 88px);
+  line-height: 0.91;
+  letter-spacing: -0.078em;
+}
+.hero-copy p {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  color: #e9e9ed;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 780;
+}
+.hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  box-shadow:
+    0 42px 130px rgba(0,0,0,0.72),
+    0 0 90px rgba(40,255,95,0.16);
+}
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
+}
+section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px;
+}
+.section-subtitle {
+  max-width: 760px;
+  margin: -6px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 158px;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.card p,
+.faq p,
+.help-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.screenshot-card {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(40,255,95,0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 30px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.26);
+}
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(255,255,255,0.11);
+}
+.screenshot-card h3 {
+  margin: 17px 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.help-item,
+.faq {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.028);
+  border-radius: 23px;
+  padding: 18px;
+}
+.help-item strong,
+.faq strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacy-box {
+  border: 1px solid rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at top left, rgba(40,255,95,0.16), transparent 22rem),
+    rgba(40,255,95,0.06);
+  border-radius: 25px;
+  padding: 22px;
+  color: #eaffdf;
+  box-shadow: 0 0 46px rgba(40,255,95,0.08);
+}
+.privacy-box p {
+  color: #d8f7d0;
+  margin: 8px 0 0;
+}
+.support-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 22px;
+  min-height: 142px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+}
+footer {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .hero-copy p {
+    font-size: 18px;
+  }
+  .hero-visual {
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
+  }
+  .hero-ball {
+    border-radius: 66px;
+  }
+  .grid,
+  .help,
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Language selector */
+.nav {
+  overflow: visible;
+}
+
+.nav-links {
+  align-items: center;
+  overflow: visible;
+}
+
+.language-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  cursor: pointer;
+  color: #f5f7f5;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.045);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.language-menu summary::marker {
+  content: "";
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+.language-menu[open] summary {
+  border-color: var(--line-green);
+  background:
+    linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+    rgba(255,255,255,0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 0 24px rgba(40,255,95,0.13);
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: 210px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+    rgba(7,9,7,0.98);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,24,20,0.98);
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: #f2f4f2;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.language-options a:hover {
+  background: rgba(40,255,95,0.10);
+  text-decoration: none;
+}
+
+.language-options a.active {
+  color: var(--green);
+  background: rgba(40,255,95,0.11);
+}
+
+.language-options a.active::after {
+  content: "✓";
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
+/* Keep language dropdown above hero content */
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.language-menu {
+  z-index: 1100;
+}
+
+.language-options {
+  z-index: 1200;
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .language-menu {
+    position: relative;
+  }
+
+  .language-options {
+    left: 0;
+    right: auto;
+    width: min(210px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+  }
+
+  .language-options::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+/* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+/* Clickable brand and Help badge */
+.brand-home-link,
+.help-badge-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  min-width: 0;
+}
+
+.brand-home-link:hover,
+.brand-home-link:focus-visible,
+.help-badge-home-link:hover,
+.help-badge-home-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link:focus-visible,
+.help-badge-home-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.help-home-badge {
+  cursor: pointer;
+}
+
+/* CJK headings need a slightly clearer gap below the badge. */
+html[lang="ja"] .hero .help-home-badge,
+html[lang="zh-Hans"] .hero .help-home-badge {
+  margin-bottom: 22px;
+}
+
+
+/* Unified global product navigation */
+.nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "brand links language";
+  align-items: center;
+  column-gap: 26px;
+  min-height: 92px;
+  padding: 14px 16px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-links > a[aria-current="page"] {
+  color: var(--green);
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+.footer-meta,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    column-gap: 14px;
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: grid;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    font-size: 12px;
+  }
+
+  .nav-links > a[aria-current="page"] {
+    border-color: var(--line-green);
+    background: var(--green-soft);
+  }
+
+  .language-options {
+    right: 0;
+    left: auto;
+  }
+
+  .language-options::before {
+    right: 22px;
+    left: auto;
+  }
+
+  footer,
+  .footer-meta,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Shared animated brand treatment */
+.brand-title {
+  display: inline-block;
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-home-link {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .hero-copy,
+  .hero-copy > *,
+  .help,
+  .help-item,
+  .faq {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1,
+  section > h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero-copy p,
+  .help-item,
+  .faq {
+    overflow-wrap: break-word;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+</style>
+<link href="../release-1-1.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="page">
+<nav aria-label="Navigazione principale" class="nav">
+<div class="brand">
+<a aria-label="Tennis Score Wizard — Pagina iniziale" class="brand-home-link" href="index.html">
+<img alt="Icona dell’app Tennis Score Wizard" class="app-icon" decoding="async" height="1024" sizes="62px" src="../assets/tennis_ball_app_icon_1024-128.webp" srcset="../assets/tennis_ball_app_icon_1024-128.webp 128w, ../assets/tennis_ball_app_icon_1024-256.webp 256w" width="1024"/>
+<span class="brand-title">Tennis Score Wizard</span>
+</a>
+</div>
+<div class="nav-links">
+<a href="index.html#versions">Versioni</a>
+<a href="index.html#comparison">Confronta</a>
+<a href="index.html#stats-guide">Guida alle statistiche</a>
+<a href="whats-new.html">Aggiornamenti</a>
+<a aria-current="page" href="help.html">Aiuto</a>
+<a href="index.html#contact">Contatti</a>
+</div>
+<details class="language-menu">
+<summary>🇮🇹 Italiano</summary>
+<div class="language-options">
+<a href="../help.html">🇺🇸 English</a>
+<a href="../ja/help.html">🇯🇵 日本語</a>
+<a href="../de/help.html">🇩🇪 Deutsch</a>
+<a href="../fr/help.html">🇫🇷 Français</a>
+<a href="../ru/help.html">🇷🇺 Русский</a>
+<a href="../tr/help.html">🇹🇷 Türkçe</a>
+<a href="../es/help.html">🇪🇸 Español</a>
+<a href="../zh-Hans/help.html">🇨🇳 简体中文</a>
+<a href="../ko/help.html">🇰🇷 한국어</a>
+<a class="active" href="help.html">🇮🇹 Italiano</a>
+</div>
+</details>
+</nav>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Pagina iniziale" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
+<h1>Centro assistenza</h1>
+<p>
+      Scopri come configurare e segnare le partite, sincronizzare le partite salvate tramite iCloud, collegare Companion a iPhone, comprendere le statistiche, registrare gli allenamenti nell’app Salute, usare le complicazioni dei quadranti e risolvere i problemi più comuni.
+    </p>
+</div>
+</section>
+<section id="getting-started">
+<h2>Per iniziare</h2>
+<p class="section-subtitle">
+    Tutto ciò che serve per preparare Tennis Score Wizard e iniziare a segnare la tua prima partita.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Cosa serve per usare Tennis Score Wizard?</strong>
+<p>Serve un Apple Watch compatibile con Tennis Score Wizard installato. L’accesso ai dati di Salute è facoltativo ed è necessario solo per registrare la partita come allenamento e raccogliere i dati disponibili.</p>
+</div>
+<div class="help-item">
+<strong>Come si avvia la prima partita?</strong>
+<p>Apri l’app, scegli Singolare o Doppio, seleziona la durata della partita e la regola del set, scegli chi serve per primo, attiva facoltativamente Registra allenamento e avvia la partita.</p>
+</div>
+<div class="help-item">
+<strong>L’app ricorda la configurazione?</strong>
+<p>L’app ricorda la configurazione della partita precedente, così la volta successiva puoi prepararne una simile più rapidamente. Prima di iniziare puoi comunque modificare qualsiasi opzione.</p>
+</div>
+<div class="help-item">
+<strong>Posso segnare una partita senza accesso a Salute?</strong>
+<p>Sì. Punteggio, statistiche e cronologia funzionano senza accesso a Salute. L’autorizzazione serve solo per registrare gli allenamenti e le misurazioni correlate, come frequenza cardiaca ed energia attiva.</p>
+</div>
+</div>
+</section>
+<section id="match-setup">
+<h2>Configurare una partita</h2>
+<p class="section-subtitle">
+    Scegli il formato e le regole adatti alla partita che stai giocando.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Qual è la differenza tra Singolare e Doppio?</strong>
+<p>Scegli Singolare per un giocatore per parte e Doppio per due giocatori per parte. Il formato selezionato viene salvato con la partita e usato anche quando registri un allenamento.</p>
+</div>
+<div class="help-item">
+<strong>Cosa significano al meglio dei 3 e dei 5 set?</strong>
+<p>Al meglio dei 3 significa che vince la partita chi conquista per primo due set. Al meglio dei 5 significa che vince chi conquista per primo tre set.</p>
+</div>
+<div class="help-item">
+<strong>Come funzionano le regole del set?</strong>
+<p>Seleziona la regola del set adatta al formato della partita. L’app la applica automaticamente per stabilire quando un set è vinto e se è necessario un tie-break.</p>
+</div>
+<div class="help-item">
+<strong>Come scelgo chi serve per primo?</strong>
+<p>Durante la configurazione puoi scegliere manualmente chi serve per primo oppure usare il lancio della moneta integrato per una scelta casuale.</p>
+</div>
+<div class="help-item">
+<strong>A cosa serve il lancio della moneta?</strong>
+<p>Il lancio della moneta sceglie casualmente l’esito iniziale e aiuta a decidere chi serve per primo. Puoi confermare la configurazione risultante prima di iniziare la partita.</p>
+</div>
+<div class="help-item">
+<strong>A cosa serve Registra allenamento?</strong>
+<p>Quando è attivo e autorizzato, Registra allenamento avvia un allenamento di tennis insieme alla partita. Può raccogliere i dati disponibili su frequenza cardiaca, energia attiva e durata e salvare l’allenamento nell’app Salute.</p>
+</div>
+</div>
+</section>
+<section id="scoring">
+<h2>Tenere il punteggio</h2>
+<p class="section-subtitle">
+    Registra ogni punto mentre l’app gestisce automaticamente il punteggio del tennis.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Come registro un punto?</strong>
+<p>Usa i controlli del punteggio per indicare se il punto è stato vinto da te o dall’avversario. Il punteggio si aggiorna subito dopo ogni selezione.</p>
+</div>
+<div class="help-item">
+<strong>L’app calcola automaticamente game e set?</strong>
+<p>Sì. Tennis Score Wizard gestisce automaticamente punti, game, set, parità, vantaggio e tie-break in base alle regole selezionate.</p>
+</div>
+<div class="help-item">
+<strong>Come vengono gestiti la parità e il vantaggio?</strong>
+<p>Sul 40–40 l’app passa alla parità. Per vincere il game, un giocatore o una squadra deve ottenere il vantaggio e vincere anche il punto successivo. Se il punto successivo viene vinto dall’avversario, si torna in parità.</p>
+</div>
+<div class="help-item">
+<strong>Come funziona il punteggio del tie-break?</strong>
+<p>Quando la regola selezionata richiede un tie-break, l’app passa dai normali punti del tennis ai punti numerici del tie-break e determina il vincitore in base alla regola configurata.</p>
+</div>
+<div class="help-item">
+<strong>Come funziona l’indicatore del servizio?</strong>
+<p>Quando servi, la pallina evidenzia il lato da cui devi battere. Quando serve l’avversario, mostra il suo lato di battuta dalla prospettiva dell’orologio.</p>
+</div>
+<div class="help-item">
+<strong>Come tiene traccia di chi serve?</strong>
+<p>L’app cambia automaticamente chi serve al termine dei game e nei punti del tie-break. Se la partita reale e l’orologio non sono più allineati, puoi correggere manualmente chi serve dal menu della partita.</p>
+</div>
+<div class="help-item">
+<strong>Quando si cambia campo?</strong>
+<p>L’app mostra un promemoria per il cambio di campo nei momenti appropriati. Il promemoria è informativo e scompare quando il gioco riprende.</p>
+</div>
+</div>
+</section>
+<section id="match-controls">
+<h2>Controlli della partita</h2>
+<p class="section-subtitle">
+    Correggi gli errori, gestisci la partita in corso e interrompi in sicurezza una sessione non conclusa.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Come funziona Annulla?</strong>
+<p>Annulla rimuove l’ultimo punto registrato e ripristina lo stato precedente della partita, inclusi punti, game, set, giocatore al servizio, posizione di battuta, stato del tie-break e relativi contatori delle statistiche automatiche.</p>
+</div>
+<div class="help-item">
+<strong>A cosa serve Menu?</strong>
+<p>Durante una partita, Menu offre azioni aggiuntive come correggere chi serve, aprire la cronologia, interrompere la partita in corso o prepararne una nuova.</p>
+</div>
+<div class="help-item">
+<strong>Quando devo usare Cambia giocatore al servizio?</strong>
+<p>Usa Cambia giocatore al servizio quando l’indicazione nell’app non corrisponde alla partita reale. In questo modo correggi chi serve senza aggiungere o rimuovere punti.</p>
+</div>
+<div class="help-item">
+<strong>Cosa succede quando interrompo una partita?</strong>
+<p>Una partita non conclusa può essere salvata con il punteggio attuale, il tempo trascorso, i set completati, l’avanzamento del set in corso, i punti e le statistiche disponibili. La Cronologia mantiene l’etichetta Interrotta. Se al momento dell’interruzione un giocatore o una squadra era in vantaggio, il risultato viene incluso anche nel bilancio delle partite, nella percentuale di vittorie e nelle serie; una partita interrotta in parità è neutra.</p>
+</div>
+<div class="help-item">
+<strong>Posso iniziare una nuova partita dopo averne conclusa o interrotta una?</strong>
+<p>Sì. Dopo aver concluso o interrotto la partita in corso, puoi tornare alla configurazione e iniziarne un’altra riutilizzando quella precedente.</p>
+</div>
+<div class="help-item">
+<strong>Cosa devo fare se registro un punto per errore?</strong>
+<p>Usa Annulla appena possibile. Ripristina lo stato completo precedente al punto errato ed è più sicuro che cercare di compensare assegnando un altro punto.</p>
+</div>
+</div>
+</section>
+<section id="statistics">
+<h2>Comprendere le statistiche della partita</h2>
+<p class="section-subtitle">
+    Scopri cosa rappresentano i valori salvati della partita e come vengono calcolati.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Cosa sono i punti totali?</strong>
+<p>I punti totali indicano quanti punti sono stati registrati durante la partita. Il riepilogo distingue quelli vinti da te da quelli vinti dall’avversario.</p>
+</div>
+<div class="help-item">
+<strong>Cosa sono i Game registrati?</strong>
+<p>I Game registrati sono quelli per cui sono disponibili dati punto per punto. In una partita interrotta possono includere il game in corso non concluso, quindi questo valore non rappresenta il punteggio ufficiale dei game.</p>
+</div>
+<div class="help-item">
+<strong>Cosa sono le statistiche delle palle break?</strong>
+<p>Mostrano le palle break affrontate e salvate sul tuo servizio, oltre alle occasioni e alle palle break convertite in risposta. I punti del tie-break sono esclusi.</p>
+</div>
+<div class="help-item">
+<strong>Le statistiche vengono aggiornate automaticamente?</strong>
+<p>Sì. Le statistiche vengono aggiornate in base ai punti registrati. Annulla rimuove anche l’effetto statistico dell’ultimo punto, così i valori restano coerenti con il punteggio ripristinato.</p>
+</div>
+<div class="help-item">
+<strong>Perché una partita interrotta può avere statistiche incomplete?</strong>
+<p>Una partita interrotta include solo i punti e le situazioni avvenuti prima dell’interruzione. Le statistiche che richiedono eventi successivi o la conclusione normale possono quindi mancare o essere meno complete.</p>
+</div>
+<div class="help-item">
+<strong>Perché una partita meno recente può mostrare meno statistiche?</strong>
+<p>Le partite salvate da versioni precedenti dell’app potrebbero non contenere tutte le statistiche introdotte in seguito. L’app conserva i dati storici registrati in origine invece di inventare valori mancanti.</p>
+</div>
+</div>
+</section>
+<section id="companion-sync">
+<h2>Sincronizzazione tra Companion e iPhone</h2>
+<p class="section-subtitle">
+    Segna i punti su Apple Watch, poi consulta su iPhone cronologia sincronizzata, risultati, statistiche e dati degli allenamenti.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Dove configuro e segno le partite in Companion?</strong>
+<p>La configurazione e il punteggio in tempo reale restano su Apple Watch. Companion include l’app completa per Apple Watch e aggiunge una vista su iPhone per consultare le partite salvate dopo e tra una sessione e l’altra.</p>
+</div>
+<div class="help-item">
+<strong>Cosa viene mostrato su iPhone?</strong>
+<p>L’app per iPhone può mostrare l’ultimo risultato, la cronologia recente e completa, i punteggi di set e tie-break, durata, punti, servizio, risposta, palle break, statistiche sull’andamento della partita e riepiloghi disponibili degli allenamenti.</p>
+</div>
+<div class="help-item">
+<strong>Come si sincronizza la cronologia delle partite?</strong>
+<p>Companion dispone di due percorsi di sincronizzazione indipendenti. Watch Connectivity può inviare una partita salvata direttamente tra Apple Watch e iPhone abbinati: di solito è il percorso locale più rapido quando entrambi i dispositivi sono disponibili. CloudKit assicura separatamente una sincronizzazione iCloud duratura e il ripristino tra Standalone e Companion con lo stesso Apple Account. Nessun percorso deve completarsi prima dell’altro; se entrambi consegnano la stessa partita, le app mantengono un unico record aggiornato.</p>
+</div>
+<div class="help-item">
+<strong>Cosa devo fare se una partita non compare su iPhone?</strong>
+<p>Verifica che sia abbinato l’Apple Watch corretto, tieni i due dispositivi vicini e apri Tennis Score Wizard su Apple Watch e iPhone. Assicurati inoltre che entrambi i dispositivi usino l’Apple Account desiderato e controlla lo stato di iCloud nella Cronologia. Durante l’attesa, la partita salvata resta protetta localmente e può sincronizzarsi quando torna disponibile la connessione tra i dispositivi abbinati o iCloud.</p>
+</div>
+<div class="help-item">
+<strong>Vengono sincronizzati anche i dettagli degli allenamenti?</strong>
+<p>Quando i dati dell’allenamento sono disponibili, Companion può mostrare, insieme alla partita salvata su entrambi i dispositivi, durata, frequenza cardiaca media, frequenza cardiaca massima ed energia attiva.</p>
+</div>
+<div class="help-item">
+<strong>Cosa succede quando elimino la cronologia delle partite?</strong>
+<p>L’eliminazione di una singola partita o dell’intera cronologia in Companion viene sincronizzata tra iPhone e Apple Watch e, quando disponibile, tramite iCloud. L’app chiede conferma prima di eliminare l’intera cronologia.</p>
+</div>
+</div>
+</section>
+<section id="icloud-sync">
+<h2>Sincronizzazione e ripristino delle partite con iCloud</h2>
+<p class="section-subtitle">
+    Sincronizza le partite salvate tra Standalone e Companion senza creare un account Tennis Score Wizard.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Cosa serve per sincronizzare le partite con iCloud?</strong>
+<p>Assicurati che Apple Watch e, nel caso di Companion, iPhone usino lo stesso Apple Account. Attiva iCloud Drive, assicurati che sia disponibile una connessione Internet e attendi il completamento della prima sincronizzazione. Puoi continuare a segnare i punti anche quando iCloud non è disponibile.</p>
+</div>
+<div class="help-item">
+<strong>Standalone e Companion possono condividere le partite?</strong>
+<p>Sì. Entrambe le versioni usano lo stesso archivio iCloud per le partite salvate. Quando le due app usano lo stesso Apple Account, una partita salvata in Standalone può comparire in Companion e viceversa.</p>
+</div>
+<div class="help-item">
+<strong>Come faccio a sapere se la sincronizzazione è terminata?</strong>
+<p>Apri Cronologia e controlla la riga di stato di iCloud. <b>Synced</b> indica che l’ultima sincronizzazione è terminata correttamente e ne mostra data e ora. <b>Syncing</b> indica che la sincronizzazione è attiva. <b>Waiting</b> con <b>Saving</b> indica che una modifica locale è al sicuro nella coda di iCloud. <b>Sync paused</b> con <b>Retry</b> indica che l’ultimo tentativo non è stato completato; tocca la riga per riprovare.</p>
+</div>
+<div class="help-item">
+<strong>Cosa succede se cambio Apple Account?</strong>
+<p>Ogni Apple Account ha una propria cronologia privata delle partite in CloudKit. Le cronologie di account diversi restano separate e non vengono unite. Quando l’app rileva un cambio, mostra la cronologia locale e iCloud dell’Apple Account attuale; tornando all’account precedente, la relativa cronologia ricompare dopo la sincronizzazione. Prima di rimuovere da quel dispositivo la cache locale dell’account precedente, le partite ancora in attesa di sincronizzazione vengono conservate in una copia di ripristino crittografata e associata a quell’account. Non vengono caricate sul nuovo account e cambiare account non elimina i record già archiviati nel database iCloud di nessuno dei due account.</p>
+</div>
+<div class="help-item">
+<strong>La reinstallazione dell’app ripristinerà le mie partite?</strong>
+<p>Sì, se le partite sono state sincronizzate correttamente prima della rimozione dell’app. Verifica prima che la Cronologia mostri <b>Synced</b>. Dopo la reinstallazione, usa lo stesso Apple Account, mantieni iCloud Drive attivo, apri l’app e attendi il download delle partite.</p>
+</div>
+<div class="help-item">
+<strong>Eliminare l’app cancella la cronologia da iCloud?</strong>
+<p>No. La rimozione dell’app non elimina da sola le partite già sincronizzate con iCloud. Queste possono essere scaricate di nuovo dopo la reinstallazione. Se elimini le partite da Tennis Score Wizard, le eliminazioni vengono sincronizzate quando iCloud è disponibile.</p>
+</div>
+<div class="help-item">
+<strong>Lo sviluppatore può vedere le mie partite sincronizzate?</strong>
+<p>No. CloudKit archivia i record sincronizzati nel database privato del tuo Apple Account. Per impostazione predefinita, solo il titolare dell’Apple Account può accedere al database privato.</p>
+</div>
+</div>
+</section>
+<section id="health-workouts">
+<h2>Salute e allenamenti</h2>
+<p class="section-subtitle">
+    Registra la tua sessione di tennis e scopri come leggere i dati di Salute mostrati dopo la partita.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Come si registra un allenamento di tennis?</strong>
+<p>Attiva Registra allenamento durante la configurazione della partita e concedi le autorizzazioni richieste per Salute. L’allenamento inizia insieme alla partita e termina quando la partita viene conclusa o interrotta.</p>
+</div>
+<div class="help-item">
+<strong>Come funziona la frequenza cardiaca in tempo reale?</strong>
+<p>Durante un allenamento registrato, l’app mostra la frequenza cardiaca in tempo reale quando l’accesso è consentito e Apple Watch sta fornendo un campione della frequenza cardiaca.</p>
+</div>
+<div class="help-item">
+<strong>Cosa sono la frequenza cardiaca media e massima?</strong>
+<p>La frequenza cardiaca media viene calcolata sui campioni disponibili raccolti durante l’allenamento. La frequenza cardiaca massima è il valore più alto registrato tra i campioni disponibili per quell’allenamento.</p>
+</div>
+<div class="help-item">
+<strong>Cos’è l’energia attiva?</strong>
+<p>L’energia attiva è la stima dell’energia consumata con l’attività durante l’allenamento. Apple Watch stima il valore usando i dati disponibili su salute e movimento, mentre l’app mostra il totale dell’allenamento fornito tramite HealthKit.</p>
+</div>
+<div class="help-item">
+<strong>Dove viene salvato l’allenamento?</strong>
+<p>Al termine, l’allenamento viene salvato nell’app Salute e può comparire anche nell’app Fitness su iPhone, in base alle autorizzazioni e al comportamento di sincronizzazione dei dispositivi.</p>
+</div>
+<div class="help-item">
+<strong>Perché le statistiche dell’allenamento possono comparire in ritardo?</strong>
+<p>Dopo la fine dell’allenamento, l’app Salute potrebbe impiegare un po’ di tempo per completare il salvataggio delle misurazioni. Attendi qualche istante prima di controllare di nuovo la partita conclusa.</p>
+</div>
+<div class="help-item">
+<strong>Perché manca una statistica sulla salute?</strong>
+<p>Un valore può non essere disponibile se non hai concesso l’autorizzazione, il sensore non ha fornito campioni sufficienti, la registrazione dell’allenamento era disattivata oppure Salute non ha ancora completato il salvataggio dei dati.</p>
+</div>
+<div class="help-item">
+<strong>La partita viene salvata anche se la registrazione dell’allenamento non riesce?</strong>
+<p>Il punteggio e la cronologia della partita sono separati da Salute. Un problema di autorizzazione o dei dati dell’allenamento non impedisce il salvataggio del punteggio.</p>
+</div>
+</div>
+</section>
+<section id="match-history">
+<h2>Cronologia delle partite</h2>
+<p class="section-subtitle">
+    Consulta i risultati delle partite concluse e non concluse usando la notazione tennistica compatta.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Cosa significano Vittoria e Sconfitta?</strong>
+<p>Vittoria significa che hai vinto per set una partita conclusa. Sconfitta significa che l’avversario ha vinto per set una partita conclusa.</p>
+</div>
+<div class="help-item">
+<strong>Cosa significa Interrotta?</strong>
+<p>Interrotta significa che la partita è stata salvata prima della conclusione normale. L’app conserva il contesto reale raccolto fino a quel momento. Una partita interrotta con un giocatore in vantaggio conta nel bilancio, nella percentuale di vittorie e nelle serie; se è in parità, il risultato è neutro.</p>
+</div>
+<div class="help-item">
+<strong>Cosa sono S1, S2 e S3?</strong>
+<p>S1, S2 e S3 indicano rispettivamente il primo, il secondo e il terzo set. Per esempio, S1 6–3 significa che il primo set è terminato con sei game a tre.</p>
+</div>
+<div class="help-item">
+<strong>Cosa significa TB 7–3?</strong>
+<p>TB mostra i punti del tie-break registrati nel set. Per esempio, 7–6 · TB 7–3 significa che il set è terminato 7–6 e il tie-break 7–3.</p>
+</div>
+<div class="help-item">
+<strong>Cosa significa 7–6<sup>(6)</sup> significa?</strong>
+<p>Il piccolo numero tra parentesi è il punteggio del giocatore che ha perso il tie-break, secondo la notazione tennistica compatta standard. Per esempio, 7–6<sup>(6)</sup> significa che il tie-break è stato vinto 8–6. I dettagli della partita mostrano comunque in modo esplicito il punteggio completo del tie-break.</p>
+</div>
+<div class="help-item">
+<strong>Come vengono valutate le partite interrotte?</strong>
+<p>L’app confronta prima i set completati, poi i game salvati e infine i punti disponibili del tie-break. Se un giocatore o una squadra è in vantaggio, il risultato conta come vittoria o sconfitta nelle statistiche, mentre la partita resta contrassegnata come Interrotta. Se il punteggio è ancora in parità, il risultato è neutro.</p>
+</div>
+<div class="help-item">
+<strong>Cosa succede a un set non concluso?</strong>
+<p>Se il set in corso è già iniziato quando la partita viene interrotta, viene salvato insieme alla partita. In questo modo si conserva il contesto reale, per esempio S3 0–1.</p>
+</div>
+<div class="help-item">
+<strong>Quali informazioni vengono salvate con una partita?</strong>
+<p>La Cronologia può includere risultato, punteggi dei set e dei tie-break, punti, durata, ora di inizio e fine, statistiche della partita e statistiche disponibili dell’allenamento.</p>
+</div>
+<div class="help-item">
+<strong>Posso eliminare una partita salvata?</strong>
+<p>Sì. Usa l’azione di eliminazione nella cronologia e conferma. Eliminando una partita, la relativa voce salvata viene rimossa dall’app.</p>
+</div>
+</div>
+</section>
+<section id="complications-help">
+<h2>Complicazioni dei quadranti di Apple Watch</h2>
+<p class="section-subtitle">
+    Aggiungi un accesso rapido a Tennis Score Wizard direttamente da un quadrante compatibile.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>A cosa serve la complicazione di Tennis Score Wizard?</strong>
+<p>La complicazione funziona come avvio rapido. Toccandola, Tennis Score Wizard si apre su Apple Watch direttamente dal quadrante.</p>
+</div>
+<div class="help-item">
+<strong>Quali tipi di complicazione sono supportati?</strong>
+<p>Tennis Score Wizard supporta le posizioni circolari e angolari sui quadranti Apple Watch compatibili.</p>
+</div>
+<div class="help-item">
+<strong>Come si aggiunge la complicazione?</strong>
+<p>Modifica un quadrante compatibile su Apple Watch o nell’app Watch su iPhone, seleziona una posizione supportata e scegli Tennis Score Wizard tra le complicazioni disponibili.</p>
+</div>
+<div class="help-item">
+<strong>Perché non trovo la complicazione?</strong>
+<p>Verifica che l’app sia installata su Apple Watch e che la posizione scelta sul quadrante supporti uno dei tipi di complicazione disponibili. Le posizioni variano a seconda del quadrante.</p>
+</div>
+<div class="help-item">
+<strong>Perché la complicazione ha un aspetto diverso su un altro quadrante?</strong>
+<p>Apple Watch determina la forma e lo spazio disponibile per ogni posizione. Tennis Score Wizard adatta il proprio pulsante di avvio al formato circolare o angolare supportato.</p>
+</div>
+</div>
+</section>
+<section id="troubleshooting">
+<h2>Risoluzione dei problemi</h2>
+<p class="section-subtitle">
+    Controlli comuni quando il punteggio, i dati degli allenamenti o l’accesso dal quadrante non funzionano come previsto.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>La frequenza cardiaca in tempo reale non compare. Cosa devo controllare?</strong>
+<p>Verifica che Registra allenamento fosse attivo, che l’accesso a Salute fosse consentito e che l’orologio sia indossato correttamente. La frequenza cardiaca compare solo quando Apple Watch fornisce un campione disponibile.</p>
+</div>
+<div class="help-item">
+<strong>L’allenamento non è visibile nell’app Salute. Cosa devo fare?</strong>
+<p>Attendi il tempo necessario per l’elaborazione, poi controlla le autorizzazioni di Salute e verifica che la registrazione dell’allenamento fosse attiva per la partita. Assicurati inoltre che l’allenamento sia terminato correttamente con la conclusione o l’interruzione della partita.</p>
+</div>
+<div class="help-item">
+<strong>Manca la frequenza cardiaca media, quella massima o l’energia attiva.</strong>
+<p>Riapri la partita conclusa dopo che Salute ha avuto il tempo di salvare l’allenamento. Una misurazione può restare non disponibile se Salute non ha fornito dati di base sufficienti.</p>
+</div>
+<div class="help-item">
+<strong>Il giocatore al servizio mostrato non è corretto.</strong>
+<p>Apri Menu e usa Cambia giocatore al servizio per allineare l’app alla partita reale. L’operazione corregge chi serve senza modificare il punteggio.</p>
+</div>
+<div class="help-item">
+<strong>Ho inserito il punto sbagliato.</strong>
+<p>Usa Annulla per ripristinare lo stato esatto precedente all’ultimo punto, inclusi punteggio, giocatore al servizio, stato del tie-break e statistiche correlate.</p>
+</div>
+<div class="help-item">
+<strong>La complicazione non è disponibile sul quadrante selezionato.</strong>
+<p>Prova una posizione circolare o angolare. Non tutte le posizioni di ogni quadrante supportano lo stesso tipo di complicazione.</p>
+</div>
+<div class="help-item">
+<strong>La reinstallazione dell’app conserverà la cronologia delle partite?</strong>
+<p>Prima apri Cronologia e verifica che la riga di iCloud mostri <b>Synced</b>. Dopo la reinstallazione, usa lo stesso Apple Account con iCloud Drive attivo e attendi il completamento del ripristino. Le partite che non hanno mai completato una sincronizzazione con iCloud restano solo sul dispositivo originale.</p>
+</div>
+<div class="help-item">
+<strong>La Cronologia mostra Waiting, Saving oppure Sync paused con Retry.</strong>
+<p><b>Waiting</b> con <b>Saving</b> indica che una modifica locale è in coda e potrà essere caricata quando iCloud sarà disponibile. Se compare <b>Sync paused</b> con <b>Retry</b>, verifica che il dispositivo abbia effettuato l’accesso all’Apple Account desiderato, che iCloud Drive sia attivo, che la rete sia disponibile e che lo spazio di archiviazione su iCloud non sia esaurito, quindi tocca la riga di stato. Le partite locali non vengono rimosse solo perché iCloud non è disponibile.</p>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2>Assistenza</h2>
+<div class="support-card">
+<h3>Hai bisogno di aiuto o vuoi suggerire una funzionalità?</h3>
+<p>
+      Contatti:
+      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+</p>
+</div>
+</section>
+<footer>
+<div class="footer-meta">
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch è un marchio di Apple Inc.</span>
+</div>
+<nav aria-label="Navigazione secondaria" class="footer-links">
+<a href="privacy.html">Privacy</a>
+</nav>
+</footer>
+</main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
+</body>
+</html>
