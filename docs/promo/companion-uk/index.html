@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Tennis Score Wizard Companion</title>
+  <meta name="description" content="Score tennis on Apple Watch. Review every match on iPhone with Tennis Score Wizard Companion.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Score on your wrist. Understand every match.">
+  <meta property="og:description" content="Tennis scoring on Apple Watch with match history and statistics on iPhone.">
+  <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/promo/companion-uk/assets/companion-watch-iphone.jpg">
+  <link rel="icon" href="../../assets/tennis_ball_app_icon_128.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="topbar" aria-label="Tennis Score Wizard Companion">
+      <div class="brand">
+        <img src="../../assets/tennis_ball_app_icon_1024-128.webp" alt="" width="56" height="56">
+        <div>
+          <strong>Tennis Score Wizard</strong>
+          <span>Companion for Apple Watch + iPhone</span>
+        </div>
+      </div>
+      <span class="availability"><i></i> Available on the App Store</span>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">BUILT FOR TENNIS PLAYERS WITH APPLE WATCH</p>
+        <h1>Score on your wrist.<br><em>Understand every match.</em></h1>
+        <p class="lede">Record every point on Apple Watch. Review match history, statistics, trends, and workout details on iPhone — privately synchronized through iCloud.</p>
+        <div class="actions">
+          <a class="primary-cta" href="https://apps.apple.com/app/apple-store/id6789285015?pt=129068789&amp;mt=8" data-app-store-link>
+            <span class="apple"></span>
+            <span><small>GET COMPANION ON THE</small><strong>One-time purchase · £3.99</strong></span>
+          </a>
+          <p class="requirements">Requires iOS 26.0 or later and Apple Watch</p>
+        </div>
+        <ul class="trust-list" aria-label="Product benefits">
+          <li><span>✓</span>No subscription</li>
+          <li><span>✓</span>No extra account</li>
+          <li><span>✓</span>Private iCloud sync</li>
+        </ul>
+      </div>
+
+      <figure class="hero-visual">
+        <img src="assets/companion-watch-iphone.jpg" alt="Tennis Score Wizard Companion running on Apple Watch and iPhone">
+        <figcaption><span>One match</span><span>Two screens</span><span>Your data</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="flow" aria-label="How Companion works">
+      <article>
+        <span class="step">01</span>
+        <div><strong>Play</strong><p>Keep score courtside on Apple Watch.</p></div>
+      </article>
+      <article>
+        <span class="step">02</span>
+        <div><strong>Sync</strong><p>Your saved match moves privately through iCloud.</p></div>
+      </article>
+      <article>
+        <span class="step">03</span>
+        <div><strong>Review</strong><p>See results and performance clearly on iPhone.</p></div>
+      </article>
+    </section>
+
+    <section class="proof">
+      <div class="section-heading">
+        <p class="eyebrow">AFTER THE FINAL POINT</p>
+        <h2>Your whole match,<br>ready to review.</h2>
+        <p>Open Companion on iPhone to revisit results, spot patterns, and keep your tennis history in one private place.</p>
+      </div>
+      <div class="screens">
+        <figure>
+          <img src="../../assets/companion_home_latest_matches-720.webp" alt="Latest matches on iPhone" loading="lazy">
+          <figcaption>Latest matches</figcaption>
+        </figure>
+        <figure>
+          <img src="../../assets/companion_match_stats-720.webp" alt="Tennis match statistics on iPhone" loading="lazy">
+          <figcaption>Match statistics</figcaption>
+        </figure>
+        <figure>
+          <img src="../../assets/companion_calendar_month-720.webp" alt="Tennis match calendar on iPhone" loading="lazy">
+          <figcaption>Calendar history</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div>
+        <p class="eyebrow">ONE-TIME PURCHASE</p>
+        <h2>Take every match with you.</h2>
+        <p>Score on Apple Watch. Review on iPhone. No subscription.</p>
+      </div>
+      <a class="primary-cta" href="https://apps.apple.com/app/apple-store/id6789285015?pt=129068789&amp;mt=8" data-app-store-link>
+        <span class="apple"></span>
+        <span><small>GET COMPANION ON THE</small><strong>One-time purchase · £3.99</strong></span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© Tennis Score Wizard</span>
+    <nav aria-label="Supporting links">
+      <a href="https://zhirnoff.github.io/TennisScoreWizard/privacy.html">Privacy</a>
+      <a href="https://zhirnoff.github.io/TennisScoreWizard/help.html">Help</a>
+      <a href="https://zhirnoff.github.io/TennisScoreWizard/">Full product site ↗</a>
+    </nav>
+  </footer>
+  <script>
+    (() => {
+      const source = new URLSearchParams(window.location.search).get("source");
+      const campaigns = {
+        meta: "Meta UK Landing",
+        reddit: "Reddit UK Landing"
+      };
+      const campaign = campaigns[source];
+      if (!campaign) return;
+
+      document.querySelectorAll("[data-app-store-link]").forEach((link) => {
+        const url = new URL(link.href);
+        url.searchParams.set("ct", campaign);
+        link.href = url.toString();
+      });
+    })();
+  </script>
+</body>
+</html>
