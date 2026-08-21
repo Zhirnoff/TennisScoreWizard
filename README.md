@@ -5,7 +5,7 @@ This repository contains the public website, Help Center, Privacy Policy, releas
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
 - **Companion** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
 
-The website reflects the public Companion 1.2 and Standalone 1.5 releases, including private iCloud synchronization, localized Help and Privacy pages, and current release notes.
+The release branch prepares Companion 1.3 and Standalone 1.6, including deciding Match Tie-Breaks, private iCloud synchronization, localized Help and Privacy pages, current screenshots, and release notes. Keep it separate from `main` until both App Store versions are public.
 
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
@@ -41,7 +41,7 @@ Keep original PNG assets as the high-quality source. Where responsive variants e
 - `main` represents the public website and is published through GitHub Pages.
 - Prepare website content for an unreleased app version in a dedicated feature or release branch.
 - Merge and publish that branch only after the corresponding App Store version is successfully released.
-- Keep all eight localized versions aligned when product names, versions, links, screenshots, privacy text, or release notes change.
+- Keep all ten language versions aligned when product names, versions, links, screenshots, privacy text, or release notes change.
 - Website deployments do not require Git release tags by default; application releases are tagged in the Xcode repository.
 
 ## App Store
@@ -55,4 +55,4 @@ For questions, bug reports, or feedback, open a GitHub issue or email tennisscor
 
 When reporting an app issue, include the device model, operating-system version, app version, steps to reproduce, expected result, and actual result.
 
-Tennis Score Wizard does not require a Tennis Score Wizard account and does not send match history to a developer-operated server. Companion can transfer match data directly between a paired Apple Watch and iPhone. Companion 1.2 and Standalone 1.5 can also synchronize saved matches through the private CloudKit database associated with the user’s Apple Account.
+Tennis Score Wizard does not require a Tennis Score Wizard account and does not send match history to a developer-operated server. Companion can transfer match data directly between a paired Apple Watch and iPhone. Companion 1.3 and Standalone 1.6 can also synchronize saved matches through the private CloudKit database associated with the user’s Apple Account.
