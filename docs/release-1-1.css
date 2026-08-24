@@ -224,6 +224,7 @@
 .development-support-card:first-child .development-support-icon {
   border-color: rgba(255,59,48,0.46);
   color: #ff3b30;
+  font-size: 0;
   background:
     radial-gradient(circle at 35% 25%, rgba(255,255,255,0.16), transparent 34%),
     linear-gradient(145deg, rgba(255,59,48,0.18), rgba(255,59,48,0.055));
@@ -234,9 +235,23 @@
     inset 0 0 18px rgba(255,59,48,0.09),
     0 0 24px rgba(255,59,48,0.28),
     0 0 10px rgba(255,59,48,0.22);
-  animation:
-    development-support-heart-glow 5.2s ease-in-out infinite,
-    development-support-heartbeat 5.2s ease-in-out infinite;
+  animation: development-support-heart-glow 5.2s ease-in-out infinite;
+}
+
+.development-support-card:first-child .development-support-icon::before {
+  content: "♥";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #ff3b30;
+  font-size: 20px;
+  line-height: 1;
+  text-shadow:
+    0 0 9px rgba(255,59,48,0.90),
+    0 0 20px rgba(255,59,48,0.50);
+  transform-origin: center;
+  animation: development-support-heartbeat 5.2s ease-in-out infinite;
 }
 
 .development-support-card:first-child .development-support-icon::after {
@@ -682,6 +697,7 @@
 @media (prefers-reduced-motion: reduce) {
   .development-support-card:first-child .development-support-icon,
   .development-support-card:last-child .development-support-icon,
+  .development-support-card:first-child .development-support-icon::before,
   .development-support-icon::after {
     animation: none;
   }
