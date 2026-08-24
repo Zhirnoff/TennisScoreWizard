@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/tennis_ball_app_icon_128.png">
   <title>Tennis Score Wizard — Apple Watch &amp; iPhone Tennis Scoring</title>
-  <meta name="description" content="Score tennis on Apple Watch with Tennis Score Wizard Standalone or Companion. Sync saved matches through iCloud and review Companion history, statistics, and workouts on iPhone.">
+  <meta name="description" content="Score tennis on Apple Watch with Tennis Score Wizard Standalone or Companion. Build private Head-to-Head Rivalries, sync saved matches through iCloud, and review detailed statistics on iPhone.">
   <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/">
   <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/">
   <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/">
@@ -22,13 +22,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Tennis Score Wizard">
   <meta property="og:title" content="Tennis Score Wizard — Apple Watch &amp; iPhone Tennis Scoring">
-  <meta property="og:description" content="Score tennis on Apple Watch and sync saved matches through iCloud across Tennis Score Wizard Standalone and Companion.">
+  <meta property="og:description" content="Score tennis on Apple Watch, build private Head-to-Head Rivalries, and sync saved matches through iCloud across Standalone and Companion.">
   <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/">
   <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
   <meta property="og:image:alt" content="Tennis Score Wizard app icon">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tennis Score Wizard — Apple Watch &amp; iPhone Tennis Scoring">
-  <meta name="twitter:description" content="Score tennis on Apple Watch and sync saved matches through iCloud across Tennis Score Wizard Standalone and Companion.">
+  <meta name="twitter:description" content="Score tennis on Apple Watch, build private Head-to-Head Rivalries, and sync saved matches through iCloud.">
   <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
   <style>
     :root {
@@ -2273,6 +2273,7 @@ footer {
 }
 </style>
 <link rel="stylesheet" href="release-1-1.css">
+<link rel="stylesheet" href="rivalries-landing.css">
 <script src="support-development.js" defer></script>
 </head>
 <body>
@@ -2285,6 +2286,7 @@ footer {
 
       <div class="nav-links">
         <a href="#versions">Versions</a>
+        <a href="#rivalries">Rivalries</a>
         <a href="#comparison">Compare</a>
         <a href="#stats-guide">Stats Guide</a>
         <a href="whats-new.html">Product Updates</a>
@@ -2317,7 +2319,7 @@ footer {
     </div>
     <h1>Score every point. Understand every match.</h1>
     <p>
-      Choose Standalone for a complete Apple Watch experience, or Companion to add match history, statistics, and workout details on iPhone. Both apps can sync saved matches through iCloud when you use the same Apple Account.
+      Choose Standalone for a complete Apple Watch experience, or Companion to add Rivalries, match history, statistics, and workout details on iPhone. Both apps can sync saved matches through iCloud when you use the same Apple Account.
     </p>
     <div class="hero-actions">
       <a class="hero-version-link" href="#versions">
@@ -2337,6 +2339,7 @@ footer {
     </div>
     <div class="badges">
       <span class="badge">Automatic match stats</span>
+      <span class="badge">Head-to-Head Rivalries</span>
       <span class="badge">Serve & return insights</span>
       <span class="badge">Break points</span>
       <span class="badge">Workouts in Health</span>
@@ -2366,7 +2369,7 @@ footer {
       </p>
       <ul class="version-list">
         <li>Match setup and live scoring on Apple Watch</li>
-        <li>Automatic stats and iCloud match sync</li>
+        <li>Automatic stats, opponent profiles, and iCloud sync</li>
         <li>Optional workout recording in Health</li>
       </ul>
       <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="Download Tennis Score Wizard Standalone on the App Store">
@@ -2376,7 +2379,7 @@ footer {
           <strong>App Store</strong>
         </span>
       </a>
-      <span class="version-availability">Version 1.6 · Available now</span>
+      <span class="version-availability">Next release · Version 1.7</span>
     </article>
 
     <article class="card version-card version-card-companion">
@@ -2388,7 +2391,7 @@ footer {
       <ul class="version-list">
         <li>Full match setup and live scoring on Apple Watch</li>
         <li>History, stats, workouts, and complications on Apple Watch</li>
-        <li>Synced match history and detailed review on iPhone</li>
+        <li>Rivalries, synced history, and detailed review on iPhone</li>
       </ul>
       <a class="app-store-button" href="https://apps.apple.com/app/id6789285015" aria-label="Download Tennis Score Wizard Companion on the App Store">
         <span class="app-store-logo"></span>
@@ -2397,7 +2400,7 @@ footer {
           <strong>App Store</strong>
         </span>
       </a>
-      <span class="version-availability">Version 1.3 · Available now</span>
+      <span class="version-availability">Next release · Version 1.4</span>
     </article>
   </div>
   <a class="hero-version-link versions-compare-link" href="#comparison">Compare features <span aria-hidden="true">↓</span></a>
@@ -2461,6 +2464,49 @@ footer {
       <strong>Score now, restore later</strong>
       <p>Scoring remains available without iCloud. Successfully synchronized matches can download again after reinstalling under the same Apple Account.</p>
     </article>
+  </div>
+</section>
+
+<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title">
+  <div class="rivalries-heading">
+    <div>
+      <span class="rivalries-kicker">New · Rivalries</span>
+      <h2 id="rivalries-title">Every opponent has a story.</h2>
+      <p>
+        Choose a saved opponent before a singles match and Tennis Score Wizard builds a private Head-to-Head automatically. Review the series, recent form, pressure points, comebacks, streaks, time on court, workouts, and every recorded meeting.
+      </p>
+      <div class="rivalries-actions">
+        <a class="rivalries-action rivalries-action-primary" href="rivalries.html">Explore Rivalries</a>
+        <a class="rivalries-action" href="whats-new.html">Read the release notes</a>
+      </div>
+      <p class="rivalries-singles-note">Rivalry records currently use singles matches. Doubles scoring continues to work normally without assigning a single opponent.</p>
+    </div>
+    <div class="rivalries-phone">
+      <img src="assets/rivalries/rivalries-list-720.png" srcset="assets/rivalries/rivalries-list-720.png 720w, assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 82vw, 390px" alt="Rivalries list showing saved opponents and full Head-to-Head records" width="1320" height="2868" loading="lazy" decoding="async">
+    </div>
+  </div>
+
+  <div class="rivalries-proof">
+    <div class="rivalries-watch">
+      <figure>
+        <img src="assets/rivalries/watch-opponent-picker.png" alt="Apple Watch opponent picker showing Guest and saved players" width="416" height="496" loading="lazy" decoding="async">
+        <figcaption>Choose Guest or a saved player</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/rivalries/watch-live-opponent.png" alt="Apple Watch live scoring screen showing the selected opponent" width="416" height="496" loading="lazy" decoding="async">
+        <figcaption>See the name while scoring</figcaption>
+      </figure>
+    </div>
+    <div class="rivalries-proof-copy">
+      <h3>Pick the opponent. Then just play.</h3>
+      <p>Your normal scoring taps build the record. Create players, add a private note, assign an older match later, filter the series by time period, open every meeting, and share an ordered three-card story without exposing private notes.</p>
+    </div>
+  </div>
+
+  <div class="rivalries-benefits">
+    <article class="rivalries-benefit"><strong>Head-to-Head and recent form</strong><p>Compare the full series with your latest five decided meetings and see wins, sets, games, and tie-breaks.</p></article>
+    <article class="rivalries-benefit"><strong>Performance and patterns</strong><p>Understand points, serve and return, break points, wins after losing Set 1, and your longest winning run.</p></article>
+    <article class="rivalries-benefit"><strong>Private across your devices</strong><p>Profiles and match assignments can sync through your private iCloud data; paired Companion devices also deliver the Watch list directly.</p></article>
   </div>
 </section>
 
@@ -3011,8 +3057,14 @@ footer {
 
     <div class="comparison-row" role="row">
       <div class="comparison-feature" role="rowheader">iCloud match sync</div>
-      <div role="cell"><span class="comparison-check">✓</span> Version 1.6</div>
-      <div role="cell"><span class="comparison-check">✓</span> Version 1.3</div>
+      <div role="cell"><span class="comparison-check">✓</span> Included</div>
+      <div role="cell"><span class="comparison-check">✓</span> Included</div>
+    </div>
+
+    <div class="comparison-row comparison-difference" role="row">
+      <div class="comparison-feature" role="rowheader">Opponent profiles and Rivalries</div>
+      <div role="cell">Profiles and selection on Apple Watch</div>
+      <div role="cell">Full Rivalries on iPhone + selection on Watch</div>
     </div>
 
     <div class="comparison-row comparison-difference" role="row">
@@ -3224,6 +3276,10 @@ footer {
       <p>No. Stats are generated from normal scoring taps. The app does not ask you to enter aces, winners, unforced errors, or rally length.</p>
     </div>
     <div class="faq">
+      <strong>How do Rivalries work?</strong>
+      <p>Create an opponent, choose that player before a singles match on Apple Watch, and score normally. Tennis Score Wizard connects the saved match to the player and builds Head-to-Head, recent form, performance, patterns, time, workouts, and meeting history automatically. Guest keeps a match outside Rivalries.</p>
+    </div>
+    <div class="faq">
       <strong>Can I use it for doubles and tie-breaks?</strong>
       <p>Yes. The app supports singles, doubles, Best of 3, Best of 5, advantage sets, tie-break sets, and an optional deciding Match Tie-Break to 7 or 10.</p>
     </div>
@@ -3237,7 +3293,7 @@ footer {
   <h2>Privacy</h2>
   <div class="privacy-box">
     <strong>Your match history stays private.</strong>
-    <p>Match history is stored locally and can synchronize through the private CloudKit database for your Apple Account. Tennis Score Wizard does not operate a match-history server and does not sell match data or use it for advertising.</p>
+    <p>Match history and Rivalry player profiles are stored locally and can synchronize through the private CloudKit database for your Apple Account. Tennis Score Wizard does not operate a match-history server and does not sell match or Rivalry data or use it for advertising.</p>
     <p>Health access is optional and is used only to record tennis workouts and show available workout data when permission is granted.</p>
     <p><a href="privacy.html">Read the Privacy Policy</a></p>
   </div>

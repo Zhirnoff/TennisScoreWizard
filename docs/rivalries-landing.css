@@ -1,0 +1,223 @@
+.rivalries-showcase {
+  position: relative;
+  overflow: hidden;
+  margin-top: 34px;
+  padding: clamp(28px, 5vw, 64px);
+  border: 1px solid rgba(36, 255, 111, 0.3);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(0, 221, 85, 0.16), transparent 34%),
+    linear-gradient(145deg, rgba(13, 17, 15, 0.98), rgba(4, 8, 5, 0.98));
+}
+
+.rivalries-showcase::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 35%, rgba(49, 255, 115, 0.035));
+}
+
+.rivalries-heading,
+.rivalries-proof,
+.rivalries-benefits {
+  position: relative;
+  z-index: 1;
+}
+
+.rivalries-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+}
+
+.rivalries-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #25f36b;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.rivalries-kicker::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background: #25f36b;
+  -webkit-mask: url("assets/rivalries/crossed-rackets.png") center / contain no-repeat;
+  mask: url("assets/rivalries/crossed-rackets.png") center / contain no-repeat;
+}
+
+.rivalries-heading h2 {
+  max-width: 720px;
+  margin: 14px 0 16px;
+  font-size: clamp(40px, 5.8vw, 76px);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+
+.rivalries-heading p {
+  max-width: 720px;
+  margin: 0;
+  color: #b7bbb8;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.55;
+}
+
+.rivalries-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.rivalries-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid rgba(37, 243, 107, 0.45);
+  border-radius: 999px;
+  color: #25f36b;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.rivalries-action-primary {
+  color: #031208;
+  background: #25f36b;
+}
+
+.rivalries-phone {
+  width: min(100%, 390px);
+  margin-inline: auto;
+  padding: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 42px;
+  background: #050505;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.48);
+}
+
+.rivalries-phone img {
+  display: block;
+  width: 100%;
+  border-radius: 34px;
+}
+
+.rivalries-proof {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(22px, 4vw, 48px);
+  align-items: center;
+  margin-top: clamp(34px, 6vw, 76px);
+}
+
+.rivalries-watch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.rivalries-watch figure {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.rivalries-watch img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.rivalries-watch figcaption {
+  padding: 10px 4px 2px;
+  color: #9da29f;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: center;
+}
+
+.rivalries-proof-copy h3 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 3.5vw, 44px);
+}
+
+.rivalries-proof-copy p {
+  margin: 0;
+  color: #b7bbb8;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.rivalries-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.rivalries-benefit {
+  min-height: 150px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.rivalries-benefit strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.rivalries-benefit p {
+  margin: 0;
+  color: #9da29f;
+  line-height: 1.45;
+}
+
+.rivalries-singles-note {
+  margin: 18px 0 0;
+  color: #858b87;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .rivalries-heading,
+  .rivalries-proof {
+    grid-template-columns: 1fr;
+  }
+
+  .rivalries-benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .rivalries-showcase {
+    padding: 24px 18px;
+    border-radius: 25px;
+  }
+
+  .rivalries-watch {
+    gap: 8px;
+  }
+
+  .rivalries-watch figure {
+    padding: 6px;
+    border-radius: 18px;
+  }
+
+  .rivalries-watch img {
+    border-radius: 15px;
+  }
+}
