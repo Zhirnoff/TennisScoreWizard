@@ -226,6 +226,11 @@
   margin-top: 18px;
 }
 
+.development-support-options[data-wallet-list] {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .development-support-option {
   display: inline-flex;
   align-items: center;
@@ -248,8 +253,8 @@
 
 .development-support-copy {
   appearance: none;
-  flex: 1 1 calc(50% - 9px);
-  min-width: 190px;
+  width: 100%;
+  min-width: 0;
   cursor: pointer;
   font: inherit;
   text-align: left;
@@ -275,6 +280,39 @@
 .development-support-copy.is-copied {
   border-color: rgba(40,255,95,0.62);
   background: rgba(40,255,95,0.12);
+}
+
+.development-support-wallet-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  min-width: 0;
+}
+
+.development-support-wallet-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.development-support-wallet-icon svg,
+.development-support-wallet-icon img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.development-support-wallet-icon.is-ethereum {
+  border-radius: 50%;
+  background: #eef0ff;
+}
+
+.development-support-wallet-icon.is-ethereum img {
+  width: 18px;
+  height: 26px;
 }
 
 .development-support-wallet {
@@ -303,6 +341,107 @@
   color: var(--green);
   font-size: 12px;
   font-weight: 850;
+}
+
+.development-support-qr-toggle {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 1px;
+  width: 52px;
+  padding: 5px;
+  border: 1px solid rgba(255,255,255,0.11);
+  border-radius: 12px;
+  color: #dce8dd;
+  background: rgba(255,255,255,0.045);
+  cursor: pointer;
+  font: inherit;
+  font-size: 9px;
+  font-weight: 850;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.development-support-qr-toggle svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+
+.development-support-qr-toggle:hover,
+.development-support-qr-toggle.is-open {
+  transform: translateY(-1px);
+  border-color: rgba(40,255,95,0.42);
+  color: var(--green);
+  background: rgba(40,255,95,0.09);
+}
+
+.development-support-qr-toggle:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+.development-support-qr-panel {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 156px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid rgba(40,255,95,0.22);
+  border-radius: 16px;
+  background:
+    linear-gradient(145deg, rgba(40,255,95,0.055), transparent 58%),
+    rgba(255,255,255,0.035);
+}
+
+.development-support-qr-panel[hidden] {
+  display: none;
+}
+
+.development-support-qr-panel img {
+  display: block;
+  width: 100%;
+  max-width: 156px;
+  height: auto;
+  aspect-ratio: 1;
+  border: 7px solid #ffffff;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.development-support-qr-details {
+  display: grid;
+  min-width: 0;
+  gap: 8px;
+}
+
+.development-support-qr-details strong {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.development-support-qr-details span {
+  color: #cdd8ce;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.development-support-qr-details code {
+  overflow-wrap: anywhere;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 9px;
+  color: var(--muted);
+  background: rgba(0,0,0,0.24);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  font-size: 9px;
+  line-height: 1.45;
+  user-select: all;
 }
 
 .development-support-status {
@@ -343,8 +482,21 @@
   }
 
   .development-support-copy {
-    flex-basis: 100%;
     min-width: 0;
+  }
+
+  .development-support-qr-panel {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .development-support-qr-panel img {
+    max-width: 192px;
+  }
+
+  .development-support-qr-details code {
+    text-align: left;
   }
 }
 
