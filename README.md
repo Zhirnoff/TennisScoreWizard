@@ -17,7 +17,7 @@ The GitHub Pages site is stored in `docs/`:
 - `docs/help.html` — Help Center
 - `docs/privacy.html` — Privacy Policy
 - `docs/whats-new.html` — Standalone and Companion release history
-- `docs/rivalries.html` — English Rivalries feature page
+- `docs/index.html#rivalries` — English Rivalries feature section on the main page
 - `docs/assets/` — app icons, Apple Watch screenshots, Companion screenshots, and optimized image variants
 - `docs/de`, `docs/es`, `docs/fr`, `docs/it`, `docs/ja`, `docs/ko`, `docs/ru`, `docs/tr`, `docs/zh-Hans` — localized pages
 
