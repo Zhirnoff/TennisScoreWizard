@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/tennis_ball_app_icon_128.png">
   <title>Privacy Policy — Tennis Score Wizard</title>
-  <meta name="description" content="Privacy Policy for Tennis Score Wizard Standalone and Companion, including local storage, private iCloud match-history sync, paired-device transfer, and optional HealthKit workout access.">
+  <meta name="description" content="Privacy Policy for Tennis Score Wizard Standalone and Companion, including local match and Rivalry data, private iCloud sync, paired-device transfer, optional HealthKit access, and optional support payments.">
   <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/privacy.html">
   <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/privacy.html">
   <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/privacy.html">
@@ -21,13 +21,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Tennis Score Wizard">
   <meta property="og:title" content="Privacy Policy — Tennis Score Wizard">
-  <meta property="og:description" content="Privacy Policy covering local storage, private iCloud match-history sync, paired-device transfer, and optional HealthKit workout access.">
+  <meta property="og:description" content="Privacy Policy covering local match and Rivalry data, private iCloud sync, paired-device transfer, optional HealthKit access, and optional support payments.">
   <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/privacy.html">
   <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
   <meta property="og:image:alt" content="Tennis Score Wizard app icon">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Privacy Policy — Tennis Score Wizard">
-  <meta name="twitter:description" content="Privacy Policy covering local storage, private iCloud match-history sync, paired-device transfer, and optional HealthKit workout access.">
+  <meta name="twitter:description" content="Privacy Policy covering local match and Rivalry data, private iCloud sync, paired-device transfer, optional HealthKit access, and optional support payments.">
   <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
   <style>
     :root {
@@ -736,7 +736,7 @@
 
       <div class="card">
         <p>
-          This Privacy Policy applies to both <strong>Tennis Score Wizard</strong> and <strong>Tennis Score Wizard Companion</strong>. The apps store match information locally and can synchronize saved matches through the private CloudKit database for your Apple Account. The apps do not require a Tennis Score Wizard account or use a match-history server operated by the developer. The developer does not receive, sell, or use synchronized match data for advertising.
+          This Privacy Policy applies to both <strong>Tennis Score Wizard</strong> and <strong>Tennis Score Wizard Companion</strong>. The apps store match information and Rivalry player profiles locally and can synchronize them through the private CloudKit database for your Apple Account. The apps do not require a Tennis Score Wizard account or use a match-history server operated by the developer. The developer does not receive, sell, or use synchronized match or Rivalry data for advertising.
         </p>
       </div>
 
@@ -744,7 +744,7 @@
         <section class="privacy-section">
           <h2>Data Collection</h2>
           <p>
-            Tennis Score Wizard and Tennis Score Wizard Companion do not require a Tennis Score Wizard account, registration, email address, or profile. The developer does not receive match history, match statistics, workout summaries, or Health data through any server it operates. Apple may process data required to provide iCloud, the App Store, and operating-system services under Apple’s own terms and privacy policy.
+            Tennis Score Wizard and Tennis Score Wizard Companion do not require a Tennis Score Wizard account, registration, email address, or developer-hosted profile. The developer does not receive match history, Rivalry player profiles, private notes, match statistics, workout summaries, or Health data through any server it operates. Apple may process data required to provide iCloud, the App Store, purchases, and operating-system services under Apple’s own terms and privacy policy.
           </p>
         </section>
 
@@ -756,9 +756,19 @@
         </section>
 
         <section class="privacy-section">
+          <h2>Rivalry Player Profiles and Private Notes</h2>
+          <p>
+            Rivalries can store a player’s full name, the shorter name shown on Apple Watch, an optional private note, a stable internal identifier, and links between that player and saved singles matches. This information is stored locally and can synchronize through the private CloudKit database for your Apple Account. Player identifiers and deletion records help the apps keep one consistent profile across devices and avoid restoring deleted or outdated copies.
+          </p>
+          <p>
+            Companion can also send the current player list directly between a paired iPhone and Apple Watch through Watch Connectivity so the Watch picker can update without waiting for iCloud. Private notes and match assignments are not included in that direct Watch list. Private notes are not included in shared Rivalry text or visual cards.
+          </p>
+        </section>
+
+        <section class="privacy-section">
           <h2>Private iCloud Synchronization</h2>
           <p>
-            When a device is signed in to an Apple Account and iCloud Drive is enabled, the apps can synchronize saved match records through Apple CloudKit. Records are stored in the private database for that Apple Account and count toward the user’s iCloud storage. By default, only that user can access the private database; the developer cannot view its records. Standalone and Companion use the same CloudKit container, allowing saved matches to synchronize between the two apps on Apple Watch and iPhone when they use the same Apple Account. Each Apple Account has a separate private history; changing accounts does not merge or transfer records between them.
+            When a device is signed in to an Apple Account and iCloud Drive is enabled, the apps can synchronize saved match records and Rivalry library data through Apple CloudKit. Records are stored in the private database for that Apple Account and count toward the user’s iCloud storage. By default, only that user can access the private database; the developer cannot view its records. Standalone and Companion use the same CloudKit container, allowing saved matches and Rivalry data to synchronize between the two apps on Apple Watch and iPhone when they use the same Apple Account. Each Apple Account has a separate private history; changing accounts does not merge or transfer records between them.
           </p>
           <p>
             When the apps detect an Apple Account change, they switch the visible local cache to the current account. Before removing the previous account’s local cache from that device, records still waiting to synchronize are retained in an encrypted local recovery copy tied to the previous account. Those records are not uploaded to the new account. Changing accounts does not delete records already stored in either account’s private CloudKit database.
@@ -785,7 +795,17 @@
         <section class="privacy-section">
           <h2>Network Access</h2>
           <p>
-            Scoring matches does not require network access. Network access is used when the operating system communicates with Apple services such as iCloud synchronization. The apps do not send tennis scores, match history, match stats, workout data, or heart-rate data to any server operated by the developer.
+            Scoring matches does not require network access. Network access is used when the operating system communicates with Apple services such as iCloud synchronization and optional App Store purchases, or when you choose to open an external wallet for optional cryptocurrency support. The apps do not send tennis scores, match history, Rivalry profiles, private notes, match stats, workout data, or heart-rate data to any server operated by the developer.
+          </p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>Optional Support Payments</h2>
+          <p>
+            Optional one-time tips made with Apple’s in-app purchase system are processed by Apple. The developer does not receive your payment-card details. Apple may provide purchase and financial reports under its own terms and privacy policy. A tip does not unlock features, remove limits, or change how the apps work.
+          </p>
+          <p>
+            If you choose cryptocurrency support, the app shows a project wallet address or opens a compatible external wallet. Cryptocurrency transfers are made outside the app, are generally irreversible, and are recorded on a public blockchain. A public transaction can reveal wallet addresses, the transferred amount, and the time of the transfer. The app does not attach your match history, Rivalry data, Health data, or private note to that transaction.
           </p>
         </section>
 
@@ -799,7 +819,7 @@
         <section class="privacy-section">
           <h2>Data Sharing</h2>
           <p>
-            The developer does not sell, rent, or disclose match history, match stats, workout data, heart-rate data, or active-energy data to advertisers or data brokers. For iCloud synchronization, match records are sent to Apple’s CloudKit service. Companion can also transfer match records directly between the paired Apple Watch and iPhone through Watch Connectivity.
+            The developer does not sell, rent, or disclose match history, Rivalry profiles, private notes, match stats, workout data, heart-rate data, or active-energy data to advertisers or data brokers. For iCloud synchronization, match records and Rivalry library data are sent to Apple’s CloudKit service. Companion can also transfer match records and the Watch-safe player list directly between the paired Apple Watch and iPhone through Watch Connectivity.
           </p>
         </section>
 
