@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Actualizaciones del producto — Tennis Score Wizard</title>
-<meta content="Notas de las versiones de Tennis Score Wizard Standalone y Companion, con sincronización de partidos mediante iCloud y mejoras para Apple Watch y iPhone." name="description"/>
+<meta content="Novedades de Tennis Score Wizard Companion 1.4 y Standalone 1.7: perfiles privados de rivales, cara a cara, forma reciente, puntos de presión, patrones, encuentros y opciones para compartir." name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/es/whats-new.html">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/whats-new.html">
@@ -22,13 +22,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Actualizaciones del producto — Tennis Score Wizard">
-<meta property="og:description" content="Notas de las versiones de Tennis Score Wizard Standalone y Companion, con sincronización de partidos mediante iCloud y mejoras para Apple Watch y iPhone.">
+<meta property="og:description" content="Companion 1.4 y Standalone 1.7 añaden perfiles privados de rivales y Rivalidades cara a cara en el iPhone y el Apple Watch.">
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/es/whats-new.html">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Actualizaciones del producto — Tennis Score Wizard">
-<meta name="twitter:description" content="Notas de las versiones de Tennis Score Wizard Standalone y Companion, con sincronización de partidos mediante iCloud y mejoras para Apple Watch y iPhone.">
+<meta name="twitter:description" content="Companion 1.4 y Standalone 1.7 añaden perfiles privados de rivales y Rivalidades cara a cara en el iPhone y el Apple Watch.">
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -1040,6 +1040,12 @@ html[lang="zh-Hans"] .hero .help-home-badge {
   font-weight: 850;
 }
 
+.updates-status-next {
+  border-color: rgba(0, 255, 102, .5);
+  background: rgba(0, 255, 102, .12);
+  color: #9affbc;
+}
+
 .updates-status-live {
   color: #001407;
   background: var(--green);
@@ -1864,18 +1870,18 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </nav><div class="updates-page">
 <section aria-labelledby="updates-title" class="updates-hero">
 <span class="updates-kicker">Actualizaciones del producto</span>
-<h1 id="updates-title">Un Match Tie-Break decisivo, integrado en el partido.</h1>
-<p>Companion 1.3 y Standalone 1.6 permiten sustituir el último set decisivo por un Match Tie-Break a 7 o a 10, siempre con dos puntos de diferencia.</p>
+<h1 id="updates-title">Cada rival tiene su propia historia cara a cara.</h1>
+<p>Companion 1.4 incorpora perfiles privados de rivales y Rivalidades en el iPhone. Standalone 1.7 puede usar esos perfiles sincronizados para elegir rival en el Apple Watch.</p>
 <div class="updates-product-grid">
-<a class="updates-product-card updates-product-companion" href="#companion-updates"><span class="updates-product-label">Companion</span><strong>iPhone + Apple Watch</strong><small>Versión más reciente · 1.3</small></a>
-<a class="updates-product-card" href="#standalone-updates"><span class="updates-product-label">Standalone</span><strong>Solo Apple Watch</strong><small>Versión más reciente · 1.6</small></a>
+<a class="updates-product-card updates-product-companion" href="#companion-updates"><span class="updates-product-label">Companion</span><strong>iPhone + Apple Watch</strong><small>Versión actual · Versión 1.4</small></a>
+<a class="updates-product-card" href="#standalone-updates"><span class="updates-product-label">Standalone</span><strong>Solo Apple Watch</strong><small>Versión actual · Versión 1.7</small></a>
 </div>
 </section>
 <section class="updates-chapter updates-companion-chapter" id="companion-updates">
-<div class="updates-chapter-heading"><div><span class="updates-section-kicker">Versiones de Companion</span><h2>Match Tie-Break y análisis más completo en el iPhone.</h2></div><span class="updates-status updates-status-live">Ya disponible</span></div>
-<p class="updates-chapter-intro">La versión 1.3 añade el resultado al historial, las estadísticas y las opciones para compartir del iPhone.</p>
-<article class="updates-latest-release"><div class="updates-release-title"><span>Versión más reciente</span><h3>1.3</h3></div><ul><li>Si los sets están igualados antes del set decisivo, sustitúyelo por un Match Tie-Break a 7 o a 10, siempre con dos puntos de diferencia.</li><li>El Match Tie-Break decisivo aparece separado de los sets normales, el resultado en sets y el total de juegos.</li><li>El balance, el porcentaje de victorias y los registros a 7 y a 10 aparecen solo cuando hay resultados.</li><li>Companion y Standalone pueden sincronizar los mismos partidos guardados cuando utilizan la misma Cuenta de Apple.</li><li>La transferencia directa entre dispositivos enlazados y la sincronización mediante CloudKit funcionan como vías independientes, por lo que cualquiera de ellas puede entregar primero un partido guardado.</li><li>Un indicador compacto en Historial del Apple Watch muestra <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> o <b>Sync paused</b> / <b>Retry</b>.</li><li>Los historiales permanecen separados al cambiar de Cuenta de Apple, mientras los partidos pendientes de la cuenta anterior se conservan en una copia local de recuperación cifrada.</li><li>Después de una sincronización correcta, el historial de partidos puede recuperarse desde iCloud tras reinstalar la app.</li><li>Tendencias de rendimiento recuerda la última vista elegida: Win, Points, Serve o Return.</li><li>Los resultados recientes se ordenan cronológicamente de izquierda a derecha, con el resultado más nuevo a la derecha.</li><li>Las tarjetas de resultados compartidas tienen un espaciado más claro y una notación compacta para los tie-breaks.</li></ul></article>
-<div class="updates-history-grid">
+<div class="updates-chapter-heading"><div><span class="updates-section-kicker">Versiones de Companion</span><h2>Rivalidades en el iPhone y selección de rival en el Apple Watch.</h2></div><span class="updates-status updates-status-next">Disponible</span></div>
+<p class="updates-chapter-intro">La versión 1.4 convierte los partidos individuales guardados en un historial privado cara a cara para cada rival, sin cambiar los partidos como Invitado ni el flujo habitual.</p>
+<article class="updates-latest-release"><div class="updates-release-title"><span>Versión actual</span><h3>Versión 1.4</h3></div><ul><li>Crea perfiles con nombre completo, nombre corto para el Watch y una nota privada opcional.</li><li>Elige Invitado o un rival guardado antes de un partido individual; el nombre permanece visible mientras llevas el marcador.</li><li>Rivalidades reúne cara a cara, forma reciente, sets, juegos, tie-breaks, puntos, saque y resto, puntos de presión, patrones, tiempo en pista, entrenamientos y todos los encuentros.</li><li>Filtra por Todo el periodo, Este año o Últimos 30 días, compara los cinco últimos y abre el historial completo.</li><li>Asigna más tarde un partido guardado o cambia la asignación sin modificar el marcador ni las estadísticas.</li><li>Comparte tres tarjetas en orden fijo: historial y últimos encuentros, rendimiento, y patrones con entrenamiento. Las notas privadas nunca se comparten.</li><li>Los identificadores estables, la protección contra duplicados, los registros de eliminación, iCloud privado y la entrega directa entre dispositivos mantienen un único perfil y una lista actualizada en el Watch.</li><li>El apoyo puntual voluntario está disponible, pero no desbloquea funciones ni cambia la app.</li></ul></article>
+<div class="updates-history-grid"><article class="updates-history-card"><span>Version 1.3</span><h3>El Match Tie-Break decisivo, integrado en el partido.</h3><ul><li>Si los sets están igualados antes del set decisivo, sustitúyelo por un Match Tie-Break a 7 o a 10, siempre con dos puntos de diferencia.</li><li>El Match Tie-Break decisivo aparece separado de los sets normales, el resultado en sets y el total de juegos.</li><li>El balance, el porcentaje de victorias y los registros a 7 y a 10 aparecen solo cuando hay resultados.</li><li>Companion y Standalone pueden sincronizar los mismos partidos guardados cuando utilizan la misma Cuenta de Apple.</li><li>La transferencia directa entre dispositivos enlazados y la sincronización mediante CloudKit funcionan como vías independientes, por lo que cualquiera de ellas puede entregar primero un partido guardado.</li><li>Un indicador compacto en Historial del Apple Watch muestra <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> o <b>Sync paused</b> / <b>Retry</b>.</li><li>Los historiales permanecen separados al cambiar de Cuenta de Apple, mientras los partidos pendientes de la cuenta anterior se conservan en una copia local de recuperación cifrada.</li><li>Después de una sincronización correcta, el historial de partidos puede recuperarse desde iCloud tras reinstalar la app.</li><li>Tendencias de rendimiento recuerda la última vista elegida: Win, Points, Serve o Return.</li><li>Los resultados recientes se ordenan cronológicamente de izquierda a derecha, con el resultado más nuevo a la derecha.</li><li>Las tarjetas de resultados compartidas tienen un espaciado más claro y una notación compacta para los tie-breaks.</li></ul></article>
 <article class="updates-history-card">
   <span>1.2</span>
   <h3>Sincronización con iCloud, tendencias más claras y mejores tarjetas para compartir.</h3>
@@ -1888,10 +1894,10 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </section>
 <section class="updates-chapter" id="standalone-updates">
-<div class="updates-chapter-heading"><div><span class="updates-section-kicker">Versiones de Standalone</span><h2>Un Match Tie-Break decisivo, completamente en el Apple Watch.</h2></div><span class="updates-status updates-status-live">Ya disponible</span></div>
-<p class="updates-chapter-intro">La versión 1.6 incorpora el mismo flujo y formato de resultado que Companion.</p>
-<article class="updates-latest-release"><div class="updates-release-title"><span>Versión más reciente</span><h3>1.6</h3></div><ul><li>Si los sets están igualados antes del set decisivo, sustitúyelo por un Match Tie-Break a 7 o a 10, siempre con dos puntos de diferencia.</li><li>El objetivo, los sets, el sacador y el marcador permanecen visibles.</li><li>El Match Tie-Break decisivo aparece separado de los sets normales, el resultado en sets y el total de juegos.</li><li>Standalone y Companion pueden sincronizar los mismos partidos guardados cuando utilizan la misma Cuenta de Apple.</li><li>Un estado compacto en Historial del Apple Watch muestra <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> o <b>Sync paused</b> / <b>Retry</b>.</li><li>Los historiales permanecen separados al cambiar de Cuenta de Apple, mientras los partidos pendientes de la cuenta anterior se conservan en una copia local de recuperación cifrada.</li><li>Después de una sincronización correcta, el historial guardado puede recuperarse tras reinstalar la app con la misma Cuenta de Apple.</li><li>La puntuación y el historial local siguen disponibles sin iCloud; la app puede sincronizar más tarde.</li><li>Las eliminaciones también se sincronizan para que los partidos borrados no vuelvan a aparecer en otro dispositivo.</li></ul></article>
-<div class="updates-history-grid">
+<div class="updates-chapter-heading"><div><span class="updates-section-kicker">Versiones de Standalone</span><h2>Rivales guardados en el Apple Watch.</h2></div><span class="updates-status updates-status-next">Disponible</span></div>
+<p class="updates-chapter-intro">La versión 1.7 permite que Standalone use perfiles creados en Companion desde el iPhone cuando ambas apps utilizan la misma cuenta de Apple. Si no hay perfiles, la configuración del partido no cambia.</p>
+<article class="updates-latest-release"><div class="updates-release-title"><span>Versión actual</span><h3>Versión 1.7</h3></div><ul><li>Los perfiles se crean y administran en Companion desde el iPhone y llegan a Standalone mediante la sincronización privada de iCloud.</li><li>Elige Invitado o un rival sincronizado antes de un partido individual y ve su nombre corto durante el partido.</li><li>La asignación guardada vuelve a sincronizarse para que el partido aparezca en la misma Rivalidad del iPhone.</li><li>Si no hay perfiles sincronizados, la fila Rival permanece oculta y la configuración habitual no cambia.</li><li>Los dobles siguen funcionando igual y no se asignan a un único rival.</li></ul></article>
+<div class="updates-history-grid"><article class="updates-history-card"><span>Version 1.6</span><h3>Match Tie-Break completo en el Apple Watch.</h3><ul><li>Si los sets están igualados antes del set decisivo, sustitúyelo por un Match Tie-Break a 7 o a 10, siempre con dos puntos de diferencia.</li><li>El objetivo, los sets, el sacador y el marcador permanecen visibles.</li><li>El Match Tie-Break decisivo aparece separado de los sets normales, el resultado en sets y el total de juegos.</li><li>Standalone y Companion pueden sincronizar los mismos partidos guardados cuando utilizan la misma Cuenta de Apple.</li><li>Un estado compacto en Historial del Apple Watch muestra <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> o <b>Sync paused</b> / <b>Retry</b>.</li><li>Los historiales permanecen separados al cambiar de Cuenta de Apple, mientras los partidos pendientes de la cuenta anterior se conservan en una copia local de recuperación cifrada.</li><li>Después de una sincronización correcta, el historial guardado puede recuperarse tras reinstalar la app con la misma Cuenta de Apple.</li><li>La puntuación y el historial local siguen disponibles sin iCloud; la app puede sincronizar más tarde.</li><li>Las eliminaciones también se sincronizan para que los partidos borrados no vuelvan a aparecer en otro dispositivo.</li></ul></article>
 <article class="updates-history-card">
   <span>1.5</span>
   <h3>Standalone ya sincroniza los partidos guardados con iCloud.</h3>

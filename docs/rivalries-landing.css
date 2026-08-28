@@ -1,0 +1,377 @@
+.rivalries-showcase {
+  position: relative;
+  overflow: hidden;
+  margin-top: 34px;
+  padding: clamp(28px, 5vw, 64px);
+  border: 1px solid rgba(36, 255, 111, 0.3);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 88% 4%, rgba(0, 221, 85, 0.14), transparent 29%),
+    linear-gradient(145deg, rgba(13, 17, 15, 0.98), rgba(4, 8, 5, 0.98));
+}
+
+.rivalries-showcase::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 35%, rgba(49, 255, 115, 0.035));
+}
+
+.rivalries-showcase img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.rivalries-heading,
+.rivalries-chapter,
+.rivalries-footer-notes {
+  position: relative;
+  z-index: 1;
+}
+
+.rivalries-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+  gap: clamp(30px, 6vw, 76px);
+  align-items: center;
+}
+
+.rivalries-kicker,
+.rivalries-chapter-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #25f36b;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.rivalries-kicker::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  background: #25f36b;
+  -webkit-mask: url("assets/rivalries/crossed-rackets.png") center / contain no-repeat;
+  mask: url("assets/rivalries/crossed-rackets.png") center / contain no-repeat;
+}
+
+.rivalries-heading h2 {
+  max-width: 720px;
+  margin: 14px 0 18px;
+  font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.rivalries-heading p,
+.rivalries-chapter-copy > p,
+.rivalries-share-heading p {
+  color: #b7bbb8;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.56;
+}
+
+.rivalries-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin-top: 10px;
+  padding: 0 19px;
+  border: 1px solid rgba(37, 243, 107, 0.45);
+  border-radius: 999px;
+  color: #25f36b;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.rivalries-singles-note {
+  max-width: 670px;
+  margin: 18px 0 0;
+  color: #858b87;
+  font-size: 13px;
+}
+
+.rivalries-phone {
+  width: min(100%, 360px);
+  margin: 0 auto;
+  padding: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 42px;
+  background: #050505;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.48);
+}
+
+.rivalries-phone img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1320 / 2868;
+  border-radius: 34px;
+}
+
+@media (min-width: 901px) {
+  .rivalries-intro-copy {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 0 26px;
+  }
+
+  .rivalries-intro-copy .rivalries-kicker {
+    position: absolute;
+    top: 8px;
+    left: 0;
+  }
+}
+
+.rivalries-chapter {
+  margin-top: clamp(48px, 8vw, 96px);
+  padding-top: clamp(36px, 5vw, 58px);
+  border-top: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.rivalries-chapter h3 {
+  margin: 10px 0 14px;
+  font-size: clamp(31px, 4.4vw, 54px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.rivalries-watch-chapter {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(28px, 5vw, 66px);
+  align-items: center;
+}
+
+.rivalries-checklist {
+  display: grid;
+  gap: 0;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rivalries-checklist li {
+  position: relative;
+  padding: 13px 0 13px 34px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  color: #e3e6e4;
+  font-weight: 720;
+  line-height: 1.4;
+}
+
+.rivalries-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 4px;
+  color: #25f36b;
+  font-weight: 950;
+}
+
+.rivalries-watch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.rivalries-watch figure,
+.rivalries-app-screens figure,
+.rivalries-share-grid figure {
+  margin: 0;
+}
+
+.rivalries-watch figure {
+  padding: 10px;
+  border: 1px solid rgba(37, 243, 107, 0.26);
+  border-radius: 24px;
+  background: rgba(0, 0, 0, 0.34);
+}
+
+.rivalries-watch img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 416 / 496;
+  border-radius: 20px;
+}
+
+.rivalries-watch figcaption,
+.rivalries-app-screens figcaption,
+.rivalries-share-grid figcaption {
+  padding: 11px 4px 2px;
+  color: #9da29f;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: center;
+}
+
+.rivalries-record-chapter > .rivalries-chapter-copy {
+  max-width: 900px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.rivalries-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+  text-align: left;
+}
+
+.rivalries-benefit {
+  min-height: 145px;
+  padding: 21px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 21px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.rivalries-benefit strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.rivalries-benefit p,
+.rivalries-footer-notes p {
+  margin: 0;
+  color: #9da29f;
+  line-height: 1.45;
+}
+
+.rivalries-app-screens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(14px, 3vw, 28px);
+}
+
+.rivalries-app-screens figure {
+  width: min(100%, 245px);
+}
+
+.rivalries-app-screens img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1320 / 2868;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 30px;
+  background: #000;
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.42);
+}
+
+.rivalries-share-heading {
+  max-width: 850px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.rivalries-share-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.rivalries-share-grid figure {
+  width: min(100%, 280px);
+}
+
+.rivalries-share-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 24px;
+  background: #000;
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.42);
+}
+
+.rivalries-footer-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: clamp(44px, 6vw, 72px);
+}
+
+.rivalries-footer-notes article {
+  padding: 24px;
+  border: 1px solid rgba(37, 243, 107, 0.18);
+  border-radius: 22px;
+  background: rgba(9, 17, 11, 0.74);
+}
+
+.rivalries-footer-notes strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #25f36b;
+  font-size: 17px;
+}
+
+@media (max-width: 900px) {
+  .rivalries-heading,
+  .rivalries-watch-chapter {
+    grid-template-columns: 1fr;
+  }
+
+  .rivalries-intro-copy,
+  .rivalries-chapter-copy {
+    max-width: 720px;
+  }
+
+  .rivalries-phone {
+    width: min(100%, 340px);
+  }
+
+  .rivalries-benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .rivalries-showcase {
+    padding: 28px 18px;
+    border-radius: 25px;
+  }
+
+  .rivalries-watch {
+    grid-template-columns: 1fr;
+  }
+
+  .rivalries-watch figure {
+    width: min(100%, 360px);
+    margin-inline: auto;
+  }
+
+  .rivalries-app-screens,
+  .rivalries-share-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(250px, 78vw);
+    justify-content: start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 2px 1px 16px;
+  }
+
+  .rivalries-app-screens figure,
+  .rivalries-share-grid figure {
+    width: 100%;
+    scroll-snap-align: center;
+  }
+
+  .rivalries-footer-notes {
+    grid-template-columns: 1fr;
+  }
+}

@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Tennis Score Wizard — Segnapunti per il tennis su Apple Watch e iPhone</title>
-<meta content="Segna i punti su Apple Watch con Tennis Score Wizard Standalone o Companion. Sincronizza le partite salvate tramite iCloud e consulta su iPhone cronologia, statistiche e allenamenti di Companion." name="description"/>
+<meta content="Segna ogni punto su Apple Watch con Tennis Score Wizard Standalone o Companion. Crea rivalità Head-to-Head private, sincronizza le partite con iCloud e consulta statistiche dettagliate su iPhone." name="description"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/it/" rel="canonical"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/" hreflang="en" rel="alternate"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/de/" hreflang="de" rel="alternate"/>
@@ -22,13 +22,13 @@
 <meta content="website" property="og:type"/>
 <meta content="Tennis Score Wizard" property="og:site_name"/>
 <meta content="Tennis Score Wizard — Segnapunti per il tennis su Apple Watch e iPhone" property="og:title"/>
-<meta content="Segna i punti su Apple Watch e sincronizza le partite salvate tramite iCloud tra Tennis Score Wizard Standalone e Companion." property="og:description"/>
+<meta content="Segna i punti su Apple Watch, crea Rivalità Head-to-Head private e sincronizza le partite con iCloud tra Standalone e Companion." property="og:description"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/it/" property="og:url"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
 <meta content="Icona dell’app Tennis Score Wizard" property="og:image:alt"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="Tennis Score Wizard — Segnapunti per il tennis su Apple Watch e iPhone" name="twitter:title"/>
-<meta content="Segna i punti su Apple Watch e sincronizza le partite salvate tramite iCloud tra Tennis Score Wizard Standalone e Companion." name="twitter:description"/>
+<meta content="Segna i punti su Apple Watch, crea Rivalità Head-to-Head private e sincronizza le partite con iCloud tra Standalone e Companion." name="twitter:description"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
 <style>
     :root {
@@ -2273,6 +2273,8 @@ footer {
 }
 </style>
 <link href="../release-1-1.css" rel="stylesheet"/>
+<link href="../rivalries-landing.css" rel="stylesheet"/>
+<script src="../support-development.js" defer></script>
 </head>
 <body>
 <main class="page">
@@ -2314,7 +2316,7 @@ footer {
 </div>
 <h1>Registra ogni punto. Analizza ogni partita.</h1>
 <p>
-      Scegli Standalone per un’esperienza completa su Apple Watch oppure Companion per aggiungere su iPhone cronologia delle partite, statistiche e dettagli degli allenamenti. Entrambe le app possono sincronizzare le partite salvate tramite iCloud quando usi lo stesso Apple Account.
+      Scegli Standalone per un’esperienza completa su Apple Watch oppure Companion per aggiungere su iPhone Rivalità, cronologia delle partite, statistiche e dettagli degli allenamenti. Entrambe le app possono sincronizzare le partite salvate tramite iCloud quando usi lo stesso Apple Account.
     </p>
 <div class="hero-actions">
 <a class="hero-version-link" href="#versions">
@@ -2371,7 +2373,7 @@ footer {
 <strong>App Store</strong>
 </span>
 </a>
-<span class="version-availability">Versione 1.6 · Disponibile ora</span>
+<span class="version-availability">Versione 1.7 · Disponibile ora</span>
 </article>
 <article class="card version-card version-card-companion">
 <span class="version-kicker">Companion</span>
@@ -2391,7 +2393,7 @@ footer {
 <strong>App Store</strong>
 </span>
 </a>
-<span class="version-availability">Versione 1.3 · Disponibile ora</span>
+<span class="version-availability">Versione 1.4 · Disponibile ora</span>
 </article>
 </div>
 <a class="hero-version-link versions-compare-link" href="#comparison">Confronta le funzioni <span aria-hidden="true">↓</span></a>
@@ -2452,6 +2454,8 @@ footer {
 </article>
 </div>
 </section>
+
+<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">Novità · Rivalità</span><h2 id="rivalries-title">Ogni avversario ha una storia.</h2><p>Scegli un avversario salvato prima di un singolare e Tennis Score Wizard crea automaticamente un Head-to-Head privato. Risultati, punti importanti, rimonte, serie, allenamenti e incontri rimangono raccolti in un unico profilo.</p><a class="rivalries-action" href="whats-new.html">Leggi le note di rilascio</a><p class="rivalries-singles-note">Al momento le Rivalità usano le partite di singolare. Il doppio continua a funzionare normalmente, senza assegnare un unico avversario.</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="Elenco delle rivalità con avversari salvati e record Head-to-Head" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · In campo</span><h3>Scegli l’avversario. Poi gioca.</h3><p>Durante la configurazione del singolare scegli Ospite o un giocatore salvato. Il nome breve appare nella schermata del punteggio e i normali tocchi creano automaticamente il record.</p><ul class="rivalries-checklist"><li>Crea e gestisci i giocatori in Companion su iPhone</li><li>Sincronizza privatamente l’elenco con Apple Watch tramite iCloud</li><li>Assegna in seguito una vecchia partita di singolare</li><li>Lascia le partite Ospite fuori da Rivalità</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="Scegli Ospite o un giocatore salvato" width="416" height="496" loading="lazy" decoding="async"><figcaption>Scegli Ospite o un giocatore salvato</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="Vedi il nome scelto durante la partita" width="416" height="496" loading="lazy" decoding="async"><figcaption>Vedi il nome scelto durante la partita</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · Il record completo</span><h3>Un giocatore. Ogni prospettiva.</h3><p>Filtra per Sempre, Quest’anno o Ultimi 30 giorni. Confronta la forma recente con l’intero periodo, apri ogni incontro e visualizza solo le statistiche realmente registrate.</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>Head-to-Head</strong><p>Incontri decisi, vittorie, set, game, tie-break e Match Tie-Break.</p></article><article class="rivalries-benefit"><strong>Prestazione</strong><p>Punti, percentuali di turni di servizio tenuti e break, servizio, risposta e punti importanti.</p></article><article class="rivalries-benefit"><strong>Schemi e impegno</strong><p>Vittorie dopo aver perso il primo set, serie, tempo in campo, frequenza cardiaca ed energia.</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Head-to-Head e forma recente" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Head-to-Head e forma recente</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Prestazione, schemi e impegno" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Prestazione, schemi e impegno</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Tutti gli incontri salvati" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Tutti gli incontri salvati</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · Condividi la rivalità</span><h3>Tre schede. Una sola storia.</h3><p>L’ordine è fisso: record e incontri recenti, prestazione, quindi schemi e contesto dell’allenamento. Le note private non vengono mai condivise.</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="Record e incontri recenti" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · Record e incontri recenti</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="Prestazione" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · Prestazione</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="Schemi, tempo e allenamento" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · Schemi, tempo e allenamento</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>Privato per scelta</strong><p>Profili, note e assegnazioni restano sui tuoi dispositivi e possono sincronizzarsi tramite i tuoi dati iCloud privati.</p></article><article><strong>Nessun lavoro extra durante la partita</strong><p>La scelta dell’avversario aggiunge solo il contesto prima di giocare. Punteggio, Annulla, allenamento e flusso della partita restano invariati.</p></article></div></section>
 <section class="companion-showcase" id="companion-benefits">
 <div class="companion-heading">
 <span class="companion-section-kicker">Esperienza Companion</span>
@@ -2861,8 +2865,8 @@ footer {
 </div>
 <div class="comparison-row" role="row">
 <div class="comparison-feature" role="rowheader">Sincronizzazione delle partite con iCloud</div>
-<div role="cell"><span class="comparison-check">✓</span> Versione 1.5</div>
-<div role="cell"><span class="comparison-check">✓</span> Versione 1.2</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluso</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluso</div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Esperienza sincronizzata su iPhone</div>
@@ -3057,7 +3061,7 @@ footer {
 <strong>Posso eliminare la cronologia delle partite?</strong>
 <p>Sì. Le partite salvate possono essere eliminate dalla schermata Cronologia e l’eliminazione viene sincronizzata quando la sincronizzazione iCloud è disponibile.</p>
 </div>
-</div>
+<div class="faq"><strong>Come funzionano le rivalità?</strong><p>Crea l’avversario in Companion su iPhone, selezionalo prima di una partita di singolare su Apple Watch e segna i punti come sempre. Tennis Score Wizard collega la partita salvata al giocatore e crea automaticamente Head-to-Head, forma recente, prestazioni, schemi, tempo in campo, allenamenti e cronologia degli incontri. Standalone può usare i profili sincronizzati con lo stesso Apple Account. Ospite lascia la partita fuori da Rivalità.</p></div></div>
 </section>
 <section>
 <h2>Privacy</h2>
@@ -3069,6 +3073,14 @@ footer {
 </div>
 </section>
 </div>
+<section id="support-development" class="development-support" aria-labelledby="development-support-title">
+<div class="development-support-heading"><span class="development-support-kicker">Sviluppatore indipendente</span><h2 id="development-support-title">Sostieni il prossimo match.</h2><p>Tennis Score Wizard è progettato, sviluppato e mantenuto da un unico sviluppatore indipendente. Se ti aiuta durante il gioco, puoi sostenere lo sviluppo continuo dell’app.</p></div>
+<div class="development-support-grid">
+<article class="development-support-card"><div class="development-support-card-header"><span class="development-support-icon" aria-hidden="true">♥</span><h3>Sostieni con Apple</h3></div><p>Lascia una mancia una tantum con il metodo di pagamento del tuo Account Apple e confermala in sicurezza con Face ID o Touch ID.</p><div class="development-support-options" aria-label="Mance Apple"><span class="development-support-option">Piccola mancia <strong>App Store</strong></span><span class="development-support-option">Pallina da match <strong>App Store</strong></span><span class="development-support-option">Sostenitore <strong>App Store</strong></span></div><span class="development-support-status">Disponibile nell’app: Info → Support Development.</span></article>
+<article class="development-support-card"><div class="development-support-card-header"><span class="development-support-icon" aria-hidden="true">₿</span><h3>Sostieni con criptovalute</h3></div><p>Invia un sostegno facoltativo direttamente a un portafoglio verificato del progetto. La rete è sempre indicata accanto alla valuta.</p><div class="development-support-options" data-wallet-list data-copy-label="Copia" data-copied-label="Copiato" data-copy-failed-label="Riprova" data-show-qr-label="Mostra codice QR" data-qr-code-label="codice QR" data-qr-instruction="Scansiona con un portafoglio compatibile, poi verifica rete e indirizzo." aria-label="Portafogli crypto verificati"></div><span class="development-support-status">Tocca una valuta per copiare l’indirizzo oppure apri il suo codice QR. Per USDT e GRAM non è richiesto alcun memo.</span></article>
+</div><p class="development-support-disclaimer">Il sostegno è completamente facoltativo e non sblocca funzioni o contenuti digitali. Verifica sempre indirizzo e rete prima dell’invio.</p>
+</section>
+
 <section id="contact">
 <h2>Assistenza</h2>
 <div class="support-card">
@@ -3086,6 +3098,7 @@ footer {
 </div>
 <nav aria-label="Navigazione secondaria" class="footer-links">
 <a aria-label="Tennis Score Wizard su Instagram (si apre in una nuova scheda)" href="https://www.instagram.com/tennisscorewizard/" rel="noopener noreferrer" target="_blank">Instagram</a>
+<a href="#support-development">Sostieni il progetto</a>
 <a href="privacy.html">Privacy</a>
 </nav>
 </footer>

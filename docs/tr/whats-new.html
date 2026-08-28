@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Ürün Güncellemeleri — Tennis Score Wizard</title>
-<meta content="Tennis Score Wizard Standalone ve Companion sürüm notları: iCloud üzerinden maç eşzamanlaması ile Apple Watch ve iPhone iyileştirmeleri." name="description"/>
+<meta content="Tennis Score Wizard Companion 1.4 ve Standalone 1.7 yenilikleri: özel rakip profilleri, karşılıklı kayıtlar, son form, kritik puanlar, örüntüler, tüm karşılaşmalar ve paylaşım." name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/tr/whats-new.html">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/whats-new.html">
@@ -22,13 +22,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Ürün Güncellemeleri — Tennis Score Wizard">
-<meta property="og:description" content="Tennis Score Wizard Standalone ve Companion sürüm notları: iCloud üzerinden maç eşzamanlaması ile Apple Watch ve iPhone iyileştirmeleri.">
+<meta property="og:description" content="Companion 1.4 ve Standalone 1.7, iPhone ve Apple Watch’a özel rakip profilleri ve karşılıklı maç kayıtları ekler.">
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/tr/whats-new.html">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ürün Güncellemeleri — Tennis Score Wizard">
-<meta name="twitter:description" content="Tennis Score Wizard Standalone ve Companion sürüm notları: iCloud üzerinden maç eşzamanlaması ile Apple Watch ve iPhone iyileştirmeleri.">
+<meta name="twitter:description" content="Companion 1.4 ve Standalone 1.7, iPhone ve Apple Watch’a özel rakip profilleri ve karşılıklı maç kayıtları ekler.">
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -1040,6 +1040,12 @@ html[lang="zh-Hans"] .hero .help-home-badge {
   font-weight: 850;
 }
 
+.updates-status-next {
+  border-color: rgba(0, 255, 102, .5);
+  background: rgba(0, 255, 102, .12);
+  color: #9affbc;
+}
+
 .updates-status-live {
   color: #001407;
   background: var(--green);
@@ -1864,18 +1870,18 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </nav><div class="updates-page">
 <section aria-labelledby="updates-title" class="updates-hero">
 <span class="updates-kicker">Ürün güncellemeleri</span>
-<h1 id="updates-title">Maçın içine yerleşik karar Maç Tie-Break’i.</h1>
-<p>Companion 1.3 ve Standalone 1.6, son karar setini 7 veya 10 puanlık ve iki fark gereken bir maç tie-break’iyle değiştirmenizi sağlar.</p>
+<h1 id="updates-title">Her rakibin kendine özgü bir karşılaşma hikâyesi vardır.</h1>
+<p>Companion 1.4, iPhone’a özel rakip profilleri ve Rekabetler özelliğini getirir. Standalone 1.7, Apple Watch’ta rakip seçmek için bu eşzamanlanan profilleri kullanabilir.</p>
 <div class="updates-product-grid">
-<a class="updates-product-card updates-product-companion" href="#companion-updates"><span class="updates-product-label">Companion</span><strong>iPhone + Apple Watch</strong><small>En son sürüm · 1.3</small></a>
-<a class="updates-product-card" href="#standalone-updates"><span class="updates-product-label">Standalone</span><strong>Yalnızca Apple Watch</strong><small>En son sürüm · 1.6</small></a>
+<a class="updates-product-card updates-product-companion" href="#companion-updates"><span class="updates-product-label">Companion</span><strong>iPhone + Apple Watch</strong><small>Güncel sürüm · Sürüm 1.4</small></a>
+<a class="updates-product-card" href="#standalone-updates"><span class="updates-product-label">Standalone</span><strong>Yalnızca Apple Watch</strong><small>Güncel sürüm · Sürüm 1.7</small></a>
 </div>
 </section>
 <section class="updates-chapter updates-companion-chapter" id="companion-updates">
-<div class="updates-chapter-heading"><div><span class="updates-section-kicker">Companion sürümleri</span><h2>Maç Tie-Break skoru ve iPhone’da ayrıntılı inceleme.</h2></div><span class="updates-status updates-status-live">Kullanıma sunuldu</span></div>
-<p class="updates-chapter-intro">1.3 sürümü sonucu iPhone Geçmiş, İstatistikler ve paylaşım bölümlerine taşır.</p>
-<article class="updates-latest-release"><div class="updates-release-title"><span>En son sürüm</span><h3>1.3</h3></div><ul><li>Karar seti başlamadan önce setler eşitse bu seti 7 veya 10 puanlık, iki fark gereken bir maç tie-break’iyle değiştirin.</li><li>Karar maç tie-break’i normal setlerden, set sonucundan ve toplam oyunlardan ayrı gösterilir.</li><li>Derece, kazanma oranı ve 7 ile 10 puanlık kayıtlar yalnızca sonuç varsa gösterilir.</li><li>Companion ve Standalone, aynı Apple Hesabı kullanıldığında kaydedilen aynı maçları eşzamanlayabilir.</li><li>Doğrudan eşlenmiş aygıt aktarımı ile CloudKit eşzamanlaması bağımsız yollar olarak çalışır; bu nedenle kaydedilen maçı önce herhangi biri ulaştırabilir.</li><li>Apple Watch’taki Geçmiş bölümünde yer alan kompakt gösterge <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> veya <b>Sync paused</b> / <b>Retry</b> durumunu gösterir.</li><li>Apple Hesabı değiştirildiğinde maç geçmişleri ayrı kalır; önceki hesapta eşzamanlanmamış maçlar şifrelenmiş yerel bir kurtarma kopyasında korunur.</li><li>Başarılı eşzamanlamadan sonra maç geçmişi, uygulama yeniden yüklendiğinde iCloud’dan geri getirilebilir.</li><li>Performans Trendleri son seçilen Win, Points, Serve veya Return görünümünü hatırlar.</li><li>Sonuçlar kronolojik olarak soldan sağa sıralanır; en yeni sonuç sağda yer alır.</li><li>Paylaşılan sonuç kartlarında daha anlaşılır boşluklar ve kompakt tie-break gösterimi kullanılır.</li></ul></article>
-<div class="updates-history-grid">
+<div class="updates-chapter-heading"><div><span class="updates-section-kicker">Companion sürümleri</span><h2>iPhone’da Rekabetler, Apple Watch’ta rakip seçimi.</h2></div><span class="updates-status updates-status-next">Yayında</span></div>
+<p class="updates-chapter-intro">Sürüm 1.4 kayıtlı tekler maçlarını her rakip için özel bir karşılıklı maç hikâyesine dönüştürür; Misafir ve mevcut maç akışı değişmez.</p>
+<article class="updates-latest-release"><div class="updates-release-title"><span>Güncel sürüm</span><h3>Sürüm 1.4</h3></div><ul><li>Tam ad, kısa Watch adı ve isteğe bağlı özel notla rakip profili oluşturun.</li><li>Tekler maçından önce Misafir veya kayıtlı rakip seçin; isim skor tutulurken görünür kalır.</li><li>Rekabetler; karşılıklı kayıt, son form, set, oyun, tie-break, puan, servis ve karşılama, kritik puanlar, örüntüler, kort süresi, antrenmanlar ve tüm karşılaşmaları birleştirir.</li><li>Tüm Zamanlar, Bu Yıl veya Son 30 Gün filtresi kullanın, son beş maçı karşılaştırın ve tam geçmişi açın.</li><li>Eski bir maçı daha sonra atayın veya skor ve istatistikleri değiştirmeden atamayı değiştirin.</li><li>Üç kartı sabit sırayla paylaşın: kayıt ve son karşılaşmalar, maç performansı, ardından örüntüler ve antrenman. Özel notlar paylaşılmaz.</li><li>Sabit oyuncu kimlikleri, yinelenen ad koruması, silme kayıtları, özel iCloud ve doğrudan aygıt aktarımı profilleri ve Watch listesini tutarlı tutar.</li><li>İsteğe bağlı tek seferlik destek sunulur; özellik açmaz ve uygulamayı değiştirmez.</li></ul></article>
+<div class="updates-history-grid"><article class="updates-history-card"><span>Version 1.3</span><h3>Karar Match Tie-Break’i maç akışına dahil.</h3><ul><li>Karar seti başlamadan önce setler eşitse bu seti 7 veya 10 puanlık, iki fark gereken bir maç tie-break’iyle değiştirin.</li><li>Karar maç tie-break’i normal setlerden, set sonucundan ve toplam oyunlardan ayrı gösterilir.</li><li>Derece, kazanma oranı ve 7 ile 10 puanlık kayıtlar yalnızca sonuç varsa gösterilir.</li><li>Companion ve Standalone, aynı Apple Hesabı kullanıldığında kaydedilen aynı maçları eşzamanlayabilir.</li><li>Doğrudan eşlenmiş aygıt aktarımı ile CloudKit eşzamanlaması bağımsız yollar olarak çalışır; bu nedenle kaydedilen maçı önce herhangi biri ulaştırabilir.</li><li>Apple Watch’taki Geçmiş bölümünde yer alan kompakt gösterge <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> veya <b>Sync paused</b> / <b>Retry</b> durumunu gösterir.</li><li>Apple Hesabı değiştirildiğinde maç geçmişleri ayrı kalır; önceki hesapta eşzamanlanmamış maçlar şifrelenmiş yerel bir kurtarma kopyasında korunur.</li><li>Başarılı eşzamanlamadan sonra maç geçmişi, uygulama yeniden yüklendiğinde iCloud’dan geri getirilebilir.</li><li>Performans Trendleri son seçilen Win, Points, Serve veya Return görünümünü hatırlar.</li><li>Sonuçlar kronolojik olarak soldan sağa sıralanır; en yeni sonuç sağda yer alır.</li><li>Paylaşılan sonuç kartlarında daha anlaşılır boşluklar ve kompakt tie-break gösterimi kullanılır.</li></ul></article>
 <article class="updates-history-card">
   <span>1.2</span>
   <h3>iCloud eşzamanlaması, daha anlaşılır trendler ve daha iyi paylaşım.</h3>
@@ -1904,10 +1910,10 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </section>
 <section class="updates-chapter" id="standalone-updates">
-<div class="updates-chapter-heading"><div><span class="updates-section-kicker">Standalone sürümleri</span><h2>Tamamen Apple Watch’ta karar Maç Tie-Break’i.</h2></div><span class="updates-status updates-status-live">Kullanıma sunuldu</span></div>
-<p class="updates-chapter-intro">1.6 sürümü Companion ile aynı akışı ve sonuç biçimini kullanır.</p>
-<article class="updates-latest-release"><div class="updates-release-title"><span>En son sürüm</span><h3>1.6</h3></div><ul><li>Karar seti başlamadan önce setler eşitse bu seti 7 veya 10 puanlık, iki fark gereken bir maç tie-break’iyle değiştirin.</li><li>Hedef, set durumu, servis atan taraf ve puanlar görünür kalır.</li><li>Karar maç tie-break’i normal setlerden, set sonucundan ve toplam oyunlardan ayrı gösterilir.</li><li>Standalone ve Companion, aynı Apple Hesabı kullanıldığında kaydedilen aynı maçları eşzamanlayabilir.</li><li>Apple Watch’taki Geçmiş bölümünde kompakt bir durum <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> veya <b>Sync paused</b> / <b>Retry</b> bilgisini gösterir.</li><li>Apple Hesabı değiştirildiğinde maç geçmişleri ayrı kalır; önceki hesapta eşzamanlanmamış maçlar şifrelenmiş yerel bir kurtarma kopyasında korunur.</li><li>Başarılı eşzamanlamadan sonra kaydedilen maç geçmişi, aynı Apple Hesabıyla uygulama yeniden yüklendiğinde geri getirilebilir.</li><li>iCloud kullanılamadığında skor tutma ve yerel geçmiş çalışmaya devam eder; uygulama daha sonra eşzamanlayabilir.</li><li>Silinen maçlar da eşzamanlanır; böylece kaldırılan geçmiş başka bir aygıtta yeniden görünmez.</li></ul></article>
-<div class="updates-history-grid">
+<div class="updates-chapter-heading"><div><span class="updates-section-kicker">Standalone sürümleri</span><h2>Apple Watch’ta kayıtlı rakip seçimi.</h2></div><span class="updates-status updates-status-next">Yayında</span></div>
+<p class="updates-chapter-intro">Sürüm 1.7, iki uygulama aynı Apple Hesabını kullandığında Standalone’ın iPhone’daki Companion’da oluşturulan profilleri kullanmasını sağlar. Profil yoksa maç ayarları değişmez.</p>
+<article class="updates-latest-release"><div class="updates-release-title"><span>Güncel sürüm</span><h3>Sürüm 1.7</h3></div><ul><li>Rakip profilleri iPhone’daki Companion’da oluşturulur ve yönetilir, ardından özel iCloud eşzamanlamasıyla Standalone’a ulaşır.</li><li>Tekler öncesinde Misafir veya eşzamanlanmış bir rakip seçin ve kısa adı maç sırasında görün.</li><li>Kaydedilen rakip ataması geri eşzamanlanır; böylece maç iPhone’daki aynı Rekabete eklenir.</li><li>Eşzamanlanmış profil yoksa Rakip satırı gizli kalır ve mevcut maç ayarları değişmez.</li><li>Çiftler aynı şekilde çalışır ve tek bir rakibe atanmaz.</li></ul></article>
+<div class="updates-history-grid"><article class="updates-history-card"><span>Version 1.6</span><h3>Apple Watch’ta eksiksiz Match Tie-Break.</h3><ul><li>Karar seti başlamadan önce setler eşitse bu seti 7 veya 10 puanlık, iki fark gereken bir maç tie-break’iyle değiştirin.</li><li>Hedef, set durumu, servis atan taraf ve puanlar görünür kalır.</li><li>Karar maç tie-break’i normal setlerden, set sonucundan ve toplam oyunlardan ayrı gösterilir.</li><li>Standalone ve Companion, aynı Apple Hesabı kullanıldığında kaydedilen aynı maçları eşzamanlayabilir.</li><li>Apple Watch’taki Geçmiş bölümünde kompakt bir durum <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> veya <b>Sync paused</b> / <b>Retry</b> bilgisini gösterir.</li><li>Apple Hesabı değiştirildiğinde maç geçmişleri ayrı kalır; önceki hesapta eşzamanlanmamış maçlar şifrelenmiş yerel bir kurtarma kopyasında korunur.</li><li>Başarılı eşzamanlamadan sonra kaydedilen maç geçmişi, aynı Apple Hesabıyla uygulama yeniden yüklendiğinde geri getirilebilir.</li><li>iCloud kullanılamadığında skor tutma ve yerel geçmiş çalışmaya devam eder; uygulama daha sonra eşzamanlayabilir.</li><li>Silinen maçlar da eşzamanlanır; böylece kaldırılan geçmiş başka bir aygıtta yeniden görünmez.</li></ul></article>
 <article class="updates-history-card">
   <span>1.5</span>
   <h3>Standalone artık maçları iCloud üzerinden eşzamanlıyor.</h3>

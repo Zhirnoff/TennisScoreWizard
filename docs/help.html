@@ -1227,7 +1227,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Home" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
 <h1>Help Center</h1>
 <p>
-      Learn how to configure and score matches, synchronize saved matches through iCloud,
+      Learn how to configure and score matches, build private Head-to-Head Rivalries, synchronize saved matches through iCloud,
       connect Companion with iPhone,
       understand statistics, record workouts in Health, use watch-face complications,
       and troubleshoot common issues.
@@ -1366,6 +1366,55 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="help-item">
 <strong>What should I do after recording a point by mistake?</strong>
 <p>Use Undo as soon as possible. It restores the complete state from before the incorrect point and is safer than trying to compensate by awarding another point.</p>
+</div>
+</div>
+</section>
+
+<section id="rivalries">
+<h2>Opponents and Rivalries</h2>
+<p class="section-subtitle">
+    Choose a saved singles opponent on Apple Watch and build a private Head-to-Head record automatically.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>How do I create an opponent?</strong>
+<p>Open Rivalries in Companion on iPhone. Enter the full name and a short Watch name there. The Watch name is limited to 16 characters so it remains readable in match setup and live scoring. Standalone on Apple Watch can then select synchronized opponents, but it cannot create or edit player profiles.</p>
+</div>
+<div class="help-item">
+<strong>How do I delete an opponent?</strong>
+<p>In Rivalries on iPhone, touch and hold the player’s card, choose Delete Player, then confirm. Matches assigned to that player stay in Match History and become unassigned, so you can assign them to another player later.</p>
+</div>
+<div class="help-item">
+<strong>How do I choose an opponent on Apple Watch?</strong>
+<p>Choose Singles during match setup, open Opponent, and select Guest or a saved player before starting. Guest records a normal match without adding it to a Rivalry. Doubles does not assign one opponent to the team match.</p>
+</div>
+<div class="help-item">
+<strong>What is included in Head-to-Head?</strong>
+<p>Head-to-Head uses decided singles meetings assigned to that player. Completed matches and stopped matches with a clear leader contribute to the record; a tied stopped match remains neutral. The Rivalry can also show sets, games, tie-breaks, points, serve and return, break points, time, workout summaries, and the saved match list when those values were recorded.</p>
+</div>
+<div class="help-item">
+<strong>What does Last 5 vs All Time mean?</strong>
+<p>It compares your match win rate in the latest five decided meetings with your win rate across the full selected period. If fewer than five decided meetings exist, it uses the available meetings. The comparison changes when you select All Time, This Year, or Last 30 Days.</p>
+</div>
+<div class="help-item">
+<strong>What is a win after losing Set 1?</strong>
+<p>It is a decided match you won after losing the first completed set. The detail text shows how many such wins you recorded and how many qualifying matches began with a first-set loss. For example, 2 of 5 means two wins from five qualifying matches, not two attempts out of an arbitrary limit.</p>
+</div>
+<div class="help-item">
+<strong>What are Current Streak and Best Win Streak?</strong>
+<p>Current Streak is the latest uninterrupted sequence of decided wins or losses. Best Win Streak is the longest uninterrupted run of decided match wins in the selected period.</p>
+</div>
+<div class="help-item">
+<strong>Can I assign an older match to a player?</strong>
+<p>Yes. Open the saved singles match on iPhone, choose Assign in the Opponent section, and select the correct player. You can change or remove the assignment later without changing the score or recorded statistics.</p>
+</div>
+<div class="help-item">
+<strong>How are duplicate players prevented?</strong>
+<p>Each player has a stable internal identifier, while creation also checks normalized full and Watch names to prevent accidental duplicates. Synchronization uses the stable identifier and deletion records so the same profile is updated rather than recreated on another device.</p>
+</div>
+<div class="help-item">
+<strong>Are private notes shared?</strong>
+<p>No. A private note stays in the Rivalry profile and is excluded from shared text and visual cards. Shared visual cards use the active time filter and keep a fixed order: record and recent meetings, match performance, then patterns and workout context.</p>
 </div>
 </div>
 </section>
@@ -1555,6 +1604,27 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="help-item">
 <strong>Can I delete a saved match?</strong>
 <p>Yes. Use the delete action in match history and confirm the removal. Deleting a match removes that saved history entry from the app.</p>
+</div>
+</div>
+</section>
+
+<section id="support-development">
+<h2>Optional development support</h2>
+<p class="section-subtitle">
+    One-time support helps future development but never unlocks features or changes the app.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Does a tip unlock anything?</strong>
+<p>No. Apple tips and cryptocurrency support are optional. Every app feature remains available according to the product you purchased, whether or not you leave a tip.</p>
+</div>
+<div class="help-item">
+<strong>How does an Apple tip work?</strong>
+<p>Select a one-time amount in Info → Support Development and confirm it through Apple’s purchase sheet. Apple processes the payment using the payment method connected to your App Store account.</p>
+</div>
+<div class="help-item">
+<strong>What should I check before cryptocurrency support?</strong>
+<p>Confirm the currency, network, and complete destination address in your wallet before sending. Blockchain transfers are generally irreversible. Tennis Score Wizard does not attach match, Rivalry, workout, or Health data to the transaction.</p>
 </div>
 </div>
 </section>
