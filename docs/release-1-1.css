@@ -1458,3 +1458,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.updates-product-card[href="#companion-updates"] {
+  order: 1;
+}
+
+.updates-product-card[href="#standalone-updates"] {
+  order: 2;
+}
