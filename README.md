@@ -5,7 +5,7 @@ This repository contains the public website, Help Center, Privacy Policy, releas
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
 - **Companion** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
 
-The current release branch prepares Companion 1.4 and Standalone 1.7, including opponent profiles, private Head-to-Head Rivalries, Apple Watch opponent selection, updated sharing, optional development support, and revised English website content. Keep it separate from `main` until both App Store versions are public.
+The current release branch prepares Companion 1.5 and Standalone 1.8, including flexible scoring formats, updated result cards, clearer history and sharing, iCloud match sync, and Match Highlights in Companion. Keep it separate from `main` until both App Store versions are public.
 
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
@@ -56,4 +56,4 @@ For questions, bug reports, or feedback, open a GitHub issue or email tennisscor
 
 When reporting an app issue, include the device model, operating-system version, app version, steps to reproduce, expected result, and actual result.
 
-Tennis Score Wizard does not require a Tennis Score Wizard account and does not send match history or Rivalry data to a developer-operated server. Companion can transfer match data and a Watch-safe opponent list directly between a paired Apple Watch and iPhone. Companion 1.4 and Standalone 1.7 can also synchronize saved matches and Rivalry library data through the private CloudKit database associated with the user’s Apple Account.
+Tennis Score Wizard does not require a Tennis Score Wizard account and does not send match history or Rivalry data to a developer-operated server. Companion can transfer match data and a Watch-safe opponent list directly between a paired Apple Watch and iPhone. Companion 1.5 and Standalone 1.8 can also synchronize saved matches and Rivalry library data through the private CloudKit database associated with the user’s Apple Account.
