@@ -5,8 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
-<title>Tennis Score Wizard — Apple Watch와 iPhone용 테니스 스코어</title>
-<meta content="Tennis Score Wizard Standalone 또는 Companion으로 Apple Watch에서 테니스 점수를 기록하세요. 비공개 상대 전적을 만들고 iCloud로 경기를 동기화하며 iPhone에서 상세 통계를 확인할 수 있습니다." name="description"/>
+<title>Tennis Score Wizard — Apple Watch와 iPhone용 테니스 스코어</title>
+<meta content="Apple Watch에서 One Set, 공식 Short Sets, No‑Ad, Custom Set으로 테니스 점수를 기록하고 자동 통계와 비공개 iCloud 동기화를 이용하세요." name="description"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/ko/" rel="canonical"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/" hreflang="en" rel="alternate"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/de/" hreflang="de" rel="alternate"/>
@@ -22,13 +22,13 @@
 <meta content="website" property="og:type"/>
 <meta content="Tennis Score Wizard" property="og:site_name"/>
 <meta content="Tennis Score Wizard — Apple Watch와 iPhone용 테니스 스코어" property="og:title"/>
-<meta content="Apple Watch에서 점수를 기록하고 비공개 상대 전적을 만들며 Standalone과 Companion 사이에서 경기를 iCloud로 동기화하세요." property="og:description"/>
+<meta content="Apple Watch에서 One Set, 공식 Short Sets, No‑Ad, Custom Set으로 테니스 점수를 기록하고 자동 통계와 비공개 iCloud 동기화를 이용하세요." property="og:description"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/ko/" property="og:url"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
 <meta content="Tennis Score Wizard 앱 아이콘" property="og:image:alt"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="Tennis Score Wizard — Apple Watch와 iPhone용 테니스 스코어" name="twitter:title"/>
-<meta content="Apple Watch에서 점수를 기록하고 비공개 상대 전적을 만들며 Standalone과 Companion 사이에서 경기를 iCloud로 동기화하세요." name="twitter:description"/>
+<meta content="Apple Watch에서 One Set, 공식 Short Sets, No‑Ad, Custom Set으로 테니스 점수를 기록하고 자동 통계와 비공개 iCloud 동기화를 이용하세요." name="twitter:description"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
 <style>
     :root {
@@ -2274,6 +2274,7 @@ footer {
 </style>
 <link href="../release-1-1.css" rel="stylesheet"/>
 <link href="../rivalries-landing.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../core-scoring-formats-en.css">
 <script src="../support-development.js" defer></script>
 </head>
 <body>
@@ -2311,13 +2312,11 @@ footer {
 <div class="hero-copy">
 <div class="eyebrow">
 <span class="eyebrow-dot"></span>
-<span class="eyebrow-copy-full">iPhone이 있든 없든, Apple Watch로 테니스 점수 기록</span>
-<span class="eyebrow-copy-compact"><span class="eyebrow-segment">Apple Watch에서 기록하고</span><span aria-hidden="true" class="eyebrow-separator">·</span><span class="eyebrow-segment">iPhone에서 더 자세히 확인하세요</span></span>
+<span class="eyebrow-copy-full">iPhone이 있든 없든, Apple Watch로 테니스 점수 기록</span>
+<span class="eyebrow-copy-compact"><span class="eyebrow-segment">Apple Watch에서 기록하고</span><span aria-hidden="true" class="eyebrow-separator">·</span><span class="eyebrow-segment">iPhone에서 더 자세히 확인하세요</span></span>
 </div>
 <h1>모든 포인트를 기록하고, 모든 경기를 이해하세요.</h1>
-<p>
-      Apple Watch만으로 완전한 경험을 원한다면 Standalone을, iPhone에서 라이벌리, 경기 기록, 통계 및 운동 세부 정보를 확인하려면 Companion을 선택하세요. 동일한 Apple 계정을 사용하면 두 앱 모두 저장된 경기를 iCloud로 동기화할 수 있습니다.
-    </p>
+<p>Apple Watch만으로 완전히 사용하려면 Standalone을, iPhone에서 상대 전적, 기록, 통계와 운동 세부 정보까지 보려면 Companion을 선택하세요. 공식 Short Set, No‑Ad 또는 자유로운 Custom Set을 설정하면 나머지 점수는 앱이 관리합니다.</p>
 <div class="hero-actions">
 <a class="hero-version-link" href="#versions">
         버전 살펴보기
@@ -2335,7 +2334,8 @@ footer {
 </a>
 </div>
 <div class="badges">
-<span class="badge">자동 경기 통계</span>
+<span class="badge">자동 경기 통계</span><span class="badge">유연한 경기 형식</span>
+<span class="badge">상대별 맞대결 기록</span>
 <span class="badge">서브 및 리턴 분석</span>
 <span class="badge">브레이크 포인트</span>
 <span class="badge">건강 앱의 운동 기록</span>
@@ -2352,17 +2352,17 @@ footer {
 <section id="versions">
 <h2>나에게 맞는 Tennis Score Wizard 선택하기</h2>
 <p class="section-subtitle">
-    두 버전 모두 Apple Watch의 모든 점수 기록 기능을 제공합니다. Apple Watch만 사용하려면 Standalone을, iPhone 앱까지 사용하려면 Companion을 선택하세요. 두 앱은 동일한 저장 경기 기록을 iCloud로 동기화할 수 있습니다.
+    두 버전 모두 Apple Watch의 모든 점수 기록 기능을 제공합니다. Apple Watch만 사용하려면 Standalone을, iPhone 앱까지 사용하려면 Companion을 선택하세요. 두 앱은 동일한 저장 경기 기록을 iCloud로 동기화할 수 있습니다.
   </p>
 <div class="version-grid">
 <article class="card version-card">
 <span class="version-kicker">Standalone</span>
-<h3>Apple Watch 전용</h3>
+<h3>Apple Watch 전용</h3>
 <p>
-        Apple Watch에 직접 설치해 손목 위에서 경기 전체를 관리하세요. iPhone용 컴패니언 앱은 필요하지 않습니다.
+        Apple Watch에 직접 설치해 손목 위에서 경기 전체를 관리하세요. iPhone용 컴패니언 앱은 필요하지 않습니다.
       </p>
 <ul class="version-list">
-<li>Apple Watch에서 경기 설정 및 실시간 점수 기록</li>
+<li>One Set, Short Sets, No‑Ad 및 Custom Set</li>
 <li>자동 통계 및 iCloud 경기 동기화</li>
 <li>건강 앱에 선택적으로 운동 기록</li>
 </ul>
@@ -2373,17 +2373,17 @@ footer {
 <strong>다운로드</strong>
 </span>
 </a>
-<span class="version-availability">버전 1.7 · 지금 이용 가능</span>
+<span class="version-availability">버전 1.8 · 지금 이용 가능</span>
 </article>
 <article class="card version-card version-card-companion">
 <span class="version-kicker">Companion</span>
-<h3>iPhone + Apple Watch</h3>
+<h3>iPhone + Apple Watch</h3>
 <p>
-        Standalone과 동일한 완전한 Apple Watch 앱을 iPhone과 연결해 동기화된 경기 기록, 결과, 운동 데이터, 상세 통계 및 iCloud 경기 동기화를 이용할 수 있습니다.
+        Standalone과 동일한 완전한 Apple Watch 앱을 iPhone과 연결해 동기화된 경기 기록, 결과, 운동 데이터, 상세 통계 및 iCloud 경기 동기화를 이용할 수 있습니다.
       </p>
 <ul class="version-list">
-<li>Apple Watch에서 모든 경기 설정 및 실시간 점수 기록</li>
-<li>Apple Watch의 경기 기록, 통계, 운동 및 컴플리케이션</li>
+<li>Apple Watch에서 유연한 경기 설정과 실시간 점수 기록</li>
+<li>Apple Watch의 경기 기록, 통계, 운동 및 컴플리케이션</li>
 <li>iPhone에서 동기화된 경기 기록과 상세 분석</li>
 </ul>
 <a aria-label="App Store에서 Tennis Score Wizard Companion 다운로드" class="app-store-button" href="https://apps.apple.com/app/id6789285015">
@@ -2393,17 +2393,18 @@ footer {
 <strong>다운로드</strong>
 </span>
 </a>
-<span class="version-availability">버전 1.4 · 지금 이용 가능</span>
+<span class="version-availability">버전 1.5 · 지금 이용 가능</span>
 </article>
 </div>
 <a class="hero-version-link versions-compare-link" href="#comparison">기능 비교 <span aria-hidden="true">↓</span></a>
 </section>
+<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>지금 이용 가능</span><span>Companion 1.5</span><span>Standalone 1.8</span></span><h2 id="scoring-formats-title">실제로 플레이하는 형식을 선택하세요.</h2><p>Companion 1.5와 Standalone 1.8은 Apple Watch의 자동 점수 기록에 공식 단축 형식, No‑Ad와 자유로운 세트 설정을 추가합니다. 코트에서 익숙한 조작 방식은 그대로입니다.</p></div><div class="core-format-grid"><article class="core-format-card"><strong>One Set</strong><p>시간이 부족할 때 한 세트로 전체 경기를 진행하세요.</p></article><article class="core-format-card"><strong>공식 Short Sets</strong><p>4게임 선승제로, 3–3 또는 4–4에서 타이브레이크를 시작하고 7점제 또는 4–4 결정 포인트를 선택합니다.</p></article><article class="core-format-card"><strong>전통적인 세트</strong><p>6게임 어드밴티지 세트 또는 6–6에서 일반 타이브레이크를 시작합니다.</p></article><article class="core-format-card"><strong>No‑Ad</strong><p>듀스에서 다음 한 포인트로 게임을 결정해 어떤 세트 형식도 빠르게 진행합니다.</p></article><article class="core-format-card"><strong>Custom Set</strong><p>게임 목표, 필요한 차이, 타이브레이크 시작과 목표를 하나의 설정으로 선택합니다.</p></article><article class="core-format-card"><strong>새 결과 카드</strong><p>승리, 패배, 중단 경기를 즉시 구분하고 2~5세트 결과를 읽기 쉽게 표시합니다.</p></article></div><div class="core-proof-grid" aria-label="Apple Watch 경기 형식"><figure class="core-proof-card"><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="One Set 및 Custom Set 설정" width="422" height="514" loading="lazy" decoding="async"><figcaption>One Set 및 Custom Set 설정</figcaption></figure><figure class="core-proof-card"><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="공식 Short Set 선택" width="422" height="514" loading="lazy" decoding="async"><figcaption>공식 Short Set 선택</figcaption></figure><figure class="core-proof-card"><img src="../assets/core-scoring-formats-en/watch-no-ad.png" alt="듀스에서 No‑Ad" width="422" height="514" loading="lazy" decoding="async"><figcaption>듀스에서 No‑Ad</figcaption></figure><figure class="core-proof-card"><img src="../assets/core-scoring-formats-en/watch-completed-win.png" alt="승리한 경기" width="422" height="514" loading="lazy" decoding="async"><figcaption>승리한 경기</figcaption></figure><figure class="core-proof-card"><img src="../assets/core-scoring-formats-en/watch-completed-loss.png" alt="패배한 경기" width="422" height="514" loading="lazy" decoding="async"><figcaption>패배한 경기</figcaption></figure><figure class="core-proof-card"><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="2~5세트 결과" width="422" height="514" loading="lazy" decoding="async"><figcaption>2~5세트 결과</figcaption></figure></div></section>
 <section aria-labelledby="icloud-title" class="icloud-showcase" id="icloud-sync">
 <div class="icloud-heading">
 <span class="icloud-kicker">iCloud 경기 동기화</span>
-<h2 id="icloud-title">Apple Watch와 iPhone에서 이어지는 경기 기록</h2>
+<h2 id="icloud-title">Apple Watch와 iPhone에서 이어지는 경기 기록</h2>
 <p>
-      Standalone과 Companion은 동일한 Apple 계정을 사용할 때 같은 저장 경기 기록을 iCloud로 동기화할 수 있습니다. Apple 계정마다 별도의 비공개 경기 기록이 유지됩니다. Apple Watch에서 점수를 기록하고, iPhone에서 경기를 확인하며, 앱을 다시 설치한 뒤 성공적으로 동기화된 경기를 복원할 수 있습니다.
+      Standalone과 Companion은 동일한 Apple 계정을 사용할 때 같은 저장 경기 기록을 iCloud로 동기화할 수 있습니다. Apple 계정마다 별도의 비공개 경기 기록이 유지됩니다. Apple Watch에서 점수를 기록하고, iPhone에서 경기를 확인하며, 앱을 다시 설치한 뒤 성공적으로 동기화된 경기를 복원할 수 있습니다.
     </p>
 </div>
 <div class="icloud-ecosystem">
@@ -2412,7 +2413,7 @@ footer {
 <source srcset="../assets/watch_history_synced.webp" type="image/webp"/>
 <img alt="iCloud 동기화가 완료된 Apple Watch 경기 기록 화면" decoding="async" height="496" loading="lazy" src="../assets/watch_history_synced.png" width="416"/>
 </picture>
-<strong>Apple Watch</strong>
+<strong>Apple Watch</strong>
 <p>Standalone 또는 Companion으로 경기 점수를 기록하고 경기 기록에서 최근 동기화 상태를 확인하세요.</p>
 </div>
 <div class="icloud-hub">
@@ -2455,19 +2456,19 @@ footer {
 </div>
 </section>
 
-<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">새 기능 · 라이벌리</span><h2 id="rivalries-title">모든 상대에게는 이야기가 있습니다.</h2><p>단식 경기 전에 저장된 상대를 선택하면 Tennis Score Wizard가 비공개 상대 전적을 자동으로 만듭니다. 결과, 중요한 포인트, 역전승, 연승, 운동 및 모든 맞대결이 하나의 기록에 모입니다.</p><a class="rivalries-action" href="whats-new.html">릴리스 노트 보기</a><p class="rivalries-singles-note">현재 라이벌리는 단식 경기만 사용합니다. 복식은 한 명의 상대를 지정하지 않고 기존과 동일하게 기록됩니다.</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="저장된 상대와 전체 상대 전적을 보여 주는 라이벌리 목록" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · 코트에서</span><h3>상대를 고른 뒤, 평소처럼 경기하세요.</h3><p>단식 설정에서 게스트 또는 저장된 선수를 선택하세요. 짧은 이름이 실시간 점수 화면에 표시되고, 평소의 점수 입력으로 기록이 자동 생성됩니다.</p><ul class="rivalries-checklist"><li>iPhone의 Companion에서 선수 생성 및 관리</li><li>비공개 iCloud 동기화로 Apple Watch에 목록 전송</li><li>예전에 저장한 단식 경기를 나중에 연결</li><li>게스트 경기는 라이벌리에서 제외</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="게스트 또는 저장된 선수 선택" width="416" height="496" loading="lazy" decoding="async"><figcaption>게스트 또는 저장된 선수 선택</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="경기 중 선택한 이름 표시" width="416" height="496" loading="lazy" decoding="async"><figcaption>경기 중 선택한 이름 표시</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · 전체 상대 기록</span><h3>한 명의 상대를 모든 관점에서.</h3><p>전체 기간, 올해 또는 최근 30일로 필터링하세요. 최근 성적과 전체 기간을 비교하고 모든 맞대결을 열어 실제로 기록된 통계만 확인할 수 있습니다.</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>상대 전적</strong><p>승패가 결정된 경기, 승리, 세트, 게임, 타이브레이크 및 매치 타이브레이크.</p></article><article class="rivalries-benefit"><strong>경기력</strong><p>포인트, 서비스 게임 유지율과 브레이크율, 서브, 리턴 및 중요한 포인트.</p></article><article class="rivalries-benefit"><strong>패턴과 운동량</strong><p>첫 세트를 잃은 뒤 거둔 역전승, 연승, 코트 시간, 심박수 및 에너지.</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="상대 전적과 최근 성적" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>상대 전적과 최근 성적</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="경기력, 패턴 및 운동량" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>경기력, 패턴 및 운동량</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="저장된 모든 맞대결" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>저장된 모든 맞대결</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · 라이벌리 공유</span><h3>카드 3장으로 보는 하나의 이야기.</h3><p>공유 카드는 상대 전적과 최근 경기, 경기력, 패턴과 운동 정보 순으로 고정됩니다. 비공개 메모는 절대 포함되지 않습니다.</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="상대 전적과 최근 경기" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · 상대 전적과 최근 경기</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="경기력" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · 경기력</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="패턴, 시간 및 운동" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · 패턴, 시간 및 운동</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>처음부터 비공개</strong><p>프로필, 메모 및 경기 연결 정보는 기기에 보관되며 비공개 iCloud 데이터로 동기화할 수 있습니다.</p></article><article><strong>경기 중 추가 작업 없음</strong><p>상대 선택은 경기 전 정보만 추가합니다. 점수 기록, 실행 취소, 운동 기록 등 기존 경기 흐름은 그대로 유지됩니다.</p></article></div></section>
+<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">새 기능 · 라이벌리</span><h2 id="rivalries-title">모든 상대에게는 이야기가 있습니다.</h2><p>단식 경기 전에 저장된 상대를 선택하면 Tennis Score Wizard가 비공개 상대 전적을 자동으로 만듭니다. 결과, 중요한 포인트, 역전승, 연승, 운동 및 모든 맞대결이 하나의 기록에 모입니다.</p><a class="rivalries-action" href="whats-new.html">릴리스 노트 보기</a><p class="rivalries-singles-note">현재 라이벌리는 단식 경기만 사용합니다. 복식은 한 명의 상대를 지정하지 않고 기존과 동일하게 기록됩니다.</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="저장된 상대와 전체 상대 전적을 보여 주는 라이벌리 목록" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · 코트에서</span><h3>상대를 고른 뒤, 평소처럼 경기하세요.</h3><p>단식 설정에서 게스트 또는 저장된 선수를 선택하세요. 짧은 이름이 실시간 점수 화면에 표시되고, 평소의 점수 입력으로 기록이 자동 생성됩니다.</p><ul class="rivalries-checklist"><li>iPhone의 Companion에서 선수 생성 및 관리</li><li>비공개 iCloud 동기화로 Apple Watch에 목록 전송</li><li>예전에 저장한 단식 경기를 나중에 연결</li><li>게스트 경기는 라이벌리에서 제외</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="게스트 또는 저장된 선수 선택" width="416" height="496" loading="lazy" decoding="async"><figcaption>게스트 또는 저장된 선수 선택</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="경기 중 선택한 이름 표시" width="416" height="496" loading="lazy" decoding="async"><figcaption>경기 중 선택한 이름 표시</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · 전체 상대 기록</span><h3>한 명의 상대를 모든 관점에서.</h3><p>전체 기간, 올해 또는 최근 30일로 필터링하세요. 최근 성적과 전체 기간을 비교하고 모든 맞대결을 열어 실제로 기록된 통계만 확인할 수 있습니다.</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>상대 전적</strong><p>승패가 결정된 경기, 승리, 세트, 게임, 타이브레이크 및 매치 타이브레이크.</p></article><article class="rivalries-benefit"><strong>경기력</strong><p>포인트, 서비스 게임 유지율과 브레이크율, 서브, 리턴 및 중요한 포인트.</p></article><article class="rivalries-benefit"><strong>패턴과 운동량</strong><p>첫 세트를 잃은 뒤 거둔 역전승, 연승, 코트 시간, 심박수 및 에너지.</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="상대 전적과 최근 성적" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>상대 전적과 최근 성적</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="경기력, 패턴 및 운동량" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>경기력, 패턴 및 운동량</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="저장된 모든 맞대결" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>저장된 모든 맞대결</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · 라이벌리 공유</span><h3>카드 3장으로 보는 하나의 이야기.</h3><p>공유 카드는 상대 전적과 최근 경기, 경기력, 패턴과 운동 정보 순으로 고정됩니다. 비공개 메모는 절대 포함되지 않습니다.</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="상대 전적과 최근 경기" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · 상대 전적과 최근 경기</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="경기력" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · 경기력</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="패턴, 시간 및 운동" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · 패턴, 시간 및 운동</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>처음부터 비공개</strong><p>프로필, 메모 및 경기 연결 정보는 기기에 보관되며 비공개 iCloud 데이터로 동기화할 수 있습니다.</p></article><article><strong>경기 중 추가 작업 없음</strong><p>상대 선택은 경기 전 정보만 추가합니다. 점수 기록, 실행 취소, 운동 기록 등 기존 경기 흐름은 그대로 유지됩니다.</p></article></div></section>
 <section class="companion-showcase" id="companion-benefits">
 <div class="companion-heading">
 <span class="companion-section-kicker">Companion 경험</span>
 <h2>하나의 완전한 경험, 두 개의 화면</h2>
 <p class="section-subtitle">
-      Companion은 Apple Watch에서 Standalone의 모든 기능을 제공하면서 경기 기록, 결과, 통계 및 운동 데이터를 확인하는 iPhone 앱을 추가합니다.
+      Companion은 Apple Watch에서 Standalone의 모든 기능을 제공하면서 경기 기록, 결과, 통계 및 운동 데이터를 확인하는 iPhone 앱을 추가합니다.
     </p>
 </div>
 <div class="companion-system">
 <article class="companion-device-panel companion-watch-panel">
 <div class="companion-device-copy">
-<span class="companion-device-label">코트 위에서 · Apple Watch</span>
+<span class="companion-device-label">코트 위에서 · Apple Watch</span>
 <h3>완전한 경기 경험을 손목에서 누리세요.</h3>
 <p>
           Standalone과 동일하게 경기 설정, 포인트 기록, 서브 위치 확인, 실행 취소, 운동 기록, 경기 기록 및 통계 확인, 컴플리케이션에서 실행까지 모두 할 수 있습니다.
@@ -2475,11 +2476,11 @@ footer {
 </div>
 <div aria-label="Apple Watch에서 제공되는 완전한 Tennis Score Wizard 경험" class="companion-watch-preview">
 <figure class="companion-watch-card">
-<img alt="Apple Watch의 경기 설정" decoding="async" height="496" loading="lazy" src="../assets/01_match_setup_rules.webp" width="416"/>
+<img alt="Apple Watch의 경기 설정" decoding="async" height="496" loading="lazy" src="../assets/core-scoring-formats-en/watch-one-set-custom.png" width="416"/>
 <figcaption>설정</figcaption>
 </figure>
 <figure class="companion-watch-card">
-<img alt="Apple Watch의 실시간 테니스 점수 기록" decoding="async" height="496" loading="lazy" src="../assets/03_live_scoring_ad_40.webp" width="416"/>
+<img alt="Apple Watch의 실시간 테니스 점수 기록" decoding="async" height="496" loading="lazy" src="../assets/core-scoring-formats-en/watch-short-set-live.png" width="416"/>
 <figcaption>실시간 점수 기록</figcaption>
 </figure>
 <figure class="companion-watch-card">
@@ -2509,8 +2510,8 @@ footer {
 <div class="companion-benefits-grid">
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">01</span>
-<h3>완전한 Apple Watch 앱</h3>
-<p>Standalone에서 할 수 있는 모든 기능을 Apple Watch에서 그대로 이용할 수 있습니다.</p>
+<h3>완전한 Apple Watch 앱</h3>
+<p>Standalone에서 할 수 있는 모든 기능을 Apple Watch에서 그대로 이용할 수 있습니다.</p>
 </article>
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">02</span>
@@ -2533,7 +2534,7 @@ footer {
 <span class="companion-section-kicker">Companion의 iPhone 경험</span>
 <h2>개별 경기부터 전체 흐름까지</h2>
 <p class="section-subtitle">
-    Apple Watch에서 점수를 기록한 뒤 iPhone에서 개별 경기를 확인하고, 캘린더를 살펴보고, 장기 성적과 시간에 따른 추세를 이해하세요.
+    Apple Watch에서 점수를 기록한 뒤 iPhone에서 개별 경기를 확인하고, 캘린더를 살펴보고, 장기 성적과 시간에 따른 추세를 이해하세요.
   </p>
 <div class="iphone-gallery">
 <div class="release-gallery-heading">
@@ -2546,7 +2547,7 @@ footer {
 </div>
 <h3>최신 결과 및 최근 경기</h3>
 <p>
-        Companion을 열어 Apple Watch에서 동기화된 최신 결과와 최근 경기를 확인하세요.
+        Companion을 열어 Apple Watch에서 동기화된 최신 결과와 최근 경기를 확인하세요.
       </p>
 </article>
 <article class="iphone-screenshot-card">
@@ -2656,12 +2657,7 @@ footer {
 <p class="section-subtitle">
     현재 선택한 경기, 기간, 경기 유형 및 통계 보기를 간결한 텍스트로 공유하거나 완성도 높은 시각적 카드로 만들 수 있습니다.
   </p>
-<div class="share-gallery">
-<article class="share-card">
-<img alt="점수와 상세 경기 통계가 포함된 공유 가능한 테니스 경기 카드" decoding="async" height="1350" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_share_match-720.webp" srcset="../assets/companion_share_match-720.webp 720w, ../assets/companion_share_match-1080.webp 1080w" width="1080"/>
-<h3>경기 결과</h3>
-<p>점수와 함께 사용 가능한 경기, 서브, 리턴, 브레이크 포인트, 경기 흐름 및 운동 데이터를 공유하세요.</p>
-</article>
+<div class="share-gallery core-sharing-grid"><article class="share-card"><img src="../assets/core-scoring-formats-en/share-set-tiebreaks.png" alt="세트 타이브레이크" width="1080" height="1920" loading="lazy" decoding="async"><h3>세트 타이브레이크</h3><p>두 자리 점수도 작은 위첨자로 표시해 기본 세트 점수의 정렬을 유지합니다.</p></article><article class="share-card"><img src="../assets/core-scoring-formats-en/share-match-tiebreak.png" alt="결정 Match Tie-Break" width="1080" height="1920" loading="lazy" decoding="async"><h3>결정 Match Tie‑Break</h3><p>일반 세트와 분리해 [10–7]처럼 명확하게 표시합니다.</p></article>
 <article class="share-card">
 <img alt="공유 가능한 테니스 성적 통계 카드" decoding="async" height="1350" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_share_stats-720.webp" srcset="../assets/companion_share_stats-720.webp 720w, ../assets/companion_share_stats-1080.webp 1080w" width="1080"/>
 <h3>성적 개요</h3>
@@ -2690,15 +2686,15 @@ footer {
 </div>
 </section>
 <section class="standalone-intro" id="standalone">
-<span class="standalone-kicker">Apple Watch용 Standalone</span>
+<span class="standalone-kicker">Apple Watch용 Standalone</span>
 <h2>필요한 모든 것을 손목 위에서</h2>
 <p>
-    경기를 설정하고, 모든 포인트를 기록하고, 서버와 서브 위치를 확인하고, 선택적으로 운동을 기록하고, 경기 기록과 통계를 살펴보세요. 이 모든 기능을 iPhone 없이 Apple Watch에서 이용할 수 있습니다.
+    경기를 설정하고, 모든 포인트를 기록하고, 서버와 서브 위치를 확인하고, 선택적으로 운동을 기록하고, 경기 기록과 통계를 살펴보세요. 이 모든 기능을 iPhone 없이 Apple Watch에서 이용할 수 있습니다.
   </p>
 </section>
 <section id="features">
 <span class="product-section-kicker">Standalone 기능</span>
-<h2>Apple Watch에서 완성되는 경기 경험</h2>
+<h2>Apple Watch에서 완성되는 경기 경험</h2>
 <p class="section-subtitle">
     iPhone에 의존하지 않고 경기 설정, 모든 포인트 기록, 선택적 운동 기록, 경기 기록 및 자동 통계 확인을 모두 할 수 있습니다.
   </p>
@@ -2723,13 +2719,13 @@ footer {
 </section>
 <section id="screenshots">
 <span class="product-section-kicker">Standalone 갤러리</span>
-<h2>Apple Watch의 Standalone</h2>
+<h2>Apple Watch의 Standalone</h2>
 <p class="section-subtitle">
-    경기 설정, 운동 기록, 실시간 점수 기록, 타이브레이크, 경기 종료, 경기 기록 및 자동 통계로 이어지는 Standalone의 전체 흐름을 Apple Watch에서 확인하세요.
+    경기 설정, 운동 기록, 실시간 점수 기록, 타이브레이크, 경기 종료, 경기 기록 및 자동 통계로 이어지는 Standalone의 전체 흐름을 Apple Watch에서 확인하세요.
   </p>
 <div class="screenshots">
 <article class="screenshot-card">
-<img alt="단식, 복식, 경기 길이 및 타이브레이크 규칙을 포함한 경기 설정" decoding="async" height="496" loading="lazy" src="../assets/01_match_setup_rules.webp" width="416"/>
+<img alt="단식, 복식, 경기 길이 및 타이브레이크 규칙을 포함한 경기 설정" decoding="async" height="496" loading="lazy" src="../assets/core-scoring-formats-en/watch-one-set-custom.png" width="416"/>
 <h3>경기 설정</h3>
 <p>경기 시작 전에 단식 또는 복식, 3세트 또는 5세트 매치, 세트 규칙을 선택하세요.</p>
 </article>
@@ -2739,29 +2735,29 @@ footer {
 <p>한 화면에서 첫 서버를 선택하고, 동전 던지기를 사용하고, 운동 기록을 켠 뒤 경기를 시작하세요.</p>
 </article>
 <article class="screenshot-card">
-<img alt="어드밴티지, 심박수 및 서브 표시가 있는 실시간 점수 화면" decoding="async" height="496" loading="lazy" src="../assets/03_live_scoring_ad_40.webp" width="416"/>
+<img alt="어드밴티지, 심박수 및 서브 표시가 있는 실시간 점수 화면" decoding="async" height="496" loading="lazy" src="../assets/core-scoring-formats-en/watch-short-set-live.png" width="416"/>
 <h3>실시간 점수 기록</h3>
 <p>큰 카드로 점수를 기록하는 동안 서버, 서브 위치, 세트, 운동 상태 및 실시간 심박수를 계속 확인할 수 있습니다.</p>
 </article>
 <article class="screenshot-card">
 <img alt="6–6에서의 타이브레이크 점수 기록" decoding="async" height="496" loading="lazy" src="../assets/04_tiebreak_scoring.webp" width="416"/>
 <h3>타이브레이크</h3>
-<p>6–6에서 같은 크고 빠른 Apple Watch 점수 컨트롤로 타이브레이크 포인트를 기록하세요.</p>
+<p>6–6에서 같은 크고 빠른 Apple Watch 점수 컨트롤로 타이브레이크 포인트를 기록하세요.</p>
 </article>
-<article class="screenshot-card"><img src="../assets/watch_match_tiebreak_select.webp" alt="결정 매치 타이브레이크 선택" loading="lazy" decoding="async" width="416" height="496"/><h3>결정 매치 타이브레이크 선택</h3><p>마지막 세트 전에 세트 스코어가 같다면 7점제 또는 10점제로 대체할 수 있습니다. 2점 차로 이겨야 합니다.</p></article>
-<article class="screenshot-card"><img src="../assets/watch_match_tiebreak_live.webp" alt="모든 포인트 기록" loading="lazy" decoding="async" width="416" height="496"/><h3>모든 포인트 기록</h3><p>목표 점수, 세트 스코어, 서버 및 포인트가 계속 표시됩니다.</p></article>
+<article class="screenshot-card"><img src="../assets/core-scoring-formats-en/watch-match-tiebreak-targets.png" alt="결정 매치 타이브레이크 선택" loading="lazy" decoding="async" width="416" height="496"/><h3>결정 매치 타이브레이크 선택</h3><p>마지막 세트 전에 세트 스코어가 같다면 7점제 또는 10점제로 대체할 수 있습니다. 2점 차로 이겨야 합니다.</p></article>
+<article class="screenshot-card"><img src="../assets/core-scoring-formats-en/watch-match-tiebreak-live.png" alt="모든 포인트 기록" loading="lazy" decoding="async" width="416" height="496"/><h3>모든 포인트 기록</h3><p>목표 점수, 세트 스코어, 서버 및 포인트가 계속 표시됩니다.</p></article>
 <article class="screenshot-card">
-<img alt="경기 종료 화면" decoding="async" height="496" loading="lazy" src="../assets/05_match_finished.webp" width="416"/>
+<img alt="경기 종료 화면" decoding="async" height="496" loading="lazy" src="../assets/core-scoring-formats-en/watch-five-set-finish.png" width="416"/>
 <h3>경기 종료</h3>
 <p>경기 승패가 결정되면 승자와 세트 결과를 보여 주고 경기 기록 또는 완료로 바로 이동할 수 있습니다.</p>
 </article>
 <article class="screenshot-card">
-<img alt="필터, 전적 및 승률이 있는 경기 기록 목록" decoding="async" height="496" loading="lazy" src="../assets/watch_history_overview.webp" width="416"/>
+<img src="../assets/core-scoring-formats-en/watch-history.png" alt="필터, 전적, 전체 세트 및 게임 레이블과 저장된 경기 형식을 보여 주는 경기 기록" loading="lazy" decoding="async" width="422" height="514">
 <h3>경기 기록 개요</h3>
-<p>Apple Watch에서 직접 승리, 패배, 중단 경기, 승률 및 저장된 경기를 확인하세요.</p>
+<p>Apple Watch에서 직접 승리, 패배, 중단 경기, 승률 및 저장된 경기를 확인하세요.</p>
 </article>
 <article class="screenshot-card">
-<img alt="결과, 시간, 포인트 및 운동 상태가 포함된 저장 경기 요약" decoding="async" height="496" loading="lazy" src="../assets/watch_match_summary.webp" width="416"/>
+<img alt="결과, 시간, 포인트 및 운동 상태가 포함된 저장 경기 요약" decoding="async" height="496" loading="lazy" src="../assets/core-scoring-formats-en/watch-match-summary.png" width="416"/>
 <h3>경기 요약</h3>
 <p>저장된 경기를 열어 점수, 게임, 시간, 전체 포인트, 운동 상태 및 중단 경기 상황을 확인하세요.</p>
 </article>
@@ -2798,9 +2794,9 @@ footer {
 </div>
 </section>
 <section id="complications">
-<h2>Apple Watch 컴플리케이션</h2>
+<h2>Apple Watch 컴플리케이션</h2>
 <p class="section-subtitle">
-    지원되는 Apple Watch 페이스에 Tennis Score Wizard를 추가하고 한 번의 탭으로 앱을 여세요.
+    지원되는 Apple Watch 페이스에 Tennis Score Wizard를 추가하고 한 번의 탭으로 앱을 여세요.
   </p>
 <div class="screenshots">
 <article class="screenshot-card">
@@ -2818,9 +2814,9 @@ footer {
 <section class="comparison-section" id="comparison">
 <span class="product-section-kicker">버전 비교</span>
 <div class="comparison-heading">
-<h2>Apple Watch 경험은 같습니다. 함께 제공되는 기능이 다릅니다.</h2>
+<h2>Apple Watch 경험은 같습니다. 함께 제공되는 기능이 다릅니다.</h2>
 <p class="section-subtitle">
-      Standalone은 Apple Watch에서 완전한 경험을 제공합니다. Companion은 동일한 완전한 Apple Watch 앱에 동기화된 iPhone 보기를 추가합니다.
+      Standalone은 Apple Watch에서 완전한 경험을 제공합니다. Companion은 동일한 완전한 Apple Watch 앱에 동기화된 iPhone 보기를 추가합니다.
     </p>
 </div>
 <div aria-label="Tennis Score Wizard Standalone과 Companion 비교" class="comparison-grid" role="table">
@@ -2828,38 +2824,38 @@ footer {
 <div class="comparison-feature" role="columnheader">경험</div>
 <div role="columnheader">
 <span class="comparison-version-label">Standalone</span>
-<strong>Apple Watch</strong>
+<strong>Apple Watch</strong>
 </div>
 <div class="comparison-companion-column" role="columnheader">
 <span class="comparison-version-label">Companion</span>
 <strong>
-<span class="comparison-title-full">iPhone + Apple Watch</span>
+<span class="comparison-title-full">iPhone + Apple Watch</span>
 <span class="comparison-title-compact">Watch + iPhone</span>
 </strong>
 </div>
 </div>
 <div class="comparison-row" role="row">
-<div class="comparison-feature" role="rowheader">완전한 Apple Watch 앱</div>
+<div class="comparison-feature" role="rowheader">완전한 Apple Watch 앱</div>
 <div role="cell"><span class="comparison-check">✓</span> 포함</div>
 <div role="cell"><span class="comparison-check">✓</span> 포함</div>
 </div>
 <div class="comparison-row" role="row">
 <div class="comparison-feature" role="rowheader">경기 설정, 실시간 점수 기록, 실행 취소 및 서브 안내</div>
-<div role="cell">Apple Watch에서</div>
-<div role="cell">Apple Watch에서</div>
+<div role="cell">Apple Watch에서</div>
+<div role="cell">Apple Watch에서</div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">경기 기록 및 상세 통계</div>
-<div role="cell">Apple Watch에서</div>
-<div role="cell">Apple Watch와 iPhone에서</div>
+<div role="cell">Apple Watch에서</div>
+<div role="cell">Apple Watch와 iPhone에서</div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">운동 및 심박수 세부 정보</div>
-<div role="cell">Apple Watch에서</div>
-<div role="cell">Apple Watch와 iPhone에서</div>
+<div role="cell">Apple Watch에서</div>
+<div role="cell">Apple Watch와 iPhone에서</div>
 </div>
 <div class="comparison-row" role="row">
-<div class="comparison-feature" role="rowheader">Apple Watch 컴플리케이션</div>
+<div class="comparison-feature" role="rowheader">Apple Watch 컴플리케이션</div>
 <div role="cell"><span class="comparison-check">✓</span> 포함</div>
 <div role="cell"><span class="comparison-check">✓</span> 포함</div>
 </div>
@@ -2868,6 +2864,7 @@ footer {
 <div role="cell"><span class="comparison-check">✓</span> 포함</div>
 <div role="cell"><span class="comparison-check">✓</span> 포함</div>
 </div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">상대 프로필 및 Rivalries</div><div role="cell">동기화된 상대를 Apple Watch에서 선택</div><div role="cell">iPhone에서 만들고 관리한 뒤 Watch에서 선택</div></div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">동기화된 iPhone 경험</div>
 <div role="cell"><span class="comparison-muted">필요 없음</span></div>
@@ -2891,7 +2888,7 @@ footer {
 <div class="comparison-row comparison-best-for" role="row">
 <div class="comparison-feature" role="rowheader">추천 대상</div>
 <div role="cell">모든 기능을 손목에서 사용하려는 선수</div>
-<div role="cell">완전한 Apple Watch 앱과 더 큰 경기 후 분석 화면을 원하는 선수</div>
+<div role="cell">완전한 Apple Watch 앱과 더 큰 경기 후 분석 화면을 원하는 선수</div>
 </div>
 </div>
 </section>
@@ -2986,7 +2983,7 @@ footer {
 </div>
 <div class="help-item">
 <strong>실시간 심박수는 어떻게 작동하나요?</strong>
-<p>권한이 허용되어 있고 Apple Watch에서 심박수 데이터를 제공할 때 기록 중인 운동에서 실시간 심박수가 표시됩니다.</p>
+<p>권한이 허용되어 있고 Apple Watch에서 심박수 데이터를 제공할 때 기록 중인 운동에서 실시간 심박수가 표시됩니다.</p>
 </div>
 <div class="help-item">
 <strong>메뉴에서는 무엇을 할 수 있나요?</strong>
@@ -3005,7 +3002,7 @@ footer {
 <section id="history-help">
 <h2>경기 기록 이해하기</h2>
 <p class="section-subtitle">
-    두 버전 모두 Apple Watch에서 저장된 결과를 확인할 수 있습니다. Companion은 같은 경기 기록을 iPhone으로 가져와 더 큰 화면에서 보여 줍니다.
+    두 버전 모두 Apple Watch에서 저장된 결과를 확인할 수 있습니다. Companion은 같은 경기 기록을 iPhone으로 가져와 더 큰 화면에서 보여 줍니다.
   </p>
 <div class="help">
 <div class="help-item">
@@ -3061,7 +3058,7 @@ footer {
 <strong>경기 기록을 삭제할 수 있나요?</strong>
 <p>예. 경기 기록 화면에서 저장된 경기를 삭제할 수 있으며 iCloud 동기화를 사용할 수 있을 때 삭제 내용도 동기화됩니다.</p>
 </div>
-<div class="faq"><strong>라이벌리는 어떻게 만들어지나요?</strong><p>iPhone Companion에서 상대를 등록하고 Apple Watch에서 단식 경기를 시작하기 전에 선택한 뒤 평소처럼 점수를 기록하세요. Tennis Score Wizard가 저장된 경기를 해당 선수와 연결해 상대 전적, 최근 성적, 경기력, 패턴, 코트 시간, 운동 및 모든 맞대결 기록을 자동으로 만듭니다. Standalone에서는 같은 Apple 계정으로 동기화된 프로필을 사용할 수 있습니다. 게스트를 선택하면 해당 경기는 라이벌리에 포함되지 않습니다.</p></div></div>
+<div class="faq"><strong>라이벌리는 어떻게 만들어지나요?</strong><p>iPhone Companion에서 상대를 등록하고 Apple Watch에서 단식 경기를 시작하기 전에 선택한 뒤 평소처럼 점수를 기록하세요. Tennis Score Wizard가 저장된 경기를 해당 선수와 연결해 상대 전적, 최근 성적, 경기력, 패턴, 코트 시간, 운동 및 모든 맞대결 기록을 자동으로 만듭니다. Standalone에서는 같은 Apple 계정으로 동기화된 프로필을 사용할 수 있습니다. 게스트를 선택하면 해당 경기는 라이벌리에 포함되지 않습니다.</p></div></div>
 </section>
 <section>
 <h2>개인정보 처리방침</h2>
@@ -3094,7 +3091,7 @@ footer {
 <footer>
 <div class="footer-meta">
 <span>© 2026 Tennis Score Wizard</span>
-<span>Apple Watch는 Apple Inc.의 상표입니다.</span>
+<span>Apple Watch는 Apple Inc.의 상표입니다.</span>
 </div>
 <nav aria-label="보조 탐색" class="footer-links">
 <a aria-label="Instagram의 Tennis Score Wizard(새 탭에서 열림)" href="https://www.instagram.com/tennisscorewizard/" rel="noopener noreferrer" target="_blank">Instagram</a>
