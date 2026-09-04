@@ -172,6 +172,19 @@ html[lang="ko"] .badges .badge {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* Keep Apple Watch galleries close to the device screenshot's natural scale. */
+#screenshots .screenshots,
+#complications .screenshots {
+  grid-template-columns: repeat(3, minmax(0, 268px));
+  justify-content: center;
+}
+
+#screenshots .screenshot-card,
+#complications .screenshot-card {
+  width: 100%;
+  max-width: 268px;
+}
+
 @media (max-width: 980px) {
   .core-format-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -183,6 +196,11 @@ html[lang="ko"] .badges .badge {
 
   .core-proof-grid {
     grid-template-columns: repeat(2, minmax(0, 248px));
+  }
+
+  #screenshots .screenshots,
+  #complications .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 268px));
   }
 }
 
@@ -213,6 +231,11 @@ html[lang="ko"] .badges .badge {
   .core-proof-grid,
   .core-release-proof {
     grid-template-columns: minmax(0, 248px);
+  }
+
+  #screenshots .screenshots,
+  #complications .screenshots {
+    grid-template-columns: minmax(0, 268px);
   }
 }
 
