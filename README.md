@@ -5,7 +5,7 @@ This repository contains the public website, Help Center, Privacy Policy, releas
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
 - **Companion** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
 
-The current release branch prepares Companion 1.5 and Standalone 1.8, including flexible scoring formats, updated result cards, clearer history and sharing, iCloud match sync, and Match Highlights in Companion. Keep it separate from `main` until both App Store versions are public.
+The current website documents Companion 1.5 and Standalone 1.8, including flexible scoring formats, updated result cards, clearer history and sharing, iCloud match sync, and Match Highlights in Companion.
 
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
