@@ -120,7 +120,7 @@ html[lang="ko"] .badges .badge {
 
 .core-proof-card img {
   display: block;
-  width: min(100%, 211px);
+  width: min(100%, 200px);
   height: auto;
   margin: 0 auto;
   border-radius: 17px;
@@ -154,7 +154,7 @@ html[lang="ko"] .badges .badge {
 
 .core-release-proof img {
   display: block;
-  width: min(100%, 211px);
+  width: min(100%, 200px);
   height: auto;
   margin: 0 auto;
   border-radius: 17px;
@@ -170,6 +170,11 @@ html[lang="ko"] .badges .badge {
 
 .share-gallery.core-sharing-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#screenshots .screenshot-card > img,
+#complications .screenshot-card > img {
+  width: min(100%, 200px);
 }
 
 @media (max-width: 980px) {
