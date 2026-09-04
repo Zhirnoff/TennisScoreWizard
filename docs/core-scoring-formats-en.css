@@ -102,7 +102,9 @@ html[lang="ko"] .badges .badge {
 
 .core-proof-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 248px));
+  justify-content: center;
+  align-items: start;
   gap: 16px;
   margin-top: 34px;
 }
@@ -118,8 +120,9 @@ html[lang="ko"] .badges .badge {
 
 .core-proof-card img {
   display: block;
-  width: 100%;
+  width: min(100%, 211px);
   height: auto;
+  margin: 0 auto;
   border-radius: 17px;
   background: #000;
 }
@@ -133,7 +136,9 @@ html[lang="ko"] .badges .badge {
 
 .core-release-proof {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 248px));
+  justify-content: center;
+  align-items: start;
   gap: 16px;
   margin-top: 28px;
 }
@@ -149,9 +154,9 @@ html[lang="ko"] .badges .badge {
 
 .core-release-proof img {
   display: block;
-  width: 100%;
-  aspect-ratio: 422 / 514;
-  object-fit: contain;
+  width: min(100%, 211px);
+  height: auto;
+  margin: 0 auto;
   border-radius: 17px;
   background: #000;
 }
@@ -168,13 +173,16 @@ html[lang="ko"] .badges .badge {
 }
 
 @media (max-width: 980px) {
-  .core-format-grid,
-  .core-release-proof {
+  .core-format-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .core-release-proof {
+    grid-template-columns: repeat(2, minmax(0, 248px));
+  }
+
   .core-proof-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 248px));
   }
 }
 
@@ -198,10 +206,13 @@ html[lang="ko"] .badges .badge {
   }
 
   .core-format-grid,
-  .core-proof-grid,
-  .core-release-proof,
   .share-gallery.core-sharing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .core-proof-grid,
+  .core-release-proof {
+    grid-template-columns: minmax(0, 248px);
   }
 }
 
