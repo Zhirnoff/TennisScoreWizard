@@ -33,6 +33,22 @@ python3 -m http.server 8000 --directory docs
 
 Then open http://localhost:8000/ in a browser. Check desktop and narrow mobile layouts before publishing, and verify at least one page in every localization when shared markup or styling changes.
 
+## Website analytics
+
+GoatCounter dashboard: https://tennisscorewizard.goatcounter.com/ (login required).
+The shared `docs/analytics.js` loads the counter only on the production GitHub
+Pages host under `/TennisScoreWizard/`; local previews do not send analytics.
+All ten localizations and the promotional landing page use this one loader.
+
+App Store links record separate `app-store-standalone:<page>` and
+`app-store-companion:<page>` events. These measure website interactions, not
+downloads or purchases. Existing App Store campaign parameters are preserved.
+
+To exclude your visits, use the browser-exclusion link in the website analytics
+section of any Privacy page. The setting applies to that browser/profile only;
+repeat it on other devices. The same link enables tracking again. No public
+visitor counter is displayed. Website analytics is separate from app data.
+
 ## Images
 
 Keep original PNG assets as the high-quality source. Where responsive variants exist, preserve the corresponding WebP files and their 720/1080 versions. New image optimization must retain the original aspect ratio and readable UI text.
