@@ -3,9 +3,9 @@
 This repository contains the public website, Help Center, Privacy Policy, release notes, and localized product pages for both Tennis Score Wizard products:
 
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
-- **Companion** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
+- **Pro** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
 
-This branch prepares the website for **Companion 1.6 (54)** and **Standalone 1.9 (35)**. Manual played matches and editing, optional court context, expanded Match Highlights, richer sharing and Watch history filters are covered in all ten languages. This is an unpublished branch; public release status has not been verified.
+This branch prepares the website for **Pro 1.6 (54)** and **Standalone 1.9 (35)**. Manual played matches and editing, optional court context, expanded Match Highlights, richer sharing and Watch history filters are covered in all ten languages. This is an unpublished branch; public release status has not been verified.
 
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
@@ -16,9 +16,9 @@ The GitHub Pages site is stored in `docs/`:
 - `docs/index.html` — English landing page
 - `docs/help.html` — Help Center
 - `docs/privacy.html` — Privacy Policy
-- `docs/whats-new.html` — Standalone and Companion release history
+- `docs/whats-new.html` — Standalone and Pro release history
 - `docs/index.html#rivalries` — English Rivalries feature section on the main page
-- `docs/assets/` — app icons, Apple Watch screenshots, Companion screenshots, and optimized image variants
+- `docs/assets/` — app icons, Apple Watch screenshots, Pro screenshots, and optimized image variants
 - `docs/de`, `docs/es`, `docs/fr`, `docs/it`, `docs/ja`, `docs/ko`, `docs/ru`, `docs/tr`, `docs/zh-Hans` — localized pages
 
 The site currently supports English, German, Spanish, French, Italian, Japanese, Korean, Russian, Turkish, and Simplified Chinese.
@@ -76,7 +76,7 @@ Keep original PNG assets as the high-quality source. Where responsive variants e
 ## App Store
 
 - Standalone: https://apps.apple.com/app/tennis-score-wizard/id6782709004
-- Companion: https://apps.apple.com/app/id6789285015
+- Pro: https://apps.apple.com/app/id6789285015
 
 ## Support and privacy
 
@@ -84,4 +84,4 @@ For questions, bug reports, or feedback, open a GitHub issue or email tennisscor
 
 When reporting an app issue, include the device model, operating-system version, app version, steps to reproduce, expected result, and actual result.
 
-Tennis Score Wizard does not require a Tennis Score Wizard account and does not send match history or Rivalry data to a developer-operated server. Companion can transfer match data and a Watch-safe opponent list directly between a paired Apple Watch and iPhone. Companion 1.5 and Standalone 1.8 can also synchronize saved matches and Rivalry library data through the private CloudKit database associated with the user’s Apple Account.
+Tennis Score Wizard does not require a Tennis Score Wizard account and does not send match history or Rivalry data to a developer-operated server. Pro can transfer match data and a Watch-safe opponent list directly between a paired Apple Watch and iPhone. Pro 1.5 and Standalone 1.8 can also synchronize saved matches and Rivalry library data through the private CloudKit database associated with the user’s Apple Account.

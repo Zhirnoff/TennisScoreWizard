@@ -16,7 +16,7 @@
 
   const apps = {
     "6782709004": "Standalone",
-    "6789285015": "Companion",
+    "6789285015": "Pro",
   };
   document.querySelectorAll('a[href]').forEach((link) => {
     // GoatCounter reads the opt-out fragment at startup, not on hash changes.

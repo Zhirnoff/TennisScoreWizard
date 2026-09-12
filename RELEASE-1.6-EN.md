@@ -1,4 +1,4 @@
-# Website release preparation — Companion 1.6 / Standalone 1.9
+# Website release preparation — Pro 1.6 / Standalone 1.9
 
 Prepared 10 September 2026 on `feature/website-companion-1-6-standalone-1-9-en`.
 
@@ -6,8 +6,8 @@ Prepared 10 September 2026 on `feature/website-companion-1-6-standalone-1-9-en`.
 
 This is a multilingual draft on a release-preparation branch, not a published announcement. The initial English changes were translated on 11 September; the manual-editing and Watch-history follow-up was extended to the other nine languages on 12 September. The user reported uploading earlier archives to App Store Connect; Apple approval and public availability have not been verified. Do not merge into `main` or publish until the user confirms the release and approves the website update.
 
-- Initial screenshot baseline: Companion 1.6 (52), commit `a66bb6db2b2ac196656d8d46286a4ff028e8af88`, and Standalone 1.9 (33), commit `8282f89cb371b2230778bda03117ecafad61dbe0`.
-- English follow-up baseline: Companion 1.6 (53) and Standalone 1.9 (34), prepared on 11 September after prerelease checks. On 12 September, after checking Entire year in both apps, the archive build numbers were increased to Companion 1.6 (54) and Standalone 1.9 (35). The older commits above do not include these later changes. Build preparation is not evidence of an archive upload, Apple approval or public availability.
+- Initial screenshot baseline: Pro 1.6 (52), commit `a66bb6db2b2ac196656d8d46286a4ff028e8af88`, and Standalone 1.9 (33), commit `8282f89cb371b2230778bda03117ecafad61dbe0`.
+- English follow-up baseline: Pro 1.6 (53) and Standalone 1.9 (34), prepared on 11 September after prerelease checks. On 12 September, after checking Entire year in both apps, the archive build numbers were increased to Pro 1.6 (54) and Standalone 1.9 (35). The older commits above do not include these later changes. Build preparation is not evidence of an archive upload, Apple approval or public availability.
 - Website branch is separate from both app release branches. No app source or release tags are changed here.
 
 ## 12 September — localized follow-up and formal address
@@ -17,7 +17,7 @@ This is a multilingual draft on a release-preparation branch, not a published an
 - Historical release facts, product behavior, links and analytics remain unchanged by the tone correction. Two long comparison headings were shortened for 320 px screens.
 - Static validation: 41 pages and 1,942 local references, with no missing files, missing anchors or duplicate IDs. Original screenshot hashes match the native QA sources; `git diff --check` passes.
 - Browser validation: 40 localized pages at 320, 390, 768 and 1440 px, 160 checks without document overflow or clipped headings/body copy after the fixes. Screenshots in `output/playwright/formal-*.png` are local, ignored QA artifacts.
-- App handoff commits: Companion `c36b55b` (1.6 build 54), Standalone `4d0c70b` (1.9 build 35), pushed to their respective feature branches. Both unsigned Release device builds passed; application, Watch and complication version metadata agree. This does not represent new archives or App Store uploads.
+- App handoff commits: Pro `c36b55b` (1.6 build 54), Standalone `4d0c70b` (1.9 build 35), pushed to their respective feature branches. Both unsigned Release device builds passed; application, Watch and complication version metadata agree. This does not represent new archives or App Store uploads.
 - Website push is to the preparation branch only. GitHub Pages remains configured to publish `main:/docs`; no main merge or public release is part of this handoff.
 
 ## 11 September — English-only follow-up: manual editing and Watch History
@@ -43,7 +43,7 @@ Five new native PNGs were copied unchanged from the latest app QA captures. They
 Follow-up validation on 11 September:
 
 - Browser layout checks: landing page, Help, Product Updates, Privacy and UK campaign at 320, 390, 768 and 1440 px. Document width matched viewport width in all 20 checks. Existing mobile screenshot carousels intentionally scroll inside their own containers.
-- Rendered and inspected the new editor and Watch History sections at desktop and mobile sizes, plus the mobile Companion release article. Product Updates contains no screenshot images.
+- Rendered and inspected the new editor and Watch History sections at desktop and mobile sizes, plus the mobile Pro release article. Product Updates contains no screenshot images.
 - Static check: 205 local references across the five pages, with no missing files, missing anchors or duplicate IDs. `git diff --check` passed.
 - All five new PNG hashes match their native QA originals. Hash comparison also confirms the 36 translated HTML files were unchanged during this follow-up.
 - Two broader browser interaction/resource probes were interrupted (process exit 137); they are not counted as passed. Local references were checked separately on disk. Live iCloud sync, production deployment and external App Store availability are outside this website check.
@@ -66,14 +66,14 @@ The Watch period option is now **Entire year** in both app worktrees and the Eng
 
 The landing page uses `watch-history-months-entire-year.png` (416 × 496), copied unchanged from `/tmp/tsw-entire-year-standalone-captures/C7913788-0457-4D36-9741-BB4CBDD0BAD5.png`, captured by the native Standalone UI test on 46 mm. SHA-256: `6fe97b2b6198f949ec5226a244e2beadccb459b95344e9ae665345a85117ab7a`. The previous screenshot is retained as historical source material; translated pages are unchanged.
 
-Both app targets built successfully. `testHistoryPeriodFiltersAndReset` passed for Standalone and Companion on 40 mm and 46 mm (four successful runs), including the new wording assertion. Results: `/tmp/tsw-entire-year-standalone-20260912.xcresult` and `/tmp/tsw-entire-year-companion-20260912.xcresult`. The screenshot shows the full label without truncation. The 205 local website references still resolve. This was a targeted copy/UI check, not another full prerelease regression.
+Both app targets built successfully. `testHistoryPeriodFiltersAndReset` passed for Standalone and Pro on 40 mm and 46 mm (four successful runs), including the new wording assertion. Results: `/tmp/tsw-entire-year-standalone-20260912.xcresult` and `/tmp/tsw-entire-year-companion-20260912.xcresult`. The screenshot shows the full label without truncation. The 205 local website references still resolve. This was a targeted copy/UI check, not another full prerelease regression.
 
-The wording check used Companion 53 / Standalone 34. After that check, the user authorized increasing the build numbers to 54 / 35 and committing/pushing the app and website branches. Marketing versions remain 1.6 / 1.9. No archive, App Store upload, main-branch merge or website publication is part of this handoff.
+The wording check used Pro 53 / Standalone 34. After that check, the user authorized increasing the build numbers to 54 / 35 and committing/pushing the app and website branches. Marketing versions remain 1.6 / 1.9. No archive, App Store upload, main-branch merge or website publication is part of this handoff.
 
 ## English content prepared
 
 - Landing page: manual played matches; optional court context; expanded Match Highlights; up to six highlights on shared cards; manual-entry Watch history. Retains the existing scoring, Rivalries, statistics, calendar and support sections.
-- Product Updates: separate Companion 1.6 and Standalone 1.9 entries. Previous release articles are retained. Per the 11 September review, Product Updates is text-only; screenshot galleries are on the landing page. Headlines describe meaningful product changes; time entry and keyboard details are supporting details, not standalone release features.
+- Product Updates: separate Pro 1.6 and Standalone 1.9 entries. Previous release articles are retained. Per the 11 September review, Product Updates is text-only; screenshot galleries are on the landing page. Headlines describe meaningful product changes; time entry and keyboard details are supporting details, not standalone release features.
 - Help: manual entry, stopped/tied results, tie-break entry, remembered timing and midnight, direct field taps and keyboard navigation, available statistics, sync, court reuse, privacy and supported highlights.
 - Privacy: factual disclosures about manually entered match/context data, local account-scoped favorite courts and what appears on a shared image.
 - UK English campaign page: same major benefits and original screens. Existing campaign parameters, pricing and analytics code are preserved; price was not revalidated in this task.
@@ -151,7 +151,7 @@ Rechecked all five pages at 320, 390, 768 and 1440 CSS pixels: no document overf
 
 ### Final English copy and layout audit — 11 September
 
-- Reviewed all five English pages against the current Companion source for manual entry, match outcomes and Highlights. Corrected stopped-match copy: compare completed sets, then the current unfinished set and recorded points; do not sum earlier games to determine the leader.
+- Reviewed all five English pages against the current Pro source for manual entry, match outcomes and Highlights. Corrected stopped-match copy: compare completed sets, then the current unfinished set and recorded points; do not sum earlier games to determine the leader.
 - Added manual Match Tie-Break and interrupted set tie-break instructions. Clarified one-to-five-set support, optional timing, missing statistics and the distinction between Stats results and completed-win streak/milestone Highlights.
 - Updated the Help overview and English metadata; replaced awkward or ambiguous English without adding unsupported features. Surface/place remain descriptive context, not achievement criteria; notes remain private.
 - Fixed actual line splits inside numeric score examples using the English-only `score-nowrap` utility. Preserve this utility when adapting the approved content to other languages.
