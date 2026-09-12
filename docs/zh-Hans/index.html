@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Tennis Score Wizard — Apple Watch 与 iPhone 网球记分</title>
-<meta content="在 Apple Watch 上使用 One Set、官方 Short Sets、No‑Ad 和 Custom Set 记录网球比分，并查看自动统计和私密 iCloud 同步。" name="description"/>
+<meta content="在 iPhone 上添加和编辑已打过的比赛，按年、月筛选 Apple Watch 比赛历史，保存球场信息并分享比赛亮点。" name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/">
@@ -22,13 +22,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Tennis Score Wizard — Apple Watch 与 iPhone 网球记分">
-<meta property="og:description" content="在 Apple Watch 上使用 One Set、官方 Short Sets、No‑Ad 和 Custom Set 记录网球比分，并查看自动统计和私密 iCloud 同步。">
+<meta content="在 iPhone 上添加和编辑已打过的比赛，按年、月筛选 Apple Watch 比赛历史，保存球场信息并分享比赛亮点。" property="og:description"/>
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tennis Score Wizard — Apple Watch 与 iPhone 网球记分">
-<meta name="twitter:description" content="在 Apple Watch 上使用 One Set、官方 Short Sets、No‑Ad 和 Custom Set 记录网球比分，并查看自动统计和私密 iCloud 同步。">
+<meta content="在 iPhone 上添加和编辑已打过的比赛，按年、月筛选 Apple Watch 比赛历史，保存球场信息并分享比赛亮点。" name="twitter:description"/>
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -2276,6 +2276,8 @@ footer {
 <link rel="stylesheet" href="../rivalries-landing.css">
 <link rel="stylesheet" href="../core-scoring-formats-en.css?v=20260905-promo-cards">
 <script src="../support-development.js" defer></script>
+<link rel="stylesheet" href="../release-1-6-en.css?v=20260911-i18n">
+<script defer src="../navigation-en.js?v=20260911-i18n"></script>
 </head>
 <body>
 <main class="page">
@@ -2316,53 +2318,114 @@ footer {
 <span class="eyebrow-copy-compact"><span class="eyebrow-segment">在 Watch 上记分</span><span aria-hidden="true" class="eyebrow-separator">·</span><span class="eyebrow-segment">在 iPhone 上深入查看</span></span>
 </div>
 <h1>记录每一分，读懂每场比赛。</h1>
-<p>如果希望完全在 Apple Watch 上使用，请选择 Standalone；如果还想在 iPhone 上查看交手记录、历史、统计和体能训练详情，请选择 Companion。设置官方 Short Set、No‑Ad 或自定义 Custom Set 后，App 会自动处理每一分。</p>
+<p>使用 Standalone 或 Companion 在 Watch 实时记分。iPhone Companion 还可补录比赛、保存地点、查看对手交锋与亮点并分享结果。 手动添加的比赛可以在之后修改，手表上的比赛历史也可按年、月筛选。</p>
 <div class="hero-actions">
 <a class="hero-version-link" href="#versions">查看版本 <span aria-hidden="true">↓</span></a>
 <a class="hero-instagram-link" href="https://www.instagram.com/tennisscorewizard/" target="_blank" rel="noopener noreferrer"><span class="instagram-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="1.7" y="1.7" width="20.6" height="20.6" rx="6.3"></rect><circle cx="12" cy="12" r="5"></circle><circle cx="18.2" cy="5.9" r="1.25" fill="currentColor" stroke="none"></circle></svg></span><span>在 Instagram 上关注</span></a>
 </div>
 <div class="badges"><span class="badge">自动比赛统计</span><span class="badge">灵活的比赛赛制</span>
-<span class="badge">对手交手记录</span><span class="badge">发球与接发球</span><span class="badge">破发点</span><span class="badge">“健康”中的体能训练</span><span class="badge">实时心率</span><span class="badge">iCloud 同步</span></div>
+<span class="badge">对手交手记录</span><span class="badge">发球与接发球</span><span class="badge">破发点</span><span class="badge">“健康”中的体能训练</span><span class="badge">实时心率</span><span class="badge">iCloud 同步</span>
+<span class="badge">在 iPhone 上补录比赛</span><span class="badge">比赛信息与亮点</span>
+</div>
 </div>
 <div aria-label="Tennis Score Wizard" class="hero-visual"><div class="hero-ball-frame"><img alt="" class="hero-ball" src="../assets/tennis_ball_app_icon_1024-512.webp" srcset="../assets/tennis_ball_app_icon_1024-512.webp 512w, ../assets/tennis_ball_app_icon_1024-1024.webp 1024w" sizes="(max-width: 640px) 82vw, 500px" fetchpriority="high" width="1024" height="1024" decoding="async"/></div></div>
 </section>
 <section id="versions">
-<h2>选择适合你的 Tennis Score Wizard</h2>
+<h2>选择适合您的 Tennis Score Wizard</h2>
 <p class="section-subtitle">两个版本都能在 Apple Watch 上完整记录比赛。只使用 Apple Watch 请选择 Standalone；需要 iPhone App 请选择 Companion。两者都可以通过 iCloud 同步相同的已保存比赛。</p>
 <div class="version-grid">
-<article class="card version-card"><span class="version-kicker">Standalone</span><h3>仅 Apple Watch</h3><p>直接安装到 Apple Watch，在手腕上完成整场比赛的所有操作，无需 iPhone 配套 App。</p><ul class="version-list"><li>One Set、Short Sets、No‑Ad 和 Custom Set</li><li>自动统计和 iCloud 同步</li><li>可选择将体能训练保存到“健康”App</li></ul><a aria-label="Tennis Score Wizard Standalone" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004"><span class="app-store-logo"></span><span class="app-store-text"><small>从 App Store</small><strong>下载</strong></span></a><span class="version-availability">版本 1.8 · 现已推出</span></article>
-<article class="card version-card version-card-companion"><span class="version-kicker">Companion</span><h3>iPhone + Apple Watch</h3><p>在 Apple Watch 上获得与 Standalone 相同的完整体验，并连接 iPhone 查看同步的历史、结果、体能训练数据、详细统计以及使用 iCloud 同步比赛。</p><ul class="version-list"><li>在 Apple Watch 上灵活设置比赛并实时记分</li><li>在 Apple Watch 上查看历史、统计、体能训练和复杂功能</li><li>在 iPhone 上查看同步的比赛历史和详细分析</li></ul><a aria-label="Tennis Score Wizard Companion" class="app-store-button" href="https://apps.apple.com/app/id6789285015"><span class="app-store-logo"></span><span class="app-store-text"><small>从 App Store</small><strong>下载</strong></span></a><span class="version-availability">版本 1.5 · 现已推出</span></article>
+<article class="card version-card"><span class="version-kicker">Standalone</span><h3>仅 Apple Watch</h3><p>直接安装到 Apple Watch，在手腕上完成整场比赛的所有操作，无需 iPhone 配套 App。</p><ul class="version-list"><li>One Set、Short Sets、No‑Ad 和 Custom Set</li><li>自动统计和 iCloud 同步</li><li>可选择将体能训练保存到“健康”App</li><li>按年、月筛选 Watch 比赛历史</li></ul><a aria-label="Tennis Score Wizard Standalone" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004"><span class="app-store-logo"></span><span class="app-store-text"><small>从 App Store</small><strong>下载</strong></span></a><span class="version-availability">版本 1.9</span></article>
+<article class="card version-card version-card-companion"><span class="version-kicker">Companion</span><h3>iPhone + Apple Watch</h3><p>完整 Apple Watch 应用，加上 iPhone 的比赛补录、球场与备注、表现回顾及亮点分享工具。 手动添加的比赛可以在之后修改，手表上的比赛历史也可按年、月筛选。</p><ul class="version-list"><li>在 Apple Watch 上灵活设置比赛并实时记分</li><li>在 Apple Watch 上查看历史、统计、体能训练和复杂功能</li><li>iPhone 比赛补录、球场信息、对手交锋与分享</li></ul><a aria-label="Tennis Score Wizard Companion" class="app-store-button" href="https://apps.apple.com/app/id6789285015"><span class="app-store-logo"></span><span class="app-store-text"><small>从 App Store</small><strong>下载</strong></span></a><span class="version-availability">版本 1.6</span></article>
 </div>
 <a class="hero-version-link versions-compare-link" href="#comparison">比较功能 <span aria-hidden="true">↓</span></a>
 </section>
-<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>现已推出</span><span>Companion 1.5</span><span>Standalone 1.8</span></span><h2 id="scoring-formats-title">按你真正使用的赛制打球。</h2><p>Companion 1.5 和 Standalone 1.8 为 Apple Watch 自动记分加入官方快速赛制、No‑Ad 和自定义盘设置，同时保留熟悉的场上操作。</p></div><div class="core-proof-grid watch-promo-grid">
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>One Set 和 Custom Set 设置</h3><p>时间有限时，用一盘完成整场比赛。</p><p>把局数目标、领先要求、抢七起点和目标设为一套完整配置。</p><p>保留六局优势盘，或在 6–6 开始常规抢七。</p></div><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="One Set 和 Custom Set 设置" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>官方 Short Set 选项</h3><p>四局先胜；可在 3–3 或 4–4 开始抢七，并选择 7 分制或 4–4 决胜分。</p></div><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="官方 Short Set 选项" width="422" height="514" loading="lazy" decoding="async"></article>
+<section aria-labelledby="release-next-title" class="release-next" id="new-release">
+<div class="release-next-heading">
+<div class="release-next-kicker"><span>Companion 1.6 新功能</span><span>与 Standalone 1.9 同步</span></div>
+<h2 id="release-next-title">记录整场比赛，<br/>不止是比分。</h2>
+<p>补录已打完的比赛，记下球场和比赛环境，分享值得回味的时刻。所有信息都与 Apple Watch 比赛记录保存在一起。 手动添加的比赛可以在之后修改，手表上的比赛历史也可按年、月筛选。</p>
+</div>
+<div class="release-next-grid">
+<article class="release-next-card">
+<span class="release-card-number">01 · 补录已进行的比赛</span>
+<h3>已经打过，也能留下记录。</h3>
+<p>在 iPhone 上输入各盘比分；如果记得，也可以填写抢七分数。完整结束、中途停止或打平的比赛都能保存。可填写开始和结束时间，也可将时长留空。</p>
+<a aria-label="以原始尺寸打开手动录入截图" href="../assets/release-1-6-en/manual-score.png" rel="noopener" target="_blank"><img alt="Companion 手动录入界面，比分为 7–6、6–4，盘内抢七为 12–10" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-score.png" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">02 · 留住比赛细节</span>
+<h3>每片球场，都有一段故事。</h3>
+<p>添加场地材质、室内或室外、俱乐部、球场和私人备注。可重复选择最近使用或收藏的球场，也能补充之前用 Watch 记录的比赛。</p>
+<a aria-label="以原始尺寸打开球场信息截图" href="../assets/release-1-6-en/favorite-court.png" rel="noopener" target="_blank"><img alt="Companion 球场编辑器，显示 Central Tennis Club、Court 3、收藏和独立的比赛备注" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/favorite-court.png" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">03 · 发现比赛亮点</span>
+<h3>更多值得记住的瞬间。</h3>
+<p>比赛详情会显示数据能够证实的所有亮点，包括逆转、个人最佳和胜场里程碑。分享卡片最多呈现其中六个较有看点的亮点。</p>
+<a aria-label="以原始尺寸打开比赛亮点截图" href="../assets/release-1-6-en/match-highlights.png" rel="noopener" target="_blank"><img alt="手动录入比赛的直落各盘获胜亮点，以及基于历史记录的连胜亮点" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights.png" width="1320"/></a>
+</article>
+</div>
+<article class="release-watch-proof" id="edit-played-match">
+<div><div class="release-next-kicker"><span>手动添加的比赛 · iPhone</span></div><h3>比分输错了？保留比赛，修正信息。</h3><p>打开手动添加的比赛，轻点 Edit match。无需删除比赛后重新输入，即可修改日期、时间、规则或比分。</p><p>保存后会更新同一条记录，包括手表历史中的记录。通过 Apple Watch 记录的比分不会被修改。对手关联和球场信息通过各自的入口编辑。</p><a href="help.html#manual-matches">了解比赛的添加与编辑 →</a></div>
+<a href="../assets/release-1-6-en/manual-edit-form.png" target="_blank" rel="noopener" aria-label="iPhone 上手动比赛的编辑页面，显示比赛详情、球场信息和时间设置"><img src="../assets/release-1-6-en/manual-edit-form.png" alt="iPhone 上手动比赛的编辑页面，显示比赛详情、球场信息和时间设置" width="1320" height="2868" loading="lazy" decoding="async"></a>
+</article>
+<figure class="highlights-catalog" id="match-highlights-catalog">
+<figcaption>
+<span class="release-card-number">比赛亮点</span>
+<h3>每场比赛，都有闪光时刻。</h3>
+<p>逆转、胶着的抢七、胜场里程碑和个人纪录。通过 44 张示例卡片，了解 26 种比赛亮点。</p>
+<p class="release-media-note">这些示例来自不同情景，并非同一场比赛。详情显示所有符合条件的亮点，分享卡片最多显示六个。</p>
+</figcaption>
+<a aria-label="以原始尺寸打开全部 44 个亮点示例" href="../assets/release-1-6-en/all-match-highlights.png" rel="noopener" target="_blank">
+<img alt="44 张卡片展示 26 种亮点，包括逆转、抢七、对手交锋、纪录、发球、接发和长时间比赛" decoding="async" height="1501" loading="lazy" src="../assets/release-1-6-en/all-match-highlights.png" width="2160"/>
+</a>
+</figure>
+<article class="release-watch-proof">
+<div>
+<div class="release-next-kicker"><span>两款 Watch 应用均支持</span></div>
+<h3>在 iPhone 上添加，<br/>在手腕上查看。</h3>
+<p>会。配对的 Companion 手表会更新同一场比赛；使用同一 Apple 账户时，修改也可通过私有 iCloud 同步到 Standalone。请更新应用并等待同步完成。相关统计和基于历史记录的亮点会采用修正后的结果。比赛仍会标明为手动添加，不会凭空生成未记录的逐分或体能训练数据。</p>
+<p>这些比赛明确标为<strong>手动添加</strong>，只显示保存的结果，不展示没有数据的逐分统计或体能训练卡片。</p>
+<a href="help.html#manual-matches">了解手动录入 →</a>
+</div>
+<a aria-label="以原始尺寸打开 Apple Watch 手动比赛记录" href="../assets/release-1-6-en/watch-manual-history.png" rel="noopener" target="_blank"><img alt="Standalone 的 Apple Watch 历史记录，显示一场中止且打平的比赛，并标注为手动添加" decoding="async" height="514" loading="lazy" src="../assets/release-1-6-en/watch-manual-history.png" width="422"/></a>
+</article>
+<p class="release-media-note">示例使用英文版应用的真实截图和演示比赛数据。比分、时长和亮点均保留应用生成的原貌。手动比赛显示输入的结果，以及这些数据能够支持的汇总。</p>
+</section>
+<section id="watch-history" class="core-formats-showcase" aria-labelledby="watch-history-title">
+<div class="core-formats-heading"><span class="core-formats-kicker"><span>两款 Watch 应用均支持</span></span><h2 id="watch-history-title">找回那场比赛。</h2><p>上个月，还是上个赛季？按年、月筛选手表上的比赛历史，也可同时筛选单打或双打。较早的比赛会随着浏览逐步加载，已保存的历史不会被删除。</p></div>
+<div class="core-proof-grid watch-promo-grid">
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>先选时间范围。</h3><p>在 History 中轻点 Period。选择一个时间范围，或用 All dates 显示全部日期。也可搭配 All、1v1 和 2v2 筛选。</p></div><img src="../assets/release-1-6-en/watch-history-period.png" alt="先选时间范围。 在 History 中轻点 Period。选择一个时间范围，或用 All dates 显示全部日期。也可搭配 All、1v1 和 2v2 筛选。" width="416" height="496" loading="lazy" decoding="async"></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>选择年份。</h3><p>列表中显示有比赛记录的年份。选择 All dates 即可返回全部历史。</p></div><img src="../assets/release-1-6-en/watch-history-years.png" alt="选择年份。 列表中显示有比赛记录的年份。选择 All dates 即可返回全部历史。" width="416" height="496" loading="lazy" decoding="async"></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>一个月，或一整年。</h3><p>选择有比赛记录的月份，或选择 Entire year 查看所选年份的全部比赛。</p></div><img src="../assets/release-1-6-en/watch-history-months-entire-year.png" alt="一个月，或一整年。 选择有比赛记录的月份，或选择 Entire year 查看所选年份的全部比赛。" width="416" height="496" loading="lazy" decoding="async"></article>
+</div><p class="release-media-note">Companion 和 Standalone 的真实英文界面，使用测试比赛记录。 <a href="help.html#match-history">了解历史筛选的用法 →</a></p>
+</section>
+<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>两个版本均内置</span><span>Apple Watch 记分</span></span><h2 id="scoring-formats-title">按您真正使用的赛制打球。</h2><p>两个版本使用相同的 Apple Watch 自动记分引擎，支持官方短赛制、No-Ad 和 Custom Set 设置，保留熟悉的场上操作。</p></div><div class="core-proof-grid watch-promo-grid">
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>One Set 和 Custom Set 设置</h3><p>时间有限时，用一盘完成整场比赛。</p><p>把局数目标、领先要求、抢七起点和目标设为一套完整配置。</p><p>保留六局优势盘，或在 <span class="score-nowrap">6–6</span> 开始常规抢七。</p></div><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="One Set 和 Custom Set 设置" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>官方 Short Set 选项</h3><p>四局先胜；可在 <span class="score-nowrap">3–3</span> 或 <span class="score-nowrap">4–4</span> 开始抢七，并选择 7 分制或 <span class="score-nowrap">4–4</span> 决胜分。</p></div><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="官方 Short Set 选项" width="422" height="514" loading="lazy" decoding="async"></article>
   <article class="watch-promo-card"><div class="watch-promo-copy"><h3>平分时使用 No‑Ad</h3><p>平分时下一分决胜，让任何盘制都更紧凑。</p></div><img src="../assets/core-scoring-formats-en/watch-no-ad.png" alt="平分时使用 No‑Ad" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>逐盘回顾你的胜利。</h3><p>最终比分、局数和比赛时长，清晰呈现在同一张结果卡片中。</p></div><img src="../assets/core-scoring-formats-en/watch-completed-win.png" alt="获胜比赛" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>逐盘回顾您的胜利。</h3><p>最终比分、局数和比赛时长，清晰呈现在同一张结果卡片中。</p></div><img src="../assets/core-scoring-formats-en/watch-completed-win.png" alt="获胜比赛" width="422" height="514" loading="lazy" decoding="async"></article>
   <article class="watch-promo-card"><div class="watch-promo-copy"><h3>每一场比赛都值得回顾。</h3><p>失利后也能查看比分和比赛时长，再打开历史记录，回顾比赛详情。</p></div><img src="../assets/core-scoring-formats-en/watch-completed-loss.png" alt="失利比赛" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>2 至 5 盘的比赛结果</h3><p>胜、负和中止比赛一眼可辨，2 至 5 盘的比分仍清晰易读。</p></div><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="2 至 5 盘的比赛结果" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>一至五盘，清晰呈现</h3><p>一眼区分胜利、失利和中止，一至五盘及抢七比分都保持易读。</p></div><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="2 至 5 盘的比赛结果" width="422" height="514" loading="lazy" decoding="async"></article>
 </div></section>
 <section id="icloud-sync" class="icloud-showcase" aria-labelledby="icloud-title">
-<div class="icloud-heading"><span class="icloud-kicker">通过 iCloud 同步比赛</span><h2 id="icloud-title">在 Apple Watch 和 iPhone 上查看比赛历史。</h2><p>使用同一 Apple 账户时，Standalone 和 Companion 可以通过 iCloud 同步相同的已保存比赛。每个 Apple 账户都有各自独立的私密比赛历史。在 Apple Watch 上记分，在 iPhone 上查看比赛，并在重新安装 App 后恢复已成功同步的比赛。</p></div>
-<div class="icloud-ecosystem"><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-watch"><source srcset="../assets/watch_history_synced.webp" type="image/webp"><img src="../assets/watch_history_synced.png" alt="Apple Watch 历史记录中显示 iCloud 已成功同步" width="416" height="496" loading="lazy" decoding="async"></picture><strong>Apple Watch</strong><p>使用 Standalone 或 Companion 记分，并在“历史记录”中查看最新同步状态。</p></div><div class="icloud-hub"><div class="icloud-cloud-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path><path d="m24 34 5.5 5.5L41 28"></path></svg></div><strong>私密 iCloud 同步</strong><p>成功同步的比赛记录保存在你 Apple 账户的私有 CloudKit 数据库中，而不是 Tennis Score Wizard 的服务器上。</p><div class="icloud-status-sample">✓ <span>Synced</span></div></div><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-phone"><source srcset="../assets/companion_icloud_synced-720.webp" type="image/webp"><img src="../assets/companion_icloud_synced.png" alt="Companion 的 iCloud 比赛历史卡片，显示私密存储和最近同步时间" width="1224" height="650" loading="lazy" decoding="async"></picture><strong>iPhone</strong><p>在 Companion 中查看比赛历史、统计和体能训练摘要，并检查私密 iCloud 同步状态。</p></div></div>
+<div class="icloud-heading"><span class="icloud-kicker">通过 iCloud 同步比赛</span><h2 id="icloud-title">在 Apple Watch 和 iPhone 上查看比赛历史。</h2><p>使用同一 Apple 账户时，Standalone 与 Companion 可通过 iCloud 同步相同的比赛。每个账户都有独立的私有历史。可以 Watch 记分，也能 iPhone 补录；手动标记、对手关联和比赛信息都随记录传输。成功同步的比赛可在重新安装后恢复。</p></div>
+<div class="icloud-ecosystem"><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-watch"><img src="../assets/release-1-6-en/watch-history-period.png" alt="在 History 中轻点 Period。选择一个时间范围，或用 All dates 显示全部日期。也可搭配 All、1v1 和 2v2 筛选。" width="416" height="496" loading="lazy" decoding="async"></picture><strong>Apple Watch</strong><p>使用 Standalone 或 Companion 记分，并在“历史记录”中查看最新同步状态。</p></div><div class="icloud-hub"><div class="icloud-cloud-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path><path d="m24 34 5.5 5.5L41 28"></path></svg></div><strong>私密 iCloud 同步</strong><p>成功同步的比赛记录保存在您的 Apple 账户的私有 CloudKit 数据库中，而不是 Tennis Score Wizard 的服务器上。</p><div class="icloud-status-sample">✓ <span>Synced</span></div></div><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-phone"><source srcset="../assets/companion_icloud_synced-720.webp" type="image/webp"><img src="../assets/companion_icloud_synced.png" alt="Companion 的 iCloud 比赛历史卡片，显示私密存储和最近同步时间" width="1224" height="650" loading="lazy" decoding="async"></picture><strong>iPhone</strong><p>在 Companion 补录比赛、编辑球场信息、查看已记录统计并检查私有 iCloud 同步。</p></div></div>
 <div class="icloud-benefits"><article class="icloud-benefit"><strong>两条独立的同步路径</strong><p>Companion 可在配对设备之间直接传输比赛；CloudKit 则独立提供持久可靠的 iCloud 同步与恢复。两条路径中的任一条都可能先完成。</p></article><article class="icloud-benefit"><strong>查看同步状态</strong><p>“历史记录”会显示 <b>Synced</b>、<b>Syncing</b>、<b>Waiting</b> / <b>Saving</b> 或 <b>Sync paused</b> / <b>Retry</b>。</p></article><article class="icloud-benefit"><strong>各账户的历史保持独立</strong><p>更换 Apple 账户不会混合比赛历史。上一账户尚未同步的比赛会保存在加密的本地恢复副本中。</p></article><article class="icloud-benefit"><strong>先记分，后恢复</strong><p>即使无法使用 iCloud 也能继续记分。成功同步的比赛可在使用同一 Apple 账户重新安装后再次下载。</p></article></div>
 </section>
 
-<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">新功能 · 交手记录</span><h2 id="rivalries-title">每位对手，都有一段故事。</h2><p>在单打比赛前选择已保存的对手，Tennis Score Wizard 会自动创建私密交手记录。比赛结果、关键分、逆转、连胜、体能数据和每次交手都集中在同一档案中。</p><a class="rivalries-action" href="whats-new.html">查看版本说明</a><p class="rivalries-singles-note">交手记录目前仅统计单打比赛。双打仍可正常记分，但不会关联到单个对手。</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="显示已保存对手和完整交手战绩的列表" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · 场上</span><h3>选好对手，然后专心比赛。</h3><p>设置单打比赛时，选择“访客”或已保存的球员。简称会显示在实时记分界面；你照常点击记分，交手记录便会自动生成。</p><ul class="rivalries-checklist"><li>在 iPhone 版 Companion 中创建和管理球员</li><li>通过私密 iCloud 同步将列表传到 Apple Watch</li><li>之后为旧的单打比赛指定对手</li><li>让访客比赛不计入交手记录</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="选择访客或已保存的球员" width="416" height="496" loading="lazy" decoding="async"><figcaption>选择访客或已保存的球员</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="比赛中显示所选对手" width="416" height="496" loading="lazy" decoding="async"><figcaption>比赛中显示所选对手</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · 完整交手档案</span><h3>一位对手，多维分析。</h3><p>可按全部时间、今年或最近 30 天筛选。将近期状态与整个周期对比，打开每次交手，并且只显示实际记录过的统计。</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>交手战绩</strong><p>有明确结果的比赛、胜场、盘、局、抢七和决胜局抢十。</p></article><article class="rivalries-benefit"><strong>比赛表现</strong><p>得分、保发率与破发率、发球、接发球和关键分。</p></article><article class="rivalries-benefit"><strong>规律与体能</strong><p>先丢一盘后的逆转胜、连胜、上场时间、心率和活动能量。</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="交手战绩与近期状态" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>交手战绩与近期状态</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="表现、规律与体能" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>表现、规律与体能</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="全部已保存的交手" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>全部已保存的交手</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · 分享交手故事</span><h3>三张卡片，一段完整故事。</h3><p>分享顺序固定为：战绩与近期交手、比赛表现、比赛规律与体能信息。私密备注绝不会出现在分享内容中。</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="战绩与近期交手" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · 战绩与近期交手</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="比赛表现" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · 比赛表现</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="规律、时间与体能" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · 规律、时间与体能</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>隐私优先</strong><p>档案、备注和比赛关联保存在你的设备上，并可通过你的私密 iCloud 数据同步。</p></article><article><strong>比赛中无需额外操作</strong><p>选择对手只是在赛前补充信息。记分、撤销、体能训练记录和其他比赛流程均保持不变。</p></article></div></section>
+<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">新功能 · 交手记录</span><h2 id="rivalries-title">每位对手，都有一段故事。</h2><p>在单打比赛前选择已保存的对手，Tennis Score Wizard 会自动创建私密交手记录。比赛结果、关键分、逆转、连胜、体能数据和每次交手都集中在同一档案中。</p><a class="rivalries-action" href="whats-new.html">查看版本说明</a><p class="rivalries-singles-note">交手记录目前仅统计单打比赛。双打仍可正常记分，但不会关联到单个对手。</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="显示已保存对手和完整交手战绩的列表" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · 场上</span><h3>选好对手，然后专心比赛。</h3><p>设置单打比赛时，选择“访客”或已保存的球员。简称会显示在实时记分界面；您照常点击记分，交手记录便会自动生成。</p><ul class="rivalries-checklist"><li>在 iPhone 版 Companion 中创建和管理球员</li><li>通过私密 iCloud 同步将列表传到 Apple Watch</li><li>之后为旧的单打比赛指定对手</li><li>让访客比赛不计入交手记录</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="选择访客或已保存的球员" width="416" height="496" loading="lazy" decoding="async"><figcaption>选择访客或已保存的球员</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="比赛中显示所选对手" width="416" height="496" loading="lazy" decoding="async"><figcaption>比赛中显示所选对手</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · 完整交手档案</span><h3>一位对手，多维分析。</h3><p>可按全部时间、今年或最近 30 天筛选。将近期状态与整个周期对比，打开每次交手，并且只显示实际记录过的统计。</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>交手战绩</strong><p>有明确结果的比赛、胜场、盘、局、抢七和决胜局抢十。</p></article><article class="rivalries-benefit"><strong>比赛表现</strong><p>得分、保发率与破发率、发球、接发球和关键分。</p></article><article class="rivalries-benefit"><strong>规律与体能</strong><p>先丢一盘后的逆转胜、连胜、上场时间、心率和活动能量。</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="交手战绩与近期状态" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>交手战绩与近期状态</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="表现、规律与体能" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>表现、规律与体能</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="全部已保存的交手" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>全部已保存的交手</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · 分享交手故事</span><h3>三张卡片，一段完整故事。</h3><p>分享顺序固定为：战绩与近期交手、比赛表现、比赛规律与体能信息。私密备注绝不会出现在分享内容中。</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="战绩与近期交手" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · 战绩与近期交手</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="比赛表现" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · 比赛表现</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="规律、时间与体能" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · 规律、时间与体能</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>隐私优先</strong><p>档案、备注和比赛关联保存在您的设备上，并可通过您的私密 iCloud 数据同步。</p></article><article><strong>比赛中无需额外操作</strong><p>选择对手只是在赛前补充信息。记分、撤销、体能训练记录和其他比赛流程均保持不变。</p></article></div></section>
 <section class="companion-showcase" id="companion-benefits">
 <div class="companion-heading">
 <span class="companion-section-kicker">Companion 体验</span>
 <h2>完整体验，双屏呈现。</h2>
-<p class="section-subtitle">
-      Companion 包含 Standalone 在 Apple Watch 上的全部功能。iPhone 则提供更宽敞的同步视图，用于查看比赛历史、结果、统计数据和训练数据。
-    </p>
+<p class="section-subtitle">Companion 包含完整 Watch 应用，以及 iPhone 的补录、球场、对手交锋、亮点、统计和分享。</p>
 </div>
 <div class="companion-system">
 <article class="companion-device-panel companion-watch-panel">
 <div class="companion-device-copy">
 <span class="companion-device-label">赛场 · Apple Watch</span>
-<h3>完整的比赛体验尽在你的腕间。</h3>
+<h3>完整的比赛体验尽在您的腕间。</h3>
 <p>
           设置比赛、记录每分得分、追踪发球位置、使用“撤销”功能、记录训练数据、查看历史和统计数据，以及通过复杂功能启动应用——与 Standalone 完全一致。
         </p>
@@ -2391,9 +2454,7 @@ footer {
 <div class="companion-device-copy">
 <span class="companion-device-label">球场之外 · iPhone</span>
 <h3>需要时，随时可切换至更大视图。</h3>
-<p>
-          已保存的比赛数据会同步到 iPhone，在那里你可以更方便地查看比赛结果、历史记录、详细表现和训练分析。
-        </p>
+<p>回顾 Watch 比赛或直接在 iPhone 添加结果，把球场与备注保存在结果旁，查看实际记录的统计和训练数据。</p>
 </div>
 <div class="companion-phone-preview">
 <img alt="iPhone 版 Tennis Score Wizard Companion，比赛数据与 Apple Watch 同步" decoding="async" height="2868" loading="lazy" src="../assets/companion_home_latest_matches-720.webp" width="1320" srcset="../assets/companion_home_latest_matches-720.webp 720w, ../assets/companion_home_latest_matches-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/>
@@ -2409,7 +2470,7 @@ footer {
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">02</span>
 <h3>同步的比赛历史记录</h3>
-<p>你保存的比赛数据可在 Apple Watch 和 iPhone 之间同步。</p>
+<p>您保存的比赛数据可在 Apple Watch 和 iPhone 之间同步。</p>
 </article>
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">03</span>
@@ -2419,44 +2480,36 @@ footer {
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">04</span>
 <h3>训练详情</h3>
-<p>在任意一台设备上查看训练时长、心率和活动能量。</p>
+<p>分享含最多六个亮点及可选球场信息的比赛、表现概览或当前趋势。私人备注不会公开。</p>
 </article>
 </div>
 </section>
 <section id="iphone-screenshots">
 <span class="companion-section-kicker">Companion 的 iPhone 端</span>
 <h2>从每场比赛到整体表现</h2>
-<p class="section-subtitle">
-    在 Apple Watch 上记分，再用 iPhone 查看单场比赛、浏览日历、了解长期表现并跟踪变化趋势。
-  </p>
+<p class="section-subtitle">Watch 记分或 iPhone 输入结果。查看历史、日历、可用统计和随时间积累的表现。</p>
 <div class="iphone-gallery">
-<div class="release-gallery-heading"><h3>比赛详情</h3><p>从最新结果开始，打开完整历史，查看比分和自动计算的比赛统计。</p></div>
+<div class="release-gallery-heading"><h3>比赛详情</h3><p>从最新结果进入完整历史和比分。Watch 比赛可有自动逐分统计，手动比赛只显示您提供的信息。</p></div>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="Tennis Score Wizard Companion 主屏幕，显示最新比赛及从 Apple Watch 同步的近期比赛" decoding="async" height="2868" loading="lazy" src="../assets/companion_home_latest_matches-720.webp" width="1320" srcset="../assets/companion_home_latest_matches-720.webp 720w, ../assets/companion_home_latest_matches-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/>
 </div>
 <h3>最新及近期比赛</h3>
-<p>
-        打开 Companion 应用，即可查看从 Apple Watch 同步过来的最新结果和近期比赛。
-      </p>
+<p>打开 Companion 查看最新结果和近期比赛，既包括 Watch 记录，也包括 iPhone 添加的比赛。</p>
 </article>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="Tennis Score Wizard Companion 的比赛历史记录，包含已结束和中途停止的比赛" decoding="async" height="2868" loading="lazy" src="../assets/companion_match_history-720.webp" width="1320" srcset="../assets/companion_match_history-720.webp 720w, ../assets/companion_match_history-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/>
 </div>
 <h3>完整比赛历史记录</h3>
-<p>
-        浏览已完成和已中止的比赛，查看比赛类型、时长、结果及总局数。
-      </p>
+<p>浏览完整结束、中止和打平的比赛，查看类型、结果、总局数及已知时长。</p>
 </article>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
-<img alt="Tennis Score Wizard Companion 显示已结束比赛的重要亮点" decoding="async" height="2868" loading="lazy" src="../assets/companion_match_details_overview-720.webp" width="1320" srcset="../assets/companion_match_details_overview-720.webp 720w, ../assets/companion_match_details_overview-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/>
+<img alt="Companion 比赛详情，含手动录入的结果和历史记录支持的亮点" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights.png" width="1320"/>
 </div>
 <h3>比赛亮点</h3>
-<p>
-        赛后查看最多四个精彩瞬间，包括逆转、胶着的抢七、连胜、个人最佳表现和交手里程碑。
-      </p>
+<p>显示所有保存数据能够证实的亮点，包括落后两盘逆转、胜场里程碑、最长连胜和接发最佳。历史亮点反映应用中的记录，不代表整个职业生涯。</p>
 </article>
 <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_match_tiebreak_details-720.webp" alt="结果中的决胜抢七/抢十" width="1320" height="2868" loading="lazy" decoding="async" srcset="../assets/companion_match_tiebreak_details-720.webp 720w, ../assets/companion_match_tiebreak_details-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/></div><h3>结果中的决胜抢七/抢十</h3><p>决胜抢七/抢十会与常规盘、盘数结果和总局数分开显示。</p></article>
 <article class="iphone-screenshot-card">
@@ -2493,20 +2546,30 @@ footer {
 <section id="share-results" class="share-showcase">
   <span class="companion-section-kicker">随时分享</span>
   <h2>分享的不只是比分</h2>
-  <p class="section-subtitle">既可以发送简洁的文字摘要，也可以根据当前选择的比赛、时间范围、比赛类型和统计页面生成精美图片卡片。</p>
-  <div class="share-gallery core-sharing-grid"><article class="share-card"><img src="../assets/core-scoring-formats-en/share-set-tiebreaks.png" alt="盘内抢七结果" width="1080" height="1920" loading="lazy" decoding="async"><h3>盘内抢七结果</h3><p>紧凑上标让主要盘分保持对齐，两位数抢七同样清晰。</p></article><article class="share-card"><img src="../assets/core-scoring-formats-en/share-match-tiebreak.png" alt="决胜 Match Tie-Break" width="1080" height="1920" loading="lazy" decoding="async"><h3>决胜 Match Tie‑Break</h3><p>决胜 Match Tie‑Break 与常规盘分开，并清楚显示为 [10–7]。</p></article>
+  <p class="section-subtitle">分享比分、最多六个适用亮点，以及可选球场条件和地点。布局适应已有数据，私人备注不会进入卡片。也可分享表现和趋势概要。</p>
+  <div class="share-gallery core-sharing-grid">
+<article class="share-card">
+<a aria-label="打开含球场信息和亮点的完整分享卡片" href="../assets/release-1-6-en/share-recorded-context.png" rel="noopener" target="_blank"><img alt="应用导出的五盘比赛卡片：时长 3 小时 2 分钟，含球场信息、已记录的统计和五个亮点" decoding="async" height="1937" loading="lazy" src="../assets/release-1-6-en/share-recorded-context.png" width="1080"/></a>
+<h3>结果、球场，还有亮点。</h3>
+<p>为 Watch 记录的比赛补充球场信息，再保留原比分、时长和已有统计进行分享。球场信息会显示，私人备注不会。</p>
+</article><article class="share-card">
+<a aria-label="以原始尺寸打开手动 Custom Set 分享卡片" href="../assets/release-1-6-en/share-custom-score.png" rel="noopener" target="_blank"><img alt="手动比赛导出示例：五盘 Custom Set、两位数局分和抢七分数，以及两个有依据的亮点" decoding="async" height="924" loading="lazy" src="../assets/release-1-6-en/share-custom-score.png" width="1080"/></a>
+<h3>只记录您知道的信息。</h3>
+<p>手动比赛也有简洁的结果卡片，展示盘比分和有数据依据的亮点，不会出现空白的训练面板或编造的逐分统计。</p>
+</article>
+<article class="share-card"><img src="../assets/core-scoring-formats-en/share-set-tiebreaks.png" alt="盘内抢七结果" width="1080" height="1920" loading="lazy" decoding="async"><h3>盘内抢七结果</h3><p>紧凑上标让主要盘分保持对齐，两位数抢七同样清晰。</p></article><article class="share-card"><img src="../assets/core-scoring-formats-en/share-match-tiebreak.png" alt="决胜 Match Tie-Break" width="1080" height="1920" loading="lazy" decoding="async"><h3>决胜 Match Tie‑Break</h3><p>决胜 Match Tie‑Break 与常规盘分开，并清楚显示为 [<span class="score-nowrap">10–7</span>]。</p></article>
     <article class="share-card"><img src="../assets/companion_share_stats-720.webp" alt="表现统计分享卡片" width="1080" height="1350" loading="lazy" decoding="async" srcset="../assets/companion_share_stats-720.webp 720w, ../assets/companion_share_stats-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/><h3>表现总览</h3><p>按当前选择的时间范围，以及全部、单打或双打筛选条件导出。</p></article>
     <article class="share-card"><img src="../assets/companion_share_trends-720.webp" alt="包含图表的表现趋势分享卡片" width="1080" height="1572" loading="lazy" decoding="async" srcset="../assets/companion_share_trends-720.webp 720w, ../assets/companion_share_trends-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/><h3>表现趋势</h3><p>将所选趋势连同月度比赛活跃度和近期月度摘要一起分享。</p></article>
   </div>
   <div class="share-destination-callout">
     <span class="share-destination-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.6"></circle><circle cx="18" cy="5.5" r="2.6"></circle><circle cx="18" cy="18.5" r="2.6"></circle><path d="m8.3 10.8 7.4-4.1"></path><path d="m8.3 13.2 7.4 4.1"></path></svg></span>
-    <div class="share-destination-copy"><strong>你的比赛，你的故事，随时分享。</strong><span>将精美卡片发布到 Instagram，通过“信息”或 WhatsApp 发送，或从 iPhone 共享菜单分享到任意兼容 App。</span></div>
+    <div class="share-destination-copy"><strong>您的比赛，您的故事，随时分享。</strong><span>将精美卡片发布到 Instagram，通过“信息”或 WhatsApp 发送，或从 iPhone 共享菜单分享到任意兼容 App。</span></div>
   </div>
 </section>
 
 <section class="standalone-intro" id="standalone">
 <span class="standalone-kicker">Apple Watch 版 Standalone</span>
-<h2>你所需的一切，尽在腕间。</h2>
+<h2>您所需的一切，尽在腕间。</h2>
 <p>
     设置比赛、记录每分得分、追踪发球方和发球位置、可选记录训练数据，以及查看历史记录和统计数据——所有操作均可在 Apple Watch 上完成，无需 iPhone。
   </p>
@@ -2520,7 +2583,7 @@ footer {
 <div class="grid">
 <article class="card">
 <h3>标准网球计分</h3>
-<p>使用大号可点击计分卡，自动记录 0–15–30–40、平分、占先、局、盘和抢七。</p>
+<p>使用大号可点击计分卡，自动记录 <span class="score-nowrap">0–15</span>–<span class="score-nowrap">30–40</span>、平分、占先、局、盘和抢七。</p>
 </article>
 <article class="card">
 <h3>自动比赛统计</h3>
@@ -2561,17 +2624,17 @@ footer {
 <article class="screenshot-card">
 <img alt="抢七" decoding="async" loading="lazy" src="../assets/04_tiebreak_scoring.webp" width="416" height="496"/>
 <h3>抢七</h3>
-<p>在 6–6 时，用同样醒目、易操作的记分按钮记录抢七分数。</p>
+<p>在 <span class="score-nowrap">6–6</span> 时，用同样醒目、易操作的记分按钮记录抢七分数。</p>
 </article>
 <article class="screenshot-card"><img src="../assets/core-scoring-formats-en/watch-match-tiebreak-targets.png" alt="选择决胜抢七/抢十" loading="lazy" decoding="async" width="416" height="496"/><h3>选择决胜抢七/抢十</h3><p>决胜盘开始前盘分持平时，可将该盘替换为 7 分制或 10 分制，并且必须领先两分。</p></article>
 <article class="screenshot-card"><img src="../assets/core-scoring-formats-en/watch-match-tiebreak-live.png" alt="记录每一分" loading="lazy" decoding="async" width="416" height="496"/><h3>记录每一分</h3><p>目标分数、盘分、发球方和当前得分始终可见。</p></article>
 <article class="screenshot-card">
 <img alt="比赛结束" decoding="async" loading="lazy" src="../assets/core-scoring-formats-en/watch-five-set-finish.png" width="416" height="496"/>
 <h3>比赛结束</h3>
-<p>当比赛决出胜负后，App 会显示获胜方、盘分结果，并可快速进入 History 或 Done。</p>
+<p>胜负确定后，应用清晰显示一至五盘结果，并可快速进入历史或完成。</p>
 </article>
 <article class="screenshot-card">
-<img src="../assets/core-scoring-formats-en/watch-history.png" alt="比赛历史页面，显示筛选器、战绩、完整的盘数和局数标签以及已保存的赛制" loading="lazy" decoding="async" width="422" height="514">
+<img src="../assets/release-1-6-en/watch-history-period.png" alt="在 History 中轻点 Period。选择一个时间范围，或用 All dates 显示全部日期。也可搭配 All、1v1 和 2v2 筛选。" loading="lazy" decoding="async" width="416" height="496">
 <h3>历史概览</h3>
 <p>直接在 Apple Watch 上查看胜场、负场、中止比赛、胜率和已保存比赛。</p>
 </article>
@@ -2625,10 +2688,8 @@ footer {
 <section class="comparison-section" id="comparison">
 <span class="product-section-kicker">版本对比</span>
 <div class="comparison-heading">
-<h2>Apple Watch 上的使用体验完全一致。区别在于配套内容。</h2>
-<p class="section-subtitle">
-      Standalone 提供完整的 Apple Watch 体验。Companion 包含同样完整的 Apple Watch 应用，并额外提供与 iPhone 同步的界面。
-    </p>
+<h2>Watch 记分同样完整，iPhone 记录更加丰富。</h2>
+<p class="section-subtitle">Standalone 提供完整的 Apple Watch 记分。Companion 增加 iPhone 补录、球场信息、对手交锋、亮点和分享。</p>
 </div>
 <div aria-label="Tennis Score Wizard Standalone与 Companion 版对比" class="comparison-grid" role="table">
 <div class="comparison-row comparison-header" role="row">
@@ -2692,6 +2753,18 @@ footer {
 <div role="cell"><span class="comparison-muted">不包含</span></div>
 <div role="cell">在 iPhone 上</div>
 </div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">添加和编辑已打过的比赛</div><div role="cell">通过 iCloud 接收手动比赛及修改</div><div role="cell">在 iPhone 上添加、编辑并同步到手表历史</div></div>
+<div class="comparison-row" role="row"><div class="comparison-feature" role="rowheader">按年、月筛选 Watch 比赛历史</div><div role="cell"><span class="comparison-check">✓</span> 支持</div><div role="cell"><span class="comparison-check">✓</span> 支持</div></div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">球场信息与私人比赛备注</div>
+<div role="cell">随同步比赛记录保留</div>
+<div role="cell">在 iPhone 添加和编辑</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">比赛亮点</div>
+<div role="cell"><span class="comparison-muted">Watch 上不显示</span></div>
+<div role="cell">iPhone 详情显示全部适用项，分享最多六个</div>
+</div>
 <div class="comparison-row comparison-best-for" role="row">
 <div class="comparison-feature" role="rowheader">最适合</div>
 <div role="cell">希望所有功能尽在腕间的球员</div>
@@ -2700,12 +2773,10 @@ footer {
 </div>
 </section>
 <div class="shared-experience-chapter">
-<div class="shared-experience-intro"><span class="shared-experience-kicker">两个版本共有</span><h2>两个版本使用相同的比赛分析。</h2><p>Standalone 与 Companion 均提供自动统计、本地历史、通过 iCloud 同步比赛、体能训练记录、计分规则和帮助。Companion 还可在 iPhone 上查看同步内容，但不会改变比赛的记分方式。</p></div>
+<div class="shared-experience-intro"><span class="shared-experience-kicker">两个版本共有</span><h2>两个版本使用相同的比赛分析。</h2><p>One Set、Short Sets、No-Ad、Custom Set、自动统计、本地历史、iCloud 和可选训练记录，两版均包含。Companion 额外提供 iPhone 手动结果和赛后工具，实时逐分记分仍在 Watch。</p></div>
 <section id="stats-guide">
 <h2>比赛统计指南</h2>
-<p class="section-subtitle">
-    两个版本均支持自动统计功能，会根据你的日常记分操作自动计算，因此你无需手动输入 Ace、制胜分、多拍数或任何其他比赛数据。
-  </p>
+<p class="section-subtitle">两款 Watch 应用从日常记分操作计算逐分统计，无需额外输入 ACE、制胜分或回合长度。手动比赛贡献已保存的结果，不创建逐分或训练数据。</p>
 <div class="help">
 <div class="help-item">
 <strong>分数</strong>
@@ -2713,15 +2784,15 @@ footer {
 </div>
 <div class="help-item">
 <strong>发球</strong>
-<p>显示你在自己发球局中的表现。发球局是你发球的局；发球分是你发球时进行的单个分。</p>
+<p>显示您在自己发球局中的表现。发球局是您发球的局；发球分是您发球时进行的单个分。</p>
 </div>
 <div class="help-item">
 <strong>接发球</strong>
-<p>显示对手发球时你的表现。赢下接发球局就是破发。接发球得分显示你在对手发球时赢分的频率。</p>
+<p>显示对手发球时您的表现。赢下接发球局就是破发。接发球得分显示您在对手发球时赢分的频率。</p>
 </div>
 <div class="help-item">
 <strong>破发点</strong>
-<p>挽救破发点是你在自己发球时顶住的破发点。兑现破发点是你在对手发球时赢下的破发机会。</p>
+<p>挽救破发点是您在自己发球时顶住的破发点。兑现破发点是您在对手发球时赢下的破发机会。</p>
 </div>
 <div class="help-item">
 <strong>比赛走势</strong>
@@ -2736,24 +2807,24 @@ footer {
 <p>下面是赛后常见统计行的读法。</p>
 <div class="stat-examples-grid">
 <div class="stat-example-card">
-<strong>分数 67–72</strong>
-<p>你赢了 67 分，对手赢了 72 分。差距很小通常表示比赛比盘分看起来更接近。</p>
+<strong>分数 <span class="score-nowrap">67–72</span></strong>
+<p>您赢了 67 分，对手赢了 72 分。差距很小通常表示比赛比盘分看起来更接近。</p>
 </div>
 <div class="stat-example-card">
 <strong>发球局 3/10</strong>
-<p>你在 10 局中发球，并赢下了其中 3 局。这表示你保发的频率。</p>
+<p>您在 10 局中发球，并赢下了其中 3 局。这表示您保发的频率。</p>
 </div>
 <div class="stat-example-card">
 <strong>接发球局 6/11</strong>
-<p>对手在 11 局中发球，你完成了 6 次破发。</p>
+<p>对手在 11 局中发球，您完成了 6 次破发。</p>
 </div>
 <div class="stat-example-card">
 <strong>挽救破发点 4/11</strong>
-<p>你在自己的发球局中面对 11 个破发点，并挽救了 4 个。</p>
+<p>您在自己的发球局中面对 11 个破发点，并挽救了 4 个。</p>
 </div>
 <div class="stat-example-card">
 <strong>兑现破发点 6/13</strong>
-<p>你有 13 次破掉对手发球局的机会，并成功了 6 次。</p>
+<p>您有 13 次破掉对手发球局的机会，并成功了 6 次。</p>
 </div>
 <div class="stat-example-card">
 <strong>平均每局分数 6.3</strong>
@@ -2763,9 +2834,9 @@ footer {
 </div>
 <div class="help-item">
 <strong>旧比赛</strong>
-<p>自动统计加入之前保存的比赛可能不包含统计数据。使用 1.2 或更高版本保存的新比赛可以包含新的 History 统计。</p>
+<p>自动统计推出前保存的比赛可能没有这些数据。手动比赛无论使用哪个版本，都没有逐分统计。</p>
 </div>
-<div class="help-item"><strong>隐私</strong><p>比赛历史保存在本地。iCloud 可用时，已保存的比赛还可以通过你 Apple 账户的私有 CloudKit 数据库同步。访问“健康”数据是可选的，仅用于记录体能训练和显示相关数据。</p></div></div></section>
+<div class="help-item"><strong>隐私</strong><p>比赛历史保存在本地。iCloud 可用时，已保存的比赛还可以通过您的 Apple 账户的私有 CloudKit 数据库同步。访问“健康”数据是可选的，仅用于记录体能训练和显示相关数据。</p></div></div></section>
 <section id="help">
 <h2>快速帮助</h2>
 <div class="help">
@@ -2791,7 +2862,7 @@ footer {
 </div>
 <div class="help-item">
 <strong>发球标记如何工作？</strong>
-<p>当你发球时，网球图标会提示你应该从哪一侧发球。当对手发球时，它会从你的手表视角提示对手的发球侧。</p>
+<p>当您发球时，网球图标会提示您应该从哪一侧发球。当对手发球时，它会从您的手表视角提示对手的发球侧。</p>
 </div>
 </div>
 </section>
@@ -2803,7 +2874,7 @@ footer {
 <div class="help">
 <div class="help-item">
 <strong>Win 和 Loss 是什么意思？</strong>
-<p>Win 表示你按盘数赢下了已完成比赛。Loss 表示对手按盘数赢下了已完成比赛。</p>
+<p>Win 表示您按盘数赢下了已完成比赛。Loss 表示对手按盘数赢下了已完成比赛。</p>
 </div>
 <div class="help-item">
 <strong>Stopped 是什么意思？</strong>
@@ -2811,28 +2882,38 @@ footer {
 </div>
 <div class="help-item">
 <strong>S1、S2、S3 是什么？</strong>
-<p>S1、S2、S3 表示第 1 盘、第 2 盘和第 3 盘。例如 S1 6–3 表示第一盘以 6 比 3 结束。</p>
+<p>S1、S2、S3 表示第 1 盘、第 2 盘和第 3 盘。例如 S1 <span class="score-nowrap">6–3</span> 表示第一盘以 6 比 3 结束。</p>
 </div>
 <div class="help-item">
-<strong>TB 7–3 是什么意思？</strong>
-<p>TB 表示 7–6 盘中的抢七分数。例如 7–6 · TB 7–3 表示该盘 7–6 获胜，抢七比分为 7–3。</p>
+<strong>TB <span class="score-nowrap">7–3</span> 是什么意思？</strong>
+<p>TB 表示 <span class="score-nowrap">7–6</span> 盘中的抢七分数。例如 <span class="score-nowrap">7–6</span> · TB <span class="score-nowrap">7–3</span> 表示该盘 <span class="score-nowrap">7–6</span> 获胜，抢七比分为 <span class="score-nowrap">7–3</span>。</p>
 </div>
-<div class="help-item"><strong>7–6<sup>(6)</sup> 表示什么？</strong><p>括号中的小数字是抢七落败一方的得分。在这个例子中，抢七比分为 8–6。比赛详情中仍会显示完整的抢七比分。</p></div>
+<div class="help-item"><strong><span class="score-nowrap">7–6</span><sup>(6)</sup> 表示什么？</strong><p>简略结果行的小括号数字表示抢七失利方的分数。这里抢七是 <span class="score-nowrap">8–6</span>。分盘表格可在已记录时显示双方分数。</p></div>
 <div class="help-item">
 <strong>中止比赛如何判断？</strong>
-<p>App 会先比较已完成的盘数，再比较已保存的局数，最后比较已有的抢七分数。如果一方领先，比赛仍标记为 Stopped，但该结果会在统计中计为胜或负。若仍为平局，则按中立结果处理。</p>
+<p>先比较已完成的盘数；相同时比较当前未完成盘的局数，再比较已记录的抢七或局内分数。不会累计之前各盘的局数来判断领先。盘间中止且双方获胜盘数相等时视为平局。若有明确领先方，统计中计为胜负，但保留中止标记。</p>
 </div>
 <div class="help-item">
 <strong>未完成的一盘会怎样？</strong>
-<p>对于中止比赛，如果当前未完成的一盘已有进展，也会保存，以保留真实比赛上下文，例如 S3 0–1。</p>
+<p>对于中止比赛，如果当前未完成的一盘已有进展，也会保存，以保留真实比赛上下文，例如 S3 <span class="score-nowrap">0–1</span>。</p>
 </div>
 </div>
 </section>
-<section id="faq"><h2>常见问题</h2><div class="help"><div class="faq"><strong>App 会收集个人数据吗？</strong><p>App 不需要 Tennis Score Wizard 账户，也不使用广告跟踪器。Tennis Score Wizard 不运营比赛历史服务器。历史会保存在本地；iCloud 可用时，还可以通过你 Apple 账户的私有 CloudKit 数据库同步。</p></div><div class="faq"><strong>必须允许访问“健康”数据吗？</strong><p>不需要。访问权限是可选的。即使不记录体能训练，也可以正常为比赛记分。</p></div><div class="faq"><strong>生成比赛统计需要额外操作吗？</strong><p>不需要。统计数据根据正常的记分操作自动生成，无需另行输入 Ace、制胜分、非受迫性失误或回合长度。</p></div><div class="faq"><strong>可以用于单打、双打和抢七吗？</strong><p>可以。App 支持单打、双打、三盘两胜、五盘三胜、长盘制和抢七盘。</p></div><div class="faq"><strong>可以删除比赛历史吗？</strong><p>可以。你可以在“历史记录”中删除已保存的比赛。iCloud 同步可用时，删除操作也会同步。</p></div><div class="faq"><strong>交手记录如何生成？</strong><p>先在 iPhone Companion 中创建对手，在 Apple Watch 开始单打比赛前选择该球员，然后照常记分。Tennis Score Wizard 会把保存的比赛关联到该球员，并自动整理交手战绩、近期状态、表现、比赛规律、上场时间、体能数据和全部对阵历史。Standalone 可以使用通过同一 Apple 账户同步的球员档案。选择“访客”则不会把比赛计入交手记录。</p></div></div></section>
-<section><h2>隐私</h2><div class="privacy-box"><strong>你的比赛历史保持私密。</strong><p>比赛历史保存在本地，并可通过你 Apple 账户的私有 CloudKit 数据库同步。Tennis Score Wizard 不运营比赛历史服务器，不出售比赛数据，也不会将其用于广告。</p><p>访问“健康”数据是可选的，仅在你授权后用于记录网球体能训练和显示可用的训练数据。</p><p><a href="privacy.html">阅读隐私政策</a></p></div></section>
+<section id="manual-match-help">
+<h2>比赛已经结束？仍然可以补录。</h2>
+<div class="help"><div class="help-item"><strong>手动添加的比赛可以编辑吗？</strong><p>可以。打开比赛详情，轻点 Edit match，即可修改日期、时间、时长、规则、各盘比分、抢七分数和结束状态。Save 会更新现有记录，不会生成副本；Cancel 会放弃修改。此表单不会更改单打或双打类型，也不会更换球员。对手关联和球场信息请通过各自的入口修改。</p></div>
+<div class="help-item"><strong>可以在打完后添加比赛吗？</strong><p>可以。在 iPhone 的 Companion 中选择添加已进行的比赛，填写比分，选择完整结束或中途停止，并补充记得的时间。保存的结果可以同步到两款 Watch 应用。</p></div>
+<div class="help-item"><strong>可以保存平局吗？</strong><p>可以。如果在胜者确定之前停止比赛，请选择中止。无需编造决胜盘，也能保存平局。</p></div>
+<div class="help-item"><strong>可以补充旧比赛的信息吗？</strong><p>可以。在 iPhone 打开比赛详情，添加或编辑比赛信息。Watch 记录的原比分、时间和统计不会改变。</p></div>
+<div class="help-item"><strong>修改对手或比赛信息后会发生什么？</strong><p>更换对手会更新关联的球员及相关交锋页面。基于历史的亮点使用当前保存的记录。可选的球场信息和私人备注不会产生新的统计成就。</p></div>
+</div>
+<p><a href="help.html#manual-matches">手动录入指南 →</a> <a href="help.html#match-context">球场信息与隐私 →</a></p>
+</section>
+<section id="faq"><h2>常见问题</h2><div class="help"><div class="faq"><strong>App 会收集个人数据吗？</strong><p>App 不需要 Tennis Score Wizard 账户，也不使用广告跟踪器。Tennis Score Wizard 不运营比赛历史服务器。历史会保存在本地；iCloud 可用时，还可以通过您的 Apple 账户的私有 CloudKit 数据库同步。</p></div><div class="faq"><strong>必须允许访问“健康”数据吗？</strong><p>不需要。访问权限是可选的。即使不记录体能训练，也可以正常为比赛记分。</p></div><div class="faq"><strong>生成比赛统计需要额外操作吗？</strong><p>Watch 统计来自常规记分操作。手动比赛只反映已知结果，不编造逐分过程、心率或训练。应用不要求输入 ACE、制胜分、非受迫性失误或回合长度。</p></div><div class="faq"><strong>可以用于单打、双打和抢七吗？</strong><p>可以。App 支持单打、双打、三盘两胜、五盘三胜、长盘制和抢七盘。</p></div><div class="faq"><strong>可以删除比赛历史吗？</strong><p>可以。您可以在“历史记录”中删除已保存的比赛。iCloud 同步可用时，删除操作也会同步。</p></div><div class="faq"><strong>交手记录如何生成？</strong><p>先在 iPhone Companion 中创建对手，在 Apple Watch 开始单打比赛前选择该球员，然后照常记分。Tennis Score Wizard 会把保存的比赛关联到该球员，并自动整理交手战绩、近期状态、表现、比赛规律、上场时间、体能数据和全部对阵历史。Standalone 可以使用通过同一 Apple 账户同步的球员档案。选择“访客”则不会把比赛计入交手记录。</p></div></div></section>
+<section><h2>隐私</h2><div class="privacy-box"><strong>您的比赛历史保持私密。</strong><p>比赛历史保存在本地，并可通过您的 Apple 账户的私有 CloudKit 数据库同步。Tennis Score Wizard 不运营比赛历史服务器，不出售比赛数据，也不会将其用于广告。</p><p>访问“健康”数据是可选的，仅在您授权后用于记录网球体能训练和显示可用的训练数据。</p><p><a href="privacy.html">阅读隐私政策</a></p></div></section>
 </div>
 <section id="support-development" class="development-support" aria-labelledby="development-support-title">
-<div class="development-support-heading"><span class="development-support-kicker">独立开发者</span><h2 id="development-support-title">支持下一场比赛。</h2><p>Tennis Score Wizard 由一位独立开发者设计、开发和维护。如果它对你的比赛有所帮助，你可以自愿支持 App 的持续开发。</p></div>
+<div class="development-support-heading"><span class="development-support-kicker">独立开发者</span><h2 id="development-support-title">支持下一场比赛。</h2><p>Tennis Score Wizard 由一位独立开发者设计、开发和维护。如果它对您的比赛有所帮助，您可以自愿支持 App 的持续开发。</p></div>
 <div class="development-support-grid">
 <article class="development-support-card"><div class="development-support-card-header"><span class="development-support-icon" aria-hidden="true">♥</span><h3>通过 Apple 支持</h3></div><p>使用 Apple 账户关联的付款方式提供一次性小费，并通过 Face ID 或 Touch ID 安全确认。</p><div class="development-support-options" aria-label="Apple 小费"><span class="development-support-option">小额小费 <strong>App Store</strong></span><span class="development-support-option">比赛用球 <strong>App Store</strong></span><span class="development-support-option">支持者 <strong>App Store</strong></span></div><span class="development-support-status">可在 App 内使用：Info → Support Development。</span></article>
 <article class="development-support-card"><div class="development-support-card-header"><span class="development-support-icon" aria-hidden="true">₿</span><h3>通过加密货币支持</h3></div><p>直接向经过验证的项目钱包发送自愿支持。币种旁始终会标明对应网络。</p><div class="development-support-options" data-wallet-list data-copy-label="复制" data-copied-label="已复制" data-copy-failed-label="重试" data-show-qr-label="显示二维码" data-qr-code-label="二维码" data-qr-instruction="请使用兼容的钱包扫描，然后核对网络和地址。" aria-label="经过验证的加密货币钱包"></div><span class="development-support-status">点按币种可复制地址，也可以打开二维码。USDT 和 GRAM 无需填写 memo。</span></article>

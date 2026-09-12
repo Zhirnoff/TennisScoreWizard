@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Tennis Score Wizard — Segnapunti per il tennis su Apple Watch e iPhone</title>
-<meta content="Segna i punti su Apple Watch con One Set, Short Sets ufficiali, No‑Ad, Custom Set, statistiche automatiche e sincronizzazione iCloud privata." name="description"/>
+<meta content="Aggiunga e modifichi le partite giocate su iPhone, filtri la cronologia Apple Watch per anno e mese, conservi i dettagli del campo e condivida i momenti salienti." name="description"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/it/" rel="canonical"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/" hreflang="en" rel="alternate"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/de/" hreflang="de" rel="alternate"/>
@@ -22,13 +22,13 @@
 <meta content="website" property="og:type"/>
 <meta content="Tennis Score Wizard" property="og:site_name"/>
 <meta content="Tennis Score Wizard — Segnapunti per il tennis su Apple Watch e iPhone" property="og:title"/>
-<meta content="Segna i punti su Apple Watch con One Set, Short Sets ufficiali, No‑Ad, Custom Set, statistiche automatiche e sincronizzazione iCloud privata." property="og:description"/>
+<meta content="Aggiunga e modifichi le partite giocate su iPhone, filtri la cronologia Apple Watch per anno e mese, conservi i dettagli del campo e condivida i momenti salienti." property="og:description"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/it/" property="og:url"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
 <meta content="Icona dell’app Tennis Score Wizard" property="og:image:alt"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="Tennis Score Wizard — Segnapunti per il tennis su Apple Watch e iPhone" name="twitter:title"/>
-<meta content="Segna i punti su Apple Watch con One Set, Short Sets ufficiali, No‑Ad, Custom Set, statistiche automatiche e sincronizzazione iCloud privata." name="twitter:description"/>
+<meta content="Aggiunga e modifichi le partite giocate su iPhone, filtri la cronologia Apple Watch per anno e mese, conservi i dettagli del campo e condivida i momenti salienti." name="twitter:description"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
 <style>
     :root {
@@ -2276,6 +2276,8 @@ footer {
 <link href="../rivalries-landing.css" rel="stylesheet"/>
 <link rel="stylesheet" href="../core-scoring-formats-en.css?v=20260905-promo-cards">
 <script src="../support-development.js" defer></script>
+<link rel="stylesheet" href="../release-1-6-en.css?v=20260911-i18n">
+<script defer src="../navigation-en.js?v=20260911-i18n"></script>
 </head>
 <body>
 <main class="page">
@@ -2286,7 +2288,7 @@ footer {
 </div>
 <div class="nav-links">
 <a href="#versions">Versioni</a>
-<a href="#comparison">Confronta</a>
+<a href="#comparison">Confronti</a>
 <a href="#stats-guide">Guida alle statistiche</a>
 <a href="whats-new.html">Aggiornamenti</a>
 <a href="help.html">Aiuto</a>
@@ -2313,16 +2315,16 @@ footer {
 <div class="eyebrow">
 <span class="eyebrow-dot"></span>
 <span class="eyebrow-copy-full">Segnapunti per il tennis su Apple Watch, con o senza iPhone</span>
-<span class="eyebrow-copy-compact"><span class="eyebrow-segment">Segna i punti su Apple Watch</span><span aria-hidden="true" class="eyebrow-separator">·</span><span class="eyebrow-segment">Analizza le partite su iPhone</span></span>
+<span class="eyebrow-copy-compact"><span class="eyebrow-segment">Segni i punti su Apple Watch</span><span aria-hidden="true" class="eyebrow-separator">·</span><span class="eyebrow-segment">Analizzi le partite su iPhone</span></span>
 </div>
-<h1>Registra ogni punto. Analizza ogni partita.</h1>
-<p>Scegli Standalone per l’esperienza completa su Apple Watch oppure Companion per aggiungere su iPhone rivalità, cronologia, statistiche e dati degli allenamenti. Configura Short Sets ufficiali, No‑Ad o un Custom Set personalizzato e lascia che l’app gestisca ogni punto.</p>
+<h1>Registri ogni punto. Analizzi ogni partita.</h1>
+<p>Segni i punti su Apple Watch con Standalone o Companion. Con Companion su iPhone può anche aggiungere partite giocate, ricordare i luoghi, esplorare rivalità e momenti salienti e condividere il risultato. Può correggere le partite inserite manualmente e filtrare la cronologia dell’orologio per anno e mese.</p>
 <div class="hero-actions">
 <a class="hero-version-link" href="#versions">
-        Scopri le versioni
+        Scopra le versioni
         <span aria-hidden="true">↓</span>
 </a>
-<a aria-label="Segui Tennis Score Wizard su Instagram (si apre in una nuova scheda)" class="hero-instagram-link" href="https://www.instagram.com/tennisscorewizard/" rel="noopener noreferrer" target="_blank">
+<a aria-label="Segua Tennis Score Wizard su Instagram (si apre in una nuova scheda)" class="hero-instagram-link" href="https://www.instagram.com/tennisscorewizard/" rel="noopener noreferrer" target="_blank">
 <span aria-hidden="true" class="instagram-icon">
 <svg viewbox="0 0 24 24">
 <rect height="20.6" rx="6.3" width="20.6" x="1.7" y="1.7"></rect>
@@ -2330,7 +2332,7 @@ footer {
 <circle cx="18.2" cy="5.9" fill="currentColor" r="1.25" stroke="none"></circle>
 </svg>
 </span>
-<span>Seguici su Instagram</span>
+<span>Ci segua su Instagram</span>
 </a>
 </div>
 <div class="badges">
@@ -2341,6 +2343,8 @@ footer {
 <span class="badge">Allenamenti in Salute</span>
 <span class="badge">Frequenza cardiaca in tempo reale</span>
 <span class="badge">Sincronizzazione delle partite con iCloud</span>
+
+<span class="badge">Aggiunga partite giocate su iPhone</span><span class="badge">Dettagli e momenti salienti</span>
 </div>
 </div>
 <div aria-label="Icona dell’app Tennis Score Wizard" class="hero-visual">
@@ -2350,78 +2354,135 @@ footer {
 </div>
 </section>
 <section id="versions">
-<h2>Scegli il tuo Tennis Score Wizard</h2>
+<h2>Scelga il suo Tennis Score Wizard</h2>
 <p class="section-subtitle">
-    Entrambe le versioni includono il sistema di punteggio completo su Apple Watch. Scegli Standalone per usare solo Apple Watch oppure Companion per aggiungere un’app per iPhone. Entrambe possono sincronizzare tramite iCloud le stesse partite salvate.
+    Entrambe le versioni includono il sistema di punteggio completo su Apple Watch. Scelga Standalone per usare solo Apple Watch oppure Companion per aggiungere un’app per iPhone. Entrambe possono sincronizzare tramite iCloud le stesse partite salvate.
   </p>
 <div class="version-grid">
 <article class="card version-card">
 <span class="version-kicker">Standalone</span>
 <h3>Solo Apple Watch</h3>
 <p>
-        Installa l’app direttamente su Apple Watch e gestisci l’intera partita dal polso. Non serve alcuna app per iPhone.
+        Installi l’app direttamente su Apple Watch e gestisca l’intera partita dal polso. Non serve alcuna app per iPhone.
       </p>
 <ul class="version-list">
 <li>One Set, Short Sets, No‑Ad e Custom Set</li>
 <li>Statistiche automatiche e sincronizzazione delle partite con iCloud</li>
 <li>Registrazione facoltativa dell’allenamento nell’app Salute</li>
-</ul>
+<li>Filtri della cronologia Watch per anno e mese</li></ul>
 <a aria-label="Scarica Tennis Score Wizard Standalone dall’App Store" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004">
 <span class="app-store-logo"></span>
 <span class="app-store-text">
-<small>Scarica su</small>
+<small>Disponibile su</small>
 <strong>App Store</strong>
 </span>
 </a>
-<span class="version-availability">Versione 1.8 · Disponibile ora</span>
+<span class="version-availability">Versione 1.9</span>
 </article>
 <article class="card version-card version-card-companion">
 <span class="version-kicker">Companion</span>
 <h3>iPhone + Apple Watch</h3>
-<p>
-        Con Companion ottieni su Apple Watch la stessa esperienza completa di Standalone, con in più il collegamento a iPhone per cronologia sincronizzata, risultati, dati degli allenamenti, statistiche dettagliate e sincronizzazione delle partite con iCloud.
-      </p>
+<p>L’app completa Apple Watch e strumenti iPhone per aggiungere partite, salvare campo e note, analizzare le prestazioni e condividere i momenti migliori. Può correggere le partite inserite manualmente e filtrare la cronologia dell’orologio per anno e mese.</p>
 <ul class="version-list">
 <li>Configurazione flessibile e punteggio in tempo reale su Apple Watch</li>
 <li>Cronologia, statistiche, allenamenti e complicazioni su Apple Watch</li>
-<li>Cronologia sincronizzata e analisi dettagliata delle partite su iPhone</li>
+<li>Partite manuali, contesto del campo, rivalità e condivisione su iPhone</li>
 </ul>
 <a aria-label="Scarica Tennis Score Wizard Companion dall’App Store" class="app-store-button" href="https://apps.apple.com/app/id6789285015">
 <span class="app-store-logo"></span>
 <span class="app-store-text">
-<small>Scarica su</small>
+<small>Disponibile su</small>
 <strong>App Store</strong>
 </span>
 </a>
-<span class="version-availability">Versione 1.5 · Disponibile ora</span>
+<span class="version-availability">Versione 1.6</span>
 </article>
 </div>
-<a class="hero-version-link versions-compare-link" href="#comparison">Confronta le funzioni <span aria-hidden="true">↓</span></a>
+<a class="hero-version-link versions-compare-link" href="#comparison">Confronti le funzioni <span aria-hidden="true">↓</span></a>
 </section>
-<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>Disponibile ora</span><span>Companion 1.5</span><span>Standalone 1.8</span></span><h2 id="scoring-formats-title">Gioca con il formato che usi davvero.</h2><p>Companion 1.5 e Standalone 1.8 ampliano il punteggio automatico su Apple Watch con formati ufficiali più rapidi, No‑Ad e set personalizzati, senza cambiare i comandi abituali in campo.</p></div><div class="core-proof-grid watch-promo-grid">
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Configurazione One Set e Custom Set</h3><p>Gioca un intero match in un solo set quando il tempo è limitato.</p><p>Scegli obiettivo di game, scarto, inizio e obiettivo del tie‑break come configurazione unica.</p><p>Mantieni set ai sei game con vantaggio o avvia un tie‑break regolare sul 6–6.</p></div><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="Configurazione One Set e Custom Set" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Opzioni ufficiali di Short Set</h3><p>Vince il set chi conquista per primo quattro game. Il tie‑break può iniziare sul 3–3 o sul 4–4 e giocarsi a 7 punti oppure con punto decisivo sul 4–4.</p></div><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="Opzioni ufficiali di Short Set" width="422" height="514" loading="lazy" decoding="async"></article>
+<section aria-labelledby="release-next-title" class="release-next" id="new-release">
+<div class="release-next-heading">
+<div class="release-next-kicker"><span>Novità di Companion 1.6</span><span>Sincronizzazione con Standalone 1.9</span></div>
+<h2 id="release-next-title">Tutta la sua partita.<br/>Non solo il punteggio.</h2>
+<p>Aggiunga le partite già giocate, ricordi campo e condizioni e condivida i momenti più belli, insieme alla cronologia di Apple Watch. Può correggere le partite inserite manualmente e filtrare la cronologia dell’orologio per anno e mese.</p>
+</div>
+<div class="release-next-grid">
+<article class="release-next-card">
+<span class="release-card-number">01 · Aggiunga UNA PARTITA GIOCATA</span>
+<h3>Ha giocato? Salvi il risultato.</h3>
+<p>Inserisca il risultato su iPhone, con i punteggi dei set e, se li ricorda, i punti dei tie-break. Salvi partite concluse o interrotte, anche in parità. Indichi inizio e fine oppure lasci la durata non specificata.</p>
+<a aria-label="Apra la schermata di inserimento manuale a grandezza originale" href="../assets/release-1-6-en/manual-score.png" rel="noopener" target="_blank"><img alt="Inserimento manuale in Companion: 7–6, 6–4 e tie-break del set 12–10" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-score.png" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">02 · Conservi I DETTAGLI</span>
+<h3>Ogni campo ha una storia.</h3>
+<p>Aggiunga superficie, gioco al coperto o all’aperto, circolo, campo e una nota privata. Riutilizzi i campi recenti o preferiti, anche per partite meno recenti registrate con Watch.</p>
+<a aria-label="Apra la schermata dei dettagli del campo a grandezza originale" href="../assets/release-1-6-en/favorite-court.png" rel="noopener" target="_blank"><img alt="Editor del campo in Companion con Central Tennis Club, Court 3, preferiti e nota separata della partita" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/favorite-court.png" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">03 · Scopra I MOMENTI SALIENTI</span>
+<h3>Più momenti da ricordare.</h3>
+<p>Nei dettagli della partita trova tutti i momenti confermati dai dati: rimonte, record personali e traguardi di vittorie. Le schede da condividere ne includono fino a sei tra i più interessanti.</p>
+<a aria-label="Apra i momenti salienti a grandezza originale" href="../assets/release-1-6-en/match-highlights.png" rel="noopener" target="_blank"><img alt="Partita manuale con vittoria senza perdere set e serie di vittorie della cronologia registrata" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights.png" width="1320"/></a>
+</article>
+</div>
+<article class="release-watch-proof" id="edit-played-match">
+<div><div class="release-next-kicker"><span>Partite manuali · iPhone</span></div><h3>Un errore nel punteggio? Corregga i dettagli, conservi la partita.</h3><p>Apra una partita aggiunta manualmente e tocchi Edit match. Corregga data, orario, regole o punteggio senza eliminare la partita e inserirla di nuovo.</p><p>Il salvataggio aggiorna la stessa registrazione, anche nella cronologia dell’orologio. I punteggi registrati su Apple Watch restano protetti. Avversario e dettagli del campo si modificano separatamente.</p><a href="help.html#manual-matches">Aggiungere e modificare le partite →</a></div>
+<a href="../assets/release-1-6-en/manual-edit-form.png" target="_blank" rel="noopener" aria-label="Modulo iPhone per modificare una partita manuale con dettagli della partita, del campo e degli orari"><img src="../assets/release-1-6-en/manual-edit-form.png" alt="Modulo iPhone per modificare una partita manuale con dettagli della partita, del campo e degli orari" width="1320" height="2868" loading="lazy" decoding="async"></a>
+</article>
+<figure class="highlights-catalog" id="match-highlights-catalog">
+<figcaption>
+<span class="release-card-number">MOMENTI SALIENTI</span>
+<h3>Ogni partita ha i suoi momenti.</h3>
+<p>Rimonte, tie-break combattuti, traguardi di vittorie e record personali. Scopra 26 tipi di momenti salienti in 44 schede di esempio.</p>
+<p class="release-media-note">Esempi di situazioni diverse, non di una sola partita. Nei dettagli compaiono tutti i momenti pertinenti; nelle schede condivise, fino a sei.</p>
+</figcaption>
+<a aria-label="Apra tutti i 44 esempi a grandezza originale" href="../assets/release-1-6-en/all-match-highlights.png" rel="noopener" target="_blank">
+<img alt="26 tipi di momenti salienti in 44 schede: rimonte, tie-break, rivalità, record, servizio, risposta e partite lunghe" decoding="async" height="1501" loading="lazy" src="../assets/release-1-6-en/all-match-highlights.png" width="2160"/>
+</a>
+</figure>
+<article class="release-watch-proof">
+<div>
+<div class="release-next-kicker"><span>Entrambe le app Watch</span></div>
+<h3>Aggiunta su iPhone.<br/>Sempre al polso.</h3>
+<p>Sì. Aggiornano la stessa partita sull’orologio Companion abbinato e possono raggiungere Standalone tramite iCloud privato con lo stesso Apple Account. Tenga aggiornate le app e attenda la sincronizzazione. Le statistiche pertinenti e i momenti salienti basati sulla cronologia usano il risultato corretto. La partita resta contrassegnata come manuale: i dati mancanti su punti e allenamento non vengono inventati.</p>
+<p>Sono contrassegnate come <strong>Aggiunta manualmente</strong>. Mostrano il risultato salvato, senza schede vuote per statistiche dei punti o allenamenti.</p>
+<a href="help.html#manual-matches">Come funziona l’inserimento manuale →</a>
+</div>
+<a aria-label="Apra la cronologia di una partita manuale su Apple Watch a grandezza originale" href="../assets/release-1-6-en/watch-manual-history.png" rel="noopener" target="_blank"><img alt="Cronologia Standalone su Apple Watch con partita interrotta in parità e indicazione di inserimento manuale" decoding="async" height="514" loading="lazy" src="../assets/release-1-6-en/watch-manual-history.png" width="422"/></a>
+</article>
+<p class="release-media-note">Schermate originali dell’app in inglese con partite di esempio. Punteggi, durata e momenti salienti sono quelli generati dall’app. Per le partite manuali compaiono il risultato inserito e i riepiloghi che i dati consentono.</p>
+</section>
+<section id="watch-history" class="core-formats-showcase" aria-labelledby="watch-history-title">
+<div class="core-formats-heading"><span class="core-formats-kicker"><span>Entrambe le app per Apple Watch</span></span><h2 id="watch-history-title">Ritrovi quella partita.</h2><p>Il mese scorso o la stagione passata? Filtri la cronologia dell’orologio per anno e mese, singolo o doppio. Le partite meno recenti vengono caricate durante la consultazione, senza eliminare nulla dalla cronologia salvata.</p></div>
+<div class="core-proof-grid watch-promo-grid">
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Scelga un periodo.</h3><p>In History, tocchi Period. Scelga un periodo o All dates per tutte le date. Può combinarlo con All, 1v1 e 2v2.</p></div><img src="../assets/release-1-6-en/watch-history-period.png" alt="Scelga un periodo. In History, tocchi Period. Scelga un periodo o All dates per tutte le date. Può combinarlo con All, 1v1 e 2v2." width="416" height="496" loading="lazy" decoding="async"></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Selezioni l’anno.</h3><p>Trovi gli anni con partite salvate. All dates torna a mostrare tutta la cronologia.</p></div><img src="../assets/release-1-6-en/watch-history-years.png" alt="Selezioni l’anno. Trovi gli anni con partite salvate. All dates torna a mostrare tutta la cronologia." width="416" height="496" loading="lazy" decoding="async"></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Un mese o l’intero anno.</h3><p>Scelga un mese con partite oppure Entire year per l’intero anno selezionato.</p></div><img src="../assets/release-1-6-en/watch-history-months-entire-year.png" alt="Un mese o l’intero anno. Scelga un mese con partite oppure Entire year per l’intero anno selezionato." width="416" height="496" loading="lazy" decoding="async"></article>
+</div><p class="release-media-note">Schermate reali di Companion e Standalone in inglese, con dati di prova. <a href="help.html#match-history">Come funzionano i filtri della cronologia →</a></p>
+</section>
+<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>Incluso in entrambe le versioni</span><span>Punteggio su Apple Watch</span></span><h2 id="scoring-formats-title">Giochi con il formato che usa davvero.</h2><p>Entrambe le versioni usano lo stesso conteggio automatico su Apple Watch: formati ufficiali più rapidi, giochi No-Ad e configurazione Custom Set con i comandi abituali in campo.</p></div><div class="core-proof-grid watch-promo-grid">
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Configurazione One Set e Custom Set</h3><p>Giochi un intero match in un solo set quando il tempo è limitato.</p><p>Scelga obiettivo di game, scarto, inizio e obiettivo del tie‑break come configurazione unica.</p><p>Mantenga set ai sei game con vantaggio o avvii un tie‑break regolare sul <span class="score-nowrap">6–6</span>.</p></div><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="Configurazione One Set e Custom Set" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Opzioni ufficiali di Short Set</h3><p>Vince il set chi conquista per primo quattro game. Il tie‑break può iniziare sul <span class="score-nowrap">3–3</span> o sul <span class="score-nowrap">4–4</span> e giocarsi a 7 punti oppure con punto decisivo sul <span class="score-nowrap">4–4</span>.</p></div><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="Opzioni ufficiali di Short Set" width="422" height="514" loading="lazy" decoding="async"></article>
   <article class="watch-promo-card"><div class="watch-promo-copy"><h3>No‑Ad sulla parità</h3><p>Con il No‑Ad, sul 40 pari il punto successivo decide il game, qualunque sia il formato del set.</p></div><img src="../assets/core-scoring-formats-en/watch-no-ad.png" alt="No‑Ad sulla parità" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>La tua vittoria, set dopo set.</h3><p>Risultato finale, game e tempo in campo riuniti in una scheda chiara.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-win.png" alt="Partita vinta" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Ogni partita conta.</h3><p>Dopo una sconfitta, controlla il punteggio e la durata, poi apri la cronologia per rivedere i dettagli della partita.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-loss.png" alt="Partita persa" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Risultati da due a cinque set</h3><p>Vittorie, sconfitte e match interrotti sono subito distinguibili; da due a cinque set restano leggibili.</p></div><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="Risultati da due a cinque set" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>La sua vittoria, set dopo set.</h3><p>Risultato finale, game e tempo in campo riuniti in una scheda chiara.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-win.png" alt="Partita vinta" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Ogni partita conta.</h3><p>Dopo una sconfitta, controlli il punteggio e la durata, poi apra la cronologia per rivedere i dettagli della partita.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-loss.png" alt="Partita persa" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Da uno a cinque set, ben leggibili</h3><p>Vittorie, sconfitte e partite interrotte si distinguono subito. Da uno a cinque set e punteggi dei tie-break restano chiari.</p></div><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="Risultati da due a cinque set" width="422" height="514" loading="lazy" decoding="async"></article>
 </div></section>
 <section aria-labelledby="icloud-title" class="icloud-showcase" id="icloud-sync">
 <div class="icloud-heading">
 <span class="icloud-kicker">Sincronizzazione delle partite con iCloud</span>
-<h2 id="icloud-title">La cronologia delle tue partite su Apple Watch e iPhone</h2>
-<p>
-      Standalone e Companion possono sincronizzare tramite iCloud le stesse partite salvate quando usi lo stesso Apple Account. Ogni Apple Account mantiene una cronologia privata separata. Segna i punti su Apple Watch, analizza le partite su iPhone e ripristina quelle sincronizzate correttamente dopo aver reinstallato l’app.
-    </p>
+<h2 id="icloud-title">La cronologia delle sue partite su Apple Watch e iPhone</h2>
+<p>Standalone e Companion possono sincronizzare le stesse partite via iCloud con lo stesso Apple Account. Ogni account ha una cronologia privata separata. Segni su Watch o inserisca su iPhone. Partite manuali, avversario e contesto viaggiano con il record; le partite sincronizzate correttamente possono essere ripristinate dopo la reinstallazione.</p>
 </div>
 <div class="icloud-ecosystem">
 <div class="icloud-endpoint">
 <picture class="icloud-ui-proof icloud-ui-proof-watch">
-<source srcset="../assets/watch_history_synced.webp" type="image/webp"/>
-<img alt="Cronologia su Apple Watch con sincronizzazione iCloud completata" decoding="async" height="496" loading="lazy" src="../assets/watch_history_synced.png" width="416"/>
+
+<img alt="In History, tocchi Period. Scelga un periodo o All dates per tutte le date. Può combinarlo con All, 1v1 e 2v2." decoding="async" height="496" loading="lazy" src="../assets/release-1-6-en/watch-history-period.png" width="416"/>
 </picture>
 <strong>Apple Watch</strong>
-<p>Segna le partite con Standalone o Companion e controlla in Cronologia lo stato dell’ultima sincronizzazione.</p>
+<p>Segni le partite con Standalone o Companion e controlli in Cronologia lo stato dell’ultima sincronizzazione.</p>
 </div>
 <div class="icloud-hub">
 <div aria-hidden="true" class="icloud-cloud-icon">
@@ -2431,7 +2492,7 @@ footer {
 </svg>
 </div>
 <strong>Sincronizzazione privata con iCloud</strong>
-<p>Le partite sincronizzate correttamente vengono archiviate nel database privato CloudKit del tuo Apple Account, non su un server di Tennis Score Wizard.</p>
+<p>Le partite sincronizzate correttamente vengono archiviate nel database privato CloudKit del suo Apple Account, non su un server di Tennis Score Wizard.</p>
 <div class="icloud-status-sample">✓ <span>Synced</span></div>
 </div>
 <div class="icloud-endpoint">
@@ -2440,7 +2501,7 @@ footer {
 <img alt="Scheda iCloud della cronologia partite di Companion che mostra l’archiviazione privata e l’orario dell’ultima sincronizzazione" decoding="async" height="650" loading="lazy" src="../assets/companion_icloud_synced.png" width="1224"/>
 </picture>
 <strong>iPhone</strong>
-<p>Consulta cronologia, statistiche e riepiloghi degli allenamenti e controlla la sincronizzazione iCloud privata in Companion.</p>
+<p>Aggiunga partite, modifichi il campo, consulti statistiche registrate e verifichi la sincronizzazione privata iCloud in Companion.</p>
 </div>
 </div>
 <div class="icloud-benefits">
@@ -2449,7 +2510,7 @@ footer {
 <p>Companion può trasferire le partite direttamente tra i dispositivi abbinati, mentre CloudKit offre separatamente sincronizzazione iCloud duratura e ripristino. I due percorsi possono completarsi in qualsiasi ordine.</p>
 </article>
 <article class="icloud-benefit">
-<strong>Controlla lo stato della sincronizzazione</strong>
+<strong>Controlli lo stato della sincronizzazione</strong>
 <p>La Cronologia mostra <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> oppure <b>Sync paused</b> / <b>Retry</b>.</p>
 </article>
 <article class="icloud-benefit">
@@ -2457,28 +2518,26 @@ footer {
 <p>Cambiando Apple Account, le cronologie non vengono mai mescolate. Le partite non sincronizzate dell’account precedente restano in una copia locale di ripristino crittografata.</p>
 </article>
 <article class="icloud-benefit">
-<strong>Segna ora, ripristina in seguito</strong>
-<p>Puoi continuare a segnare i punti senza iCloud. Le partite sincronizzate correttamente possono essere scaricate di nuovo dopo aver reinstallato l’app con lo stesso Apple Account.</p>
+<strong>Segni ora, ripristini in seguito</strong>
+<p>Può continuare a segnare i punti senza iCloud. Le partite sincronizzate correttamente possono essere scaricate di nuovo dopo aver reinstallato l’app con lo stesso Apple Account.</p>
 </article>
 </div>
 </section>
 
-<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">Novità · Rivalità</span><h2 id="rivalries-title">Ogni avversario ha una storia.</h2><p>Scegli un avversario salvato prima di un singolare e Tennis Score Wizard crea automaticamente un Head‑to‑Head privato. Risultati, punti importanti, rimonte, serie, allenamenti e incontri rimangono raccolti in un unico profilo.</p><a class="rivalries-action" href="whats-new.html">Leggi le note di rilascio</a><p class="rivalries-singles-note">Al momento le Rivalità usano le partite di singolare. Il doppio continua a funzionare normalmente, senza assegnare un unico avversario.</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="Elenco delle rivalità con avversari salvati e record Head-to-Head" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · In campo</span><h3>Scegli l’avversario. Poi gioca.</h3><p>Durante la configurazione del singolare scegli Ospite o un giocatore salvato. Il nome breve appare nella schermata del punteggio e i normali tocchi creano automaticamente il record.</p><ul class="rivalries-checklist"><li>Crea e gestisci i giocatori in Companion su iPhone</li><li>Sincronizza privatamente l’elenco con Apple Watch tramite iCloud</li><li>Assegna in seguito una vecchia partita di singolare</li><li>Lascia le partite Ospite fuori da Rivalità</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="Scegli Ospite o un giocatore salvato" width="416" height="496" loading="lazy" decoding="async"><figcaption>Scegli Ospite o un giocatore salvato</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="Vedi il nome scelto durante la partita" width="416" height="496" loading="lazy" decoding="async"><figcaption>Vedi il nome scelto durante la partita</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · Il record completo</span><h3>Un giocatore. Ogni prospettiva.</h3><p>Filtra per Sempre, Quest’anno o Ultimi 30 giorni. Confronta la forma recente con l’intero periodo, apri ogni incontro e visualizza solo le statistiche realmente registrate.</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>Head‑to‑Head</strong><p>Incontri decisi, vittorie, set, game, tie‑break e Match Tie‑Break.</p></article><article class="rivalries-benefit"><strong>Prestazione</strong><p>Punti, percentuali di turni di servizio tenuti e break, servizio, risposta e punti importanti.</p></article><article class="rivalries-benefit"><strong>Schemi e impegno</strong><p>Vittorie dopo aver perso il primo set, serie, tempo in campo, frequenza cardiaca ed energia.</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Head-to-Head e forma recente" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Head‑to‑Head e forma recente</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Prestazione, schemi e impegno" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Prestazione, schemi e impegno</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Tutti gli incontri salvati" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Tutti gli incontri salvati</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · Condividi la rivalità</span><h3>Tre schede. Una sola storia.</h3><p>L’ordine è fisso: record e incontri recenti, prestazione, quindi schemi e contesto dell’allenamento. Le note private non vengono mai condivise.</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="Record e incontri recenti" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · Record e incontri recenti</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="Prestazione" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · Prestazione</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="Schemi, tempo e allenamento" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · Schemi, tempo e allenamento</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>Privato per scelta</strong><p>Profili, note e assegnazioni restano sui tuoi dispositivi e possono sincronizzarsi tramite i tuoi dati iCloud privati.</p></article><article><strong>Nessun lavoro extra durante la partita</strong><p>La scelta dell’avversario aggiunge solo il contesto prima di giocare. Punteggio, Annulla, allenamento e flusso della partita restano invariati.</p></article></div></section>
+<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">Novità · Rivalità</span><h2 id="rivalries-title">Ogni avversario ha una storia.</h2><p>Scelga un avversario salvato prima di un singolare e Tennis Score Wizard crea automaticamente un Head‑to‑Head privato. Risultati, punti importanti, rimonte, serie, allenamenti e incontri rimangono raccolti in un unico profilo.</p><a class="rivalries-action" href="whats-new.html">Legga le note di rilascio</a><p class="rivalries-singles-note">Al momento le Rivalità usano le partite di singolare. Il doppio continua a funzionare normalmente, senza assegnare un unico avversario.</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="Elenco delle rivalità con avversari salvati e record Head-to-Head" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · In campo</span><h3>Scelga l’avversario. Poi gioca.</h3><p>Durante la configurazione del singolare scelga Ospite o un giocatore salvato. Il nome breve appare nella schermata del punteggio e i normali tocchi creano automaticamente il record.</p><ul class="rivalries-checklist"><li>Crei e gestisca i giocatori in Companion su iPhone</li><li>Sincronizzi privatamente l’elenco con Apple Watch tramite iCloud</li><li>Assegni in seguito una vecchia partita di singolare</li><li>Lasci le partite Ospite fuori da Rivalità</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="Scelga Ospite o un giocatore salvato" width="416" height="496" loading="lazy" decoding="async"><figcaption>Scelga Ospite o un giocatore salvato</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="Veda il nome scelto durante la partita" width="416" height="496" loading="lazy" decoding="async"><figcaption>Veda il nome scelto durante la partita</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · Il record completo</span><h3>Un giocatore. Ogni prospettiva.</h3><p>Filtri per Sempre, Quest’anno o Ultimi 30 giorni. Confronti la forma recente con l’intero periodo, apra ogni incontro e visualizzi solo le statistiche realmente registrate.</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>Head‑to‑Head</strong><p>Incontri decisi, vittorie, set, game, tie‑break e Match Tie‑Break.</p></article><article class="rivalries-benefit"><strong>Prestazione</strong><p>Punti, percentuali di turni di servizio tenuti e break, servizio, risposta e punti importanti.</p></article><article class="rivalries-benefit"><strong>Schemi e impegno</strong><p>Vittorie dopo aver perso il primo set, serie, tempo in campo, frequenza cardiaca ed energia.</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Head-to-Head e forma recente" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Head‑to‑Head e forma recente</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Prestazione, schemi e impegno" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Prestazione, schemi e impegno</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Tutti gli incontri salvati" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Tutti gli incontri salvati</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · Condivida la rivalità</span><h3>Tre schede. Una sola storia.</h3><p>L’ordine è fisso: record e incontri recenti, prestazione, quindi schemi e contesto dell’allenamento. Le note private non vengono mai condivise.</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="Record e incontri recenti" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · Record e incontri recenti</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="Prestazione" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · Prestazione</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="Schemi, tempo e allenamento" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · Schemi, tempo e allenamento</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>Privato per scelta</strong><p>Profili, note e assegnazioni restano sui suoi dispositivi e possono sincronizzarsi tramite i suoi dati iCloud privati.</p></article><article><strong>Nessun lavoro extra durante la partita</strong><p>La scelta dell’avversario aggiunge solo il contesto prima di giocare. Punteggio, Annulla, allenamento e flusso della partita restano invariati.</p></article></div></section>
 <section class="companion-showcase" id="companion-benefits">
 <div class="companion-heading">
 <span class="companion-section-kicker">Esperienza Companion</span>
 <h2>Un’esperienza completa. Due schermi.</h2>
-<p class="section-subtitle">
-      Companion include su Apple Watch tutto ciò che offre Standalone e aggiunge un’app per iPhone con cronologia delle partite, risultati, statistiche e dati degli allenamenti.
-    </p>
+<p class="section-subtitle">Companion comprende l’app Watch completa e strumenti iPhone per partite manuali, contesto, rivalità, momenti salienti, statistiche e condivisione.</p>
 </div>
 <div class="companion-system">
 <article class="companion-device-panel companion-watch-panel">
 <div class="companion-device-copy">
 <span class="companion-device-label">In campo · Apple Watch</span>
-<h3>L’esperienza completa della partita resta sul tuo polso.</h3>
+<h3>L’esperienza completa della partita resta sul suo polso.</h3>
 <p>
-          Configura le partite, segna ogni punto, segui la posizione di battuta, usa Annulla, registra gli allenamenti, consulta cronologia e statistiche e avvia l’app dalle complicazioni, proprio come con Standalone.
+          Configuri le partite, segni ogni punto, segua la posizione di battuta, usi Annulla, registri gli allenamenti, consulti cronologia e statistiche e avvii l’app dalle complicazioni, proprio come con Standalone.
         </p>
 </div>
 <div aria-label="Esperienza completa di Tennis Score Wizard su Apple Watch" class="companion-watch-preview">
@@ -2504,10 +2563,8 @@ footer {
 <article class="companion-device-panel companion-phone-panel">
 <div class="companion-device-copy">
 <span class="companion-device-label">Fuori dal campo · iPhone</span>
-<h3>Uno schermo più grande, quando ti serve.</h3>
-<p>
-          Dopo la sincronizzazione, le partite salvate vengono visualizzate su iPhone, dove è più facile consultare risultati, cronologia, prestazioni dettagliate e dati degli allenamenti.
-        </p>
+<h3>Uno schermo più grande, quando Le serve.</h3>
+<p>Riveda le partite Watch o aggiunga un risultato su iPhone. Conservi contesto e note accanto al risultato e consulti statistiche e allenamenti effettivamente registrati.</p>
 </div>
 <div class="companion-phone-preview">
 <img alt="Tennis Score Wizard Companion su iPhone con partite sincronizzate da Apple Watch" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_home_latest_matches-720.webp" srcset="../assets/companion_home_latest_matches-720.webp 720w, ../assets/companion_home_latest_matches-1080.webp 1080w" width="1320"/>
@@ -2518,62 +2575,54 @@ footer {
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">01</span>
 <h3>App completa per Apple Watch</h3>
-<p>Tutto ciò che puoi fare con Standalone resta disponibile su Apple Watch.</p>
+<p>Tutto ciò che può fare con Standalone resta disponibile su Apple Watch.</p>
 </article>
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">02</span>
 <h3>Calendario e cronologia delle partite</h3>
-<p>Sfoglia tutte le partite salvate per data, mese o anno e consulta a colpo d’occhio vittorie, sconfitte e partite interrotte.</p>
+<p>Sfogli tutte le partite salvate per data, mese o anno e consulti a colpo d’occhio vittorie, sconfitte e partite interrotte.</p>
 </article>
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">03</span>
 <h3>Statistiche e tendenze delle prestazioni</h3>
-<p>Filtra per periodo e tipo di partita, quindi analizza risultati, servizio, risposta, palle break, allenamenti e tendenze delle prestazioni.</p>
+<p>Filtri per periodo e tipo di partita, quindi analizzi risultati, servizio, risposta, palle break, allenamenti e tendenze delle prestazioni.</p>
 </article>
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">04</span>
 <h3>Schede dei risultati condivisibili</h3>
-<p>Condividi una partita, una panoramica completa delle prestazioni o la tendenza selezionata sotto forma di testo o di elegante scheda grafica.</p>
+<p>Condivida una partita con fino a sei momenti salienti e contesto facoltativo, un riepilogo delle prestazioni o una tendenza scelta. Le note restano private.</p>
 </article>
 </div>
 </section>
 <section id="iphone-screenshots">
 <span class="companion-section-kicker">Companion su iPhone</span>
 <h2>Da ogni partita al quadro generale</h2>
-<p class="section-subtitle">
-    Segna i punti su Apple Watch, poi usa iPhone per rivedere le singole partite, sfogliare il calendario, comprendere le prestazioni nel tempo e seguirne le tendenze.
-  </p>
+<p class="section-subtitle">Segni su Apple Watch o inserisca il risultato su iPhone. Esplori cronologia, calendario, statistiche disponibili e progressi registrati.</p>
 <div class="iphone-gallery">
 <div class="release-gallery-heading">
 <h3>Partite nel dettaglio</h3>
-<p>Parti dal risultato più recente, apri la cronologia completa e analizza il punteggio e le statistiche calcolate automaticamente.</p>
+<p>Parta dall’ultimo risultato ed esplori cronologia e punteggio. Le partite Watch possono avere statistiche automatiche dei punti; quelle manuali mostrano solo i dati forniti.</p>
 </div>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="Schermata iniziale di Tennis Score Wizard Companion con l’ultima partita e quelle recenti sincronizzate da Apple Watch" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_home_latest_matches-720.webp" srcset="../assets/companion_home_latest_matches-720.webp 720w, ../assets/companion_home_latest_matches-1080.webp 1080w" width="1320"/>
 </div>
 <h3>Ultimo risultato e partite recenti</h3>
-<p>
-        Apri Companion per vedere l’ultimo risultato e le partite recenti sincronizzate da Apple Watch.
-      </p>
+<p>Apra Companion per vedere ultimo risultato e partite recenti, registrate su Watch o aggiunte su iPhone.</p>
 </article>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="Cronologia di Tennis Score Wizard Companion con partite completate e interrotte" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_match_history-720.webp" srcset="../assets/companion_match_history-720.webp 720w, ../assets/companion_match_history-1080.webp 1080w" width="1320"/>
 </div>
 <h3>Cronologia completa delle partite</h3>
-<p>
-        Sfoglia le partite concluse e interrotte con tipo, durata, risultato e totale dei game.
-      </p>
+<p>Consulti partite concluse e interrotte, anche in parità, con tipo, esito, totale dei giochi e durata se nota.</p>
 </article>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
-<img alt="Momenti salienti di una partita conclusa in Tennis Score Wizard Companion" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_match_details_overview-720.webp" srcset="../assets/companion_match_details_overview-720.webp 720w, ../assets/companion_match_details_overview-1080.webp 1080w" width="1320"/>
+<img alt="Dettagli Companion con risultato manuale e momenti confermati dalla cronologia" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights.png" width="1320"/>
 </div>
 <h3>Momenti salienti</h3>
-<p>
-        Scopri fino a quattro momenti significativi dopo ogni partita: rimonte, tie-break combattuti, serie positive, record personali e traguardi nelle Rivalità.
-      </p>
+<p>Tutti i momenti confermati dai suoi dati: rimonte dopo due set persi, traguardi di vittorie, serie record e migliori prestazioni in risposta. I confronti descrivono la cronologia nell’app, non l’intera carriera.</p>
 </article>
 <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_match_tiebreak_details-720.webp" alt="Il Match Tie-Break nel risultato" width="1320" height="2868" loading="lazy" decoding="async" srcset="../assets/companion_match_tiebreak_details-720.webp 720w, ../assets/companion_match_tiebreak_details-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/></div><h3>Il Match Tie‑Break nel risultato</h3><p>Il Match Tie‑Break decisivo appare separato dai set normali, dal risultato in set e dal totale dei game.</p></article>
 <article class="iphone-screenshot-card">
@@ -2582,7 +2631,7 @@ footer {
 </div>
 <h3>Servizio, risposta e palle break</h3>
 <p>
-        Analizza le prestazioni al servizio e in risposta, l’andamento della partita, la durata dei game e le situazioni di palla break.
+        Analizzi le prestazioni al servizio e in risposta, l’andamento della partita, la durata dei game e le situazioni di palla break.
       </p>
 </article>
 <article class="iphone-screenshot-card">
@@ -2591,12 +2640,12 @@ footer {
 </div>
 <h3>Dati degli allenamenti</h3>
 <p>
-        Visualizza su iPhone la durata dell’allenamento, la frequenza cardiaca media e massima e l’energia attiva.
+        Visualizzi su iPhone la durata dell’allenamento, la frequenza cardiaca media e massima e l’energia attiva.
       </p>
 </article>
 <div class="release-gallery-heading">
 <h3>Calendario</h3>
-<p>Controlla quando hai giocato, consulta più partite dello stesso giorno e passa dalla vista mensile a quella annuale.</p>
+<p>Controlli quando ha giocato, consulti più partite dello stesso giorno e passi dalla vista mensile a quella annuale.</p>
 </div>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
@@ -2610,70 +2659,78 @@ footer {
 <img alt="Calendario annuale del tennis con riepilogo mensile di partite e risultati" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_calendar_year-720.webp" srcset="../assets/companion_calendar_year-720.webp 720w, ../assets/companion_calendar_year-1080.webp 1080w" width="1320"/>
 </div>
 <h3>Vista annuale</h3>
-<p>Esamina l’intera stagione e visualizza il totale e i risultati delle partite per ogni mese di attività.</p>
+<p>Esamini l’intera stagione e visualizzi il totale e i risultati delle partite per ogni mese di attività.</p>
 </article>
 <div class="release-gallery-heading">
 <h3>Statistiche delle prestazioni</h3>
-<p>Scegli 7 giorni, 30 giorni, 3 mesi, 1 anno o l’intero periodo, quindi filtra per Tutte, Singolare o Doppio senza inserire altri dati.</p>
+<p>Scelga 7 giorni, 30 giorni, 3 mesi, 1 anno o l’intero periodo, quindi filtri per Tutte, Singolare o Doppio senza inserire altri dati.</p>
 </div>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="Panoramica delle prestazioni con bilancio, tempo in campo, set e risultati recenti" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_stats_overview-720.webp" srcset="../assets/companion_stats_overview-720.webp 720w, ../assets/companion_stats_overview-1080.webp 1080w" width="1320"/>
 </div>
 <h3>Panoramica delle prestazioni</h3>
-<p>Consulta partite, percentuale di vittorie, tempo in campo, set, partite interrotte e risultati recenti per i filtri selezionati.</p>
+<p>Consulti partite, percentuale di vittorie, tempo in campo, set, partite interrotte e risultati recenti per i filtri selezionati.</p>
 </article>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="Statistiche di forma, risultati, servizio e risposta" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_stats_profile-720.webp" srcset="../assets/companion_stats_profile-720.webp 720w, ../assets/companion_stats_profile-1080.webp 1080w" width="1320"/>
 </div>
 <h3>Forma e profilo di gioco</h3>
-<p>Consulta serie positive e negative, risultati nei set decisivi, percentuali di set e game vinti, vittorie dopo il primo set e rimonte.</p>
+<p>Consulti serie positive e negative, risultati nei set decisivi, percentuali di set e game vinti, vittorie dopo il primo set e rimonte.</p>
 </article>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="Prestazioni relative a palle break, andamento, punti e allenamenti di Salute" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_stats_performance-720.webp" srcset="../assets/companion_stats_performance-720.webp 720w, ../assets/companion_stats_performance-1080.webp 1080w" width="1320"/>
 </div>
 <h3>Servizio, risposta, pressione e allenamento</h3>
-<p>Metti in relazione le prestazioni al servizio e in risposta con palle break, andamento del punteggio, frequenza cardiaca ed energia attiva.</p>
+<p>Metta in relazione le prestazioni al servizio e in risposta con palle break, andamento del punteggio, frequenza cardiaca ed energia attiva.</p>
 </article>
 <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_stats_match_tiebreak-720.webp" alt="Rendimento nei Match Tie-Break" width="1320" height="2868" loading="lazy" decoding="async" srcset="../assets/companion_stats_match_tiebreak-720.webp 720w, ../assets/companion_stats_match_tiebreak-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/></div><h3>Rendimento nei Match Tie‑Break</h3><p>Record, percentuale di vittorie e record a 7 e 10 punti compaiono solo quando esistono risultati.</p></article>
 <div class="release-gallery-heading">
 <h3>Tendenze delle prestazioni</h3>
-<p>Segui le medie mobili di vittorie, punti, servizio e risposta insieme all’attività mensile e ai riepiloghi dei mesi recenti.</p>
+<p>Segua le medie mobili di vittorie, punti, servizio e risposta insieme all’attività mensile e ai riepiloghi dei mesi recenti.</p>
 </div>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="Tendenza mobile della percentuale di vittorie con attività mensile" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_trends_win-720.webp" srcset="../assets/companion_trends_win-720.webp 720w, ../assets/companion_trends_win-1080.webp 1080w" width="1320"/>
 </div>
 <h3>Tendenza della percentuale di vittorie</h3>
-<p>Segui l’andamento dei risultati recenti con una finestra mobile di un massimo di cinque partite idonee.</p>
+<p>Segua l’andamento dei risultati recenti con una finestra mobile di un massimo di cinque partite idonee.</p>
 </article>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="Tendenza mobile dei game di servizio vinti con attività mensile" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_trends_serve-720.webp" srcset="../assets/companion_trends_serve-720.webp 720w, ../assets/companion_trends_serve-1080.webp 1080w" width="1320"/>
 </div>
 <h3>Tendenze di servizio e risposta</h3>
-<p>Passa nel grafico tra vittorie, punti, game vinti al servizio e game vinti in risposta.</p>
+<p>Passi nel grafico tra vittorie, punti, game vinti al servizio e game vinti in risposta.</p>
 </article>
 </div>
 </section>
 <section class="share-showcase" id="share-results">
 <span class="companion-section-kicker">Pensato per la condivisione</span>
-<h2>Trasforma il tuo tennis in una storia</h2>
-<p class="section-subtitle">
-    Condividi un testo sintetico o crea un’elegante scheda grafica in base alla partita, al periodo, al tipo di partita e alla vista Statistiche che hai selezionato.
-  </p>
-<div class="share-gallery core-sharing-grid"><article class="share-card"><img src="../assets/core-scoring-formats-en/share-set-tiebreaks.png" alt="Tie-break dei set" width="1080" height="1920" loading="lazy" decoding="async"><h3>Tie‑break dei set</h3><p>L’apice compatto mantiene allineato il punteggio principale, anche con due cifre.</p></article><article class="share-card"><img src="../assets/core-scoring-formats-en/share-match-tiebreak.png" alt="Match Tie-Break decisivo" width="1080" height="1920" loading="lazy" decoding="async"><h3>Match Tie‑Break decisivo</h3><p>Il Match Tie‑Break decisivo resta separato dai set e appare chiaramente come [10–7].</p></article>
+<h2>Trasformi il suo tennis in una storia</h2>
+<p class="section-subtitle">Condivida il risultato con fino a sei momenti pertinenti e condizioni e luogo facoltativi. Il layout si adatta ai dati disponibili, senza mostrare la nota privata. Può condividere anche riepiloghi di prestazioni e tendenze.</p>
+<div class="share-gallery core-sharing-grid">
+<article class="share-card">
+<a aria-label="Apra la scheda condivisa con campo e momenti salienti" href="../assets/release-1-6-en/share-recorded-context.png" rel="noopener" target="_blank"><img alt="Scheda esportata dall’app: cinque set, 3 ore e 2 minuti, campo, statistiche registrate e cinque momenti salienti" decoding="async" height="1937" loading="lazy" src="../assets/release-1-6-en/share-recorded-context.png" width="1080"/></a>
+<h3>Il risultato, il campo, i momenti migliori.</h3>
+<p>Completi una partita registrata con Watch e la condivida con punteggio, durata e statistiche originali disponibili. Il campo è incluso, la sua nota privata no.</p>
+</article><article class="share-card">
+<a aria-label="Apra la scheda manuale Custom Set a grandezza originale" href="../assets/release-1-6-en/share-custom-score.png" rel="noopener" target="_blank"><img alt="Esportazione di una partita manuale con cinque Custom Set, giochi e tie-break a due cifre e due momenti confermati" decoding="async" height="924" loading="lazy" src="../assets/release-1-6-en/share-custom-score.png" width="1080"/></a>
+<h3>Solo i dettagli che conosce.</h3>
+<p>Le partite manuali hanno una scheda pulita con i set inseriti e i momenti confermati dai dati. Niente pannelli di allenamento vuoti o statistiche dei punti inventate.</p>
+</article>
+<article class="share-card"><img src="../assets/core-scoring-formats-en/share-set-tiebreaks.png" alt="Tie-break dei set" width="1080" height="1920" loading="lazy" decoding="async"><h3>Tie‑break dei set</h3><p>L’apice compatto mantiene allineato il punteggio principale, anche con due cifre.</p></article><article class="share-card"><img src="../assets/core-scoring-formats-en/share-match-tiebreak.png" alt="Match Tie-Break decisivo" width="1080" height="1920" loading="lazy" decoding="async"><h3>Match Tie‑Break decisivo</h3><p>Il Match Tie‑Break decisivo resta separato dai set e appare chiaramente come [<span class="score-nowrap">10–7</span>].</p></article>
 <article class="share-card">
 <img alt="Scheda condivisibile delle statistiche delle prestazioni" decoding="async" height="1350" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_share_stats-720.webp" srcset="../assets/companion_share_stats-720.webp 720w, ../assets/companion_share_stats-1080.webp 1080w" width="1080"/>
 <h3>Panoramica delle prestazioni</h3>
-<p>Esporta lo stesso periodo e il filtro Singolare, Doppio o Tutte attualmente selezionato in Statistiche.</p>
+<p>Esporti lo stesso periodo e il filtro Singolare, Doppio o Tutte attualmente selezionato in Statistiche.</p>
 </article>
 <article class="share-card">
 <img alt="Scheda condivisibile delle tendenze delle prestazioni con grafici" decoding="async" height="1572" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_share_trends-720.webp" srcset="../assets/companion_share_trends-720.webp 720w, ../assets/companion_share_trends-1080.webp 1080w" width="1080"/>
 <h3>Tendenze delle prestazioni</h3>
-<p>Condividi la tendenza selezionata insieme all’attività mensile e all’ultimo riepilogo mensile.</p>
+<p>Condivida la tendenza selezionata insieme all’attività mensile e all’ultimo riepilogo mensile.</p>
 </article>
 </div>
 <div class="share-destination-callout">
@@ -2687,28 +2744,28 @@ footer {
 </svg>
 </span>
 <div class="share-destination-copy">
-<strong>La tua partita. La tua storia. Pronta da condividere.</strong>
-<span>Pubblica un’elegante scheda su Instagram, inviala tramite Messaggi o WhatsApp oppure condividila con qualsiasi app compatibile dal menu di condivisione di iPhone.</span>
+<strong>La sua partita. La sua storia. Pronta da condividere.</strong>
+<span>Pubblichi un’elegante scheda su Instagram, la invii tramite Messaggi o WhatsApp oppure la condivida con qualsiasi app compatibile dal menu di condivisione di iPhone.</span>
 </div>
 </div>
 </section>
 <section class="standalone-intro" id="standalone">
 <span class="standalone-kicker">Standalone per Apple Watch</span>
-<h2>Tutto ciò che ti serve. Direttamente sul polso.</h2>
+<h2>Tutto ciò che Le serve. Direttamente sul polso.</h2>
 <p>
-    Configura la partita, segna ogni punto, segui chi serve e la posizione di battuta, registra facoltativamente l’allenamento e consulta cronologia e statistiche: tutto su Apple Watch, senza bisogno di iPhone.
+    Configuri la partita, segni ogni punto, segua chi serve e la posizione di battuta, registri facoltativamente l’allenamento e consulti cronologia e statistiche: tutto su Apple Watch, senza bisogno di iPhone.
   </p>
 </section>
 <section id="features">
 <span class="product-section-kicker">Funzioni di Standalone</span>
 <h2>Un’esperienza completa della partita su Apple Watch</h2>
 <p class="section-subtitle">
-    Configura la partita, segna ogni punto, registra facoltativamente un allenamento e consulta cronologia e statistiche automatiche senza dipendere da iPhone.
+    Configuri la partita, segni ogni punto, registri facoltativamente un allenamento e consulti cronologia e statistiche automatiche senza dipendere da iPhone.
   </p>
 <div class="grid">
 <article class="card">
 <h3>Regole e punteggio del tennis</h3>
-<p>Tieni automaticamente il conto di 0–15–30–40, parità, vantaggio, game, set e tie‑break con grandi schede facili da toccare.</p>
+<p>Tenga automaticamente il conto di <span class="score-nowrap">0–15</span>–<span class="score-nowrap">30–40</span>, parità, vantaggio, game, set e tie‑break con grandi schede facili da toccare.</p>
 </article>
 <article class="card">
 <h3>Statistiche automatiche della partita</h3>
@@ -2716,11 +2773,11 @@ footer {
 </article>
 <article class="card">
 <h3>Registrazione dell’allenamento</h3>
-<p>Salva facoltativamente un allenamento di tennis nell’app Salute e consulta frequenza cardiaca media, frequenza cardiaca massima ed energia attiva.</p>
+<p>Salvi facoltativamente un allenamento di tennis nell’app Salute e consulti frequenza cardiaca media, frequenza cardiaca massima ed energia attiva.</p>
 </article>
 <article class="card">
 <h3>Controllo della partita</h3>
-<p>Usa il lancio della moneta per scegliere chi serve per primo, le indicazioni sul lato di battuta, Cambia giocatore al servizio, Annulla, la conclusione automatica della partita e la cronologia locale.</p>
+<p>Usi il lancio della moneta per scegliere chi serve per primo, le indicazioni sul lato di battuta, Cambia giocatore al servizio, Annulla, la conclusione automatica della partita e la cronologia locale.</p>
 </article>
 </div>
 </section>
@@ -2728,70 +2785,70 @@ footer {
 <span class="product-section-kicker">Galleria di Standalone</span>
 <h2>Standalone su Apple Watch</h2>
 <p class="section-subtitle">
-    Segui l’intero flusso di Standalone: configurazione della partita, registrazione dell’allenamento, punteggio in tempo reale, tie‑break, partite concluse, cronologia e statistiche automatiche, tutto su Apple Watch.
+    Segua l’intero flusso di Standalone: configurazione della partita, registrazione dell’allenamento, punteggio in tempo reale, tie‑break, partite concluse, cronologia e statistiche automatiche, tutto su Apple Watch.
   </p>
 <div class="screenshots">
 <article class="screenshot-card">
 <img alt="Configurazione con singolare, doppio, numero di set e regola del tie-break" decoding="async" height="496" loading="lazy" src="../assets/core-scoring-formats-en/watch-one-set-custom.png" width="416"/>
 <h3>Configurazione della partita</h3>
-<p>Prima della partita scegli Singolare o Doppio, al meglio dei 3 o dei 5 set e la regola del set.</p>
+<p>Prima della partita scelga Singolare o Doppio, al meglio dei 3 o dei 5 set e la regola del set.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Primo al servizio, lancio della moneta, Registra allenamento e Inizia partita" decoding="async" height="496" loading="lazy" src="../assets/02_match_setup_workout_start.webp" width="416"/>
 <h3>Servizio e allenamento</h3>
-<p>Da un’unica schermata scegli chi serve per primo, usa il lancio della moneta, attiva Registra allenamento e avvia la partita.</p>
+<p>Da un’unica schermata scelga chi serve per primo, usi il lancio della moneta, attivi Registra allenamento e avvii la partita.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Schermata del punteggio con vantaggio, frequenza cardiaca e indicatore del servizio" decoding="async" height="496" loading="lazy" src="../assets/core-scoring-formats-en/watch-short-set-live.png" width="416"/>
 <h3>Punteggio in tempo reale</h3>
-<p>Segna i punti con grandi schede mantenendo visibili chi serve, il lato di battuta, i set, lo stato dell’allenamento e la frequenza cardiaca in tempo reale.</p>
+<p>Segni i punti con grandi schede mantenendo visibili chi serve, il lato di battuta, i set, lo stato dell’allenamento e la frequenza cardiaca in tempo reale.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Punteggio del tie-break sul 6–6" decoding="async" height="496" loading="lazy" src="../assets/04_tiebreak_scoring.webp" width="416"/>
 <h3>Tie‑break</h3>
-<p>Sul 6–6 segna i punti del tie‑break con gli stessi grandi controlli di Apple Watch, facili e veloci da usare.</p>
+<p>Sul <span class="score-nowrap">6–6</span> segni i punti del tie‑break con gli stessi grandi controlli di Apple Watch, facili e veloci da usare.</p>
 </article>
-<article class="screenshot-card"><img src="../assets/core-scoring-formats-en/watch-match-tiebreak-targets.png" alt="Scegli il Match Tie-Break decisivo" loading="lazy" decoding="async" width="416" height="496"/><h3>Scegli il Match Tie‑Break decisivo</h3><p>Se i set sono in parità prima del set decisivo, sostituiscilo con un Match Tie‑Break a 7 o 10, con due punti di vantaggio.</p></article>
-<article class="screenshot-card"><img src="../assets/core-scoring-formats-en/watch-match-tiebreak-live.png" alt="Segna ogni punto del Match Tie-Break" loading="lazy" decoding="async" width="416" height="496"/><h3>Segna ogni punto del Match Tie‑Break</h3><p>Obiettivo, set, battitore e punteggio restano visibili.</p></article>
+<article class="screenshot-card"><img src="../assets/core-scoring-formats-en/watch-match-tiebreak-targets.png" alt="Scelga il Match Tie-Break decisivo" loading="lazy" decoding="async" width="416" height="496"/><h3>Scelga il Match Tie‑Break decisivo</h3><p>Se i set sono in parità prima del set decisivo, sostituiscilo con un Match Tie‑Break a 7 o 10, con due punti di vantaggio.</p></article>
+<article class="screenshot-card"><img src="../assets/core-scoring-formats-en/watch-match-tiebreak-live.png" alt="Segni ogni punto del Match Tie-Break" loading="lazy" decoding="async" width="416" height="496"/><h3>Segni ogni punto del Match Tie‑Break</h3><p>Obiettivo, set, battitore e punteggio restano visibili.</p></article>
 <article class="screenshot-card">
 <img alt="Schermata della partita conclusa" decoding="async" height="496" loading="lazy" src="../assets/core-scoring-formats-en/watch-five-set-finish.png" width="416"/>
 <h3>Partita conclusa</h3>
-<p>Quando la partita è decisa, l’app mostra il vincitore, il risultato dei set e l’accesso rapido a Cronologia o Fine.</p>
+<p>Quando la partita è decisa, l’app mantiene leggibili da uno a cinque set e offre accesso rapido a Cronologia o Fine.</p>
 </article>
 <article class="screenshot-card">
-<img src="../assets/core-scoring-formats-en/watch-history.png" alt="Cronologia con filtri, bilancio, etichette complete per set e game e formati salvati" loading="lazy" decoding="async" width="422" height="514">
+<img src="../assets/release-1-6-en/watch-history-period.png" alt="In History, tocchi Period. Scelga un periodo o All dates per tutte le date. Può combinarlo con All, 1v1 e 2v2." loading="lazy" decoding="async" width="416" height="496">
 <h3>Panoramica della cronologia</h3>
-<p>Consulta direttamente su Apple Watch vittorie, sconfitte, partite interrotte, percentuale di vittorie e partite salvate.</p>
+<p>Consulti direttamente su Apple Watch vittorie, sconfitte, partite interrotte, percentuale di vittorie e partite salvate.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Riepilogo salvato con risultato, durata, punti e stato dell’allenamento" decoding="async" height="496" loading="lazy" src="../assets/core-scoring-formats-en/watch-match-summary.png" width="416"/>
 <h3>Riepilogo della partita</h3>
-<p>Apri una partita salvata per consultare punteggio, game, durata, punti totali, stato dell’allenamento e contesto di un’eventuale interruzione.</p>
+<p>Apra una partita salvata per consultare punteggio, game, durata, punti totali, stato dell’allenamento e contesto di un’eventuale interruzione.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Punteggio set per set con risultato del tie-break" decoding="async" height="496" loading="lazy" src="../assets/watch_sets_detail.webp" width="416"/>
 <h3>Set e tie‑break</h3>
-<p>Consulta ogni set e il punteggio registrato del tie‑break nel riepilogo set per set.</p>
+<p>Consulti ogni set e il punteggio registrato del tie‑break nel riepilogo set per set.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Statistiche con punti e bilancio dei tie-break" decoding="async" height="496" loading="lazy" src="../assets/watch_match_stats.webp" width="416"/>
 <h3>Statistiche della partita</h3>
-<p>Consulta punti totali, punti vinti, percentuale di punti vinti e bilancio dei tie‑break.</p>
+<p>Consulti punti totali, punti vinti, percentuale di punti vinti e bilancio dei tie‑break.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Statistiche di servizio e risposta su Apple Watch" decoding="async" height="496" loading="lazy" src="../assets/watch_serve_return_stats.webp" width="416"/>
 <h3>Servizio e risposta</h3>
-<p>Consulta game vinti al servizio, punti vinti al servizio, game vinti in risposta e punti vinti in risposta.</p>
+<p>Consulti game vinti al servizio, punti vinti al servizio, game vinti in risposta e punti vinti in risposta.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Statistiche dell’andamento della partita su Apple Watch" decoding="async" height="496" loading="lazy" src="../assets/watch_match_flow_stats.webp" width="416"/>
 <h3>Andamento della partita</h3>
-<p>Consulta game registrati, game più lungo, media punti per game e durata della partita.</p>
+<p>Consulti game registrati, game più lungo, media punti per game e durata della partita.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Statistiche delle palle break su Apple Watch" decoding="async" height="496" loading="lazy" src="../assets/watch_break_point_stats.webp" width="416"/>
 <h3>Palle break</h3>
-<p>Consulta palle break affrontate, salvate, avute e convertite.</p>
+<p>Consulti palle break affrontate, salvate, avute e convertite.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Statistiche dell’allenamento con frequenza cardiaca ed energia attiva" decoding="async" height="496" loading="lazy" src="../assets/watch_workout_stats.webp" width="416"/>
@@ -2803,28 +2860,26 @@ footer {
 <section id="complications">
 <h2>Complicazioni di Apple Watch</h2>
 <p class="section-subtitle">
-    Aggiungi Tennis Score Wizard a un quadrante Apple Watch compatibile e apri l’app con un solo tocco.
+    Aggiunga Tennis Score Wizard a un quadrante Apple Watch compatibile e apra l’app con un solo tocco.
   </p>
 <div class="screenshots">
 <article class="screenshot-card">
 <img alt="Complicazione angolare di Apple Watch Ultra" decoding="async" height="514" loading="lazy" src="../assets/complication_accessory_corner.webp" width="422"/>
 <h3>Complicazione angolare</h3>
-<p>Aggiungi Tennis Score Wizard a una complicazione angolare per accedere subito alla partita.</p>
+<p>Aggiunga Tennis Score Wizard a una complicazione angolare per accedere subito alla partita.</p>
 </article>
 <article class="screenshot-card">
 <img alt="Complicazione circolare di Apple Watch" decoding="async" height="496" loading="lazy" src="../assets/complication_accessory_circular.webp" width="416"/>
 <h3>Complicazione circolare</h3>
-<p>Aggiungi Tennis Score Wizard a una complicazione circolare e inizia a segnare i punti con un solo tocco.</p>
+<p>Aggiunga Tennis Score Wizard a una complicazione circolare e inizi a segnare i punti con un solo tocco.</p>
 </article>
 </div>
 </section>
 <section class="comparison-section" id="comparison">
 <span class="product-section-kicker">Confronto tra le versioni</span>
 <div class="comparison-heading">
-<h2>L’esperienza su Apple Watch è la stessa. Cambia ciò che la completa.</h2>
-<p class="section-subtitle">
-      Standalone offre l’esperienza completa su Apple Watch. Companion include la stessa app completa per Apple Watch e aggiunge una vista sincronizzata su iPhone.
-    </p>
+<h2>Lo stesso segnapunti su Watch. Più possibilità su iPhone.</h2>
+<p class="section-subtitle">Standalone offre il segnapunti completo su Apple Watch. Con Companion può anche inserire partite a mano, salvare i dettagli del campo, seguire le rivalità, vedere i momenti salienti e condividere i risultati da iPhone.</p>
 </div>
 <div aria-label="Confronto tra Tennis Score Wizard Standalone e Companion" class="comparison-grid" role="table">
 <div class="comparison-row comparison-header" role="row">
@@ -2892,6 +2947,18 @@ footer {
 <div role="cell"><span class="comparison-muted">Non incluso</span></div>
 <div role="cell">Su iPhone</div>
 </div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Aggiungere e modificare partite giocate</div><div role="cell">Riceve partite manuali e correzioni tramite iCloud</div><div role="cell">Inserimento e modifica su iPhone; sincronizzazione con l’orologio</div></div>
+<div class="comparison-row" role="row"><div class="comparison-feature" role="rowheader">Filtri della cronologia Watch per anno e mese</div><div role="cell"><span class="comparison-check">✓</span> Incluso</div><div role="cell"><span class="comparison-check">✓</span> Incluso</div></div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Dettagli del campo e note private</div>
+<div role="cell">Conservati nei record sincronizzati</div>
+<div role="cell">Aggiunta e modifica su iPhone</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Momenti salienti</div>
+<div role="cell"><span class="comparison-muted">Non mostrati su Watch</span></div>
+<div role="cell">Tutti quelli pertinenti nei dettagli iPhone; fino a sei nelle schede</div>
+</div>
 <div class="comparison-row comparison-best-for" role="row">
 <div class="comparison-feature" role="rowheader">Ideale per</div>
 <div role="cell">Giocatori che vogliono tutto sul polso</div>
@@ -2903,31 +2970,27 @@ footer {
 <div class="shared-experience-intro">
 <span class="shared-experience-kicker">In comune tra le due versioni</span>
 <h2>Entrambe offrono le stesse funzioni di analisi tennistica.</h2>
-<p>
-      Statistiche automatiche, cronologia locale, sincronizzazione delle partite con iCloud, registrazione degli allenamenti, regole di punteggio e guida sono inclusi sia in Standalone sia in Companion. Companion aggiunge la vista sincronizzata su iPhone, senza cambiare il modo in cui si segnano le partite.
-    </p>
+<p>One Set, Short Sets, No-Ad, Custom Set, statistiche automatiche, cronologia locale, iCloud e allenamenti facoltativi sono in entrambe le versioni. Companion aggiunge risultati manuali e strumenti dopo la partita su iPhone; il conteggio in diretta resta su Watch.</p>
 </div>
 <section id="stats-guide">
 <h2>Guida alle statistiche della partita</h2>
-<p class="section-subtitle">
-    Le statistiche automatiche sono disponibili in entrambe le versioni e vengono calcolate dai normali tocchi per il punteggio, quindi non devi inserire ace, vincenti, durata degli scambi o altri dati della partita.
-  </p>
+<p class="section-subtitle">Entrambe le app Watch calcolano le statistiche dai tocchi del segnapunti. Non occorre inserire ace, vincenti o durata degli scambi. Le partite manuali apportano risultati salvati, non dati punto per punto o allenamenti.</p>
 <div class="help">
 <div class="help-item">
 <strong>Punti</strong>
-<p>Mostra i punti totali giocati, quanti ne hai vinti tu e quanti l’avversario. Totali molto vicini indicano in genere una partita più equilibrata di quanto possa sembrare dal punteggio dei set.</p>
+<p>Mostra i punti totali giocati, quanti ne ha vinti Lei e quanti l’avversario. Totali molto vicini indicano in genere una partita più equilibrata di quanto possa sembrare dal punteggio dei set.</p>
 </div>
 <div class="help-item">
 <strong>Servizio</strong>
-<p>Mostra il tuo rendimento nei game al servizio. I game al servizio sono quelli in cui hai servito; i punti al servizio sono i singoli punti giocati sul tuo servizio.</p>
+<p>Mostra il suo rendimento nei game al servizio. I game al servizio sono quelli in cui ha servito; i punti al servizio sono i singoli punti giocati sul suo servizio.</p>
 </div>
 <div class="help-item">
 <strong>Risposta</strong>
-<p>Mostra il tuo rendimento quando serviva l’avversario. I game vinti in risposta sono break; i punti vinti in risposta indicano quanto spesso hai vinto punti sul servizio avversario.</p>
+<p>Mostra il suo rendimento quando serviva l’avversario. I game vinti in risposta sono break; i punti vinti in risposta indicano quanto spesso ha vinto punti sul servizio avversario.</p>
 </div>
 <div class="help-item">
 <strong>Palle break</strong>
-<p>Le palle break salvate sono quelle annullate sul tuo servizio. Le palle break convertite sono le occasioni sfruttate sul servizio dell’avversario.</p>
+<p>Le palle break salvate sono quelle annullate sul suo servizio. Le palle break convertite sono le occasioni sfruttate sul servizio dell’avversario.</p>
 </div>
 <div class="help-item">
 <strong>Andamento della partita</strong>
@@ -2935,31 +2998,31 @@ footer {
 </div>
 <div class="help-item">
 <strong>Allenamento</strong>
-<p>Se Registra allenamento è attivo e hai concesso l’accesso a Salute, la Cronologia può mostrare frequenza cardiaca media, frequenza cardiaca massima ed energia attiva dell’allenamento di tennis salvato.</p>
+<p>Se Registra allenamento è attivo e ha concesso l’accesso a Salute, la Cronologia può mostrare frequenza cardiaca media, frequenza cardiaca massima ed energia attiva dell’allenamento di tennis salvato.</p>
 </div>
 <div class="help-item stat-guide-wide">
 <strong>Esempi rapidi</strong>
 <p>Ecco come leggere alcune statistiche comuni dopo una partita reale.</p>
 <div class="stat-examples-grid">
 <div class="stat-example-card">
-<strong>Punti 67–72</strong>
-<p>Hai vinto 67 punti e l’avversario 72. Una differenza ridotta indica in genere una partita più equilibrata di quanto possa sembrare dal punteggio dei set.</p>
+<strong>Punti <span class="score-nowrap">67–72</span></strong>
+<p>Ha vinto 67 punti e l’avversario 72. Una differenza ridotta indica in genere una partita più equilibrata di quanto possa sembrare dal punteggio dei set.</p>
 </div>
 <div class="stat-example-card">
 <strong>Game di servizio 3/10</strong>
-<p>Hai servito in 10 game e ne hai vinti 3. Questo indica quante volte hai mantenuto il servizio.</p>
+<p>Ha servito in 10 game e ne ha vinti 3. Questo indica quante volte ha mantenuto il servizio.</p>
 </div>
 <div class="stat-example-card">
 <strong>Game in risposta 6/11</strong>
-<p>L’avversario ha servito in 11 game e hai ottenuto 6 break.</p>
+<p>L’avversario ha servito in 11 game e ha ottenuto 6 break.</p>
 </div>
 <div class="stat-example-card">
 <strong>Palle break salvate 4/11</strong>
-<p>Hai affrontato 11 palle break sul tuo servizio e ne hai salvate 4.</p>
+<p>Ha affrontato 11 palle break sul suo servizio e ne ha salvate 4.</p>
 </div>
 <div class="stat-example-card">
 <strong>Palle break convertite 6/13</strong>
-<p>Hai avuto 13 occasioni di break sul servizio avversario e ne hai convertite 6.</p>
+<p>Ha avuto 13 occasioni di break sul servizio avversario e ne ha convertite 6.</p>
 </div>
 <div class="stat-example-card">
 <strong>Punti medi/game 6,3</strong>
@@ -2969,11 +3032,11 @@ footer {
 </div>
 <div class="help-item">
 <strong>Partite meno recenti</strong>
-<p>Le partite salvate prima dell’introduzione delle statistiche automatiche potrebbero non includerle. Le nuove partite salvate con la versione 1.2 o successiva possono includere le nuove statistiche della Cronologia.</p>
+<p>Le partite salvate prima delle statistiche automatiche potrebbero non averle. Anche quelle manuali non hanno statistiche punto per punto, indipendentemente dalla versione.</p>
 </div>
 <div class="help-item">
 <strong>Privacy</strong>
-<p>La cronologia delle partite viene archiviata localmente. Quando iCloud è disponibile, le partite salvate possono anche sincronizzarsi tramite il database privato CloudKit del tuo Apple Account. L’accesso a Salute resta facoltativo e viene usato solo per registrare gli allenamenti e i relativi dettagli.</p>
+<p>La cronologia delle partite viene archiviata localmente. Quando iCloud è disponibile, le partite salvate possono anche sincronizzarsi tramite il database privato CloudKit del suo Apple Account. L’accesso a Salute resta facoltativo e viene usato solo per registrare gli allenamenti e i relativi dettagli.</p>
 </div>
 </div>
 </section>
@@ -2982,11 +3045,11 @@ footer {
 <div class="help">
 <div class="help-item">
 <strong>Come si avvia una partita?</strong>
-<p>Scegli Singolare o Doppio, al meglio dei 3 o dei 5 set, la regola del set e chi serve per primo, manualmente o con il lancio della moneta. Se vuoi, attiva Registra allenamento, quindi inizia a segnare i punti.</p>
+<p>Scelga Singolare o Doppio, al meglio dei 3 o dei 5 set, la regola del set e chi serve per primo, manualmente o con il lancio della moneta. Se desidera, attivi Registra allenamento, quindi inizi a segnare i punti.</p>
 </div>
 <div class="help-item">
 <strong>Come si registra un allenamento?</strong>
-<p>Attiva Registra allenamento durante la configurazione. Se consenti l’accesso ai dati di Salute, la partita può essere salvata come allenamento di tennis nell’app Salute.</p>
+<p>Attivi Registra allenamento durante la configurazione. Se consente l’accesso ai dati di Salute, la partita può essere salvata come allenamento di tennis nell’app Salute.</p>
 </div>
 <div class="help-item">
 <strong>Come funziona la frequenza cardiaca in tempo reale?</strong>
@@ -3002,7 +3065,7 @@ footer {
 </div>
 <div class="help-item">
 <strong>Come funziona l’indicatore del servizio?</strong>
-<p>Quando servi, la pallina evidenzia il lato da cui devi battere. Quando serve l’avversario, evidenzia il suo lato di battuta dalla prospettiva dell’orologio.</p>
+<p>Quando serve, la pallina evidenzia il lato da cui deve battere. Quando serve l’avversario, evidenzia il suo lato di battuta dalla prospettiva dell’orologio.</p>
 </div>
 </div>
 </section>
@@ -3014,7 +3077,7 @@ footer {
 <div class="help">
 <div class="help-item">
 <strong>Cosa significano Vittoria e Sconfitta?</strong>
-<p>Vittoria significa che hai vinto per set una partita conclusa. Sconfitta significa che l’avversario ha vinto per set una partita conclusa.</p>
+<p>Vittoria significa che ha vinto per set una partita conclusa. Sconfitta significa che l’avversario ha vinto per set una partita conclusa.</p>
 </div>
 <div class="help-item">
 <strong>Cosa significa Interrotta?</strong>
@@ -3022,40 +3085,50 @@ footer {
 </div>
 <div class="help-item">
 <strong>Cosa sono S1, S2 e S3?</strong>
-<p>S1, S2 e S3 indicano rispettivamente il primo, il secondo e il terzo set. Per esempio, S1 6–3 significa che il primo set è terminato con 6 game a 3.</p>
+<p>S1, S2 e S3 indicano rispettivamente il primo, il secondo e il terzo set. Per esempio, S1 <span class="score-nowrap">6–3</span> significa che il primo set è terminato con 6 game a 3.</p>
 </div>
 <div class="help-item">
-<strong>Cosa significa TB 7–3?</strong>
-<p>TB mostra i punti del tie‑break in un set terminato 7–6. Per esempio, 7–6 · TB 7–3 significa che il set è stato vinto 7–6 e il tie‑break 7–3.</p>
+<strong>Cosa significa TB <span class="score-nowrap">7–3</span>?</strong>
+<p>TB mostra i punti del tie‑break in un set terminato <span class="score-nowrap">7–6</span>. Per esempio, <span class="score-nowrap">7–6</span> · TB <span class="score-nowrap">7–3</span> significa che il set è stato vinto <span class="score-nowrap">7–6</span> e il tie‑break <span class="score-nowrap">7–3</span>.</p>
 </div>
 <div class="help-item">
-<strong>Cosa significa 7–6<sup>(6)</sup> significa?</strong>
-<p>Il piccolo numero tra parentesi è il punteggio del giocatore che ha perso il tie‑break. In questo esempio il tie‑break è terminato 8–6, mentre la vista dettagliata della partita mostra comunque il punteggio completo.</p>
+<strong>Cosa significa <span class="score-nowrap">7–6</span><sup>(6)</sup> significa?</strong>
+<p>Nella riga compatta, il numero piccolo tra parentesi indica i punti di chi ha perso il tie-break. Qui è finito <span class="score-nowrap">8–6</span>. La tabella dei set può mostrare i punti di entrambi se registrati.</p>
 </div>
 <div class="help-item">
 <strong>Come vengono valutate le partite interrotte?</strong>
-<p>L’app confronta prima i set completati, poi i game salvati e infine i punti disponibili del tie‑break. Se un giocatore o una squadra è in vantaggio, il risultato conta come vittoria o sconfitta nelle statistiche, mentre la partita resta contrassegnata come Interrotta. Se il punteggio è ancora in parità, il risultato è neutro.</p>
+<p>L’app confronta prima i set completati. A parità, considera i giochi del set incompleto in corso, poi i punti registrati del tie-break o del gioco. Non somma i giochi dei set precedenti per stabilire chi è avanti. Tra due set, con parità di set vinti, il risultato è un pareggio. Un vantaggio netto conta come vittoria o sconfitta nelle statistiche; resta l’etichetta di partita interrotta.</p>
 </div>
 <div class="help-item">
 <strong>Cosa succede a un set non concluso?</strong>
-<p>Nelle partite interrotte, il set in corso viene salvato se era già iniziato, così la cronologia conserva il contesto reale, per esempio S3 0–1.</p>
+<p>Nelle partite interrotte, il set in corso viene salvato se era già iniziato, così la cronologia conserva il contesto reale, per esempio S3 <span class="score-nowrap">0–1</span>.</p>
 </div>
 </div>
+</section>
+<section id="manual-match-help">
+<h2>La partita è già finita? Può ancora salvarla.</h2>
+<div class="help"><div class="help-item"><strong>Posso modificare una partita inserita manualmente?</strong><p>Sì. Apra i dettagli della partita e tocchi Edit match. Può correggere data, orario, durata, regole, punteggi dei set, punti dei tie-break e stato di conclusione. Save aggiorna la registrazione esistente senza duplicarla; Cancel annulla le modifiche. Singolo/doppio e giocatori non cambiano in questo modulo. Usi i controlli dedicati per assegnare l’avversario e modificare i dettagli del campo.</p></div>
+<div class="help-item"><strong>Posso aggiungere una partita dopo aver giocato?</strong><p>Sì. In Companion su iPhone scelga di aggiungere una partita giocata. Inserisca il punteggio, indichi se è conclusa o interrotta e aggiunga gli orari che ricorda. Il risultato può sincronizzarsi con entrambe le app Watch.</p></div>
+<div class="help-item"><strong>Posso registrare un pareggio?</strong><p>Sì. Scelga interrotta se la partita è stata interrotta prima di stabilire un vincitore. Può salvare la parità senza inventare un set decisivo.</p></div>
+<div class="help-item"><strong>Posso aggiungere dettagli alle vecchie partite?</strong><p>Sì. Apra i dettagli su iPhone e aggiunga o modifichi il contesto della partita. Punteggio, tempi e statistiche originali di Watch restano invariati.</p></div>
+<div class="help-item"><strong>Cosa cambia modificando avversario o contesto?</strong><p>Il cambio di avversario aggiorna l’associazione e le viste di rivalità pertinenti. I momenti basati sulla cronologia usano i dati salvati attuali. Campo e note facoltative non generano traguardi statistici.</p></div>
+</div>
+<p><a href="help.html#manual-matches">Guida all’inserimento manuale →</a> <a href="help.html#match-context">Campo e privacy →</a></p>
 </section>
 <section id="faq">
 <h2>Domande frequenti</h2>
 <div class="help">
 <div class="faq">
 <strong>L’app raccoglie dati?</strong>
-<p>Le app non richiedono un account Tennis Score Wizard e non usano tracker pubblicitari. Tennis Score Wizard non gestisce un server per la cronologia delle partite. La cronologia è archiviata localmente e, quando iCloud è disponibile, può sincronizzarsi tramite il database privato CloudKit del tuo Apple Account.</p>
+<p>Le app non richiedono un account Tennis Score Wizard e non usano tracker pubblicitari. Tennis Score Wizard non gestisce un server per la cronologia delle partite. La cronologia è archiviata localmente e, quando iCloud è disponibile, può sincronizzarsi tramite il database privato CloudKit del suo Apple Account.</p>
 </div>
 <div class="faq">
 <strong>È necessario consentire l’accesso a Salute?</strong>
-<p>No. L’accesso a Salute è facoltativo. Puoi segnare le partite senza registrare un allenamento.</p>
+<p>No. L’accesso a Salute è facoltativo. Può segnare le partite senza registrare un allenamento.</p>
 </div>
 <div class="faq">
 <strong>Le statistiche richiedono tocchi aggiuntivi?</strong>
-<p>No. Le statistiche vengono generate dai normali tocchi per il punteggio. L’app non chiede di inserire ace, vincenti, errori non forzati o durata degli scambi.</p>
+<p>Su Watch le statistiche derivano dai tocchi normali del punteggio. Le partite manuali apportano risultati noti senza inventare punti, frequenza cardiaca o allenamenti. Non sono richiesti ace, vincenti, errori non forzati o lunghezza degli scambi.</p>
 </div>
 <div class="faq">
 <strong>Posso usarla per il doppio e i tie‑break?</strong>
@@ -3065,30 +3138,30 @@ footer {
 <strong>Posso eliminare la cronologia delle partite?</strong>
 <p>Sì. Le partite salvate possono essere eliminate dalla schermata Cronologia e l’eliminazione viene sincronizzata quando la sincronizzazione iCloud è disponibile.</p>
 </div>
-<div class="faq"><strong>Come funzionano le rivalità?</strong><p>Crea l’avversario in Companion su iPhone, selezionalo prima di una partita di singolare su Apple Watch e segna i punti come sempre. Tennis Score Wizard collega la partita salvata al giocatore e crea automaticamente Head‑to‑Head, forma recente, prestazioni, schemi, tempo in campo, allenamenti e cronologia degli incontri. Standalone può usare i profili sincronizzati con lo stesso Apple Account. Ospite lascia la partita fuori da Rivalità.</p></div></div>
+<div class="faq"><strong>Come funzionano le rivalità?</strong><p>Crei l’avversario in Companion su iPhone, lo selezioni prima di una partita di singolare su Apple Watch e segni i punti come sempre. Tennis Score Wizard collega la partita salvata al giocatore e crea automaticamente Head‑to‑Head, forma recente, prestazioni, schemi, tempo in campo, allenamenti e cronologia degli incontri. Standalone può usare i profili sincronizzati con lo stesso Apple Account. Ospite lascia la partita fuori da Rivalità.</p></div></div>
 </section>
 <section>
 <h2>Privacy</h2>
 <div class="privacy-box">
-<strong>La cronologia delle tue partite resta privata.</strong>
-<p>La cronologia delle partite è archiviata localmente e può sincronizzarsi tramite il database privato CloudKit del tuo Apple Account. Tennis Score Wizard non gestisce un server per la cronologia, non vende i dati delle partite e non li usa per la pubblicità.</p>
-<p>L’accesso a Salute è facoltativo e viene usato solo per registrare gli allenamenti di tennis e mostrare i dati disponibili quando concedi l’autorizzazione.</p>
-<p><a href="privacy.html">Leggi l’Informativa sulla privacy</a></p>
+<strong>La cronologia delle sue partite resta privata.</strong>
+<p>La cronologia delle partite è archiviata localmente e può sincronizzarsi tramite il database privato CloudKit del suo Apple Account. Tennis Score Wizard non gestisce un server per la cronologia, non vende i dati delle partite e non li usa per la pubblicità.</p>
+<p>L’accesso a Salute è facoltativo e viene usato solo per registrare gli allenamenti di tennis e mostrare i dati disponibili quando concede l’autorizzazione.</p>
+<p><a href="privacy.html">Legga l’Informativa sulla privacy</a></p>
 </div>
 </section>
 </div>
 <section id="support-development" class="development-support" aria-labelledby="development-support-title">
-<div class="development-support-heading"><span class="development-support-kicker">Sviluppatore indipendente</span><h2 id="development-support-title">Sostieni il prossimo match.</h2><p>Tennis Score Wizard è progettato, sviluppato e mantenuto da un unico sviluppatore indipendente. Se ti aiuta durante il gioco, puoi sostenere lo sviluppo continuo dell’app.</p></div>
+<div class="development-support-heading"><span class="development-support-kicker">Sviluppatore indipendente</span><h2 id="development-support-title">Sostenga il prossimo match.</h2><p>Tennis Score Wizard è progettato, sviluppato e mantenuto da un unico sviluppatore indipendente. Se Le aiuta durante il gioco, può sostenere lo sviluppo continuo dell’app.</p></div>
 <div class="development-support-grid">
-<article class="development-support-card"><div class="development-support-card-header"><span class="development-support-icon" aria-hidden="true">♥</span><h3>Sostieni con Apple</h3></div><p>Lascia una mancia una tantum con il metodo di pagamento del tuo Account Apple e confermala in sicurezza con Face ID o Touch ID.</p><div class="development-support-options" aria-label="Mance Apple"><span class="development-support-option">Piccola mancia <strong>App Store</strong></span><span class="development-support-option">Pallina da match <strong>App Store</strong></span><span class="development-support-option">Sostenitore <strong>App Store</strong></span></div><span class="development-support-status">Disponibile nell’app: Info → Support Development.</span></article>
-<article class="development-support-card"><div class="development-support-card-header"><span class="development-support-icon" aria-hidden="true">₿</span><h3>Sostieni con criptovalute</h3></div><p>Invia un sostegno facoltativo direttamente a un portafoglio verificato del progetto. La rete è sempre indicata accanto alla valuta.</p><div class="development-support-options" data-wallet-list data-copy-label="Copia" data-copied-label="Copiato" data-copy-failed-label="Riprova" data-show-qr-label="Mostra codice QR" data-qr-code-label="codice QR" data-qr-instruction="Scansiona con un portafoglio compatibile, poi verifica rete e indirizzo." aria-label="Portafogli crypto verificati"></div><span class="development-support-status">Tocca una valuta per copiare l’indirizzo oppure apri il suo codice QR. Per USDT e GRAM non è richiesto alcun memo.</span></article>
-</div><p class="development-support-disclaimer">Il sostegno è completamente facoltativo e non sblocca funzioni o contenuti digitali. Verifica sempre indirizzo e rete prima dell’invio.</p>
+<article class="development-support-card"><div class="development-support-card-header"><span class="development-support-icon" aria-hidden="true">♥</span><h3>Sostenga con Apple</h3></div><p>Lasci una mancia una tantum con il metodo di pagamento del suo Account Apple e la confermi in sicurezza con Face ID o Touch ID.</p><div class="development-support-options" aria-label="Mance Apple"><span class="development-support-option">Piccola mancia <strong>App Store</strong></span><span class="development-support-option">Pallina da match <strong>App Store</strong></span><span class="development-support-option">Sostenitore <strong>App Store</strong></span></div><span class="development-support-status">Disponibile nell’app: Info → Support Development.</span></article>
+<article class="development-support-card"><div class="development-support-card-header"><span class="development-support-icon" aria-hidden="true">₿</span><h3>Sostenga con criptovalute</h3></div><p>Invii un sostegno facoltativo direttamente a un portafoglio verificato del progetto. La rete è sempre indicata accanto alla valuta.</p><div class="development-support-options" data-wallet-list data-copy-label="Copiare" data-copied-label="Copiato" data-copy-failed-label="Riprovare" data-show-qr-label="Mostrare codice QR" data-qr-code-label="codice QR" data-qr-instruction="Scansioni con un portafoglio compatibile, poi verifichi rete e indirizzo." aria-label="Portafogli crypto verificati"></div><span class="development-support-status">Tocchi una valuta per copiare l’indirizzo oppure apra il suo codice QR. Per USDT e GRAM non è richiesto alcun memo.</span></article>
+</div><p class="development-support-disclaimer">Il sostegno è completamente facoltativo e non sblocca funzioni o contenuti digitali. Verifichi sempre indirizzo e rete prima dell’invio.</p>
 </section>
 
 <section id="contact">
 <h2>Assistenza</h2>
 <div class="support-card">
-<h3>Hai bisogno di aiuto o vuoi suggerire una funzionalità?</h3>
+<h3>Ha bisogno di aiuto o desidera suggerire una funzionalità?</h3>
 <p>
       Contatti:
       <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
@@ -3102,7 +3175,7 @@ footer {
 </div>
 <nav aria-label="Navigazione secondaria" class="footer-links">
 <a aria-label="Tennis Score Wizard su Instagram (si apre in una nuova scheda)" href="https://www.instagram.com/tennisscorewizard/" rel="noopener noreferrer" target="_blank">Instagram</a>
-<a href="#support-development">Sostieni il progetto</a>
+<a href="#support-development">Sostenga il progetto</a>
 <a href="privacy.html">Privacy</a>
 </nav>
 </footer>

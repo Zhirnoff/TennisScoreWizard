@@ -1,0 +1,78 @@
+/* Reviewed 1.6/1.9 feature update, shared by all ten website languages. */
+html[lang="ko"] body,
+html[lang="ko"] .page :is(p, li, dd, td, figcaption) {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+.release-next {margin-top:90px;padding:clamp(22px,4vw,44px);border:1px solid var(--line-green);border-radius:32px;background:radial-gradient(ellipse at 95% 0%,rgba(40,255,95,.13),transparent 55%),#050a06}
+.release-next-heading {max-width:850px}
+.release-next-kicker {display:flex;flex-wrap:wrap;gap:8px 12px;margin-bottom:20px;color:var(--green);font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+.release-next-kicker span {padding:6px 11px;border:1px solid var(--line-green);border-radius:999px;white-space:nowrap;background:var(--green-soft)}
+.release-next h2 {font-size:clamp(34px,5vw,60px);line-height:1.05;letter-spacing:-.045em;margin:0 0 20px;text-wrap:balance}
+.release-next-heading>p {max-width:740px;color:var(--muted);font-size:18px;margin:0}
+.release-next-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:32px}
+.release-next-card {display:flex;flex-direction:column;min-width:0;padding:24px 20px 20px;border:1px solid rgba(40,255,95,.22);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.012)),#080d09}
+.release-next-card .release-card-number {color:var(--green);font-size:12px;font-weight:800;letter-spacing:.12em;margin-bottom:12px}
+.release-next-card h3 {margin:0 0 12px;font-size:24px;line-height:1.15;letter-spacing:-.025em;text-wrap:balance}
+.release-next-card p {color:var(--muted);font-size:15px;margin:0 0 22px;line-height:1.6}
+.release-next-card>a {display:block;margin-top:auto}
+.release-next-card img {display:block;width:100%;max-width:280px;height:auto;margin:0 auto;border-radius:25px;background:#000;box-shadow:0 16px 32px rgba(0,0,0,.4)}
+.release-watch-proof {display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:28px;align-items:center;margin-top:24px;padding:28px;border:1px solid var(--line-green);border-radius:24px;background:linear-gradient(135deg,rgba(40,255,95,.06),transparent)}
+.release-watch-proof h3 {font-size:clamp(24px,3vw,34px);line-height:1.15;margin:0 0 16px;text-wrap:balance}
+.release-watch-proof p {max-width:650px;color:var(--muted);margin:0 0 14px}
+.release-watch-proof img {display:block;width:200px;max-width:100%;height:auto;border-radius:24px;margin:auto}
+.release-media-note {color:var(--muted);font-size:12px;line-height:1.6;margin:22px 0 0}
+.release-proof-pair {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:28px 0}
+.release-proof-pair figure {margin:0;padding:20px;border:1px solid var(--line-green);border-radius:24px;background:#080d09;min-width:0}
+.release-proof-pair img {display:block;width:100%;max-width:270px;height:auto;margin:auto;border-radius:22px}
+.release-proof-pair figcaption {margin-top:16px;color:var(--muted);font-size:14px;text-align:center}
+.release-proof-pair .release-proof-share img {max-width:430px;border-radius:10px}
+.release-proof-watch {max-width:650px;margin:28px auto}
+.release-proof-watch img {max-width:200px}
+.release-previous {margin-top:32px}
+.release-next-card a:focus-visible,.highlights-catalog a:focus-visible {outline:2px solid var(--green);outline-offset:5px}
+@media(max-width:900px){.release-next-grid{grid-template-columns:1fr}.release-next-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(160px,230px);gap:0 24px}.release-next-card .release-card-number{grid-column:1}.release-next-card h3,.release-next-card p{grid-column:1}.release-next-card>a{grid-column:2;grid-row:1/5;margin:0}.release-next-card img{max-width:230px}}
+@media(max-width:600px){.release-next{margin-top:60px;border-radius:26px}.release-next-heading>p{font-size:16px}.release-next-card{display:flex;padding:22px 18px;gap:0}.release-next-card img{max-width:260px}.release-watch-proof{grid-template-columns:1fr;padding:22px;gap:12px}.release-proof-pair{grid-template-columns:1fr}.release-next-kicker{font-size:10px;letter-spacing:.04em}}
+/* Preserve full native screens in the English campaign page as well. */
+#companion-features .screens img {height:auto;aspect-ratio:auto;max-height:none;max-width:280px;margin:auto;object-fit:contain}
+.highlights-catalog {margin:24px 0 0;padding:clamp(18px,3vw,28px);border:1px solid var(--line-green);border-radius:24px;background:#050a06}
+.highlights-catalog .release-card-number {color:var(--green);font-size:12px;font-weight:800;letter-spacing:.12em}
+.highlights-catalog h3 {margin:12px 0;font-size:clamp(24px,3vw,34px);line-height:1.15;text-wrap:balance}
+.highlights-catalog p {max-width:820px;color:var(--muted);line-height:1.6;margin:0 0 12px}
+.highlights-catalog>a {display:block}
+.highlights-catalog img {display:block;width:100%;height:auto;margin-top:22px;border:1px solid rgba(255,255,255,.08);border-radius:14px}
+/* Keep tennis score examples together when surrounding localized copy wraps. */
+.score-nowrap {white-space:nowrap}
+#edit-played-match {grid-template-columns:minmax(0,1fr) 280px}
+#edit-played-match img {width:260px}
+#edit-played-match .release-next-kicker span {white-space:normal}
+#standalone-1-9 > p {grid-column:1 / -1}
+@media(max-width:700px) {#edit-played-match {grid-template-columns:1fr}}
+
+/* One navigation treatment; touch hover must not look like a saved selection. */
+.nav .nav-links > a {
+  color:#fff;
+  border-radius:999px;
+  text-decoration:none;
+  background:transparent;
+  transition:color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+.nav .nav-links > a:is(:active,:focus-visible,.is-nav-activated,[aria-current="page"]) {
+  color:var(--green);
+  background:var(--green-soft);
+  box-shadow:0 0 0 5px var(--green-soft),0 0 0 6px var(--line-green);
+}
+.nav .nav-links > a:focus-visible {outline:2px solid var(--green);outline-offset:8px}
+@media(max-width:980px) {
+  .nav .nav-links > a {
+    background:rgba(255,255,255,.035);
+    border-color:rgba(255,255,255,.10);
+  }
+  .nav .nav-links > a:is(:active,:focus-visible,.is-nav-activated,[aria-current="page"]) {
+    background:var(--green-soft);
+    border-color:var(--line-green);
+    box-shadow:none;
+  }
+  .nav .nav-links > a:focus-visible {outline-offset:3px}
+}
+@media(prefers-reduced-motion:reduce) {.nav .nav-links > a {transition:none}}

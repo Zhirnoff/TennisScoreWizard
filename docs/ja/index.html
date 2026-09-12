@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Tennis Score Wizard — Apple Watch &amp; iPhone テニススコア管理アプリ</title>
-<meta content="Apple WatchでOne Set、公式Short Sets、No‑Ad、Custom Setに対応。自動統計とプライベートiCloud同期も利用できます。" name="description"/>
+<meta content="プレー済みの試合をiPhoneで追加・編集。Apple Watchの履歴を年・月で絞り込み、コート情報を残して試合のハイライトを共有できます。" name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/ja/">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/">
@@ -22,13 +22,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Tennis Score Wizard — Apple Watch &amp; iPhone テニススコア管理アプリ">
-<meta property="og:description" content="Apple WatchでOne Set、公式Short Sets、No‑Ad、Custom Setに対応。自動統計とプライベートiCloud同期も利用できます。">
+<meta content="プレー済みの試合をiPhoneで追加・編集。Apple Watchの履歴を年・月で絞り込み、コート情報を残して試合のハイライトを共有できます。" property="og:description"/>
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/ja/">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tennis Score Wizard — Apple Watch &amp; iPhone テニススコア管理アプリ">
-<meta name="twitter:description" content="Apple WatchでOne Set、公式Short Sets、No‑Ad、Custom Setに対応。自動統計とプライベートiCloud同期も利用できます。">
+<meta content="プレー済みの試合をiPhoneで追加・編集。Apple Watchの履歴を年・月で絞り込み、コート情報を残して試合のハイライトを共有できます。" name="twitter:description"/>
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -2276,6 +2276,8 @@ footer {
 <link rel="stylesheet" href="../rivalries-landing.css">
 <link rel="stylesheet" href="../core-scoring-formats-en.css?v=20260905-promo-cards">
 <script src="../support-development.js" defer></script>
+<link rel="stylesheet" href="../release-1-6-en.css?v=20260911-i18n">
+<script defer src="../navigation-en.js?v=20260911-i18n"></script>
 </head>
 <body>
 <main class="page">
@@ -2316,13 +2318,15 @@ footer {
 <span class="eyebrow-copy-compact"><span class="eyebrow-segment">Watchで記録</span><span aria-hidden="true" class="eyebrow-separator">·</span><span class="eyebrow-segment">iPhoneで詳しく分析</span></span>
 </div>
 <h1>すべてのポイントを記録。すべての試合を理解。</h1>
-<p>Apple Watchだけで完結するならStandalone、iPhoneで対戦記録、履歴、統計、ワークアウトの詳細も確認するならCompanionを選べます。公式Short Set、No‑Ad、自由に設定できるCustom Setから試合形式を選べば、あとはアプリが各ポイントを管理します。</p>
+<p>StandaloneまたはCompanionでApple Watchからリアルタイムに記録。CompanionのiPhone版なら、プレー済みの試合、場所、対戦成績、ハイライトの確認と結果の共有もできます。 手入力した試合は後から修正でき、Watchの履歴は年・月で絞り込めます。</p>
 <div class="hero-actions">
 <a class="hero-version-link" href="#versions">バージョンを見る <span aria-hidden="true">↓</span></a>
 <a class="hero-instagram-link" href="https://www.instagram.com/tennisscorewizard/" target="_blank" rel="noopener noreferrer"><span class="instagram-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="1.7" y="1.7" width="20.6" height="20.6" rx="6.3"></rect><circle cx="12" cy="12" r="5"></circle><circle cx="18.2" cy="5.9" r="1.25" fill="currentColor" stroke="none"></circle></svg></span><span>Instagramをフォロー</span></a>
 </div>
 <div class="badges"><span class="badge">自動試合統計</span><span class="badge">柔軟な試合形式</span>
-<span class="badge">対戦相手別の戦績</span><span class="badge">サーブとリターン</span><span class="badge">ブレークポイント</span><span class="badge">ヘルスケアのワークアウト</span><span class="badge">ライブ心拍数</span><span class="badge">iCloud同期</span></div>
+<span class="badge">対戦相手別の戦績</span><span class="badge">サーブとリターン</span><span class="badge">ブレークポイント</span><span class="badge">ヘルスケアのワークアウト</span><span class="badge">ライブ心拍数</span><span class="badge">iCloud同期</span>
+<span class="badge">iPhoneでプレー済みの試合を追加</span><span class="badge">試合情報とハイライト</span>
+</div>
 </div>
 <div aria-label="Tennis Score Wizard" class="hero-visual"><div class="hero-ball-frame"><img alt="" class="hero-ball" src="../assets/tennis_ball_app_icon_1024-512.webp" srcset="../assets/tennis_ball_app_icon_1024-512.webp 512w, ../assets/tennis_ball_app_icon_1024-1024.webp 1024w" sizes="(max-width: 640px) 82vw, 500px" fetchpriority="high" width="1024" height="1024" decoding="async"/></div></div>
 </section>
@@ -2330,22 +2334,83 @@ footer {
 <h2>Tennis Score Wizardを選ぶ</h2>
 <p class="section-subtitle">どちらのバージョンでもApple Watchで試合を最初から最後まで記録できます。Apple WatchだけならStandalone、iPhoneアプリも使うならCompanionを選べます。保存済みの同じ試合をiCloudで同期できます。</p>
 <div class="version-grid">
-<article class="card version-card"><span class="version-kicker">Standalone</span><h3>Apple Watchのみ</h3><p>Apple Watchに直接インストールし、試合のすべてを手首で操作します。iPhoneのコンパニオンアプリは不要です。</p><ul class="version-list"><li>One Set、Short Sets、No‑Ad、Custom Set</li><li>自動統計とiCloud同期</li><li>ヘルスケアアプリへの任意のワークアウト記録</li></ul><a aria-label="Tennis Score Wizard Standalone" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004"><span class="app-store-logo"></span><span class="app-store-text"><small>App Store から</small><strong>ダウンロード</strong></span></a><span class="version-availability">バージョン1.8 · 配信中</span></article>
-<article class="card version-card version-card-companion"><span class="version-kicker">Companion</span><h3>iPhone + Apple Watch</h3><p>Standaloneと同じ完全なApple Watchアプリに加え、同期された履歴、結果、ワークアウトデータ、詳細な統計、iCloud同期をiPhoneで利用できます。</p><ul class="version-list"><li>Apple Watchで柔軟な試合設定とライブスコア</li><li>Apple Watchでの履歴、統計、ワークアウト、コンプリケーション</li><li>iPhoneでの同期済み試合履歴と詳しい振り返り</li></ul><a aria-label="Tennis Score Wizard Companion" class="app-store-button" href="https://apps.apple.com/app/id6789285015"><span class="app-store-logo"></span><span class="app-store-text"><small>App Store から</small><strong>ダウンロード</strong></span></a><span class="version-availability">バージョン1.5 · 配信中</span></article>
+<article class="card version-card"><span class="version-kicker">Standalone</span><h3>Apple Watchのみ</h3><p>Apple Watchに直接インストールし、試合のすべてを手首で操作します。iPhoneのコンパニオンアプリは不要です。</p><ul class="version-list"><li>One Set、Short Sets、No‑Ad、Custom Set</li><li>自動統計とiCloud同期</li><li>ヘルスケアアプリへの任意のワークアウト記録</li><li>Watch履歴の年・月フィルター</li></ul><a aria-label="Tennis Score Wizard Standalone" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004"><span class="app-store-logo"></span><span class="app-store-text"><small>App Store から</small><strong>ダウンロード</strong></span></a><span class="version-availability">バージョン1.9</span></article>
+<article class="card version-card version-card-companion"><span class="version-kicker">Companion</span><h3>iPhone + Apple Watch</h3><p>完全なApple Watchアプリに加え、iPhoneで試合の追加、コートとメモの保存、成績の確認、ハイライトの共有ができます。 手入力した試合は後から修正でき、Watchの履歴は年・月で絞り込めます。</p><ul class="version-list"><li>Apple Watchで柔軟な試合設定とライブスコア</li><li>Apple Watchでの履歴、統計、ワークアウト、コンプリケーション</li><li>iPhoneで手動入力、コート情報、対戦成績、共有</li></ul><a aria-label="Tennis Score Wizard Companion" class="app-store-button" href="https://apps.apple.com/app/id6789285015"><span class="app-store-logo"></span><span class="app-store-text"><small>App Store から</small><strong>ダウンロード</strong></span></a><span class="version-availability">バージョン1.6</span></article>
 </div>
 <a class="hero-version-link versions-compare-link" href="#comparison">機能を比較 <span aria-hidden="true">↓</span></a>
 </section>
-<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>配信中</span><span>Companion 1.5</span><span>Standalone 1.8</span></span><h2 id="scoring-formats-title">いつもの試合形式で、そのままプレイ。</h2><p>Companion 1.5とStandalone 1.8では、Apple Watchの自動スコア記録に公式の短縮形式、No‑Ad、自由なセット設定が加わりました。コート上の使い慣れた操作は変わりません。</p></div><div class="core-proof-grid watch-promo-grid">
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>One SetとCustom Setの設定</h3><p>時間が限られているときは、1セットだけで試合を完結できます。</p><p>ゲーム目標、必要な差、タイブレーク開始時点と目標を1つの設定として選べます。</p><p>6ゲームのアドバンテージセット、または6–6からの通常タイブレークを選べます。</p></div><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="One SetとCustom Setの設定" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>公式Short Setの選択肢</h3><p>4ゲーム先取。3–3または4–4でタイブレークを始め、7ポイント制または4–4での決定ポイントを選べます。</p></div><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="公式Short Setの選択肢" width="422" height="514" loading="lazy" decoding="async"></article>
+<section aria-labelledby="release-next-title" class="release-next" id="new-release">
+<div class="release-next-heading">
+<div class="release-next-kicker"><span>Companion 1.6の新機能</span><span>Standalone 1.9と同期</span></div>
+<h2 id="release-next-title">スコアだけでなく、<br/>試合のすべてを。</h2>
+<p>プレー済みの試合を追加し、コートや環境を記録。印象的な場面をシェアできます。Apple Watchの試合履歴と一緒に残しましょう。 手入力した試合は後から修正でき、Watchの履歴は年・月で絞り込めます。</p>
+</div>
+<div class="release-next-grid">
+<article class="release-next-card">
+<span class="release-card-number">01 · プレー済みの試合を追加</span>
+<h3>プレーの記録を、あとからでも。</h3>
+<p>iPhoneでセットスコアと、覚えていればタイブレークのポイントを入力。終了した試合だけでなく、途中で打ち切った試合や引き分けも保存できます。開始・終了時刻を入力するか、所要時間を未入力にできます。</p>
+<a aria-label="手動入力の画面を原寸大で開く" href="../assets/release-1-6-en/manual-score.png" rel="noopener" target="_blank"><img alt="Companionで7–6、6–4とセットのタイブレーク12–10を手動入力した画面" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-score.png" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">02 · 試合の背景も記録</span>
+<h3>コートの思い出も、一緒に。</h3>
+<p>サーフェス、屋内・屋外、クラブ、コート、非公開の試合メモを追加。最近使ったコートやお気に入りを再利用でき、Watchで記録した過去の試合にも追記できます。</p>
+<a aria-label="コート情報の画面を原寸大で開く" href="../assets/release-1-6-en/favorite-court.png" rel="noopener" target="_blank"><img alt="Central Tennis Club、Court 3、お気に入り、独立した試合メモを表示するCompanionのコート編集画面" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/favorite-court.png" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">03 · ハイライトを見つける</span>
+<h3>覚えておきたい瞬間が、もっと。</h3>
+<p>試合詳細には、逆転勝利や自己ベスト、節目の勝利など、記録で確認できるハイライトをすべて表示。共有カードには、その中から注目の場面を最大6件掲載します。</p>
+<a aria-label="マッチハイライトの画面を原寸大で開く" href="../assets/release-1-6-en/match-highlights.png" rel="noopener" target="_blank"><img alt="手動入力した試合のストレート勝ちと、記録された連勝のハイライト" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights.png" width="1320"/></a>
+</article>
+</div>
+<article class="release-watch-proof" id="edit-played-match">
+<div><div class="release-next-kicker"><span>手入力の試合 · iPhone</span></div><h3>スコアを間違えても、試合を残したまま修正。</h3><p>手入力した試合を開き、Edit matchをタップ。試合を削除して入力し直すことなく、日時、ルール、スコアを修正できます。</p><p>保存すると、Watchの履歴を含めて同じ試合が更新されます。Apple Watchで記録したスコアは変更されません。対戦相手の割り当てとコート情報は、それぞれの操作から編集します。</p><a href="help.html#manual-matches">試合の追加と編集について →</a></div>
+<a href="../assets/release-1-6-en/manual-edit-form.png" target="_blank" rel="noopener" aria-label="試合情報、コート情報、日時を表示したiPhoneの手入力試合編集フォーム"><img src="../assets/release-1-6-en/manual-edit-form.png" alt="試合情報、コート情報、日時を表示したiPhoneの手入力試合編集フォーム" width="1320" height="2868" loading="lazy" decoding="async"></a>
+</article>
+<figure class="highlights-catalog" id="match-highlights-catalog">
+<figcaption>
+<span class="release-card-number">マッチハイライト</span>
+<h3>どの試合にも、見どころがある。</h3>
+<p>逆転、接戦のタイブレーク、節目の勝利、自己ベスト。26種類のハイライトを44枚のカード例で紹介します。</p>
+<p class="release-media-note">1試合の結果ではなく、異なる状況の例です。試合詳細には該当するすべてのハイライト、共有カードには最大6件を表示します。</p>
+</figcaption>
+<a aria-label="44種類の表示例を原寸大で開く" href="../assets/release-1-6-en/all-match-highlights.png" rel="noopener" target="_blank">
+<img alt="26種類のハイライトを44枚のカードで紹介。逆転、タイブレーク、ライバル対戦、記録、サーブ、リターン、長時間の試合など" decoding="async" height="1501" loading="lazy" src="../assets/release-1-6-en/all-match-highlights.png" width="2160"/>
+</a>
+</figure>
+<article class="release-watch-proof">
+<div>
+<div class="release-next-kicker"><span>両方のWatchアプリに対応</span></div>
+<h3>iPhoneで追加。<br/>手首でも確認。</h3>
+<p>はい。ペアリング済みのCompanion Watch上の同じ試合が更新され、同じApple AccountのプライベートiCloud経由でStandaloneにも同期できます。アプリを最新にして同期の完了をお待ちください。関連する統計や履歴に基づくハイライトには修正後の結果が反映されます。手入力の表示は維持され、未記録のポイントやワークアウトのデータは作られません。</p>
+<p><strong>手動で追加</strong>と明示し、保存した結果を表示します。データのないポイント統計やワークアウトのカードは表示しません。</p>
+<a href="help.html#manual-matches">手動入力の使い方 →</a>
+</div>
+<a aria-label="Apple Watchの手動入力試合の履歴を原寸大で開く" href="../assets/release-1-6-en/watch-manual-history.png" rel="noopener" target="_blank"><img alt="引き分けで打ち切った試合に手動入力の表示が付いたStandaloneのApple Watch履歴" decoding="async" height="514" loading="lazy" src="../assets/release-1-6-en/watch-manual-history.png" width="422"/></a>
+</article>
+<p class="release-media-note">英語版アプリの実際の画面にサンプルの試合データを表示しています。スコア、所要時間、ハイライトはアプリが生成した内容のままです。手動入力の試合には、入力した結果とそのデータから確認できる集計を表示します。</p>
+</section>
+<section id="watch-history" class="core-formats-showcase" aria-labelledby="watch-history-title">
+<div class="core-formats-heading"><span class="core-formats-kicker"><span>両方のWatchアプリに対応</span></span><h2 id="watch-history-title">あの試合を、もう一度。</h2><p>先月の試合も、前のシーズンの試合も。Watchの履歴を年・月で絞り込み、シングルス・ダブルスのフィルターも併用できます。古い試合は閲覧に合わせて読み込まれ、保存済みの履歴は削除されません。</p></div>
+<div class="core-proof-grid watch-promo-grid">
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>期間を選ぶ。</h3><p>HistoryでPeriodをタップ。期間を指定するか、All datesですべての日付を表示します。All、1v1、2v2も併用できます。</p></div><img src="../assets/release-1-6-en/watch-history-period.png" alt="期間を選ぶ。 HistoryでPeriodをタップ。期間を指定するか、All datesですべての日付を表示します。All、1v1、2v2も併用できます。" width="416" height="496" loading="lazy" decoding="async"></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>年を選ぶ。</h3><p>試合が保存されている年が表示されます。All datesで全履歴に戻れます。</p></div><img src="../assets/release-1-6-en/watch-history-years.png" alt="年を選ぶ。 試合が保存されている年が表示されます。All datesで全履歴に戻れます。" width="416" height="496" loading="lazy" decoding="async"></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>ひと月でも、1年分でも。</h3><p>試合のある月を選ぶか、Entire yearで選択した年の全試合を表示します。</p></div><img src="../assets/release-1-6-en/watch-history-months-entire-year.png" alt="ひと月でも、1年分でも。 試合のある月を選ぶか、Entire yearで選択した年の全試合を表示します。" width="416" height="496" loading="lazy" decoding="async"></article>
+</div><p class="release-media-note">テスト用の履歴を使用したCompanionとStandaloneの実際の英語画面です。 <a href="help.html#match-history">履歴フィルターの使い方 →</a></p>
+</section>
+<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>両バージョンに搭載</span><span>Apple Watchでスコア記録</span></span><h2 id="scoring-formats-title">いつもの試合形式で、そのままプレイ。</h2><p>両バージョンは同じ自動スコア記録を搭載。公式の短縮形式、No-Ad、Custom Set設定を、慣れたApple Watchの操作で使えます。</p></div><div class="core-proof-grid watch-promo-grid">
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>One SetとCustom Setの設定</h3><p>時間が限られているときは、1セットだけで試合を完結できます。</p><p>ゲーム目標、必要な差、タイブレーク開始時点と目標を1つの設定として選べます。</p><p>6ゲームのアドバンテージセット、または<span class="score-nowrap">6–6</span>からの通常タイブレークを選べます。</p></div><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="One SetとCustom Setの設定" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>公式Short Setの選択肢</h3><p>4ゲーム先取。<span class="score-nowrap">3–3</span>または<span class="score-nowrap">4–4</span>でタイブレークを始め、7ポイント制または<span class="score-nowrap">4–4</span>での決定ポイントを選べます。</p></div><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="公式Short Setの選択肢" width="422" height="514" loading="lazy" decoding="async"></article>
   <article class="watch-promo-card"><div class="watch-promo-copy"><h3>デュースでのNo‑Ad</h3><p>デュース後の次の1ポイントでゲームを決め、どのセット形式でもテンポよく進められます。</p></div><img src="../assets/core-scoring-formats-en/watch-no-ad.png" alt="デュースでのNo‑Ad" width="422" height="514" loading="lazy" decoding="async"></article>
   <article class="watch-promo-card"><div class="watch-promo-copy"><h3>勝利の結果を、セットごとに。</h3><p>最終スコア、ゲーム数、試合時間を1枚のカードで確認できます。</p></div><img src="../assets/core-scoring-formats-en/watch-completed-win.png" alt="勝利した試合" width="422" height="514" loading="lazy" decoding="async"></article>
   <article class="watch-promo-card"><div class="watch-promo-copy"><h3>負けた試合も、次につながる。</h3><p>敗戦後もスコアと試合時間を確認。履歴を開けば、試合の詳細を振り返れます。</p></div><img src="../assets/core-scoring-formats-en/watch-completed-loss.png" alt="敗北した試合" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>2〜5セットの結果</h3><p>勝利、敗北、中断をすぐに見分けられ、2〜5セットの結果も読みやすく表示します。</p></div><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="2〜5セットの結果" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>1〜5セットを、見やすく表示</h3><p>勝利・敗北・打ち切りをひと目で区別。1〜5セットとタイブレークのスコアを見やすく表示します。</p></div><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="2〜5セットの結果" width="422" height="514" loading="lazy" decoding="async"></article>
 </div></section>
 <section id="icloud-sync" class="icloud-showcase" aria-labelledby="icloud-title">
-<div class="icloud-heading"><span class="icloud-kicker">iCloudで試合を同期</span><h2 id="icloud-title">Apple WatchとiPhoneで同じ試合履歴を。</h2><p>同じApple Accountを使えば、StandaloneとCompanionで保存済みの同じ試合をiCloud同期できます。試合履歴はApple Accountごとに非公開で別々に管理されます。Apple Watchでスコアを記録し、iPhoneで試合を振り返り、正常に同期された試合を再インストール後に復元できます。</p></div>
-<div class="icloud-ecosystem"><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-watch"><source srcset="../assets/watch_history_synced.webp" type="image/webp"><img src="../assets/watch_history_synced.png" alt="iCloud同期が完了したApple Watchの履歴画面" width="416" height="496" loading="lazy" decoding="async"></picture><strong>Apple Watch</strong><p>StandaloneまたはCompanionでスコアを記録し、「履歴」で最新の同期状態を確認できます。</p></div><div class="icloud-hub"><div class="icloud-cloud-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path><path d="m24 34 5.5 5.5L41 28"></path></svg></div><strong>非公開のiCloud同期</strong><p>正常に同期された試合は、Tennis Score Wizardのサーバではなく、Apple Accountの非公開CloudKitデータベースに保存されます。</p><div class="icloud-status-sample">✓ <span>Synced</span></div></div><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-phone"><source srcset="../assets/companion_icloud_synced-720.webp" type="image/webp"><img src="../assets/companion_icloud_synced.png" alt="非公開ストレージと最新の同期時刻を表示するCompanionのiCloud試合履歴カード" width="1224" height="650" loading="lazy" decoding="async"></picture><strong>iPhone</strong><p>Companionで試合履歴、統計、ワークアウト概要を確認し、非公開のiCloud同期状態をチェックできます。</p></div></div>
+<div class="icloud-heading"><span class="icloud-kicker">iCloudで試合を同期</span><h2 id="icloud-title">Apple WatchとiPhoneで同じ試合履歴を。</h2><p>同じApple Accountなら、StandaloneとCompanionで試合をiCloud同期できます。履歴はアカウントごとに非公開で分かれています。Watchで記録するほかiPhoneから結果を追加でき、手動入力の区分、相手、背景情報も一緒に同期。同期済みの試合は再インストール後も復元できます。</p></div>
+<div class="icloud-ecosystem"><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-watch"><img src="../assets/release-1-6-en/watch-history-period.png" alt="HistoryでPeriodをタップ。期間を指定するか、All datesですべての日付を表示します。All、1v1、2v2も併用できます。" width="416" height="496" loading="lazy" decoding="async"></picture><strong>Apple Watch</strong><p>StandaloneまたはCompanionでスコアを記録し、「履歴」で最新の同期状態を確認できます。</p></div><div class="icloud-hub"><div class="icloud-cloud-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path><path d="m24 34 5.5 5.5L41 28"></path></svg></div><strong>非公開のiCloud同期</strong><p>正常に同期された試合は、Tennis Score Wizardのサーバではなく、Apple Accountの非公開CloudKitデータベースに保存されます。</p><div class="icloud-status-sample">✓ <span>Synced</span></div></div><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-phone"><source srcset="../assets/companion_icloud_synced-720.webp" type="image/webp"><img src="../assets/companion_icloud_synced.png" alt="非公開ストレージと最新の同期時刻を表示するCompanionのiCloud試合履歴カード" width="1224" height="650" loading="lazy" decoding="async"></picture><strong>iPhone</strong><p>Companionで試合を追加し、コート情報を編集。記録済み統計とプライベートiCloud同期を確認できます。</p></div></div>
 <div class="icloud-benefits"><article class="icloud-benefit"><strong>独立した2つの同期経路</strong><p>Companionはペアリングしたデバイス間で直接転送できます。CloudKitはそれとは別に、iCloudでの確実な同期と復元を行います。どちらが先に完了しても問題ありません。</p></article><article class="icloud-benefit"><strong>同期状態を確認</strong><p>「履歴」には<b>Synced</b>、<b>Syncing</b>、<b>Waiting</b> / <b>Saving</b>、または<b>Sync paused</b> / <b>Retry</b>と表示されます。</p></article><article class="icloud-benefit"><strong>アカウントごとに履歴を分離</strong><p>Apple Accountを変更しても履歴が混ざることはありません。前のアカウントで未同期の試合は、暗号化されたローカルの復旧用コピーに保持されます。</p></article><article class="icloud-benefit"><strong>すぐ記録、後から復元</strong><p>iCloudがなくてもスコアを記録できます。正常に同期された試合は、再インストール後に同じApple Accountから再度ダウンロードできます。</p></article></div>
 </section>
 
@@ -2354,9 +2419,7 @@ footer {
 <div class="companion-heading">
 <span class="companion-section-kicker">Companionの体験</span>
 <h2>ひとつの体験を、ふたつの画面で。</h2>
-<p class="section-subtitle">
-      Companionには、StandaloneのApple Watch機能がすべて含まれています。iPhoneでは、試合履歴、結果、統計データ、ワークアウトデータを同期し、より大きな画面で確認できます。
-    </p>
+<p class="section-subtitle">Companionは完全なWatchアプリと、iPhoneの手動入力、背景情報、対戦成績、ハイライト、統計、共有機能を備えています。</p>
 </div>
 <div class="companion-system">
 <article class="companion-device-panel companion-watch-panel">
@@ -2391,9 +2454,7 @@ footer {
 <div class="companion-device-copy">
 <span class="companion-device-label">コート外 · iPhone</span>
 <h3>必要なときに、より大きな画面で情報を確認できます。</h3>
-<p>
-          保存した試合データはiPhoneに同期され、結果、履歴、詳細なパフォーマンス、トレーニングの分析情報をより詳しく確認しやすくなります。
-        </p>
+<p>Watchの試合を振り返るか、iPhoneから結果を追加。コートと個人メモを結果と一緒に保存し、実際に記録された統計やワークアウトを確認できます。</p>
 </div>
 <div class="companion-phone-preview">
 <img alt="iPhone版の「Tennis Score Wizard Companion」。Apple Watchから試合データが同期されています" decoding="async" height="2868" loading="lazy" src="../assets/companion_home_latest_matches-720.webp" width="1320" srcset="../assets/companion_home_latest_matches-720.webp 720w, ../assets/companion_home_latest_matches-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/>
@@ -2419,44 +2480,36 @@ footer {
 <article class="card companion-benefit-card">
 <span class="companion-benefit-number">04</span>
 <h3>ワークアウトの詳細</h3>
-<p>どちらのデバイスでも、ワークアウトの時間、心拍数、アクティブエネルギーを確認できます。</p>
+<p>最大6件のハイライトと任意のコート情報を付けた試合、成績の概要、選択中の傾向を共有できます。個人メモは公開しません。</p>
 </article>
 </div>
 </section>
 <section id="iphone-screenshots">
 <span class="companion-section-kicker">CompanionのiPhone画面</span>
 <h2>試合ごとの詳細から、全体の流れまで。</h2>
-<p class="section-subtitle">
-    Apple Watchでスコアを記録し、iPhoneで個々の試合、カレンダー、長期的なパフォーマンス、推移を確認できます。
-  </p>
+<p class="section-subtitle">Watchで記録、またはiPhoneで結果を入力。履歴、カレンダー、利用可能な統計から、保存された成績の変化を振り返れます。</p>
 <div class="iphone-gallery">
-<div class="release-gallery-heading"><h3>試合を詳しく確認</h3><p>最新の結果から完全な履歴を開き、スコアと自動計算された試合統計を確認できます。</p></div>
+<div class="release-gallery-heading"><h3>試合を詳しく確認</h3><p>最新結果から全履歴とスコアへ。Watchの試合には自動のポイント統計を含められますが、手動入力には提供された情報だけを表示します。</p></div>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="「Tennis Score Wizard Companion」のホーム画面。Apple Watchから同期された最新の試合と最近の試合が表示されています" decoding="async" height="2868" loading="lazy" src="../assets/companion_home_latest_matches-720.webp" width="1320" srcset="../assets/companion_home_latest_matches-720.webp 720w, ../assets/companion_home_latest_matches-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/>
 </div>
 <h3>最新の結果と最近の試合</h3>
-<p>
-        Companionを開くと、Apple Watchから同期された最新の結果や最近の試合を確認できます。
-      </p>
+<p>Companionで最新結果と最近の試合を確認。Watchで記録した試合も、iPhoneで追加した試合も一覧できます。</p>
 </article>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
 <img alt="「Tennis Score Wizard Companion」の試合履歴。終了した試合と中断された試合が表示されています" decoding="async" height="2868" loading="lazy" src="../assets/companion_match_history-720.webp" width="1320" srcset="../assets/companion_match_history-720.webp 720w, ../assets/companion_match_history-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/>
 </div>
 <h3>すべての試合履歴</h3>
-<p>
-        完了した試合や中断した試合を、試合形式、所要時間、結果、ゲーム数とともに確認できます。
-      </p>
+<p>終了・打ち切り・引き分けの試合を、種別、結果、合計ゲーム数、わかる場合は所要時間付きで表示します。</p>
 </article>
 <article class="iphone-screenshot-card">
 <div class="iphone-screenshot-frame">
-<img alt="Tennis Score Wizard Companionで、終了した試合の注目ポイントを表示している画面" decoding="async" height="2868" loading="lazy" src="../assets/companion_match_details_overview-720.webp" width="1320" srcset="../assets/companion_match_details_overview-720.webp 720w, ../assets/companion_match_details_overview-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/>
+<img alt="手動入力の結果と、保存履歴に基づくハイライトを表示するCompanionの試合詳細" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights.png" width="1320"/>
 </div>
 <h3>試合ハイライト</h3>
-<p>
-        逆転勝利、接戦のタイブレーク、連勝、自己ベスト、ライバル対戦の節目など、試合後に最大4つの注目ポイントを確認できます。
-      </p>
+<p>保存データに裏付けられたハイライトをすべて表示。2セットダウンからの逆転、節目の勝利、最長連勝、リターンの自己ベストなどに対応します。履歴ベースの比較はアプリの記録であり、生涯の成績ではありません。</p>
 </article>
 <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_match_tiebreak_details-720.webp" alt="結果に表示されるマッチタイブレーク" width="1320" height="2868" loading="lazy" decoding="async" srcset="../assets/companion_match_tiebreak_details-720.webp 720w, ../assets/companion_match_tiebreak_details-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/></div><h3>結果に表示されるマッチタイブレーク</h3><p>決着用のマッチタイブレークを、通常のセット、獲得セット数、ゲーム合計と分けて確認できます。</p></article>
 <article class="iphone-screenshot-card">
@@ -2493,8 +2546,18 @@ footer {
 <section id="share-results" class="share-showcase">
   <span class="companion-section-kicker">シェアもスマートに</span>
   <h2>スコアの先まで伝える</h2>
-  <p class="section-subtitle">テキストの要約に加え、選択中の試合、期間、試合形式、スタッツ画面に合わせた見やすい画像カードを作成できます。</p>
-  <div class="share-gallery core-sharing-grid"><article class="share-card"><img src="../assets/core-scoring-formats-en/share-set-tiebreaks.png" alt="セットのタイブレーク" width="1080" height="1920" loading="lazy" decoding="async"><h3>セットのタイブレーク</h3><p>2桁の場合も、コンパクトな上付き表示で主スコアの間隔と整列を保ちます。</p></article><article class="share-card"><img src="../assets/core-scoring-formats-en/share-match-tiebreak.png" alt="決着用Match Tie-Break" width="1080" height="1920" loading="lazy" decoding="async"><h3>決着用Match Tie‑Break</h3><p>通常セットとは分けて、[10–7]のように明確に表示します。</p></article>
+  <p class="section-subtitle">スコアに最大6件のハイライトと任意のコート条件・場所を添えて共有。データに合わせて表示を調整し、個人メモはカードに載せません。成績や傾向の概要も共有できます。</p>
+  <div class="share-gallery core-sharing-grid">
+<article class="share-card">
+<a aria-label="コート情報とハイライト付きの共有カードを原寸大で開く" href="../assets/release-1-6-en/share-recorded-context.png" rel="noopener" target="_blank"><img alt="アプリが出力した5セット、3時間2分の試合カード。コート情報、記録済み統計、5件のハイライトを掲載" decoding="async" height="1937" loading="lazy" src="../assets/release-1-6-en/share-recorded-context.png" width="1080"/></a>
+<h3>スコアも、コートも、ハイライトも。</h3>
+<p>Watchで記録した試合にコート情報を追加し、元のスコア、時間、記録済みの統計を保ったまま共有できます。コートは含まれますが、個人メモは含まれません。</p>
+</article><article class="share-card">
+<a aria-label="手動入力のCustom Set共有カードを原寸大で開く" href="../assets/release-1-6-en/share-custom-score.png" rel="noopener" target="_blank"><img alt="Custom Setを5セット、2桁のゲーム・タイブレークスコア、確認できるハイライト2件を表示したアプリ出力" decoding="async" height="924" loading="lazy" src="../assets/release-1-6-en/share-custom-score.png" width="1080"/></a>
+<h3>わかっている情報だけを、すっきり。</h3>
+<p>手動入力の試合にも、セットスコアと確認できるハイライトを載せたカードを用意。空のワークアウト欄や、推測で作ったポイント統計は表示しません。</p>
+</article>
+<article class="share-card"><img src="../assets/core-scoring-formats-en/share-set-tiebreaks.png" alt="セットのタイブレーク" width="1080" height="1920" loading="lazy" decoding="async"><h3>セットのタイブレーク</h3><p>2桁の場合も、コンパクトな上付き表示で主スコアの間隔と整列を保ちます。</p></article><article class="share-card"><img src="../assets/core-scoring-formats-en/share-match-tiebreak.png" alt="決着用Match Tie-Break" width="1080" height="1920" loading="lazy" decoding="async"><h3>決着用Match Tie‑Break</h3><p>通常セットとは分けて、[<span class="score-nowrap">10–7</span>]のように明確に表示します。</p></article>
     <article class="share-card"><img src="../assets/companion_share_stats-720.webp" alt="パフォーマンススタッツの共有カード" width="1080" height="1350" loading="lazy" decoding="async" srcset="../assets/companion_share_stats-720.webp 720w, ../assets/companion_share_stats-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/><h3>パフォーマンス概要</h3><p>選択した期間とシングルス／ダブルス／すべての条件をそのまま書き出せます。</p></article>
     <article class="share-card"><img src="../assets/companion_share_trends-720.webp" alt="グラフ付きパフォーマンストレンド共有カード" width="1080" height="1572" loading="lazy" decoding="async" srcset="../assets/companion_share_trends-720.webp 720w, ../assets/companion_share_trends-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/><h3>パフォーマンストレンド</h3><p>選択したトレンドを、月別の試合数と直近の月間サマリーと一緒に共有できます。</p></article>
   </div>
@@ -2520,7 +2583,7 @@ footer {
 <div class="grid">
 <article class="card">
 <h3>テニスのスコアを自動管理</h3>
-<p>0–15–30–40、デュース、アドバンテージ、ゲーム、セット、タイブレークを大きなタップ領域で自動的に記録します。</p>
+<p><span class="score-nowrap">0–15</span>–<span class="score-nowrap">30–40</span>、デュース、アドバンテージ、ゲーム、セット、タイブレークを大きなタップ領域で自動的に記録します。</p>
 </article>
 <article class="card">
 <h3>自動試合スタッツ</h3>
@@ -2561,17 +2624,17 @@ footer {
 <article class="screenshot-card">
 <img alt="タイブレーク" decoding="async" loading="lazy" src="../assets/04_tiebreak_scoring.webp" width="416" height="496"/>
 <h3>タイブレーク</h3>
-<p>6–6 のタイブレークポイントも、同じ大きく操作しやすいボタンで記録できます。</p>
+<p><span class="score-nowrap">6–6</span> のタイブレークポイントも、同じ大きく操作しやすいボタンで記録できます。</p>
 </article>
 <article class="screenshot-card"><img src="../assets/core-scoring-formats-en/watch-match-tiebreak-targets.png" alt="決着用マッチタイブレークを選択" loading="lazy" decoding="async" width="416" height="496"/><h3>決着用マッチタイブレークを選択</h3><p>最終セット開始前にセットカウントが並んでいる場合、7ポイント制または10ポイント制に置き換えられます。勝利には2ポイント差が必要です。</p></article>
 <article class="screenshot-card"><img src="../assets/core-scoring-formats-en/watch-match-tiebreak-live.png" alt="全ポイントを記録" loading="lazy" decoding="async" width="416" height="496"/><h3>全ポイントを記録</h3><p>目標点、セットカウント、サーバー、ポイントを常に確認できます。</p></article>
 <article class="screenshot-card">
 <img alt="試合終了" decoding="async" loading="lazy" src="../assets/core-scoring-formats-en/watch-five-set-finish.png" width="416" height="496"/>
 <h3>試合終了</h3>
-<p>試合が決まると、勝者、セット結果、History または Done へのクイックアクセスが表示されます。</p>
+<p>決着後は1〜5セットの結果を読みやすく表示。履歴や完了へすぐ進めます。</p>
 </article>
 <article class="screenshot-card">
-<img src="../assets/core-scoring-formats-en/watch-history.png" alt="フィルター、戦績、セット数とゲーム数の省略なし表示、保存された試合形式を示す試合履歴" loading="lazy" decoding="async" width="422" height="514">
+<img src="../assets/release-1-6-en/watch-history-period.png" alt="HistoryでPeriodをタップ。期間を指定するか、All datesですべての日付を表示します。All、1v1、2v2も併用できます。" loading="lazy" decoding="async" width="416" height="496">
 <h3>履歴の概要</h3>
 <p>勝利、敗戦、中断試合、勝率、保存済み試合を Apple Watch 上で確認できます。</p>
 </article>
@@ -2625,10 +2688,8 @@ footer {
 <section class="comparison-section" id="comparison">
 <span class="product-section-kicker">バージョンの比較</span>
 <div class="comparison-heading">
-<h2>Apple Watchでの体験は同じです。違いは、追加される機能にあります。</h2>
-<p class="section-subtitle">
-      Standaloneは、Apple Watchで完全な体験を提供します。Companionには、同じフル機能のWatchアプリに加え、iPhoneとの同期表示機能が追加されています。
-    </p>
+<h2>Watchの記録機能は同じ。iPhoneでは、もっと残せる。</h2>
+<p class="section-subtitle">StandaloneはApple Watchだけで完全なスコア記録が可能。CompanionにはiPhoneでの手動入力、コート情報、対戦成績、ハイライト、共有が加わります。</p>
 </div>
 <div aria-label="「Tennis Score Wizard」StandaloneとCompanionの比較" class="comparison-grid" role="table">
 <div class="comparison-row comparison-header" role="row">
@@ -2692,6 +2753,18 @@ footer {
 <div role="cell"><span class="comparison-muted">非対応</span></div>
 <div role="cell">iPhoneで共有</div>
 </div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">プレー済みの試合の追加・編集</div><div role="cell">手入力の試合と修正をiCloud経由で受信</div><div role="cell">iPhoneで追加・編集し、Watchの履歴に同期</div></div>
+<div class="comparison-row" role="row"><div class="comparison-feature" role="rowheader">Watch履歴の年・月フィルター</div><div role="cell"><span class="comparison-check">✓</span> 対応</div><div role="cell"><span class="comparison-check">✓</span> 対応</div></div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">コート情報と非公開の試合メモ</div>
+<div role="cell">同期する試合と一緒に保持</div>
+<div role="cell">iPhoneで追加・編集</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">マッチハイライト</div>
+<div role="cell"><span class="comparison-muted">Watchには表示しません</span></div>
+<div role="cell">iPhone詳細に全該当項目、共有に最大6件</div>
+</div>
 <div class="comparison-row comparison-best-for" role="row">
 <div class="comparison-feature" role="rowheader">こんな方に最適</div>
 <div role="cell">すべてを手首で管理したいプレイヤー</div>
@@ -2700,12 +2773,10 @@ footer {
 </div>
 </section>
 <div class="shared-experience-chapter">
-<div class="shared-experience-intro"><span class="shared-experience-kicker">両方のバージョンに共通</span><h2>同じ試合分析を、どちらのバージョンでも。</h2><p>自動統計、端末内の履歴、試合履歴のiCloud同期、ワークアウト記録、スコアルール、ヘルプはStandaloneとCompanionの両方に含まれます。Companionは同期した履歴をiPhoneでも表示できますが、試合の記録方法は変わりません。</p></div>
+<div class="shared-experience-intro"><span class="shared-experience-kicker">両方のバージョンに共通</span><h2>同じ試合分析を、どちらのバージョンでも。</h2><p>One Set、Short Sets、No-Ad、Custom Set、自動統計、端末内履歴、iCloud同期、任意のワークアウト記録は両方に搭載。CompanionはiPhoneに手動入力と試合後の機能を追加します。プレー中のポイント記録はWatchで行います。</p></div>
 <section id="stats-guide">
 <h2>試合スタッツガイド</h2>
-<p class="section-subtitle">
-    自動統計機能は両バージョンで利用可能で、通常の得点入力操作から自動的に算出されるため、エース、ウィナー、ラリーの長さ、その他の追加の試合データを入力する必要はありません。
-  </p>
+<p class="section-subtitle">両Watchアプリは通常のスコア操作からポイント統計を計算します。エース、ウィナー、ラリーの長さの追加入力は不要です。手動入力は保存された結果を集計し、ポイント経過やワークアウトは作成しません。</p>
 <div class="help">
 <div class="help-item">
 <strong>ポイント</strong>
@@ -2736,7 +2807,7 @@ footer {
 <p>実際の試合後によくあるスタッツ行を読む方法です。</p>
 <div class="stat-examples-grid">
 <div class="stat-example-card">
-<strong>ポイント 67–72</strong>
+<strong>ポイント <span class="score-nowrap">67–72</span></strong>
 <p>自分が 67 ポイント、相手が 72 ポイントを獲得しました。差が小さい場合、セットスコアよりも接戦だったことが多いです。</p>
 </div>
 <div class="stat-example-card">
@@ -2763,7 +2834,7 @@ footer {
 </div>
 <div class="help-item">
 <strong>古い試合</strong>
-<p>自動スタッツ追加前に保存された試合にはスタッツが含まれない場合があります。バージョン1.2以降で保存された新しい試合には新しい History スタッツを含めることができます。</p>
+<p>自動統計の導入前に保存した試合には統計がない場合があります。手動入力の試合にも、アプリのバージョンに関係なくポイントごとの統計はありません。</p>
 </div>
 <div class="help-item"><strong>プライバシー</strong><p>試合履歴は端末内に保存されます。iCloudが利用できる場合、保存済みの試合はApple Accountの非公開CloudKitデータベースでも同期できます。ヘルスケアデータへのアクセスは任意で、ワークアウトの記録と関連データの表示にのみ使用します。</p></div></div></section>
 <section id="help">
@@ -2811,24 +2882,34 @@ footer {
 </div>
 <div class="help-item">
 <strong>S1、S2、S3 は何ですか？</strong>
-<p>S1、S2、S3 は Set 1、Set 2、Set 3 を意味します。たとえば S1 6–3 は第1セットが 6–3 で終わったことを示します。</p>
+<p>S1、S2、S3 は Set 1、Set 2、Set 3 を意味します。たとえば S1 <span class="score-nowrap">6–3</span> は第1セットが <span class="score-nowrap">6–3</span> で終わったことを示します。</p>
 </div>
 <div class="help-item">
-<strong>TB 7–3 は何ですか？</strong>
-<p>TB は 7–6 セット内のタイブレークポイントです。たとえば 7–6 · TB 7–3 は、セットを 7–6、タイブレークを 7–3 で取ったことを意味します。</p>
+<strong>TB <span class="score-nowrap">7–3</span> は何ですか？</strong>
+<p>TB は <span class="score-nowrap">7–6</span> セット内のタイブレークポイントです。たとえば <span class="score-nowrap">7–6</span> · TB <span class="score-nowrap">7–3</span> は、セットを <span class="score-nowrap">7–6</span>、タイブレークを <span class="score-nowrap">7–3</span> で取ったことを意味します。</p>
 </div>
-<div class="help-item"><strong>7–6<sup>(6)</sup>は何を表しますか？</strong><p>括弧内の小さな数字は、タイブレークで敗れた側のポイントです。この例ではタイブレークが8–6で終了しています。試合の詳細画面には、引き続きタイブレークの完全なスコアが表示されます。</p></div>
+<div class="help-item"><strong><span class="score-nowrap">7–6</span><sup>(6)</sup>は何を表しますか？</strong><p>コンパクトな結果行の小さな括弧内の数値は、タイブレークを落とした選手のポイントです。この例は<span class="score-nowrap">8–6</span>で終了。セット別表では、記録されていれば両者のポイントを表示できます。</p></div>
 <div class="help-item">
 <strong>中断試合はどう評価されますか？</strong>
-<p>アプリは完了したセット数、保存されたゲーム数、利用可能なタイブレークポイントの順に比較します。一方がリードしていれば、試合は Stopped のまま、統計上は勝ちまたは負けとして数えられます。同点なら結果は中立です。</p>
+<p>まず終了済みのセットを比較し、同数なら進行中の未完了セットのゲーム数、続いて記録済みのタイブレークまたはゲームのポイントを比較します。過去のセットのゲーム数を合計してリードを決めることはありません。セット間で打ち切り、獲得セットが同数なら引き分けです。明確なリードは統計上の勝敗として数えますが、打ち切りの表示は残ります。</p>
 </div>
 <div class="help-item">
 <strong>未完了セットはどうなりますか？</strong>
-<p>中断試合では、進行があった現在の未完了セットも保存されます。これにより、たとえば S3 0–1 のように実際の試合状況が残ります。</p>
+<p>中断試合では、進行があった現在の未完了セットも保存されます。これにより、たとえば S3 <span class="score-nowrap">0–1</span> のように実際の試合状況が残ります。</p>
 </div>
 </div>
 </section>
-<section id="faq"><h2>よくある質問</h2><div class="help"><div class="faq"><strong>アプリは個人データを収集しますか？</strong><p>Tennis Score Wizardのアカウントは不要で、広告トラッカーも使用しません。Tennis Score Wizardは試合履歴を保管する独自サーバを運用していません。履歴は端末内に保存され、iCloudが利用できる場合はApple Accountの非公開CloudKitデータベースで同期できます。</p></div><div class="faq"><strong>ヘルスケアへのアクセスは必要ですか？</strong><p>いいえ。アクセスは任意です。ワークアウトを記録せずに試合のスコアを付けられます。</p></div><div class="faq"><strong>統計のために追加の操作が必要ですか？</strong><p>いいえ。通常のスコア操作から自動的に作成されます。エース、ウィナー、アンフォーストエラー、ラリーの長さを入力する必要はありません。</p></div><div class="faq"><strong>シングルス、ダブルス、タイブレークに対応していますか？</strong><p>はい。シングルス、ダブルス、3セットマッチ、5セットマッチ、アドバンテージセット、タイブレークセットに対応しています。</p></div><div class="faq"><strong>試合履歴を削除できますか？</strong><p>はい。「履歴」画面から保存済みの試合を削除できます。iCloud同期が利用できると、削除も同期されます。</p></div><div class="faq"><strong>ライバル記録はどのように作られますか？</strong><p>iPhoneのCompanionで対戦相手を登録し、Apple Watchでシングルスを始める前に選択して、いつもどおりスコアを記録します。保存された試合はその選手に関連付けられ、対戦成績、直近の調子、プレー内容、傾向、コート上の時間、ワークアウト、全対戦履歴が自動でまとまります。Standaloneでは、同じApple Accountで同期されたプロフィールを利用できます。「ゲスト」を選ぶと、その試合はライバル記録に含まれません。</p></div></div></section>
+<section id="manual-match-help">
+<h2>終わった試合も、あとから残せます。</h2>
+<div class="help"><div class="help-item"><strong>手入力した試合は編集できますか？</strong><p>はい。試合の詳細を開き、Edit matchをタップします。日時、試合時間、ルール、セットスコア、タイブレークのポイント、終了状態を修正できます。Saveは試合を複製せずに既存の記録を更新し、Cancelは変更を破棄します。このフォームではシングルス・ダブルスの区分と選手は変わりません。対戦相手の割り当てとコート情報は別の操作で編集します。</p></div>
+<div class="help-item"><strong>プレー後に試合を追加できますか？</strong><p>はい。iPhoneのCompanionでプレー済みの試合を追加し、スコア、終了・打ち切りの区分、覚えている時刻を入力します。保存した結果は両方のWatchアプリに同期できます。</p></div>
+<div class="help-item"><strong>引き分けも記録できますか？</strong><p>はい。勝者が決まる前にプレーを終えた場合は打ち切りを選びます。架空の決着セットを入力せず、同点のまま保存できます。</p></div>
+<div class="help-item"><strong>過去の試合にも情報を追加できますか？</strong><p>はい。iPhoneの試合詳細から試合情報を追加・編集できます。Watchで記録した元のスコア、時刻、統計は保持されます。</p></div>
+<div class="help-item"><strong>対戦相手や試合情報を変えるとどうなりますか？</strong><p>相手の変更は割り当てと関連する対戦成績に反映されます。履歴を使うハイライトは現在の保存履歴を参照します。任意のコート情報や個人メモから新たな統計上の実績は作成されません。</p></div>
+</div>
+<p><a href="help.html#manual-matches">手動入力ガイド →</a> <a href="help.html#match-context">コート情報とプライバシー →</a></p>
+</section>
+<section id="faq"><h2>よくある質問</h2><div class="help"><div class="faq"><strong>アプリは個人データを収集しますか？</strong><p>Tennis Score Wizardのアカウントは不要で、広告トラッカーも使用しません。Tennis Score Wizardは試合履歴を保管する独自サーバを運用していません。履歴は端末内に保存され、iCloudが利用できる場合はApple Accountの非公開CloudKitデータベースで同期できます。</p></div><div class="faq"><strong>ヘルスケアへのアクセスは必要ですか？</strong><p>いいえ。アクセスは任意です。ワークアウトを記録せずに試合のスコアを付けられます。</p></div><div class="faq"><strong>統計のために追加の操作が必要ですか？</strong><p>Watchの通常のスコア操作から統計を作成します。手動入力では既知の結果を反映し、架空のポイント経過、心拍数、ワークアウトは作りません。エース、ウィナー、アンフォーストエラー、ラリーの長さの入力は不要です。</p></div><div class="faq"><strong>シングルス、ダブルス、タイブレークに対応していますか？</strong><p>はい。シングルス、ダブルス、3セットマッチ、5セットマッチ、アドバンテージセット、タイブレークセットに対応しています。</p></div><div class="faq"><strong>試合履歴を削除できますか？</strong><p>はい。「履歴」画面から保存済みの試合を削除できます。iCloud同期が利用できると、削除も同期されます。</p></div><div class="faq"><strong>ライバル記録はどのように作られますか？</strong><p>iPhoneのCompanionで対戦相手を登録し、Apple Watchでシングルスを始める前に選択して、いつもどおりスコアを記録します。保存された試合はその選手に関連付けられ、対戦成績、直近の調子、プレー内容、傾向、コート上の時間、ワークアウト、全対戦履歴が自動でまとまります。Standaloneでは、同じApple Accountで同期されたプロフィールを利用できます。「ゲスト」を選ぶと、その試合はライバル記録に含まれません。</p></div></div></section>
 <section><h2>プライバシー</h2><div class="privacy-box"><strong>試合履歴は非公開です。</strong><p>試合履歴は端末内に保存され、Apple Accountの非公開CloudKitデータベースで同期できます。Tennis Score Wizardは試合履歴を保管する独自サーバを運用せず、試合データの販売や広告利用も行いません。</p><p>ヘルスケアデータへのアクセスは任意で、許可した場合にテニスワークアウトを記録し、利用可能なワークアウトデータを表示するためだけに使用します。</p><p><a href="privacy.html">プライバシーポリシーを読む</a></p></div></section>
 </div>
 <section id="support-development" class="development-support" aria-labelledby="development-support-title">

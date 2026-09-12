@@ -5,7 +5,7 @@ This repository contains the public website, Help Center, Privacy Policy, releas
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
 - **Companion** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
 
-The current website documents Companion 1.5 and Standalone 1.8, including flexible scoring formats, updated result cards, clearer history and sharing, iCloud match sync, and Match Highlights in Companion.
+This branch prepares the website for **Companion 1.6 (54)** and **Standalone 1.9 (35)**. Manual played matches and editing, optional court context, expanded Match Highlights, richer sharing and Watch history filters are covered in all ten languages. This is an unpublished branch; public release status has not been verified.
 
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
@@ -22,6 +22,18 @@ The GitHub Pages site is stored in `docs/`:
 - `docs/de`, `docs/es`, `docs/fr`, `docs/it`, `docs/ja`, `docs/ko`, `docs/ru`, `docs/tr`, `docs/zh-Hans` — localized pages
 
 The site currently supports English, German, Spanish, French, Italian, Japanese, Korean, Russian, Turkish, and Simplified Chinese.
+
+## Coordinated release preparation
+
+- Branch: `feature/website-companion-1-6-standalone-1-9-en`.
+- The user reported uploading earlier archives to App Store Connect. Builds 54 / 35 were prepared on 12 September after the Entire year wording check; their upload, approval and public availability have not been verified.
+- Keep this multilingual draft unmerged and unpublished until release is confirmed. Public-facing pages use the normal site layout, without preview banners or extra release navigation.
+- Updated the landing page, Product Updates, Help and factual Privacy disclosures in all ten languages, plus the existing English UK campaign page. Product Updates stays text-only; historical entries are retained. Screenshots and the complete Match Highlights catalog belong on the main page.
+- Shared update styles and navigation behavior: `docs/release-1-6-en.css` and `docs/navigation-en.js`, now loaded by all ten languages. The filenames retain their original English preparation suffix.
+- New original app screenshots: `docs/assets/release-1-6-en/`. See [asset provenance and release checklist](RELEASE-1.6-EN.md).
+- Localized follow-up: native manual editor and Watch Period screenshots, year/month walkthrough, editing/sync help and updated product comparisons in all ten languages.
+- Localized copy includes search/social descriptions, screenshot captions and accessibility labels. Original app screenshots remain in English, with that fact disclosed in translated captions; no app UI or results were redrawn.
+- Use polite, formal address consistently across existing and new copy: German Sie, Spanish usted, Italian Lei, Turkish siz, Russian вы and Chinese 您. Keep natural polite wording in French, Japanese and Korean; English does not distinguish formal and informal second-person pronouns. Preserve the exact names of app controls referenced in instructions.
 
 ## Local preview
 

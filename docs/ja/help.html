@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>ヘルプ – Tennis Score Wizard</title>
-<meta content="One Set、公式Short Sets、No‑Ad、Custom Set、Apple Watchでのスコア記録、iCloud同期、統計、ワークアウトのヘルプ。" name="description"/>
+<meta content="プレー済みの試合をiPhoneで追加・編集。Apple Watchの履歴を年・月で絞り込み、コート情報を残して試合のハイライトを共有できます。" name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/ja/help.html">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/help.html">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html">
@@ -22,13 +22,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="ヘルプ – Tennis Score Wizard">
-<meta property="og:description" content="One Set、公式Short Sets、No‑Ad、Custom Set、Apple Watchでのスコア記録、iCloud同期、統計、ワークアウトのヘルプ。">
+<meta content="プレー済みの試合をiPhoneで追加・編集。Apple Watchの履歴を年・月で絞り込み、コート情報を残して試合のハイライトを共有できます。" property="og:description"/>
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/ja/help.html">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ヘルプ – Tennis Score Wizard">
-<meta name="twitter:description" content="One Set、公式Short Sets、No‑Ad、Custom Set、Apple Watchでのスコア記録、iCloud同期、統計、ワークアウトのヘルプ。">
+<meta content="プレー済みの試合をiPhoneで追加・編集。Apple Watchの履歴を年・月で絞り込み、コート情報を残して試合のハイライトを共有できます。" name="twitter:description"/>
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -1186,6 +1186,8 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 }
 </style>
 <link rel="stylesheet" href="../release-1-1.css">
+<link rel="stylesheet" href="../release-1-6-en.css?v=20260911-i18n">
+<script defer src="../navigation-en.js?v=20260911-i18n"></script>
 </head>
 <body>
 <main class="page">
@@ -1224,7 +1226,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="hero-copy">
 <p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Home" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
 <h1>ヘルプセンター</h1>
-<p>試合の設定とスコア記録、iCloudでの試合同期、CompanionとiPhoneの接続、統計の見方、ヘルスケアアプリへのワークアウト記録、コンプリケーションの使い方、よくある問題の解決方法を説明します。</p>
+<p>Apple Watchで記録する方法や、CompanionのiPhone版で試合を追加する方法を紹介。コート、個人メモ、ハイライト、共有、対戦成績、形式、ワークアウト、iCloudのガイドです。</p>
 </div>
 </section>
 <section id="getting-started">
@@ -1235,9 +1237,9 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="help">
 <div class="help-item">
 <strong>Tennis Score Wizardを使うには何が必要ですか？</strong>
-<p>Tennis Score Wizardがインストールされた対応Apple Watchが必要です。ヘルスケアの許可は任意で、試合をワークアウトとして記録し、利用可能なヘルスデータを取得する場合にのみ必要です。</p>
+<p>プレー中の記録にはTennis Score Wizardを入れた対応Apple Watchが必要です。CompanionのiPhone版ではプレー済みの試合も追加できます。ヘルスケアの許可は任意で、ワークアウトと利用可能な測定値の記録だけに使います。</p>
 </div>
-<div class="help-item"><strong>最初の試合を始めるには？</strong><p>アプリを開き、シングルスまたはダブルスを選びます。次にOne Set、Best of 3、Best of 5から試合の長さを選び、セットとゲームのルール、最初のサーバーを設定します。必要に応じてワークアウト記録をオンにして試合を開始します。</p></div>
+<div class="help-item"><strong>最初の試合を始めるには？</strong><p>Apple Watchでアプリを開き、シングルス・ダブルス、1セットまたは3・5セットマッチ、セット・ゲームのルール、最初のサーバーを選びます。必要ならワークアウト記録を有効にして開始します。</p></div>
 <div class="help-item">
 <strong>前回の設定は記憶されますか？</strong>
 <p>はい。前回使用した試合設定が保存されるため、次回は同じ形式の試合をすばやく準備できます。開始前に各項目を変更することもできます。</p>
@@ -1246,6 +1248,50 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <strong>ヘルスケアなしでもスコアを記録できますか？</strong>
 <p>はい。スコアリング、試合スタッツ、履歴はヘルスケアの許可がなくても利用できます。許可が必要なのは、ワークアウト、心拍数、アクティブエネルギーなどを記録する場合だけです。</p>
 </div>
+</div>
+</section>
+<section id="manual-matches">
+<h2>プレー済みの試合の追加・編集</h2>
+<p class="section-subtitle">iPhoneのCompanionで、わかっている結果をWatchの履歴と一緒に保存。</p>
+<div class="help"><div class="help-item"><strong>手入力した試合は編集できますか？</strong><p>はい。試合の詳細を開き、Edit matchをタップします。日時、試合時間、ルール、セットスコア、タイブレークのポイント、終了状態を修正できます。Saveは試合を複製せずに既存の記録を更新し、Cancelは変更を破棄します。このフォームではシングルス・ダブルスの区分と選手は変わりません。対戦相手の割り当てとコート情報は別の操作で編集します。</p></div><div class="help-item"><strong>修正はApple Watchにも同期されますか？</strong><p>はい。ペアリング済みのCompanion Watch上の同じ試合が更新され、同じApple AccountのプライベートiCloud経由でStandaloneにも同期できます。アプリを最新にして同期の完了をお待ちください。関連する統計や履歴に基づくハイライトには修正後の結果が反映されます。手入力の表示は維持され、未記録のポイントやワークアウトのデータは作られません。</p></div>
+<div class="help-item"><strong>試合を手動で追加するには？</strong><p>試合タブからプレー済みの試合を追加します。シングルス・ダブルスを選び、必要なら相手の名前を入力します。シングルスでは保存済みの選手も選択できます。形式とセットスコアを入力し、完了したら保存します。</p></div>
+<div class="help-item"><strong>途中で打ち切った試合や引き分けも保存できますか？</strong><p>はい。選んだ形式の勝者が決まる前に終えた場合は打ち切りを選び、未完了のセットも含めて到達したスコアを入力します。同点も保存できます。終了を選ぶのは、その形式のルールで勝者が確定するスコアの場合だけです。</p></div>
+<div class="help-item"><strong>セットのタイブレークはどう入力しますか？</strong><p>まずゲーム数を入力します。選んだルールでタイブレークを示すスコア、たとえば<span class="score-nowrap">7–6</span>になると、両選手のポイント入力欄が現れます。わかれば両方を入力し、不明なら両方とも空欄にします。決着用のマッチタイブレークは、下記のとおりゲーム数ではなくポイントを直接入力します。</p></div>
+<div class="help-item"><strong>マッチタイブレークはどう入力しますか？</strong><p>3セットまたは5セットマッチの最終セットをタイブレークにする場合は、決着セットのマッチタイブレークを有効にして7点または10点を選びます。最終行にはゲームの<span class="score-nowrap">1–0</span>ではなく、<span class="score-nowrap">10–8</span>のようにポイントを入力します。試合全体がマッチタイブレークなら、セットルールでMatch Tie-breakを選択。終了には2ポイント差が必要です。</p></div>
+<div class="help-item"><strong>セットのタイブレーク中に打ち切った場合は？</strong><p>打ち切りを選び、タイブレークが始まった同点のゲーム数、たとえば<span class="score-nowrap">6–6</span>を入力します。中断時のポイント欄が表示されるので、わかれば両方を入力し、不明なら両方とも空欄にします。欠けたポイントをアプリが推測することはありません。</p></div>
+<div class="help-item"><strong>所要時間ではなく開始時刻を覚えている場合は？</strong><p>開始・終了を選び、両方の日付と時刻を入力すると所要時間を自動計算します。日付をまたいだ場合は終了日を翌日に設定してください。終了・所要時間を選んで分数を入力する方法もあります。不明な所要時間は空欄にできます。入力する場合は1分以上24時間以内です。</p></div>
+<div class="help-item"><strong>未来の時刻を選べないのはなぜですか？</strong><p>これは予定ではなく、プレー済みの試合を記録するフォームです。終了時刻は未来に設定できません。開始・終了モードでは、開始が終了より前である必要があります。</p></div>
+<div class="help-item"><strong>スコア欄を切り替えるには？</strong><p>入力したいマスを直接タップするか、キーボード上の前へ・次へを使います。2桁の入力ができるよう、1桁目で自動移動はしません。完了、欄の外のタップ、スクロールでキーボードを閉じられます。</p></div>
+<div class="help-item"><strong>手動入力の試合はどの統計に反映されますか？</strong><p>既知の結果、セット、ゲーム、入力したタイブレーク結果、任意の所要時間を関連する履歴や集計に反映できます。ポイント経過、サーブ、リターン、ブレークポイント、ワークアウトの測定値は再現しません。手動入力と明示し、データのないカードは非表示になります。</p></div>
+<div class="help-item"><strong>Apple Watchにも表示されますか？</strong><p>はい。ペアリングしたCompanionのWatchと、同じApple AccountのプライベートiCloud経由でStandaloneに同期できます。両アプリとも手動入力の表示を保ち、不明な統計は表示しません。両方を更新し、同期の完了をお待ちください。</p></div>
+<div class="help-item"><strong>Watchで記録したスコアをiPhoneで変更できますか？</strong><p>いいえ。プレー済みの試合を追加する機能は、Watchの記録を編集する機能とは別です。既存の試合では対戦相手と任意の試合情報を変更できますが、記録されたスコアや統計は変更しません。</p></div>
+</div>
+</section>
+<div aria-label="手動入力とコート情報の例" class="release-proof-pair">
+<figure><a href="../assets/release-1-6-en/manual-edit-details.png" target="_blank" rel="noopener"><img src="../assets/release-1-6-en/manual-edit-details.png" alt="手入力の試合 · iPhone — Edit match" width="1320" height="2868" loading="lazy" decoding="async"></a><figcaption>試合の追加と編集について. Edit match.</figcaption></figure>
+<figure><a href="../assets/release-1-6-en/court-conditions.png" rel="noopener" target="_blank"><img alt="クレーと屋外を選択した任意の試合情報編集画面" height="2868" loading="lazy" src="../assets/release-1-6-en/court-conditions.png" width="1320"/></a><figcaption>サーフェスや環境の入力は任意です。英語版アプリの実画面にサンプルデータを表示しています。</figcaption></figure>
+</div>
+<section id="match-context">
+<h2>コートと試合の背景を残す</h2>
+<p class="section-subtitle">すべて任意です。手動入力時、または後からiPhoneの試合詳細で追加できます。</p>
+<div class="help">
+<div class="help-item"><strong>どんな情報を追加できますか？</strong><p>サーフェス、屋内・屋外、場所やクラブ、コート名・番号、その試合専用の非公開メモです。Apple Watchで記録した過去の試合にも追加できます。</p></div>
+<div class="help-item"><strong>マップや位置情報の許可は必要ですか？</strong><p>不要です。場所とコート名は手入力です。地図でコートを検索したりGPS位置を記録したりする機能ではありません。</p></div>
+<div class="help-item"><strong>同じコートを再利用できますか？</strong><p>はい。最近使ったコートやお気に入りから選べます。お気に入りはこのiPhone内にApple Accountごとに分けて保存されます。選択すると場所と条件が入力されますが、現在の試合メモは置き換わりません。お気に入りリスト自体はiCloud同期の対象外です。</p></div>
+<div class="help-item"><strong>何が同期されますか？</strong><p>コート情報と試合メモは結果とともに、ペアリングした端末間の転送とプライベートiCloudで同期します。元のスコアと統計は変わりません。追加・閲覧・編集はiPhoneで行います。Watchは同期用に情報を保持しますが、編集画面はありません。</p></div>
+<div class="help-item"><strong>共有画像には何が載りますか？</strong><p>入力したコートの条件と場所が載ります。非公開の試合メモや対戦メモは載りません。場所を公開したくない場合などは、共有前にプレビューを確認してください。</p></div>
+<div class="help-item"><strong>コート情報から統計上の実績が作られますか？</strong><p>いいえ。サーフェス、屋内・屋外、場所、メモはプレーの背景を記述する情報です。ハイライトには影響せず、サーフェス別やコート別の記録を作ることもありません。</p></div>
+</div>
+</section>
+<section id="match-highlights">
+<h2>マッチハイライトと共有</h2>
+<div class="help">
+<div class="help-item"><strong>ハイライトは何件表示されますか？</strong><p>26種類のイベントがありますが、1試合に26件表示されるわけではありません。iPhoneの試合詳細には保存データで確認できる該当項目をすべて表示し、共有画像には注目度の高いものを最大6件掲載します。該当項目がなければ欄自体を表示しません。</p></div>
+<div class="help-item"><strong>どんな場面が表示されますか？</strong><p>逆転、決着セットやマッチタイブレーク、接戦のタイブレーク、ストレートでの結果、連勝・連敗、節目の勝利、自己ベスト、サーブやリターンの傾向などです。ポイント統計が必要な項目もあれば、セットスコアと履歴から確認できる項目もあります。</p></div>
+<div class="help-item"><strong>記録や節目は生涯変わらない実績ですか？</strong><p>いいえ。アプリに保存された履歴に基づきます。古い結果の追加、試合の削除、相手の変更によって比較や対戦ハイライトが変わる場合があります。古い試合の判定に、それより後の試合を過去の履歴として使うことはありません。勝利数の節目は条件に該当する終了済みの勝利が対象です。</p></div>
+<div class="help-item"><strong>Statsの連勝数とハイライトが違うことがあるのはなぜですか？</strong><p>Statsや対戦成績では、打ち切り時に明確なリードがあれば勝敗ありとして数える場合があります。一方、連勝や勝利数の節目のハイライトは終了した勝利を使うため、未完了の試合は対象外です。それぞれの比較に必要な保存履歴を参照しています。</p></div>
+<div class="help-item"><strong>Apple Watchにもハイライトはありますか？</strong><p>いいえ。CompanionのiPhone試合詳細と共有画像に表示します。Watchの履歴には結果と利用可能な統計を残し、独立したハイライト欄は設けていません。</p></div>
+<div class="help-item"><strong>手動入力ではハイライトが少ないのはなぜですか？</strong><p>最終スコアだけでは各ポイントの経過は確認できません。手動入力ではスコアや履歴が裏付ける項目を表示しますが、サーブ、リターン、ブレークポイント、ワークアウトの情報は推測で作成しません。</p></div>
 </div>
 </section>
 <section id="match-setup">
@@ -1262,7 +1308,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <strong>3セットマッチと5セットマッチとは？</strong>
 <p>3セットマッチでは先に2セットを取った側が勝者です。5セットマッチでは先に3セットを取った側が勝者です。</p>
 </div><div class="help-item"><strong>One Setとは？</strong><p>選んだ1セットが試合全体になります。ゲーム数やタイブレークは選択したセットルールに従います。</p></div>
-<div class="help-item"><strong>セットルールの仕組みは？</strong><p>実際の試合に合うルールを選びます。従来のセットは6ゲーム、公式Short Setsは4ゲームが基本で、Custom Setでは各項目を自由に設定できます。選んだ設定はアプリが自動で適用します。</p></div><div class="help-item"><strong>公式Short Setsの仕組みは？</strong><p>4ゲーム先取です。タイブレーク開始を3–3または4–4、目標を2ポイント差の7ポイント制または4–4での決定ポイントから選びます。</p></div><div class="help-item"><strong>No‑Adで何が変わりますか？</strong><p>ゲームルールだけです。デュースでは次のポイントでゲームが決まります。すべてのセット形式と組み合わせられます。</p></div><div class="help-item"><strong>Custom Setの仕組みは？</strong><p>8ゲームを含むゲーム目標、必要な差、タイブレークの開始時点と目標をまとめて保存します。</p></div><div class="help-item"><strong>設定同士が競合することはありますか？</strong><p>ありません。試合の長さは必要なセット数、セットルールは各セットの終了、Standard/No‑Adはデュース、任意のMatch Tie‑Breakは最後の決着セットだけを決めます。</p></div>
+<div class="help-item"><strong>セットルールの仕組みは？</strong><p>実際の試合に合うルールを選びます。従来のセットは6ゲーム、公式Short Setsは4ゲームが基本で、Custom Setでは各項目を自由に設定できます。選んだ設定はアプリが自動で適用します。</p></div><div class="help-item"><strong>公式Short Setsの仕組みは？</strong><p>4ゲーム先取です。タイブレーク開始を<span class="score-nowrap">3–3</span>または<span class="score-nowrap">4–4</span>、目標を2ポイント差の7ポイント制または<span class="score-nowrap">4–4</span>での決定ポイントから選びます。</p></div><div class="help-item"><strong>No‑Adで何が変わりますか？</strong><p>ゲームルールだけです。デュースでは次のポイントでゲームが決まります。すべてのセット形式と組み合わせられます。</p></div><div class="help-item"><strong>Custom Setの仕組みは？</strong><p>Custom Setでは目標ゲーム数、必要な差、タイブレークの有無と開始条件、目標ポイントと必要な差を選べます。たとえば8ゲーム先取も可能です。設定の概要にルールをまとめて表示します。</p></div><div class="help-item"><strong>設定同士が競合することはありますか？</strong><p>ありません。試合の長さは必要なセット数、セットルールは各セットの終了、Standard/No‑Adはデュース、任意のMatch Tie‑Breakは最後の決着セットだけを決めます。</p></div>
 <div class="help-item">
 <strong>最初のサーバーはどう選びますか？</strong>
 <p>設定画面で手動選択するか、内蔵のコイントスを使ってランダムに決めることができます。</p>
@@ -1291,13 +1337,13 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <strong>ゲームとセットは自動計算されますか？</strong>
 <p>はい。選択したルールに従って、ポイント、ゲーム、セット、デュース、アドバンテージ、タイブレークが自動的に進行します。</p>
 </div>
-<div class="help-item"><strong>デュースとアドバンテージの扱いは？</strong><p>Standard Gameでは40–40からデュースとなり、アドバンテージを取ったあと次のポイントを取るとゲームを獲得します。No‑Adでは40–40の次のポイントでゲームが決まります。</p></div>
+<div class="help-item"><strong>デュースとアドバンテージの扱いは？</strong><p>Standard Gameでは<span class="score-nowrap">40–40</span>からデュースとなり、アドバンテージを取ったあと次のポイントを取るとゲームを獲得します。No‑Adでは<span class="score-nowrap">40–40</span>の次のポイントでゲームが決まります。</p></div>
 <div class="help-item">
 <strong>タイブレークはどのように記録されますか？</strong>
 <p>選択したルールでタイブレークが必要になると、通常のテニスポイントから数字によるタイブレーク得点に切り替わります。</p>
 </div>
-<div class="help-item"><strong>マッチタイブレークとは何ですか？ どうやって開始しますか？</strong><p>最終セットの代わりに試合の勝者を決める方式です。3セットマッチで1–1、5セットマッチで2–2になったら、最終セット開始前にメニューからMatch Tie‑Breakを選び、7ポイント制または10ポイント制を選択します。勝利には2ポイント差が必要です。シングルスとダブルスで利用でき、結果は履歴、試合詳細、統計、共有カードに保存されます。</p></div>
-<div class="help-item"><strong>セット内のタイブレークとはどう違いますか？</strong><p>セット内のタイブレークは通常6–6から1セットを決め、7–6と記録されます。マッチタイブレークは最終セット全体の代わりとなり、[10–7]のように別に表示されます。</p></div>
+<div class="help-item"><strong>マッチタイブレークとは何ですか？ どうやって開始しますか？</strong><p>最終セットの代わりに試合の勝者を決める方式です。3セットマッチで<span class="score-nowrap">1–1</span>、5セットマッチで<span class="score-nowrap">2–2</span>になったら、最終セット開始前にメニューからMatch Tie‑Breakを選び、7ポイント制または10ポイント制を選択します。勝利には2ポイント差が必要です。シングルスとダブルスで利用でき、結果は履歴、試合詳細、統計、共有カードに保存されます。</p></div>
+<div class="help-item"><strong>セット内のタイブレークとはどう違いますか？</strong><p>セット内のタイブレークは通常<span class="score-nowrap">6–6</span>から1セットを決め、<span class="score-nowrap">7–6</span>と記録されます。マッチタイブレークは最終セット全体の代わりとなり、[<span class="score-nowrap">10–7</span>]のように別に表示されます。</p></div>
 <div class="help-item">
 <strong>サーブマーカーはどう動作しますか？</strong>
 <p>自分のサービス時は、サーブすべき側をテニスボールで表示します。相手のサービス時は、時計を見ている自分の視点から相手側の位置を示します。</p>
@@ -1376,7 +1422,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-<section id="companion-sync"><h2>CompanionとiPhoneの同期</h2><p class="section-subtitle">Apple Watchでスコアを記録し、同期された履歴、結果、統計、ワークアウトデータをiPhoneで確認します。</p><div class="help"><div class="help-item"><strong>Companionではどこで試合を設定し、スコアを記録しますか？</strong><p>試合設定とライブスコアはApple Watchで行います。Companionには完全なWatchアプリが含まれ、試合後やセッションの合間に保存済みの試合を確認できるiPhone画面が追加されます。</p></div><div class="help-item"><strong>iPhoneには何が表示されますか？</strong><p>最新の結果、最近およびすべての試合履歴、セットとタイブレークのスコア、時間、ポイント、サーブ、リターン、ブレークポイント、試合の流れの統計、利用可能なワークアウト概要を表示できます。</p></div><div class="help-item"><strong>試合履歴はどのように同期されますか？</strong><p>Companionには独立した2つの同期経路があります。Watch Connectivityは、ペアリングしたApple WatchとiPhoneの間で保存済みの試合を直接転送できます。両方のデバイスが利用できる場合は、通常これが最も速いローカル経路です。一方、CloudKitは、同じApple Accountを使用するStandaloneとCompanionの間で、iCloudによる確実な同期と復元を行います。一方の完了を待たずにもう一方を利用でき、同じ試合が両方から届いた場合も、最新の1件だけが保持されます。</p></div><div class="help-item"><strong>iPhoneに試合が表示されない場合は？</strong><p>正しいApple Watchがペアリングされていることを確認し、両方のデバイスを近くに置いて、Apple WatchとiPhoneでTennis Score Wizardを開いてください。両方のデバイスで目的のApple Accountを使用していることを確認し、「履歴」のiCloud状態も確認します。保存済みの試合は待機中もローカルで保護され、デバイス間の接続またはiCloudが利用できると同期できます。</p></div><div class="help-item"><strong>ワークアウトの詳細も同期されますか？</strong><p>ワークアウトデータを利用できる場合、Companionは試合時間、平均心拍数、最大心拍数、アクティブエネルギーを保存済みの試合と一緒に両方のデバイスで表示できます。</p></div><div class="help-item"><strong>試合履歴を削除するとどうなりますか？</strong><p>Companionで個別の試合または履歴全体を削除すると、iPhoneとApple Watchの間、および利用可能な場合はiCloudを通じて変更が同期されます。履歴全体を削除する前に確認画面が表示されます。</p></div><div class="help-item"><strong>iPhoneであとから割り当てた対戦相手はWatchの履歴にも表示されますか？</strong><p>はい。Companionは更新内容をペアリング中のApple Watchへ直接送信できます。同じApple Accountを使用していれば、StandaloneにもプライベートiCloud同期で反映されます。</p></div></div></section>
+<section id="companion-sync"><h2>CompanionとiPhoneの同期</h2><p class="section-subtitle">Apple Watchでスコアを記録し、同期された履歴、結果、統計、ワークアウトデータをiPhoneで確認します。</p><div class="help"><div class="help-item"><strong>Companionではどこで試合を設定し、スコアを記録しますか？</strong><p>試合開始の設定とポイントごとの記録はApple Watchに残ります。iPhoneでは結果の追加、背景の編集、履歴の閲覧、ハイライト共有ができます。手動入力はiPhone用のリアルタイムスコアボードではありません。</p></div><div class="help-item"><strong>iPhoneには何が表示されますか？</strong><p>iPhoneには最新結果と履歴、手動入力の試合、セット・タイブレークのスコア、任意の背景情報、確認できるハイライトを表示します。Watchの記録にはポイント、サーブ、リターン、ブレークポイント、試合展開、ワークアウトの集計も含められます。</p></div><div class="help-item"><strong>試合履歴はどのように同期されますか？</strong><p>Companionには独立した2つの同期経路があります。Watch Connectivityは、ペアリングしたApple WatchとiPhoneの間で保存済みの試合を直接転送できます。両方のデバイスが利用できる場合は、通常これが最も速いローカル経路です。一方、CloudKitは、同じApple Accountを使用するStandaloneとCompanionの間で、iCloudによる確実な同期と復元を行います。一方の完了を待たずにもう一方を利用でき、同じ試合が両方から届いた場合も、最新の1件だけが保持されます。</p></div><div class="help-item"><strong>iPhoneに試合が表示されない場合は？</strong><p>正しいApple Watchがペアリングされていることを確認し、両方のデバイスを近くに置いて、Apple WatchとiPhoneでTennis Score Wizardを開いてください。両方のデバイスで目的のApple Accountを使用していることを確認し、「履歴」のiCloud状態も確認します。保存済みの試合は待機中もローカルで保護され、デバイス間の接続またはiCloudが利用できると同期できます。</p></div><div class="help-item"><strong>ワークアウトの詳細も同期されますか？</strong><p>ワークアウトデータを利用できる場合、Companionは試合時間、平均心拍数、最大心拍数、アクティブエネルギーを保存済みの試合と一緒に両方のデバイスで表示できます。</p></div><div class="help-item"><strong>試合履歴を削除するとどうなりますか？</strong><p>Companionで個別の試合または履歴全体を削除すると、iPhoneとApple Watchの間、および利用可能な場合はiCloudを通じて変更が同期されます。履歴全体を削除する前に確認画面が表示されます。</p></div><div class="help-item"><strong>iPhoneであとから割り当てた対戦相手はWatchの履歴にも表示されますか？</strong><p>はい。Companionは更新内容をペアリング中のApple Watchへ直接送信できます。同じApple Accountを使用していれば、StandaloneにもプライベートiCloud同期で反映されます。</p></div></div></section>
 <section id="icloud-sync"><h2>iCloudでの同期と復元</h2><p class="section-subtitle">Tennis Score Wizardアカウントを作成せずに、StandaloneとCompanionの間で保存済みの試合を同期します。</p><div class="help"><div class="help-item"><strong>iCloud同期には何が必要ですか？</strong><p>Apple Watchと、Companionの場合はiPhoneで同じApple Accountを使用してください。iCloud Driveを有効にし、インターネットに接続して、最初の同期が終わるまで待ちます。iCloudが利用できない間もスコアは記録できます。</p></div><div class="help-item"><strong>StandaloneとCompanionで試合を共有できますか？</strong><p>はい。両バージョンは、保存済みの試合に同じiCloudストレージを使用します。同じApple Accountなら、Standaloneで保存した試合がCompanionに表示され、その逆も可能です。</p></div><div class="help-item"><strong>同期が完了したことはどこで分かりますか？</strong><p>「履歴」を開き、iCloudの行を確認します。<b>Synced</b>は最新の同期が成功し、日時が表示されている状態です。<b>Syncing</b>は同期中です。<b>Waiting</b>と<b>Saving</b>は、端末内の変更が安全にiCloudへの送信待ちになっていることを示します。<b>Sync paused</b>と<b>Retry</b>は、直前の同期を完了できなかった状態です。行をタップすると再試行できます。</p></div><div class="help-item"><strong>Apple Accountを変更するとどうなりますか？</strong><p>CloudKitの試合履歴はApple Accountごとに非公開で管理されます。異なるアカウントの履歴が混ざることはありません。アカウントの変更を検出すると、現在のApple Accountに対応する端末内とiCloudの履歴が表示されます。以前のアカウントに戻ると、同期後にそのアカウントの履歴が再び表示されます。以前のアカウントの端末内キャッシュをこのデバイスから削除する前に、同期を待っている試合は、そのアカウント専用の暗号化された復旧用コピーに保持されます。新しいアカウントへアップロードされることはなく、アカウントを変更しても、どちらのアカウントのiCloudに保存済みのレコードも削除されません。</p></div><div class="help-item"><strong>再インストール後に試合は復元されますか？</strong><p>アプリを削除する前に正常に同期されていれば復元できます。先に「履歴」に<b>Synced</b>と表示されていることを確認してください。再インストール後は同じApple Accountを使用し、iCloud Driveを有効にしたままアプリを開いて、ダウンロードを待ちます。</p></div><div class="help-item"><strong>アプリを削除するとiCloudの履歴も消えますか？</strong><p>いいえ。アプリを削除しただけでは、すでにiCloudと同期された試合レコードは削除されません。再インストール後に再度ダウンロードできます。Tennis Score Wizard内で試合を削除した場合は、iCloudが利用可能になると削除も同期されます。</p></div><div class="help-item"><strong>開発者は同期した試合を見ることができますか？</strong><p>いいえ。CloudKitは同期済みのレコードをApple Accountの非公開データベースに保存します。Appleは、デフォルトではそのユーザーだけが非公開データベースにアクセスできるようにしています。</p></div></div></section>
 <section id="health-workouts">
 <h2>ヘルスケアとワークアウト</h2>
@@ -1420,10 +1466,8 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </section>
 <section id="match-history">
 <h2>試合履歴</h2>
-<p class="section-subtitle">
-    完了した試合と中止した試合を、簡潔なテニス表記で確認できます。
-  </p>
-<div class="help">
+<p class="section-subtitle">履歴を年・月、シングルス・ダブルスで絞り込めます。古い記録は閲覧に合わせて読み込まれ、保存済みの全履歴を引き続き利用できます。</p>
+<div class="help"><div class="help-item"><strong>Watchで以前の試合を探すには？</strong><p>HistoryでPeriodをタップし、年を選んでから月またはEntire year（年間すべて）を選びます。保存済みの試合がある年・月だけが表示されます。All datesで期間を解除し、All、1v1、2v2で試合形式を絞り込めます。CompanionとStandaloneの両方で利用できます。</p></div><div class="help-item"><strong>履歴は50試合までですか？</strong><p>いいえ。最初に条件に合う50件を表示し、閲覧に合わせて古い試合を50件ずつ追加で読み込みます。Load older matchesも利用できます。集計は最初のページだけでなく、条件に合う全記録が対象です。期間メニューは保存済みの全履歴に基づき、古い試合が削除されることはありません。</p></div>
 <div class="help-item">
 <strong>WinとLoss は何ですか？</strong>
 <p>Win は完了した試合にセットで勝ったことを意味します。Loss は相手が完了した試合にセットで勝ったことを意味します。</p>
@@ -1432,25 +1476,25 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <strong>Stopped は何ですか？</strong>
 <p>試合が通常の終了前に保存されたことを示します。中止時点までに記録された実際の試合状況は保持されます。中断時にリードしていた側がある場合、その結果は対戦成績、勝率、連勝・連敗記録に含まれます。同点なら中立です。</p>
 </div>
-<div class="help-item"><strong>S1〜S5とは？</strong><p>S1〜S5は第1セットから第5セットを表します。試合に応じて2〜5列のセット結果が表示されます。たとえばS1 6–3は、第1セットが6–3で終わったことを示します。</p></div>
+<div class="help-item"><strong>S1〜S5とは？</strong><p>S1〜S5は第1〜第5セットです。試合に応じて、終了・打ち切りの結果に通常のセットを1〜5つ表示します。S1 <span class="score-nowrap">6–3</span>なら、第1セットが6ゲーム対3で終了したことを表します。</p></div>
 <div class="help-item">
-<strong>TB 7–3 は何ですか？</strong>
-<p>TBはセット内のタイブレーク得点です。たとえば「7–6 · TB 7–3」はセットが7–6で終了し、タイブレークが7–3だったことを示します。</p>
-</div><div class="help-item"><strong>7–6<sup>(6)</sup>は何を意味しますか？</strong><p>かっこ内の小さな数字は、タイブレークを失った選手のポイントです。7–6<sup>(6)</sup>はタイブレークが8–6で終わったことを意味します。試合の詳細には、引き続き完全なタイブレークスコアが表示されます。</p></div>
+<strong>TB <span class="score-nowrap">7–3</span> は何ですか？</strong>
+<p>TBはセット内のタイブレーク得点です。たとえば「<span class="score-nowrap">7–6</span> · TB <span class="score-nowrap">7–3</span>」はセットが<span class="score-nowrap">7–6</span>で終了し、タイブレークが<span class="score-nowrap">7–3</span>だったことを示します。</p>
+</div><div class="help-item"><strong><span class="score-nowrap">7–6</span><sup>(6)</sup>は何を意味しますか？</strong><p>コンパクト表示の小さな括弧内の数値は、タイブレークを落とした選手のポイントです。<span class="score-nowrap">7–6</span><sup>(6)</sup>ならタイブレークは<span class="score-nowrap">8–6</span>で勝利。記録があれば、セット別表に両者のポイントを表示できます。</p></div>
 <div class="help-item">
 <strong>中断試合はどう評価されますか？</strong>
-<p>アプリは完了したセット数、保存されたゲーム数、利用可能なタイブレークポイントの順に比較します。一方がリードしていれば、試合は「中止」のまま、統計上は勝ちまたは負けとして数えられます。同点なら結果は中立です。</p>
+<p>まず終了済みのセットを比較し、同数なら進行中の未完了セットのゲーム数、続いて記録済みのタイブレークまたはゲームのポイントを比較します。過去のセットのゲーム数を合計してリードを決めることはありません。セット間で打ち切り、獲得セットが同数なら引き分けです。明確なリードは統計上の勝敗として数えますが、打ち切りの表示は残ります。</p>
 </div>
 <div class="help-item">
 <strong>未完了セットはどうなりますか？</strong>
-<p>試合停止時に進行中のセットがある場合、その途中経過も保存されます。たとえば「S3 0–1」のように実際の状況を保持します。</p>
+<p>試合停止時に進行中のセットがある場合、その途中経過も保存されます。たとえば「S3 <span class="score-nowrap">0–1</span>」のように実際の状況を保持します。</p>
 </div>
-<div class="help-item"><strong>試合にはどの情報が保存されますか？</strong><p>履歴には試合形式、結果、セットとタイブレークのスコア、ポイント、所要時間、開始・終了時刻、対戦相手、統計、利用可能なワークアウトデータが保存されます。</p></div>
+<div class="help-item"><strong>試合にはどの情報が保存されますか？</strong><p>試合には形式、結果、セット・タイブレークスコア、時刻、相手の割り当てを保存できます。手動入力は明示されます。iPhoneではコート条件、場所、個人メモも追加可能。ポイント統計とワークアウトは実記録がある場合のみ表示し、手動スコアから再現しません。</p></div>
 <div class="help-item">
 <strong>保存した試合を削除できますか？</strong>
 <p>はい。試合履歴の削除操作を選び、確認してください。削除すると、その履歴項目はアプリから取り除かれます。</p>
 </div>
-<div class="help-item"><strong>カスタム形式は履歴にどう表示されますか？</strong><p>形式名に加え、勝利に必要なゲーム数、必要なゲーム差、タイブレークの開始スコアと目標ポイントが表示されます。試合の詳細画面では設定全体を確認できます。</p></div><div class="help-item"><strong>共有結果ではタイブレークをどう表示しますか？</strong><p>セットのタイブレークは、主スコアの大きさや間隔を変えない小さな上付き表示になります。決着用Match Tie‑Breakは[10–7]のように角括弧で別に表示されます。</p></div></div>
+<div class="help-item"><strong>カスタム形式は履歴にどう表示されますか？</strong><p>タイブレークのポイントはゲーム数の横に表示します。ゲーム数が2桁ならセルを広げ、数字の重なりを防ぎます。決着のマッチタイブレークは[<span class="score-nowrap">10–7</span>]のように別の角括弧で表示。共有テキストにも全結果を含めます。</p></div><div class="help-item"><strong>共有結果ではタイブレークをどう表示しますか？</strong><p>セットのタイブレークは、主スコアの大きさや間隔を変えない小さな上付き表示になります。決着用Match Tie‑Breakは[<span class="score-nowrap">10–7</span>]のように角括弧で別に表示されます。</p></div></div>
 </section>
 <section id="support-development"><h2>任意の開発サポート</h2><p class="section-subtitle">1回限りのサポートは今後の開発に役立ちますが、機能の解除やアプリ内容の変更はありません。</p><div class="help"><div class="help-item"><strong>チップで機能が使えるようになりますか？</strong><p>いいえ。Appleのチップも暗号資産によるサポートも任意です。サポートの有無にかかわらず、購入した製品の全機能を利用できます。</p></div><div class="help-item"><strong>Appleのチップはどのように支払いますか？</strong><p>「情報」→「開発をサポート」で1回限りの金額を選び、Appleの購入画面で確定します。App Storeアカウントに登録した支払い方法でAppleが処理します。</p></div><div class="help-item"><strong>暗号資産でサポートする前に確認することは？</strong><p>ウォレットで通貨、ネットワーク、送金先アドレス全体を確認してください。ブロックチェーン送金は通常取り消せません。試合、ライバル記録、ワークアウト、ヘルスケアのデータが取引に付加されることはありません。</p></div></div></section><section id="complications-help">
 <h2>Apple Watch文字盤コンプリケーション</h2>

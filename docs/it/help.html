@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Centro assistenza — Tennis Score Wizard</title>
-<meta content="Assistenza per One Set, Short Sets ufficiali, No‑Ad, Custom Set, punteggio su Apple Watch, sincronizzazione iCloud, statistiche e allenamenti." name="description"/>
+<meta content="Aggiunga e modifichi le partite giocate su iPhone, filtri la cronologia Apple Watch per anno e mese, conservi i dettagli del campo e condivida i momenti salienti." name="description"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/it/help.html" rel="canonical"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="en" rel="alternate"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html" hreflang="de" rel="alternate"/>
@@ -22,13 +22,13 @@
 <meta content="website" property="og:type"/>
 <meta content="Tennis Score Wizard" property="og:site_name"/>
 <meta content="Centro assistenza — Tennis Score Wizard" property="og:title"/>
-<meta content="Assistenza per One Set, Short Sets ufficiali, No‑Ad, Custom Set, punteggio su Apple Watch, sincronizzazione iCloud, statistiche e allenamenti." property="og:description"/>
+<meta content="Aggiunga e modifichi le partite giocate su iPhone, filtri la cronologia Apple Watch per anno e mese, conservi i dettagli del campo e condivida i momenti salienti." property="og:description"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/it/help.html" property="og:url"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
 <meta content="Icona dell’app Tennis Score Wizard" property="og:image:alt"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="Centro assistenza — Tennis Score Wizard" name="twitter:title"/>
-<meta content="Assistenza per One Set, Short Sets ufficiali, No‑Ad, Custom Set, punteggio su Apple Watch, sincronizzazione iCloud, statistiche e allenamenti." name="twitter:description"/>
+<meta content="Aggiunga e modifichi le partite giocate su iPhone, filtri la cronologia Apple Watch per anno e mese, conservi i dettagli del campo e condivida i momenti salienti." name="twitter:description"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
 <style>
     :root {
@@ -1186,6 +1186,8 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 }
 </style>
 <link href="../release-1-1.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../release-1-6-en.css?v=20260911-i18n">
+<script defer src="../navigation-en.js?v=20260911-i18n"></script>
 </head>
 <body>
 <main class="page">
@@ -1198,7 +1200,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="nav-links">
 <a href="index.html#versions">Versioni</a>
-<a href="index.html#comparison">Confronta</a>
+<a href="index.html#comparison">Confronti</a>
 <a href="index.html#stats-guide">Guida alle statistiche</a>
 <a href="whats-new.html">Aggiornamenti</a>
 <a aria-current="page" href="help.html">Aiuto</a>
@@ -1224,25 +1226,23 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="hero-copy">
 <p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Pagina iniziale" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
 <h1>Centro assistenza</h1>
-<p>
-      Scopri come configurare e segnare le partite, sincronizzare le partite salvate tramite iCloud, collegare Companion a iPhone, comprendere le statistiche, registrare gli allenamenti nell’app Salute, usare le complicazioni dei quadranti e risolvere i problemi più comuni.
-    </p>
+<p>Segni su Apple Watch o aggiunga partite in Companion su iPhone. Aiuto su campo, note, momenti salienti, condivisione, rivalità, formati, allenamenti e iCloud.</p>
 </div>
 </section>
 <section id="getting-started">
 <h2>Per iniziare</h2>
 <p class="section-subtitle">
-    Tutto ciò che serve per preparare Tennis Score Wizard e iniziare a segnare la tua prima partita.
+    Tutto ciò che serve per preparare Tennis Score Wizard e iniziare a segnare la sua prima partita.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Cosa serve per usare Tennis Score Wizard?</strong>
-<p>Serve un Apple Watch compatibile con Tennis Score Wizard installato. L’accesso ai dati di Salute è facoltativo ed è necessario solo per registrare la partita come allenamento e raccogliere i dati disponibili.</p>
+<p>Il punteggio in diretta richiede Apple Watch compatibile con Tennis Score Wizard. Companion su iPhone permette anche di aggiungere partite già giocate. L’accesso a Salute è facoltativo e serve solo per registrare allenamenti e misurazioni disponibili.</p>
 </div>
-<div class="help-item"><strong>Come inizio la mia prima partita?</strong><p>Apri l’app, scegli Singolare o Doppio, quindi One Set, al meglio dei 3 o al meglio dei 5. Seleziona le regole del set e del game, il primo giocatore al servizio, attiva eventualmente “Registra allenamento” e avvia la partita.</p></div>
+<div class="help-item"><strong>Come inizio la mia prima partita?</strong><p>Apra l’app su Apple Watch, scelga singolare o doppio e un set, al meglio dei tre o dei cinque. Imposti regole di set e giochi, primo battitore, eventuale registrazione allenamento e inizi.</p></div>
 <div class="help-item">
 <strong>L’app ricorda la configurazione?</strong>
-<p>L’app ricorda la configurazione della partita precedente, così la volta successiva puoi prepararne una simile più rapidamente. Prima di iniziare puoi comunque modificare qualsiasi opzione.</p>
+<p>L’app ricorda la configurazione della partita precedente, così la volta successiva può prepararne una simile più rapidamente. Prima di iniziare può comunque modificare qualsiasi opzione.</p>
 </div>
 <div class="help-item">
 <strong>Posso segnare una partita senza accesso a Salute?</strong>
@@ -1250,28 +1250,72 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
+<section id="manual-matches">
+<h2>Aggiungere e modificare partite giocate</h2>
+<p class="section-subtitle">Companion su iPhone · Salvi il risultato che conosce accanto alla cronologia di Watch.</p>
+<div class="help"><div class="help-item"><strong>Posso modificare una partita inserita manualmente?</strong><p>Sì. Apra i dettagli della partita e tocchi Edit match. Può correggere data, orario, durata, regole, punteggi dei set, punti dei tie-break e stato di conclusione. Save aggiorna la registrazione esistente senza duplicarla; Cancel annulla le modifiche. Singolo/doppio e giocatori non cambiano in questo modulo. Usi i controlli dedicati per assegnare l’avversario e modificare i dettagli del campo.</p></div><div class="help-item"><strong>Le correzioni si sincronizzano con Apple Watch?</strong><p>Sì. Aggiornano la stessa partita sull’orologio Companion abbinato e possono raggiungere Standalone tramite iCloud privato con lo stesso Apple Account. Tenga aggiornate le app e attenda la sincronizzazione. Le statistiche pertinenti e i momenti salienti basati sulla cronologia usano il risultato corretto. La partita resta contrassegnata come manuale: i dati mancanti su punti e allenamento non vengono inventati.</p></div>
+<div class="help-item"><strong>Come aggiungo una partita giocata?</strong><p>Nella scheda delle partite tocchi l’aggiunta di una partita giocata. Scelga singolare o doppio, inserisca facoltativamente un nome o selezioni un giocatore salvato per il singolare. Scelga il formato, inserisca i punteggi dei set e salvi quando ha finito.</p></div>
+<div class="help-item"><strong>Posso salvare una partita interrotta o in parità?</strong><p>Sì. Scelga interrotta se il gioco è finito prima di avere un vincitore secondo il formato scelto. Inserisca il punteggio raggiunto, compreso l’eventuale set incompleto. È ammessa anche la parità. Scelga conclusa solo se il punteggio determina il vincitore previsto dalle regole.</p></div>
+<div class="help-item"><strong>Come inserisco un tie-break di set?</strong><p>Inserisca prima i giochi. Quando il punteggio indica un tie-break secondo le regole scelte, per esempio <span class="score-nowrap">7–6</span>, compaiono i campi per i punti di entrambi. Li compili entrambi se li conosce o li lasci entrambi vuoti. Nel match tie-break decisivo si inseriscono direttamente i punti, non i giochi, come spiegato sotto.</p></div>
+<div class="help-item"><strong>Come inserisco un match tie-break?</strong><p>Per il tie-break decisivo al meglio dei tre o cinque set, attivi il match tie-break nel set decisivo, scelga 7 o 10 punti e inserisca i punti nella riga decisiva: per esempio <span class="score-nowrap">10–8</span>, non <span class="score-nowrap">1–0</span> in giochi. Se tutta la partita era un match tie-break, scelga Match Tie-break come regola del set. Per completarlo servono due punti di vantaggio.</p></div>
+<div class="help-item"><strong>E se la partita si interrompe durante il tie-break del set?</strong><p>Scelga interrotta e indichi il pareggio in giochi da cui è iniziato il tie-break, per esempio <span class="score-nowrap">6–6</span>. Compaiono i campi dei punti raggiunti all’interruzione. Inserisca entrambi i valori se noti, altrimenti lasci entrambi vuoti. L’app non indovina i punti mancanti.</p></div>
+<div class="help-item"><strong>E se ricordo l’inizio ma non la durata?</strong><p>Scelga inizio e fine e indichi entrambe le date e gli orari: la durata si calcola automaticamente. Se la partita è terminata dopo mezzanotte, imposti la fine al giorno successivo. In alternativa scelga fine e durata in minuti. Se non ricorda quanto è durata la partita, lasci vuota la durata. Se indicata, deve essere da un minuto a 24 ore.</p></div>
+<div class="help-item"><strong>Perché non posso scegliere un orario futuro?</strong><p>Il modulo registra una partita già giocata, non una programmata. La fine non può essere nel futuro. In modalità inizio e fine, l’inizio deve precedere la fine.</p></div>
+<div class="help-item"><strong>Come passo da un campo del punteggio all’altro?</strong><p>Tocchi direttamente una casella oppure usi Indietro e Avanti sopra la tastiera. Il cursore non salta dopo una cifra, così può inserire numeri a due cifre. Fine chiude la tastiera; anche toccare fuori dal campo o scorrere la nasconde.</p></div>
+<div class="help-item"><strong>Quali statistiche aggiunge una partita manuale?</strong><p>Risultato, set, giochi, tie-break inseriti e durata facoltativa possono contribuire alla cronologia e ai riepiloghi pertinenti. Non vengono ricostruiti punti, servizio, risposta, palle break o allenamenti. La partita è indicata come manuale e le schede senza dati sono nascoste.</p></div>
+<div class="help-item"><strong>La partita apparirà su Apple Watch?</strong><p>Sì. Le partite manuali possono sincronizzarsi con il Watch abbinato di Companion e con Standalone tramite iCloud privato con lo stesso Apple Account. Entrambe le app mantengono l’indicazione manuale e nascondono i dati mancanti. Aggiorni entrambi i prodotti e attenda la sincronizzazione.</p></div>
+<div class="help-item"><strong>Posso modificare su iPhone un punteggio registrato con Watch?</strong><p>No. Aggiungere una partita giocata è diverso dal modificare una registrazione Watch. Può cambiare l’avversario associato e il contesto facoltativo senza modificare punteggio o statistiche.</p></div>
+</div>
+</section>
+<div aria-label="Esempi di partita manuale e contesto del campo" class="release-proof-pair">
+<figure><a href="../assets/release-1-6-en/manual-edit-details.png" target="_blank" rel="noopener"><img src="../assets/release-1-6-en/manual-edit-details.png" alt="Partite manuali · iPhone — Edit match" width="1320" height="2868" loading="lazy" decoding="async"></a><figcaption>Aggiungere e modificare le partite. Edit match.</figcaption></figure>
+<figure><a href="../assets/release-1-6-en/court-conditions.png" rel="noopener" target="_blank"><img alt="Editor del contesto con terra battuta e all’aperto selezionati" height="2868" loading="lazy" src="../assets/release-1-6-en/court-conditions.png" width="1320"/></a><figcaption>Superficie e ambiente sono facoltativi. Schermate originali in inglese con dati di esempio.</figcaption></figure>
+</div>
+<section id="match-context">
+<h2>Ricordi il campo e la partita</h2>
+<p class="section-subtitle">Tutto facoltativo. Aggiunga il contesto durante l’inserimento o in seguito nei dettagli su iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>Cosa posso aggiungere?</strong><p>Superficie, gioco al coperto o all’aperto, luogo o circolo, nome o numero del campo e una nota privata specifica della partita. Può completare anche vecchie partite registrate con Apple Watch.</p></div>
+<div class="help-item"><strong>Servono Mappe o accesso alla posizione?</strong><p>No. Luogo e campo si scrivono a mano. La funzione non cerca campi sulla mappa né registra la posizione GPS.</p></div>
+<div class="help-item"><strong>Posso riutilizzare un campo?</strong><p>Sì, dai campi recenti e preferiti. I preferiti sono salvati su questo iPhone, separati per Apple Account. Scegliere un campo compila luogo e condizioni, ma non sostituisce la nota della partita attuale. L’elenco dei preferiti non si sincronizza tramite iCloud.</p></div>
+<div class="help-item"><strong>Cosa viene sincronizzato?</strong><p>Dettagli del campo e note viaggiano con il risultato tramite dispositivi abbinati e iCloud privato. Punteggio e statistiche originali restano invariati. Il contesto si aggiunge, visualizza e modifica su iPhone; Watch lo conserva per il sync ma non ha un editor.</p></div>
+<div class="help-item"><strong>Cosa appare nella scheda condivisa?</strong><p>Le condizioni del campo e il luogo inseriti. Le note private di partita e rivalità sono escluse. Controlli l’anteprima, soprattutto se non desidera rivelare dove ha giocato.</p></div>
+<div class="help-item"><strong>Il contesto del campo crea traguardi statistici?</strong><p>No. Superficie, ambiente, luogo e note descrivono dove e come ha giocato. Non modificano i momenti salienti né creano record specifici del campo o della superficie.</p></div>
+</div>
+</section>
+<section id="match-highlights">
+<h2>Momenti salienti e condivisione</h2>
+<div class="help">
+<div class="help-item"><strong>Quanti momenti salienti posso vedere?</strong><p>Ci sono 26 tipi di eventi, non 26 schede garantite a partita. I dettagli su iPhone mostrano tutti quelli pertinenti e confermati dai dati. L’immagine condivisa ne include fino a sei, privilegiando i più significativi. Se non ce ne sono, la sezione non appare.</p></div>
+<div class="help-item"><strong>Quali momenti possono comparire?</strong><p>Rimonte, set decisivi o match tie-break, tie-break combattuti, risultati senza perdere set, serie, traguardi di vittorie, record e andamenti al servizio o in risposta. Alcuni richiedono statistiche dei punti, altri sono confermati da set e cronologia.</p></div>
+<div class="help-item"><strong>Record e traguardi sono risultati permanenti di tutta la carriera?</strong><p>No. Descrivono la cronologia registrata nell’app. Aggiungere un vecchio risultato, eliminare una partita o cambiarne l’avversario può modificare confronti e momenti di rivalità. Le partite successive non sono usate come precedenti di un vecchio risultato. I traguardi di vittorie si basano sulle vittorie concluse che rientrano nel conteggio.</p></div>
+<div class="help-item"><strong>Perché una serie in Stats può differire da un momento saliente?</strong><p>Stats e rivalità possono contare partite interrotte con un leader chiaro come risultati decisi. I momenti sulle serie e i traguardi usano vittorie concluse: una partita incompleta non vale per quel risultato. Ogni calcolo usa la cronologia disponibile per il proprio confronto.</p></div>
+<div class="help-item"><strong>I momenti salienti appaiono su Apple Watch?</strong><p>No. Sono nei dettagli di Companion su iPhone e nelle immagini condivise. La cronologia Watch conserva risultato e statistiche disponibili, senza una sezione dedicata.</p></div>
+<div class="help-item"><strong>Perché una partita manuale ha meno momenti salienti?</strong><p>Il risultato finale non dimostra come si è giocato ogni punto. Le partite manuali mostrano eventi confermati da punteggio o cronologia, senza inventare dati di servizio, risposta, palle break o allenamento.</p></div>
+</div>
+</section>
 <section id="match-setup">
 <h2>Configurare una partita</h2>
 <p class="section-subtitle">
-    Scegli il formato e le regole adatti alla partita che stai giocando.
+    Scelga il formato e le regole adatti alla partita che sta giocando.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Qual è la differenza tra Singolare e Doppio?</strong>
-<p>Scegli Singolare per un giocatore per parte e Doppio per due giocatori per parte. Il formato selezionato viene salvato con la partita e usato anche quando registri un allenamento.</p>
+<p>Scelga Singolare per un giocatore per parte e Doppio per due giocatori per parte. Il formato selezionato viene salvato con la partita e usato anche quando registra un allenamento.</p>
 </div>
 <div class="help-item">
 <strong>Cosa significano al meglio dei 3 e dei 5 set?</strong>
 <p>Al meglio dei 3 significa che vince la partita chi conquista per primo due set. Al meglio dei 5 significa che vince chi conquista per primo tre set.</p>
 </div><div class="help-item"><strong>Cosa significa One Set?</strong><p>Il set selezionato è l’intero match. La regola del set stabilisce comunque obiettivo di game e tie‑break.</p></div>
-<div class="help-item"><strong>Come funzionano le regole del set?</strong><p>Scegli la regola corrispondente al formato. I set tradizionali si giocano a sei game, gli Short Sets ufficiali a quattro, mentre Custom Set permette di definire ogni parametro. L’app applica automaticamente l’intera configurazione.</p></div><div class="help-item"><strong>Come funzionano gli Short Sets ufficiali?</strong><p>Vince il set chi conquista per primo quattro game. Scegli se il tie‑break inizia sul 3–3 o sul 4–4 e se si gioca a 7 punti con due punti di scarto oppure con punto decisivo sul 4–4.</p></div><div class="help-item"><strong>Cosa cambia No‑Ad?</strong><p>Solo la regola del game: sulla parità decide il punto successivo. Si combina con ogni formato di set disponibile.</p></div><div class="help-item"><strong>Come funziona Custom Set?</strong><p>Obiettivo di game — anche otto —, scarto richiesto, inizio e obiettivo del tie‑break vengono salvati insieme.</p></div><div class="help-item"><strong>Queste impostazioni possono entrare in conflitto?</strong><p>No. La durata decide quanti set servono, la regola del set come termina, Standard o No‑Ad come si gestisce la parità e il Match Tie‑Break opzionale sostituisce solo l’ultimo set decisivo.</p></div>
+<div class="help-item"><strong>Come funzionano le regole del set?</strong><p>Scelga la regola corrispondente al formato. I set tradizionali si giocano a sei game, gli Short Sets ufficiali a quattro, mentre Custom Set permette di definire ogni parametro. L’app applica automaticamente l’intera configurazione.</p></div><div class="help-item"><strong>Come funzionano gli Short Sets ufficiali?</strong><p>Vince il set chi conquista per primo quattro game. Scelga se il tie‑break inizia sul <span class="score-nowrap">3–3</span> o sul <span class="score-nowrap">4–4</span> e se si gioca a 7 punti con due punti di scarto oppure con punto decisivo sul <span class="score-nowrap">4–4</span>.</p></div><div class="help-item"><strong>Cosa cambia No‑Ad?</strong><p>Solo la regola del game: sulla parità decide il punto successivo. Si combina con ogni formato di set disponibile.</p></div><div class="help-item"><strong>Come funziona Custom Set?</strong><p>Custom Set consente di scegliere obiettivo di giochi, margine di vittoria, se e quando iniziare un tie-break e il relativo obiettivo e margine di punti. Può per esempio giocare a otto giochi. Il riepilogo riunisce le regole per verificare il formato.</p></div><div class="help-item"><strong>Queste impostazioni possono entrare in conflitto?</strong><p>No. La durata decide quanti set servono, la regola del set come termina, Standard o No‑Ad come si gestisce la parità e il Match Tie‑Break opzionale sostituisce solo l’ultimo set decisivo.</p></div>
 <div class="help-item">
 <strong>Come scelgo chi serve per primo?</strong>
-<p>Durante la configurazione puoi scegliere manualmente chi serve per primo oppure usare il lancio della moneta integrato per una scelta casuale.</p>
+<p>Durante la configurazione può scegliere manualmente chi serve per primo oppure usare il lancio della moneta integrato per una scelta casuale.</p>
 </div>
 <div class="help-item">
 <strong>A cosa serve il lancio della moneta?</strong>
-<p>Il lancio della moneta sceglie casualmente l’esito iniziale e aiuta a decidere chi serve per primo. Puoi confermare la configurazione risultante prima di iniziare la partita.</p>
+<p>Il lancio della moneta sceglie casualmente l’esito iniziale e aiuta a decidere chi serve per primo. Può confermare la configurazione risultante prima di iniziare la partita.</p>
 </div>
 <div class="help-item">
 <strong>A cosa serve Registra allenamento?</strong>
@@ -1282,31 +1326,31 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <section id="scoring">
 <h2>Tenere il punteggio</h2>
 <p class="section-subtitle">
-    Registra ogni punto mentre l’app gestisce automaticamente il punteggio del tennis.
+    Registri ogni punto mentre l’app gestisce automaticamente il punteggio del tennis.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Come registro un punto?</strong>
-<p>Usa i controlli del punteggio per indicare se il punto è stato vinto da te o dall’avversario. Il punteggio si aggiorna subito dopo ogni selezione.</p>
+<p>Usi i controlli del punteggio per indicare se il punto è stato vinto da Lei o dall’avversario. Il punteggio si aggiorna subito dopo ogni selezione.</p>
 </div>
 <div class="help-item">
 <strong>L’app calcola automaticamente game e set?</strong>
 <p>Sì. Tennis Score Wizard gestisce automaticamente punti, game, set, parità, vantaggio e tie‑break in base alle regole selezionate.</p>
 </div>
-<div class="help-item"><strong>Come vengono gestiti parità e vantaggio?</strong><p>Con Standard Game, sul 40–40 si entra in parità: un giocatore deve ottenere il vantaggio e poi vincere il punto successivo. Con No‑Ad, il punto successivo decide direttamente il game.</p></div>
+<div class="help-item"><strong>Come vengono gestiti parità e vantaggio?</strong><p>Con Standard Game, sul <span class="score-nowrap">40–40</span> si entra in parità: un giocatore deve ottenere il vantaggio e poi vincere il punto successivo. Con No‑Ad, il punto successivo decide direttamente il game.</p></div>
 <div class="help-item">
 <strong>Come funziona il punteggio del tie‑break?</strong>
 <p>Quando la regola selezionata richiede un tie‑break, l’app passa dai normali punti del tennis ai punti numerici del tie‑break e determina il vincitore in base alla regola configurata.</p>
 </div>
-<div class="help-item"><strong>Che cos’è un Match Tie‑Break e come si avvia?</strong><p>Sostituisce l’ultimo set decisivo. Sull’1–1 al meglio dei 3 o sul 2–2 al meglio dei 5, apri Menu prima del set decisivo, scegli Match Tie‑Break e poi 7 o 10 punti. Servono due punti di vantaggio. Funziona in singolare e doppio; il risultato viene salvato in cronologia, dettagli, statistiche e schede da condividere.</p></div>
-<div class="help-item"><strong>In cosa differisce da un tie‑break di set?</strong><p>Il tie‑break di set decide un singolo set, di solito sul 6–6, registrato come 7–6. Il Match Tie‑Break sostituisce l’intero set decisivo e appare separatamente, per esempio [10–7].</p></div>
+<div class="help-item"><strong>Che cos’è un Match Tie‑Break e come si avvia?</strong><p>Sostituisce l’ultimo set decisivo. Sull’<span class="score-nowrap">1–1</span> al meglio dei 3 o sul <span class="score-nowrap">2–2</span> al meglio dei 5, apra Menu prima del set decisivo, scelga Match Tie‑Break e poi 7 o 10 punti. Servono due punti di vantaggio. Funziona in singolare e doppio; il risultato viene salvato in cronologia, dettagli, statistiche e schede da condividere.</p></div>
+<div class="help-item"><strong>In cosa differisce da un tie‑break di set?</strong><p>Il tie‑break di set decide un singolo set, di solito sul <span class="score-nowrap">6–6</span>, registrato come <span class="score-nowrap">7–6</span>. Il Match Tie‑Break sostituisce l’intero set decisivo e appare separatamente, per esempio [<span class="score-nowrap">10–7</span>].</p></div>
 <div class="help-item">
 <strong>Come funziona l’indicatore del servizio?</strong>
-<p>Quando servi, la pallina evidenzia il lato da cui devi battere. Quando serve l’avversario, mostra il suo lato di battuta dalla prospettiva dell’orologio.</p>
+<p>Quando serve, la pallina evidenzia il lato da cui deve battere. Quando serve l’avversario, mostra il suo lato di battuta dalla prospettiva dell’orologio.</p>
 </div>
 <div class="help-item">
 <strong>Come tiene traccia di chi serve?</strong>
-<p>L’app cambia automaticamente chi serve al termine dei game e nei punti del tie‑break. Se la partita reale e l’orologio non sono più allineati, puoi correggere manualmente chi serve dal menu della partita.</p>
+<p>L’app cambia automaticamente chi serve al termine dei game e nei punti del tie‑break. Se la partita reale e l’orologio non sono più allineati, può correggere manualmente chi serve dal menu della partita.</p>
 </div>
 <div class="help-item">
 <strong>Quando si cambia campo?</strong>
@@ -1317,7 +1361,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <section id="match-controls">
 <h2>Controlli della partita</h2>
 <p class="section-subtitle">
-    Correggi gli errori, gestisci la partita in corso e interrompi in sicurezza una sessione non conclusa.
+    Corregga gli errori, gestisca la partita in corso e interrompa in sicurezza una sessione non conclusa.
   </p>
 <div class="help">
 <div class="help-item">
@@ -1330,7 +1374,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Quando devo usare Cambia giocatore al servizio?</strong>
-<p>Usa Cambia giocatore al servizio quando l’indicazione nell’app non corrisponde alla partita reale. In questo modo correggi chi serve senza aggiungere o rimuovere punti.</p>
+<p>Usi Cambia giocatore al servizio quando l’indicazione nell’app non corrisponde alla partita reale. In questo modo corregge chi serve senza aggiungere o rimuovere punti.</p>
 </div>
 <div class="help-item">
 <strong>Cosa succede quando interrompo una partita?</strong>
@@ -1338,23 +1382,23 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Posso iniziare una nuova partita dopo averne conclusa o interrotta una?</strong>
-<p>Sì. Dopo aver concluso o interrotto la partita in corso, puoi tornare alla configurazione e iniziarne un’altra riutilizzando quella precedente.</p>
+<p>Sì. Dopo aver concluso o interrotto la partita in corso, può tornare alla configurazione e iniziarne un’altra riutilizzando quella precedente.</p>
 </div>
 <div class="help-item">
 <strong>Cosa devo fare se registro un punto per errore?</strong>
-<p>Usa Annulla appena possibile. Ripristina lo stato completo precedente al punto errato ed è più sicuro che cercare di compensare assegnando un altro punto.</p>
+<p>Usi Annulla appena possibile. Ripristini lo stato completo precedente al punto errato ed è più sicuro che cercare di compensare assegnando un altro punto.</p>
 </div>
 <div class="help-item"><strong>Cosa succede se interrompo una partita prima del primo punto?</strong><p>L’app salva solo i progressi realmente registrati. Non aggiunge punti, game, statistiche o dati di allenamento inventati a una partita vuota.</p></div></div>
 </section>
-<section id="rivalries"><h2>Avversari e Rivalità</h2><p class="section-subtitle">Scegli su Apple Watch un avversario salvato per il singolare e crea automaticamente un record Head‑to‑Head privato.</p><div class="help"><div class="help-item"><strong>Come creo un avversario?</strong><p>Apri Rivalità in Companion su iPhone. Inserisci lì il nome completo e un nome breve per il Watch. Il nome sul Watch è limitato a 16 caratteri per rimanere leggibile durante la configurazione e il punteggio live. Standalone su Apple Watch può poi scegliere gli avversari sincronizzati, ma non creare o modificare i profili.</p></div><div class="help-item"><strong>Come elimino un avversario?</strong><p>In Rivalità su iPhone, tieni premuta la scheda del giocatore, scegli «Elimina giocatore» e conferma. Le partite assegnate restano nella cronologia e non risultano più assegnate, così potrai associarle in seguito a un altro giocatore.</p></div><div class="help-item"><strong>Come scelgo un avversario su Apple Watch?</strong><p>Durante la configurazione scegli Singolare, apri Avversario e seleziona Ospite o un giocatore salvato. Ospite registra normalmente la partita senza aggiungerla a una Rivalità. Nel doppio non viene assegnato un singolo avversario alla partita a squadre.</p></div><div class="help-item"><strong>Cosa comprende l’Head‑to‑Head?</strong><p>Comprende le partite di singolare con risultato deciso assegnate al giocatore. Contano le partite completate e quelle interrotte con un giocatore chiaramente in vantaggio; una partita interrotta in parità resta neutra. Se registrati, sono visibili anche set, game, tie‑break, punti, servizio e risposta, palle break, tempo, allenamenti e incontri salvati.</p></div><div class="help-item"><strong>Cosa significa “Ultime 5 vs tutto il periodo”?</strong><p>Confronta la percentuale di vittorie negli ultimi cinque incontri decisi con quella dell’intero periodo selezionato. Se gli incontri sono meno di cinque, usa quelli disponibili. Il confronto segue il filtro Tutto il periodo, Quest’anno o Ultimi 30 giorni.</p></div><div class="help-item"><strong>Cos’è una vittoria dopo aver perso il primo set?</strong><p>È una partita decisa che hai vinto dopo aver perso il primo set completato. “2 su 5” indica due vittorie in cinque partite che erano iniziate con la perdita del primo set; non è un limite di tentativi.</p></div><div class="help-item"><strong>Cosa sono la serie attuale e la migliore serie di vittorie?</strong><p>La serie attuale è la sequenza più recente e ininterrotta di vittorie o sconfitte in partite decise. La migliore serie è la più lunga sequenza consecutiva di vittorie nel periodo scelto.</p></div><div class="help-item"><strong>Posso assegnare una vecchia partita a un giocatore?</strong><p>Sì. Apri il singolare salvato su iPhone, tocca “Assegna” nella sezione Avversario e scegli il giocatore. Puoi modificare o rimuovere l’assegnazione senza cambiare punteggio o statistiche. L’aggiornamento viene inviato alla cronologia Companion sull’Apple Watch abbinato e a Standalone tramite la sincronizzazione iCloud privata.</p></div><div class="help-item"><strong>Come vengono evitati i giocatori duplicati?</strong><p>Ogni giocatore ha un identificatore interno stabile. Alla creazione vengono confrontati anche il nome completo e il nome Watch normalizzati. La sincronizzazione usa l’identificatore e i dati di eliminazione per aggiornare lo stesso profilo anziché ricrearlo.</p></div><div class="help-item"><strong>Le note private vengono condivise?</strong><p>No. Restano nel profilo e non compaiono nel testo o nelle schede condivise. Le schede usano il filtro temporale attivo e mantengono l’ordine: record e incontri recenti, prestazione, infine schemi e contesto dell’allenamento.</p></div></div></section><section id="statistics">
+<section id="rivalries"><h2>Avversari e Rivalità</h2><p class="section-subtitle">Scelga su Apple Watch un avversario salvato per il singolare per creare automaticamente un record Head‑to‑Head privato.</p><div class="help"><div class="help-item"><strong>Come creo un avversario?</strong><p>Apra Rivalità in Companion su iPhone. Inserisca lì il nome completo e un nome breve per il Watch. Il nome sul Watch è limitato a 16 caratteri per rimanere leggibile durante la configurazione e il punteggio live. Standalone su Apple Watch può poi scegliere gli avversari sincronizzati, ma non creare o modificare i profili.</p></div><div class="help-item"><strong>Come elimino un avversario?</strong><p>In Rivalità su iPhone, tenga premuta la scheda del giocatore, scelga «Elimina giocatore» e confermi. Le partite assegnate restano nella cronologia e non risultano più assegnate, così potrà associarle in seguito a un altro giocatore.</p></div><div class="help-item"><strong>Come scelgo un avversario su Apple Watch?</strong><p>Durante la configurazione scelga Singolare, apra Avversario e selezioni Ospite o un giocatore salvato. Ospite registra normalmente la partita senza aggiungerla a una Rivalità. Nel doppio non viene assegnato un singolo avversario alla partita a squadre.</p></div><div class="help-item"><strong>Cosa comprende l’Head‑to‑Head?</strong><p>Comprende le partite di singolare con risultato deciso assegnate al giocatore. Contano le partite completate e quelle interrotte con un giocatore chiaramente in vantaggio; una partita interrotta in parità resta neutra. Se registrati, sono visibili anche set, game, tie‑break, punti, servizio e risposta, palle break, tempo, allenamenti e incontri salvati.</p></div><div class="help-item"><strong>Cosa significa “Ultime 5 vs tutto il periodo”?</strong><p>Confronti la percentuale di vittorie negli ultimi cinque incontri decisi con quella dell’intero periodo selezionato. Se gli incontri sono meno di cinque, usa quelli disponibili. Il confronto segue il filtro Tutto il periodo, Quest’anno o Ultimi 30 giorni.</p></div><div class="help-item"><strong>Cos’è una vittoria dopo aver perso il primo set?</strong><p>È una partita decisa che ha vinto dopo aver perso il primo set completato. “2 su 5” indica due vittorie in cinque partite che erano iniziate con la perdita del primo set; non è un limite di tentativi.</p></div><div class="help-item"><strong>Cosa sono la serie attuale e la migliore serie di vittorie?</strong><p>La serie attuale è la sequenza più recente e ininterrotta di vittorie o sconfitte in partite decise. La migliore serie è la più lunga sequenza consecutiva di vittorie nel periodo scelto.</p></div><div class="help-item"><strong>Posso assegnare una vecchia partita a un giocatore?</strong><p>Sì. Apra il singolare salvato su iPhone, tocchi “Assegna” nella sezione Avversario e scelga il giocatore. Può modificare o rimuovere l’assegnazione senza cambiare punteggio o statistiche. L’aggiornamento viene inviato alla cronologia Companion sull’Apple Watch abbinato e a Standalone tramite la sincronizzazione iCloud privata.</p></div><div class="help-item"><strong>Come vengono evitati i giocatori duplicati?</strong><p>Ogni giocatore ha un identificatore interno stabile. Alla creazione vengono confrontati anche il nome completo e il nome Watch normalizzati. La sincronizzazione usa l’identificatore e i dati di eliminazione per aggiornare lo stesso profilo anziché ricrearlo.</p></div><div class="help-item"><strong>Le note private vengono condivise?</strong><p>No. Restano nel profilo e non compaiono nel testo o nelle schede condivise. Le schede usano il filtro temporale attivo e mantengono l’ordine: record e incontri recenti, prestazione, infine schemi e contesto dell’allenamento.</p></div></div></section><section id="statistics">
 <h2>Comprendere le statistiche della partita</h2>
 <p class="section-subtitle">
-    Scopri cosa rappresentano i valori salvati della partita e come vengono calcolati.
+    Scopra cosa rappresentano i valori salvati della partita e come vengono calcolati.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Cosa sono i punti totali?</strong>
-<p>I punti totali indicano quanti punti sono stati registrati durante la partita. Il riepilogo distingue quelli vinti da te da quelli vinti dall’avversario.</p>
+<p>I punti totali indicano quanti punti sono stati registrati durante la partita. Il riepilogo distingue quelli vinti da Lei da quelli vinti dall’avversario.</p>
 </div>
 <div class="help-item">
 <strong>Cosa sono i Game registrati?</strong>
@@ -1362,7 +1406,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Cosa sono le statistiche delle palle break?</strong>
-<p>Mostrano le palle break affrontate e salvate sul tuo servizio, oltre alle occasioni e alle palle break convertite in risposta. I punti del tie‑break sono esclusi.</p>
+<p>Mostrano le palle break affrontate e salvate sul suo servizio, oltre alle occasioni e alle palle break convertite in risposta. I punti del tie‑break sono esclusi.</p>
 </div>
 <div class="help-item">
 <strong>Le statistiche vengono aggiornate automaticamente?</strong>
@@ -1381,16 +1425,16 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <section id="companion-sync">
 <h2>Sincronizzazione tra Companion e iPhone</h2>
 <p class="section-subtitle">
-    Segna i punti su Apple Watch, poi consulta su iPhone cronologia sincronizzata, risultati, statistiche e dati degli allenamenti.
+    Segni i punti su Apple Watch, poi consulti su iPhone cronologia sincronizzata, risultati, statistiche e dati degli allenamenti.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Dove configuro e segno le partite in Companion?</strong>
-<p>La configurazione e il punteggio in tempo reale restano su Apple Watch. Companion include l’app completa per Apple Watch e aggiunge una vista su iPhone per consultare le partite salvate dopo e tra una sessione e l’altra.</p>
+<p>Configurazione e conteggio in diretta restano su Apple Watch. Companion su iPhone consente risultati manuali, contesto, consultazione e condivisione dei momenti migliori. L’inserimento manuale non è un segnapunti in diretta su iPhone.</p>
 </div>
 <div class="help-item">
 <strong>Cosa viene mostrato su iPhone?</strong>
-<p>L’app per iPhone può mostrare l’ultimo risultato, la cronologia recente e completa, i punteggi di set e tie‑break, durata, punti, servizio, risposta, palle break, statistiche sull’andamento della partita e riepiloghi disponibili degli allenamenti.</p>
+<p>L’iPhone mostra ultimo risultato e cronologia, incluse partite manuali, set e tie-break, contesto facoltativo e momenti confermati. Le registrazioni Watch possono includere anche punti, servizio, risposta, palle break, andamento del match e riepiloghi di allenamento.</p>
 </div>
 <div class="help-item">
 <strong>Come si sincronizza la cronologia delle partite?</strong>
@@ -1398,7 +1442,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Cosa devo fare se una partita non compare su iPhone?</strong>
-<p>Verifica che sia abbinato l’Apple Watch corretto, tieni i due dispositivi vicini e apri Tennis Score Wizard su Apple Watch e iPhone. Assicurati inoltre che entrambi i dispositivi usino l’Apple Account desiderato e controlla lo stato di iCloud nella Cronologia. Durante l’attesa, la partita salvata resta protetta localmente e può sincronizzarsi quando torna disponibile la connessione tra i dispositivi abbinati o iCloud.</p>
+<p>Verifichi che sia abbinato l’Apple Watch corretto, tenga i due dispositivi vicini e apra Tennis Score Wizard su Apple Watch e iPhone. Si assicuri inoltre che entrambi i dispositivi usino l’Apple Account desiderato e controlli lo stato di iCloud nella Cronologia. Durante l’attesa, la partita salvata resta protetta localmente e può sincronizzarsi quando torna disponibile la connessione tra i dispositivi abbinati o iCloud.</p>
 </div>
 <div class="help-item">
 <strong>Vengono sincronizzati anche i dettagli degli allenamenti?</strong>
@@ -1413,12 +1457,12 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <section id="icloud-sync">
 <h2>Sincronizzazione e ripristino delle partite con iCloud</h2>
 <p class="section-subtitle">
-    Sincronizza le partite salvate tra Standalone e Companion senza creare un account Tennis Score Wizard.
+    Sincronizzi le partite salvate tra Standalone e Companion senza creare un account Tennis Score Wizard.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Cosa serve per sincronizzare le partite con iCloud?</strong>
-<p>Assicurati che Apple Watch e, nel caso di Companion, iPhone usino lo stesso Apple Account. Attiva iCloud Drive, assicurati che sia disponibile una connessione Internet e attendi il completamento della prima sincronizzazione. Puoi continuare a segnare i punti anche quando iCloud non è disponibile.</p>
+<p>Si assicuri che Apple Watch e, nel caso di Companion, iPhone usino lo stesso Apple Account. Attivi iCloud Drive, si assicuri che sia disponibile una connessione Internet e attenda il completamento della prima sincronizzazione. Può continuare a segnare i punti anche quando iCloud non è disponibile.</p>
 </div>
 <div class="help-item">
 <strong>Standalone e Companion possono condividere le partite?</strong>
@@ -1426,7 +1470,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Come faccio a sapere se la sincronizzazione è terminata?</strong>
-<p>Apri Cronologia e controlla la riga di stato di iCloud. <b>Synced</b> indica che l’ultima sincronizzazione è terminata correttamente e ne mostra data e ora. <b>Syncing</b> indica che la sincronizzazione è attiva. <b>Waiting</b> con <b>Saving</b> indica che una modifica locale è al sicuro nella coda di iCloud. <b>Sync paused</b> con <b>Retry</b> indica che l’ultimo tentativo non è stato completato; tocca la riga per riprovare.</p>
+<p>Apra Cronologia e controlli la riga di stato di iCloud. <b>Synced</b> indica che l’ultima sincronizzazione è terminata correttamente e ne mostra data e ora. <b>Syncing</b> indica che la sincronizzazione è attiva. <b>Waiting</b> con <b>Saving</b> indica che una modifica locale è al sicuro nella coda di iCloud. <b>Sync paused</b> con <b>Retry</b> indica che l’ultimo tentativo non è stato completato; tocchi la riga per riprovare.</p>
 </div>
 <div class="help-item">
 <strong>Cosa succede se cambio Apple Account?</strong>
@@ -1434,27 +1478,27 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>La reinstallazione dell’app ripristinerà le mie partite?</strong>
-<p>Sì, se le partite sono state sincronizzate correttamente prima della rimozione dell’app. Verifica prima che la Cronologia mostri <b>Synced</b>. Dopo la reinstallazione, usa lo stesso Apple Account, mantieni iCloud Drive attivo, apri l’app e attendi il download delle partite.</p>
+<p>Sì, se le partite sono state sincronizzate correttamente prima della rimozione dell’app. Verifichi prima che la Cronologia mostri <b>Synced</b>. Dopo la reinstallazione, usi lo stesso Apple Account, mantenga iCloud Drive attivo, apra l’app e attenda il download delle partite.</p>
 </div>
 <div class="help-item">
 <strong>Eliminare l’app cancella la cronologia da iCloud?</strong>
-<p>No. La rimozione dell’app non elimina da sola le partite già sincronizzate con iCloud. Queste possono essere scaricate di nuovo dopo la reinstallazione. Se elimini le partite da Tennis Score Wizard, le eliminazioni vengono sincronizzate quando iCloud è disponibile.</p>
+<p>No. La rimozione dell’app non elimina da sola le partite già sincronizzate con iCloud. Queste possono essere scaricate di nuovo dopo la reinstallazione. Se elimina le partite da Tennis Score Wizard, le eliminazioni vengono sincronizzate quando iCloud è disponibile.</p>
 </div>
 <div class="help-item">
 <strong>Lo sviluppatore può vedere le mie partite sincronizzate?</strong>
-<p>No. CloudKit archivia i record sincronizzati nel database privato del tuo Apple Account. Per impostazione predefinita, solo il titolare dell’Apple Account può accedere al database privato.</p>
+<p>No. CloudKit archivia i record sincronizzati nel database privato del suo Apple Account. Per impostazione predefinita, solo il titolare dell’Apple Account può accedere al database privato.</p>
 </div>
 </div>
 </section>
 <section id="health-workouts">
 <h2>Salute e allenamenti</h2>
 <p class="section-subtitle">
-    Registra la tua sessione di tennis e scopri come leggere i dati di Salute mostrati dopo la partita.
+    Registri la sua sessione di tennis e scopra come leggere i dati di Salute mostrati dopo la partita.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Come si registra un allenamento di tennis?</strong>
-<p>Attiva Registra allenamento durante la configurazione della partita e concedi le autorizzazioni richieste per Salute. L’allenamento inizia insieme alla partita e termina quando la partita viene conclusa o interrotta.</p>
+<p>Attivi Registra allenamento durante la configurazione della partita e conceda le autorizzazioni richieste per Salute. L’allenamento inizia insieme alla partita e termina quando la partita viene conclusa o interrotta.</p>
 </div>
 <div class="help-item">
 <strong>Come funziona la frequenza cardiaca in tempo reale?</strong>
@@ -1474,11 +1518,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Perché le statistiche dell’allenamento possono comparire in ritardo?</strong>
-<p>Dopo la fine dell’allenamento, l’app Salute potrebbe impiegare un po’ di tempo per completare il salvataggio delle misurazioni. Attendi qualche istante prima di controllare di nuovo la partita conclusa.</p>
+<p>Dopo la fine dell’allenamento, l’app Salute potrebbe impiegare un po’ di tempo per completare il salvataggio delle misurazioni. Attenda qualche istante prima di controllare di nuovo la partita conclusa.</p>
 </div>
 <div class="help-item">
 <strong>Perché manca una statistica sulla salute?</strong>
-<p>Un valore può non essere disponibile se non hai concesso l’autorizzazione, il sensore non ha fornito campioni sufficienti, la registrazione dell’allenamento era disattivata oppure Salute non ha ancora completato il salvataggio dei dati.</p>
+<p>Un valore può non essere disponibile se non ha concesso l’autorizzazione, il sensore non ha fornito campioni sufficienti, la registrazione dell’allenamento era disattivata oppure Salute non ha ancora completato il salvataggio dei dati.</p>
 </div>
 <div class="help-item">
 <strong>La partita viene salvata anche se la registrazione dell’allenamento non riesce?</strong>
@@ -1488,46 +1532,44 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </section>
 <section id="match-history">
 <h2>Cronologia delle partite</h2>
-<p class="section-subtitle">
-    Consulta i risultati delle partite concluse e non concluse usando la notazione tennistica compatta.
-  </p>
-<div class="help">
+<p class="section-subtitle">Filtri la cronologia per anno e mese, singolo o doppio. Le registrazioni meno recenti si caricano durante la consultazione e tutta la cronologia salvata resta disponibile.</p>
+<div class="help"><div class="help-item"><strong>Come trovo una vecchia partita sull’orologio?</strong><p>In History, tocchi Period, scelga un anno e poi un mese oppure Entire year per l’intero anno. Sono proposti solo anni e mesi con partite salvate. All dates azzera il periodo; All, 1v1 e 2v2 filtrano il tipo di partita. La funzione è disponibile in Companion e Standalone.</p></div><div class="help-item"><strong>La cronologia si ferma a 50 partite?</strong><p>No. Mostra inizialmente 50 risultati corrispondenti e poi carica quelli precedenti in gruppi di 50. Può anche toccare Load older matches. Il riepilogo considera tutti i risultati corrispondenti, non solo la prima pagina. Il menu dei periodi si basa sull’intera cronologia salvata; le vecchie partite non vengono eliminate.</p></div>
 <div class="help-item">
 <strong>Cosa significano Vittoria e Sconfitta?</strong>
-<p>Vittoria significa che hai vinto per set una partita conclusa. Sconfitta significa che l’avversario ha vinto per set una partita conclusa.</p>
+<p>Vittoria significa che ha vinto per set una partita conclusa. Sconfitta significa che l’avversario ha vinto per set una partita conclusa.</p>
 </div>
 <div class="help-item">
 <strong>Cosa significa Interrotta?</strong>
 <p>Interrotta significa che la partita è stata salvata prima della conclusione normale. L’app conserva il contesto reale raccolto fino a quel momento. Una partita interrotta con un giocatore in vantaggio conta nel bilancio, nella percentuale di vittorie e nelle serie; se è in parità, il risultato è neutro.</p>
 </div>
-<div class="help-item"><strong>Cosa significano S1–S5?</strong><p>S1–S5 indicano i set dal primo al quinto. In base alla partita, il risultato può mostrare due, tre, quattro o cinque colonne. Per esempio, S1 6–3 significa che il primo set è terminato 6–3.</p></div>
+<div class="help-item"><strong>Cosa significano S1–S5?</strong><p>S1–S5 indicano i set dal primo al quinto. Un risultato concluso o interrotto può mostrare da uno a cinque set normali. Per esempio S1 <span class="score-nowrap">6–3</span> significa che il primo set è terminato sei giochi a tre.</p></div>
 <div class="help-item">
-<strong>Cosa significa TB 7–3?</strong>
-<p>TB mostra i punti del tie‑break registrati nel set. Per esempio, 7–6 · TB 7–3 significa che il set è terminato 7–6 e il tie‑break 7–3.</p>
+<strong>Cosa significa TB <span class="score-nowrap">7–3</span>?</strong>
+<p>TB mostra i punti del tie‑break registrati nel set. Per esempio, <span class="score-nowrap">7–6</span> · TB <span class="score-nowrap">7–3</span> significa che il set è terminato <span class="score-nowrap">7–6</span> e il tie‑break <span class="score-nowrap">7–3</span>.</p>
 </div>
 <div class="help-item">
-<strong>Cosa significa 7–6<sup>(6)</sup> significa?</strong>
-<p>Il piccolo numero tra parentesi è il punteggio del giocatore che ha perso il tie‑break, secondo la notazione tennistica compatta standard. Per esempio, 7–6<sup>(6)</sup> significa che il tie‑break è stato vinto 8–6. I dettagli della partita mostrano comunque in modo esplicito il punteggio completo del tie‑break.</p>
+<strong>Cosa significa <span class="score-nowrap">7–6</span><sup>(6)</sup> significa?</strong>
+<p>Nella riga compatta, il numero tra parentesi indica i punti di chi ha perso il tie-break. Per esempio <span class="score-nowrap">7–6</span><sup>(6)</sup> significa un tie-break vinto <span class="score-nowrap">8–6</span>. La tabella può mostrare i punti di entrambi quando registrati.</p>
 </div>
 <div class="help-item">
 <strong>Come vengono valutate le partite interrotte?</strong>
-<p>L’app confronta prima i set completati, poi i game salvati e infine i punti disponibili del tie‑break. Se un giocatore o una squadra è in vantaggio, il risultato conta come vittoria o sconfitta nelle statistiche, mentre la partita resta contrassegnata come Interrotta. Se il punteggio è ancora in parità, il risultato è neutro.</p>
+<p>L’app confronta prima i set completati. A parità, considera i giochi del set incompleto in corso, poi i punti registrati del tie-break o del gioco. Non somma i giochi dei set precedenti per stabilire chi è avanti. Tra due set, con parità di set vinti, il risultato è un pareggio. Un vantaggio netto conta come vittoria o sconfitta nelle statistiche; resta l’etichetta di partita interrotta.</p>
 </div>
 <div class="help-item">
 <strong>Cosa succede a un set non concluso?</strong>
-<p>Se il set in corso è già iniziato quando la partita viene interrotta, viene salvato insieme alla partita. In questo modo si conserva il contesto reale, per esempio S3 0–1.</p>
+<p>Se il set in corso è già iniziato quando la partita viene interrotta, viene salvato insieme alla partita. In questo modo si conserva il contesto reale, per esempio S3 <span class="score-nowrap">0–1</span>.</p>
 </div>
-<div class="help-item"><strong>Quali informazioni vengono salvate con una partita?</strong><p>La cronologia può includere formato, risultato, punteggi dei set e dei tie‑break, punti, durata, orari di inizio e fine, avversario assegnato, statistiche e dati di allenamento disponibili.</p></div>
+<div class="help-item"><strong>Quali informazioni vengono salvate con una partita?</strong><p>Una partita può contenere formato, risultato, set e tie-break, tempi e avversario. Le partite manuali sono contrassegnate. Su iPhone può aggiungere condizioni del campo, luogo e nota privata. Statistiche di punti e allenamento compaiono solo se registrate, non dedotte da un punteggio manuale.</p></div>
 <div class="help-item">
 <strong>Posso eliminare una partita salvata?</strong>
-<p>Sì. Usa l’azione di eliminazione nella cronologia e conferma. Eliminando una partita, la relativa voce salvata viene rimossa dall’app.</p>
+<p>Sì. Usi l’azione di eliminazione nella cronologia e confermi. Eliminando una partita, la relativa voce salvata viene rimossa dall’app.</p>
 </div>
-<div class="help-item"><strong>Come vengono mostrati i formati personalizzati nella cronologia?</strong><p>La cronologia mostra il nome del formato e le regole essenziali: numero di game da raggiungere, scarto richiesto, inizio del tie‑break e punti da raggiungere. La vista dettagliata presenta la configurazione completa.</p></div><div class="help-item"><strong>Come vengono mostrati i tie‑break nei risultati condivisi?</strong><p>I tie‑break dei set usano un apice compatto senza modificare dimensioni o spaziatura del punteggio principale. Il Match Tie‑Break decisivo appare separatamente tra parentesi quadre, per esempio [10–7].</p></div></div>
+<div class="help-item"><strong>Come vengono mostrati i formati personalizzati nella cronologia?</strong><p>I punti del tie-break sono accanto ai giochi. Le celle possono allargarsi per giochi a due cifre, mantenendo i numeri separati e leggibili. Il match tie-break decisivo è tra parentesi quadre, per esempio [<span class="score-nowrap">10–7</span>]. Anche il testo condiviso contiene il risultato completo.</p></div><div class="help-item"><strong>Come vengono mostrati i tie‑break nei risultati condivisi?</strong><p>I tie‑break dei set usano un apice compatto senza modificare dimensioni o spaziatura del punteggio principale. Il Match Tie‑Break decisivo appare separatamente tra parentesi quadre, per esempio [<span class="score-nowrap">10–7</span>].</p></div></div>
 </section>
-<section id="support-development"><h2>Supporto facoltativo allo sviluppo</h2><p class="section-subtitle">Un contributo una tantum sostiene lo sviluppo futuro, ma non sblocca funzioni e non modifica l’app.</p><div class="help"><div class="help-item"><strong>Una mancia sblocca qualcosa?</strong><p>No. Le mance Apple e il supporto in criptovaluta sono facoltativi. Tutte le funzioni restano disponibili in base al prodotto acquistato, indipendentemente dal contributo.</p></div><div class="help-item"><strong>Come funziona una mancia Apple?</strong><p>Scegli un importo una tantum in Info → Supporta lo sviluppo e confermalo nel foglio di acquisto Apple. Apple elabora il pagamento con il metodo collegato al tuo account App Store.</p></div><div class="help-item"><strong>Cosa devo controllare prima di inviare criptovaluta?</strong><p>Verifica nel wallet valuta, rete e indirizzo di destinazione completo. I trasferimenti blockchain sono in genere irreversibili. Tennis Score Wizard non associa alla transazione dati di partite, rivalità, allenamenti o Salute.</p></div></div></section><section id="complications-help">
+<section id="support-development"><h2>Supporto facoltativo allo sviluppo</h2><p class="section-subtitle">Un contributo una tantum sostiene lo sviluppo futuro, ma non sblocca funzioni e non modifica l’app.</p><div class="help"><div class="help-item"><strong>Una mancia sblocca qualcosa?</strong><p>No. Le mance Apple e il supporto in criptovaluta sono facoltativi. Tutte le funzioni restano disponibili in base al prodotto acquistato, indipendentemente dal contributo.</p></div><div class="help-item"><strong>Come funziona una mancia Apple?</strong><p>Scelga un importo una tantum in Info → Supporta lo sviluppo e lo confermi nel foglio di acquisto Apple. Apple elabora il pagamento con il metodo collegato al suo account App Store.</p></div><div class="help-item"><strong>Cosa devo controllare prima di inviare criptovaluta?</strong><p>Verifichi nel wallet valuta, rete e indirizzo di destinazione completo. I trasferimenti blockchain sono in genere irreversibili. Tennis Score Wizard non associa alla transazione dati di partite, rivalità, allenamenti o Salute.</p></div></div></section><section id="complications-help">
 <h2>Complicazioni dei quadranti di Apple Watch</h2>
 <p class="section-subtitle">
-    Aggiungi un accesso rapido a Tennis Score Wizard direttamente da un quadrante compatibile.
+    Aggiunga un accesso rapido a Tennis Score Wizard direttamente da un quadrante compatibile.
   </p>
 <div class="help">
 <div class="help-item">
@@ -1540,11 +1582,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Come si aggiunge la complicazione?</strong>
-<p>Modifica un quadrante compatibile su Apple Watch o nell’app Watch su iPhone, seleziona una posizione supportata e scegli Tennis Score Wizard tra le complicazioni disponibili.</p>
+<p>Modifichi un quadrante compatibile su Apple Watch o nell’app Watch su iPhone, selezioni una posizione supportata e scelga Tennis Score Wizard tra le complicazioni disponibili.</p>
 </div>
 <div class="help-item">
 <strong>Perché non trovo la complicazione?</strong>
-<p>Verifica che l’app sia installata su Apple Watch e che la posizione scelta sul quadrante supporti uno dei tipi di complicazione disponibili. Le posizioni variano a seconda del quadrante.</p>
+<p>Verifichi che l’app sia installata su Apple Watch e che la posizione scelta sul quadrante supporti uno dei tipi di complicazione disponibili. Le posizioni variano a seconda del quadrante.</p>
 </div>
 <div class="help-item">
 <strong>Perché la complicazione ha un aspetto diverso su un altro quadrante?</strong>
@@ -1560,42 +1602,42 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="help">
 <div class="help-item">
 <strong>La frequenza cardiaca in tempo reale non compare. Cosa devo controllare?</strong>
-<p>Verifica che Registra allenamento fosse attivo, che l’accesso a Salute fosse consentito e che l’orologio sia indossato correttamente. La frequenza cardiaca compare solo quando Apple Watch fornisce un campione disponibile.</p>
+<p>Verifichi che Registra allenamento fosse attivo, che l’accesso a Salute fosse consentito e che l’orologio sia indossato correttamente. La frequenza cardiaca compare solo quando Apple Watch fornisce un campione disponibile.</p>
 </div>
 <div class="help-item">
 <strong>L’allenamento non è visibile nell’app Salute. Cosa devo fare?</strong>
-<p>Attendi il tempo necessario per l’elaborazione, poi controlla le autorizzazioni di Salute e verifica che la registrazione dell’allenamento fosse attiva per la partita. Assicurati inoltre che l’allenamento sia terminato correttamente con la conclusione o l’interruzione della partita.</p>
+<p>Attenda il tempo necessario per l’elaborazione, poi controlli le autorizzazioni di Salute e verifichi che la registrazione dell’allenamento fosse attiva per la partita. Si assicuri inoltre che l’allenamento sia terminato correttamente con la conclusione o l’interruzione della partita.</p>
 </div>
 <div class="help-item">
 <strong>Manca la frequenza cardiaca media, quella massima o l’energia attiva.</strong>
-<p>Riapri la partita conclusa dopo che Salute ha avuto il tempo di salvare l’allenamento. Una misurazione può restare non disponibile se Salute non ha fornito dati di base sufficienti.</p>
+<p>Riapra la partita conclusa dopo che Salute ha avuto il tempo di salvare l’allenamento. Una misurazione può restare non disponibile se Salute non ha fornito dati di base sufficienti.</p>
 </div>
 <div class="help-item">
 <strong>Il giocatore al servizio mostrato non è corretto.</strong>
-<p>Apri Menu e usa Cambia giocatore al servizio per allineare l’app alla partita reale. L’operazione corregge chi serve senza modificare il punteggio.</p>
+<p>Apra Menu e usi Cambia giocatore al servizio per allineare l’app alla partita reale. L’operazione corregge chi serve senza modificare il punteggio.</p>
 </div>
 <div class="help-item">
 <strong>Ho inserito il punto sbagliato.</strong>
-<p>Usa Annulla per ripristinare lo stato esatto precedente all’ultimo punto, inclusi punteggio, giocatore al servizio, stato del tie‑break e statistiche correlate.</p>
+<p>Usi Annulla per ripristinare lo stato esatto precedente all’ultimo punto, inclusi punteggio, giocatore al servizio, stato del tie‑break e statistiche correlate.</p>
 </div>
 <div class="help-item">
 <strong>La complicazione non è disponibile sul quadrante selezionato.</strong>
-<p>Prova una posizione circolare o angolare. Non tutte le posizioni di ogni quadrante supportano lo stesso tipo di complicazione.</p>
+<p>Provi una posizione circolare o angolare. Non tutte le posizioni di ogni quadrante supportano lo stesso tipo di complicazione.</p>
 </div>
 <div class="help-item">
 <strong>La reinstallazione dell’app conserverà la cronologia delle partite?</strong>
-<p>Prima apri Cronologia e verifica che la riga di iCloud mostri <b>Synced</b>. Dopo la reinstallazione, usa lo stesso Apple Account con iCloud Drive attivo e attendi il completamento del ripristino. Le partite che non hanno mai completato una sincronizzazione con iCloud restano solo sul dispositivo originale.</p>
+<p>Prima apra Cronologia e verifichi che la riga di iCloud mostri <b>Synced</b>. Dopo la reinstallazione, usi lo stesso Apple Account con iCloud Drive attivo e attenda il completamento del ripristino. Le partite che non hanno mai completato una sincronizzazione con iCloud restano solo sul dispositivo originale.</p>
 </div>
 <div class="help-item">
 <strong>La Cronologia mostra Waiting, Saving oppure Sync paused con Retry.</strong>
-<p><b>Waiting</b> con <b>Saving</b> indica che una modifica locale è in coda e potrà essere caricata quando iCloud sarà disponibile. Se compare <b>Sync paused</b> con <b>Retry</b>, verifica che il dispositivo abbia effettuato l’accesso all’Apple Account desiderato, che iCloud Drive sia attivo, che la rete sia disponibile e che lo spazio di archiviazione su iCloud non sia esaurito, quindi tocca la riga di stato. Le partite locali non vengono rimosse solo perché iCloud non è disponibile.</p>
+<p><b>Waiting</b> con <b>Saving</b> indica che una modifica locale è in coda e potrà essere caricata quando iCloud sarà disponibile. Se compare <b>Sync paused</b> con <b>Retry</b>, verifichi che il dispositivo abbia effettuato l’accesso all’Apple Account desiderato, che iCloud Drive sia attivo, che la rete sia disponibile e che lo spazio di archiviazione su iCloud non sia esaurito, quindi tocchi la riga di stato. Le partite locali non vengono rimosse solo perché iCloud non è disponibile.</p>
 </div>
 </div>
 </section>
 <section id="contact">
 <h2>Assistenza</h2>
 <div class="support-card">
-<h3>Hai bisogno di aiuto o vuoi suggerire una funzionalità?</h3>
+<h3>Ha bisogno di aiuto o desidera suggerire una funzionalità?</h3>
 <p>
       Contatti:
       <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>

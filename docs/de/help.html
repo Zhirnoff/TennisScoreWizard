@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Hilfe – Tennis Score Wizard</title>
-<meta content="Hilfe zu One Set, offiziellen Short Sets, No‑Ad, Custom Set, Apple-Watch-Zählung, iCloud-Synchronisierung, Statistiken und Trainings." name="description"/>
+<meta content="Gespielte Matches auf dem iPhone hinzufügen und bearbeiten, den Watch-Verlauf nach Jahr und Monat filtern, Platzdetails speichern und Match Highlights teilen." name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/help.html">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html">
@@ -22,13 +22,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Hilfe – Tennis Score Wizard">
-<meta property="og:description" content="Hilfe zu One Set, offiziellen Short Sets, No‑Ad, Custom Set, Apple-Watch-Zählung, iCloud-Synchronisierung, Statistiken und Trainings.">
+<meta content="Gespielte Matches auf dem iPhone hinzufügen und bearbeiten, den Watch-Verlauf nach Jahr und Monat filtern, Platzdetails speichern und Match Highlights teilen." property="og:description"/>
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/de/help.html">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hilfe – Tennis Score Wizard">
-<meta name="twitter:description" content="Hilfe zu One Set, offiziellen Short Sets, No‑Ad, Custom Set, Apple-Watch-Zählung, iCloud-Synchronisierung, Statistiken und Trainings.">
+<meta content="Gespielte Matches auf dem iPhone hinzufügen und bearbeiten, den Watch-Verlauf nach Jahr und Monat filtern, Platzdetails speichern und Match Highlights teilen." name="twitter:description"/>
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -1186,6 +1186,8 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 }
 </style>
 <link rel="stylesheet" href="../release-1-1.css">
+<link rel="stylesheet" href="../release-1-6-en.css?v=20260911-i18n">
+<script defer src="../navigation-en.js?v=20260911-i18n"></script>
 </head>
 <body>
 <main class="page">
@@ -1224,23 +1226,23 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="hero-copy">
 <p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Home" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
 <h1>Hilfe-Center</h1>
-<p>Hier erfährst du, wie du Matches einrichtest und zählst, gespeicherte Matches über iCloud synchronisierst, Companion mit dem iPhone verbindest, Statistiken verstehst, Trainings in der Health-App aufzeichnest, Zifferblatt-Komplikationen nutzt und häufige Probleme behebst.</p>
+<p>Zählen Sie auf der Apple Watch oder tragen Sie gespielte Matches in Companion auf dem iPhone ein. Hilfe zu Platzdetails, Notizen, Highlights, Teilen, Rivalitäten, Formaten, Trainings und iCloud-Sync.</p>
 </div>
 </section>
 <section id="getting-started">
 <h2>Erste Schritte</h2>
 <p class="section-subtitle">
-    Alles, was du brauchst, um Tennis Score Wizard einzurichten und dein erstes Match zu zählen.
+    Alles, was Sie brauchen, um Tennis Score Wizard einzurichten und Ihr erstes Match zu zählen.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Was benötige ich für Tennis Score Wizard?</strong>
-<p>Du benötigst eine kompatible Apple Watch mit installiertem Tennis Score Wizard. Die Health-Zugriff ist optional und nur erforderlich, wenn du das Match als Training aufzeichnen und verfügbare Gesundheitsdaten erfassen möchtest.</p>
+<p>Für Live-Punkte brauchen Sie eine kompatible Apple Watch mit Tennis Score Wizard. Companion auf dem iPhone erlaubt außerdem nachträgliche Matcheinträge. Health-Zugriff ist optional und dient nur Trainingsaufzeichnungen und verfügbaren Trainingsmesswerten.</p>
 </div>
-<div class="help-item"><strong>Wie starte ich mein erstes Match?</strong><p>Öffne die App, wähle Einzel oder Doppel und anschließend One Set, Best of 3 oder Best of 5. Lege Satzregel, Game-Regel und ersten Aufschläger fest, aktiviere bei Bedarf „Training aufzeichnen“ und starte das Match.</p></div>
+<div class="help-item"><strong>Wie starte ich mein erstes Match?</strong><p>Öffnen Sie die App auf der Apple Watch, wählen Sie Einzel oder Doppel sowie One Set, Best of 3 oder Best of 5. Legen Sie Satz- und Spielregeln und den ersten Aufschläger fest, aktivieren Sie optional die Trainingsaufzeichnung und starten Sie das Match.</p></div>
 <div class="help-item">
 <strong>Merkt sich die App meine Einstellungen?</strong>
-<p>Ja. Die zuletzt verwendete Matchkonfiguration wird gespeichert, damit du ein ähnliches Match beim nächsten Mal schneller vorbereiten kannst. Vor dem Start lassen sich alle Optionen ändern.</p>
+<p>Ja. Die zuletzt verwendete Matchkonfiguration wird gespeichert, damit Sie ein ähnliches Match beim nächsten Mal schneller vorbereiten können. Vor dem Start lassen sich alle Optionen ändern.</p>
 </div>
 <div class="help-item">
 <strong>Kann ich ohne Health zählen?</strong>
@@ -1248,28 +1250,72 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
+<section id="manual-matches">
+<h2>Gespielte Matches hinzufügen und bearbeiten</h2>
+<p class="section-subtitle">Companion auf dem iPhone · Bekannte Ergebnisse neben Ihrem Watch-Verlauf speichern.</p>
+<div class="help"><div class="help-item"><strong>Kann ich ein manuell hinzugefügtes Match bearbeiten?</strong><p>Ja. Öffnen Sie die Matchdetails und tippen Sie auf Edit match. Sie können Datum, Zeit, Dauer, Regeln, Satzstände, Tie-Break-Punkte und den Abschlussstatus korrigieren. Save aktualisiert den vorhandenen Eintrag ohne Duplikat; Cancel verwirft die Änderungen. Einzel/Doppel und Spieler bleiben in diesem Formular unverändert. Gegnerzuordnung und Platzdetails bearbeiten Sie separat.</p></div><div class="help-item"><strong>Werden Korrekturen mit der Apple Watch synchronisiert?</strong><p>Ja. Korrekturen aktualisieren denselben Eintrag auf der gekoppelten Companion-Watch und können über die private iCloud-Datenbank mit demselben Apple Account an Standalone übertragen werden. Halten Sie die Apps aktuell und warten Sie die Synchronisierung ab. Relevante Statistiken und verlaufsbasierte Highlights berücksichtigen das korrigierte Ergebnis. Manuelle Matches bleiben gekennzeichnet; fehlende Punkt- oder Trainingsdaten werden nicht erfunden.</p></div>
+<div class="help-item"><strong>Wie trage ich ein gespieltes Match ein?</strong><p>Tippen Sie im Tab Matches auf den Eintrag eines gespielten Matches. Wählen Sie Einzel oder Doppel, geben Sie optional einen Gegnernamen ein oder wählen Sie für ein Einzel einen gespeicherten Spieler. Legen Sie das Format fest, tragen Sie die Satzergebnisse ein und speichern Sie die Angaben.</p></div>
+<div class="help-item"><strong>Kann ich gestoppte oder unentschiedene Matches speichern?</strong><p>Ja. Wählen Sie gestoppt, wenn das Spiel endete, bevor nach dem gewählten Format ein Sieger feststand. Tragen Sie den erreichten Stand einschließlich eines offenen Satzes ein. Auch ein Gleichstand ist möglich. Wählen Sie beendet nur, wenn das Ergebnis einen Sieger nach den gewählten Regeln ergibt.</p></div>
+<div class="help-item"><strong>Wie trage ich einen Satz-Tie-Break ein?</strong><p>Geben Sie zuerst die Spiele ein. Entspricht der Stand nach Ihren Satzregeln einem Tie-Break, etwa <span class="score-nowrap">7–6</span>, erscheinen zusätzliche Felder für beide Punktzahlen. Tragen Sie beide ein oder lassen Sie beide leer. Beim entscheidenden Match-Tie-Break werden direkt Punkte statt Spiele eingetragen; mehr dazu unten.</p></div>
+<div class="help-item"><strong>Wie trage ich einen Match-Tie-Break ein?</strong><p>Aktivieren Sie für den Entscheidungssatz bei Best of 3 oder Best of 5 den Match-Tie-Break, wählen Sie das Ziel von 7 oder 10 Punkten und geben Sie in der entscheidenden Zeile direkt Punkte ein — etwa <span class="score-nowrap">10–8</span>, nicht <span class="score-nowrap">1–0</span> in Spielen. Bestand das gesamte Match aus einem Match-Tie-Break, wählen Sie Match Tie-break als Satzregel. Ein beendeter Match-Tie-Break erfordert zwei Punkte Vorsprung.</p></div>
+<div class="help-item"><strong>Was gilt, wenn das Spiel im Satz-Tie-Break gestoppt wurde?</strong><p>Wählen Sie gestoppt und tragen Sie den gleichen Spielstand ein, bei dem der Tie-Break begann, etwa <span class="score-nowrap">6–6</span>. In den zusätzlichen Feldern können Sie beide Punktzahlen beim Abbruch eintragen. Sind sie unbekannt, lassen Sie beide leer. Die App ergänzt keine geschätzten Punkte.</p></div>
+<div class="help-item"><strong>Was ist, wenn ich den Start, aber nicht die Dauer weiß?</strong><p>Wählen Sie Start und Ende und geben Sie beide Daten und Uhrzeiten ein. Die Dauer wird berechnet. Endete das Match nach Mitternacht, setzen Sie das Enddatum auf den nächsten Tag. Alternativ können Sie Ende und Dauer wählen und Minuten eingeben. Ist die Dauer unbekannt, lassen Sie sie leer. Eine angegebene Dauer muss zwischen einer Minute und 24 Stunden liegen.</p></div>
+<div class="help-item"><strong>Warum kann ich keine zukünftige Uhrzeit wählen?</strong><p>Das Formular erfasst bereits gespielte Matches, keine geplanten. Das Ende darf nicht in der Zukunft liegen. Bei Start und Ende muss der Start vor dem Ende liegen.</p></div>
+<div class="help-item"><strong>Wie wechsle ich zwischen den Eingabefeldern?</strong><p>Tippen Sie direkt auf eine Spielstandskachel oder nutzen Sie Zurück und Weiter über der Tastatur. Nach einer Ziffer springt der Cursor nicht automatisch weiter, damit zweistellige Werte möglich sind. Fertig, ein Tipp außerhalb des Felds oder Scrollen schließt die Tastatur.</p></div>
+<div class="help-item"><strong>Welche Statistiken liefert ein manueller Eintrag?</strong><p>Ergebnis, Sätze, Spiele, eingegebene Tie-Break-Ergebnisse und optionale Dauer können in passende Verläufe und Zusammenfassungen eingehen. Punktverläufe, Aufschlag-, Return-, Breakball- und Trainingswerte werden nicht rekonstruiert. Das Match wird als manuell hinzugefügt markiert; nicht verfügbare Detailkarten bleiben verborgen.</p></div>
+<div class="help-item"><strong>Erscheint das Match auf der Apple Watch?</strong><p>Ja. Gespeicherte manuelle Einträge können zur gekoppelten Companion-Watch und über den privaten iCloud-Sync zu Standalone unter demselben Apple Account gelangen. Beide Watch-Apps behalten die Kennzeichnung und blenden fehlende Statistiken aus. Halten Sie beide Produkte aktuell und warten Sie den Sync ab.</p></div>
+<div class="help-item"><strong>Kann ich einen Watch-Spielstand auf dem iPhone ändern?</strong><p>Nein. Ein gespieltes Match hinzuzufügen ist nicht dasselbe wie eine Watch-Aufzeichnung zu bearbeiten. Bei bestehenden Matches können Sie Gegnerzuordnung und optionalen Kontext ändern, ohne Spielstand oder Statistiken anzutasten.</p></div>
+</div>
+</section>
+<div aria-label="Beispiele für manuellen Eintrag und Platzdetails" class="release-proof-pair">
+<figure><a href="../assets/release-1-6-en/manual-edit-details.png" target="_blank" rel="noopener"><img src="../assets/release-1-6-en/manual-edit-details.png" alt="Manuelle Matches · iPhone — Edit match" width="1320" height="2868" loading="lazy" decoding="async"></a><figcaption>Matches hinzufügen und bearbeiten. Edit match.</figcaption></figure>
+<figure><a href="../assets/release-1-6-en/court-conditions.png" rel="noopener" target="_blank"><img alt="Optionaler Kontexteditor mit Sandplatz und Freiluft" height="2868" loading="lazy" src="../assets/release-1-6-en/court-conditions.png" width="1320"/></a><figcaption>Belag und Umgebung sind optional. Originalansichten auf Englisch mit Beispieldaten.</figcaption></figure>
+</div>
+<section id="match-context">
+<h2>Platz und Matchdetails festhalten</h2>
+<p class="section-subtitle">Alles optional. Ergänzen Sie den Kontext beim Eintragen oder später in den Matchdetails auf dem iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>Was kann ich ergänzen?</strong><p>Belag, Halle oder Freiluft, Ort oder Club, Platzname oder -nummer und eine private Notiz zu genau diesem Match. Auch ältere Apple-Watch-Matches lassen sich ergänzen.</p></div>
+<div class="help-item"><strong>Brauche ich Karten oder Standortzugriff?</strong><p>Nein. Orts- und Platznamen werden von Hand eingetragen. Die Funktion sucht keine Plätze auf einer Karte und zeichnet keine GPS-Position auf.</p></div>
+<div class="help-item"><strong>Kann ich einen Platz wiederverwenden?</strong><p>Ja, über zuletzt verwendete und favorisierte Plätze. Favoriten werden auf diesem iPhone getrennt nach Apple Account gespeichert. Die Auswahl übernimmt Ort und Bedingungen, nicht aber die Notiz eines anderen Matches. Die Favoritenliste selbst wird nicht über iCloud synchronisiert.</p></div>
+<div class="help-item"><strong>Was wird synchronisiert?</strong><p>Platzdetails und Matchnotizen werden mit dem Ergebnis direkt zwischen gekoppelten Geräten und über den privaten iCloud-Sync übertragen. Ursprünglicher Spielstand und Statistiken bleiben unverändert. Kontext wird auf dem iPhone angezeigt und bearbeitet; die Watch bewahrt ihn für den Sync auf, bietet aber keinen Kontexteditor.</p></div>
+<div class="help-item"><strong>Was erscheint beim Teilen?</strong><p>Eingetragene Platzbedingungen und der Ort erscheinen auf der Matchkarte. Private Match- und Rivalitätsnotizen bleiben ausgeschlossen. Prüfen Sie die Vorschau, besonders wenn Sie den Spielort nicht offenlegen möchten.</p></div>
+<div class="help-item"><strong>Erzeugen Platzdetails statistische Erfolge?</strong><p>Nein. Belag, Halle oder Freiluft, Ort und Notizen beschreiben die Spielbedingungen. Sie beeinflussen keine Match-Highlights und erzeugen keine platz- oder belagsspezifischen Rekorde.</p></div>
+</div>
+</section>
+<section id="match-highlights">
+<h2>Match-Highlights und Teilen</h2>
+<div class="help">
+<div class="help-item"><strong>Wie viele Highlights kann ich sehen?</strong><p>Es gibt 26 Ereignistypen, nicht automatisch 26 Karten pro Match. Die Matchdetails auf dem iPhone zeigen alle passenden, durch gespeicherte Daten belegten Highlights. Ein geteiltes Bild zeigt bis zu sechs besonders bemerkenswerte Momente. Gibt es keine passenden Highlights, entfällt der Abschnitt.</p></div>
+<div class="help-item"><strong>Welche Momente können erscheinen?</strong><p>Zum Beispiel Comebacks, Entscheidungssätze oder Match-Tie-Breaks, enge Tie-Breaks, Ergebnisse ohne Satzverlust, Serien, Jubiläumssiege, persönliche Rekorde sowie Aufschlag- und Returnmuster. Einige brauchen aufgezeichnete Punktstatistiken, andere lassen sich aus Satzergebnis und Verlauf ableiten.</p></div>
+<div class="help-item"><strong>Sind Rekorde und Jubiläen unveränderliche Karriereerfolge?</strong><p>Nein. Sie beziehen sich auf den in der App gespeicherten Verlauf. Ein älteres Ergebnis nachzutragen, ein Match zu löschen oder den Gegner zu ändern kann Vergleichen Sie und Rivalitäts-Highlights verändern. Spätere Matches zählen nicht als Vorgeschichte eines älteren Ergebnisses. Jubiläumssiege basieren auf berücksichtigten, vollständig beendeten Siegen.</p></div>
+<div class="help-item"><strong>Warum kann die Siegesserie in Stats vom Highlight abweichen?</strong><p>Stats und Rivalitäten können gestoppte Matches mit eindeutigem Führenden als entschiedene Ergebnisse zählen. Serien- und Jubiläums-Highlights verwenden beendete Siege; ein offenes Match zählt dafür nicht. Beide Auswertungen nutzen den für ihren Vergleich verfügbaren Verlauf.</p></div>
+<div class="help-item"><strong>Gibt es Highlights auf der Apple Watch?</strong><p>Nein. Match-Highlights erscheinen in den iPhone-Matchdetails von Companion und auf geteilten Bildern. Der Watch-Verlauf zeigt Ergebnis und verfügbare Statistiken ohne eigenen Highlight-Abschnitt.</p></div>
+<div class="help-item"><strong>Warum hat ein manuelles Match weniger Highlights?</strong><p>Aus dem Endstand lässt sich kein Punktverlauf nachweisen. Manuelle Matches zeigen belegbare Ergebnis- oder Verlaufs-Highlights, aber keine erfundenen Aufschlag-, Return-, Breakball- oder Trainingswerte.</p></div>
+</div>
+</section>
 <section id="match-setup">
 <h2>Match einrichten</h2>
 <p class="section-subtitle">
-    Wähle das Format und die Regeln, nach denen du tatsächlich spielst.
+    Wählen Sie das Format und die Regeln, nach denen Sie tatsächlich spielen.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Was ist der Unterschied zwischen Einzel und Doppel?</strong>
-<p>Wähle Einzel für ein Match mit einer Person pro Seite und Doppel für zwei Personen pro Seite. Das Format wird mit dem Match gespeichert und auch für ein aufgezeichnetes Training verwendet.</p>
+<p>Wählen Sie Einzel für ein Match mit einer Person pro Seite und Doppel für zwei Personen pro Seite. Das Format wird mit dem Match gespeichert und auch für ein aufgezeichnetes Training verwendet.</p>
 </div>
 <div class="help-item">
 <strong>Was bedeuten Best of 3 und Best of 5?</strong>
 <p>Bei Best of 3 gewinnt die Seite, die zuerst zwei Sätze gewinnt. Bei Best of 5 sind drei gewonnene Sätze erforderlich.</p>
 </div><div class="help-item"><strong>Was bedeutet One Set?</strong><p>Der gewählte Satz ist das gesamte Match. Die Satzregel bestimmt weiterhin Game-Ziel und Tie‑Break.</p></div>
-<div class="help-item"><strong>Wie funktionieren die Satzregeln?</strong><p>Wähle die Satzregel, die zu deinem Format passt. Klassische Sätze gehen bis sechs Spiele, offizielle Short Sets bis vier, und mit Custom Set legst du die Parameter selbst fest. Die App wendet die vollständige Regel automatisch an.</p></div><div class="help-item"><strong>Wie funktionieren offizielle Short Sets?</strong><p>Ein Short Set geht bis vier Games. Lege fest, ob der Tie‑Break bei 3–3 oder 4–4 beginnt und ob er bis 7 Punkte mit zwei Punkten Vorsprung oder mit einem Entscheidungspunkt bei 4–4 gespielt wird.</p></div><div class="help-item"><strong>Was ändert No‑Ad?</strong><p>Nur die Game-Regel: Bei Einstand entscheidet der nächste Punkt. Das lässt sich mit jedem verfügbaren Satzformat kombinieren.</p></div><div class="help-item"><strong>Wie funktioniert Custom Set?</strong><p>Game-Ziel – auch acht Games –, Vorsprung, Tie‑Break-Beginn und Tie‑Break-Ziel werden gemeinsam gespeichert.</p></div><div class="help-item"><strong>Können diese Einstellungen miteinander in Konflikt geraten?</strong><p>Nein. Die Matchlänge bestimmt die benötigten Sätze, die Satzregel das Satzende, Standard oder No‑Ad den Einstand und der optionale Match‑Tie‑Break ersetzt nur den entscheidenden letzten Satz.</p></div>
+<div class="help-item"><strong>Wie funktionieren die Satzregeln?</strong><p>Wählen Sie die Satzregel, die zu Ihrem Format passt. Klassische Sätze gehen bis sechs Spiele, offizielle Short Sets bis vier, und mit Custom Set legen Sie die Parameter selbst fest. Die App wendet die vollständige Regel automatisch an.</p></div><div class="help-item"><strong>Wie funktionieren offizielle Short Sets?</strong><p>Ein Short Set geht bis vier Games. Legen Sie fest, ob der Tie‑Break bei <span class="score-nowrap">3–3</span> oder <span class="score-nowrap">4–4</span> beginnt und ob er bis 7 Punkte mit zwei Punkten Vorsprung oder mit einem Entscheidungspunkt bei <span class="score-nowrap">4–4</span> gespielt wird.</p></div><div class="help-item"><strong>Was ändert No‑Ad?</strong><p>Nur die Game-Regel: Bei Einstand entscheidet der nächste Punkt. Das lässt sich mit jedem verfügbaren Satzformat kombinieren.</p></div><div class="help-item"><strong>Wie funktioniert Custom Set?</strong><p>Custom Set lässt Sie Spielziel, nötigen Vorsprung, einen optionalen Tie-Break samt Startpunkt, Punktziel und Vorsprung wählen. Sie können etwa bis acht Spiele spielen. Die Zusammenfassung zeigt alle Regeln gemeinsam zur Kontrolle.</p></div><div class="help-item"><strong>Können diese Einstellungen miteinander in Konflikt geraten?</strong><p>Nein. Die Matchlänge bestimmt die benötigten Sätze, die Satzregel das Satzende, Standard oder No‑Ad den Einstand und der optionale Match‑Tie‑Break ersetzt nur den entscheidenden letzten Satz.</p></div>
 <div class="help-item">
 <strong>Wie wähle ich den ersten Aufschläger?</strong>
-<p>Du kannst ihn während der Einrichtung manuell auswählen oder den integrierten Münzwurf verwenden.</p>
+<p>Sie können ihn während der Einrichtung manuell auswählen oder den integrierten Münzwurf verwenden.</p>
 </div>
 <div class="help-item">
 <strong>Was macht der Münzwurf?</strong>
-<p>Der Münzwurf erzeugt ein zufälliges Ergebnis und hilft bei der Entscheidung über den ersten Aufschläger. Vor dem Match kannst du das Ergebnis bestätigen oder die Einrichtung anpassen.</p>
+<p>Der Münzwurf erzeugt ein zufälliges Ergebnis und hilft bei der Entscheidung über den ersten Aufschläger. Vor dem Match können Sie das Ergebnis bestätigen oder die Einrichtung anpassen.</p>
 </div>
 <div class="help-item">
 <strong>Was bewirkt „Training aufzeichnen“?</strong>
@@ -1280,31 +1326,31 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <section id="scoring">
 <h2>Ein Match zählen</h2>
 <p class="section-subtitle">
-    Erfasse jeden Punkt, während die App die Tenniszählung automatisch verwaltet.
+    Erfassen Sie jeden Punkt, während die App die Tenniszählung automatisch verwaltet.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Wie erfasse ich einen Punkt?</strong>
-<p>Wähle über die Zählsteuerung, ob du oder dein Gegner den Punkt gewonnen habt. Der Spielstand wird sofort aktualisiert.</p>
+<p>Wählen Sie über die Zählsteuerung, ob Sie oder Ihr Gegner den Punkt gewonnen haben. Der Spielstand wird sofort aktualisiert.</p>
 </div>
 <div class="help-item">
 <strong>Berechnet die App Spiele und Sätze automatisch?</strong>
 <p>Ja. Punkte, Spiele, Sätze, Einstand, Vorteil und Tie‑Break werden entsprechend den gewählten Regeln automatisch fortgeführt.</p>
 </div>
-<div class="help-item"><strong>Wie werden Einstand und Vorteil behandelt?</strong><p>Bei Standard Game beginnt bei 40–40 Einstand: Eine Seite muss erst Vorteil erlangen und danach den nächsten Punkt gewinnen. Bei No‑Ad entscheidet bereits der nächste Punkt das Game.</p></div>
+<div class="help-item"><strong>Wie werden Einstand und Vorteil behandelt?</strong><p>Bei Standard Game beginnt bei <span class="score-nowrap">40–40</span> Einstand: Eine Seite muss erst Vorteil erlangen und danach den nächsten Punkt gewinnen. Bei No‑Ad entscheidet bereits der nächste Punkt das Game.</p></div>
 <div class="help-item">
 <strong>Wie funktioniert die Tie‑Break-Zählung?</strong>
 <p>Wenn die gewählte Regel einen Tie‑Break verlangt, wechselt die App von normalen Tennispunkten zu numerischen Tie‑Break-Punkten.</p>
 </div>
-<div class="help-item"><strong>Was ist ein Match‑Tie‑Break und wie starte ich ihn?</strong><p>Er ersetzt den entscheidenden letzten Satz. Öffne bei 1:1 Sätzen in Best of 3 oder 2:2 in Best of 5 das Menü, bevor der Entscheidungssatz beginnt, wähle Match Tie‑Break und anschließend 7 oder 10 Punkte. Gewonnen wird mit zwei Punkten Vorsprung. Die Funktion gilt für Einzel und Doppel; das Ergebnis wird in Verlauf, Details, Statistiken und Share-Karten gespeichert.</p></div>
-<div class="help-item"><strong>Wie unterscheidet er sich von einem Satz-Tie‑Break?</strong><p>Ein Satz-Tie‑Break entscheidet meist bei 6:6 einen einzelnen Satz, der als 7:6 gespeichert wird. Ein Match‑Tie‑Break ersetzt den gesamten Entscheidungssatz und wird separat angezeigt, zum Beispiel [10–7].</p></div>
+<div class="help-item"><strong>Was ist ein Match‑Tie‑Break und wie starte ich ihn?</strong><p>Er ersetzt den entscheidenden letzten Satz. Öffnen Sie bei 1:1 Sätzen in Best of 3 oder 2:2 in Best of 5 das Menü, bevor der Entscheidungssatz beginnt, wählen Sie Match Tie‑Break und anschließend 7 oder 10 Punkte. Gewonnen wird mit zwei Punkten Vorsprung. Die Funktion gilt für Einzel und Doppel; das Ergebnis wird in Verlauf, Details, Statistiken und Share-Karten gespeichert.</p></div>
+<div class="help-item"><strong>Wie unterscheidet er sich von einem Satz-Tie‑Break?</strong><p>Ein Satz-Tie‑Break entscheidet meist bei 6:6 einen einzelnen Satz, der als 7:6 gespeichert wird. Ein Match‑Tie‑Break ersetzt den gesamten Entscheidungssatz und wird separat angezeigt, zum Beispiel [<span class="score-nowrap">10–7</span>].</p></div>
 <div class="help-item">
 <strong>Wie funktioniert die Aufschlagmarkierung?</strong>
-<p>Bei deinem Aufschlag zeigt der Tennisball die richtige Aufschlagseite. Beim Aufschlag des Gegners wird dessen Seite aus deiner Blickrichtung auf die Uhr dargestellt.</p>
+<p>Bei Ihrem Aufschlag zeigt der Tennisball die richtige Aufschlagseite. Beim Aufschlag des Gegners wird dessen Seite aus Ihrer Blickrichtung auf die Uhr dargestellt.</p>
 </div>
 <div class="help-item">
 <strong>Wie verfolgt die App den Aufschläger?</strong>
-<p>Der Aufschläger wechselt automatisch nach Spielen und während des Tie‑Breaks. Falls Anzeige und echtes Match nicht übereinstimmen, kannst du ihn im Menü korrigieren.</p>
+<p>Der Aufschläger wechselt automatisch nach Spielen und während des Tie‑Breaks. Falls Anzeige und echtes Match nicht übereinstimmen, können Sie ihn im Menü korrigieren.</p>
 </div>
 <div class="help-item">
 <strong>Wann werden die Seiten gewechselt?</strong>
@@ -1315,7 +1361,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <section id="match-controls">
 <h2>Matchsteuerung</h2>
 <p class="section-subtitle">
-    Korrigiere Fehler, verwalte das laufende Match und beende ein unvollständiges Match sicher.
+    Korrigieren Sie Fehler, verwalten Sie das laufende Match und beende ein unvollständiges Match sicher.
   </p>
 <div class="help">
 <div class="help-item">
@@ -1328,7 +1374,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Wann verwende ich „Aufschläger wechseln“?</strong>
-<p>Nutze die Funktion, wenn der angezeigte Aufschläger nicht mit dem echten Match übereinstimmt. Der Aufschläger wird korrigiert, ohne den Spielstand zu verändern.</p>
+<p>Nutzen Sie die Funktion, wenn der angezeigte Aufschläger nicht mit dem echten Match übereinstimmt. Der Aufschläger wird korrigiert, ohne den Spielstand zu verändern.</p>
 </div>
 <div class="help-item">
 <strong>Was passiert beim Stoppen eines Matches?</strong>
@@ -1336,23 +1382,23 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Kann ich danach ein neues Match starten?</strong>
-<p>Ja. Nach Abschluss oder Stoppen kannst du zur Einrichtung zurückkehren und ein neues Match beginnen. Die vorherige Konfiguration steht erneut zur Verfügung.</p>
+<p>Ja. Nach Abschluss oder Stoppen können Sie zur Einrichtung zurückkehren und ein neues Match beginnen. Die vorherige Konfiguration steht erneut zur Verfügung.</p>
 </div>
 <div class="help-item">
 <strong>Was mache ich nach einer falschen Punkteingabe?</strong>
-<p>Verwende möglichst sofort Rückgängig. Dadurch wird der vollständige Zustand vor dem falschen Punkt wiederhergestellt, statt den Fehler mit einem weiteren Punkt auszugleichen.</p>
+<p>Verwenden Sie möglichst sofort Rückgängig. Dadurch wird der vollständige Zustand vor dem falschen Punkt wiederhergestellt, statt den Fehler mit einem weiteren Punkt auszugleichen.</p>
 </div>
 <div class="help-item"><strong>Was passiert, wenn ich ein Match vor dem ersten Punkt stoppe?</strong><p>Die App speichert nur den tatsächlich erfassten Spielfortschritt. Sie fügt einem leeren Match keine erfundenen Punkte, Games, Statistiken oder Trainingswerte hinzu.</p></div></div>
 </section>
-<section id="rivalries"><h2>Gegner und Rivalitäten</h2><p class="section-subtitle">Wähle auf der Apple Watch einen gespeicherten Einzelgegner und erstelle automatisch eine private Head‑to‑Head-Bilanz.</p><div class="help"><div class="help-item"><strong>Wie lege ich einen Gegner an?</strong><p>Öffne Rivalitäten in Companion auf dem iPhone. Gib dort den vollständigen Namen und einen kurzen Namen für die Watch ein. Der Watch-Name ist auf 16 Zeichen begrenzt, damit er beim Einrichten und während des Matches gut lesbar bleibt. Standalone auf der Apple Watch kann anschließend synchronisierte Gegner auswählen, aber keine Profile anlegen oder bearbeiten.</p></div><div class="help-item"><strong>Wie lösche ich einen Gegner?</strong><p>Halte in Rivalitäten auf dem iPhone die Karte des Spielers gedrückt, wähle „Spieler löschen“ und bestätige. Zugeordnete Matches bleiben im Matchverlauf erhalten und sind anschließend keinem Spieler zugeordnet. Du kannst sie später einem anderen Spieler zuordnen.</p></div><div class="help-item"><strong>Wie wähle ich auf der Apple Watch einen Gegner aus?</strong><p>Wähle beim Einrichten Einzel, öffne Gegner und wähle Gast oder einen gespeicherten Spieler. Ein Gast-Match wird normal gespeichert, aber keiner Rivalität hinzugefügt. Bei einem Doppel wird dem Team-Match kein einzelner Gegner zugeordnet.</p></div><div class="help-item"><strong>Was gehört zur Head‑to‑Head-Bilanz?</strong><p>Berücksichtigt werden entschiedene Einzelmatches, die diesem Spieler zugeordnet sind. Abgeschlossene Matches und vorzeitig beendete Matches mit einer klar führenden Seite zählen; ein bei Gleichstand beendetes Match bleibt neutral. Wenn die Daten aufgezeichnet wurden, können außerdem Sätze, Games, Tie‑Breaks, Punkte, Aufschlag und Return, Breakbälle, Spielzeit, Trainingsdaten und alle gespeicherten Begegnungen angezeigt werden.</p></div><div class="help-item"><strong>Was bedeutet „Letzte 5 vs. gesamter Zeitraum“?</strong><p>Verglichen wird deine Match-Siegquote in den letzten fünf entschiedenen Begegnungen mit der Siegquote im gesamten ausgewählten Zeitraum. Gibt es weniger als fünf entschiedene Matches, werden die vorhandenen verwendet. Der Vergleich folgt dem Filter Gesamter Zeitraum, Dieses Jahr oder Letzte 30 Tage.</p></div><div class="help-item"><strong>Was ist ein Sieg nach verlorenem ersten Satz?</strong><p>Das ist ein entschiedenes Match, das du gewonnen hast, nachdem du den ersten abgeschlossenen Satz verloren hattest. „2 von 5“ bedeutet zwei solche Siege aus fünf passenden Matches, die mit einem verlorenen ersten Satz begonnen haben. Es ist keine Begrenzung der Versuche.</p></div><div class="help-item"><strong>Was bedeuten aktuelle Serie und beste Siegesserie?</strong><p>Die aktuelle Serie ist die jüngste ununterbrochene Folge entschiedener Siege oder Niederlagen. Die beste Siegesserie ist die längste ununterbrochene Folge gewonnener entschiedener Matches im ausgewählten Zeitraum.</p></div><div class="help-item"><strong>Kann ich ein älteres Match einem Spieler zuordnen?</strong><p>Ja. Öffne das gespeicherte Einzel auf dem iPhone, tippe im Bereich Gegner auf „Zuordnen“ und wähle den richtigen Spieler. Die Zuordnung lässt sich später ändern oder entfernen, ohne Ergebnis oder Statistiken zu verändern. Die Änderung wird an den Companion-Verlauf auf der gekoppelten Apple Watch und über die private iCloud-Synchronisierung an Standalone übertragen.</p></div><div class="help-item"><strong>Wie verhindert die App doppelte Spieler?</strong><p>Jeder Spieler besitzt eine feste interne Kennung. Beim Anlegen werden außerdem vereinheitlichte vollständige Namen und Watch-Namen geprüft. Die Synchronisierung verwendet die feste Kennung und Löschinformationen, damit auf einem anderen Gerät dasselbe Profil aktualisiert und nicht neu angelegt wird.</p></div><div class="help-item"><strong>Werden private Notizen geteilt?</strong><p>Nein. Eine private Notiz bleibt im Rivalitätsprofil und wird weder in Text noch in Bildkarten aufgenommen. Geteilte Karten verwenden den aktiven Zeitfilter und erscheinen immer in derselben Reihenfolge: Bilanz und letzte Begegnungen, Matchleistung, danach Muster und Trainingskontext.</p></div></div></section><section id="statistics">
+<section id="rivalries"><h2>Gegner und Rivalitäten</h2><p class="section-subtitle">Wählen Sie auf der Apple Watch einen gespeicherten Einzelgegner und erstellen Sie automatisch eine private Head‑to‑Head-Bilanz.</p><div class="help"><div class="help-item"><strong>Wie lege ich einen Gegner an?</strong><p>Öffnen Sie Rivalitäten in Companion auf dem iPhone. Geben Sie dort den vollständigen Namen und einen kurzen Namen für die Watch ein. Der Watch-Name ist auf 16 Zeichen begrenzt, damit er beim Einrichten und während des Matches gut lesbar bleibt. Standalone auf der Apple Watch kann anschließend synchronisierte Gegner auswählen, aber keine Profile anlegen oder bearbeiten.</p></div><div class="help-item"><strong>Wie lösche ich einen Gegner?</strong><p>Halten Sie in Rivalitäten auf dem iPhone die Karte des Spielers gedrückt, wählen Sie „Spieler löschen“ und bestätigen Sie. Zugeordnete Matches bleiben im Matchverlauf erhalten und sind anschließend keinem Spieler zugeordnet. Sie können sie später einem anderen Spieler zuordnen.</p></div><div class="help-item"><strong>Wie wähle ich auf der Apple Watch einen Gegner aus?</strong><p>Wählen Sie beim Einrichten Einzel, öffnen Sie Gegner und wählen Sie Gast oder einen gespeicherten Spieler. Ein Gast-Match wird normal gespeichert, aber keiner Rivalität hinzugefügt. Bei einem Doppel wird dem Team-Match kein einzelner Gegner zugeordnet.</p></div><div class="help-item"><strong>Was gehört zur Head‑to‑Head-Bilanz?</strong><p>Berücksichtigt werden entschiedene Einzelmatches, die diesem Spieler zugeordnet sind. Abgeschlossene Matches und vorzeitig beendete Matches mit einer klar führenden Seite zählen; ein bei Gleichstand beendetes Match bleibt neutral. Wenn die Daten aufgezeichnet wurden, können außerdem Sätze, Games, Tie‑Breaks, Punkte, Aufschlag und Return, Breakbälle, Spielzeit, Trainingsdaten und alle gespeicherten Begegnungen angezeigt werden.</p></div><div class="help-item"><strong>Was bedeutet „Letzte 5 vs. gesamter Zeitraum“?</strong><p>Verglichen wird Ihre Match-Siegquote in den letzten fünf entschiedenen Begegnungen mit der Siegquote im gesamten ausgewählten Zeitraum. Gibt es weniger als fünf entschiedene Matches, werden die vorhandenen verwendet. Der Vergleich folgt dem Filter Gesamter Zeitraum, Dieses Jahr oder Letzte 30 Tage.</p></div><div class="help-item"><strong>Was ist ein Sieg nach verlorenem ersten Satz?</strong><p>Das ist ein entschiedenes Match, das Sie gewonnen haben, nachdem Sie den ersten abgeschlossenen Satz verloren hatten. „2 von 5“ bedeutet zwei solche Siege aus fünf passenden Matches, die mit einem verlorenen ersten Satz begonnen haben. Es ist keine Begrenzung der Versuche.</p></div><div class="help-item"><strong>Was bedeuten aktuelle Serie und beste Siegesserie?</strong><p>Die aktuelle Serie ist die jüngste ununterbrochene Folgen Sie entschiedener Siege oder Niederlagen. Die beste Siegesserie ist die längste ununterbrochene Folgen Sie gewonnener entschiedener Matches im ausgewählten Zeitraum.</p></div><div class="help-item"><strong>Kann ich ein älteres Match einem Spieler zuordnen?</strong><p>Ja. Öffnen Sie das gespeicherte Einzel auf dem iPhone, tippen Sie im Bereich Gegner auf „Zuordnen“ und wählen Sie den richtigen Spieler. Die Zuordnung lässt sich später ändern oder entfernen, ohne Ergebnis oder Statistiken zu verändern. Die Änderung wird an den Companion-Verlauf auf der gekoppelten Apple Watch und über die private iCloud-Synchronisierung an Standalone übertragen.</p></div><div class="help-item"><strong>Wie verhindert die App doppelte Spieler?</strong><p>Jeder Spieler besitzt eine feste interne Kennung. Beim Anlegen werden außerdem vereinheitlichte vollständige Namen und Watch-Namen geprüft. Die Synchronisierung verwendet die feste Kennung und Löschinformationen, damit auf einem anderen Gerät dasselbe Profil aktualisiert und nicht neu angelegt wird.</p></div><div class="help-item"><strong>Werden private Notizen geteilt?</strong><p>Nein. Eine private Notiz bleibt im Rivalitätsprofil und wird weder in Text noch in Bildkarten aufgenommen. Geteilte Karten verwenden den aktiven Zeitfilter und erscheinen immer in derselben Reihenfolge: Bilanz und letzte Begegnungen, Matchleistung, danach Muster und Trainingskontext.</p></div></div></section><section id="statistics">
 <h2>Matchstatistiken verstehen</h2>
 <p class="section-subtitle">
-    Hier erfährst du, was die gespeicherten Werte bedeuten und wie sie entstehen.
+    Hier erfahren Sie, was die gespeicherten Werte bedeuten und wie sie entstehen.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Was sind Gesamtpunkte?</strong>
-<p>Sie zeigen, wie viele Punkte während des Matches erfasst wurden. Die Zusammenfassung trennt deine gewonnenen Punkte von den Punkten des Gegners.</p>
+<p>Sie zeigen, wie viele Punkte während des Matches erfasst wurden. Die Zusammenfassung trennt Ihre gewonnenen Punkte von den Punkten des Gegners.</p>
 </div>
 <div class="help-item">
 <strong>Was sind erfasste Games?</strong>
@@ -1360,7 +1406,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Was zeigen die Breakpoint-Statistiken?</strong>
-<p>Sie zeigen Breakpoints gegen dich und abgewehrte Breakpoints bei eigenem Aufschlag sowie Breakpoint-Chancen und verwandelte Breakpoints beim Return. Tie‑break-Punkte sind ausgeschlossen.</p>
+<p>Sie zeigen Breakpoints gegen Sie und abgewehrte Breakpoints bei eigenem Aufschlag sowie Breakpoint-Chancen und verwandelte Breakpoints beim Return. Tie‑break-Punkte sind ausgeschlossen.</p>
 </div>
 <div class="help-item">
 <strong>Werden Statistiken automatisch aktualisiert?</strong>
@@ -1376,17 +1422,17 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 </div>
 </section>
-<section id="companion-sync"><h2>Companion und iPhone synchronisieren</h2><p class="section-subtitle">Erfasse den Spielstand auf der Apple Watch und sieh dir anschließend den synchronisierten Matchverlauf, Ergebnisse, Statistiken und Trainingsdaten auf dem iPhone an.</p><div class="help"><div class="help-item"><strong>Wo richte ich Matches in Companion ein und erfasse Punkte?</strong><p>Match-Einrichtung und Live-Ergebnisanzeige bleiben auf der Apple Watch. Companion enthält die vollständige Watch-App und ergänzt eine iPhone-Ansicht, in der du gespeicherte Matches nach und zwischen deinen Spielsessions ansehen kannst.</p></div><div class="help-item"><strong>Was wird auf dem iPhone angezeigt?</strong><p>Die iPhone-App kann das neueste Ergebnis, den aktuellen und vollständigen Matchverlauf, Satz- und Tie‑break-Ergebnisse, Dauer, Punkte sowie Statistiken zu Aufschlag, Return, Breakpoints und Matchverlauf und verfügbare Trainingszusammenfassungen anzeigen.</p></div><div class="help-item"><strong>Wie wird der Matchverlauf synchronisiert?</strong><p>Companion nutzt zwei unabhängige Synchronisierungswege. Watch Connectivity kann ein gespeichertes Match direkt zwischen der gekoppelten Apple Watch und dem iPhone übertragen. Wenn beide Geräte verfügbar sind, ist dies meist der schnellste lokale Weg. CloudKit übernimmt unabhängig davon die dauerhafte iCloud-Synchronisierung und Wiederherstellung zwischen Standalone und Companion unter demselben Apple Account. Keiner der beiden Wege muss vor dem anderen abgeschlossen sein. Liefern beide dasselbe Match, behalten die Apps einen einzigen aktuellen Datensatz.</p></div><div class="help-item"><strong>Was soll ich tun, wenn ein Match nicht auf dem iPhone angezeigt wird?</strong><p>Prüfe, ob die richtige Apple Watch gekoppelt ist, halte beide Geräte in der Nähe und öffne Tennis Score Wizard auf Apple Watch und iPhone. Stelle außerdem sicher, dass beide Geräte den vorgesehenen Apple Account verwenden, und prüfe den iCloud-Status im Verlauf. Ein gespeichertes Match bleibt während der Wartezeit lokal geschützt und kann synchronisiert werden, sobald entweder die Verbindung zum gekoppelten Gerät oder iCloud verfügbar ist.</p></div><div class="help-item"><strong>Werden auch Trainingsdetails synchronisiert?</strong><p>Wenn Trainingsdaten verfügbar sind, kann Companion Matchdauer, durchschnittliche Herzfrequenz, maximale Herzfrequenz und aktive Energie zusammen mit dem gespeicherten Match auf beiden Geräten anzeigen.</p></div><div class="help-item"><strong>Was passiert, wenn ich den Matchverlauf lösche?</strong><p>Wenn du in Companion ein Match oder den gesamten Verlauf löschst, wird die Änderung zwischen iPhone und Apple Watch und, sobald verfügbar, über iCloud synchronisiert. Vor dem Löschen des gesamten Verlaufs fordert die App eine Bestätigung an.</p></div><div class="help-item"><strong>Erscheint ein später auf dem iPhone zugeordneter Gegner im Watch-Verlauf?</strong><p>Ja. Companion kann die aktualisierte Zuordnung direkt an die gekoppelte Apple Watch übertragen. Standalone erhält sie über die private iCloud-Synchronisierung, wenn dieselbe Apple-ID verwendet wird.</p></div></div></section>
-<section id="icloud-sync"><h2>iCloud-Synchronisierung und Wiederherstellung</h2><p class="section-subtitle">Synchronisiere gespeicherte Matches zwischen Standalone und Companion, ohne ein Tennis Score Wizard-Konto anzulegen.</p><div class="help"><div class="help-item"><strong>Was wird für die iCloud-Synchronisierung benötigt?</strong><p>Stelle sicher, dass Apple Watch und bei Companion auch das iPhone denselben Apple Account verwenden. Aktiviere iCloud Drive, stelle eine Internetverbindung bereit und gib der ersten Synchronisierung Zeit. Du kannst auch ohne iCloud weiterzählen.</p></div><div class="help-item"><strong>Können Standalone und Companion Matches austauschen?</strong><p>Ja. Beide Versionen verwenden denselben iCloud-Speicher für gespeicherte Matches. Mit demselben Apple Account kann ein in Standalone gespeichertes Match in Companion erscheinen und umgekehrt.</p></div><div class="help-item"><strong>Woran erkenne ich eine abgeschlossene Synchronisierung?</strong><p>Öffne den Verlauf und prüfe die iCloud-Zeile. <b>Synced</b> bedeutet, dass die letzte Synchronisierung erfolgreich abgeschlossen wurde, und zeigt Datum und Uhrzeit. <b>Syncing</b> bedeutet, dass die Synchronisierung läuft. <b>Waiting</b> mit <b>Saving</b> bedeutet, dass eine lokale Änderung sicher für iCloud vorgemerkt ist. <b>Sync paused</b> mit <b>Retry</b> bedeutet, dass der letzte Versuch nicht abgeschlossen werden konnte; tippe auf die Zeile, um es erneut zu versuchen.</p></div><div class="help-item"><strong>Was passiert, wenn ich meinen Apple Account wechsle?</strong><p>Jeder Apple Account hat einen eigenen privaten CloudKit-Matchverlauf. Die Verläufe verschiedener Accounts bleiben getrennt und werden nicht zusammengeführt. Erkennt die App einen Wechsel, zeigt sie den lokalen und den iCloud-Verlauf des aktuellen Apple Accounts an. Nach dem Zurückwechseln erscheint der Verlauf des vorherigen Accounts nach der Synchronisierung wieder. Bevor dessen lokaler Cache von diesem Gerät entfernt wird, bleiben noch nicht synchronisierte Matches in einer verschlüsselten Wiederherstellungskopie erhalten, die diesem Account zugeordnet ist. Sie werden nicht in den neuen Account hochgeladen. Ein Accountwechsel löscht außerdem keine Datensätze, die bereits in der iCloud-Datenbank eines der beiden Accounts gespeichert sind.</p></div><div class="help-item"><strong>Werden meine Matches nach einer Neuinstallation wiederhergestellt?</strong><p>Ja, wenn die Matches vor dem Entfernen der App erfolgreich synchronisiert wurden. Prüfe vorher, ob im Verlauf <b>Synced</b> angezeigt wird. Verwende nach der Neuinstallation denselben Apple Account, lasse iCloud Drive aktiviert, öffne die App und gib dem Download etwas Zeit.</p></div><div class="help-item"><strong>Löscht das Entfernen der App den iCloud-Verlauf?</strong><p>Nein. Durch das Entfernen der App werden bereits mit iCloud synchronisierte Matchdatensätze nicht automatisch gelöscht. Nach einer Neuinstallation können sie erneut geladen werden. Wenn du Matches in Tennis Score Wizard löschst, werden diese Löschungen synchronisiert, sobald iCloud verfügbar ist.</p></div><div class="help-item"><strong>Kann der Entwickler meine synchronisierten Matches sehen?</strong><p>Nein. CloudKit speichert synchronisierte Datensätze in der privaten Datenbank deines Apple Accounts. Standardmäßig kann nur dieser Benutzer auf die private Datenbank zugreifen.</p></div></div></section>
+<section id="companion-sync"><h2>Companion und iPhone synchronisieren</h2><p class="section-subtitle">Erfassen Sie den Spielstand auf der Apple Watch und sehen Sie sich anschließend den synchronisierten Matchverlauf, Ergebnisse, Statistiken und Trainingsdaten auf dem iPhone an.</p><div class="help"><div class="help-item"><strong>Wo richte ich Matches in Companion ein und erfassen Sie Punkte?</strong><p>Live-Matchsetup und laufende Punkte bleiben auf der Apple Watch. Companion auf dem iPhone erlaubt gespielte Ergebnisse, optionale Platzdetails, Matchansichten und geteilte Highlights. Der manuelle Eintrag ist keine Live-Anzeigetafel auf dem iPhone.</p></div><div class="help-item"><strong>Was wird auf dem iPhone angezeigt?</strong><p>Auf dem iPhone sehen Sie letztes Ergebnis und Verlauf, einschließlich manueller Matches, Satz- und Tie-Break-Stände, optionaler Platzdetails und belegbarer Highlights. Watch-Aufzeichnungen können zusätzlich Punkt-, Aufschlag-, Return-, Breakball- und Matchverlaufsstatistiken sowie Trainingszusammenfassungen enthalten.</p></div><div class="help-item"><strong>Wie wird der Matchverlauf synchronisiert?</strong><p>Companion nutzt zwei unabhängige Synchronisierungswege. Watch Connectivity kann ein gespeichertes Match direkt zwischen der gekoppelten Apple Watch und dem iPhone übertragen. Wenn beide Geräte verfügbar sind, ist dies meist der schnellste lokale Weg. CloudKit übernimmt unabhängig davon die dauerhafte iCloud-Synchronisierung und Wiederherstellung zwischen Standalone und Companion unter demselben Apple Account. Keiner der beiden Wege muss vor dem anderen abgeschlossen sein. Liefern beide dasselbe Match, behalten die Apps einen einzigen aktuellen Datensatz.</p></div><div class="help-item"><strong>Was soll ich tun, wenn ein Match nicht auf dem iPhone angezeigt wird?</strong><p>Prüfen Sie, ob die richtige Apple Watch gekoppelt ist, halten Sie beide Geräte in der Nähe und öffnen Sie Tennis Score Wizard auf Apple Watch und iPhone. Stellen Sie außerdem sicher, dass beide Geräte den vorgesehenen Apple Account verwenden, und prüfen Sie den iCloud-Status im Verlauf. Ein gespeichertes Match bleibt während der Wartezeit lokal geschützt und kann synchronisiert werden, sobald entweder die Verbindung zum gekoppelten Gerät oder iCloud verfügbar ist.</p></div><div class="help-item"><strong>Werden auch Trainingsdetails synchronisiert?</strong><p>Wenn Trainingsdaten verfügbar sind, kann Companion Matchdauer, durchschnittliche Herzfrequenz, maximale Herzfrequenz und aktive Energie zusammen mit dem gespeicherten Match auf beiden Geräten anzeigen.</p></div><div class="help-item"><strong>Was passiert, wenn ich den Matchverlauf löschen Sie?</strong><p>Wenn Sie in Companion ein Match oder den gesamten Verlauf löschen, wird die Änderung zwischen iPhone und Apple Watch und, sobald verfügbar, über iCloud synchronisiert. Vor dem Löschen des gesamten Verlaufs fordert die App eine Bestätigung an.</p></div><div class="help-item"><strong>Erscheint ein später auf dem iPhone zugeordneter Gegner im Watch-Verlauf?</strong><p>Ja. Companion kann die aktualisierte Zuordnung direkt an die gekoppelte Apple Watch übertragen. Standalone erhält sie über die private iCloud-Synchronisierung, wenn dieselbe Apple-ID verwendet wird.</p></div></div></section>
+<section id="icloud-sync"><h2>iCloud-Synchronisierung und Wiederherstellung</h2><p class="section-subtitle">Synchronisiere gespeicherte Matches zwischen Standalone und Companion, ohne ein Tennis Score Wizard-Konto anzulegen.</p><div class="help"><div class="help-item"><strong>Was wird für die iCloud-Synchronisierung benötigt?</strong><p>Stellen Sie sicher, dass Apple Watch und bei Companion auch das iPhone denselben Apple Account verwenden. Aktivieren Sie iCloud Drive, stellen Sie eine Internetverbindung bereit und geben Sie der ersten Synchronisierung Zeit. Sie können auch ohne iCloud weiterzählen.</p></div><div class="help-item"><strong>Können Standalone und Companion Matches austauschen?</strong><p>Ja. Beide Versionen verwenden denselben iCloud-Speicher für gespeicherte Matches. Mit demselben Apple Account kann ein in Standalone gespeichertes Match in Companion erscheinen und umgekehrt.</p></div><div class="help-item"><strong>Woran erkenne ich eine abgeschlossene Synchronisierung?</strong><p>Öffnen Sie den Verlauf und prüfen Sie die iCloud-Zeile. <b>Synced</b> bedeutet, dass die letzte Synchronisierung erfolgreich abgeschlossen wurde, und zeigt Datum und Uhrzeit. <b>Syncing</b> bedeutet, dass die Synchronisierung läuft. <b>Waiting</b> mit <b>Saving</b> bedeutet, dass eine lokale Änderung sicher für iCloud vorgemerkt ist. <b>Sync paused</b> mit <b>Retry</b> bedeutet, dass der letzte Versuch nicht abgeschlossen werden konnte; tippen Sie auf die Zeile, um es erneut zu versuchen.</p></div><div class="help-item"><strong>Was passiert, wenn ich meinen Apple Account wechseln Sie?</strong><p>Jeder Apple Account hat einen eigenen privaten CloudKit-Matchverlauf. Die Verläufe verschiedener Accounts bleiben getrennt und werden nicht zusammengeführt. Erkennt die App einen Wechsel, zeigt sie den lokalen und den iCloud-Verlauf des aktuellen Apple Accounts an. Nach dem Zurückwechseln erscheint der Verlauf des vorherigen Accounts nach der Synchronisierung wieder. Bevor dessen lokaler Cache von diesem Gerät entfernt wird, bleiben noch nicht synchronisierte Matches in einer verschlüsselten Wiederherstellungskopie erhalten, die diesem Account zugeordnet ist. Sie werden nicht in den neuen Account hochgeladen. Ein Accountwechsel löscht außerdem keine Datensätze, die bereits in der iCloud-Datenbank eines der beiden Accounts gespeichert sind.</p></div><div class="help-item"><strong>Werden meine Matches nach einer Neuinstallation wiederhergestellt?</strong><p>Ja, wenn die Matches vor dem Entfernen der App erfolgreich synchronisiert wurden. Prüfen Sie vorher, ob im Verlauf <b>Synced</b> angezeigt wird. Verwenden Sie nach der Neuinstallation denselben Apple Account, lassen Sie iCloud Drive aktiviert, öffnen Sie die App und geben Sie dem Download etwas Zeit.</p></div><div class="help-item"><strong>Löscht das Entfernen der App den iCloud-Verlauf?</strong><p>Nein. Durch das Entfernen der App werden bereits mit iCloud synchronisierte Matchdatensätze nicht automatisch gelöscht. Nach einer Neuinstallation können sie erneut geladen werden. Wenn Sie Matches in Tennis Score Wizard löschen, werden diese Löschungen synchronisiert, sobald iCloud verfügbar ist.</p></div><div class="help-item"><strong>Kann der Entwickler meine synchronisierten Matches sehen?</strong><p>Nein. CloudKit speichert synchronisierte Datensätze in der privaten Datenbank Ihres Apple Accounts. Standardmäßig kann nur dieser Benutzer auf die private Datenbank zugreifen.</p></div></div></section>
 <section id="health-workouts">
 <h2>Health und Trainings</h2>
 <p class="section-subtitle">
-    Zeichne dein Tennistraining auf und verstehe die Gesundheitswerte nach dem Match.
+    Zeichnen Sie Ihr Tennistraining auf und verstehen Sie die Gesundheitswerte nach dem Match.
   </p>
 <div class="help">
 <div class="help-item">
 <strong>Wie zeichne ich ein Tennistraining auf?</strong>
-<p>Aktiviere bei der Einrichtung „Training aufzeichnen“ und erteile die erforderliche Berechtigung für Health-Daten. Das Training beginnt mit dem Match und endet, wenn das Match abgeschlossen oder gestoppt wird.</p>
+<p>Aktivieren Sie bei der Einrichtung „Training aufzeichnen“ und erteilen Sie die erforderliche Berechtigung für Health-Daten. Das Training beginnt mit dem Match und endet, wenn das Match abgeschlossen oder gestoppt wird.</p>
 </div>
 <div class="help-item">
 <strong>Wie funktioniert die Live-Herzfrequenz?</strong>
@@ -1406,7 +1452,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Warum erscheinen Trainingswerte manchmal verzögert?</strong>
-<p>Einige Messwerte werden von Health erst nach dem Trainingsende finalisiert. Warte kurz auf Verarbeitung und Synchronisierung und öffne das abgeschlossene Match danach erneut.</p>
+<p>Einige Messwerte werden von Health erst nach dem Trainingsende finalisiert. Warten Sie kurz auf Verarbeitung und Synchronisierung und öffnen Sie das abgeschlossene Match danach erneut.</p>
 </div>
 <div class="help-item">
 <strong>Warum fehlt ein Gesundheitswert?</strong>
@@ -1420,42 +1466,40 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </section>
 <section id="match-history">
 <h2>Matchverlauf</h2>
-<p class="section-subtitle">
-    Lies abgeschlossene und gestoppte Ergebnisse in kompakter Tennisnotation.
-  </p>
-<div class="help">
+<p class="section-subtitle">Filtern Sie den Verlauf nach Jahr und Monat sowie nach Einzel oder Doppel. Ältere Einträge werden beim Durchblättern nachgeladen, während der gesamte gespeicherte Verlauf erhalten bleibt.</p>
+<div class="help"><div class="help-item"><strong>Wie finde ich ein älteres Match auf der Watch?</strong><p>Tippen Sie in History auf Period, wählen Sie ein Jahr und dann einen Monat oder Entire year für das ganze Jahr. Angeboten werden nur Jahre und Monate mit gespeicherten Matches. All dates setzt den Zeitraum zurück; All, 1v1 und 2v2 filtern den Matchtyp. Das funktioniert in Companion und Standalone.</p></div><div class="help-item"><strong>Ist der Watch-Verlauf auf 50 Matches begrenzt?</strong><p>Nein. Zunächst erscheinen 50 passende Einträge, danach werden ältere Matches in Gruppen von 50 nachgeladen. Sie können auch Load older matches antippen. Die Zusammenfassung berücksichtigt alle passenden Einträge, nicht nur die erste Seite. Die Zeitraumliste basiert auf dem gesamten gespeicherten Verlauf; ältere Matches werden nicht gelöscht.</p></div>
 <div class="help-item">
 <strong>Was bedeuten Win und Loss?</strong>
-<p>Win bedeutet, dass du das abgeschlossene Match nach Sätzen gewonnen hast. Loss bedeutet, dass der Gegner das abgeschlossene Match nach Sätzen gewonnen hat.</p>
+<p>Win bedeutet, dass Sie das abgeschlossene Match nach Sätzen gewonnen haben. Loss bedeutet, dass der Gegner das abgeschlossene Match nach Sätzen gewonnen hat.</p>
 </div>
 <div class="help-item">
 <strong>Was bedeutet Stopped?</strong>
 <p>Das Match wurde vor seinem regulären Ende gespeichert. Der bis dahin erfasste echte Matchstand bleibt erhalten. Ein gestopptes Match mit einem Führenden zählt für Matchbilanz, Siegquote und Serien; bei Gleichstand bleibt es neutral.</p>
 </div>
-<div class="help-item"><strong>Was bedeuten S1 bis S5?</strong><p>S1 bis S5 stehen für Satz 1 bis Satz 5. Je nach Match werden zwei, drei, vier oder fünf Satzspalten angezeigt. „S1 6–3“ bedeutet zum Beispiel, dass der erste Satz mit 6–3 endete.</p></div>
+<div class="help-item"><strong>Was bedeuten S1 bis S5?</strong><p>S1 bis S5 stehen für Satz 1 bis Satz 5. Je nach Match zeigt ein beendetes oder gestopptes Ergebnis ein bis fünf reguläre Sätze. S1 <span class="score-nowrap">6–3</span> bedeutet beispielsweise, dass der erste Satz sechs Spiele zu drei endete.</p></div>
 <div class="help-item">
-<strong>Was bedeutet TB 7–3?</strong>
-<p>TB zeigt die Tie‑Break-Punkte innerhalb des Satzes. „7–6 · TB 7–3“ bedeutet, dass der Satz 7–6 und der Tie‑Break 7–3 endete.</p>
-</div><div class="help-item"><strong>Was bedeutet 7–6<sup>(6)</sup>?</strong><p>Die kleine Zahl in Klammern ist der Tie‑break-Punktestand des unterlegenen Spielers. 7–6<sup>(6)</sup> bedeutet, dass der Tie‑break 8–6 gewonnen wurde. In den Matchdetails wird der vollständige Tie‑break-Punktestand weiterhin ausdrücklich angezeigt.</p></div>
+<strong>Was bedeutet TB <span class="score-nowrap">7–3</span>?</strong>
+<p>TB zeigt die Tie‑Break-Punkte innerhalb des Satzes. „<span class="score-nowrap">7–6</span> · TB <span class="score-nowrap">7–3</span>“ bedeutet, dass der Satz <span class="score-nowrap">7–6</span> und der Tie‑Break <span class="score-nowrap">7–3</span> endete.</p>
+</div><div class="help-item"><strong>Was bedeutet <span class="score-nowrap">7–6</span><sup>(6)</sup>?</strong><p>In der kompakten Ergebniszeile ist die kleine Klammerzahl die Tie-Break-Punktzahl des Verlierers. <span class="score-nowrap">7–6</span><sup>(6)</sup> bedeutet einen mit <span class="score-nowrap">8–6</span> gewonnenen Tie-Break. Die Satztabelle kann beide Punktzahlen zeigen, sofern aufgezeichnet.</p></div>
 <div class="help-item">
 <strong>Wie werden gestoppte Matches bewertet?</strong>
-<p>Die App vergleicht zuerst abgeschlossene Sätze, dann gespeicherte Games und zuletzt verfügbare Tie‑Break-Punkte. Führt eine Seite, zählt das Ergebnis in der Statistik als Sieg oder Niederlage, während das Match weiterhin als „Gestoppt“ gekennzeichnet bleibt. Bei Gleichstand ist das Ergebnis neutral.</p>
+<p>Zuerst werden gewonnene abgeschlossene Sätze verglichen. Bei Gleichstand folgen die Spiele im laufenden, offenen Satz, dann aufgezeichnete Tie-Break- oder Spielpunkte. Spiele früherer Sätze werden nicht zusammengezählt, um den Führenden zu bestimmen. Zwischen Sätzen ist das Match bei ausgeglichenen Satzgewinnen unentschieden. Ein klarer Führender zählt in der Statistik als Sieger beziehungsweise Verlierer; die Kennzeichnung als gestoppt bleibt.</p>
 </div>
 <div class="help-item">
 <strong>Was passiert mit einem unfertigen Satz?</strong>
-<p>Wenn der laufende Satz bereits Fortschritt enthält, wird er zusammen mit dem Match gespeichert, etwa als „S3 0–1“.</p>
+<p>Wenn der laufende Satz bereits Fortschritt enthält, wird er zusammen mit dem Match gespeichert, etwa als „S3 <span class="score-nowrap">0–1</span>“.</p>
 </div>
-<div class="help-item"><strong>Welche Daten werden mit einem Match gespeichert?</strong><p>Der Verlauf kann Spielformat, Ergebnis, Satz- und Tie‑Break-Stände, Punkte, Dauer, Start- und Endzeit, Gegnerzuordnung, Matchstatistiken und verfügbare Trainingswerte enthalten.</p></div>
+<div class="help-item"><strong>Welche Daten werden mit einem Match gespeichert?</strong><p>Ein Match kann Format, Ergebnis, Satz- und Tie-Break-Stände, Zeitangaben und Gegnerzuordnung enthalten. Manuelle Einträge sind entsprechend markiert. Auf dem iPhone können Sie Platzbedingungen, Ort und private Notiz ergänzen. Punkt- und Trainingsstatistiken erscheinen nur, wenn sie aufgezeichnet wurden, nicht aus einem manuellen Ergebnis rekonstruiert.</p></div>
 <div class="help-item">
 <strong>Kann ich ein gespeichertes Match löschen?</strong>
-<p>Ja. Verwende die Löschaktion im Matchverlauf und bestätige sie. Dadurch wird der gespeicherte Eintrag aus der App entfernt.</p>
+<p>Ja. Verwenden Sie die Löschaktion im Matchverlauf und bestätigen Sie sie. Dadurch wird der gespeicherte Eintrag aus der App entfernt.</p>
 </div>
-<div class="help-item"><strong>Wie erscheinen eigene Formate im Verlauf?</strong><p>Der Verlauf zeigt den Namen des Formats und die entscheidenden Regeln: die Anzahl der Games, den nötigen Vorsprung sowie Beginn und Punkteziel des Tie‑Breaks. In der Detailansicht steht die vollständige Konfiguration.</p></div><div class="help-item"><strong>Wie werden Tie‑Breaks in geteilten Ergebnissen dargestellt?</strong><p>Satz-Tie‑Breaks erscheinen kompakt hochgestellt, ohne Größe oder Abstand des eigentlichen Satzergebnisses zu verändern. Ein entscheidender Match‑Tie‑Break steht separat in eckigen Klammern, zum Beispiel [10–7].</p></div></div>
+<div class="help-item"><strong>Wie erscheinen eigene Formate im Verlauf?</strong><p>Tie-Break-Punkte stehen neben dem Spielstand. Bei zweistelligen Spielzahlen können sich die Zellen verbreitern, damit die Zahlen lesbar bleiben. Ein entscheidender Match-Tie-Break erscheint separat in Klammern, etwa [<span class="score-nowrap">10–7</span>]. Geteilter Text enthält das vollständige Ergebnis ebenfalls gut lesbar.</p></div><div class="help-item"><strong>Wie werden Tie‑Breaks in geteilten Ergebnissen dargestellt?</strong><p>Satz-Tie‑Breaks erscheinen kompakt hochgestellt, ohne Größe oder Abstand des eigentlichen Satzergebnisses zu verändern. Ein entscheidender Match‑Tie‑Break steht separat in eckigen Klammern, zum Beispiel [<span class="score-nowrap">10–7</span>].</p></div></div>
 </section>
-<section id="support-development"><h2>Freiwillige Unterstützung der Entwicklung</h2><p class="section-subtitle">Eine einmalige Unterstützung hilft bei der Weiterentwicklung, schaltet aber keine Funktionen frei und verändert die App nicht.</p><div class="help"><div class="help-item"><strong>Schaltet ein Trinkgeld etwas frei?</strong><p>Nein. Apple-Trinkgelder und Unterstützung per Kryptowährung sind freiwillig. Alle Funktionen bleiben entsprechend dem gekauften Produkt verfügbar, unabhängig davon, ob du etwas spendest.</p></div><div class="help-item"><strong>Wie funktioniert ein Apple-Trinkgeld?</strong><p>Wähle unter Info → Entwicklung unterstützen einen einmaligen Betrag und bestätige ihn im Kaufdialog von Apple. Apple verarbeitet die Zahlung mit der Zahlungsmethode deines App-Store-Accounts.</p></div><div class="help-item"><strong>Was sollte ich bei einer Unterstützung per Kryptowährung prüfen?</strong><p>Prüfe vor dem Senden Währung, Netzwerk und die vollständige Zieladresse in deiner Wallet. Blockchain-Übertragungen sind normalerweise nicht rückgängig zu machen. Tennis Score Wizard verknüpft keine Match-, Rivalitäts-, Trainings- oder Health-Daten mit der Transaktion.</p></div></div></section><section id="complications-help">
+<section id="support-development"><h2>Freiwillige Unterstützung der Entwicklung</h2><p class="section-subtitle">Eine einmalige Unterstützung hilft bei der Weiterentwicklung, schaltet aber keine Funktionen frei und verändert die App nicht.</p><div class="help"><div class="help-item"><strong>Schaltet ein Trinkgeld etwas frei?</strong><p>Nein. Apple-Trinkgelder und Unterstützung per Kryptowährung sind freiwillig. Alle Funktionen bleiben entsprechend dem gekauften Produkt verfügbar, unabhängig davon, ob Sie etwas spenden.</p></div><div class="help-item"><strong>Wie funktioniert ein Apple-Trinkgeld?</strong><p>Wählen Sie unter Info → Entwicklung unterstützen einen einmaligen Betrag und bestätigen Sie ihn im Kaufdialog von Apple. Apple verarbeitet die Zahlung mit der Zahlungsmethode Ihres App-Store-Accounts.</p></div><div class="help-item"><strong>Was sollte ich bei einer Unterstützung per Kryptowährung prüfen?</strong><p>Prüfen Sie vor dem Senden Währung, Netzwerk und die vollständige Zieladresse in Ihrer Wallet. Blockchain-Übertragungen sind normalerweise nicht rückgängig zu machen. Tennis Score Wizard verknüpft keine Match-, Rivalitäts-, Trainings- oder Health-Daten mit der Transaktion.</p></div></div></section><section id="complications-help">
 <h2>Apple-Watch-Zifferblatt-Komplikationen</h2>
 <p class="section-subtitle">
-    Öffne Tennis Score Wizard direkt über ein unterstütztes Zifferblatt.
+    Öffnen Sie Tennis Score Wizard direkt über ein unterstütztes Zifferblatt.
   </p>
 <div class="help">
 <div class="help-item">
@@ -1468,11 +1512,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Wie füge ich die Komplikation hinzu?</strong>
-<p>Bearbeite ein kompatibles Zifferblatt auf der Apple Watch oder in der Watch-App auf dem iPhone, wähle eine unterstützte Position und anschließend Tennis Score Wizard.</p>
+<p>Bearbeiten Sie ein kompatibles Zifferblatt auf der Apple Watch oder in der Watch-App auf dem iPhone, wählen Sie eine unterstützte Position und anschließend Tennis Score Wizard.</p>
 </div>
 <div class="help-item">
 <strong>Warum finde ich die Komplikation nicht?</strong>
-<p>Prüfe, ob die App auf der Apple Watch installiert ist und ob die ausgewählte Position eine unterstützte Komplikationsfamilie verwendet. Die verfügbaren Positionen unterscheiden sich je nach Zifferblatt.</p>
+<p>Prüfen Sie, ob die App auf der Apple Watch installiert ist und ob die ausgewählte Position eine unterstützte Komplikationsfamilie verwendet. Die verfügbaren Positionen unterscheiden sich je nach Zifferblatt.</p>
 </div>
 <div class="help-item">
 <strong>Warum sieht sie auf einem anderen Zifferblatt anders aus?</strong>
@@ -1488,35 +1532,35 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="help">
 <div class="help-item">
 <strong>Die Live-Herzfrequenz wird nicht angezeigt.</strong>
-<p>Prüfe, ob „Training aufzeichnen“ aktiviert, Health autorisiert und die Uhr sicher am Handgelenk getragen wird. Ein Wert erscheint nur, wenn die Apple Watch einen Messwert liefert.</p>
+<p>Prüfen Sie, ob „Training aufzeichnen“ aktiviert, Health autorisiert und die Uhr sicher am Handgelenk getragen wird. Ein Wert erscheint nur, wenn die Apple Watch einen Messwert liefert.</p>
 </div>
 <div class="help-item">
 <strong>Das Training erscheint nicht in der Health-App.</strong>
-<p>Warte kurz auf die Verarbeitung, prüfe die Health-Berechtigungen und ob die Trainingsaufzeichnung aktiviert war. Stelle außerdem sicher, dass das Match abgeschlossen oder gestoppt wurde.</p>
+<p>Warten Sie kurz auf die Verarbeitung, prüfen Sie die Health-Berechtigungen und ob die Trainingsaufzeichnung aktiviert war. Stellen Sie außerdem sicher, dass das Match abgeschlossen oder gestoppt wurde.</p>
 </div>
 <div class="help-item">
 <strong>Durchschnittliche Herzfrequenz, maximale Herzfrequenz oder aktive Energie fehlen.</strong>
-<p>Öffne das abgeschlossene Match erneut, nachdem Health Zeit zur Finalisierung hatte. Fehlen ausreichende Ausgangsdaten, kann ein Wert weiterhin nicht verfügbar sein.</p>
+<p>Öffnen Sie das abgeschlossene Match erneut, nachdem Health Zeit zur Finalisierung hatte. Fehlen ausreichende Ausgangsdaten, kann ein Wert weiterhin nicht verfügbar sein.</p>
 </div>
 <div class="help-item">
 <strong>Der angezeigte Aufschläger ist falsch.</strong>
-<p>Öffne das Menü und verwende „Aufschläger wechseln“. Dadurch wird die Aufschlagseite korrigiert, ohne den Spielstand zu ändern.</p>
+<p>Öffnen Sie das Menü und verwenden Sie „Aufschläger wechseln“. Dadurch wird die Aufschlagseite korrigiert, ohne den Spielstand zu ändern.</p>
 </div>
 <div class="help-item">
 <strong>Ich habe den falschen Punkt eingegeben.</strong>
-<p>Verwende Rückgängig. Dadurch wird der Zustand vor dem letzten Punkt einschließlich Spielstand, Aufschläger, Tie‑Break und Statistiken wiederhergestellt.</p>
+<p>Verwenden Sie Rückgängig. Dadurch wird der Zustand vor dem letzten Punkt einschließlich Spielstand, Aufschläger, Tie‑Break und Statistiken wiederhergestellt.</p>
 </div>
 <div class="help-item">
 <strong>Die Komplikation ist auf meinem Zifferblatt nicht verfügbar.</strong>
 <p>Probiere eine kreisförmige Position oder eine Eckposition. Nicht jede Position auf jedem Zifferblatt unterstützt dieselbe Art von Komplikation.</p>
 </div>
-<div class="help-item"><strong>Bleibt der Verlauf nach einer Neuinstallation erhalten?</strong><p>Öffne zuerst den Verlauf und prüfe, ob in der iCloud-Zeile <b>Synced</b> steht. Verwende nach der Neuinstallation denselben Apple Account mit aktiviertem iCloud Drive und gib der Wiederherstellung etwas Zeit. Matches ohne abgeschlossene iCloud-Synchronisierung bleiben nur auf dem ursprünglichen Gerät.</p></div><div class="help-item"><strong>Im Verlauf steht Waiting, Saving oder Sync paused mit Retry.</strong><p><b>Waiting</b> mit <b>Saving</b> bedeutet, dass eine lokale Änderung vorgemerkt ist und hochgeladen werden kann, sobald iCloud verfügbar ist. Prüfe bei <b>Sync paused</b> mit <b>Retry</b>, ob das Gerät beim vorgesehenen Apple Account angemeldet, iCloud Drive aktiviert, eine Netzwerkverbindung verfügbar und der iCloud-Speicher nicht voll ist. Tippe anschließend auf die Statuszeile. Lokale Matches werden nicht gelöscht, nur weil iCloud nicht verfügbar ist.</p></div>
+<div class="help-item"><strong>Bleibt der Verlauf nach einer Neuinstallation erhalten?</strong><p>Öffnen Sie zuerst den Verlauf und prüfen Sie, ob in der iCloud-Zeile <b>Synced</b> steht. Verwenden Sie nach der Neuinstallation denselben Apple Account mit aktiviertem iCloud Drive und geben Sie der Wiederherstellung etwas Zeit. Matches ohne abgeschlossene iCloud-Synchronisierung bleiben nur auf dem ursprünglichen Gerät.</p></div><div class="help-item"><strong>Im Verlauf steht Waiting, Saving oder Sync paused mit Retry.</strong><p><b>Waiting</b> mit <b>Saving</b> bedeutet, dass eine lokale Änderung vorgemerkt ist und hochgeladen werden kann, sobald iCloud verfügbar ist. Prüfen Sie bei <b>Sync paused</b> mit <b>Retry</b>, ob das Gerät beim vorgesehenen Apple Account angemeldet, iCloud Drive aktiviert, eine Netzwerkverbindung verfügbar und der iCloud-Speicher nicht voll ist. Tippen Sie anschließend auf die Statuszeile. Lokale Matches werden nicht gelöscht, nur weil iCloud nicht verfügbar ist.</p></div>
 </div>
 </section>
 <section id="contact">
 <h2>Support</h2>
 <div class="support-card">
-<h3>Brauchst du Hilfe oder möchtest du eine Funktion vorschlagen?</h3>
+<h3>Brauchen Sie Hilfe oder möchten Sie eine Funktion vorschlagen?</h3>
 <p>
       Kontakt:
       <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
