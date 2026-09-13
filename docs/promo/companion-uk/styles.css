@@ -250,6 +250,10 @@ h3 { font-size: 22px; line-height: 1.25; letter-spacing: -.025em; margin: 0 0 12
 .screens figure { min-width: 0; }
 .media-note { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 20px 0 0; }
 .essentials { margin-top: 100px; }
+.essentials article { display: flex; flex-direction: column; }
+.essential-preview { display: flex; align-items: center; justify-content: center; min-width: 0; height: 270px; margin-top: auto; padding-top: 28px; border-radius: 18px; }
+.essential-preview img { display: block; width: 180px; max-width: 100%; height: auto; max-height: 242px; object-fit: contain; border-radius: 18px; }
+.essential-preview.sync-preview img { width: 100%; max-width: 360px; }
 .faq { margin-bottom: 100px; }
 .faq details { border-top: 1px solid var(--line); padding: 22px 0; }
 .faq details:last-child { border-bottom: 1px solid var(--line); }
