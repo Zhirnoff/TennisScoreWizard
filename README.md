@@ -5,7 +5,7 @@ This repository contains the public website, Help Center, Privacy Policy, releas
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
 - **Pro** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
 
-This branch prepares the website for **Pro 1.6 (54)** and **Standalone 1.9 (35)**. Manual played matches and editing, optional court context, expanded Match Highlights, richer sharing and Watch history filters are covered in all ten languages. This is an unpublished branch; public release status has not been verified.
+This website covers **Pro 1.6 (56)** and **Standalone 1.9 (37)**, approved by Apple. Manual played matches and editing, optional court context, expanded Match Highlights, richer sharing and Watch history filters are covered in all ten languages. The website release was authorized on 15 September 2026; App Store release controls remain with the developer.
 
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
@@ -23,11 +23,11 @@ The GitHub Pages site is stored in `docs/`:
 
 The site currently supports English, German, Spanish, French, Italian, Japanese, Korean, Russian, Turkish, and Simplified Chinese.
 
-## Coordinated release preparation
+## Coordinated release
 
 - Branch: `feature/website-companion-1-6-standalone-1-9-en`.
-- The user reported uploading earlier archives to App Store Connect. Builds 54 / 35 were prepared on 12 September after the Entire year wording check; their upload, approval and public availability have not been verified.
-- Keep this multilingual draft unmerged and unpublished until release is confirmed. Public-facing pages use the normal site layout, without preview banners or extra release navigation.
+- Approved archive baselines: Pro 1.6 (56), commit `1eb6f20`; Standalone 1.9 (37), commit `e1c8fc5`. Earlier screenshot and test baselines are retained in the release record.
+- Public-facing pages use the normal site layout, without preview banners or extra release navigation. Preserve the separately published UK promo design and assets when merging release work.
 - Updated the landing page, Product Updates, Help and factual Privacy disclosures in all ten languages, plus the existing English UK campaign page. Product Updates stays text-only; historical entries are retained. Screenshots and the complete Match Highlights catalog belong on the main page.
 - Shared update styles and navigation behavior: `docs/release-1-6-en.css` and `docs/navigation-en.js`, now loaded by all ten languages. The filenames retain their original English preparation suffix.
 - New original app screenshots: `docs/assets/release-1-6-en/`. See [asset provenance and release checklist](RELEASE-1.6-EN.md).

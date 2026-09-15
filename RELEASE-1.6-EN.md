@@ -1,10 +1,12 @@
-# Website release preparation — Pro 1.6 / Standalone 1.9
+# Website release — Pro 1.6 / Standalone 1.9
 
 Prepared 10 September 2026 on `feature/website-companion-1-6-standalone-1-9-en`.
 
 ## Release gate
 
-This is a multilingual draft on a release-preparation branch, not a published announcement. The initial English changes were translated on 11 September; the manual-editing and Watch-history follow-up was extended to the other nine languages on 12 September. The user reported uploading earlier archives to App Store Connect; Apple approval and public availability have not been verified. Do not merge into `main` or publish until the user confirms the release and approves the website update.
+The user confirmed Apple approval for both products and authorized merging and publishing the multilingual website on 15 September 2026. Approved archive baselines are Pro 1.6 (56), commit `1eb6f20`, and Standalone 1.9 (37), commit `e1c8fc5`. Standalone was verified as Ready for Distribution; Pro was initially Pending Developer Release. The developer retains control of App Store publication. The historical preparation and QA entries below describe their respective dates, not the current release gate.
+
+The release merge preserves the separately published UK promo design, updated Pro hero artwork, authentic screenshots and £7.99 price. Pro taglines in all ten website languages and the UK promo now match the feature-focused subtitle policy introduced after App Review. Analytics and existing campaign URLs remain intact.
 
 - Initial screenshot baseline: Pro 1.6 (52), commit `a66bb6db2b2ac196656d8d46286a4ff028e8af88`, and Standalone 1.9 (33), commit `8282f89cb371b2230778bda03117ecafad61dbe0`.
 - English follow-up baseline: Pro 1.6 (53) and Standalone 1.9 (34), prepared on 11 September after prerelease checks. On 12 September, after checking Entire year in both apps, the archive build numbers were increased to Pro 1.6 (54) and Standalone 1.9 (35). The older commits above do not include these later changes. Build preparation is not evidence of an archive upload, Apple approval or public availability.
