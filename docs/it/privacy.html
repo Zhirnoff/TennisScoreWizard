@@ -660,6 +660,48 @@
 }
 
 /* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+
+/* Localized privacy titles can be substantially longer than the English title. */
+@media (max-width: 640px) {
+  .privacy-hero h1 {
+    max-width: 100%;
+    font-size: clamp(36px, 9vw, 46px);
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+}
 </style>
 <link href="../release-1-1.css" rel="stylesheet"/>
 <link rel="stylesheet" href="../release-1-6-en.css?v=20260911-i18n">
@@ -715,6 +757,7 @@
 <p>Condividendo l’immagine della partita vengono incluse condizioni del campo e luogo inseriti. Le note private di partita e rivalità sono escluse. Controlli l’immagine prima dell’invio: le informazioni condivise saranno poi trattate dall’app o servizio di destinazione.</p>
 </section>
 
+<section class="privacy-section" id="history-files-privacy"><h2>Punti salvati e file della cronologia</h2><p>Le nuove partite registrate possono conservare la sequenza dei punti usata da Match Flow. Viene salvata con la partita e può seguire gli stessi percorsi di sincronizzazione privata degli altri dati. I punti mancanti delle vecchie partite o dei risultati inseriti manualmente non vengono ricreati. In Pro può esportare un report o un backup della cronologia. Il file viene creato sul suo dispositivo ed è condiviso solo con la destinazione che sceglie. Lo controlli prima di condividerlo; l’app o il servizio di destinazione tratterà poi la copia secondo le proprie condizioni.</p></section>
 <section class="privacy-section" id="website-analytics"><h2>Statistiche del sito</h2><p>Questo sito usa GoatCounter per misurare visite, fonti di traffico, posizioni approssimative, browser, lingue, dimensioni dello schermo e clic sui link all’App Store. GoatCounter elabora gli indirizzi IP per stimare la posizione e riconoscere le visite ripetute per un massimo di otto ore; non li conserva nel database delle statistiche. Usiamo report aggregati, senza cookie di tracciamento né registrazioni delle singole visualizzazioni. Questa analisi del sito non riceve dati dalle app, come partite, profili dei giocatori, note o dati di Salute.</p><p><a href="https://www.goatcounter.com/help/privacy" target="_blank" rel="noopener noreferrer">Informativa sulla privacy di GoatCounter</a> · <a href="#toggle-goatcounter">Escluda o includa di nuovo questo browser</a></p></section>
 <section class="privacy-section">
 <h2>Raccolta dei dati</h2>

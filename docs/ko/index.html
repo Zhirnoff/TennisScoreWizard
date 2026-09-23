@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Tennis Score Wizard — Apple Watch와 iPhone용 테니스 스코어</title>
-<meta content="iPhone에서 지난 경기를 추가하고 수정하세요. Apple Watch 기록을 연도와 월로 필터링하고, 코트 정보를 저장하고 경기 하이라이트를 공유할 수 있습니다." name="description"/>
+<meta content="Apple Watch에서 테니스 점수를 기록하세요. Pro의 Match Flow와 시계의 Momentum으로 경기를 돌아보고 기록을 보고서나 백업으로 저장할 수 있습니다." name="description"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/ko/" rel="canonical"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/" hreflang="en" rel="alternate"/>
 <link href="https://zhirnoff.github.io/TennisScoreWizard/de/" hreflang="de" rel="alternate"/>
@@ -22,13 +22,13 @@
 <meta content="website" property="og:type"/>
 <meta content="Tennis Score Wizard" property="og:site_name"/>
 <meta content="Tennis Score Wizard — Apple Watch와 iPhone용 테니스 스코어" property="og:title"/>
-<meta content="iPhone에서 지난 경기를 추가하고 수정하세요. Apple Watch 기록을 연도와 월로 필터링하고, 코트 정보를 저장하고 경기 하이라이트를 공유할 수 있습니다." property="og:description"/>
+<meta content="Apple Watch에서 테니스 점수를 기록하세요. Pro의 Match Flow와 시계의 Momentum으로 경기를 돌아보고 기록을 보고서나 백업으로 저장할 수 있습니다." property="og:description"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/ko/" property="og:url"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
 <meta content="Tennis Score Wizard 앱 아이콘" property="og:image:alt"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="Tennis Score Wizard — Apple Watch와 iPhone용 테니스 스코어" name="twitter:title"/>
-<meta content="iPhone에서 지난 경기를 추가하고 수정하세요. Apple Watch 기록을 연도와 월로 필터링하고, 코트 정보를 저장하고 경기 하이라이트를 공유할 수 있습니다." name="twitter:description"/>
+<meta content="Apple Watch에서 테니스 점수를 기록하세요. Pro의 Match Flow와 시계의 Momentum으로 경기를 돌아보고 기록을 보고서나 백업으로 저장할 수 있습니다." name="twitter:description"/>
 <meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
 <style>
     :root {
@@ -2276,7 +2276,7 @@ footer {
 <link href="../rivalries-landing.css" rel="stylesheet"/>
 <link rel="stylesheet" href="../core-scoring-formats-en.css?v=20260905-promo-cards">
 <script src="../support-development.js" defer></script>
-<link rel="stylesheet" href="../release-1-6-en.css?v=20260911-i18n">
+<link rel="stylesheet" href="../release-1-6-en.css?v=20260922-flow">
 <script defer src="../navigation-en.js?v=20260911-i18n"></script>
 </head>
 <body>
@@ -2377,7 +2377,7 @@ footer {
 <strong>다운로드</strong>
 </span>
 </a>
-<span class="version-availability">버전 1.9</span>
+<span class="version-availability">버전 1.10</span>
 </article>
 <article class="card version-card version-card-companion">
 <span class="version-kicker">Pro</span>
@@ -2397,14 +2397,25 @@ footer {
 <strong>다운로드</strong>
 </span>
 </a>
-<span class="version-availability">버전 1.6</span>
+<span class="version-availability">버전 1.7</span>
 </article>
 </div>
 <a class="hero-version-link versions-compare-link" href="#comparison">기능 비교 <span aria-hidden="true">↓</span></a>
 </section>
+<section id="match-flow" class="release-next" aria-labelledby="match-flow-title">
+<div class="release-next-heading"><div class="release-next-kicker"><span>Pro 1.7의 새로운 기능</span><span>두 Watch 앱의 Momentum</span></div><h2 id="match-flow-title">경기 흐름을 다시 확인하세요.</h2><p>정확한 포인트별 기록이 저장된 경기에서는 Match Flow로 각 게임의 흐름을 살펴볼 수 있습니다. 새로 시계에서 기록하는 경기는 포인트 순서를 보존합니다. 이전 경기나 직접 입력한 결과의 누락된 포인트를 최종 점수로 추정하지 않습니다.</p></div>
+<div class="release-next-grid">
+<article class="release-next-card"><span class="release-card-number">01 · MOMENTUM</span><h3>흐름의 변화를 확인하세요.</h3><p>초록색과 빨간색 막대는 각 게임의 승자를 나타냅니다. 높이는 기록된 포인트 수를 반영하며, 타일에는 누적 게임 스코어가 표시됩니다.</p><a href="../assets/release-1-7-en/iphone-momentum.png" target="_blank" rel="noopener" aria-label="흐름의 변화를 확인하세요."><img src="../assets/release-1-7-en/iphone-momentum.png" alt="흐름의 변화를 확인하세요. Match Flow: Momentum" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+<article class="release-next-card"><span class="release-card-number">02 · SCORES</span><h3>게임별 스코어를 살펴보세요.</h3><p>각 게임 후의 스코어와 게임 번호, 기록된 포인트 수를 확인할 수 있습니다. 경기 중 추가 조작은 필요하지 않습니다.</p><a href="../assets/release-1-7-en/iphone-scores.png" target="_blank" rel="noopener" aria-label="게임별 스코어를 살펴보세요."><img src="../assets/release-1-7-en/iphone-scores.png" alt="게임별 스코어를 살펴보세요. Match Flow: Scores" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+<article class="release-next-card"><span class="release-card-number">03 · KEY MOMENTS</span><h3>중요한 순간을 확인하세요.</h3><p>긴 게임이나 리턴 게임 승리처럼 저장된 포인트로 확인할 수 있는 순간을 당시 스코어와 함께 표시합니다.</p><a href="../assets/release-1-7-en/iphone-key-moments.png" target="_blank" rel="noopener" aria-label="중요한 순간을 확인하세요."><img src="../assets/release-1-7-en/iphone-key-moments.png" alt="중요한 순간을 확인하세요. Match Flow: Key Moments" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+</div>
+<article class="release-watch-proof"><div><div class="release-next-kicker"><span>Pro Watch · Standalone 1.10</span></div><h3>손목에서도 확인하세요.</h3><p>시계의 경기 기록에서 간결한 Momentum 막대와 게임 스코어를 볼 수 있습니다. 신뢰할 수 있는 포인트 기록이 없으면 표시되지 않습니다.</p><a href="help.html#match-flow-help">Match Flow 사용 방법 →</a></div><a href="../assets/release-1-7-en/watch-momentum.png" target="_blank" rel="noopener" aria-label="손목에서도 확인하세요."><img src="../assets/release-1-7-en/watch-momentum.png" alt="손목에서도 확인하세요. Momentum" width="416" height="496" loading="lazy" decoding="async"></a></article>
+<article class="release-watch-proof" id="history-files"><div><div class="release-next-kicker"><span>Pro · iPhone</span></div><h3>경기 기록을 파일로 보관하세요.</h3><p>CSV, Excel, PDF 보고서를 내보내세요. 나중에 복원할 수 있는 JSON 또는 ZIP 백업도 Pro에서 만들 수 있습니다. 가져올 때 기존 경기를 중복 저장하거나 삭제된 경기를 되살리지 않습니다.</p><a href="help.html#history-files-help">내보내기와 백업 안내 →</a></div><a class="release-history-files-shot" href="../assets/release-1-7-en/iphone-history-files.png" target="_blank" rel="noopener" aria-label="경기 기록 파일 화면을 전체 크기로 열기"><img src="../assets/release-1-7-en/iphone-history-files.png" alt="내보내기와 백업 가져오기 기능이 표시된 현재 Pro 경기 기록 파일 화면" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+<p class="release-media-note">예시 경기로 현재 Pro와 Standalone을 시뮬레이터에서 촬영한 화면입니다. 이미지 속 앱 화면은 영어입니다. 파일 내보내기와 가져오기는 Pro에서만 지원됩니다.</p>
+</section>
 <section aria-labelledby="release-next-title" class="release-next" id="new-release">
 <div class="release-next-heading">
-<div class="release-next-kicker"><span>Pro 1.6의 새로운 기능</span><span>Standalone 1.9와 동기화</span></div>
+<div class="release-next-kicker"><span>Pro 1.6에서 추가된 기능</span><span>Standalone 1.9와 동기화</span></div>
 <h2 id="release-next-title">점수뿐 아니라,<br/>경기의 모든 순간을.</h2>
 <p>이미 치른 경기를 추가하고 코트와 경기 환경을 기록하세요. 기억에 남는 순간을 공유하고 Apple Watch의 경기 기록과 함께 보관할 수 있습니다. 직접 입력한 경기는 나중에 수정할 수 있으며, 시계의 경기 기록은 연도와 월로 필터링할 수 있습니다.</p>
 </div>
@@ -2961,6 +2972,8 @@ footer {
 <div role="cell"><span class="comparison-muted">Watch에는 표시하지 않음</span></div>
 <div role="cell">iPhone 상세에 모든 해당 항목, 공유에 최대 6개</div>
 </div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">기록된 포인트의 Match Flow</div><div role="cell">시계의 간결한 Momentum</div><div role="cell">시계 Momentum과 iPhone의 세 가지 화면</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">기록 보고서와 복원 가능한 백업</div><div role="cell"><span class="comparison-muted">제공되지 않음</span></div><div role="cell">iPhone에서 내보내기·가져오기</div></div>
 <div class="comparison-row comparison-best-for" role="row">
 <div class="comparison-feature" role="rowheader">추천 대상</div>
 <div role="cell">모든 기능을 손목에서 사용하려는 선수</div>

@@ -660,6 +660,48 @@
 }
 
 /* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+
+/* Localized privacy titles can be substantially longer than the English title. */
+@media (max-width: 640px) {
+  .privacy-hero h1 {
+    max-width: 100%;
+    font-size: clamp(36px, 9vw, 46px);
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+}
 </style>
 <link href="../release-1-1.css" rel="stylesheet"/>
 <link rel="stylesheet" href="../release-1-6-en.css?v=20260911-i18n">
@@ -715,6 +757,7 @@
 <p>경기 이미지를 공유하면 입력한 코트 조건과 장소가 포함됩니다. 비공개 경기·라이벌 메모는 제외됩니다. 공유 전 이미지를 확인하세요. 공유한 정보는 이후 선택한 앱이나 서비스에서 처리합니다.</p>
 </section>
 
+<section class="privacy-section" id="history-files-privacy"><h2>저장되는 포인트 기록과 기록 파일</h2><p>새로 기록한 경기에는 Match Flow에 사용하는 포인트 순서가 저장될 수 있습니다. 이 정보는 경기와 함께 보관되며 다른 경기 데이터와 같은 비공개 동기화 경로를 따를 수 있습니다. 이전 경기나 수동 입력 결과에 없는 포인트를 만들어 넣지 않습니다. Pro에서는 기록 보고서나 백업 파일을 직접 내보낼 수 있습니다. 파일은 기기에서 생성되며 사용자가 선택한 곳으로만 공유됩니다. 공유 전에 내용을 확인해 주세요. 이후 사본은 선택한 앱이나 서비스의 약관에 따라 처리됩니다.</p></section>
 <section class="privacy-section" id="website-analytics"><h2>웹사이트 방문 통계</h2><p>이 웹사이트는 GoatCounter를 사용하여 페이지 방문, 유입 경로, 대략적인 지역, 브라우저, 언어, 화면 크기 및 App Store 링크 클릭을 집계합니다. GoatCounter는 지역을 추정하고 최대 8시간 동안 재방문을 식별하기 위해 IP 주소를 처리하지만, 통계 데이터베이스에 저장하지 않습니다. 추적 쿠키나 개별 페이지 조회 기록 없이 집계 보고서를 사용합니다. 이 웹사이트 분석에는 경기, 선수 프로필, 메모, 건강 데이터 등 앱의 데이터가 전송되지 않습니다.</p><p><a href="https://www.goatcounter.com/help/privacy" target="_blank" rel="noopener noreferrer">GoatCounter 개인정보 보호 안내</a> · <a href="#toggle-goatcounter">이 브라우저 집계 제외 또는 다시 포함</a></p></section>
 <section class="privacy-section">
 <h2>데이터 수집</h2>

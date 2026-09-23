@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Product Updates — Tennis Score Wizard</title>
-<meta content="Pro 1.6 and Standalone 1.9: add and edit played matches, filter Watch history by year and month, keep court context and share Match Highlights." name="description"/>
+<meta content="Pro 1.7 and Standalone 1.10: explore recorded matches with Match Flow and compact Watch Momentum. Pro adds history reports and restorable backups." name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/whats-new.html">
@@ -21,13 +21,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Product Updates — Tennis Score Wizard">
-<meta property="og:description" content="Pro 1.6 and Standalone 1.9: manual match editing, Watch history filters, optional court context, expanded highlights and sharing.">
+<meta property="og:description" content="Pro 1.7 and Standalone 1.10: Match Flow, Watch Momentum, and Pro history export and backup.">
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/whats-new.html">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Product Updates — Tennis Score Wizard">
-<meta name="twitter:description" content="New in Pro 1.6 and Standalone 1.9: add and edit played matches, filter Watch history, keep court context and share Match Highlights.">
+<meta name="twitter:description" content="New in Pro 1.7 and Standalone 1.10: Match Flow, compact Watch Momentum, and Pro history files.">
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -1835,7 +1835,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </style>
 <link rel="stylesheet" href="release-1-1.css">
 <link rel="stylesheet" href="core-scoring-formats-en.css?v=20260905-promo-cards">
-<link rel="stylesheet" href="release-1-6-en.css?v=20260911-nav">
+<link rel="stylesheet" href="release-1-6-en.css?v=20260923-dual-release">
 <script defer src="navigation-en.js?v=20260911-nav"></script>
 </head>
 <body>
@@ -1874,22 +1874,19 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </nav><div class="updates-page">
   <section class="updates-hero" aria-labelledby="updates-title">
     <span class="updates-kicker">Product updates</span>
-    <h1 id="updates-title">More of your match.<br>Worth remembering.</h1>
-    <p>
-      Add and edit played matches on iPhone, keep the context that matters and share the highlights. Pro&nbsp;1.6 brings the new post-match tools; both Watch apps gain year and month filters, and Standalone&nbsp;1.9 keeps synced manual results up to date on your wrist.
-    </p>
+    <h1 id="updates-title">New in Pro 1.7 and Standalone 1.10.</h1>
 
     <div class="updates-product-grid">
       <a class="updates-product-card updates-product-companion" href="#companion-updates">
         <span class="updates-product-label">Pro</span>
         <strong>iPhone + Apple Watch</strong>
-        <small>Version 1.6</small>
+        <small>Version 1.7</small>
       </a>
 
       <a class="updates-product-card" href="#standalone-updates">
         <span class="updates-product-label">Standalone</span>
         <strong>Apple Watch only</strong>
-        <small>Version 1.9</small>
+        <small>Version 1.10</small>
       </a>
     </div>
   </section>
@@ -1898,16 +1895,27 @@ html[lang="zh-Hans"] .hero .help-home-badge {
     <div class="updates-chapter-heading">
       <div>
         <span class="updates-section-kicker">Pro releases</span>
-        <h2>A home for every match you’ve played.</h2>
+        <h2>The story behind the score.</h2>
       </div>
-      <span class="updates-status">Version 1.6</span>
+      <span class="updates-status">Version 1.7</span>
     </div>
     <p class="updates-chapter-intro">
-      Version 1.6 brings played-match entry and editing, personal court context and richer Match Highlights to iPhone, plus year and month filters for Watch history. Your Watch-recorded scores stay intact.
+      Pro 1.7 records the point-by-point sequence for newly played matches, shows Match Flow in match details, and adds readable exports and restorable backups. Existing results remain available; missing point events are never guessed from a final score.
     </p>
 
-    <article class="updates-latest-release" id="companion-1-6">
-      <div class="updates-release-title"><span>Latest release</span><h3>Version 1.6</h3></div>
+    <article class="updates-latest-release" id="companion-1-7">
+      <div class="updates-release-title"><span>Latest release</span><h3>Version 1.7</h3></div>
+      <ul>
+        <li><strong>Follow Match Flow.</strong> Switch between Momentum, Scores and Key Moments in iPhone match details. Momentum pairs each game’s winner and point-count intensity with the running game score; Scores shows the game-by-game result; Key Moments selects events supported by the recorded points.</li>
+        <li><strong>Keep the point history.</strong> New Watch recordings retain their point sequence as part of the saved match. Match Flow appears for older records only when their saved data supports it. Manually entered results never acquire invented point-by-point history.</li>
+        <li><strong>Review compact Momentum on Watch.</strong> Open a recorded match in Watch History to see game bars and running scores, when a valid point log is available.</li>
+        <li><strong>Export or back up your history.</strong> Create CSV, Excel and PDF reports, or save a restorable JSON or ZIP backup from Match History Files on iPhone. Import adds eligible missing matches without duplicating existing IDs or restoring previously deleted IDs.</li>
+        <li><strong>Share a little more of the story.</strong> When recorded data supports it, share a separate compact Match Flow image or include a brief flow summary in match text. The existing result card remains focused on the score.</li>
+      </ul>
+    </article>
+
+    <article class="updates-latest-release release-previous" id="companion-1-6">
+      <div class="updates-release-title"><span>Previous release</span><h3>Version 1.6</h3></div>
       <ul>
         <li><strong>Add and edit matches you’ve played.</strong> Enter Singles or Doubles results on iPhone, with flexible set rules and optional tie-break points. Save completed matches, stopped matches and ties. Include start and end times or an optional duration, even for matches that cross midnight. Correct a manual match’s time, rules or score later without adding a duplicate; the saved result and subsequent corrections can sync to Apple&nbsp;Watch.</li>
         <li><strong>Find older matches on your wrist.</strong> Filter Watch history by year and month, alongside Singles and Doubles. Older matches load as you browse while your complete saved history stays available.</li>
@@ -2016,16 +2024,26 @@ html[lang="zh-Hans"] .hero .help-home-badge {
     <div class="updates-chapter-heading">
       <div>
         <span class="updates-section-kicker">Standalone releases</span>
-        <h2>The same history. Clearer on your wrist.</h2>
+        <h2>Match history, game by game.</h2>
       </div>
-      <span class="updates-status">Version 1.9</span>
+      <span class="updates-status">Version 1.10</span>
     </div>
     <p class="updates-chapter-intro">
-      Version 1.9 makes older matches easier to find and supports corrected manual results from Pro, while remaining a complete, independent Apple&nbsp;Watch scorekeeper.
+      Standalone 1.10 adds compact Momentum to Watch History for matches with recorded point-by-point data. It keeps the complete scoring experience on Watch; file export and import remain Pro features on iPhone.
     </p>
 
-    <article class="updates-latest-release" id="standalone-1-9">
-      <div class="updates-release-title"><span>Latest release</span><h3>Version 1.9</h3></div>
+    <article class="updates-latest-release" id="standalone-1-10">
+      <div class="updates-release-title"><span>Latest release</span><h3>Version 1.10</h3></div>
+      <ul>
+        <li><strong>See how each recorded set unfolded.</strong> Compact Momentum in Watch History shows game-by-game winners, point-count intensity and running game scores when a valid point log is saved.</li>
+        <li><strong>Keep more of a new match.</strong> Newly recorded matches retain their point-by-point sequence with the saved result, providing a foundation for accurate later analysis.</li>
+        <li><strong>Respect older history.</strong> Some past matches have enough saved data for Momentum; others and manually entered results do not. The app does not reconstruct missing points from a final score.</li>
+        <li><strong>Keep scoring familiar.</strong> No extra taps are required during play. Standalone remains independent; Pro on iPhone adds the detailed Match Flow views and file export and import.</li>
+      </ul>
+    </article>
+
+    <article class="updates-latest-release release-previous" id="standalone-1-9">
+      <div class="updates-release-title"><span>Previous release</span><h3>Version 1.9</h3></div>
       <ul>
         <li><strong>Find that match again.</strong> Browse Watch history by year and month, or review a whole year. Combine the period with Singles or Doubles filters. Older matches load as you browse, without removing records from your saved history.</li>
         <li><strong>Your manually added matches, on your wrist.</strong> Results entered in Pro on iPhone, including later corrections to time, rules or score, can synchronize to Standalone through private iCloud under the same Apple Account. History updates the same record, marks it Added manually and shows the saved result without empty point-statistics or workout cards.</li>

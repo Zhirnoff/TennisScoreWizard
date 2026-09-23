@@ -5,7 +5,7 @@ This repository contains the public website, Help Center, Privacy Policy, releas
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
 - **Pro** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
 
-This website covers **Pro 1.6 (56)** and **Standalone 1.9 (37)**, approved by Apple. Manual played matches and editing, optional court context, expanded Match Highlights, richer sharing and Watch history filters are covered in all ten languages. The website release was authorized on 15 September 2026; App Store release controls remain with the developer.
+The published site covers **Pro 1.6 (56)** and **Standalone 1.9 (37)**, approved by Apple. This preparation branch adds **Pro 1.7 (57)** and **Standalone 1.10 (38)** content in all ten languages: Match Flow, compact Watch Momentum, and Pro history reports and restorable backups. The new website content is not public until this branch is deliberately merged and deployed; App Store release controls remain with the developer.
 
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
@@ -25,7 +25,11 @@ The site currently supports English, German, Spanish, French, Italian, Japanese,
 
 ## Coordinated release
 
-- Branch: `feature/website-companion-1-6-standalone-1-9-en`.
+- Current preparation: `feature/website-match-flow-export-1-7-1-10`. Do not merge or publish before the developer confirms both app versions are publicly available.
+- New screenshots in `docs/assets/release-1-7-en/` were captured from the current Pro and Watch simulator builds using the recorded-match UI tests. They show genuine test-match data and have not been redrawn. See [the preparation checklist](RELEASE-1.7-1.10-WEBSITE.md).
+- Landing page, Product Updates, Help, comparison and the factual Privacy disclosure now cover the new features in all ten languages. Product Updates remains text-only; past releases remain in the history.
+
+- Previous release branch: `feature/website-companion-1-6-standalone-1-9-en`.
 - Approved archive baselines: Pro 1.6 (56), commit `1eb6f20`; Standalone 1.9 (37), commit `e1c8fc5`. Earlier screenshot and test baselines are retained in the release record.
 - Public-facing pages use the normal site layout, without preview banners or extra release navigation. Preserve the separately published UK promo design and assets when merging release work.
 - Updated the landing page, Product Updates, Help and factual Privacy disclosures in all ten languages, plus the existing English UK campaign page. Product Updates stays text-only; historical entries are retained. Screenshots and the complete Match Highlights catalog belong on the main page.

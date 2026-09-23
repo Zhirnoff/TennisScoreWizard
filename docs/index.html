@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/tennis_ball_app_icon_128.png">
   <title>Tennis Score Wizard — Apple Watch &amp; iPhone Tennis Scoring</title>
-  <meta name="description" content="Score tennis on Apple Watch. Add and edit played matches on iPhone, browse Watch history by year and month, and share Match Highlights with court context.">
+  <meta name="description" content="Score tennis on Apple Watch. Explore recorded matches with Match Flow on Pro, review Momentum on Watch, and export or back up your Pro match history.">
   <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/">
   <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/">
   <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/">
@@ -22,13 +22,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Tennis Score Wizard">
   <meta property="og:title" content="Tennis Score Wizard — Apple Watch &amp; iPhone Tennis Scoring">
-  <meta property="og:description" content="Pro 1.6 and Standalone 1.9: manual match entry and editing, Watch history filters, court context, expanded Match Highlights and richer sharing.">
+  <meta property="og:description" content="Pro 1.7 and Standalone 1.10: Match Flow reveals game-by-game momentum when point history is recorded. Pro also adds history export and restorable backups.">
   <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/">
   <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
   <meta property="og:image:alt" content="Tennis Score Wizard app icon">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tennis Score Wizard — Apple Watch &amp; iPhone Tennis Scoring">
-  <meta name="twitter:description" content="Add and edit played matches, browse Watch history by year and month, and share Match Highlights. Pro 1.6 and Standalone 1.9.">
+  <meta name="twitter:description" content="Explore Match Flow in Pro 1.7 and compact Momentum on Watch in Standalone 1.10. Export reports and backups from Pro.">
   <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
   <style>
     :root {
@@ -2276,7 +2276,7 @@ footer {
 <link rel="stylesheet" href="rivalries-landing.css">
 <link rel="stylesheet" href="core-scoring-formats-en.css?v=20260905-promo-cards">
 <script src="support-development.js" defer></script>
-<link rel="stylesheet" href="release-1-6-en.css?v=20260911-nav">
+<link rel="stylesheet" href="release-1-6-en.css?v=20260922-flow">
 <script defer src="navigation-en.js?v=20260911-nav"></script>
 </head>
 <body>
@@ -2376,7 +2376,8 @@ footer {
       <ul class="version-list">
         <li>One Set, Short Sets, No‑Ad, and Custom Set</li>
         <li>Automatic stats, synced opponent selection, and iCloud match sync</li>
-        <li>History filters by year and month; optional workouts in Health</li>
+        <li>History filters by year and month</li>
+        <li>Optional workouts in Health</li>
       </ul>
       <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="Download Tennis Score Wizard Standalone on the App Store">
         <span class="app-store-logo"></span>
@@ -2385,7 +2386,7 @@ footer {
           <strong>App Store</strong>
         </span>
       </a>
-      <span class="version-availability">Version 1.9</span>
+      <span class="version-availability">Version 1.10</span>
     </article>
 
     <article class="card version-card version-card-companion">
@@ -2406,15 +2407,52 @@ footer {
           <strong>App Store</strong>
         </span>
       </a>
-      <span class="version-availability">Version 1.6</span>
+      <span class="version-availability">Version 1.7</span>
     </article>
   </div>
   <a class="hero-version-link versions-compare-link" href="#comparison">Compare features <span aria-hidden="true">↓</span></a>
 </section>
 
+<section id="match-flow" class="release-next" aria-labelledby="match-flow-title">
+  <div class="release-next-heading">
+    <div class="release-next-kicker"><span>New in Pro 1.7</span><span>Momentum on both Watch apps</span></div>
+    <h2 id="match-flow-title">See how the match unfolded.</h2>
+    <p>For matches with recorded point history, Match Flow turns each game into a readable story. New Watch recordings retain the point sequence; an older match shows Match Flow only if its saved history supports it. A manually entered score cannot recreate missing points.</p>
+  </div>
+  <div class="release-next-grid">
+    <article class="release-next-card">
+      <span class="release-card-number">01 · MOMENTUM</span>
+      <h3>Follow every swing.</h3>
+      <p>Green and red bars show which side won each game. Their height reflects the number of points played; small score tiles show the running games score.</p>
+      <a href="assets/release-1-7-en/iphone-momentum.png" target="_blank" rel="noopener" aria-label="Open full-size Pro Match Flow Momentum screenshot"><img src="assets/release-1-7-en/iphone-momentum.png" alt="Current Pro Match Flow Momentum screen with green and red game bars and running score tiles" width="1320" height="2868" loading="lazy" decoding="async"></a>
+    </article>
+    <article class="release-next-card">
+      <span class="release-card-number">02 · SCORES</span>
+      <h3>See the score develop.</h3>
+      <p>Browse the score after each game, including the game number and its recorded point count. No extra taps are needed while playing.</p>
+      <a href="assets/release-1-7-en/iphone-scores.png" target="_blank" rel="noopener" aria-label="Open full-size Pro Match Flow Scores screenshot"><img src="assets/release-1-7-en/iphone-scores.png" alt="Current Pro Match Flow Scores screen showing the running result after each recorded game" width="1320" height="2868" loading="lazy" decoding="async"></a>
+    </article>
+    <article class="release-next-card">
+      <span class="release-card-number">03 · KEY MOMENTS</span>
+      <h3>Remember the turning points.</h3>
+      <p>Find supported moments such as long games and wins on return, with the relevant game and running score. These are derived from recorded points, not guessed from the final result.</p>
+      <a href="assets/release-1-7-en/iphone-key-moments.png" target="_blank" rel="noopener" aria-label="Open full-size Pro Match Flow Key Moments screenshot"><img src="assets/release-1-7-en/iphone-key-moments.png" alt="Current Pro Match Flow Key Moments screen with a long game and a win on return" width="1320" height="2868" loading="lazy" decoding="async"></a>
+    </article>
+  </div>
+  <article class="release-watch-proof">
+    <div><div class="release-next-kicker"><span>Pro Watch and Standalone 1.10</span></div><h3>The story fits your wrist.</h3><p>Open a recorded match in Watch History to see compact Momentum with running game scores. It appears only when a valid point-by-point record is available; legacy and manual matches do not invent one.</p><a href="help.html#match-flow-help">How Match Flow works →</a></div>
+    <a href="assets/release-1-7-en/watch-momentum.png" target="_blank" rel="noopener" aria-label="Open full-size Watch Momentum screenshot"><img src="assets/release-1-7-en/watch-momentum.png" alt="Current Watch History Momentum view with compact game bars and score labels" width="416" height="496" loading="lazy" decoding="async"></a>
+  </article>
+  <article class="release-watch-proof" id="history-files">
+    <div><div class="release-next-kicker"><span>Pro · iPhone</span></div><h3>Take your history with you.</h3><p>Export a readable CSV, Excel or PDF report. For a restorable copy, create a JSON or ZIP backup and import it later in Pro. Import adds missing matches without duplicating existing records; deleted match IDs remain deleted.</p><a href="help.html#history-files-help">Export and backup guide →</a></div>
+    <a class="release-history-files-shot" href="assets/release-1-7-en/iphone-history-files.png" target="_blank" rel="noopener" aria-label="Open full-size Match History Files screenshot"><img src="assets/release-1-7-en/iphone-history-files.png" alt="Current Pro Match History Files screen with Export a Copy and Import Backup actions" width="1320" height="2868" loading="lazy" decoding="async"></a>
+  </article>
+  <p class="release-media-note">Screenshots from the current Pro and Watch builds, captured in the simulator with sample match data. Reports and backups are Pro features; Standalone does not offer a file importer.</p>
+</section>
+
 <section id="new-release" class="release-next" aria-labelledby="release-next-title">
   <div class="release-next-heading">
-    <div class="release-next-kicker"><span>New in Pro 1.6</span><span>Sync with Standalone 1.9</span></div>
+<div class="release-next-kicker"><span>Previously in Pro 1.6</span><span>Sync with Standalone 1.9</span></div>
     <h2 id="release-next-title">Your whole match.<br>Not just the score.</h2>
     <p>Add a match you’ve played, and correct it later if you need to. Remember the court and the conditions. Share the moments that made it yours — all alongside your Apple&nbsp;Watch history.</p>
   </div>
@@ -3251,6 +3289,8 @@ footer {
       <div role="cell"><span class="comparison-muted">Not displayed on Watch</span></div>
       <div role="cell">All applicable in iPhone details; up to six in sharing</div>
     </div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Match Flow with recorded points</div><div role="cell">Compact Momentum on Watch</div><div role="cell">Watch Momentum + three views on iPhone</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">History reports and restorable backups</div><div role="cell"><span class="comparison-muted">Not included</span></div><div role="cell">Export and import on iPhone</div></div>
     <div class="comparison-row comparison-best-for" role="row">
       <div class="comparison-feature" role="rowheader">Best for</div>
       <div role="cell">Players who want everything on their wrist</div>

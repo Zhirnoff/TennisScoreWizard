@@ -1186,7 +1186,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 }
 </style>
 <link rel="stylesheet" href="../release-1-1.css">
-<link rel="stylesheet" href="../release-1-6-en.css?v=20260911-i18n">
+<link rel="stylesheet" href="../release-1-6-en.css?v=20260922-flow">
 <script defer src="../navigation-en.js?v=20260911-i18n"></script>
 </head>
 <body>
@@ -1292,6 +1292,26 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="help-item"><strong>Statsの連勝数とハイライトが違うことがあるのはなぜですか？</strong><p>Statsや対戦成績では、打ち切り時に明確なリードがあれば勝敗ありとして数える場合があります。一方、連勝や勝利数の節目のハイライトは終了した勝利を使うため、未完了の試合は対象外です。それぞれの比較に必要な保存履歴を参照しています。</p></div>
 <div class="help-item"><strong>Apple Watchにもハイライトはありますか？</strong><p>いいえ。ProのiPhone試合詳細と共有画像に表示します。Watchの履歴には結果と利用可能な統計を残し、独立したハイライト欄は設けていません。</p></div>
 <div class="help-item"><strong>手動入力ではハイライトが少ないのはなぜですか？</strong><p>最終スコアだけでは各ポイントの経過は確認できません。手動入力ではスコアや履歴が裏付ける項目を表示しますが、サーブ、リターン、ブレークポイント、ワークアウトの情報は推測で作成しません。</p></div>
+</div>
+</section>
+<section id="match-flow-help">
+<h2>Match FlowとMomentum</h2>
+<p class="section-subtitle">Proでは試合詳細に3種類のMatch Flowを表示します。どちらのWatchアプリでも、履歴でコンパクトなMomentumを確認できます。</p>
+<div class="help">
+<div class="help-item"><strong>Match Flowはいつ表示されますか？</strong><p>保存した試合に有効なポイントごとの記録がある場合だけ表示されます。新しくWatchで記録した試合では、この順序が自動的に保存されます。過去の試合でも十分なデータが残っている場合がありますが、足りないポイントを最終スコアから復元することはできません。手入力した結果も同様です。信頼できる記録がなければ、この項目は表示されません。</p></div>
+<div class="help-item"><strong>バーとスコアのタイルは何を示しますか？</strong><p>1本のバーが記録された1ゲームを表します。緑は自分が勝ったゲーム、赤は相手が勝ったゲームです。バーが高いほど記録されたポイント数が多く、得点差が大きいという意味ではありません。隣のタイルには、そのゲーム終了時点のゲームスコアが表示されます。タイブレークは別に示されます。</p></div>
+<div class="help-item"><strong>ScoresとKey Momentsには何が表示されますか？</strong><p>Scoresでは各ゲーム終了後のスコアと記録されたポイント数を確認できます。Key Momentsでは、長いゲーム、ブレーク、試合の転機など、ポイント履歴で裏付けられる出来事を選んで表示します。Proの試合詳細ではこれらの画面を利用でき、Watchの履歴にはコンパクトなMomentumが表示されます。</p></div>
+<div class="help-item"><strong>試合中に追加の操作が必要ですか？</strong><p>いいえ。これまでどおりポイントを記録してください。Match Flowは保存された得点の順序を利用するため、試合中に新しい操作やタップは必要ありません。</p></div>
+</div>
+</section>
+<section id="history-files-help">
+<h2>履歴の書き出しと復元</h2>
+<p class="section-subtitle">Match History FilesはiPhoneのProで利用できます。</p>
+<div class="help">
+<div class="help-item"><strong>どのファイル形式を選べばよいですか？</strong><p>レポートを閲覧・分析する場合はCSV、Excel、PDFを選んでください。後でProに試合を復元する可能性がある場合は、JSONまたは完全バックアップのZIPを選びます。ZIPにはJSONアーカイブ、試合とポイントのCSV、Excelブック、PDFレポート、簡単なガイドが含まれます。レポートだけをインポートすることはできません。</p></div>
+<div class="help-item"><strong>エクスポートとインポートの方法は？</strong><p>ProでMatch History Filesを開き、Export a Copyをタップして形式を選び、ファイルを保存または共有します。復元する場合はImport Backupをタップし、JSONまたはZIPのバックアップを選んでください。不足している試合を取り込む前にプレビューを確認できます。</p></div>
+<div class="help-item"><strong>取り込みで試合が重複したり、削除済みの試合が戻ったりしますか？</strong><p>いいえ。既存の試合IDはスキップされ、以前に削除したIDも削除されたままです。条件を満たす未登録の試合だけが追加されます。バックアップは、ご自身で管理できる場所にも別途保管してください。</p></div>
+<div class="help-item"><strong>バックアップにはポイント履歴がすべて含まれますか？</strong><p>JSONとZIPには、記録済みのポイントを含む保存された試合データが、存在する範囲で含まれます。過去の試合や手入力した試合には、ポイントごとの履歴がない場合があります。エクスポートによって記録のない測定値が作られることはありません。</p></div>
 </div>
 </section>
 <section id="match-setup">
