@@ -88,4 +88,4 @@ For questions, bug reports, or feedback, open a GitHub issue or email tennisscor
 
 When reporting an app issue, include the device model, operating-system version, app version, steps to reproduce, expected result, and actual result.
 
-Tennis Score Wizard does not require a Tennis Score Wizard account and does not send match history or Rivalry data to a developer-operated server. Pro can transfer match data and a Watch-safe opponent list directly between a paired Apple Watch and iPhone. Pro 1.5 and Standalone 1.8 can also synchronize saved matches and Rivalry library data through the private CloudKit database associated with the user’s Apple Account.
+Tennis Score Wizard does not require a Tennis Score Wizard account and does not send match history or Rivalry data to a developer-operated server. Pro can transfer match data and a Watch-safe opponent list directly between a paired Apple Watch and iPhone. Current Pro and Standalone releases can also synchronize saved matches and Rivalry library data through the private CloudKit database associated with the user’s Apple Account.
