@@ -1,5 +1,9 @@
 # Tennis Score Wizard Website
 
+<img src="docs/assets/tennis_ball_app_icon_128.png" alt="Tennis Score Wizard app icon" width="72">
+
+[Explore the website](https://zhirnoff.github.io/TennisScoreWizard/) · [Product updates](https://zhirnoff.github.io/TennisScoreWizard/whats-new.html) · [Help](https://zhirnoff.github.io/TennisScoreWizard/help.html) · [Privacy](https://zhirnoff.github.io/TennisScoreWizard/privacy.html)
+
 This repository contains the public website, Help Center, Privacy Policy, release notes, and localized product pages for both Tennis Score Wizard products:
 
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
