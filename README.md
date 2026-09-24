@@ -5,7 +5,7 @@ This repository contains the public website, Help Center, Privacy Policy, releas
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
 - **Pro** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
 
-The published site covers **Pro 1.6 (56)** and **Standalone 1.9 (37)**, approved by Apple. This preparation branch adds **Pro 1.7 (57)** and **Standalone 1.10 (38)** content in all ten languages: Match Flow, compact Watch Momentum, and Pro history reports and restorable backups. The new website content is not public until this branch is deliberately merged and deployed; App Store release controls remain with the developer.
+The published site covers **Pro 1.7 (59)** and **Standalone 1.10 (40)** in all ten languages: Match Flow, compact Watch Momentum, and Pro history reports and restorable backups. App Store release controls remain with the developer.
 
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
@@ -25,8 +25,8 @@ The site currently supports English, German, Spanish, French, Italian, Japanese,
 
 ## Coordinated release
 
-- Current preparation: `feature/website-match-flow-export-1-7-1-10`. Do not merge or publish before the developer confirms both app versions are publicly available.
-- New screenshots in `docs/assets/release-1-7-en/` were captured from the current Pro and Watch simulator builds using the recorded-match UI tests. They show genuine test-match data and have not been redrawn. See [the preparation checklist](RELEASE-1.7-1.10-WEBSITE.md).
+- Pro 1.7 / Standalone 1.10 website release was prepared on `feature/website-match-flow-export-1-7-1-10` and integrated into `main` after the developer confirmed both app versions were released.
+- New screenshots in `docs/assets/release-1-7-en/` were captured from the current Pro and Watch simulator builds using the recorded-match UI tests. They show genuine test-match data and have not been redrawn. See [the release record](RELEASE-1.7-1.10-WEBSITE.md).
 - Landing page, Product Updates, Help, comparison and the factual Privacy disclosure now cover the new features in all ten languages. Product Updates remains text-only; past releases remain in the history.
 
 - Previous release branch: `feature/website-companion-1-6-standalone-1-9-en`.

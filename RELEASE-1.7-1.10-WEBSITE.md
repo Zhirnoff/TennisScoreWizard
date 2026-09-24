@@ -1,8 +1,8 @@
-# Pro 1.7 / Standalone 1.10 website preparation
+# Pro 1.7 / Standalone 1.10 website release
 
 Branch: `feature/website-match-flow-export-1-7-1-10`
 
-This is a preparation branch. Do not merge or publish it until the developer confirms both app versions are publicly available.
+The developer confirmed that both app versions were released. The website release is integrated into `main` and published through GitHub Pages.
 
 ## Scope
 
