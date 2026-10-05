@@ -115,9 +115,34 @@ def readme_releases(markdown):
     return match.groups() if match else ()
 
 
+def release_record_path(releases):
+    versions = [release.split()[-1] for release in releases]
+    return REPOSITORY / "release-history" / f"RELEASE-{versions[0]}-{versions[1]}-WEBSITE.md"
+
+
 def main():
     parsed = {}
     errors = []
+    for old_record in REPOSITORY.glob("RELEASE-*.md"):
+        errors.append(f"{old_record}: release records belong in release-history/")
+
+    history_index = REPOSITORY / "release-history" / "README.md"
+    if not history_index.is_file():
+        errors.append(f"{history_index}: missing release history index")
+    else:
+        index_text = history_index.read_text(encoding="utf-8")
+        for record in (REPOSITORY / "release-history").glob("RELEASE-*.md"):
+            if f"({record.name})" not in index_text:
+                errors.append(f"{record}: missing from release history index")
+    for markdown in (REPOSITORY / "README.md", history_index):
+        if not markdown.is_file():
+            continue
+        for href in re.findall(r"\]\(([^)]+)\)", markdown.read_text(encoding="utf-8")):
+            if urlsplit(href).scheme:
+                continue
+            target = (markdown.parent / urlsplit(href).path).resolve()
+            if not target.is_file():
+                errors.append(f"{markdown}: broken file link {href}")
 
     def get(path):
         if path not in parsed:
@@ -134,6 +159,13 @@ def main():
         if name == "index" and readme_releases(
                 (REPOSITORY / "README.md").read_text(encoding="utf-8")) != releases:
             errors.append("README.md: current website versions differ from English")
+        if name == "index" and len(releases) == 2:
+            current_record = release_record_path(releases)
+            if not current_record.is_file():
+                errors.append(f"{current_record}: missing current website release record")
+            elif str(current_record.relative_to(REPOSITORY)) not in (
+                    REPOSITORY / "README.md").read_text(encoding="utf-8"):
+                errors.append("README.md: missing link to current website release record")
         for lang in LANGUAGES:
             path = DOCS / lang / f"{name}.html"
             if not path.is_file():

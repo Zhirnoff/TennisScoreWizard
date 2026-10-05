@@ -2,7 +2,7 @@
 
 import unittest
 
-from check_site_locales import DOCS, SitePage, matching_link, readme_releases
+from check_site_locales import DOCS, SitePage, matching_link, readme_releases, release_record_path
 
 
 def page(html):
@@ -43,6 +43,10 @@ class LocalizationCheckTests(unittest.TestCase):
             "Current website versions: Pro 1.8 · Standalone 1.11\n"),
             ("Pro 1.8", "Standalone 1.11"))
         self.assertEqual(readme_releases("Old website versions: Pro 1.7"), ())
+
+    def test_current_release_record_uses_current_versions(self):
+        self.assertEqual(release_record_path(("Pro 1.8", "Standalone 1.11")).name,
+                         "RELEASE-1.8-1.11-WEBSITE.md")
 
 
 if __name__ == "__main__":

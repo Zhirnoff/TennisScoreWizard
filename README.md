@@ -25,6 +25,7 @@ The GitHub Pages site is stored in `docs/`:
 - `docs/whats-new.html` — Standalone and Pro release history
 - `docs/assets/` — app icons, Apple Watch screenshots, Pro screenshots, and optimized image variants
 - `docs/de`, `docs/es`, `docs/fr`, `docs/it`, `docs/ja`, `docs/ko`, `docs/ru`, `docs/tr`, `docs/zh-Hans` — localized pages
+- `release-history/` — dated records of past website releases, separate from the current site overview
 - `scripts/check_site_locales.py` — English-first checks for localized page structure, links, images, accessibility labels, release metadata, and this README
 - `.github/workflows/site-localizations.yml` — runs those checks on site changes
 
@@ -36,7 +37,7 @@ The site currently supports English, German, Spanish, French, Italian, Japanese,
 - Product Updates includes release details and screenshots for the latest Pro and Standalone versions. Older releases remain in the history.
 - Help explains recaps, match history, manual match editing, Match Flow, sharing, and related features. Privacy describes the site's analytics and the apps' data handling.
 - All four main pages are available in ten languages. English is the content and structure reference; translations should be natural to native readers while preserving the same facts, links, screenshots, and accessibility information.
-- Historical implementation and asset provenance remain in [the 1.7/1.10 release record](RELEASE-1.7-1.10-WEBSITE.md) and [the 1.6 release record](RELEASE-1.6-EN.md).
+- The [website release history](release-history/README.md) keeps implementation and asset provenance, including the [current 1.8/1.11 website record](release-history/RELEASE-1.8-1.11-WEBSITE.md).
 
 ## Local preview
 
@@ -80,6 +81,8 @@ Keep original PNG assets as the high-quality source. Where responsive variants e
 - `main` represents the public website and is published through GitHub Pages.
 - Start with the English landing page, Product Updates, Help, and Privacy page as needed. Then update all nine translations against those English pages, including metadata and accessibility text.
 - Update this README's current website versions and feature summary whenever the site changes. The localization check fails if the version line falls behind the English page.
+- Keep release records in `release-history/`, one file per website release. They describe the facts and checks at that time: never rename an old release to the current version or reuse its record. If a past fact needs correction, add a dated correction without erasing the original context.
+- The top-level README is the current GitHub overview; move superseded release records out of the repository root and keep their links working. Add a new website release record when publishing a substantive new version.
 - Run the automated checks and review the rendered desktop and mobile layouts before committing.
 - Prepare unreleased app content on a separate branch by default; publish early only when the developer explicitly requests it. Do not equate website publication with App Store approval.
 - After an authorized push to `main`, confirm both the localization workflow and GitHub Pages deployment succeeded, then inspect the live site.

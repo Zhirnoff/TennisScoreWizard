@@ -6,6 +6,7 @@ on:
       - "docs/**"
       - "scripts/check_site_locales.py"
       - "README.md"
+      - "release-history/**"
       - ".github/workflows/site-localizations.yml"
   push:
     branches: [main]
@@ -13,6 +14,7 @@ on:
       - "docs/**"
       - "scripts/check_site_locales.py"
       - "README.md"
+      - "release-history/**"
       - ".github/workflows/site-localizations.yml"
 
 jobs:
