@@ -1,0 +1,24 @@
+name: Site localization parity
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - "scripts/check_site_locales.py"
+      - ".github/workflows/site-localizations.yml"
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "scripts/check_site_locales.py"
+      - ".github/workflows/site-localizations.yml"
+
+jobs:
+  check-localizations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare all localized pages with English
+        run: python3 scripts/check_site_locales.py
+      - name: Test localization checks
+        run: python3 -m unittest discover -s scripts -p 'test_site_locales.py'
