@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Tennis Score Wizard — Apple Watch ve iPhone için Tenis Skorlama</title>
-<meta content="Apple Watch’ta tenis skorunu tutun. Pro’da Match Flow’u, saatte Momentum’u inceleyin; maç geçmişinizi rapor veya yedek olarak dışa aktarın." name="description"/>
+<meta content="Apple Watch’ta tenis skorunu tutun. Aylık ve yıllık özetleri saatte ve Pro’nun iPhone uygulamasında görün; geçmişi, Momentum’u ve başarıları inceleyip kartları paylaşın." name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/tr/">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/">
@@ -22,13 +22,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Tennis Score Wizard — Apple Watch ve iPhone için Tenis Skorlama">
-<meta content="Apple Watch’ta tenis skorunu tutun. Pro’da Match Flow’u, saatte Momentum’u inceleyin; maç geçmişinizi rapor veya yedek olarak dışa aktarın." property="og:description"/>
+<meta content="Apple Watch’ta tenis skorunu tutun. Aylık ve yıllık özetleri saatte ve Pro’nun iPhone uygulamasında görün; geçmişi, Momentum’u ve başarıları inceleyip kartları paylaşın." property="og:description"/>
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/tr/">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tennis Score Wizard — Apple Watch ve iPhone için Tenis Skorlama">
-<meta content="Apple Watch’ta tenis skorunu tutun. Pro’da Match Flow’u, saatte Momentum’u inceleyin; maç geçmişinizi rapor veya yedek olarak dışa aktarın." name="twitter:description"/>
+<meta content="Apple Watch’ta tenis skorunu tutun. Aylık ve yıllık özetleri saatte ve Pro’nun iPhone uygulamasında görün; geçmişi, Momentum’u ve başarıları inceleyip kartları paylaşın." name="twitter:description"/>
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -1895,7 +1895,7 @@ footer {
   background: rgba(40,255,95,0.045);
 }
 
-.comparison-difference > div:last-child {
+.comparison-difference > div:nth-child(2) {
   color: #efffed;
   background: rgba(40,255,95,0.045);
   font-weight: 780;
@@ -2354,6 +2354,9 @@ footer {
 <script src="../support-development.js" defer></script>
 <link rel="stylesheet" href="../release-1-6-en.css?v=20260922-flow">
 <script defer src="../navigation-en.js?v=20260911-i18n"></script>
+<link rel="stylesheet" href="../season-recaps-en.css?v=20261001-review">
+<link rel="stylesheet" href="../back-to-top.css?v=20261001">
+<script defer src="../back-to-top.js?v=20261001"></script>
 </head>
 <body>
 <main class="page">
@@ -2394,7 +2397,7 @@ footer {
 <span class="eyebrow-copy-compact"><span class="eyebrow-segment">Watch’ta skor</span><span aria-hidden="true" class="eyebrow-separator">·</span><span class="eyebrow-segment">iPhone’da daha fazlası</span></span>
 </div>
 <h1>Her puanı kaydedin. Her maçı daha iyi anlayın.</h1>
-<p>Standalone veya Pro ile Apple Watch’ta canlı skor tutun. iPhone’daki Pro ile oynanmış maç ekleyin, nerede oynadığınızı saklayın, rekabetleri ve öne çıkanları keşfedin, sonucu paylaşın. Elle eklenen maçları sonradan düzeltebilir, saat geçmişini yıl ve aya göre filtreleyebilirsiniz.</p>
+<p>Pro veya Standalone ile Apple Watch’ta canlı skor tutun. iPhone’daki Pro ile oynanmış maç ekleyin, nerede oynadığınızı saklayın, rekabetleri ve öne çıkanları keşfedin, sonucu paylaşın. Elle eklenen maçları sonradan düzeltebilir, saat geçmişini yıl ve aya göre filtreleyebilirsiniz.</p>
 <div class="hero-actions">
 <a class="hero-version-link" href="#versions">Sürümleri inceleyin <span aria-hidden="true">↓</span></a>
 <a class="hero-instagram-link" href="https://www.instagram.com/tennisscorewizard/" target="_blank" rel="noopener noreferrer"><span class="instagram-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="1.7" y="1.7" width="20.6" height="20.6" rx="6.3"></rect><circle cx="12" cy="12" r="5"></circle><circle cx="18.2" cy="5.9" r="1.25" fill="currentColor" stroke="none"></circle></svg></span><span>Instagram’da takip edin</span></a>
@@ -2408,102 +2411,16 @@ footer {
 </section>
 <section id="versions">
 <h2>Tennis Score Wizard sürümünüzü seçin</h2>
-<p class="section-subtitle">Her iki sürüm de Apple Watch’ta eksiksiz skor tutma deneyimi sunar. Yalnızca Apple Watch için Standalone’u, iPhone uygulaması eklemek için Pro’yu seçin. İkisi de aynı kaydedilmiş maçları iCloud üzerinden eşzamanlayabilir.</p>
+<p class="section-subtitle">Pro, Apple Watch’ta eksiksiz skor tutmayı iPhone’da maç analiziyle birleştirir. Yalnızca Watch isteyenler için Standalone bağımsız bir seçenektir. İki sürüm de kaydedilen maçları iCloud ile eşzamanlayabilir.</p>
 <div class="version-grid">
-<article class="card version-card"><span class="version-kicker">Standalone</span><h3>Yalnızca Apple Watch</h3><p>Uygulamayı doğrudan Apple Watch’a yükleyin ve maçın tamamını bileğinizden yönetin. iPhone uygulaması gerekmez.</p><ul class="version-list"><li>One Set, Short Sets, No‑Ad ve Custom Set</li><li>Otomatik istatistikler ve iCloud eşzamanlama</li><li>Sağlık uygulamasına isteğe bağlı antrenman kaydı</li><li>Watch geçmişinde yıl ve ay filtreleri</li></ul><a aria-label="Tennis Score Wizard Standalone" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004"><span class="app-store-logo"></span><span class="app-store-text"><small>Şuradan indirin:</small><strong>App Store</strong></span></a><span class="version-availability">Sürüm 1.10</span></article>
-<article class="card version-card version-card-companion"><span class="version-kicker">Pro</span><h3>Tenis skoru ve istatistik</h3><p>
+    <article class="card version-card version-card-companion"><span class="version-kicker">Pro</span><h3>Tenis skoru ve istatistik</h3><p>
         Pro, Apple Watch için eksiksiz skor tutma uygulamasını ve iPhone’da maç analizini içerir. Tennis Score Wizard (Standalone) uygulamasını ayrıca satın almanız gerekmez.
-      </p><ul class="version-list"><li>Apple Watch’ta esnek maç ayarları ve canlı skor</li><li>Apple Watch’ta geçmiş, istatistikler, antrenmanlar ve komplikasyonlar</li><li>iPhone’da manuel maç, kort bilgileri, rekabetler ve paylaşım</li></ul><a aria-label="Tennis Score Wizard Pro" class="app-store-button" href="https://apps.apple.com/app/id6789285015"><span class="app-store-logo"></span><span class="app-store-text"><small>Şuradan indirin:</small><strong>App Store</strong></span></a><span class="version-availability">Sürüm 1.7</span></article>
-</div>
+      </p><ul class="version-list"><li>Apple Watch’ta esnek maç ayarları ve canlı skor</li><li>Apple Watch’ta geçmiş, istatistikler, antrenmanlar ve komplikasyonlar</li><li>iPhone’da manuel maç, kort bilgileri, rekabetler ve paylaşım</li><li>iPhone’da aylık ve yıllık özetler, dönem karşılaştırmaları ve paylaşılabilir kartlar</li></ul><a aria-label="Tennis Score Wizard Pro" class="app-store-button" href="https://apps.apple.com/app/id6789285015"><span class="app-store-logo"></span><span class="app-store-text"><small>Şuradan indirin:</small><strong>App Store</strong></span></a><span class="version-availability">Sürüm 1.8</span></article>
+
+    <article class="card version-card"><span class="version-kicker">Standalone</span><h3>Yalnızca Apple Watch</h3><p>Uygulamayı doğrudan Apple Watch’a yükleyin ve maçın tamamını bileğinizden yönetin. iPhone uygulaması gerekmez.</p><ul class="version-list"><li>One Set, Short Sets, No‑Ad ve Custom Set</li><li>Otomatik istatistikler ve iCloud eşzamanlama</li><li>Sağlık uygulamasına isteğe bağlı antrenman kaydı</li><li>Watch geçmişinde yıl ve ay filtreleri ile aylık ve yıllık özetler</li></ul><a aria-label="Tennis Score Wizard Standalone" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004"><span class="app-store-logo"></span><span class="app-store-text"><small>Şuradan indirin:</small><strong>App Store</strong></span></a><span class="version-availability">Sürüm 1.11</span></article>
+  </div>
 <a class="hero-version-link versions-compare-link" href="#comparison">Özellikleri karşılaştırın <span aria-hidden="true">↓</span></a>
 </section>
-<section id="match-flow" class="release-next" aria-labelledby="match-flow-title">
-<div class="release-next-heading"><div class="release-next-kicker"><span>Pro 1.7’deki yenilikler</span><span>Her iki Watch uygulamasında Momentum</span></div><h2 id="match-flow-title">Maçın nasıl geliştiğini görün.</h2><p>Güvenilir bir puan puan kayıt varsa Match Flow her oyunun akışını gösterir. Saatte yeni kaydedilen maçlar bu sırayı korur. Eski veya elle eklenen maçlardaki eksik puanlar final skorundan tahmin edilmez.</p></div>
-<div class="release-next-grid">
-<article class="release-next-card"><span class="release-card-number">01 · MOMENTUM</span><h3>Her değişimi izleyin.</h3><p>Yeşil ve kırmızı çubuklar her oyunu kimin kazandığını gösterir. Yükseklikleri oynanan puan sayısını, kutucuklar ise oyundan sonraki toplam skoru gösterir.</p><a href="../assets/release-1-7-en/iphone-momentum.png" target="_blank" rel="noopener" aria-label="Her değişimi izleyin."><img src="../assets/release-1-7-en/iphone-momentum.png" alt="Her değişimi izleyin. Match Flow: Momentum" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
-<article class="release-next-card"><span class="release-card-number">02 · SCORES</span><h3>Skoru oyun oyun görün.</h3><p>Her oyundan sonraki skoru, oyun numarasını ve kaydedilen puan sayısını inceleyin. Maç sırasında ek işlem gerekmez.</p><a href="../assets/release-1-7-en/iphone-scores.png" target="_blank" rel="noopener" aria-label="Skoru oyun oyun görün."><img src="../assets/release-1-7-en/iphone-scores.png" alt="Skoru oyun oyun görün. Match Flow: Scores" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
-<article class="release-next-card"><span class="release-card-number">03 · KEY MOMENTS</span><h3>Önemli anları bulun.</h3><p>Uzun oyunlar ve karşılamada kazanılan oyunlar, kayıtlı puanlarla doğrulandığında ilgili skorla birlikte görünür.</p><a href="../assets/release-1-7-en/iphone-key-moments.png" target="_blank" rel="noopener" aria-label="Önemli anları bulun."><img src="../assets/release-1-7-en/iphone-key-moments.png" alt="Önemli anları bulun. Match Flow: Key Moments" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
-</div>
-<article class="release-watch-proof"><div><div class="release-next-kicker"><span>Pro Watch · Standalone 1.10</span></div><h3>Hikâye bileğinizde de.</h3><p>Saat geçmişi, oyun çubukları ve skorlarıyla kompakt bir Momentum görünümü sunar. Güvenilir puan geçmişi yoksa bu bölüm gösterilmez.</p><a href="help.html#match-flow-help">Match Flow nasıl çalışır? →</a></div><a href="../assets/release-1-7-en/watch-momentum.png" target="_blank" rel="noopener" aria-label="Hikâye bileğinizde de."><img src="../assets/release-1-7-en/watch-momentum.png" alt="Hikâye bileğinizde de. Momentum" width="416" height="496" loading="lazy" decoding="async"></a></article>
-<article class="release-watch-proof" id="history-files"><div><div class="release-next-kicker"><span>Pro · iPhone</span></div><h3>Maç geçmişiniz bir dosyada.</h3><p>CSV, Excel veya PDF olarak okunabilir raporlar dışa aktarın. Daha sonra geri yüklemek için Pro’da JSON veya ZIP yedeği oluşturun. İçe aktarma mevcut maçları çoğaltmaz, daha önce silinenleri geri getirmez.</p><a href="help.html#history-files-help">Dışa aktarma ve yedekleme →</a></div><a class="release-history-files-shot" href="../assets/release-1-7-en/iphone-history-files.png" target="_blank" rel="noopener" aria-label="Maç geçmişi dosyaları ekranını tam boyutta aç"><img src="../assets/release-1-7-en/iphone-history-files.png" alt="Pro’daki güncel maç geçmişi dosyaları ekranı; dışa aktarma ve yedek içe aktarma seçenekleri" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
-<p class="release-media-note">Örnek maçlarla simülatörde alınmış güncel Pro ve Standalone ekranları. Görsellerdeki uygulama arayüzü İngilizcedir. Dosya dışa ve içe aktarma yalnızca Pro’da sunulur.</p>
-</section>
-<section aria-labelledby="release-next-title" class="release-next" id="new-release">
-<div class="release-next-heading">
-<div class="release-next-kicker"><span>Daha önce Pro 1.6’da</span><span>Standalone 1.9 ile eşzamanlama</span></div>
-<h2 id="release-next-title">Maçınızın tamamı.<br/>Sadece skor değil.</h2>
-<p>Oynadığınız maçları ekleyin, kortu ve koşulları kaydedin, öne çıkan anları paylaşın. Hepsi Apple Watch maç geçmişinizin yanında. Elle eklenen maçları sonradan düzeltebilir, saat geçmişini yıl ve aya göre filtreleyebilirsiniz.</p>
-</div>
-<div class="release-next-grid">
-<article class="release-next-card">
-<span class="release-card-number">01 · OYNANMIŞ MAÇ EKLEYİN</span>
-<h3>Oynadınız mı? Kaydedin.</h3>
-<p>Set skorlarını ve hatırlıyorsanız tie-break puanlarını iPhone’da girin. Tamamlanan veya yarıda bırakılan maçları, beraberlikleri de kaydedebilirsiniz. Başlangıç ve bitişi belirtin ya da süreyi boş bırakın.</p>
-<a aria-label="Elle maç ekleme ekranını tam boyutta açın" href="../assets/release-1-6-en/manual-score.png" rel="noopener" target="_blank"><img alt="Pro’da 7–6, 6–4 sonucu ve 12–10 set tie-break’i ile elle giriş" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-score.png" width="1320"/></a>
-</article>
-<article class="release-next-card">
-<span class="release-card-number">02 · AYRINTILARI Saklayın</span>
-<h3>Her kortun bir hikâyesi var.</h3>
-<p>Zemini, açık veya kapalı kortu, kulübü, kort bilgisini ve özel maç notunu ekleyin. Son kullanılan veya favori kortları yeniden seçin; Watch ile kaydedilmiş eski maçları da tamamlayın.</p>
-<a aria-label="Kort ayrıntıları ekranını tam boyutta açın" href="../assets/release-1-6-en/favorite-court.png" rel="noopener" target="_blank"><img alt="Pro kort düzenleyicisi: Central Tennis Club, Court 3, favoriler ve ayrı maç notu" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/favorite-court.png" width="1320"/></a>
-</article>
-<article class="release-next-card">
-<span class="release-card-number">03 · ÖNE ÇIKANLARI Keşfedin</span>
-<h3>Hatırlamaya değer daha çok an.</h3>
-<p>Maç ayrıntılarında verilerin doğruladığı tüm önemli anları görün: geri dönüşler, kişisel rekorlar ve galibiyet dönüm noktaları. Paylaşım kartlarında en ilgi çekici olanlardan en fazla altısı yer alır.</p>
-<a aria-label="Maçın öne çıkanlarını tam boyutta açın" href="../assets/release-1-6-en/match-highlights.png" rel="noopener" target="_blank"><img alt="Set kaybetmeden galibiyet ve kayıtlı galibiyet serisi bilgileri olan elle eklenmiş maç" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights.png" width="1320"/></a>
-</article>
-</div>
-<figure class="highlights-catalog" id="match-highlights-catalog">
-<figcaption>
-<span class="release-card-number">MAÇIN ÖNE ÇIKANLARI</span>
-<h3>Her maçta hatırlanacak anlar vardır.</h3>
-<p>Geri dönüşler, çekişmeli tie-break’ler, galibiyet dönüm noktaları ve kişisel rekorlar. 26 olay türünü 44 örnek kartta keşfedin.</p>
-<p class="release-media-note">Örnekler tek bir maçtan değil, farklı senaryolardan alınmıştır. Maç ayrıntılarında uygun tüm anlar, paylaşım kartında en fazla altısı gösterilir.</p>
-</figcaption>
-<a aria-label="44 örneğin tümünü tam boyutta açın" href="../assets/release-1-6-en/all-match-highlights.png" rel="noopener" target="_blank">
-<img alt="44 kartta 26 olay türü: geri dönüşler, tie-break’ler, rekabetler, rekorlar, servis, karşılama ve uzun maçlar" decoding="async" height="1501" loading="lazy" src="../assets/release-1-6-en/all-match-highlights.png" width="2160"/>
-</a>
-</figure>
-<article class="release-watch-proof" id="edit-played-match">
-<div><div class="release-next-kicker"><span>Elle eklenen maçlar · iPhone</span></div><h3>Skoru yanlış mı girdiniz? Maçı silmeden düzeltin.</h3><p>Elle eklenen bir maçı açıp Edit match düğmesine dokunun. Maçı silip yeniden girmeden tarih, saat, kurallar veya skoru düzeltin.</p><p>Kaydettiğinizde saat geçmişindeki kopyası da dâhil olmak üzere aynı kayıt güncellenir. Apple Watch ile kaydedilen skorlar korunur. Rakip ataması ve kort bilgileri ayrı kontrollerden düzenlenir.</p><a href="help.html#manual-matches">Maç ekleme ve düzenleme →</a></div>
-<a href="../assets/release-1-6-en/manual-edit-form.png" target="_blank" rel="noopener" aria-label="iPhone’da maç, kort ve zaman bilgilerini gösteren elle eklenmiş maç düzenleme formu"><img src="../assets/release-1-6-en/manual-edit-form.png" alt="iPhone’da maç, kort ve zaman bilgilerini gösteren elle eklenmiş maç düzenleme formu" width="1320" height="2868" loading="lazy" decoding="async"></a>
-</article>
-<article class="release-watch-proof">
-<div>
-<div class="release-next-kicker"><span>İki Watch uygulamasında da</span></div>
-<h3>iPhone’da eklendi.<br/>Bileğinizde saklandı.</h3>
-<p>Evet. Eşlenmiş Pro saatindeki aynı maç kaydı güncellenir; aynı Apple Hesabı kullanılıyorsa düzeltmeler özel iCloud üzerinden Standalone’a da aktarılabilir. Uygulamaları güncel tutun ve eşzamanlamanın bitmesini bekleyin. İlgili istatistikler ve geçmişe dayalı öne çıkan anlar düzeltilmiş sonucu kullanır. Maç elle eklenmiş olarak işaretli kalır; eksik puan veya antrenman verileri uydurulmaz.</p>
-<p>Bu maçlarda <strong>Elle eklendi</strong> etiketi bulunur. Kaydedilen sonuç gösterilir; boş puan istatistiği veya antrenman kartları yer almaz.</p>
-<a href="help.html#manual-matches">Elle maç ekleme nasıl çalışır? →</a>
-</div>
-<a aria-label="Apple Watch’taki elle eklenmiş maç geçmişini tam boyutta açın" href="../assets/release-1-6-en/watch-manual-history.png" rel="noopener" target="_blank"><img alt="Standalone Apple Watch geçmişinde beraberlikle durdurulmuş ve elle eklendi olarak işaretlenmiş maç" decoding="async" height="514" loading="lazy" src="../assets/release-1-6-en/watch-manual-history.png" width="422"/></a>
-</article>
-<p class="release-media-note">İngilizce uygulamadan alınmış, örnek maç verileri içeren gerçek ekran görüntüleri. Skorlar, süreler ve öne çıkanlar uygulamanın ürettiği hâliyle gösterilir. Elle girilen maçlarda, girilen sonuç ve bu sonucun desteklediği özetler bulunur.</p>
-</section>
-<section id="watch-history" class="core-formats-showcase" aria-labelledby="watch-history-title">
-<div class="core-formats-heading"><span class="core-formats-kicker"><span>Her iki Watch uygulamasında</span></span><h2 id="watch-history-title">O maçı yeniden bulun.</h2><p>Geçen ay mı, geçen sezon mu? Saat geçmişini yıl ve aya, ardından gerekirse tekler veya çiftlere göre filtreleyin. Eski maçlar göz attıkça yüklenir; kayıtlı geçmişinizden hiçbir şey silinmez.</p></div>
-<div class="core-proof-grid watch-promo-grid">
-<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Bir dönem seçin.</h3><p>History ekranında Period seçeneğine dokunun. Bir dönem seçin veya tüm tarihler için All dates kullanın. All, 1v1 ve 2v2 filtreleriyle birlikte çalışır.</p></div><img src="../assets/release-1-6-en/watch-history-period.png" alt="Bir dönem seçin. History ekranında Period seçeneğine dokunun. Bir dönem seçin veya tüm tarihler için All dates kullanın. All, 1v1 ve 2v2 filtreleriyle birlikte çalışır." width="416" height="496" loading="lazy" decoding="async"></article>
-<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Yılı seçin.</h3><p>Kayıtlı maçların bulunduğu yıllar listelenir. All dates tüm geçmişi yeniden gösterir.</p></div><img src="../assets/release-1-6-en/watch-history-years.png" alt="Yılı seçin. Kayıtlı maçların bulunduğu yıllar listelenir. All dates tüm geçmişi yeniden gösterir." width="416" height="496" loading="lazy" decoding="async"></article>
-<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Bir ay veya yılın tamamı.</h3><p>Maç bulunan bir ayı ya da seçilen yılın tamamı için Entire year seçeneğini kullanın.</p></div><img src="../assets/release-1-6-en/watch-history-months-entire-year.png" alt="Bir ay veya yılın tamamı. Maç bulunan bir ayı ya da seçilen yılın tamamı için Entire year seçeneğini kullanın." width="416" height="496" loading="lazy" decoding="async"></article>
-</div><p class="release-media-note">Test geçmişi içeren, Pro ve Standalone uygulamalarından alınmış gerçek İngilizce ekranlar. <a href="help.html#match-history">Geçmiş filtreleri nasıl çalışır? →</a></p>
-</section>
-<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>Her iki sürümde de</span><span>Apple Watch’ta skor takibi</span></span><h2 id="scoring-formats-title">Gerçekten oynadığınız formatı seçin.</h2><p>İki sürümde aynı otomatik Apple Watch skor sistemi bulunur: daha hızlı resmî formatlar, No-Ad oyunlar ve alışık olduğunuz kort kontrolleriyle Custom Set ayarları.</p></div><div class="core-proof-grid watch-promo-grid">
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>One Set ve Custom Set ayarları</h3><p>Zaman kısıtlıysa tüm maçı tek set olarak oynayın.</p><p>Oyun hedefi, fark, tie‑break başlangıcı ve hedefini tek bir ayar olarak seçin.</p><p>Altı oyunluk avantaj setini koruyun veya <span class="score-nowrap">6–6</span>’da normal tie‑break başlatın.</p></div><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="One Set ve Custom Set ayarları" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Resmi Short Set seçenekleri</h3><p>Dört oyunu ilk kazanan seti alır. Tie‑break <span class="score-nowrap">3–3</span> veya <span class="score-nowrap">4–4</span>’te başlayabilir; 7 puana kadar ya da <span class="score-nowrap">4–4</span>’te karar puanıyla oynanır.</p></div><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="Resmi Short Set seçenekleri" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Beraberlikte No‑Ad</h3><p>No‑Ad’de <span class="score-nowrap">40–40</span>’tan sonraki puan oyunu belirler ve her set formatıyla kullanılabilir.</p></div><img src="../assets/core-scoring-formats-en/watch-no-ad.png" alt="Beraberlikte No‑Ad" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Galibiyetiniz, set set.</h3><p>Maç sonucu, oyun sayıları ve kortta geçen süre tek bir anlaşılır kartta.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-win.png" alt="Kazanılan maç" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Her maç değerlidir.</h3><p>Kaybettiğiniz maçın skorunu ve süresini görün, ardından ayrıntıları incelemek için geçmişi açın.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-loss.png" alt="Kaybedilen maç" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Birden beşe kadar set, net görünüm</h3><p>Galibiyet, mağlubiyet ve durdurulan maçlar hemen ayırt edilir. Bir ila beş set ve tie-break skorları okunaklı kalır.</p></div><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="İki ila beş setlik sonuçlar" width="422" height="514" loading="lazy" decoding="async"></article>
-</div></section>
-<section id="icloud-sync" class="icloud-showcase" aria-labelledby="icloud-title">
-<div class="icloud-heading"><span class="icloud-kicker">iCloud ile maç eşzamanlama</span><h2 id="icloud-title">Maç geçmişiniz Apple Watch ve iPhone’da.</h2><p>Standalone ve Pro aynı Apple Hesabıyla iCloud üzerinden aynı maçları eşzamanlayabilir. Her hesabın ayrı özel geçmişi vardır. Watch’ta skor tutun veya iPhone’da sonuç ekleyin. Manuel giriş, rakip ataması ve ek bilgiler kayıtla birlikte aktarılır; başarıyla eşzamanlanan maçlar yeniden kurulumdan sonra geri getirilebilir.</p></div>
-<div class="icloud-ecosystem"><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-watch"><img src="../assets/release-1-6-en/watch-history-period.png" alt="History ekranında Period seçeneğine dokunun. Bir dönem seçin veya tüm tarihler için All dates kullanın. All, 1v1 ve 2v2 filtreleriyle birlikte çalışır." width="416" height="496" loading="lazy" decoding="async"></picture><strong>Apple Watch</strong><p>Standalone veya Pro ile skor tutun ve Geçmiş bölümünden son eşzamanlama durumunu kontrol edin.</p></div><div class="icloud-hub"><div class="icloud-cloud-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path><path d="m24 34 5.5 5.5L41 28"></path></svg></div><strong>Özel iCloud eşzamanlama</strong><p>Başarıyla eşzamanlanan maç kayıtları Tennis Score Wizard sunucusunda değil, Apple Hesabınızın özel CloudKit veritabanında saklanır.</p><div class="icloud-status-sample">✓ <span>Synced</span></div></div><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-phone"><source srcset="../assets/companion_icloud_synced-720.webp" type="image/webp"><img src="../assets/companion_icloud_synced.png" alt="Pro’da özel iCloud saklama alanını ve son eşzamanlama zamanını gösteren iCloud Maç Geçmişi kartı" width="1224" height="650" loading="lazy" decoding="async"></picture><strong>iPhone</strong><p>Oynanmış maç ekleyin, kort bilgilerini düzenleyin, kayıtlı istatistikleri inceleyin ve Pro’da özel iCloud eşzamanlamasını kontrol edin.</p></div></div>
-<div class="icloud-benefits"><article class="icloud-benefit"><strong>İki bağımsız yol</strong><p>Pro, eşlenmiş aygıtlar arasında doğrudan aktarım yapabilir; CloudKit ise ayrıca kalıcı iCloud eşzamanlaması ve geri yükleme sağlar. İki yoldan herhangi biri önce tamamlanabilir.</p></article><article class="icloud-benefit"><strong>Eşzamanlama durumunu görün</strong><p>Geçmiş bölümünde <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> veya <b>Sync paused</b> / <b>Retry</b> gösterilir.</p></article><article class="icloud-benefit"><strong>Hesap geçmişlerini ayrı tutun</strong><p>Apple Hesabı değiştirildiğinde geçmişler karışmaz. Önceki hesapta henüz eşzamanlanmamış maçlar, şifrelenmiş yerel bir kurtarma kopyasında saklanır.</p></article><article class="icloud-benefit"><strong>Şimdi skor tutun, sonra geri yükleyin</strong><p>iCloud olmadan da skor tutabilirsiniz. Başarıyla eşzamanlanan maçlar, aynı Apple Hesabıyla yeniden yüklemeden sonra tekrar indirilebilir.</p></article></div>
-</section>
-
-<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">Yeni · Rekabetler</span><h2 id="rivalries-title">Her rakibin bir hikâyesi vardır.</h2><p>Tekler maçından önce kayıtlı bir rakip seçin; Tennis Score Wizard özel karşılıklı maç kaydını otomatik olarak oluştursun. Sonuçlar, kritik puanlar, geri dönüşler, seriler, antrenmanlar ve tüm karşılaşmalar tek yerde kalır.</p><a class="rivalries-action" href="whats-new.html">Sürüm notlarını okuyun</a><p class="rivalries-singles-note">Rekabetler şu anda tekler maçlarını kullanır. Çiftler maçları tek bir rakip atanmadan normal şekilde kaydedilmeye devam eder.</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="Kayıtlı rakipleri ve karşılıklı maç kayıtlarını gösteren Rekabetler listesi" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · Kortta</span><h3>Rakibi seçin. Sonra yalnızca oynayın.</h3><p>Tekler ayarlarında Misafir veya kayıtlı bir oyuncu seçin. Kısa adı canlı skor ekranında görünür; alıştığınız skor dokunuşları kaydı otomatik olarak oluşturur.</p><ul class="rivalries-checklist"><li>Oyuncuları iPhone’daki Pro’da oluşturup yönetin</li><li>Listeyi özel iCloud üzerinden Apple Watch ile eşzamanlayın</li><li>Eski bir tekler maçını daha sonra bir oyuncuya atayın</li><li>Misafir maçlarını Rekabetler dışında tutun</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="Misafir veya kayıtlı oyuncu seçin" width="416" height="496" loading="lazy" decoding="async"><figcaption>Misafir veya kayıtlı oyuncu seçin</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="Seçilen adı maç sırasında görün" width="416" height="496" loading="lazy" decoding="async"><figcaption>Seçilen adı maç sırasında görün</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · Eksiksiz karşılıklı kayıt</span><h3>Tek oyuncu. Tüm ayrıntılar.</h3><p>Tüm Zamanlar, Bu Yıl veya Son 30 Gün filtresini seçin. Son formu tüm dönemle karşılaştırın, her karşılaşmayı açın ve yalnızca gerçekten kaydedilen istatistikleri görün.</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>Karşılıklı maç kaydı</strong><p>Sonuçlanan maçlar, galibiyetler, setler, oyunlar, tie‑break’ler ve Match Tie‑Break’ler.</p></article><article class="rivalries-benefit"><strong>Maç performansı</strong><p>Puanlar, servis tutma ve break oranları, servis, karşılama ve kritik puanlar.</p></article><article class="rivalries-benefit"><strong>Örüntüler ve efor</strong><p>İlk set kaybından sonra kazanılan maçlar, seriler, kort süresi, kalp atış hızı ve enerji.</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Karşılıklı kayıt ve son form" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Karşılıklı kayıt ve son form</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Performans, örüntüler ve efor" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Performans, örüntüler ve efor</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Kaydedilen tüm karşılaşmalar" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Kaydedilen tüm karşılaşmalar</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · Rekabeti paylaşın</span><h3>Üç kart. Tek rekabet hikâyesi.</h3><p>Sıra sabittir: önce kayıt ve son karşılaşmalar, ardından maç performansı, son olarak örüntüler ve antrenman bilgileri. Özel notlar asla paylaşılmaz.</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="Kayıt ve son karşılaşmalar" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · Kayıt ve son karşılaşmalar</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="Maç performansı" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · Maç performansı</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="Örüntüler, süre ve antrenman" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · Örüntüler, süre ve antrenman</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>Baştan sona özel</strong><p>Profiller, notlar ve maç atamaları cihazlarınızda kalır ve özel iCloud verileriniz üzerinden eşzamanlanabilir.</p></article><article><strong>Maç sırasında ek işlem yok</strong><p>Rakip seçimi yalnızca maç öncesinde bağlam ekler. Skor, Geri Al, antrenman kaydı ve maç akışının geri kalanı değişmez.</p></article></div></section>
 <section class="companion-showcase" id="companion-benefits">
 <div class="companion-heading">
 <span class="companion-section-kicker">Pro deneyimi</span>
@@ -2573,6 +2490,7 @@ footer {
 </article>
 </div>
 </section>
+<section id="season-recaps" class="season-recaps" aria-labelledby="season-recaps-title"><div class="season-recaps-heading"><span class="season-recaps-kicker">Pro 1.8 · Standalone 1.11</span><h2 id="season-recaps-title">Ayınız. Sezonunuz. Hikâyeniz.</h2><p>Kaydettiğiniz maçlara bir haftadan tüm yıla kadar yeniden bakın. Her iki Apple Watch uygulamasında da aylık ve yıllık özetler var. Pro, iPhone’da daha geniş bir görünüm ve paylaşılabilir kartlar sunar.</p></div><div class="season-recaps-grid"><article class="season-recap-card"><div class="season-recap-copy"><span class="season-recap-label">01 · PRO · IPHONE</span><h3>Ayınıza hafta hafta bakın.</h3><p>Haftalık çubuklar galibiyetleri, mağlubiyetleri ve yarıda kalan maçları farklı renklerle gösterir. Maç sayınızı ve galibiyet oranınızı önceki ayla karşılaştırın. Haftalar cihazınızın takvim ayarlarına göre bölünür.</p></div><a href="../assets/season-recaps-en/pro-month.png" target="_blank" rel="noopener" aria-label="Ayınıza hafta hafta bakın."><img src="../assets/season-recaps-en/pro-month.png" alt="Ayınıza hafta hafta bakın." width="1320" height="2868" loading="lazy" decoding="async"></a></article><article class="season-recap-card"><div class="season-recap-copy"><span class="season-recap-label">02 · PRO · IPHONE</span><h3>Tüm yıl bir bakışta.</h3><p>Aylık etkinliği geçen yılla karşılaştırın ve seçtiğiniz dönemdeki başarıları yeniden görün. Yıllık özet kartını da paylaşabilirsiniz.</p></div><a href="../assets/season-recaps-en/pro-year.png" target="_blank" rel="noopener" aria-label="Tüm yıl bir bakışta."><img src="../assets/season-recaps-en/pro-year.png" alt="Tüm yıl bir bakışta." width="1320" height="2868" loading="lazy" decoding="async"></a></article><article class="season-recap-card season-recap-watch"><div class="season-recap-copy"><span class="season-recap-label">03 · HER İKİ WATCH UYGULAMASI</span><h3>Özetler bileğinizde.</h3><p>Geçmiş’te Month in Tennis veya Year in Tennis’i açarak kaydedilen maç sayısını, sonuçları ve başarıları görün.</p></div><a href="../assets/season-recaps-en/standalone-watch-year.png" target="_blank" rel="noopener" aria-label="Özetler bileğinizde."><img src="../assets/season-recaps-en/standalone-watch-year.png" alt="Özetler bileğinizde." width="416" height="496" loading="lazy" decoding="async"></a></article></div><a class="season-recaps-more" href="whats-new.html">Tüm yenilikleri görün <span aria-hidden="true">→</span></a><a class="season-recaps-more" href="help.html#period-recaps">Aylık ve yıllık özetler nasıl çalışır? <span aria-hidden="true">→</span></a></section>
 <section id="iphone-screenshots">
 <span class="companion-section-kicker">Pro’nun iPhone tarafı</span>
 <h2>Her maçtan genel performansınıza</h2>
@@ -2632,6 +2550,71 @@ footer {
 <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_trends_serve-720.webp" alt="Aylık maç etkinliğiyle birlikte kazanılan servis oyunlarının hareketli trendi" width="1320" height="2868" loading="lazy" decoding="async" srcset="../assets/companion_trends_serve-720.webp 720w, ../assets/companion_trends_serve-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/></div><h3>Servis ve karşılama trendleri</h3><p>Grafiği galibiyetler, puanlar, kazanılan servis oyunları ve kazanılan karşılama oyunları arasında değiştirin.</p></article>
 </div>
 </section>
+<section aria-labelledby="release-next-title" class="release-next" id="new-release">
+<div class="release-next-heading">
+<div class="release-next-kicker"><span>iPhone’da Pro</span><span>Her iki Watch uygulamasıyla eşzamanlama</span></div>
+<h2 id="release-next-title">Maçınızın tamamı.<br/>Sadece skor değil.</h2>
+<p>Oynadığınız maçları ekleyin, kortu ve koşulları kaydedin, öne çıkan anları paylaşın. Hepsi Apple Watch maç geçmişinizin yanında. Elle eklenen maçları sonradan düzeltebilir, saat geçmişini yıl ve aya göre filtreleyebilirsiniz.</p>
+</div>
+<div class="release-next-grid">
+<article class="release-next-card">
+<span class="release-card-number">01 · OYNANMIŞ MAÇ EKLEYİN</span>
+<h3>Oynadınız mı? Kaydedin.</h3>
+<p>Set skorlarını ve hatırlıyorsanız tie-break puanlarını iPhone’da girin. Tamamlanan veya yarıda bırakılan maçları, beraberlikleri de kaydedebilirsiniz. Başlangıç ve bitişi belirtin ya da süreyi boş bırakın.</p>
+<a aria-label="Elle maç ekleme ekranını tam boyutta açın" href="../assets/release-1-6-en/manual-score.png" rel="noopener" target="_blank"><img alt="Pro’da 7–6, 6–4 sonucu ve 12–10 set tie-break’i ile elle giriş" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-score.png" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">02 · AYRINTILARI Saklayın</span>
+<h3>Her kortun bir hikâyesi var.</h3>
+<p>Zemini, açık veya kapalı kortu, kulübü, kort bilgisini ve özel maç notunu ekleyin. Son kullanılan veya favori kortları yeniden seçin; Watch ile kaydedilmiş eski maçları da tamamlayın.</p>
+<a aria-label="Kort ayrıntıları ekranını tam boyutta açın" href="../assets/release-1-6-en/favorite-court.png" rel="noopener" target="_blank"><img alt="Pro kort düzenleyicisi: Central Tennis Club, Court 3, favoriler ve ayrı maç notu" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/favorite-court.png" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">03 · ÖNE ÇIKANLARI Keşfedin</span>
+<h3>Hatırlamaya değer daha çok an.</h3>
+<p>Maç ayrıntılarında verilerin doğruladığı tüm önemli anları görün: geri dönüşler, kişisel rekorlar ve galibiyet dönüm noktaları. Paylaşım kartlarında en ilgi çekici olanlardan en fazla altısı yer alır.</p>
+<a aria-label="Maçın öne çıkanlarını tam boyutta açın" href="../assets/release-1-6-en/match-highlights.png" rel="noopener" target="_blank"><img alt="Set kaybetmeden galibiyet ve kayıtlı galibiyet serisi bilgileri olan elle eklenmiş maç" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights.png" width="1320"/></a>
+</article>
+</div>
+<figure class="highlights-catalog" id="match-highlights-catalog">
+<figcaption>
+<span class="release-card-number">MAÇIN ÖNE ÇIKANLARI</span>
+<h3>Her maçta hatırlanacak anlar vardır.</h3>
+<p>Geri dönüşler, çekişmeli tie-break’ler, galibiyet dönüm noktaları ve kişisel rekorlar. 26 olay türünü 44 örnek kartta keşfedin.</p>
+
+</figcaption>
+<a aria-label="44 örneğin tümünü tam boyutta açın" href="../assets/release-1-6-en/all-match-highlights.png" rel="noopener" target="_blank">
+<img alt="44 kartta 26 olay türü: geri dönüşler, tie-break’ler, rekabetler, rekorlar, servis, karşılama ve uzun maçlar" decoding="async" height="1501" loading="lazy" src="../assets/release-1-6-en/all-match-highlights.png" width="2160"/>
+</a>
+</figure>
+<article class="release-watch-proof" id="edit-played-match">
+<div><div class="release-next-kicker"><span>Elle eklenen maçlar · iPhone</span></div><h3>Skoru yanlış mı girdiniz? Maçı silmeden düzeltin.</h3><p>Elle eklenen bir maçı açıp Edit match düğmesine dokunun. Maçı silip yeniden girmeden tarih, saat, kurallar veya skoru düzeltin.</p><p>Kaydettiğinizde saat geçmişindeki kopyası da dâhil olmak üzere aynı kayıt güncellenir. Apple Watch ile kaydedilen skorlar korunur. Rakip ataması ve kort bilgileri ayrı kontrollerden düzenlenir.</p><a href="help.html#manual-matches">Maç ekleme ve düzenleme →</a></div>
+<a href="../assets/release-1-6-en/manual-edit-form.png" target="_blank" rel="noopener" aria-label="iPhone’da maç, kort ve zaman bilgilerini gösteren elle eklenmiş maç düzenleme formu"><img src="../assets/release-1-6-en/manual-edit-form.png" alt="iPhone’da maç, kort ve zaman bilgilerini gösteren elle eklenmiş maç düzenleme formu" width="1320" height="2868" loading="lazy" decoding="async"></a>
+</article>
+<article class="release-watch-proof">
+<div>
+<div class="release-next-kicker"><span>İki Watch uygulamasında da</span></div>
+<h3>iPhone’da eklendi.<br/>Bileğinizde saklandı.</h3>
+<p>Evet. Eşlenmiş Pro saatindeki aynı maç kaydı güncellenir; aynı Apple Hesabı kullanılıyorsa düzeltmeler özel iCloud üzerinden Standalone’a da aktarılabilir. Uygulamaları güncel tutun ve eşzamanlamanın bitmesini bekleyin. İlgili istatistikler ve geçmişe dayalı öne çıkan anlar düzeltilmiş sonucu kullanır. Maç elle eklenmiş olarak işaretli kalır; eksik puan veya antrenman verileri uydurulmaz.</p>
+<p>Bu maçlarda <strong>Elle eklendi</strong> etiketi bulunur. Kaydedilen sonuç gösterilir; boş puan istatistiği veya antrenman kartları yer almaz.</p>
+<a href="help.html#manual-matches">Elle maç ekleme nasıl çalışır? →</a>
+</div>
+<a aria-label="Apple Watch’taki elle eklenmiş maç geçmişini tam boyutta açın" href="../assets/release-1-6-en/watch-manual-history.png" rel="noopener" target="_blank"><img alt="Standalone Apple Watch geçmişinde beraberlikle durdurulmuş ve elle eklendi olarak işaretlenmiş maç" decoding="async" height="514" loading="lazy" src="../assets/release-1-6-en/watch-manual-history.png" width="422"/></a>
+</article>
+
+</section>
+<section id="match-flow" class="release-next" aria-labelledby="match-flow-title">
+<div class="release-next-heading"><div class="release-next-kicker"><span>Match Flow · Pro</span><span>Her iki Watch uygulamasında Momentum</span></div><h2 id="match-flow-title">Maçın nasıl geliştiğini görün.</h2><p>Güvenilir bir puan puan kayıt varsa Match Flow her oyunun akışını gösterir. Saatte yeni kaydedilen maçlar bu sırayı korur. Eski veya elle eklenen maçlardaki eksik puanlar final skorundan tahmin edilmez.</p></div>
+<div class="release-next-grid">
+<article class="release-next-card"><span class="release-card-number">01 · MOMENTUM</span><h3>Her değişimi izleyin.</h3><p>Yeşil ve kırmızı çubuklar her oyunu kimin kazandığını gösterir. Yükseklikleri oynanan puan sayısını, kutucuklar ise oyundan sonraki toplam skoru gösterir.</p><a href="../assets/release-1-7-en/iphone-momentum.png" target="_blank" rel="noopener" aria-label="Her değişimi izleyin."><img src="../assets/release-1-7-en/iphone-momentum.png" alt="Her değişimi izleyin. Match Flow: Momentum" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+<article class="release-next-card"><span class="release-card-number">02 · SCORES</span><h3>Skoru oyun oyun görün.</h3><p>Her oyundan sonraki skoru, oyun numarasını ve kaydedilen puan sayısını inceleyin. Maç sırasında ek işlem gerekmez.</p><a href="../assets/release-1-7-en/iphone-scores.png" target="_blank" rel="noopener" aria-label="Skoru oyun oyun görün."><img src="../assets/release-1-7-en/iphone-scores.png" alt="Skoru oyun oyun görün. Match Flow: Scores" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+<article class="release-next-card"><span class="release-card-number">03 · KEY MOMENTS</span><h3>Önemli anları bulun.</h3><p>Uzun oyunlar ve karşılamada kazanılan oyunlar, kayıtlı puanlarla doğrulandığında ilgili skorla birlikte görünür.</p><a href="../assets/release-1-7-en/iphone-key-moments.png" target="_blank" rel="noopener" aria-label="Önemli anları bulun."><img src="../assets/release-1-7-en/iphone-key-moments.png" alt="Önemli anları bulun. Match Flow: Key Moments" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+</div>
+<article class="release-watch-proof"><div><div class="release-next-kicker"><span>Her iki Watch uygulaması</span></div><h3>Hikâye bileğinizde de.</h3><p>Saat geçmişi, oyun çubukları ve skorlarıyla kompakt bir Momentum görünümü sunar. Güvenilir puan geçmişi yoksa bu bölüm gösterilmez.</p><a href="help.html#match-flow-help">Match Flow nasıl çalışır? →</a></div><a href="../assets/release-1-7-en/watch-momentum.png" target="_blank" rel="noopener" aria-label="Hikâye bileğinizde de."><img src="../assets/release-1-7-en/watch-momentum.png" alt="Hikâye bileğinizde de. Momentum" width="416" height="496" loading="lazy" decoding="async"></a></article>
+<article class="release-watch-proof" id="history-files"><div><div class="release-next-kicker"><span>Pro · iPhone</span></div><h3>Maç geçmişiniz bir dosyada.</h3><p>CSV, Excel veya PDF olarak okunabilir raporlar dışa aktarın. Daha sonra geri yüklemek için Pro’da JSON veya ZIP yedeği oluşturun. İçe aktarma mevcut maçları çoğaltmaz, daha önce silinenleri geri getirmez.</p><a href="help.html#history-files-help">Dışa aktarma ve yedekleme →</a></div><a class="release-history-files-shot" href="../assets/release-1-7-en/iphone-history-files.png" target="_blank" rel="noopener" aria-label="Maç geçmişi dosyaları ekranını tam boyutta aç"><img src="../assets/release-1-7-en/iphone-history-files.png" alt="Pro’daki güncel maç geçmişi dosyaları ekranı; dışa aktarma ve yedek içe aktarma seçenekleri" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+
+</section>
+<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">Rekabetler</span><h2 id="rivalries-title">Her rakibin bir hikâyesi vardır.</h2><p>Tekler maçından önce kayıtlı bir rakip seçin; Tennis Score Wizard özel karşılıklı maç kaydını otomatik olarak oluştursun. Sonuçlar, kritik puanlar, geri dönüşler, seriler, antrenmanlar ve tüm karşılaşmalar tek yerde kalır.</p><a class="rivalries-action" href="help.html#rivalries">Rekabetler nasıl çalışır</a><p class="rivalries-singles-note">Rekabetler şu anda tekler maçlarını kullanır. Çiftler maçları tek bir rakip atanmadan normal şekilde kaydedilmeye devam eder.</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="Kayıtlı rakipleri ve karşılıklı maç kayıtlarını gösteren Rekabetler listesi" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · Kortta</span><h3>Rakibi seçin. Sonra yalnızca oynayın.</h3><p>Tekler ayarlarında Misafir veya kayıtlı bir oyuncu seçin. Kısa adı canlı skor ekranında görünür; alıştığınız skor dokunuşları kaydı otomatik olarak oluşturur.</p><ul class="rivalries-checklist"><li>Oyuncuları iPhone’daki Pro’da oluşturup yönetin</li><li>Listeyi özel iCloud üzerinden Apple Watch ile eşzamanlayın</li><li>Eski bir tekler maçını daha sonra bir oyuncuya atayın</li><li>Misafir maçlarını Rekabetler dışında tutun</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="Misafir veya kayıtlı oyuncu seçin" width="416" height="496" loading="lazy" decoding="async"><figcaption>Misafir veya kayıtlı oyuncu seçin</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="Seçilen adı maç sırasında görün" width="416" height="496" loading="lazy" decoding="async"><figcaption>Seçilen adı maç sırasında görün</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · Eksiksiz karşılıklı kayıt</span><h3>Tek oyuncu. Tüm ayrıntılar.</h3><p>Tüm Zamanlar, Bu Yıl veya Son 30 Gün filtresini seçin. Son formu tüm dönemle karşılaştırın, her karşılaşmayı açın ve yalnızca gerçekten kaydedilen istatistikleri görün.</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>Karşılıklı maç kaydı</strong><p>Sonuçlanan maçlar, galibiyetler, setler, oyunlar, tie‑break’ler ve Match Tie‑Break’ler.</p></article><article class="rivalries-benefit"><strong>Maç performansı</strong><p>Puanlar, servis tutma ve break oranları, servis, karşılama ve kritik puanlar.</p></article><article class="rivalries-benefit"><strong>Örüntüler ve efor</strong><p>İlk set kaybından sonra kazanılan maçlar, seriler, kort süresi, kalp atış hızı ve enerji.</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Karşılıklı kayıt ve son form" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Karşılıklı kayıt ve son form</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Performans, örüntüler ve efor" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Performans, örüntüler ve efor</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Kaydedilen tüm karşılaşmalar" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Kaydedilen tüm karşılaşmalar</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · Rekabeti paylaşın</span><h3>Üç kart. Tek rekabet hikâyesi.</h3><p>Sıra sabittir: önce kayıt ve son karşılaşmalar, ardından maç performansı, son olarak örüntüler ve antrenman bilgileri. Özel notlar asla paylaşılmaz.</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="Kayıt ve son karşılaşmalar" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · Kayıt ve son karşılaşmalar</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="Maç performansı" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · Maç performansı</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="Örüntüler, süre ve antrenman" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · Örüntüler, süre ve antrenman</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>Baştan sona özel</strong><p>Profiller, notlar ve maç atamaları cihazlarınızda kalır ve özel iCloud verileriniz üzerinden eşzamanlanabilir.</p></article><article><strong>Maç sırasında ek işlem yok</strong><p>Rakip seçimi yalnızca maç öncesinde bağlam ekler. Skor, Geri Al, antrenman kaydı ve maç akışının geri kalanı değişmez.</p></article></div></section>
 <section id="share-results" class="share-showcase">
   <span class="companion-section-kicker">Paylaşmaya hazır</span>
   <h2>Skordan fazlasını paylaşın</h2>
@@ -2774,25 +2757,47 @@ footer {
 </article>
 </div>
 </section>
+<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>Her iki sürümde de</span><span>Apple Watch’ta skor takibi</span></span><h2 id="scoring-formats-title">Gerçekten oynadığınız formatı seçin.</h2><p>İki sürümde aynı otomatik Apple Watch skor sistemi bulunur: daha hızlı resmî formatlar, No-Ad oyunlar ve alışık olduğunuz kort kontrolleriyle Custom Set ayarları.</p></div><div class="core-proof-grid watch-promo-grid">
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>One Set ve Custom Set ayarları</h3><p>Zaman kısıtlıysa tüm maçı tek set olarak oynayın.</p><p>Oyun hedefi, fark, tie‑break başlangıcı ve hedefini tek bir ayar olarak seçin.</p><p>Altı oyunluk avantaj setini koruyun veya <span class="score-nowrap">6–6</span>’da normal tie‑break başlatın.</p></div><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="One Set ve Custom Set ayarları" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Resmi Short Set seçenekleri</h3><p>Dört oyunu ilk kazanan seti alır. Tie‑break <span class="score-nowrap">3–3</span> veya <span class="score-nowrap">4–4</span>’te başlayabilir; 7 puana kadar ya da <span class="score-nowrap">4–4</span>’te karar puanıyla oynanır.</p></div><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="Resmi Short Set seçenekleri" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Beraberlikte No‑Ad</h3><p>No‑Ad’de <span class="score-nowrap">40–40</span>’tan sonraki puan oyunu belirler ve her set formatıyla kullanılabilir.</p></div><img src="../assets/core-scoring-formats-en/watch-no-ad.png" alt="Beraberlikte No‑Ad" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Galibiyetiniz, set set.</h3><p>Maç sonucu, oyun sayıları ve kortta geçen süre tek bir anlaşılır kartta.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-win.png" alt="Kazanılan maç" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Her maç değerlidir.</h3><p>Kaybettiğiniz maçın skorunu ve süresini görün, ardından ayrıntıları incelemek için geçmişi açın.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-loss.png" alt="Kaybedilen maç" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Birden beşe kadar set, net görünüm</h3><p>Galibiyet, mağlubiyet ve durdurulan maçlar hemen ayırt edilir. Bir ila beş set ve tie-break skorları okunaklı kalır.</p></div><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="İki ila beş setlik sonuçlar" width="422" height="514" loading="lazy" decoding="async"></article>
+</div></section>
+<section id="watch-history" class="core-formats-showcase" aria-labelledby="watch-history-title">
+<div class="core-formats-heading"><span class="core-formats-kicker"><span>Her iki Watch uygulamasında</span></span><h2 id="watch-history-title">O maçı yeniden bulun.</h2><p>Geçen ay mı, geçen sezon mu? Saat geçmişini yıl ve aya, ardından gerekirse tekler veya çiftlere göre filtreleyin. Eski maçlar göz attıkça yüklenir; kayıtlı geçmişinizden hiçbir şey silinmez.</p></div>
+<div class="core-proof-grid watch-promo-grid">
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Bir dönem seçin.</h3><p>History ekranında Period seçeneğine dokunun. Bir dönem seçin veya tüm tarihler için All dates kullanın. All, 1v1 ve 2v2 filtreleriyle birlikte çalışır.</p></div><img src="../assets/release-1-6-en/watch-history-period.png" alt="Bir dönem seçin. History ekranında Period seçeneğine dokunun. Bir dönem seçin veya tüm tarihler için All dates kullanın. All, 1v1 ve 2v2 filtreleriyle birlikte çalışır." width="416" height="496" loading="lazy" decoding="async"></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Yılı seçin.</h3><p>Kayıtlı maçların bulunduğu yıllar listelenir. All dates tüm geçmişi yeniden gösterir.</p></div><img src="../assets/release-1-6-en/watch-history-years.png" alt="Yılı seçin. Kayıtlı maçların bulunduğu yıllar listelenir. All dates tüm geçmişi yeniden gösterir." width="416" height="496" loading="lazy" decoding="async"></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Bir ay veya yılın tamamı.</h3><p>Maç bulunan bir ayı ya da seçilen yılın tamamı için Entire year seçeneğini kullanın.</p></div><img src="../assets/release-1-6-en/watch-history-months-entire-year.png" alt="Bir ay veya yılın tamamı. Maç bulunan bir ayı ya da seçilen yılın tamamı için Entire year seçeneğini kullanın." width="416" height="496" loading="lazy" decoding="async"></article>
+</div>
+</section>
+<section id="icloud-sync" class="icloud-showcase" aria-labelledby="icloud-title">
+<div class="icloud-heading"><span class="icloud-kicker">iCloud ile maç eşzamanlama</span><h2 id="icloud-title">Maç geçmişiniz Apple Watch ve iPhone’da.</h2><p>Standalone ve Pro aynı Apple Hesabıyla iCloud üzerinden aynı maçları eşzamanlayabilir. Her hesabın ayrı özel geçmişi vardır. Watch’ta skor tutun veya iPhone’da sonuç ekleyin. Manuel giriş, rakip ataması ve ek bilgiler kayıtla birlikte aktarılır; başarıyla eşzamanlanan maçlar yeniden kurulumdan sonra geri getirilebilir.</p></div>
+<div class="icloud-ecosystem"><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-watch"><img src="../assets/release-1-6-en/watch-history-period.png" alt="History ekranında Period seçeneğine dokunun. Bir dönem seçin veya tüm tarihler için All dates kullanın. All, 1v1 ve 2v2 filtreleriyle birlikte çalışır." width="416" height="496" loading="lazy" decoding="async"></picture><strong>Apple Watch</strong><p>Pro veya Standalone ile skor tutun ve Geçmiş bölümünden son eşzamanlama durumunu kontrol edin.</p></div><div class="icloud-hub"><div class="icloud-cloud-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path><path d="m24 34 5.5 5.5L41 28"></path></svg></div><strong>Özel iCloud eşzamanlama</strong><p>Başarıyla eşzamanlanan maç kayıtları Tennis Score Wizard sunucusunda değil, Apple Hesabınızın özel CloudKit veritabanında saklanır.</p><div class="icloud-status-sample">✓ <span>Synced</span></div></div><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-phone"><source srcset="../assets/companion_icloud_synced-720.webp" type="image/webp"><img src="../assets/companion_icloud_synced.png" alt="Pro’da özel iCloud saklama alanını ve son eşzamanlama zamanını gösteren iCloud Maç Geçmişi kartı" width="1224" height="650" loading="lazy" decoding="async"></picture><strong>iPhone</strong><p>Oynanmış maç ekleyin, kort bilgilerini düzenleyin, kayıtlı istatistikleri inceleyin ve Pro’da özel iCloud eşzamanlamasını kontrol edin.</p></div></div>
+<div class="icloud-benefits"><article class="icloud-benefit"><strong>İki bağımsız yol</strong><p>Pro, eşlenmiş aygıtlar arasında doğrudan aktarım yapabilir; CloudKit ise ayrıca kalıcı iCloud eşzamanlaması ve geri yükleme sağlar. İki yoldan herhangi biri önce tamamlanabilir.</p></article><article class="icloud-benefit"><strong>Eşzamanlama durumunu görün</strong><p>Geçmiş bölümünde <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> veya <b>Sync paused</b> / <b>Retry</b> gösterilir.</p></article><article class="icloud-benefit"><strong>Hesap geçmişlerini ayrı tutun</strong><p>Apple Hesabı değiştirildiğinde geçmişler karışmaz. Önceki hesapta henüz eşzamanlanmamış maçlar, şifrelenmiş yerel bir kurtarma kopyasında saklanır.</p></article><article class="icloud-benefit"><strong>Şimdi skor tutun, sonra geri yükleyin</strong><p>iCloud olmadan da skor tutabilirsiniz. Başarıyla eşzamanlanan maçlar, aynı Apple Hesabıyla yeniden yüklemeden sonra tekrar indirilebilir.</p></article></div>
+</section>
+
 <section class="comparison-section" id="comparison">
 <span class="product-section-kicker">Sürüm karşılaştırması</span>
 <div class="comparison-heading">
 <h2>Watch’ta aynı skor takibi. iPhone’da daha çok imkân.</h2>
-<p class="section-subtitle">Standalone, Apple Watch’ta eksiksiz skor takibidir. Pro iPhone’da manuel maç, kort bilgileri, rekabetler, öne çıkanlar ve paylaşım ekler.</p>
+<p class="section-subtitle">Pro, eksiksiz Apple Watch skor uygulamasını iPhone’da maç ekleme, analiz, rekabetler ve paylaşmayla birleştirir. Standalone, iPhone uygulaması olmadan tüm skor deneyimini Watch’ta sunar.</p>
 </div>
 <div aria-label="Tennis Score Wizard Standalone ve Pro'nun karşılaştırması" class="comparison-grid" role="table">
 <div class="comparison-row comparison-header" role="row">
 <div class="comparison-feature" role="columnheader">Deneyim</div>
-<div role="columnheader">
-<span class="comparison-version-label">Standalone</span>
-<strong>Apple Watch</strong>
-</div>
 <div class="comparison-companion-column" role="columnheader">
 <span class="comparison-version-label">Pro</span>
 <strong>
 <span class="comparison-title-full">iPhone + Apple Watch</span>
 <span class="comparison-title-compact">Watch + iPhone</span>
 </strong>
+</div>
+<div role="columnheader">
+<span class="comparison-version-label">Standalone</span>
+<strong>Apple Watch</strong>
 </div>
 </div>
 <div class="comparison-row" role="row">
@@ -2807,13 +2812,13 @@ footer {
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Maç geçmişi ve ayrıntılı istatistikler</div>
-<div role="cell">Apple Watch’ta</div>
 <div role="cell">Apple Watch ve iPhone’da</div>
+<div role="cell">Apple Watch’ta</div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Antrenman ve kalp atış hızı ayrıntıları</div>
-<div role="cell">Apple Watch’ta</div>
 <div role="cell">Apple Watch ve iPhone’da</div>
+<div role="cell">Apple Watch’ta</div>
 </div>
 <div class="comparison-row" role="row">
 <div class="comparison-feature" role="rowheader">Apple Watch komplikasyonları</div>
@@ -2821,45 +2826,45 @@ footer {
 <div role="cell"><span class="comparison-check">✓</span> Dahil olanlar</div>
 </div>
 <div class="comparison-row" role="row"><div class="comparison-feature" role="rowheader">iCloud ile maç eşzamanlama</div><div role="cell"><span class="comparison-check">✓</span> Dahil</div><div role="cell"><span class="comparison-check">✓</span> Dahil</div></div>
-<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Rakip profilleri ve Rivalries</div><div role="cell">Eşzamanlanan rakibi Apple Watch’ta seçme</div><div role="cell">iPhone’da oluşturma ve yönetme + Watch’ta seçme</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Rakip profilleri ve Rivalries</div><div role="cell">iPhone’da oluşturma ve yönetme + Watch’ta seçme</div><div role="cell">Eşzamanlanan rakibi Apple Watch’ta seçme</div></div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Senkronize iPhone deneyimi</div>
-<div role="cell"><span class="comparison-muted">Gerekli değil</span></div>
 <div role="cell"><span class="comparison-check">✓</span> Dahil olanlar</div>
+<div role="cell"><span class="comparison-muted">Gerekli değil</span></div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Aylık ve yıllık maç takvimi</div>
-<div role="cell"><span class="comparison-muted">Dahil değil</span></div>
 <div role="cell">iPhone'da</div>
+<div role="cell"><span class="comparison-muted">Dahil değil</span></div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Uzun dönem performans istatistikleri ve trendleri</div>
-<div role="cell"><span class="comparison-muted">Dahil değil</span></div>
 <div role="cell">iPhone'da</div>
+<div role="cell"><span class="comparison-muted">Dahil değil</span></div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Paylaşılabilir metin özetleri ve görsel kartlar</div>
-<div role="cell"><span class="comparison-muted">Dahil değil</span></div>
 <div role="cell">iPhone'da</div>
+<div role="cell"><span class="comparison-muted">Dahil değil</span></div>
 </div>
-<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Oynanmış maç ekleme ve düzenleme</div><div role="cell">Elle eklenen maçları ve düzeltmeleri iCloud üzerinden alır</div><div role="cell">iPhone’da ekleme ve düzenleme; saat geçmişiyle eşzamanlama</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Oynanmış maç ekleme ve düzenleme</div><div role="cell">iPhone’da ekleme ve düzenleme; saat geçmişiyle eşzamanlama</div><div role="cell">Elle eklenen maçları ve düzeltmeleri iCloud üzerinden alır</div></div>
 <div class="comparison-row" role="row"><div class="comparison-feature" role="rowheader">Watch geçmişinde yıl ve ay filtreleri</div><div role="cell"><span class="comparison-check">✓</span> Dâhil</div><div role="cell"><span class="comparison-check">✓</span> Dâhil</div></div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Kort bilgileri ve özel maç notları</div>
-<div role="cell">Eşzamanlanan maç kayıtlarında korunur</div>
 <div role="cell">iPhone’da ekleme ve düzenleme</div>
+<div role="cell">Eşzamanlanan maç kayıtlarında korunur</div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Maçın öne çıkanları</div>
-<div role="cell"><span class="comparison-muted">Watch’ta gösterilmez</span></div>
 <div role="cell">iPhone ayrıntılarında tüm uygun anlar; paylaşımda en fazla altı</div>
+<div role="cell"><span class="comparison-muted">Watch’ta gösterilmez</span></div>
 </div>
-<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Kaydedilen puanlarla Match Flow</div><div role="cell">Saatte kompakt Momentum</div><div role="cell">Saatte Momentum + iPhone’da üç görünüm</div></div>
-<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Geçmiş raporları ve geri yüklenebilir yedekler</div><div role="cell"><span class="comparison-muted">Sunulmaz</span></div><div role="cell">iPhone’da dışa ve içe aktarma</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Kaydedilen puanlarla Match Flow</div><div role="cell">Saatte Momentum + iPhone’da üç görünüm</div><div role="cell">Saatte kompakt Momentum</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Geçmiş raporları ve geri yüklenebilir yedekler</div><div role="cell">iPhone’da dışa ve içe aktarma</div><div role="cell"><span class="comparison-muted">Sunulmaz</span></div></div>
 <div class="comparison-row comparison-best-for" role="row">
 <div class="comparison-feature" role="rowheader">En uygun olduğu kişiler</div>
-<div role="cell">Her şeyi bileğinizde görmek isteyen oyuncular</div>
 <div role="cell">Tam Watch uygulamasının yanı sıra daha geniş bir maç sonrası görünümü isteyen oyuncular</div>
+<div role="cell">Her şeyi bileğinizde görmek isteyen oyuncular</div>
 </div>
 </div>
 </section>

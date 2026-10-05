@@ -1188,6 +1188,8 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <link rel="stylesheet" href="release-1-1.css">
 <link rel="stylesheet" href="release-1-6-en.css?v=20260922-flow">
 <script defer src="navigation-en.js?v=20260911-nav"></script>
+<link rel="stylesheet" href="back-to-top.css?v=20261001">
+<script defer src="back-to-top.js?v=20261001"></script>
 </head>
 <body>
 <main class="page">
@@ -1230,7 +1232,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Home" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
 <h1>Help Center</h1>
 <p>
-      Score on Apple&nbsp;Watch or add a played match in Pro on iPhone. Learn about court context, private notes, Match Highlights, sharing, Rivalries, scoring formats, workouts and iCloud sync.
+      Score on Apple&nbsp;Watch or add a played match in Pro on iPhone. Find help for month and year recaps, Match Highlights, Rivalries, sharing, scoring formats, workouts and iCloud sync.
     </p>
 </div>
 </section>
@@ -1269,11 +1271,11 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="help-item"><strong>Can I save a stopped match or a tie?</strong><p>Yes. Choose Stopped if play ended before the selected format had a winner. Enter the scores reached, including any unfinished set. A tied result can be saved. Choose Completed only when the score includes the winner required by the selected format.</p></div>
 <div class="help-item"><strong>How do I enter a set tie-break?</strong><p>Enter the games first. When the score indicates a tie-break under your chosen set rules — for example <span class="score-nowrap">7–6</span> — extra fields appear for each player’s tie-break points. Enter both scores if you know them, or leave both blank. For a deciding Match Tie-Break, enter points directly rather than games, as explained below.</p></div>
 <div class="help-item"><strong>How do I enter a Match Tie-Break?</strong><p>For a deciding tie-break in Best of 3 or Best of 5, turn on Match tie-break in deciding set, choose the 7- or 10-point target, and enter points directly in the deciding row — for example <span class="score-nowrap">10–8</span>, not <span class="score-nowrap">1–0</span> in games. If the entire match was a Match Tie-Break, choose Match Tie-break as the set rule instead. A completed Match Tie-Break must be won by two points.</p></div>
-<div class="help-item"><strong>What if play stopped during a set tie-break?</strong><p>Choose Stopped and enter the tied game score at which your set tie-break started, such as <span class="score-nowrap">6–6</span>. Fields appear for the tie-break points reached when play stopped. Enter both if known; otherwise leave both blank. The app does not guess the missing points.</p></div>
+<div class="help-item"><strong>What if play stopped during a set tie-break?</strong><p>Choose Stopped and enter the tied game score at which your set tie-break started, such as <span class="score-nowrap">6–6</span>. Fields appear for the tie-break points reached when play stopped. Enter both if known, or leave both blank.</p></div>
 <div class="help-item"><strong>What if I remember the start time, not the duration?</strong><p>Choose Start &amp; end and enter both dates and times; duration is calculated automatically. If you played past midnight, set the end date to the following day. Alternatively, choose End &amp; duration and enter the duration in minutes. If you don’t remember how long you played, leave the optional duration blank. When supplied, duration must be at least one minute and no more than 24 hours.</p></div>
 <div class="help-item"><strong>Why can’t I choose a future time?</strong><p>This form records a match already played, not a scheduled match. Its end time cannot be in the future. In Start &amp; end mode, the start must be before the end.</p></div>
 <div class="help-item"><strong>How do I move between score fields?</strong><p>Tap any score tile directly, or use Back and Next above the keyboard. The cursor does not jump after one digit, so you can enter two-digit scores. Done closes the keyboard; tapping outside a field or scrolling also dismisses it.</p></div>
-<div class="help-item"><strong>Which statistics can a manual match contribute?</strong><p>The known result, sets, games, entered tie-break results and optional duration can contribute to the relevant history and summaries. Point-by-point, serve, return, break-point and workout measurements are not reconstructed. The match is marked Added manually, and unavailable detail cards are hidden.</p></div>
+<div class="help-item"><strong>Which statistics can a manual match contribute?</strong><p>The saved result, sets, games, entered tie-break results and optional duration contribute to the relevant history and summaries. Point-by-point, serve, return, break-point and workout measurements appear for Watch-recorded matches when available. Manual matches are marked Added manually.</p></div>
 <div class="help-item"><strong>Will the match appear on Apple Watch?</strong><p>Yes. Saved manual entries can synchronize to the paired Pro Watch and through private iCloud to Standalone under the same Apple Account. Both Watch apps preserve the manual-entry label and hide unavailable statistics. Keep both products updated and allow synchronization to finish.</p></div>
 <div class="help-item"><strong>Can I change a Watch-recorded score on iPhone?</strong><p>No. Adding a played match is separate from editing a Watch recording. You can change the opponent assignment and optional match context for an existing match without changing its recorded score or statistics.</p></div>
 </div>
@@ -1281,7 +1283,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 
 <div class="release-proof-pair" aria-label="Manual match and court context examples">
 <figure><a href="assets/release-1-6-en/manual-edit-details.png" target="_blank" rel="noopener"><img src="assets/release-1-6-en/manual-edit-details.png" width="1320" height="2868" loading="lazy" alt="Manually added match in iPhone Match Details with the Edit match button"></a><figcaption>Open a manual match and tap Edit match to correct its time, rules or score.</figcaption></figure>
-<figure><a href="assets/release-1-6-en/court-conditions.png" target="_blank" rel="noopener"><img src="assets/release-1-6-en/court-conditions.png" width="1320" height="2868" loading="lazy" alt="Optional match context editor with Clay and Outdoor selected"></a><figcaption>Surface and setting are optional. Actual app screens with sample data.</figcaption></figure>
+<figure><a href="assets/release-1-6-en/court-conditions.png" target="_blank" rel="noopener"><img src="assets/release-1-6-en/court-conditions.png" width="1320" height="2868" loading="lazy" alt="Optional match context editor with Clay and Outdoor selected"></a><figcaption>Surface and setting are optional.</figcaption></figure>
 </div>
 
 <section id="match-context">
@@ -1305,7 +1307,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <div class="help-item"><strong>Are records and milestones permanent career achievements?</strong><p>No. They describe the history recorded in the app. Adding an older result, correcting a manual match’s score or date, deleting a match or changing its opponent can change relevant comparisons and Rivalry highlights. Later matches are not used as earlier history for an older result. Milestone wins are based on qualifying completed wins.</p></div>
 <div class="help-item"><strong>Why can a win streak in Stats differ from a Match Highlight?</strong><p>Stats and Rivalries can count stopped matches with a clear leader as decided results. Win-streak and milestone Highlights use completed wins, so an unfinished match does not earn a completed-win achievement. Both use the saved history available for the relevant comparison.</p></div>
 <div class="help-item"><strong>Are the highlights shown on Apple Watch?</strong><p>No. Match Highlights are shown in Pro’s iPhone Match Details and shared images. Watch history keeps the saved result and available statistics without a separate highlights section.</p></div>
-<div class="help-item"><strong>Why does a manual match show fewer highlights?</strong><p>A final score cannot prove how each point was played. Manual matches can show supported score- or history-based highlights, but the app does not invent serve, return, break-point or workout evidence.</p></div>
+<div class="help-item"><strong>Why does a manual match show fewer highlights?</strong><p>Manual matches can show highlights based on their saved score or match history. Serve, return and break-point highlights need recorded point data.</p></div>
 </div>
 </section>
 
@@ -1313,7 +1315,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <h2>Match Flow and Momentum</h2>
 <p class="section-subtitle">Pro shows three Match Flow views in recorded match details; both Watch apps show compact Momentum in History.</p>
 <div class="help">
-<div class="help-item"><strong>When does Match Flow appear?</strong><p>Only when a saved match has a valid point-by-point record. Newly recorded matches keep this history automatically. Some older records may already contain enough data; others and manually entered matches cannot have missing points reconstructed from the final score. The section is omitted when a reliable flow is unavailable.</p></div>
+<div class="help-item"><strong>When does Match Flow appear?</strong><p>When a saved match has a valid point-by-point record. Newly recorded matches keep this history automatically, and some older records have enough data too. Otherwise, the Match Flow section is hidden.</p></div>
 <div class="help-item"><strong>What do the Momentum bars and score tiles mean?</strong><p>Each bar is one recorded game: green when you won it, red when your opponent won it. Taller bars represent games with more recorded points, not a larger winning margin. The tile beside each bar is the running game score after that game. Tie-breaks are identified separately.</p></div>
 <div class="help-item"><strong>What is in Scores and Key Moments?</strong><p>Scores lists the running result after each game and its recorded point count. Key Moments selects events supported by the point history, such as a long game, a break or a turning point. Pro shows these views in Match Details; Watch History has the smaller Momentum view.</p></div>
 <div class="help-item"><strong>Do I need to enter anything during the match?</strong><p>No. Continue scoring points as usual. Match Flow uses the saved scoring sequence, with no new on-court controls or extra taps.</p></div>
@@ -1453,7 +1455,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>What happens if I stop before scoring a point?</strong>
-<p>The app saves only genuine match progress. It does not invent points, games, statistics, or workout measurements for an empty match, and workout information appears only when a workout was actually recorded.</p>
+<p>An empty match has no score progress to save. Workout information appears only when a workout was recorded.</p>
 </div>
 <div class="help-item">
 <strong>Can I start a new match after finishing or stopping one?</strong>
@@ -1543,7 +1545,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>Why can an older saved match show fewer statistics?</strong>
-<p>Matches saved by earlier app versions may not contain every statistic introduced later. The app preserves the historical information that was originally recorded rather than inventing missing values.</p>
+<p>Matches saved by earlier app versions may not contain every statistic introduced later. Their available detail reflects what was recorded at the time.</p>
 </div>
 </div>
 </section>
@@ -1708,7 +1710,7 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 </div>
 <div class="help-item">
 <strong>What information is saved with a match?</strong>
-<p>A saved match can include its scoring format, result, set and tie-break scores, timing and opponent assignment. Manually entered matches are marked Added manually. You can add court conditions, a place and a private match note on iPhone. Point-by-point and workout statistics are included only when recorded, not inferred from a manually entered score.</p>
+<p>A saved match can include its scoring format, result, set and tie-break scores, timing and opponent assignment. Manually entered matches are marked Added manually. You can add court conditions, a place and a private match note on iPhone. Point-by-point and workout statistics appear when recorded.</p>
 </div>
 <div class="help-item">
 <strong>How do custom formats appear in History?</strong>
@@ -1722,6 +1724,18 @@ html[lang="zh-Hans"] .hero .help-home-badge {
 <strong>Can I delete a saved match?</strong>
 <p>Yes. Use the delete action in match history and confirm the removal. Deleting a match removes that saved history entry from the app.</p>
 </div>
+</div>
+</section>
+
+<section id="period-recaps">
+<h2>Month and year recaps</h2>
+<p class="section-subtitle">Review saved-match activity on either Watch app, or use the larger recap in Pro on iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>Where do I find a recap?</strong><p>On Apple Watch, open History, tap Period and choose a year or a month with saved matches. Then tap Year in Tennis or Month in Tennis. In Pro on iPhone, open Calendar and tap the recap button for the selected month or year.</p></div>
+<div class="help-item"><strong>What do the chart colors and numbers mean?</strong><p>Each bar counts saved matches in that week or month. Green shows completed wins, red shows completed losses and yellow shows stopped matches. The number above a bar is its match total. Completed wins and losses are shown separately from stopped matches in the overview.</p></div>
+<div class="help-item"><strong>How are weeks divided?</strong><p>Week boundaries follow your device’s calendar settings. A month can contain parts of five or six calendar weeks. Week-to-week comparison appears when the selected month contains two complete weeks to compare.</p></div>
+<div class="help-item"><strong>What is compared with the previous period?</strong><p>The recap compares match count and win rate with the previous month or year when comparable history is available. For a month or year still in progress, it compares through the same point in both periods. Win rate uses completed wins and losses only, so stopped and tied matches do not affect it.</p></div>
+<div class="help-item"><strong>Where are achievements and sharing?</strong><p>Both Watch apps show achievements from the selected period. In Pro on iPhone, tap an achievement to open its match, or use Share to create a month or year card.</p></div>
 </div>
 </section>
 

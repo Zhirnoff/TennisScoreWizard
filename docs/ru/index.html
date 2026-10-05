@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
 <title>Tennis Score Wizard — ведение счёта в теннисе на Apple Watch и iPhone</title>
-<meta content="Ведите счёт на Apple Watch. Изучайте Match Flow в Pro, смотрите Momentum на часах, экспортируйте отчёты и резервные копии истории матчей." name="description"/>
+<meta content="Ведите счёт на Apple Watch. Смотрите итоги месяца и года на часах и в Pro на iPhone, изучайте историю матчей, Momentum и достижения, делитесь карточками." name="description"/>
 <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/ru/">
 <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/">
 <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/">
@@ -22,13 +22,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tennis Score Wizard">
 <meta property="og:title" content="Tennis Score Wizard — ведение счёта в теннисе на Apple Watch и iPhone">
-<meta content="Ведите счёт на Apple Watch. Изучайте Match Flow в Pro, смотрите Momentum на часах, экспортируйте отчёты и резервные копии истории матчей." property="og:description"/>
+<meta content="Ведите счёт на Apple Watch. Смотрите итоги месяца и года на часах и в Pro на iPhone, изучайте историю матчей, Momentum и достижения, делитесь карточками." property="og:description"/>
 <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/ru/">
 <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <meta property="og:image:alt" content="Tennis Score Wizard app icon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tennis Score Wizard — ведение счёта в теннисе на Apple Watch и iPhone">
-<meta content="Ведите счёт на Apple Watch. Изучайте Match Flow в Pro, смотрите Momentum на часах, экспортируйте отчёты и резервные копии истории матчей." name="twitter:description"/>
+<meta content="Ведите счёт на Apple Watch. Смотрите итоги месяца и года на часах и в Pro на iPhone, изучайте историю матчей, Momentum и достижения, делитесь карточками." name="twitter:description"/>
 <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
 <style>
     :root {
@@ -1895,7 +1895,7 @@ footer {
   background: rgba(40,255,95,0.045);
 }
 
-.comparison-difference > div:last-child {
+.comparison-difference > div:nth-child(2) {
   color: #efffed;
   background: rgba(40,255,95,0.045);
   font-weight: 780;
@@ -2354,6 +2354,9 @@ footer {
 <script src="../support-development.js" defer></script>
 <link rel="stylesheet" href="../release-1-6-en.css?v=20260922-flow">
 <script defer src="../navigation-en.js?v=20260911-i18n"></script>
+<link rel="stylesheet" href="../season-recaps-en.css?v=20261001-review">
+<link rel="stylesheet" href="../back-to-top.css?v=20261001">
+<script defer src="../back-to-top.js?v=20261001"></script>
 </head>
 <body>
 <main class="page">
@@ -2394,7 +2397,7 @@ footer {
 <span class="eyebrow-copy-compact"><span class="eyebrow-segment">Счёт на часах</span><span aria-hidden="true" class="eyebrow-separator">·</span><span class="eyebrow-segment">Больше на iPhone</span></span>
 </div>
 <h1>Записывайте каждый розыгрыш. Понимайте каждый матч.</h1>
-<p>Ведите счёт на Apple Watch со Standalone или Pro. В Pro на iPhone можно также добавлять сыгранные матчи, сохранять место игры, изучать соперничества и хайлайты и делиться результатом. Ручные матчи можно исправить позже, а историю на часах — отфильтровать по году и месяцу.</p>
+<p>Ведите счёт на Apple Watch в Pro или Standalone. В Pro на iPhone можно также добавлять сыгранные матчи, сохранять место игры, изучать соперничества и хайлайты и делиться результатом. Ручные матчи можно исправить позже, а историю на часах — отфильтровать по году и месяцу.</p>
 <div class="hero-actions">
 <a class="hero-version-link" href="#versions">Посмотреть версии <span aria-hidden="true">↓</span></a>
 <a class="hero-instagram-link" href="https://www.instagram.com/tennisscorewizard/" target="_blank" rel="noopener noreferrer"><span class="instagram-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="1.7" y="1.7" width="20.6" height="20.6" rx="6.3"></rect><circle cx="12" cy="12" r="5"></circle><circle cx="18.2" cy="5.9" r="1.25" fill="currentColor" stroke="none"></circle></svg></span><span>Подписаться в Instagram</span></a>
@@ -2408,102 +2411,16 @@ footer {
 </section>
 <section id="versions">
 <h2>Выберите свой Tennis Score Wizard</h2>
-<p class="section-subtitle">Обе версии позволяют полностью вести счёт на Apple Watch. Выберите Standalone только для Apple Watch или Pro с дополнительным приложением для iPhone. Обе версии могут синхронизировать одни и те же сохранённые матчи через iCloud.</p>
+<p class="section-subtitle">Pro объединяет ведение счёта на Apple Watch с подробным анализом на iPhone. Standalone — самостоятельный вариант для тех, кому нужны только часы. Обе версии могут синхронизировать сохранённые матчи через iCloud.</p>
 <div class="version-grid">
-<article class="card version-card"><span class="version-kicker">Standalone</span><h3>Только Apple Watch</h3><p>Установите приложение прямо на Apple Watch и управляйте всем матчем с запястья. Приложение для iPhone не требуется.</p><ul class="version-list"><li>One Set, Short Sets, No‑Ad и Custom Set</li><li>Автоматическая статистика и синхронизация через iCloud</li><li>Необязательная запись тренировки в приложении «Здоровье»</li><li>Фильтры истории часов по году и месяцу</li></ul><a aria-label="Tennis Score Wizard Standalone" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004"><span class="app-store-logo"></span><span class="app-store-text"><small>Загрузите в</small><strong>App Store</strong></span></a><span class="version-availability">Версия 1.10</span></article>
-<article class="card version-card version-card-companion"><span class="version-kicker">Pro</span><h3>Счёт и статистика тенниса</h3><p>
+    <article class="card version-card version-card-companion"><span class="version-kicker">Pro</span><h3>Счёт и статистика тенниса</h3><p>
         Pro включает полноценное приложение для ведения счёта на Apple Watch и анализа матчей на iPhone. Отдельно покупать Tennis Score Wizard (Standalone) не нужно.
-      </p><ul class="version-list"><li>Гибкая настройка матча и ведение счёта на Apple Watch</li><li>История, статистика, тренировки и расширения на Apple Watch</li><li>Ручной ввод матчей, данные корта, соперничества и публикация на iPhone</li></ul><a aria-label="Tennis Score Wizard Pro" class="app-store-button" href="https://apps.apple.com/app/id6789285015"><span class="app-store-logo"></span><span class="app-store-text"><small>Загрузите в</small><strong>App Store</strong></span></a><span class="version-availability">Версия 1.7</span></article>
-</div>
+      </p><ul class="version-list"><li>Гибкая настройка матча и ведение счёта на Apple Watch</li><li>История, статистика, тренировки и расширения на Apple Watch</li><li>Ручной ввод матчей, данные корта, соперничества и публикация на iPhone</li><li>Итоги месяца и года, сравнение периодов и карточки для публикации на iPhone</li></ul><a aria-label="Tennis Score Wizard Pro" class="app-store-button" href="https://apps.apple.com/app/id6789285015"><span class="app-store-logo"></span><span class="app-store-text"><small>Загрузите в</small><strong>App Store</strong></span></a><span class="version-availability">Версия 1.8</span></article>
+
+    <article class="card version-card"><span class="version-kicker">Standalone</span><h3>Только Apple Watch</h3><p>Установите приложение прямо на Apple Watch и управляйте всем матчем с запястья. Приложение для iPhone не требуется.</p><ul class="version-list"><li>One Set, Short Sets, No‑Ad и Custom Set</li><li>Автоматическая статистика и синхронизация через iCloud</li><li>Необязательная запись тренировки в приложении «Здоровье»</li><li>Фильтры истории по году и месяцу, итоги месяца и года</li></ul><a aria-label="Tennis Score Wizard Standalone" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004"><span class="app-store-logo"></span><span class="app-store-text"><small>Загрузите в</small><strong>App Store</strong></span></a><span class="version-availability">Версия 1.11</span></article>
+  </div>
 <a class="hero-version-link versions-compare-link" href="#comparison">Сравнить функции <span aria-hidden="true">↓</span></a>
 </section>
-<section id="match-flow" class="release-next" aria-labelledby="match-flow-title">
-<div class="release-next-heading"><div class="release-next-kicker"><span>Новое в Pro 1.7</span><span>Momentum в обеих версиях для часов</span></div><h2 id="match-flow-title">Узнайте, как развивался матч.</h2><p>Match Flow показывает ход игры, если сохранена достоверная история каждого розыгрыша. Новые матчи, записанные часами, сохраняют эту последовательность. Для старых или введённых вручную матчей недостающие очки не восстанавливаются по итоговому счёту.</p></div>
-<div class="release-next-grid">
-<article class="release-next-card"><span class="release-card-number">01 · MOMENTUM</span><h3>Каждый поворот игры.</h3><p>Зелёные и красные столбцы показывают, кто выиграл гейм. Высота зависит от числа сыгранных очков, а карточки — текущий счёт по геймам.</p><a href="../assets/release-1-7-en/iphone-momentum.png" target="_blank" rel="noopener" aria-label="Каждый поворот игры."><img src="../assets/release-1-7-en/iphone-momentum.png" alt="Каждый поворот игры. Match Flow: Momentum" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
-<article class="release-next-card"><span class="release-card-number">02 · SCORES</span><h3>Счёт шаг за шагом.</h3><p>Просматривайте счёт после каждого гейма, его номер и количество записанных очков. Во время матча дополнительных действий не требуется.</p><a href="../assets/release-1-7-en/iphone-scores.png" target="_blank" rel="noopener" aria-label="Счёт шаг за шагом."><img src="../assets/release-1-7-en/iphone-scores.png" alt="Счёт шаг за шагом. Match Flow: Scores" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
-<article class="release-next-card"><span class="release-card-number">03 · KEY MOMENTS</span><h3>Ключевые моменты.</h3><p>Долгие геймы и победы на приёме отображаются вместе со счётом, если это подтверждено сохранёнными розыгрышами.</p><a href="../assets/release-1-7-en/iphone-key-moments.png" target="_blank" rel="noopener" aria-label="Ключевые моменты."><img src="../assets/release-1-7-en/iphone-key-moments.png" alt="Ключевые моменты. Match Flow: Key Moments" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
-</div>
-<article class="release-watch-proof"><div><div class="release-next-kicker"><span>Pro Watch · Standalone 1.10</span></div><h3>История — и на часах.</h3><p>В истории матча компактный Momentum показывает столбцы геймов и текущий счёт. Если надёжной истории очков нет, блок не появляется.</p><a href="help.html#match-flow-help">Как работает Match Flow →</a></div><a href="../assets/release-1-7-en/watch-momentum.png" target="_blank" rel="noopener" aria-label="История — и на часах."><img src="../assets/release-1-7-en/watch-momentum.png" alt="История — и на часах. Momentum" width="416" height="496" loading="lazy" decoding="async"></a></article>
-<article class="release-watch-proof" id="history-files"><div><div class="release-next-kicker"><span>Pro · iPhone</span></div><h3>История матчей — в файле.</h3><p>Экспортируйте отчёт в CSV, Excel или PDF. Для последующего восстановления создайте в Pro резервную копию JSON или ZIP. При импорте существующие матчи не дублируются, а удалённые ранее записи не возвращаются.</p><a href="help.html#history-files-help">Экспорт и резервные копии →</a></div><a class="release-history-files-shot" href="../assets/release-1-7-en/iphone-history-files.png" target="_blank" rel="noopener" aria-label="Открыть экран файлов истории матчей в полном размере"><img src="../assets/release-1-7-en/iphone-history-files.png" alt="Актуальный экран файлов истории матчей в Pro: экспорт и импорт резервной копии" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
-<p class="release-media-note">Актуальные снимки Pro и Standalone в симуляторе с примерными матчами. Интерфейс на изображениях показан на английском. Экспорт и импорт файлов доступны только в Pro.</p>
-</section>
-<section aria-labelledby="release-next-title" class="release-next" id="new-release">
-<div class="release-next-heading">
-<div class="release-next-kicker"><span>Ранее в Pro 1.6</span><span>Синхронизация со Standalone 1.9</span></div>
-<h2 id="release-next-title">Весь ваш матч.<br/>Не только счёт.</h2>
-<p>Добавьте сыгранный матч, сохраните место и условия игры. Поделитесь самыми интересными моментами — всё это рядом с историей матчей с Apple Watch. Ручные матчи можно исправить позже, а историю на часах — отфильтровать по году и месяцу.</p>
-</div>
-<div class="release-next-grid">
-<article class="release-next-card">
-<span class="release-card-number">01 · ДОБАВЬТЕ СЫГРАННЫЙ МАТЧ</span>
-<h3>Сыграли? Сохраните.</h3>
-<p>Введите результат на iPhone: счёт по сетам и, если помните, очки тай-брейков. Можно сохранить завершённый или остановленный матч, в том числе ничью. Укажите начало и окончание либо оставьте длительность неизвестной.</p>
-<a aria-label="Открыть снимок ручного ввода в полном размере" href="../assets/release-1-6-en/manual-score.png" rel="noopener" target="_blank"><img alt="Ручной ввод в Pro: результат 7–6, 6–4 и тай-брейк 12–10" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-score.png" width="1320"/></a>
-</article>
-<article class="release-next-card">
-<span class="release-card-number">02 · СОХРАНИТЕ ДЕТАЛИ</span>
-<h3>У каждого корта своя история.</h3>
-<p>Добавьте покрытие, игру в помещении или на улице, клуб, корт и личную заметку. Выбирайте недавние или избранные корты. Дополнить можно и старые матчи, записанные на часах.</p>
-<a aria-label="Открыть снимок данных корта в полном размере" href="../assets/release-1-6-en/favorite-court.png" rel="noopener" target="_blank"><img alt="Редактор корта в Pro: Central Tennis Club, Court 3, избранное и отдельная заметка к матчу" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/favorite-court.png" width="1320"/></a>
-</article>
-<article class="release-next-card">
-<span class="release-card-number">03 · НАЙДИТЕ ГЛАВНЫЕ МОМЕНТЫ</span>
-<h3>Больше поводов запомнить матч.</h3>
-<p>В деталях матча видны все подтверждённые хайлайты: от камбэка до личного рекорда или юбилейной победы. В карточку для публикации попадает до шести самых интересных.</p>
-<a aria-label="Открыть снимок хайлайтов в полном размере" href="../assets/release-1-6-en/match-highlights.png" rel="noopener" target="_blank"><img alt="Добавленный вручную матч с хайлайтами победы без проигранных сетов и серии побед из сохранённой истории" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights.png" width="1320"/></a>
-</article>
-</div>
-<figure class="highlights-catalog" id="match-highlights-catalog">
-<figcaption>
-<span class="release-card-number">ХАЙЛАЙТЫ МАТЧА</span>
-<h3>В каждом матче есть что вспомнить.</h3>
-<p>Камбэки, напряжённые тай-брейки, юбилейные победы и личные рекорды. Здесь представлены 26 типов хайлайтов в 44 вариантах карточек.</p>
-<p class="release-media-note">Это примеры разных ситуаций, а не одного матча. В деталях показываются все подходящие хайлайты, в карточке для публикации — до шести.</p>
-</figcaption>
-<a aria-label="Открыть все 44 примера хайлайтов в полном размере" href="../assets/release-1-6-en/all-match-highlights.png" rel="noopener" target="_blank">
-<img alt="26 типов хайлайтов в 44 карточках: камбэки, тай-брейки, соперничества, рекорды, подача, приём и долгие матчи" decoding="async" height="1501" loading="lazy" src="../assets/release-1-6-en/all-match-highlights.png" width="2160"/>
-</a>
-</figure>
-<article class="release-watch-proof" id="edit-played-match">
-<div><div class="release-next-kicker"><span>Ручные матчи · iPhone</span></div><h3>Ошиблись в счёте? Исправьте детали, сохранив матч.</h3><p>Откройте добавленный вручную матч и нажмите Edit match. Измените дату, время, правила или счёт — удалять матч и вводить его заново не нужно.</p><p>Сохранение обновляет ту же запись, в том числе в истории часов. Счёт матчей, записанных на Apple Watch, защищён от таких изменений. Соперник и данные корта редактируются отдельно.</p><a href="help.html#manual-matches">Добавление и редактирование матчей →</a></div>
-<a href="../assets/release-1-6-en/manual-edit-form.png" target="_blank" rel="noopener" aria-label="Форма редактирования ручного матча на iPhone с данными матча, корта и времени"><img src="../assets/release-1-6-en/manual-edit-form.png" alt="Форма редактирования ручного матча на iPhone с данными матча, корта и времени" width="1320" height="2868" loading="lazy" decoding="async"></a>
-</article>
-<article class="release-watch-proof">
-<div>
-<div class="release-next-kicker"><span>Оба приложения для часов</span></div>
-<h3>Добавили на iPhone.<br/>Сохранили на часах.</h3>
-<p>Да. Исправления обновляют ту же запись на связанных часах Pro и могут передаваться в Standalone через частный iCloud под тем же Аккаунтом Apple. Обновите приложения и дождитесь синхронизации. Связанная статистика и хайлайты, основанные на истории, учитывают исправленный результат. Ручной ввод отмечается отдельно, отсутствующие данные очков и тренировок не выдумываются.</p>
-<p>Они отмечены как <strong>Добавлено вручную</strong>. Показывается сохранённый результат — без пустых карточек статистики очков и тренировок.</p>
-<a href="help.html#manual-matches">Как работает ручной ввод →</a>
-</div>
-<a aria-label="Открыть историю ручного матча на Apple Watch в полном размере" href="../assets/release-1-6-en/watch-manual-history.png" rel="noopener" target="_blank"><img alt="История Standalone на Apple Watch: остановленный матч с ничьей и отметкой о ручном вводе" decoding="async" height="514" loading="lazy" src="../assets/release-1-6-en/watch-manual-history.png" width="422"/></a>
-</article>
-<p class="release-media-note">Подлинные снимки приложения на английском языке с демонстрационными матчами. Счёт, длительность и хайлайты показаны так, как их отрисовало приложение. Для ручных матчей отображаются введённый результат и подтверждённые им сводные данные.</p>
-</section>
-<section id="watch-history" class="core-formats-showcase" aria-labelledby="watch-history-title">
-<div class="core-formats-heading"><span class="core-formats-kicker"><span>Оба приложения для часов</span></span><h2 id="watch-history-title">Найдите тот самый матч.</h2><p>В прошлом месяце или сезоне? Выберите год и месяц в истории часов, затем при необходимости оставьте одиночные или парные матчи. Старые матчи подгружаются по мере просмотра, не удаляясь из сохранённой истории.</p></div>
-<div class="core-proof-grid watch-promo-grid">
-<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Начните с периода.</h3><p>В History нажмите Period. Выберите период или оставьте All dates — все даты. Фильтры All, 1v1 и 2v2 работают вместе с ним.</p></div><img src="../assets/release-1-6-en/watch-history-period.png" alt="Начните с периода. В History нажмите Period. Выберите период или оставьте All dates — все даты. Фильтры All, 1v1 и 2v2 работают вместе с ним." width="416" height="496" loading="lazy" decoding="async"></article>
-<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Выберите год.</h3><p>В списке — годы с сохранёнными матчами. All dates возвращает всю историю.</p></div><img src="../assets/release-1-6-en/watch-history-years.png" alt="Выберите год. В списке — годы с сохранёнными матчами. All dates возвращает всю историю." width="416" height="496" loading="lazy" decoding="async"></article>
-<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Месяц или весь год.</h3><p>Выберите месяц с матчами или Entire year — весь выбранный год.</p></div><img src="../assets/release-1-6-en/watch-history-months-entire-year.png" alt="Месяц или весь год. Выберите месяц с матчами или Entire year — весь выбранный год." width="416" height="496" loading="lazy" decoding="async"></article>
-</div><p class="release-media-note">Подлинные английские экраны Pro и Standalone с тестовой историей. <a href="help.html#match-history">Как работают фильтры истории →</a></p>
-</section>
-<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>В обеих версиях</span><span>Подсчёт счёта на Apple Watch</span></span><h2 id="scoring-formats-title">Играйте в том формате, который подходит именно вам.</h2><p>Обе версии используют один механизм автоматического счёта на Apple Watch: официальные ускоренные форматы, геймы No-Ad и настройку Custom Set с привычным управлением на корте.</p></div><div class="core-proof-grid watch-promo-grid">
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Настройка One Set и Custom Set</h3><p>Сыграйте весь матч в один сет, когда времени немного.</p><p>Одной настройкой задайте число геймов для победы, необходимый отрыв, начало тай-брейка и количество очков для победы в нём.</p><p>Играйте сет до шести геймов с преимуществом или начинайте обычный тай-брейк при <span class="score-nowrap">6–6</span>.</p></div><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="Настройка One Set и Custom Set" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Варианты официального Short Set</h3><p>Сет выигрывает тот, кто первым возьмёт четыре гейма. Тай-брейк начинается при <span class="score-nowrap">3–3</span> или <span class="score-nowrap">4–4</span> и играется до 7 очков либо с решающим очком при <span class="score-nowrap">4–4</span>.</p></div><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="Варианты официального Short Set" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>No‑Ad при счёте «ровно»</h3><p>Решающее очко при «ровно» ускоряет любой выбранный формат сета.</p></div><img src="../assets/core-scoring-formats-en/watch-no-ad.png" alt="No‑Ad при счёте «ровно»" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Ваша победа — по сетам.</h3><p>Итоговый счёт, геймы и время на корте собраны в одной понятной карточке.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-win.png" alt="Победа в матче" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Каждый матч важен.</h3><p>После поражения посмотрите счёт и продолжительность матча, а затем откройте историю, чтобы вернуться к его деталям.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-loss.png" alt="Поражение в матче" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>От одного до пяти сетов — наглядно</h3><p>Победы, поражения и остановленные матчи сразу различимы. Счёт от одного до пяти сетов и очки тай-брейков остаются читаемыми.</p></div><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="Результаты от двух до пяти сетов" width="422" height="514" loading="lazy" decoding="async"></article>
-</div></section>
-<section id="icloud-sync" class="icloud-showcase" aria-labelledby="icloud-title">
-<div class="icloud-heading"><span class="icloud-kicker">Синхронизация матчей через iCloud</span><h2 id="icloud-title">История матчей на Apple Watch и iPhone.</h2><p>Standalone и Pro могут синхронизировать одни и те же матчи через iCloud под одним Аккаунтом Apple. У каждого аккаунта отдельная частная история. Ведите счёт на Apple Watch или добавляйте сыгранный матч на iPhone. Ручной ввод, назначенный соперник и контекст передаются вместе с записью; успешно синхронизированные матчи можно восстановить после переустановки.</p></div>
-<div class="icloud-ecosystem"><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-watch"><img src="../assets/release-1-6-en/watch-history-period.png" alt="В History нажмите Period. Выберите период или оставьте All dates — все даты. Фильтры All, 1v1 и 2v2 работают вместе с ним." width="416" height="496" loading="lazy" decoding="async"></picture><strong>Apple Watch</strong><p>Ведите счёт в Standalone или Pro и проверяйте последнее состояние синхронизации в «Истории».</p></div><div class="icloud-hub"><div class="icloud-cloud-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path><path d="m24 34 5.5 5.5L41 28"></path></svg></div><strong>Приватная синхронизация через iCloud</strong><p>Успешно синхронизированные матчи хранятся в приватной базе данных CloudKit вашего Аккаунта Apple, а не на сервере Tennis Score Wizard.</p><div class="icloud-status-sample">✓ <span>Synced</span></div></div><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-phone"><source srcset="../assets/companion_icloud_synced-720.webp" type="image/webp"><img src="../assets/companion_icloud_synced.png" alt="Карточка синхронизации iCloud в Pro с указанием приватного хранилища и времени последней синхронизации" width="1224" height="650" loading="lazy" decoding="async"></picture><strong>iPhone</strong><p>Добавляйте сыгранные матчи, меняйте данные корта, изучайте записанную статистику и проверяйте частную синхронизацию iCloud в Pro.</p></div></div>
-<div class="icloud-benefits"><article class="icloud-benefit"><strong>Два независимых пути</strong><p>Pro может передавать данные напрямую между связанными устройствами, а CloudKit отдельно обеспечивает надёжную синхронизацию и восстановление через iCloud. Любой путь может завершиться первым.</p></article><article class="icloud-benefit"><strong>Проверяйте состояние синхронизации</strong><p>В «Истории» отображается <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> или <b>Sync paused</b> / <b>Retry</b>.</p></article><article class="icloud-benefit"><strong>Истории аккаунтов не смешиваются</strong><p>При смене Аккаунта Apple истории не объединяются. Несинхронизированные матчи предыдущего аккаунта сохраняются в зашифрованной локальной копии для восстановления.</p></article><article class="icloud-benefit"><strong>Ведите счёт сейчас, восстановите позже</strong><p>Вести счёт можно и без iCloud. Успешно синхронизированные матчи снова загрузятся после переустановки с тем же Аккаунтом Apple.</p></article></div>
-</section>
-
-<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">Новое · Rivalries</span><h2 id="rivalries-title">У каждого соперника своя история.</h2><p>Выберите сохранённого соперника перед одиночным матчем, и Tennis Score Wizard автоматически соберёт приватную статистику личных встреч. Результаты, ключевые розыгрыши, камбэки, серии, тренировки и все матчи останутся в одном профиле.</p><a class="rivalries-action" href="whats-new.html">Прочитать о новой версии</a><p class="rivalries-singles-note">Сейчас Rivalries учитывает одиночные матчи. Парные матчи записываются как обычно, но без назначения одного соперника.</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="Список соперников со статистикой личных встреч" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · На корте</span><h3>Выберите соперника. Дальше просто играйте.</h3><p>При настройке одиночного матча выберите гостя или сохранённого игрока. Короткое имя появится на экране счёта, а привычные нажатия автоматически сформируют статистику встреч.</p><ul class="rivalries-checklist"><li>Создавайте и редактируйте игроков в Pro на iPhone</li><li>Синхронизируйте список с Apple Watch через приватный iCloud</li><li>Назначайте соперника старому одиночному матчу</li><li>Не включайте гостевые матчи в Rivalries</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="Выберите гостя или сохранённого игрока" width="416" height="496" loading="lazy" decoding="async"><figcaption>Выберите гостя или сохранённого игрока</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="Имя соперника во время матча" width="416" height="496" loading="lazy" decoding="async"><figcaption>Имя соперника во время матча</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · Полная статистика встреч</span><h3>Один соперник. Вся картина.</h3><p>Выбирайте весь период, текущий год или последние 30 дней. Сравнивайте последние результаты с общими, открывайте любой матч и смотрите только те показатели, которые действительно были записаны.</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>Личные встречи</strong><p>Матчи с определённым исходом, победы, сеты, геймы, тай-брейки и матч-тай-брейки.</p></article><article class="rivalries-benefit"><strong>Показатели игры</strong><p>Очки, удержание подачи и брейки, подача, приём и ключевые розыгрыши.</p></article><article class="rivalries-benefit"><strong>Закономерности и нагрузка</strong><p>Победы после проигранного первого сета, серии, время на корте, пульс и энергия.</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Личные встречи и текущая форма" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Личные встречи и текущая форма</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Показатели, закономерности и нагрузка" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Показатели, закономерности и нагрузка</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Все сохранённые матчи" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Все сохранённые матчи</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · Поделиться Rivalry</span><h3>Три карточки. Одна история противостояния.</h3><p>Карточки всегда идут в одном порядке: общая статистика и последние матчи, показатели игры, затем закономерности и данные тренировки. Приватные заметки никогда не экспортируются.</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="Общая статистика и последние матчи" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · Общая статистика и последние матчи</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="Показатели игры" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · Показатели игры</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="Закономерности, время и тренировка" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · Закономерности, время и тренировка</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>Приватность заложена изначально</strong><p>Профили, заметки и связи с матчами хранятся на ваших устройствах и могут синхронизироваться через приватные данные iCloud.</p></article><article><strong>Никаких дополнительных действий во время матча</strong><p>Выбор соперника добавляет контекст только до игры. Ведение счёта, отмена, запись тренировки и весь остальной процесс не меняются.</p></article></div></section>
 <section class="companion-showcase" id="companion-benefits">
 <div class="companion-heading">
 <span class="companion-section-kicker">Возможности Pro</span>
@@ -2573,6 +2490,7 @@ footer {
 </article>
 </div>
 </section>
+<section id="season-recaps" class="season-recaps" aria-labelledby="season-recaps-title"><div class="season-recaps-heading"><span class="season-recaps-kicker">Pro 1.8 · Standalone 1.11</span><h2 id="season-recaps-title">Ваш месяц. Ваш сезон. Ваша история.</h2><p>Посмотрите на сохранённые матчи за неделю, месяц или целый год. Месячные и годовые итоги доступны в обеих версиях для часов. В Pro на iPhone есть подробный экран и карточки, которыми можно поделиться.</p></div><div class="season-recaps-grid"><article class="season-recap-card"><div class="season-recap-copy"><span class="season-recap-label">01 · PRO · IPHONE</span><h3>Как прошёл ваш месяц.</h3><p>Недельные столбцы различают победы, поражения и остановленные матчи цветом. Сравните число матчей и процент побед с прошлым месяцем. Границы недель зависят от настроек календаря.</p></div><a href="../assets/season-recaps-en/pro-month.png" target="_blank" rel="noopener" aria-label="Как прошёл ваш месяц."><img src="../assets/season-recaps-en/pro-month.png" alt="Как прошёл ваш месяц." width="1320" height="2868" loading="lazy" decoding="async"></a></article><article class="season-recap-card"><div class="season-recap-copy"><span class="season-recap-label">02 · PRO · IPHONE</span><h3>Весь год как на ладони.</h3><p>Посмотрите активность по месяцам, сравните её с прошлым годом и вернитесь к достижениям выбранного периода. Карточкой годовых итогов можно поделиться.</p></div><a href="../assets/season-recaps-en/pro-year.png" target="_blank" rel="noopener" aria-label="Весь год как на ладони."><img src="../assets/season-recaps-en/pro-year.png" alt="Весь год как на ладони." width="1320" height="2868" loading="lazy" decoding="async"></a></article><article class="season-recap-card season-recap-watch"><div class="season-recap-copy"><span class="season-recap-label">03 · ОБЕ ВЕРСИИ ДЛЯ ЧАСОВ</span><h3>Итоги на запястье.</h3><p>Откройте «Историю» и выберите Month in Tennis или Year in Tennis. Там видны число матчей, результаты и достижения из сохранённой истории.</p></div><a href="../assets/season-recaps-en/standalone-watch-year.png" target="_blank" rel="noopener" aria-label="Итоги на запястье."><img src="../assets/season-recaps-en/standalone-watch-year.png" alt="Итоги на запястье." width="416" height="496" loading="lazy" decoding="async"></a></article></div><a class="season-recaps-more" href="whats-new.html">Все изменения в версиях <span aria-hidden="true">→</span></a><a class="season-recaps-more" href="help.html#period-recaps">Как устроены итоги месяца и года <span aria-hidden="true">→</span></a></section>
 <section id="iphone-screenshots">
 <span class="companion-section-kicker">Pro на iPhone</span>
 <h2>От каждого матча — к общей картине</h2>
@@ -2632,6 +2550,71 @@ footer {
 <article class="iphone-screenshot-card"><div class="iphone-screenshot-frame"><img src="../assets/companion_trends_serve-720.webp" alt="Скользящий процент выигранных геймов на подаче и количество матчей по месяцам" width="1320" height="2868" loading="lazy" decoding="async" srcset="../assets/companion_trends_serve-720.webp 720w, ../assets/companion_trends_serve-1080.webp 1080w" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px"/></div><h3>Динамика подачи и приёма</h3><p>Переключайте график между победами, розыгрышами, выигранными геймами на подаче и выигранными геймами на приёме.</p></article>
 </div>
 </section>
+<section aria-labelledby="release-next-title" class="release-next" id="new-release">
+<div class="release-next-heading">
+<div class="release-next-kicker"><span>Pro на iPhone</span><span>Синхронизация с обеими версиями для часов</span></div>
+<h2 id="release-next-title">Весь ваш матч.<br/>Не только счёт.</h2>
+<p>Добавьте сыгранный матч, сохраните место и условия игры. Поделитесь самыми интересными моментами — всё это рядом с историей матчей с Apple Watch. Ручные матчи можно исправить позже, а историю на часах — отфильтровать по году и месяцу.</p>
+</div>
+<div class="release-next-grid">
+<article class="release-next-card">
+<span class="release-card-number">01 · ДОБАВЬТЕ СЫГРАННЫЙ МАТЧ</span>
+<h3>Сыграли? Сохраните.</h3>
+<p>Введите результат на iPhone: счёт по сетам и, если помните, очки тай-брейков. Можно сохранить завершённый или остановленный матч, в том числе ничью. Укажите начало и окончание либо оставьте длительность неизвестной.</p>
+<a aria-label="Открыть снимок ручного ввода в полном размере" href="../assets/release-1-6-en/manual-score.png" rel="noopener" target="_blank"><img alt="Ручной ввод в Pro: результат 7–6, 6–4 и тай-брейк 12–10" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-score.png" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">02 · СОХРАНИТЕ ДЕТАЛИ</span>
+<h3>У каждого корта своя история.</h3>
+<p>Добавьте покрытие, игру в помещении или на улице, клуб, корт и личную заметку. Выбирайте недавние или избранные корты. Дополнить можно и старые матчи, записанные на часах.</p>
+<a aria-label="Открыть снимок данных корта в полном размере" href="../assets/release-1-6-en/favorite-court.png" rel="noopener" target="_blank"><img alt="Редактор корта в Pro: Central Tennis Club, Court 3, избранное и отдельная заметка к матчу" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/favorite-court.png" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">03 · НАЙДИТЕ ГЛАВНЫЕ МОМЕНТЫ</span>
+<h3>Больше поводов запомнить матч.</h3>
+<p>В деталях матча видны все подтверждённые хайлайты: от камбэка до личного рекорда или юбилейной победы. В карточку для публикации попадает до шести самых интересных.</p>
+<a aria-label="Открыть снимок хайлайтов в полном размере" href="../assets/release-1-6-en/match-highlights.png" rel="noopener" target="_blank"><img alt="Добавленный вручную матч с хайлайтами победы без проигранных сетов и серии побед из сохранённой истории" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights.png" width="1320"/></a>
+</article>
+</div>
+<figure class="highlights-catalog" id="match-highlights-catalog">
+<figcaption>
+<span class="release-card-number">ХАЙЛАЙТЫ МАТЧА</span>
+<h3>В каждом матче есть что вспомнить.</h3>
+<p>Камбэки, напряжённые тай-брейки, юбилейные победы и личные рекорды. Здесь представлены 26 типов хайлайтов в 44 вариантах карточек.</p>
+
+</figcaption>
+<a aria-label="Открыть все 44 примера хайлайтов в полном размере" href="../assets/release-1-6-en/all-match-highlights.png" rel="noopener" target="_blank">
+<img alt="26 типов хайлайтов в 44 карточках: камбэки, тай-брейки, соперничества, рекорды, подача, приём и долгие матчи" decoding="async" height="1501" loading="lazy" src="../assets/release-1-6-en/all-match-highlights.png" width="2160"/>
+</a>
+</figure>
+<article class="release-watch-proof" id="edit-played-match">
+<div><div class="release-next-kicker"><span>Ручные матчи · iPhone</span></div><h3>Ошиблись в счёте? Исправьте детали, сохранив матч.</h3><p>Откройте добавленный вручную матч и нажмите Edit match. Измените дату, время, правила или счёт — удалять матч и вводить его заново не нужно.</p><p>Сохранение обновляет ту же запись, в том числе в истории часов. Счёт матчей, записанных на Apple Watch, защищён от таких изменений. Соперник и данные корта редактируются отдельно.</p><a href="help.html#manual-matches">Добавление и редактирование матчей →</a></div>
+<a href="../assets/release-1-6-en/manual-edit-form.png" target="_blank" rel="noopener" aria-label="Форма редактирования ручного матча на iPhone с данными матча, корта и времени"><img src="../assets/release-1-6-en/manual-edit-form.png" alt="Форма редактирования ручного матча на iPhone с данными матча, корта и времени" width="1320" height="2868" loading="lazy" decoding="async"></a>
+</article>
+<article class="release-watch-proof">
+<div>
+<div class="release-next-kicker"><span>Оба приложения для часов</span></div>
+<h3>Добавили на iPhone.<br/>Сохранили на часах.</h3>
+<p>Да. Исправления обновляют ту же запись на связанных часах Pro и могут передаваться в Standalone через частный iCloud под тем же Аккаунтом Apple. Обновите приложения и дождитесь синхронизации. Связанная статистика и хайлайты, основанные на истории, учитывают исправленный результат. Ручной ввод отмечается отдельно, отсутствующие данные очков и тренировок не выдумываются.</p>
+<p>Они отмечены как <strong>Добавлено вручную</strong>. Показывается сохранённый результат — без пустых карточек статистики очков и тренировок.</p>
+<a href="help.html#manual-matches">Как работает ручной ввод →</a>
+</div>
+<a aria-label="Открыть историю ручного матча на Apple Watch в полном размере" href="../assets/release-1-6-en/watch-manual-history.png" rel="noopener" target="_blank"><img alt="История Standalone на Apple Watch: остановленный матч с ничьей и отметкой о ручном вводе" decoding="async" height="514" loading="lazy" src="../assets/release-1-6-en/watch-manual-history.png" width="422"/></a>
+</article>
+
+</section>
+<section id="match-flow" class="release-next" aria-labelledby="match-flow-title">
+<div class="release-next-heading"><div class="release-next-kicker"><span>Match Flow · Pro</span><span>Momentum в обеих версиях для часов</span></div><h2 id="match-flow-title">Узнайте, как развивался матч.</h2><p>Match Flow показывает ход игры, если сохранена достоверная история каждого розыгрыша. Новые матчи, записанные часами, сохраняют эту последовательность. Для старых или введённых вручную матчей недостающие очки не восстанавливаются по итоговому счёту.</p></div>
+<div class="release-next-grid">
+<article class="release-next-card"><span class="release-card-number">01 · MOMENTUM</span><h3>Каждый поворот игры.</h3><p>Зелёные и красные столбцы показывают, кто выиграл гейм. Высота зависит от числа сыгранных очков, а карточки — текущий счёт по геймам.</p><a href="../assets/release-1-7-en/iphone-momentum.png" target="_blank" rel="noopener" aria-label="Каждый поворот игры."><img src="../assets/release-1-7-en/iphone-momentum.png" alt="Каждый поворот игры. Match Flow: Momentum" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+<article class="release-next-card"><span class="release-card-number">02 · SCORES</span><h3>Счёт шаг за шагом.</h3><p>Просматривайте счёт после каждого гейма, его номер и количество записанных очков. Во время матча дополнительных действий не требуется.</p><a href="../assets/release-1-7-en/iphone-scores.png" target="_blank" rel="noopener" aria-label="Счёт шаг за шагом."><img src="../assets/release-1-7-en/iphone-scores.png" alt="Счёт шаг за шагом. Match Flow: Scores" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+<article class="release-next-card"><span class="release-card-number">03 · KEY MOMENTS</span><h3>Ключевые моменты.</h3><p>Долгие геймы и победы на приёме отображаются вместе со счётом, если это подтверждено сохранёнными розыгрышами.</p><a href="../assets/release-1-7-en/iphone-key-moments.png" target="_blank" rel="noopener" aria-label="Ключевые моменты."><img src="../assets/release-1-7-en/iphone-key-moments.png" alt="Ключевые моменты. Match Flow: Key Moments" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+</div>
+<article class="release-watch-proof"><div><div class="release-next-kicker"><span>Обе версии для часов</span></div><h3>История — и на часах.</h3><p>В истории матча компактный Momentum показывает столбцы геймов и текущий счёт. Если надёжной истории очков нет, блок не появляется.</p><a href="help.html#match-flow-help">Как работает Match Flow →</a></div><a href="../assets/release-1-7-en/watch-momentum.png" target="_blank" rel="noopener" aria-label="История — и на часах."><img src="../assets/release-1-7-en/watch-momentum.png" alt="История — и на часах. Momentum" width="416" height="496" loading="lazy" decoding="async"></a></article>
+<article class="release-watch-proof" id="history-files"><div><div class="release-next-kicker"><span>Pro · iPhone</span></div><h3>История матчей — в файле.</h3><p>Экспортируйте отчёт в CSV, Excel или PDF. Для последующего восстановления создайте в Pro резервную копию JSON или ZIP. При импорте существующие матчи не дублируются, а удалённые ранее записи не возвращаются.</p><a href="help.html#history-files-help">Экспорт и резервные копии →</a></div><a class="release-history-files-shot" href="../assets/release-1-7-en/iphone-history-files.png" target="_blank" rel="noopener" aria-label="Открыть экран файлов истории матчей в полном размере"><img src="../assets/release-1-7-en/iphone-history-files.png" alt="Актуальный экран файлов истории матчей в Pro: экспорт и импорт резервной копии" width="1320" height="2868" loading="lazy" decoding="async"></a></article>
+
+</section>
+<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title"><div class="rivalries-heading"><div class="rivalries-intro-copy"><span class="rivalries-kicker">Соперничества</span><h2 id="rivalries-title">У каждого соперника своя история.</h2><p>Выберите сохранённого соперника перед одиночным матчем, и Tennis Score Wizard автоматически соберёт приватную статистику личных встреч. Результаты, ключевые розыгрыши, камбэки, серии, тренировки и все матчи останутся в одном профиле.</p><a class="rivalries-action" href="help.html#rivalries">Как работают соперничества</a><p class="rivalries-singles-note">Сейчас Rivalries учитывает одиночные матчи. Парные матчи записываются как обычно, но без назначения одного соперника.</p></div><figure class="rivalries-phone"><img src="../assets/rivalries/rivalries-list-720.png" srcset="../assets/rivalries/rivalries-list-720.png 720w, ../assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="Список соперников со статистикой личных встреч" width="1320" height="2868" loading="lazy" decoding="async"></figure></div><div class="rivalries-chapter rivalries-watch-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">01 · На корте</span><h3>Выберите соперника. Дальше просто играйте.</h3><p>При настройке одиночного матча выберите гостя или сохранённого игрока. Короткое имя появится на экране счёта, а привычные нажатия автоматически сформируют статистику встреч.</p><ul class="rivalries-checklist"><li>Создавайте и редактируйте игроков в Pro на iPhone</li><li>Синхронизируйте список с Apple Watch через приватный iCloud</li><li>Назначайте соперника старому одиночному матчу</li><li>Не включайте гостевые матчи в Rivalries</li></ul></div><div class="rivalries-watch"><figure><img src="../assets/rivalries/watch-opponent-picker.png" alt="Выберите гостя или сохранённого игрока" width="416" height="496" loading="lazy" decoding="async"><figcaption>Выберите гостя или сохранённого игрока</figcaption></figure><figure><img src="../assets/rivalries/watch-live-opponent.png" alt="Имя соперника во время матча" width="416" height="496" loading="lazy" decoding="async"><figcaption>Имя соперника во время матча</figcaption></figure></div></div><div class="rivalries-chapter rivalries-record-chapter"><div class="rivalries-chapter-copy"><span class="rivalries-chapter-number">02 · Полная статистика встреч</span><h3>Один соперник. Вся картина.</h3><p>Выбирайте весь период, текущий год или последние 30 дней. Сравнивайте последние результаты с общими, открывайте любой матч и смотрите только те показатели, которые действительно были записаны.</p><div class="rivalries-benefits"><article class="rivalries-benefit"><strong>Личные встречи</strong><p>Матчи с определённым исходом, победы, сеты, геймы, тай-брейки и матч-тай-брейки.</p></article><article class="rivalries-benefit"><strong>Показатели игры</strong><p>Очки, удержание подачи и брейки, подача, приём и ключевые розыгрыши.</p></article><article class="rivalries-benefit"><strong>Закономерности и нагрузка</strong><p>Победы после проигранного первого сета, серии, время на корте, пульс и энергия.</p></article></div></div><div class="rivalries-app-screens"><figure><img src="../assets/rivalries/rivalry-details-720.png" srcset="../assets/rivalries/rivalry-details-720.png 720w, ../assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Личные встречи и текущая форма" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Личные встречи и текущая форма</figcaption></figure><figure><img src="../assets/rivalries/rivalry-patterns-720.png" srcset="../assets/rivalries/rivalry-patterns-720.png 720w, ../assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Показатели, закономерности и нагрузка" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Показатели, закономерности и нагрузка</figcaption></figure><figure><img src="../assets/rivalries/rivalry-meetings-720.png" srcset="../assets/rivalries/rivalry-meetings-720.png 720w, ../assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Все сохранённые матчи" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Все сохранённые матчи</figcaption></figure></div></div><div class="rivalries-chapter rivalries-share-chapter"><div class="rivalries-share-heading"><span class="rivalries-chapter-number">03 · Поделиться Rivalry</span><h3>Три карточки. Одна история противостояния.</h3><p>Карточки всегда идут в одном порядке: общая статистика и последние матчи, показатели игры, затем закономерности и данные тренировки. Приватные заметки никогда не экспортируются.</p></div><div class="rivalries-share-grid"><figure><img src="../assets/rivalries/rivalry-story-overview.png" alt="Общая статистика и последние матчи" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · Общая статистика и последние матчи</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-performance.png" alt="Показатели игры" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · Показатели игры</figcaption></figure><figure><img src="../assets/rivalries/rivalry-story-patterns.png" alt="Закономерности, время и тренировка" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · Закономерности, время и тренировка</figcaption></figure></div></div><div class="rivalries-footer-notes"><article><strong>Приватность заложена изначально</strong><p>Профили, заметки и связи с матчами хранятся на ваших устройствах и могут синхронизироваться через приватные данные iCloud.</p></article><article><strong>Никаких дополнительных действий во время матча</strong><p>Выбор соперника добавляет контекст только до игры. Ведение счёта, отмена, запись тренировки и весь остальной процесс не меняются.</p></article></div></section>
 <section id="share-results" class="share-showcase">
   <span class="companion-section-kicker">Можно поделиться</span>
   <h2>Делитесь не только счётом</h2>
@@ -2774,25 +2757,47 @@ footer {
 </article>
 </div>
 </section>
+<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title"><div class="core-formats-heading"><span class="core-formats-kicker"><span>В обеих версиях</span><span>Подсчёт счёта на Apple Watch</span></span><h2 id="scoring-formats-title">Играйте в том формате, который подходит именно вам.</h2><p>Обе версии используют один механизм автоматического счёта на Apple Watch: официальные ускоренные форматы, геймы No-Ad и настройку Custom Set с привычным управлением на корте.</p></div><div class="core-proof-grid watch-promo-grid">
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Настройка One Set и Custom Set</h3><p>Сыграйте весь матч в один сет, когда времени немного.</p><p>Одной настройкой задайте число геймов для победы, необходимый отрыв, начало тай-брейка и количество очков для победы в нём.</p><p>Играйте сет до шести геймов с преимуществом или начинайте обычный тай-брейк при <span class="score-nowrap">6–6</span>.</p></div><img src="../assets/core-scoring-formats-en/watch-one-set-custom.png" alt="Настройка One Set и Custom Set" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Варианты официального Short Set</h3><p>Сет выигрывает тот, кто первым возьмёт четыре гейма. Тай-брейк начинается при <span class="score-nowrap">3–3</span> или <span class="score-nowrap">4–4</span> и играется до 7 очков либо с решающим очком при <span class="score-nowrap">4–4</span>.</p></div><img src="../assets/core-scoring-formats-en/watch-short-set-options.png" alt="Варианты официального Short Set" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>No‑Ad при счёте «ровно»</h3><p>Решающее очко при «ровно» ускоряет любой выбранный формат сета.</p></div><img src="../assets/core-scoring-formats-en/watch-no-ad.png" alt="No‑Ad при счёте «ровно»" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Ваша победа — по сетам.</h3><p>Итоговый счёт, геймы и время на корте собраны в одной понятной карточке.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-win.png" alt="Победа в матче" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Каждый матч важен.</h3><p>После поражения посмотрите счёт и продолжительность матча, а затем откройте историю, чтобы вернуться к его деталям.</p></div><img src="../assets/core-scoring-formats-en/watch-completed-loss.png" alt="Поражение в матче" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>От одного до пяти сетов — наглядно</h3><p>Победы, поражения и остановленные матчи сразу различимы. Счёт от одного до пяти сетов и очки тай-брейков остаются читаемыми.</p></div><img src="../assets/core-scoring-formats-en/watch-five-set-finish.png" alt="Результаты от двух до пяти сетов" width="422" height="514" loading="lazy" decoding="async"></article>
+</div></section>
+<section id="watch-history" class="core-formats-showcase" aria-labelledby="watch-history-title">
+<div class="core-formats-heading"><span class="core-formats-kicker"><span>Оба приложения для часов</span></span><h2 id="watch-history-title">Найдите тот самый матч.</h2><p>В прошлом месяце или сезоне? Выберите год и месяц в истории часов, затем при необходимости оставьте одиночные или парные матчи. Старые матчи подгружаются по мере просмотра, не удаляясь из сохранённой истории.</p></div>
+<div class="core-proof-grid watch-promo-grid">
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Начните с периода.</h3><p>В History нажмите Period. Выберите период или оставьте All dates — все даты. Фильтры All, 1v1 и 2v2 работают вместе с ним.</p></div><img src="../assets/release-1-6-en/watch-history-period.png" alt="Начните с периода. В History нажмите Period. Выберите период или оставьте All dates — все даты. Фильтры All, 1v1 и 2v2 работают вместе с ним." width="416" height="496" loading="lazy" decoding="async"></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Выберите год.</h3><p>В списке — годы с сохранёнными матчами. All dates возвращает всю историю.</p></div><img src="../assets/release-1-6-en/watch-history-years.png" alt="Выберите год. В списке — годы с сохранёнными матчами. All dates возвращает всю историю." width="416" height="496" loading="lazy" decoding="async"></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Месяц или весь год.</h3><p>Выберите месяц с матчами или Entire year — весь выбранный год.</p></div><img src="../assets/release-1-6-en/watch-history-months-entire-year.png" alt="Месяц или весь год. Выберите месяц с матчами или Entire year — весь выбранный год." width="416" height="496" loading="lazy" decoding="async"></article>
+</div>
+</section>
+<section id="icloud-sync" class="icloud-showcase" aria-labelledby="icloud-title">
+<div class="icloud-heading"><span class="icloud-kicker">Синхронизация матчей через iCloud</span><h2 id="icloud-title">История матчей на Apple Watch и iPhone.</h2><p>Standalone и Pro могут синхронизировать одни и те же матчи через iCloud под одним Аккаунтом Apple. У каждого аккаунта отдельная частная история. Ведите счёт на Apple Watch или добавляйте сыгранный матч на iPhone. Ручной ввод, назначенный соперник и контекст передаются вместе с записью; успешно синхронизированные матчи можно восстановить после переустановки.</p></div>
+<div class="icloud-ecosystem"><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-watch"><img src="../assets/release-1-6-en/watch-history-period.png" alt="В History нажмите Period. Выберите период или оставьте All dates — все даты. Фильтры All, 1v1 и 2v2 работают вместе с ним." width="416" height="496" loading="lazy" decoding="async"></picture><strong>Apple Watch</strong><p>Ведите счёт в Pro или Standalone и проверяйте последнее состояние синхронизации в «Истории».</p></div><div class="icloud-hub"><div class="icloud-cloud-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path><path d="m24 34 5.5 5.5L41 28"></path></svg></div><strong>Приватная синхронизация через iCloud</strong><p>Успешно синхронизированные матчи хранятся в приватной базе данных CloudKit вашего Аккаунта Apple, а не на сервере Tennis Score Wizard.</p><div class="icloud-status-sample">✓ <span>Synced</span></div></div><div class="icloud-endpoint"><picture class="icloud-ui-proof icloud-ui-proof-phone"><source srcset="../assets/companion_icloud_synced-720.webp" type="image/webp"><img src="../assets/companion_icloud_synced.png" alt="Карточка синхронизации iCloud в Pro с указанием приватного хранилища и времени последней синхронизации" width="1224" height="650" loading="lazy" decoding="async"></picture><strong>iPhone</strong><p>Добавляйте сыгранные матчи, меняйте данные корта, изучайте записанную статистику и проверяйте частную синхронизацию iCloud в Pro.</p></div></div>
+<div class="icloud-benefits"><article class="icloud-benefit"><strong>Два независимых пути</strong><p>Pro может передавать данные напрямую между связанными устройствами, а CloudKit отдельно обеспечивает надёжную синхронизацию и восстановление через iCloud. Любой путь может завершиться первым.</p></article><article class="icloud-benefit"><strong>Проверяйте состояние синхронизации</strong><p>В «Истории» отображается <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b> или <b>Sync paused</b> / <b>Retry</b>.</p></article><article class="icloud-benefit"><strong>Истории аккаунтов не смешиваются</strong><p>При смене Аккаунта Apple истории не объединяются. Несинхронизированные матчи предыдущего аккаунта сохраняются в зашифрованной локальной копии для восстановления.</p></article><article class="icloud-benefit"><strong>Ведите счёт сейчас, восстановите позже</strong><p>Вести счёт можно и без iCloud. Успешно синхронизированные матчи снова загрузятся после переустановки с тем же Аккаунтом Apple.</p></article></div>
+</section>
+
 <section class="comparison-section" id="comparison">
 <span class="product-section-kicker">Сравнение версий</span>
 <div class="comparison-heading">
 <h2>Тот же счёт на часах. Больше для ваших матчей на iPhone.</h2>
-<p class="section-subtitle">Standalone позволяет вести счёт на Apple Watch. Pro дополняет его на iPhone ручным вводом матчей, сведениями о корте, историей встреч с соперниками, хайлайтами и карточками для публикации.</p>
+<p class="section-subtitle">Pro объединяет полноценное ведение счёта на Apple Watch с вводом матчей, анализом, соперничествами и публикацией на iPhone. Standalone оставляет все возможности ведения счёта на часах без приложения для iPhone.</p>
 </div>
 <div aria-label="Сравнение Standalone Tennis Score Wizard и приложения Pro" class="comparison-grid" role="table">
 <div class="comparison-row comparison-header" role="row">
 <div class="comparison-feature" role="columnheader">Возможности</div>
-<div role="columnheader">
-<span class="comparison-version-label">Standalone</span>
-<strong>Apple Watch</strong>
-</div>
 <div class="comparison-companion-column" role="columnheader">
 <span class="comparison-version-label">Pro</span>
 <strong>
 <span class="comparison-title-full">iPhone + Apple Watch</span>
 <span class="comparison-title-compact">Watch + iPhone</span>
 </strong>
+</div>
+<div role="columnheader">
+<span class="comparison-version-label">Standalone</span>
+<strong>Apple Watch</strong>
 </div>
 </div>
 <div class="comparison-row" role="row">
@@ -2807,13 +2812,13 @@ footer {
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">История матчей и подробная статистика</div>
-<div role="cell">На Apple Watch</div>
 <div role="cell">На Apple Watch и iPhone</div>
+<div role="cell">На Apple Watch</div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Детали тренировок и показатели сердечного ритма</div>
-<div role="cell">На Apple Watch</div>
 <div role="cell">На Apple Watch и iPhone</div>
+<div role="cell">На Apple Watch</div>
 </div>
 <div class="comparison-row" role="row">
 <div class="comparison-feature" role="rowheader">Расширения для Apple Watch</div>
@@ -2821,45 +2826,45 @@ footer {
 <div role="cell"><span class="comparison-check">✓</span> В комплекте</div>
 </div>
 <div class="comparison-row" role="row"><div class="comparison-feature" role="rowheader">Синхронизация матчей через iCloud</div><div role="cell"><span class="comparison-check">✓</span> Включено</div><div role="cell"><span class="comparison-check">✓</span> Включено</div></div>
-<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Профили соперников и Rivalries</div><div role="cell">Выбор сохранённого соперника на Apple Watch</div><div role="cell">Создание и управление на iPhone + выбор на Watch</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Профили соперников и Rivalries</div><div role="cell">Создание и управление на iPhone + выбор на Watch</div><div role="cell">Выбор сохранённого соперника на Apple Watch</div></div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Синхронизированный интерфейс на iPhone</div>
-<div role="cell"><span class="comparison-muted">Не требуется</span></div>
 <div role="cell"><span class="comparison-check">✓</span> В комплекте</div>
+<div role="cell"><span class="comparison-muted">Не требуется</span></div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Календарь матчей по месяцам и годам</div>
-<div role="cell"><span class="comparison-muted">Не входит</span></div>
 <div role="cell">На iPhone</div>
+<div role="cell"><span class="comparison-muted">Не входит</span></div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Долгосрочная статистика и тренды игры</div>
-<div role="cell"><span class="comparison-muted">Не входят</span></div>
 <div role="cell">На iPhone</div>
+<div role="cell"><span class="comparison-muted">Не входят</span></div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Текстовые итоги и визуальные карточки для публикации</div>
-<div role="cell"><span class="comparison-muted">Не входят</span></div>
 <div role="cell">На iPhone</div>
+<div role="cell"><span class="comparison-muted">Не входят</span></div>
 </div>
-<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Добавление и редактирование сыгранных матчей</div><div role="cell">Получает ручные матчи и исправления через iCloud</div><div role="cell">Добавление и редактирование на iPhone; синхронизация с часами</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Добавление и редактирование сыгранных матчей</div><div role="cell">Добавление и редактирование на iPhone; синхронизация с часами</div><div role="cell">Получает ручные матчи и исправления через iCloud</div></div>
 <div class="comparison-row" role="row"><div class="comparison-feature" role="rowheader">Фильтры истории часов по году и месяцу</div><div role="cell"><span class="comparison-check">✓</span> Включено</div><div role="cell"><span class="comparison-check">✓</span> Включено</div></div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Данные корта и личные заметки</div>
-<div role="cell">Сохраняются при синхронизации</div>
 <div role="cell">Ввод и правки на iPhone</div>
+<div role="cell">Сохраняются при синхронизации</div>
 </div>
 <div class="comparison-row comparison-difference" role="row">
 <div class="comparison-feature" role="rowheader">Хайлайты матча</div>
-<div role="cell"><span class="comparison-muted">Не показываются на часах</span></div>
 <div role="cell">Все подходящие — в деталях на iPhone; до шести — в публикации</div>
+<div role="cell"><span class="comparison-muted">Не показываются на часах</span></div>
 </div>
-<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Match Flow для записанных розыгрышей</div><div role="cell">Компактный Momentum на часах</div><div role="cell">Momentum на часах и три представления на iPhone</div></div>
-<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Отчёты об истории и восстанавливаемые копии</div><div role="cell"><span class="comparison-muted">Нет</span></div><div role="cell">Экспорт и импорт на iPhone</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Match Flow для записанных розыгрышей</div><div role="cell">Momentum на часах и три представления на iPhone</div><div role="cell">Компактный Momentum на часах</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Отчёты об истории и восстанавливаемые копии</div><div role="cell">Экспорт и импорт на iPhone</div><div role="cell"><span class="comparison-muted">Нет</span></div></div>
 <div class="comparison-row comparison-best-for" role="row">
 <div class="comparison-feature" role="rowheader">Идеально подходит для</div>
-<div role="cell">Игроков, которые хотят иметь всё на запястье</div>
 <div role="cell">Игроков, которым нужно полнофункциональное приложение для Watch и более подробный обзор результатов после матча</div>
+<div role="cell">Игроков, которые хотят иметь всё на запястье</div>
 </div>
 </div>
 </section>

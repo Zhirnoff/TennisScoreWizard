@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/tennis_ball_app_icon_128.png">
   <title>Tennis Score Wizard — Apple Watch &amp; iPhone Tennis Scoring</title>
-  <meta name="description" content="Score tennis on Apple Watch. Explore recorded matches with Match Flow on Pro, review Momentum on Watch, and export or back up your Pro match history.">
+  <meta name="description" content="Score tennis on Apple Watch. Explore month and year recaps on Watch and in Pro on iPhone, with match history, Momentum, achievements and sharing.">
   <link rel="canonical" href="https://zhirnoff.github.io/TennisScoreWizard/">
   <link rel="alternate" hreflang="en" href="https://zhirnoff.github.io/TennisScoreWizard/">
   <link rel="alternate" hreflang="de" href="https://zhirnoff.github.io/TennisScoreWizard/de/">
@@ -22,13 +22,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Tennis Score Wizard">
   <meta property="og:title" content="Tennis Score Wizard — Apple Watch &amp; iPhone Tennis Scoring">
-  <meta property="og:description" content="Pro 1.7 and Standalone 1.10: Match Flow reveals game-by-game momentum when point history is recorded. Pro also adds history export and restorable backups.">
+  <meta property="og:description" content="Pro 1.8 and Standalone 1.11 bring month and year recaps to your tennis history on iPhone and Apple Watch.">
   <meta property="og:url" content="https://zhirnoff.github.io/TennisScoreWizard/">
   <meta property="og:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
   <meta property="og:image:alt" content="Tennis Score Wizard app icon">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tennis Score Wizard — Apple Watch &amp; iPhone Tennis Scoring">
-  <meta name="twitter:description" content="Explore Match Flow in Pro 1.7 and compact Momentum on Watch in Standalone 1.10. Export reports and backups from Pro.">
+  <meta name="twitter:description" content="Look back on a month or year of tennis in Pro 1.8 and Standalone 1.11, with activity, comparisons and achievements.">
   <meta name="twitter:image" content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png">
   <style>
     :root {
@@ -1895,7 +1895,7 @@ footer {
   background: rgba(40,255,95,0.045);
 }
 
-.comparison-difference > div:last-child {
+.comparison-difference > div:nth-child(2) {
   color: #efffed;
   background: rgba(40,255,95,0.045);
   font-weight: 780;
@@ -2353,7 +2353,10 @@ footer {
 <link rel="stylesheet" href="core-scoring-formats-en.css?v=20260905-promo-cards">
 <script src="support-development.js" defer></script>
 <link rel="stylesheet" href="release-1-6-en.css?v=20260922-flow">
+<link rel="stylesheet" href="season-recaps-en.css?v=20261001-review">
 <script defer src="navigation-en.js?v=20260911-nav"></script>
+<link rel="stylesheet" href="back-to-top.css?v=20261001">
+<script defer src="back-to-top.js?v=20261001"></script>
 </head>
 <body>
   <main class="page">
@@ -2398,7 +2401,7 @@ footer {
     </div>
     <h1>Score every point. Understand every match.</h1>
     <p>
-      Score live on Apple&nbsp;Watch with Standalone or Pro. With Pro on iPhone, you can also add and edit matches you’ve played, remember where you played, explore Rivalries and Match Highlights, and share the result.
+      Pro brings Apple&nbsp;Watch scoring together with match analysis on iPhone. Add and edit matches you’ve played, explore Rivalries and Match Highlights, and share your results. If you only need the Watch app, choose Standalone. Both versions let you look back on your month or year.
     </p>
     <div class="hero-actions">
       <a class="hero-version-link" href="#versions">
@@ -2427,6 +2430,7 @@ footer {
       <span class="badge">iCloud match sync</span>
       <span class="badge">Add played matches on iPhone</span>
       <span class="badge">Match context &amp; highlights</span>
+      <span class="badge">Month &amp; year recaps</span>
     </div>
   </div>
   <div class="hero-visual" aria-label="Tennis Score Wizard app icon">
@@ -2439,32 +2443,10 @@ footer {
 <section id="versions">
   <h2>Choose your Tennis Score Wizard</h2>
   <p class="section-subtitle">
-    Both versions include complete Apple Watch scoring. Choose Standalone for Apple Watch only, or Pro to add an iPhone app. Both can sync the same saved matches through iCloud.
+    Choose Pro for Apple Watch scoring and a full iPhone app, or Standalone if you only need the Watch. Both can sync the same saved matches through iCloud.
   </p>
 
   <div class="version-grid">
-    <article class="card version-card">
-      <span class="version-kicker">Standalone</span>
-      <h3>Apple Watch only</h3>
-      <p>
-        Install directly on Apple Watch and manage the entire match from your wrist. No iPhone app is required.
-      </p>
-      <ul class="version-list">
-        <li>One Set, Short Sets, No‑Ad, and Custom Set</li>
-        <li>Automatic stats, synced opponent selection, and iCloud match sync</li>
-        <li>History filters by year and month</li>
-        <li>Optional workouts in Health</li>
-      </ul>
-      <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="Download Tennis Score Wizard Standalone on the App Store">
-        <span class="app-store-logo"></span>
-        <span class="app-store-text">
-          <small>Download on the</small>
-          <strong>App Store</strong>
-        </span>
-      </a>
-      <span class="version-availability">Version 1.10</span>
-    </article>
-
     <article class="card version-card version-card-companion">
       <span class="version-kicker">Pro</span>
       <h3>Tennis Scoring &amp; Match Stats</h3>
@@ -2474,7 +2456,7 @@ footer {
       <ul class="version-list">
         <li>Flexible match setup and live scoring on Apple Watch</li>
         <li>History, stats, workouts, and complications on Apple Watch</li>
-        <li>Manual match entry, court context, Rivalries and sharing on iPhone</li>
+        <li>Monthly and yearly recaps, Rivalries and sharing on iPhone</li>
       </ul>
       <a class="app-store-button" href="https://apps.apple.com/app/id6789285015" aria-label="Download Tennis Score Wizard Pro on the App Store">
         <span class="app-store-logo"></span>
@@ -2483,277 +2465,32 @@ footer {
           <strong>App Store</strong>
         </span>
       </a>
-      <span class="version-availability">Version 1.7</span>
+      <span class="version-availability">Version 1.8</span>
+    </article>
+
+    <article class="card version-card">
+      <span class="version-kicker">Standalone</span>
+      <h3>Apple Watch only</h3>
+      <p>
+        Install directly on Apple Watch and manage the entire match from your wrist. No iPhone app is required.
+      </p>
+      <ul class="version-list">
+        <li>One Set, Short Sets, No‑Ad, and Custom Set</li>
+        <li>Automatic stats, synced opponent selection, and iCloud match sync</li>
+        <li>History filters and month and year recaps</li>
+        <li>Optional workouts in Health</li>
+      </ul>
+      <a class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004" aria-label="Download Tennis Score Wizard Standalone on the App Store">
+        <span class="app-store-logo"></span>
+        <span class="app-store-text">
+          <small>Download on the</small>
+          <strong>App Store</strong>
+        </span>
+      </a>
+      <span class="version-availability">Version 1.11</span>
     </article>
   </div>
   <a class="hero-version-link versions-compare-link" href="#comparison">Compare features <span aria-hidden="true">↓</span></a>
-</section>
-
-<section id="match-flow" class="release-next" aria-labelledby="match-flow-title">
-  <div class="release-next-heading">
-    <div class="release-next-kicker"><span>New in Pro 1.7</span><span>Momentum on both Watch apps</span></div>
-    <h2 id="match-flow-title">See how the match unfolded.</h2>
-    <p>For matches with recorded point history, Match Flow turns each game into a readable story. New Watch recordings retain the point sequence; an older match shows Match Flow only if its saved history supports it. A manually entered score cannot recreate missing points.</p>
-  </div>
-  <div class="release-next-grid">
-    <article class="release-next-card">
-      <span class="release-card-number">01 · MOMENTUM</span>
-      <h3>Follow every swing.</h3>
-      <p>Green and red bars show which side won each game. Their height reflects the number of points played; small score tiles show the running games score.</p>
-      <a href="assets/release-1-7-en/iphone-momentum.png" target="_blank" rel="noopener" aria-label="Open full-size Pro Match Flow Momentum screenshot"><img src="assets/release-1-7-en/iphone-momentum.png" alt="Current Pro Match Flow Momentum screen with green and red game bars and running score tiles" width="1320" height="2868" loading="lazy" decoding="async"></a>
-    </article>
-    <article class="release-next-card">
-      <span class="release-card-number">02 · SCORES</span>
-      <h3>See the score develop.</h3>
-      <p>Browse the score after each game, including the game number and its recorded point count. No extra taps are needed while playing.</p>
-      <a href="assets/release-1-7-en/iphone-scores.png" target="_blank" rel="noopener" aria-label="Open full-size Pro Match Flow Scores screenshot"><img src="assets/release-1-7-en/iphone-scores.png" alt="Current Pro Match Flow Scores screen showing the running result after each recorded game" width="1320" height="2868" loading="lazy" decoding="async"></a>
-    </article>
-    <article class="release-next-card">
-      <span class="release-card-number">03 · KEY MOMENTS</span>
-      <h3>Remember the turning points.</h3>
-      <p>Find supported moments such as long games and wins on return, with the relevant game and running score. These are derived from recorded points, not guessed from the final result.</p>
-      <a href="assets/release-1-7-en/iphone-key-moments.png" target="_blank" rel="noopener" aria-label="Open full-size Pro Match Flow Key Moments screenshot"><img src="assets/release-1-7-en/iphone-key-moments.png" alt="Current Pro Match Flow Key Moments screen with a long game and a win on return" width="1320" height="2868" loading="lazy" decoding="async"></a>
-    </article>
-  </div>
-  <article class="release-watch-proof">
-    <div><div class="release-next-kicker"><span>Pro Watch and Standalone 1.10</span></div><h3>The story fits your wrist.</h3><p>Open a recorded match in Watch History to see compact Momentum with running game scores. It appears only when a valid point-by-point record is available; legacy and manual matches do not invent one.</p><a href="help.html#match-flow-help">How Match Flow works →</a></div>
-    <a href="assets/release-1-7-en/watch-momentum.png" target="_blank" rel="noopener" aria-label="Open full-size Watch Momentum screenshot"><img src="assets/release-1-7-en/watch-momentum.png" alt="Current Watch History Momentum view with compact game bars and score labels" width="416" height="496" loading="lazy" decoding="async"></a>
-  </article>
-  <article class="release-watch-proof" id="history-files">
-    <div><div class="release-next-kicker"><span>Pro · iPhone</span></div><h3>Take your history with you.</h3><p>Export a readable CSV, Excel or PDF report. For a restorable copy, create a JSON or ZIP backup and import it later in Pro. Import adds missing matches without duplicating existing records; deleted match IDs remain deleted.</p><a href="help.html#history-files-help">Export and backup guide →</a></div>
-    <a class="release-history-files-shot" href="assets/release-1-7-en/iphone-history-files.png" target="_blank" rel="noopener" aria-label="Open full-size Match History Files screenshot"><img src="assets/release-1-7-en/iphone-history-files.png" alt="Current Pro Match History Files screen with Export a Copy and Import Backup actions" width="1320" height="2868" loading="lazy" decoding="async"></a>
-  </article>
-  <p class="release-media-note">Screenshots from the current Pro and Watch builds, captured in the simulator with sample match data. Reports and backups are Pro features; Standalone does not offer a file importer.</p>
-</section>
-
-<section id="new-release" class="release-next" aria-labelledby="release-next-title">
-  <div class="release-next-heading">
-<div class="release-next-kicker"><span>Previously in Pro 1.6</span><span>Sync with Standalone 1.9</span></div>
-    <h2 id="release-next-title">Your whole match.<br>Not just the score.</h2>
-    <p>Add a match you’ve played, and correct it later if you need to. Remember the court and the conditions. Share the moments that made it yours — all alongside your Apple&nbsp;Watch history.</p>
-  </div>
-  <div class="release-next-grid">
-    <article class="release-next-card">
-      <span class="release-card-number">01 · ADD A PLAYED MATCH</span>
-      <h3>Played it? Keep it.</h3>
-      <p>Enter the result on iPhone, including set scores and optional tie-break points. Save a completed match or a stopped match, even a tie. Include start and end times, or leave the duration unknown.</p>
-      <a href="assets/release-1-6-en/manual-score.png" target="_blank" rel="noopener" aria-label="Open full-size manual match entry screenshot"><img src="assets/release-1-6-en/manual-score.png" alt="Pro manual entry with a 7–6, 6–4 result and a 12–10 set tie-break" width="1320" height="2868" loading="lazy" decoding="async"></a>
-    </article>
-    <article class="release-next-card">
-      <span class="release-card-number">02 · REMEMBER THE CONTEXT</span>
-      <h3>Every court has a memory.</h3>
-      <p>Add the surface, indoor or outdoor setting, club, court and a private match note. Reuse recent or favorite courts — and add context to older Watch-recorded matches, too.</p>
-      <a href="assets/release-1-6-en/favorite-court.png" target="_blank" rel="noopener" aria-label="Open full-size court context screenshot"><img src="assets/release-1-6-en/favorite-court.png" alt="Pro court editor with Central Tennis Club, Court 3, favorites and a separate match note" width="1320" height="2868" loading="lazy" decoding="async"></a>
-    </article>
-    <article class="release-next-card">
-      <span class="release-card-number">03 · FIND THE HIGHLIGHTS</span>
-      <h3>More moments worth keeping.</h3>
-      <p>See every supported highlight in Match Details, from a comeback to a personal best or a milestone win. Shared cards feature up to six, chosen from the most interesting moments.</p>
-      <a href="assets/release-1-6-en/match-highlights.png" target="_blank" rel="noopener" aria-label="Open full-size Match Highlights screenshot"><img src="assets/release-1-6-en/match-highlights.png" alt="A manually added match with straight-set and recorded winning-streak highlights in Pro" width="1320" height="2868" loading="lazy" decoding="async"></a>
-    </article>
-  </div>
-  <figure class="highlights-catalog" id="match-highlights-catalog">
-    <figcaption>
-      <span class="release-card-number">MATCH HIGHLIGHTS</span>
-      <h3>Every match has its moments.</h3>
-      <p>Comebacks, close tie-breaks, milestone wins and personal records. Explore 26 types of Match Highlights, shown here in 44 visual examples.</p>
-      <p class="release-media-note">Examples from separate scenarios, not a single match. Match Details shows every applicable highlight; shared cards include up to six.</p>
-    </figcaption>
-    <a href="assets/release-1-6-en/all-match-highlights.png" target="_blank" rel="noopener" aria-label="Open all 44 Match Highlights examples at full size">
-      <img src="assets/release-1-6-en/all-match-highlights.png" alt="All 26 Match Highlights types shown as 44 example cards, including comebacks, tie-breaks, Rivalries, records, serving, returning and long matches" width="2160" height="1501" loading="lazy" decoding="async">
-    </a>
-  </figure>
-  <article class="release-watch-proof" id="edit-played-match">
-    <div>
-      <div class="release-next-kicker"><span>Manual matches · iPhone</span></div>
-      <h3>A score to correct?<br>Keep the match. Fix the details.</h3>
-      <p>Open a manually added match and tap <strong>Edit match</strong>. Correct the date, time, scoring rules or result — without deleting the match and starting again.</p>
-      <p>Saving updates the same match, including its copy in Watch history. Watch-recorded scores stay protected; opponent assignments and court context have their own controls.</p>
-      <a href="help.html#manual-matches">Adding and editing played matches →</a>
-    </div>
-    <a href="assets/release-1-6-en/manual-edit-form.png" target="_blank" rel="noopener" aria-label="Open full-size manual match editor screenshot"><img src="assets/release-1-6-en/manual-edit-form.png" alt="Edit Match form on iPhone with existing match details, court context and timing controls" width="1320" height="2868" loading="lazy" decoding="async"></a>
-  </article>
-  <article class="release-watch-proof">
-    <div>
-      <div class="release-next-kicker"><span>Both Watch apps</span></div>
-      <h3>Added on iPhone.<br>Kept on your wrist.</h3>
-      <p>Manually added matches — and later corrections — sync to Pro Watch history and can reach Standalone through private iCloud sync under the same Apple Account.</p>
-      <p>They’re clearly marked <strong>Added manually</strong>. They show the saved result without empty point-statistics or workout cards.</p>
-      <a href="help.html#manual-matches">How manual matches work →</a>
-    </div>
-    <a href="assets/release-1-6-en/watch-manual-history.png" target="_blank" rel="noopener" aria-label="Open full-size manual match history on Apple Watch"><img src="assets/release-1-6-en/watch-manual-history.png" alt="Standalone Apple Watch history marking a tied stopped match as Added manually" width="422" height="514" loading="lazy" decoding="async"></a>
-  </article>
-  <p class="release-media-note">Actual app screens with sample match data. Scores, durations and highlights are shown as rendered by the app; manual entries show the result you entered and summaries supported by that result.</p>
-</section>
-
-<section id="watch-history" class="core-formats-showcase" aria-labelledby="watch-history-title">
-  <div class="core-formats-heading">
-    <span class="core-formats-kicker"><span>Both Watch apps</span></span>
-    <h2 id="watch-history-title">Find that match again.</h2>
-    <p>Last month or a season ago? Narrow your Watch history by year and month, with Singles and Doubles filters alongside. Older matches load as you browse, without removing anything from your saved history.</p>
-  </div>
-  <div class="core-proof-grid watch-promo-grid">
-    <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Start with a period.</h3><p>Open History and tap Period. Keep all dates, or narrow the list while using All, 1v1 or 2v2.</p></div><img src="assets/release-1-6-en/watch-history-period.png" alt="Pro Watch History with All, 1v1 and 2v2 filters and the Period control" width="416" height="496" loading="lazy" decoding="async"></article>
-    <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Choose your year.</h3><p>Pick from years with saved matches. All dates brings the full timeline back into view.</p></div><img src="assets/release-1-6-en/watch-history-years.png" alt="Watch History Period menu with All dates and available years" width="416" height="496" loading="lazy" decoding="async"></article>
-    <article class="watch-promo-card"><div class="watch-promo-copy"><h3>A month or a whole season.</h3><p>Choose a month with matches, or Entire year to review the season together.</p></div><img src="assets/release-1-6-en/watch-history-months-entire-year.png" alt="Standalone Watch History filter for 2024 with Entire year, September and October" width="416" height="496" loading="lazy" decoding="async"></article>
-  </div>
-  <p class="release-media-note">Actual Pro and Standalone screens with test history. <a href="help.html#match-history">How Watch History filters work →</a></p>
-</section>
-
-<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title">
-  <div class="core-formats-heading">
-    <span class="core-formats-kicker"><span>Built into both versions</span><span>Apple&nbsp;Watch scoring</span></span>
-    <h2 id="scoring-formats-title">Play the format you actually use.</h2>
-    <p>
-      Both versions include the same automatic Apple&nbsp;Watch scoring engine: faster official formats, No‑Ad games, and a Custom&nbsp;Set builder, with familiar on-court controls.
-    </p>
-  </div>
-
-  <div class="core-proof-grid watch-promo-grid">
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>One Set and Custom Set setup</h3><p>Play a complete match as a single set when time is limited.</p><p>Choose the game target, win-by rule, tie‑break start, and target as one coherent preset.</p><p>Keep six-game advantage sets or start a regular tie‑break at <span class="score-nowrap">6–6</span>.</p></div><img src="assets/core-scoring-formats-en/watch-one-set-custom.png" alt="Apple Watch setup showing One Set and a configured Custom Set" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Official Short Set choices</h3><p>First to four games, with a tie‑break at <span class="score-nowrap">3–3</span> or <span class="score-nowrap">4–4</span> and a 7-point or deciding 5-point finish.</p></div><img src="assets/core-scoring-formats-en/watch-short-set-options.png" alt="Apple Watch Short Sets configuration with tie-break start and target options" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>No‑Ad at deuce</h3><p>A deciding point at deuce keeps every selected set format moving.</p></div><img src="assets/core-scoring-formats-en/watch-no-ad.png" alt="Apple Watch Game Rule picker with No-Ad selected" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Your win, set by set.</h3><p>See the final score, games and time on court together in one clear result.</p></div><img src="assets/core-scoring-formats-en/watch-completed-win.png" alt="Apple Watch result card for a completed match win" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Every result tells a story.</h3><p>Review the score and match duration after a loss, then open History to look back at the match.</p></div><img src="assets/core-scoring-formats-en/watch-completed-loss.png" alt="Apple Watch result card for a completed match loss" width="422" height="514" loading="lazy" decoding="async"></article>
-  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>One to five sets, clearly shown</h3><p>Wins, losses, and stopped matches are immediately distinct, while one to five sets and tie‑break scores stay readable.</p></div><img src="assets/core-scoring-formats-en/watch-five-set-finish.png" alt="Apple Watch finished match screen showing a complete five-set result" width="422" height="514" loading="lazy" decoding="async"></article>
-</div>
-</section>
-
-<section id="icloud-sync" class="icloud-showcase" aria-labelledby="icloud-title">
-  <div class="icloud-heading">
-    <span class="icloud-kicker">iCloud match sync</span>
-    <h2 id="icloud-title">Your match history on Apple Watch and iPhone.</h2>
-    <p>
-      Standalone and Pro can sync the same saved matches through iCloud when you use the same Apple Account. Each Apple Account keeps a separate private history. Score on Apple&nbsp;Watch or add a played match in Pro on iPhone. Manual entries, opponent assignments and match context travel with the saved record; successfully synced matches can be restored after reinstalling.
-    </p>
-  </div>
-
-  <div class="icloud-ecosystem">
-    <div class="icloud-endpoint">
-      <picture class="icloud-ui-proof icloud-ui-proof-watch">
-        <img src="assets/release-1-6-en/watch-history-period.png" alt="Apple Watch History with sync status and the Period filter" width="416" height="496" loading="lazy" decoding="async">
-      </picture>
-      <strong>Apple Watch</strong>
-      <p>Score matches with Standalone or Pro and check the latest sync status in History.</p>
-    </div>
-
-    <div class="icloud-hub">
-      <div class="icloud-cloud-icon" aria-hidden="true">
-        <svg viewBox="0 0 64 64">
-          <path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path>
-          <path d="m24 34 5.5 5.5L41 28"></path>
-        </svg>
-      </div>
-      <strong>Private iCloud sync</strong>
-      <p>Successfully synced match records are stored in the private CloudKit database for your Apple Account, not on a Tennis Score Wizard server.</p>
-      <div class="icloud-status-sample">✓ <span>Synced</span></div>
-    </div>
-
-    <div class="icloud-endpoint">
-      <picture class="icloud-ui-proof icloud-ui-proof-phone">
-        <source srcset="assets/companion_icloud_synced-720.webp" type="image/webp">
-        <img src="assets/companion_icloud_synced.png" alt="Pro iCloud Match History card showing private storage and the latest sync time" width="1224" height="650" loading="lazy" decoding="async">
-      </picture>
-      <strong>iPhone</strong>
-      <p>Add and edit played matches, keep court context, review recorded statistics and check private iCloud sync in Pro.</p>
-    </div>
-  </div>
-
-  <div class="icloud-benefits">
-    <article class="icloud-benefit">
-      <strong>Two independent paths</strong>
-      <p>Pro can transfer directly between paired devices while CloudKit separately provides durable iCloud sync and restore. Either path may finish first.</p>
-    </article>
-    <article class="icloud-benefit">
-      <strong>See sync status</strong>
-      <p>History shows <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b>, or <b>Sync paused</b> / <b>Retry</b>.</p>
-    </article>
-    <article class="icloud-benefit">
-      <strong>Keep accounts separate</strong>
-      <p>Changing Apple Accounts never mixes histories. Unsynced matches for the previous account are kept in an encrypted local recovery copy.</p>
-    </article>
-    <article class="icloud-benefit">
-      <strong>Score now, restore later</strong>
-      <p>Scoring remains available without iCloud. Successfully synchronized matches can download again after reinstalling under the same Apple Account.</p>
-    </article>
-  </div>
-</section>
-
-<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title">
-  <div class="rivalries-heading">
-    <div class="rivalries-intro-copy">
-      <span class="rivalries-kicker">New · Rivalries</span>
-      <h2 id="rivalries-title">Every opponent has a story.</h2>
-      <p>
-        Choose a saved opponent before a singles match and Tennis Score Wizard builds a private Head‑to‑Head automatically. Every result, pressure point, comeback, streak, workout, and meeting stays together in one record.
-      </p>
-      <a class="rivalries-action" href="whats-new.html">Read the release notes</a>
-      <p class="rivalries-singles-note">Rivalry records currently use singles matches. Doubles scoring continues normally without assigning one opponent.</p>
-    </div>
-    <figure class="rivalries-phone">
-      <img src="assets/rivalries/rivalries-list-720.png" srcset="assets/rivalries/rivalries-list-720.png 720w, assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="Rivalries list showing saved opponents and full Head-to-Head records" width="1320" height="2868" loading="lazy" decoding="async">
-    </figure>
-  </div>
-
-  <div class="rivalries-chapter rivalries-watch-chapter">
-    <div class="rivalries-chapter-copy">
-      <span class="rivalries-chapter-number">01 · On court</span>
-      <h3>Pick the opponent. Then just play.</h3>
-      <p>Choose Guest or a saved player during singles setup. The selected short name appears on the live scoring screen, while the same familiar scoring taps build the record automatically.</p>
-      <ul class="rivalries-checklist">
-        <li>Create and manage players in Pro on iPhone</li>
-        <li>Sync the list privately to Apple Watch through iCloud</li>
-        <li>Assign an older saved singles match later</li>
-        <li>Keep Guest matches outside Rivalries</li>
-      </ul>
-    </div>
-    <div class="rivalries-watch">
-      <figure>
-        <img src="assets/rivalries/watch-opponent-picker.png" alt="Apple Watch opponent picker showing Guest and saved players" width="416" height="496" loading="lazy" decoding="async">
-        <figcaption>Choose Guest or a saved player</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/rivalries/watch-live-opponent.png" alt="Apple Watch live scoring screen showing the selected opponent" width="416" height="496" loading="lazy" decoding="async">
-        <figcaption>See the selected name while scoring</figcaption>
-      </figure>
-    </div>
-  </div>
-
-  <div class="rivalries-chapter rivalries-record-chapter">
-    <div class="rivalries-chapter-copy">
-      <span class="rivalries-chapter-number">02 · The complete record</span>
-      <h3>One player. Every angle.</h3>
-      <p>Filter the rivalry by All Time, This Year, or Last 30 Days. Compare recent form with the full period, review every meeting, and see only the statistics that were actually recorded.</p>
-      <div class="rivalries-benefits">
-        <article class="rivalries-benefit"><strong>Head‑to‑Head</strong><p>Decided meetings, wins, sets, games, tie‑breaks, and Match Tie‑Breaks.</p></article>
-        <article class="rivalries-benefit"><strong>Match performance</strong><p>Points, hold and break rates, serve and return, and pressure points.</p></article>
-        <article class="rivalries-benefit"><strong>Patterns and effort</strong><p>Wins after losing Set 1, streaks, time on court, heart rate, and energy.</p></article>
-      </div>
-    </div>
-    <div class="rivalries-app-screens">
-      <figure><img src="assets/rivalries/rivalry-details-720.png" srcset="assets/rivalries/rivalry-details-720.png 720w, assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Rivalry detail with period filters, Head-to-Head, recent form, and series overview" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Head‑to‑Head and recent form</figcaption></figure>
-      <figure><img src="assets/rivalries/rivalry-patterns-720.png" srcset="assets/rivalries/rivalry-patterns-720.png 720w, assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Rivalry pressure points, match patterns, time on court, and workout statistics" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Performance, patterns, and effort</figcaption></figure>
-      <figure><img src="assets/rivalries/rivalry-meetings-720.png" srcset="assets/rivalries/rivalry-meetings-720.png 720w, assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Complete list of saved meetings against one opponent" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Every saved meeting</figcaption></figure>
-    </div>
-  </div>
-
-  <div class="rivalries-chapter rivalries-share-chapter">
-    <div class="rivalries-share-heading">
-      <span class="rivalries-chapter-number">03 · Share the series</span>
-      <h3>Three cards. One Rivalry story.</h3>
-      <p>Sharing follows a fixed order: record and recent meetings first, match performance second, then patterns and workout context. Private notes never appear in shared cards.</p>
-    </div>
-    <div class="rivalries-share-grid">
-      <figure><img src="assets/rivalries/rivalry-story-overview.png" alt="Rivalry sharing card with Head-to-Head, series overview, and recent meetings" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · Record and recent meetings</figcaption></figure>
-      <figure><img src="assets/rivalries/rivalry-story-performance.png" alt="Rivalry sharing card with match performance statistics" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · Match performance</figcaption></figure>
-      <figure><img src="assets/rivalries/rivalry-story-patterns.png" alt="Rivalry sharing card with patterns, time, and workout statistics" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · Patterns, time, and workout</figcaption></figure>
-    </div>
-  </div>
-
-  <div class="rivalries-footer-notes">
-    <article><strong>Private by design</strong><p>Profiles, notes, and match assignments stay on your devices and can synchronize through your private iCloud data. Private notes are never included in sharing.</p></article>
-    <article><strong>No extra work during a match</strong><p>Opponent selection adds context before play. Scoring, Undo, workout recording, and the rest of the match flow remain unchanged.</p></article>
-  </div>
 </section>
 
 <section id="companion-benefits" class="companion-showcase">
@@ -2844,6 +2581,48 @@ footer {
       <p>Share a match with up to six highlights and optional court context, a performance overview, or the selected trend. Personal notes stay private.</p>
     </article>
   </div>
+</section>
+
+<section id="season-recaps" class="season-recaps" aria-labelledby="season-recaps-title">
+  <div class="season-recaps-heading">
+    <span class="season-recaps-kicker">Pro 1.8 · Standalone 1.11</span>
+    <h2 id="season-recaps-title">Your month. Your season. Your story.</h2>
+    <p>Look back on the matches you saved, from one week to a full year. Both Watch apps bring the recap to your wrist. Pro adds a larger view and a shareable card on iPhone.</p>
+  </div>
+  <div class="season-recaps-grid">
+    <article class="season-recap-card">
+      <div class="season-recap-copy">
+        <span class="season-recap-label">01 · PRO ON IPHONE</span>
+        <h3>See your month take shape.</h3>
+        <p>Wins, losses and stopped matches have distinct colors in the weekly activity chart. Compare match count and win rate with last month. Week boundaries follow your calendar settings.</p>
+      </div>
+      <a href="assets/season-recaps-en/pro-month.png" target="_blank" rel="noopener" aria-label="Open full-size Month in Tennis screenshot from Pro">
+        <img src="assets/season-recaps-en/pro-month.png" alt="Pro Month in Tennis: 11 saved matches, color-coded weekly activity and comparison with last month" width="1320" height="2868" loading="lazy" decoding="async">
+      </a>
+    </article>
+    <article class="season-recap-card">
+      <div class="season-recap-copy">
+        <span class="season-recap-label">02 · PRO ON IPHONE</span>
+        <h3>Take in the whole year.</h3>
+        <p>Review month-by-month activity, your completed record and a comparison with the previous year. Revisit achievements earned in the selected period, or share a recap card.</p>
+      </div>
+      <a href="assets/season-recaps-en/pro-year.png" target="_blank" rel="noopener" aria-label="Open full-size Year in Tennis screenshot from Pro">
+        <img src="assets/season-recaps-en/pro-year.png" alt="Pro Year in Tennis: completed record, color-coded monthly activity and year comparison" width="1320" height="2868" loading="lazy" decoding="async">
+      </a>
+    </article>
+    <article class="season-recap-card season-recap-watch">
+      <div class="season-recap-copy">
+        <span class="season-recap-label">03 · BOTH WATCH APPS</span>
+        <h3>A closer look from your wrist.</h3>
+        <p>Open History to explore Month in Tennis or Year in Tennis. See saved-match activity, the completed wins and losses, and achievements supported by your history.</p>
+      </div>
+      <a href="assets/season-recaps-en/standalone-watch-year.png" target="_blank" rel="noopener" aria-label="Open full-size Year in Tennis chart from Standalone Watch">
+        <img src="assets/season-recaps-en/standalone-watch-year.png" alt="Standalone Watch Year in Tennis with monthly match totals and green, red and yellow result bars" width="416" height="496" loading="lazy" decoding="async">
+      </a>
+    </article>
+  </div>
+  <a class="season-recaps-more" href="whats-new.html">What’s new in both versions <span aria-hidden="true">→</span></a>
+  <a class="season-recaps-more" href="help.html#period-recaps">How to find your recap <span aria-hidden="true">→</span></a>
 </section>
 
 <section id="iphone-screenshots">
@@ -3035,6 +2814,180 @@ footer {
   </div>
 </section>
 
+<section id="new-release" class="release-next" aria-labelledby="release-next-title">
+  <div class="release-next-heading">
+<div class="release-next-kicker"><span>Pro on iPhone</span><span>Syncs with both Watch apps</span></div>
+    <h2 id="release-next-title">Your whole match.<br>Not just the score.</h2>
+    <p>Add a match you’ve played, and correct it later if you need to. Remember the court and the conditions. Share the moments that made it yours — all alongside your Apple&nbsp;Watch history.</p>
+  </div>
+  <div class="release-next-grid">
+    <article class="release-next-card">
+      <span class="release-card-number">01 · ADD A PLAYED MATCH</span>
+      <h3>Played it? Keep it.</h3>
+      <p>Enter the result on iPhone, including set scores and optional tie-break points. Save a completed match or a stopped match, even a tie. Include start and end times, or leave the duration unknown.</p>
+      <a href="assets/release-1-6-en/manual-score.png" target="_blank" rel="noopener" aria-label="Open full-size manual match entry screenshot"><img src="assets/release-1-6-en/manual-score.png" alt="Pro manual entry with a 7–6, 6–4 result and a 12–10 set tie-break" width="1320" height="2868" loading="lazy" decoding="async"></a>
+    </article>
+    <article class="release-next-card">
+      <span class="release-card-number">02 · REMEMBER THE CONTEXT</span>
+      <h3>Every court has a memory.</h3>
+      <p>Add the surface, indoor or outdoor setting, club, court and a private match note. Reuse recent or favorite courts — and add context to older Watch-recorded matches, too.</p>
+      <a href="assets/release-1-6-en/favorite-court.png" target="_blank" rel="noopener" aria-label="Open full-size court context screenshot"><img src="assets/release-1-6-en/favorite-court.png" alt="Pro court editor with Central Tennis Club, Court 3, favorites and a separate match note" width="1320" height="2868" loading="lazy" decoding="async"></a>
+    </article>
+    <article class="release-next-card">
+      <span class="release-card-number">03 · FIND THE HIGHLIGHTS</span>
+      <h3>More moments worth keeping.</h3>
+      <p>See every supported highlight in Match Details, from a comeback to a personal best or a milestone win. Shared cards feature up to six, chosen from the most interesting moments.</p>
+      <a href="assets/release-1-6-en/match-highlights.png" target="_blank" rel="noopener" aria-label="Open full-size Match Highlights screenshot"><img src="assets/release-1-6-en/match-highlights.png" alt="A manually added match with straight-set and recorded winning-streak highlights in Pro" width="1320" height="2868" loading="lazy" decoding="async"></a>
+    </article>
+  </div>
+  <figure class="highlights-catalog" id="match-highlights-catalog">
+    <figcaption>
+      <span class="release-card-number">MATCH HIGHLIGHTS</span>
+      <h3>Every match has its moments.</h3>
+      <p>Comebacks, close tie-breaks, milestone wins and personal records. Explore 26 types of Match Highlights, shown here in 44 visual examples.</p>
+
+    </figcaption>
+    <a href="assets/release-1-6-en/all-match-highlights.png" target="_blank" rel="noopener" aria-label="Open all 44 Match Highlights examples at full size">
+      <img src="assets/release-1-6-en/all-match-highlights.png" alt="All 26 Match Highlights types shown as 44 example cards, including comebacks, tie-breaks, Rivalries, records, serving, returning and long matches" width="2160" height="1501" loading="lazy" decoding="async">
+    </a>
+  </figure>
+  <article class="release-watch-proof" id="edit-played-match">
+    <div>
+      <div class="release-next-kicker"><span>Manual matches · iPhone</span></div>
+      <h3>A score to correct?<br>Keep the match. Fix the details.</h3>
+      <p>Open a manually added match and tap <strong>Edit match</strong>. Correct the date, time, scoring rules or result — without deleting the match and starting again.</p>
+      <p>Saving updates the same match, including its copy in Watch history. Watch-recorded scores stay protected; opponent assignments and court context have their own controls.</p>
+      <a href="help.html#manual-matches">Adding and editing played matches →</a>
+    </div>
+    <a href="assets/release-1-6-en/manual-edit-form.png" target="_blank" rel="noopener" aria-label="Open full-size manual match editor screenshot"><img src="assets/release-1-6-en/manual-edit-form.png" alt="Edit Match form on iPhone with existing match details, court context and timing controls" width="1320" height="2868" loading="lazy" decoding="async"></a>
+  </article>
+  <article class="release-watch-proof">
+    <div>
+      <div class="release-next-kicker"><span>Both Watch apps</span></div>
+      <h3>Added on iPhone.<br>Kept on your wrist.</h3>
+      <p>Manually added matches — and later corrections — sync to Pro Watch history and can reach Standalone through private iCloud sync under the same Apple Account.</p>
+      <p>They’re clearly marked <strong>Added manually</strong>. They show the saved result without empty point-statistics or workout cards.</p>
+      <a href="help.html#manual-matches">How manual matches work →</a>
+    </div>
+    <a href="assets/release-1-6-en/watch-manual-history.png" target="_blank" rel="noopener" aria-label="Open full-size manual match history on Apple Watch"><img src="assets/release-1-6-en/watch-manual-history.png" alt="Standalone Apple Watch history marking a tied stopped match as Added manually" width="422" height="514" loading="lazy" decoding="async"></a>
+  </article>
+
+</section>
+
+<section id="match-flow" class="release-next" aria-labelledby="match-flow-title">
+  <div class="release-next-heading">
+    <div class="release-next-kicker"><span>Match Flow in Pro</span><span>Momentum on both Watch apps</span></div>
+    <h2 id="match-flow-title">See how the match unfolded.</h2>
+    <p>For matches with recorded point history, Match Flow turns each game into a readable story. New Watch recordings retain the point sequence, and older matches show Match Flow when their saved history supports it.</p>
+  </div>
+  <div class="release-next-grid">
+    <article class="release-next-card">
+      <span class="release-card-number">01 · MOMENTUM</span>
+      <h3>Follow every swing.</h3>
+      <p>Green and red bars show which side won each game. Their height reflects the number of points played; small score tiles show the running games score.</p>
+      <a href="assets/release-1-7-en/iphone-momentum.png" target="_blank" rel="noopener" aria-label="Open full-size Pro Match Flow Momentum screenshot"><img src="assets/release-1-7-en/iphone-momentum.png" alt="Current Pro Match Flow Momentum screen with green and red game bars and running score tiles" width="1320" height="2868" loading="lazy" decoding="async"></a>
+    </article>
+    <article class="release-next-card">
+      <span class="release-card-number">02 · SCORES</span>
+      <h3>See the score develop.</h3>
+      <p>Browse the score after each game, including the game number and its recorded point count. No extra taps are needed while playing.</p>
+      <a href="assets/release-1-7-en/iphone-scores.png" target="_blank" rel="noopener" aria-label="Open full-size Pro Match Flow Scores screenshot"><img src="assets/release-1-7-en/iphone-scores.png" alt="Current Pro Match Flow Scores screen showing the running result after each recorded game" width="1320" height="2868" loading="lazy" decoding="async"></a>
+    </article>
+    <article class="release-next-card">
+      <span class="release-card-number">03 · KEY MOMENTS</span>
+      <h3>Remember the turning points.</h3>
+      <p>Find moments such as long games and wins on return, with the relevant game and running score, when point history is available.</p>
+      <a href="assets/release-1-7-en/iphone-key-moments.png" target="_blank" rel="noopener" aria-label="Open full-size Pro Match Flow Key Moments screenshot"><img src="assets/release-1-7-en/iphone-key-moments.png" alt="Current Pro Match Flow Key Moments screen with a long game and a win on return" width="1320" height="2868" loading="lazy" decoding="async"></a>
+    </article>
+  </div>
+  <article class="release-watch-proof">
+    <div><div class="release-next-kicker"><span>Both Watch apps</span></div><h3>The story fits your wrist.</h3><p>Open a recorded match in Watch History to see compact Momentum with running game scores. It appears only when a valid point-by-point record is available.</p><a href="help.html#match-flow-help">How Match Flow works →</a></div>
+    <a href="assets/release-1-7-en/watch-momentum.png" target="_blank" rel="noopener" aria-label="Open full-size Watch Momentum screenshot"><img src="assets/release-1-7-en/watch-momentum.png" alt="Current Watch History Momentum view with compact game bars and score labels" width="416" height="496" loading="lazy" decoding="async"></a>
+  </article>
+  <article class="release-watch-proof" id="history-files">
+    <div><div class="release-next-kicker"><span>Pro · iPhone</span></div><h3>Take your history with you.</h3><p>Export a readable CSV, Excel or PDF report. For a restorable copy, create a JSON or ZIP backup and import it later in Pro. Import adds missing matches without duplicating existing records; deleted match IDs remain deleted.</p><a href="help.html#history-files-help">Export and backup guide →</a></div>
+    <a class="release-history-files-shot" href="assets/release-1-7-en/iphone-history-files.png" target="_blank" rel="noopener" aria-label="Open full-size Match History Files screenshot"><img src="assets/release-1-7-en/iphone-history-files.png" alt="Current Pro Match History Files screen with Export a Copy and Import Backup actions" width="1320" height="2868" loading="lazy" decoding="async"></a>
+  </article>
+
+</section>
+
+<section id="rivalries" class="rivalries-showcase" aria-labelledby="rivalries-title">
+  <div class="rivalries-heading">
+    <div class="rivalries-intro-copy">
+      <span class="rivalries-kicker">Rivalries · iPhone</span>
+      <h2 id="rivalries-title">Every opponent has a story.</h2>
+      <p>
+        Choose a saved opponent before a singles match and Tennis Score Wizard builds a private Head‑to‑Head automatically. Every result, pressure point, comeback, streak, workout, and meeting stays together in one record.
+      </p>
+      <a class="rivalries-action" href="help.html#rivalries">Learn how Rivalries works</a>
+      <p class="rivalries-singles-note">Rivalry records currently use singles matches. Doubles scoring continues normally without assigning one opponent.</p>
+    </div>
+    <figure class="rivalries-phone">
+      <img src="assets/rivalries/rivalries-list-720.png" srcset="assets/rivalries/rivalries-list-720.png 720w, assets/rivalries/rivalries-list.png 1320w" sizes="(max-width: 900px) 78vw, 360px" alt="Rivalries list showing saved opponents and full Head-to-Head records" width="1320" height="2868" loading="lazy" decoding="async">
+    </figure>
+  </div>
+
+  <div class="rivalries-chapter rivalries-watch-chapter">
+    <div class="rivalries-chapter-copy">
+      <span class="rivalries-chapter-number">01 · On court</span>
+      <h3>Pick the opponent. Then just play.</h3>
+      <p>Choose Guest or a saved player during singles setup. The selected short name appears on the live scoring screen, while the same familiar scoring taps build the record automatically.</p>
+      <ul class="rivalries-checklist">
+        <li>Create and manage players in Pro on iPhone</li>
+        <li>Sync the list privately to Apple Watch through iCloud</li>
+        <li>Assign an older saved singles match later</li>
+        <li>Keep Guest matches outside Rivalries</li>
+      </ul>
+    </div>
+    <div class="rivalries-watch">
+      <figure>
+        <img src="assets/rivalries/watch-opponent-picker.png" alt="Apple Watch opponent picker showing Guest and saved players" width="416" height="496" loading="lazy" decoding="async">
+        <figcaption>Choose Guest or a saved player</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/rivalries/watch-live-opponent.png" alt="Apple Watch live scoring screen showing the selected opponent" width="416" height="496" loading="lazy" decoding="async">
+        <figcaption>See the selected name while scoring</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="rivalries-chapter rivalries-record-chapter">
+    <div class="rivalries-chapter-copy">
+      <span class="rivalries-chapter-number">02 · The complete record</span>
+      <h3>One player. Every angle.</h3>
+      <p>Filter the rivalry by All Time, This Year, or Last 30 Days. Compare recent form with the full period, review every meeting, and see only the statistics that were actually recorded.</p>
+      <div class="rivalries-benefits">
+        <article class="rivalries-benefit"><strong>Head‑to‑Head</strong><p>Decided meetings, wins, sets, games, tie‑breaks, and Match Tie‑Breaks.</p></article>
+        <article class="rivalries-benefit"><strong>Match performance</strong><p>Points, hold and break rates, serve and return, and pressure points.</p></article>
+        <article class="rivalries-benefit"><strong>Patterns and effort</strong><p>Wins after losing Set 1, streaks, time on court, heart rate, and energy.</p></article>
+      </div>
+    </div>
+    <div class="rivalries-app-screens">
+      <figure><img src="assets/rivalries/rivalry-details-720.png" srcset="assets/rivalries/rivalry-details-720.png 720w, assets/rivalries/rivalry-details.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Rivalry detail with period filters, Head-to-Head, recent form, and series overview" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Head‑to‑Head and recent form</figcaption></figure>
+      <figure><img src="assets/rivalries/rivalry-patterns-720.png" srcset="assets/rivalries/rivalry-patterns-720.png 720w, assets/rivalries/rivalry-patterns.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Rivalry pressure points, match patterns, time on court, and workout statistics" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Performance, patterns, and effort</figcaption></figure>
+      <figure><img src="assets/rivalries/rivalry-meetings-720.png" srcset="assets/rivalries/rivalry-meetings-720.png 720w, assets/rivalries/rivalry-meetings.png 1320w" sizes="(max-width: 700px) 72vw, 245px" alt="Complete list of saved meetings against one opponent" width="1320" height="2868" loading="lazy" decoding="async"><figcaption>Every saved meeting</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="rivalries-chapter rivalries-share-chapter">
+    <div class="rivalries-share-heading">
+      <span class="rivalries-chapter-number">03 · Share the series</span>
+      <h3>Three cards. One Rivalry story.</h3>
+      <p>Sharing follows a fixed order: record and recent meetings first, match performance second, then patterns and workout context. Private notes never appear in shared cards.</p>
+    </div>
+    <div class="rivalries-share-grid">
+      <figure><img src="assets/rivalries/rivalry-story-overview.png" alt="Rivalry sharing card with Head-to-Head, series overview, and recent meetings" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>1 · Record and recent meetings</figcaption></figure>
+      <figure><img src="assets/rivalries/rivalry-story-performance.png" alt="Rivalry sharing card with match performance statistics" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>2 · Match performance</figcaption></figure>
+      <figure><img src="assets/rivalries/rivalry-story-patterns.png" alt="Rivalry sharing card with patterns, time, and workout statistics" width="1080" height="1920" loading="lazy" decoding="async"><figcaption>3 · Patterns, time, and workout</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="rivalries-footer-notes">
+    <article><strong>Private by design</strong><p>Profiles, notes, and match assignments stay on your devices and can synchronize through your private iCloud data. Private notes are never included in sharing.</p></article>
+    <article><strong>No extra work during a match</strong><p>Opponent selection adds context before play. Scoring, Undo, workout recording, and the rest of the match flow remain unchanged.</p></article>
+  </div>
+</section>
+
 <section id="share-results" class="share-showcase">
   <span class="companion-section-kicker">Made to share</span>
   <h2>Turn your tennis into a story</h2>
@@ -3050,7 +3003,7 @@ footer {
     <article class="share-card">
       <a href="assets/release-1-6-en/share-custom-score.png" target="_blank" rel="noopener" aria-label="Open full-size manual Custom Set sharing card"><img src="assets/release-1-6-en/share-custom-score.png" alt="App-exported manual match with five Custom Sets, two-digit game and tie-break scores, and two supported highlights" width="1080" height="924" loading="lazy" decoding="async"></a>
       <h3>Only the details you know.</h3>
-      <p>Manual matches get a clean result card with their recorded set scores and supported highlights. No empty workout panels or made-up point statistics.</p>
+      <p>Manual matches get a clear result card with their saved set scores and supported highlights.</p>
     </article>
     <article class="share-card">
       <img src="assets/core-scoring-formats-en/share-set-tiebreaks.png" alt="Shareable tennis match card with two set tie-break scores and detailed match statistics" width="1080" height="1920" loading="lazy" decoding="async">
@@ -3254,28 +3207,121 @@ footer {
   </div>
 </section>
 
+<section id="scoring-formats" class="core-formats-showcase" aria-labelledby="scoring-formats-title">
+  <div class="core-formats-heading">
+    <span class="core-formats-kicker"><span>Built into both versions</span><span>Apple&nbsp;Watch scoring</span></span>
+    <h2 id="scoring-formats-title">Play the format you actually use.</h2>
+    <p>
+      Both versions include the same automatic Apple&nbsp;Watch scoring engine: faster official formats, No‑Ad games, and a Custom&nbsp;Set builder, with familiar on-court controls.
+    </p>
+  </div>
+
+  <div class="core-proof-grid watch-promo-grid">
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>One Set and Custom Set setup</h3><p>Play a complete match as a single set when time is limited.</p><p>Choose the game target, win-by rule, tie‑break start, and target as one coherent preset.</p><p>Keep six-game advantage sets or start a regular tie‑break at <span class="score-nowrap">6–6</span>.</p></div><img src="assets/core-scoring-formats-en/watch-one-set-custom.png" alt="Apple Watch setup showing One Set and a configured Custom Set" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Official Short Set choices</h3><p>First to four games, with a tie‑break at <span class="score-nowrap">3–3</span> or <span class="score-nowrap">4–4</span> and a 7-point or deciding 5-point finish.</p></div><img src="assets/core-scoring-formats-en/watch-short-set-options.png" alt="Apple Watch Short Sets configuration with tie-break start and target options" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>No‑Ad at deuce</h3><p>A deciding point at deuce keeps every selected set format moving.</p></div><img src="assets/core-scoring-formats-en/watch-no-ad.png" alt="Apple Watch Game Rule picker with No-Ad selected" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Your win, set by set.</h3><p>See the final score, games and time on court together in one clear result.</p></div><img src="assets/core-scoring-formats-en/watch-completed-win.png" alt="Apple Watch result card for a completed match win" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Every result tells a story.</h3><p>Review the score and match duration after a loss, then open History to look back at the match.</p></div><img src="assets/core-scoring-formats-en/watch-completed-loss.png" alt="Apple Watch result card for a completed match loss" width="422" height="514" loading="lazy" decoding="async"></article>
+  <article class="watch-promo-card"><div class="watch-promo-copy"><h3>One to five sets, clearly shown</h3><p>Wins, losses, and stopped matches are immediately distinct, while one to five sets and tie‑break scores stay readable.</p></div><img src="assets/core-scoring-formats-en/watch-five-set-finish.png" alt="Apple Watch finished match screen showing a complete five-set result" width="422" height="514" loading="lazy" decoding="async"></article>
+</div>
+</section>
+
+<section id="watch-history" class="core-formats-showcase" aria-labelledby="watch-history-title">
+  <div class="core-formats-heading">
+    <span class="core-formats-kicker"><span>Both Watch apps</span></span>
+    <h2 id="watch-history-title">Find that match again.</h2>
+    <p>Last month or a season ago? Narrow your Watch history by year and month, with Singles and Doubles filters alongside. Older matches load as you browse, without removing anything from your saved history.</p>
+  </div>
+  <div class="core-proof-grid watch-promo-grid">
+    <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Start with a period.</h3><p>Open History and tap Period. Keep all dates, or narrow the list while using All, 1v1 or 2v2.</p></div><img src="assets/release-1-6-en/watch-history-period.png" alt="Pro Watch History with All, 1v1 and 2v2 filters and the Period control" width="416" height="496" loading="lazy" decoding="async"></article>
+    <article class="watch-promo-card"><div class="watch-promo-copy"><h3>Choose your year.</h3><p>Pick from years with saved matches. All dates brings the full timeline back into view.</p></div><img src="assets/release-1-6-en/watch-history-years.png" alt="Watch History Period menu with All dates and available years" width="416" height="496" loading="lazy" decoding="async"></article>
+    <article class="watch-promo-card"><div class="watch-promo-copy"><h3>A month or a whole season.</h3><p>Choose a month with matches, or Entire year to review the season together.</p></div><img src="assets/release-1-6-en/watch-history-months-entire-year.png" alt="Standalone Watch History filter for 2024 with Entire year, September and October" width="416" height="496" loading="lazy" decoding="async"></article>
+  </div>
+
+</section>
+
+<section id="icloud-sync" class="icloud-showcase" aria-labelledby="icloud-title">
+  <div class="icloud-heading">
+    <span class="icloud-kicker">iCloud match sync</span>
+    <h2 id="icloud-title">Your match history on Apple Watch and iPhone.</h2>
+    <p>
+      Standalone and Pro can sync the same saved matches through iCloud when you use the same Apple Account. Each Apple Account keeps a separate private history. Score on Apple&nbsp;Watch or add a played match in Pro on iPhone. Manual entries, opponent assignments and match context travel with the saved record; successfully synced matches can be restored after reinstalling.
+    </p>
+  </div>
+
+  <div class="icloud-ecosystem">
+    <div class="icloud-endpoint">
+      <picture class="icloud-ui-proof icloud-ui-proof-watch">
+        <img src="assets/release-1-6-en/watch-history-period.png" alt="Apple Watch History with sync status and the Period filter" width="416" height="496" loading="lazy" decoding="async">
+      </picture>
+      <strong>Apple Watch</strong>
+      <p>Score matches with Standalone or Pro and check the latest sync status in History.</p>
+    </div>
+
+    <div class="icloud-hub">
+      <div class="icloud-cloud-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64">
+          <path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path>
+          <path d="m24 34 5.5 5.5L41 28"></path>
+        </svg>
+      </div>
+      <strong>Private iCloud sync</strong>
+      <p>Successfully synced match records are stored in the private CloudKit database for your Apple Account, not on a Tennis Score Wizard server.</p>
+      <div class="icloud-status-sample">✓ <span>Synced</span></div>
+    </div>
+
+    <div class="icloud-endpoint">
+      <picture class="icloud-ui-proof icloud-ui-proof-phone">
+        <source srcset="assets/companion_icloud_synced-720.webp" type="image/webp">
+        <img src="assets/companion_icloud_synced.png" alt="Pro iCloud Match History card showing private storage and the latest sync time" width="1224" height="650" loading="lazy" decoding="async">
+      </picture>
+      <strong>iPhone</strong>
+      <p>Add and edit played matches, keep court context, review recorded statistics and check private iCloud sync in Pro.</p>
+    </div>
+  </div>
+
+  <div class="icloud-benefits">
+    <article class="icloud-benefit">
+      <strong>Two independent paths</strong>
+      <p>Pro can transfer directly between paired devices while CloudKit separately provides durable iCloud sync and restore. Either path may finish first.</p>
+    </article>
+    <article class="icloud-benefit">
+      <strong>See sync status</strong>
+      <p>History shows <b>Synced</b>, <b>Syncing</b>, <b>Waiting</b> / <b>Saving</b>, or <b>Sync paused</b> / <b>Retry</b>.</p>
+    </article>
+    <article class="icloud-benefit">
+      <strong>Keep accounts separate</strong>
+      <p>Changing Apple Accounts never mixes histories. Unsynced matches for the previous account are kept in an encrypted local recovery copy.</p>
+    </article>
+    <article class="icloud-benefit">
+      <strong>Score now, restore later</strong>
+      <p>Scoring remains available without iCloud. Successfully synchronized matches can download again after reinstalling under the same Apple Account.</p>
+    </article>
+  </div>
+</section>
+
 <section id="comparison" class="comparison-section">
   <span class="product-section-kicker">Version comparison</span>
   <div class="comparison-heading">
     <h2>The same Watch scoring. More ways to keep your matches on iPhone.</h2>
     <p class="section-subtitle">
-      Standalone is the complete scoring experience on Apple&nbsp;Watch. Pro adds manual match entry and editing, court context, Rivalries, Match Highlights and sharing on iPhone.
+      Pro combines the complete Apple&nbsp;Watch scoring app with match entry, analysis, Rivalries and sharing on iPhone. Standalone keeps the full scoring experience on your Watch without an iPhone app.
     </p>
   </div>
 
   <div class="comparison-grid" role="table" aria-label="Comparison of Tennis Score Wizard Standalone and Pro">
     <div class="comparison-row comparison-header" role="row">
       <div class="comparison-feature" role="columnheader">Experience</div>
-      <div role="columnheader">
-        <span class="comparison-version-label">Standalone</span>
-        <strong>Apple Watch</strong>
-      </div>
       <div class="comparison-companion-column" role="columnheader">
         <span class="comparison-version-label">Pro</span>
         <strong>
           <span class="comparison-title-full">iPhone + Apple Watch</span>
           <span class="comparison-title-compact">Watch + iPhone</span>
         </strong>
+      </div>
+      <div role="columnheader">
+        <span class="comparison-version-label">Standalone</span>
+        <strong>Apple Watch</strong>
       </div>
     </div>
 
@@ -3293,19 +3339,24 @@ footer {
 
     <div class="comparison-row comparison-difference" role="row">
       <div class="comparison-feature" role="rowheader">Match history and detailed stats</div>
-      <div role="cell">On Apple Watch</div>
       <div role="cell">On Apple Watch and iPhone</div>
+      <div role="cell">On Apple Watch</div>
     </div>
     <div class="comparison-row" role="row">
       <div class="comparison-feature" role="rowheader">Watch history filters by year and month</div>
       <div role="cell"><span class="comparison-check">✓</span> Included</div>
       <div role="cell"><span class="comparison-check">✓</span> Included</div>
     </div>
+    <div class="comparison-row comparison-difference" role="row">
+      <div class="comparison-feature" role="rowheader">Month and year recaps</div>
+      <div role="cell">On Apple&nbsp;Watch and iPhone, with comparisons and sharing</div>
+      <div role="cell">Activity and achievements on Apple&nbsp;Watch</div>
+    </div>
 
     <div class="comparison-row comparison-difference" role="row">
       <div class="comparison-feature" role="rowheader">Workout and heart-rate details</div>
-      <div role="cell">On Apple Watch</div>
       <div role="cell">On Apple Watch and iPhone</div>
+      <div role="cell">On Apple Watch</div>
     </div>
 
     <div class="comparison-row" role="row">
@@ -3322,55 +3373,55 @@ footer {
 
     <div class="comparison-row comparison-difference" role="row">
       <div class="comparison-feature" role="rowheader">Opponent profiles and Rivalries</div>
-      <div role="cell">Synced opponent selection on Apple Watch</div>
       <div role="cell">Create and manage on iPhone + select on Watch</div>
+      <div role="cell">Synced opponent selection on Apple Watch</div>
     </div>
 
     <div class="comparison-row comparison-difference" role="row">
       <div class="comparison-feature" role="rowheader">Synchronized iPhone experience</div>
-      <div role="cell"><span class="comparison-muted">Not required</span></div>
       <div role="cell"><span class="comparison-check">✓</span> Included</div>
+      <div role="cell"><span class="comparison-muted">Not required</span></div>
     </div>
 
     <div class="comparison-row comparison-difference" role="row">
       <div class="comparison-feature" role="rowheader">Monthly and yearly match calendar</div>
-      <div role="cell"><span class="comparison-muted">Not included</span></div>
       <div role="cell">On iPhone</div>
+      <div role="cell"><span class="comparison-muted">Not included</span></div>
     </div>
 
     <div class="comparison-row comparison-difference" role="row">
       <div class="comparison-feature" role="rowheader">Long-term performance stats and trends</div>
-      <div role="cell"><span class="comparison-muted">Not included</span></div>
       <div role="cell">On iPhone</div>
+      <div role="cell"><span class="comparison-muted">Not included</span></div>
     </div>
 
     <div class="comparison-row comparison-difference" role="row">
       <div class="comparison-feature" role="rowheader">Shareable text summaries and visual cards</div>
+      <div role="cell">On iPhone, including period recaps</div>
       <div role="cell"><span class="comparison-muted">Not included</span></div>
-      <div role="cell">On iPhone</div>
     </div>
 
     <div class="comparison-row comparison-difference" role="row">
       <div class="comparison-feature" role="rowheader">Add and edit played matches</div>
-      <div role="cell">Receives manual matches and corrections through iCloud</div>
       <div role="cell">Add and edit on iPhone; sync to Watch history</div>
+      <div role="cell">Receives manual matches and corrections through iCloud</div>
     </div>
     <div class="comparison-row comparison-difference" role="row">
       <div class="comparison-feature" role="rowheader">Court context and private match notes</div>
-      <div role="cell">Preserved with synced match records</div>
       <div role="cell">Add and edit on iPhone</div>
+      <div role="cell">Preserved with synced match records</div>
     </div>
     <div class="comparison-row comparison-difference" role="row">
       <div class="comparison-feature" role="rowheader">Match Highlights</div>
-      <div role="cell"><span class="comparison-muted">Not displayed on Watch</span></div>
       <div role="cell">All applicable in iPhone details; up to six in sharing</div>
+      <div role="cell"><span class="comparison-muted">Not displayed on Watch</span></div>
     </div>
-<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Match Flow with recorded points</div><div role="cell">Compact Momentum on Watch</div><div role="cell">Watch Momentum + three views on iPhone</div></div>
-<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">History reports and restorable backups</div><div role="cell"><span class="comparison-muted">Not included</span></div><div role="cell">Export and import on iPhone</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Match Flow with recorded points</div><div role="cell">Watch Momentum + three views on iPhone</div><div role="cell">Compact Momentum on Watch</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">History reports and restorable backups</div><div role="cell">Export and import on iPhone</div><div role="cell"><span class="comparison-muted">Not included</span></div></div>
     <div class="comparison-row comparison-best-for" role="row">
       <div class="comparison-feature" role="rowheader">Best for</div>
-      <div role="cell">Players who want everything on their wrist</div>
       <div role="cell">Players who want the full Watch app plus a larger post-match view</div>
+      <div role="cell">Players who want everything on their wrist</div>
     </div>
   </div>
 </section>
@@ -3380,7 +3431,7 @@ footer {
     <span class="shared-experience-kicker">Shared across both versions</span>
     <h2>The same tennis intelligence powers both.</h2>
     <p>
-      One&nbsp;Set, Short&nbsp;Sets, No‑Ad, Custom&nbsp;Set, automatic scoring statistics, local history with year and month filters, iCloud match sync and optional workouts are included with both versions. Pro adds manual result entry, editing and post-match tools on iPhone; live point-by-point scoring remains on Apple&nbsp;Watch.
+      One&nbsp;Set, Short&nbsp;Sets, No‑Ad, Custom&nbsp;Set, automatic scoring statistics, local history with month and year recaps, iCloud match sync and optional workouts are included with both versions. Pro adds manual result entry, editing and post-match tools on iPhone. Live point-by-point scoring remains on Apple&nbsp;Watch.
     </p>
   </div>
 
@@ -3541,7 +3592,7 @@ footer {
   <div class="help">
     <div class="help-item"><strong>Can I add a match after playing?</strong><p>Yes. In Pro on iPhone, choose Add Played Match. Enter the score, select Completed or Stopped, and add any timing you remember. The saved result can sync to both Watch apps.</p></div>
     <div class="help-item"><strong>Can I correct a manually added match?</strong><p>Yes. Open Match Details and tap Edit match to correct its date, time, rules or score. Save updates the existing result and synchronizes the correction to Watch history. This editor is only for manual matches, not Watch-recorded scores.</p></div>
-    <div class="help-item"><strong>Can I record a tie?</strong><p>Yes. Choose Stopped when play ended before a winner was decided. A tied result can be saved without inventing a deciding set.</p></div>
+    <div class="help-item"><strong>Can I record a tie?</strong><p>Yes. Choose Stopped when play ended before a winner was decided. A tied result can be saved with its current score.</p></div>
     <div class="help-item"><strong>Can I add context to older matches?</strong><p>Yes. Open Match Details on iPhone and add or edit Match context. The original Watch-recorded score, timing and statistics are preserved.</p></div>
     <div class="help-item"><strong>What changes when I edit the opponent or context?</strong><p>Opponent changes update the assignment and relevant Rivalry views. History-based highlights use the current saved history. Optional court information and personal notes do not create new statistical achievements.</p></div>
   </div>
@@ -3561,7 +3612,7 @@ footer {
     </div>
     <div class="faq">
       <strong>Do match stats require extra taps?</strong>
-      <p>During Watch scoring, stats are generated from your normal scoring taps. Manually added matches contribute their known results, but do not invent point-by-point statistics, heart rate or workouts. The app does not ask you to enter aces, winners, unforced errors or rally length.</p>
+      <p>During Watch scoring, stats are generated from your normal scoring taps. Manually added matches contribute their saved results. Point-by-point statistics and workout measurements appear for recorded matches when available.</p>
     </div>
     <div class="faq">
       <strong>How do Rivalries work?</strong>
