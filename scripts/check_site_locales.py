@@ -8,7 +8,8 @@ import re
 from urllib.parse import urlsplit
 
 
-DOCS = Path(__file__).resolve().parents[1] / "docs"
+REPOSITORY = Path(__file__).resolve().parents[1]
+DOCS = REPOSITORY / "docs"
 LANGUAGES = ("de", "es", "fr", "it", "ja", "ko", "ru", "tr", "zh-Hans")
 PAGES = ("index", "whats-new", "help", "privacy")
 STRUCTURAL_TAGS = ("section", "article", "h1", "h2", "h3", "a", "li", "img")
@@ -107,6 +108,13 @@ def matching_link(english_path, localized_path, english_href, localized_href):
     return source.is_relative_to(DOCS) and actual == localized_path.parent / source.relative_to(DOCS)
 
 
+def readme_releases(markdown):
+    match = re.search(
+        r"^Current website versions: (Pro \d+(?:\.\d+)*) · (Standalone \d+(?:\.\d+)*)$",
+        markdown, re.MULTILINE)
+    return match.groups() if match else ()
+
+
 def main():
     parsed = {}
     errors = []
@@ -123,6 +131,9 @@ def main():
                                     english.meta.get("og:description", "")))
         if name == "index" and len(releases) != 2:
             errors.append(f"{english_path}: expected Pro and Standalone release numbers")
+        if name == "index" and readme_releases(
+                (REPOSITORY / "README.md").read_text(encoding="utf-8")) != releases:
+            errors.append("README.md: current website versions differ from English")
         for lang in LANGUAGES:
             path = DOCS / lang / f"{name}.html"
             if not path.is_file():

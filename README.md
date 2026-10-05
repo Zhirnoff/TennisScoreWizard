@@ -7,9 +7,11 @@
 This repository contains the public website, Help Center, Privacy Policy, release notes, and localized product pages for both Tennis Score Wizard products:
 
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
-- **Pro** — the complete Apple Watch app connected to iPhone for synchronized history, calendar views, performance statistics, trends, workout insights, and sharing
+- **Pro** — Apple Watch scoring plus an iPhone app for played-match entry, match history, Rivalries, statistics, period recaps, and sharing
 
-The published site covers **Pro 1.7 (59)** and **Standalone 1.10 (40)** in all ten languages: Match Flow, compact Watch Momentum, and Pro history reports and restorable backups. App Store release controls remain with the developer.
+Current website versions: Pro 1.8 · Standalone 1.11
+
+The published pages describe month and year recaps on both Watch apps, expanded recaps and shareable cards in Pro on iPhone, period comparisons, achievements, Match Flow and Momentum, and the existing history export and backup tools. Website content and App Store approval are separate; the developer controls app submissions and releases.
 
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
@@ -21,27 +23,20 @@ The GitHub Pages site is stored in `docs/`:
 - `docs/help.html` — Help Center
 - `docs/privacy.html` — Privacy Policy
 - `docs/whats-new.html` — Standalone and Pro release history
-- `docs/index.html#rivalries` — English Rivalries feature section on the main page
 - `docs/assets/` — app icons, Apple Watch screenshots, Pro screenshots, and optimized image variants
 - `docs/de`, `docs/es`, `docs/fr`, `docs/it`, `docs/ja`, `docs/ko`, `docs/ru`, `docs/tr`, `docs/zh-Hans` — localized pages
+- `scripts/check_site_locales.py` — English-first checks for localized page structure, links, images, accessibility labels, release metadata, and this README
+- `.github/workflows/site-localizations.yml` — runs those checks on site changes
 
 The site currently supports English, German, Spanish, French, Italian, Japanese, Korean, Russian, Turkish, and Simplified Chinese.
 
-## Coordinated release
+## Current site content
 
-- Pro 1.7 / Standalone 1.10 website release was prepared on `feature/website-match-flow-export-1-7-1-10` and integrated into `main` after the developer confirmed both app versions were released.
-- New screenshots in `docs/assets/release-1-7-en/` were captured from the current Pro and Watch simulator builds using the recorded-match UI tests. They show genuine test-match data and have not been redrawn. See [the release record](RELEASE-1.7-1.10-WEBSITE.md).
-- Landing page, Product Updates, Help, comparison and the factual Privacy disclosure now cover the new features in all ten languages. Product Updates remains text-only; past releases remain in the history.
-
-- Previous release branch: `feature/website-companion-1-6-standalone-1-9-en`.
-- Approved archive baselines: Pro 1.6 (56), commit `1eb6f20`; Standalone 1.9 (37), commit `e1c8fc5`. Earlier screenshot and test baselines are retained in the release record.
-- Public-facing pages use the normal site layout, without preview banners or extra release navigation. Preserve the separately published UK promo design and assets when merging release work.
-- Updated the landing page, Product Updates, Help and factual Privacy disclosures in all ten languages, plus the existing English UK campaign page. Product Updates stays text-only; historical entries are retained. Screenshots and the complete Match Highlights catalog belong on the main page.
-- Shared update styles and navigation behavior: `docs/release-1-6-en.css` and `docs/navigation-en.js`, now loaded by all ten languages. The filenames retain their original English preparation suffix.
-- New original app screenshots: `docs/assets/release-1-6-en/`. See [asset provenance and release checklist](RELEASE-1.6-EN.md).
-- Localized follow-up: native manual editor and Watch Period screenshots, year/month walkthrough, editing/sync help and updated product comparisons in all ten languages.
-- Localized copy includes search/social descriptions, screenshot captions and accessibility labels. Original app screenshots remain in English, with that fact disclosed in translated captions; no app UI or results were redrawn.
-- Use polite, formal address consistently across existing and new copy: German Sie, Spanish usted, Italian Lei, Turkish siz, Russian вы and Chinese 您. Keep natural polite wording in French, Japanese and Korean; English does not distinguish formal and informal second-person pronouns. Preserve the exact names of app controls referenced in instructions.
+- The landing page introduces Pro before Standalone and shows their current website versions, feature comparison, and product screenshots.
+- Product Updates includes release details and screenshots for the latest Pro and Standalone versions. Older releases remain in the history.
+- Help explains recaps, match history, manual match editing, Match Flow, sharing, and related features. Privacy describes the site's analytics and the apps' data handling.
+- All four main pages are available in ten languages. English is the content and structure reference; translations should be natural to native readers while preserving the same facts, links, screenshots, and accessibility information.
+- Historical implementation and asset provenance remain in [the 1.7/1.10 release record](RELEASE-1.7-1.10-WEBSITE.md) and [the 1.6 release record](RELEASE-1.6-EN.md).
 
 ## Local preview
 
@@ -52,6 +47,13 @@ python3 -m http.server 8000 --directory docs
 ```
 
 Then open http://localhost:8000/ in a browser. Check desktop and narrow mobile layouts before publishing, and verify at least one page in every localization when shared markup or styling changes.
+
+Run the localization checks from the repository root:
+
+```sh
+python3 scripts/check_site_locales.py
+python3 -m unittest discover -s scripts -p 'test_site_locales.py'
+```
 
 ## Website analytics
 
@@ -76,9 +78,11 @@ Keep original PNG assets as the high-quality source. Where responsive variants e
 ## Release workflow
 
 - `main` represents the public website and is published through GitHub Pages.
-- Prepare website content for an unreleased app version in a dedicated feature or release branch.
-- Merge and publish that branch only after the corresponding App Store version is successfully released.
-- Keep all ten language versions aligned when product names, versions, links, screenshots, privacy text, or release notes change.
+- Start with the English landing page, Product Updates, Help, and Privacy page as needed. Then update all nine translations against those English pages, including metadata and accessibility text.
+- Update this README's current website versions and feature summary whenever the site changes. The localization check fails if the version line falls behind the English page.
+- Run the automated checks and review the rendered desktop and mobile layouts before committing.
+- Prepare unreleased app content on a separate branch by default; publish early only when the developer explicitly requests it. Do not equate website publication with App Store approval.
+- After an authorized push to `main`, confirm both the localization workflow and GitHub Pages deployment succeeded, then inspect the live site.
 - Website deployments do not require Git release tags by default; application releases are tagged in the Xcode repository.
 
 ## App Store

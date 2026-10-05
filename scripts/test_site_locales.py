@@ -2,7 +2,7 @@
 
 import unittest
 
-from check_site_locales import DOCS, SitePage, matching_link
+from check_site_locales import DOCS, SitePage, matching_link, readme_releases
 
 
 def page(html):
@@ -37,6 +37,12 @@ class LocalizationCheckTests(unittest.TestCase):
             DOCS / "index.html", DOCS / "es" / "index.html",
             "https://apps.apple.com/app/id6789285015",
             "https://apps.apple.com/app/id6782709004"))
+
+    def test_readme_versions_must_follow_english(self):
+        self.assertEqual(readme_releases(
+            "Current website versions: Pro 1.8 · Standalone 1.11\n"),
+            ("Pro 1.8", "Standalone 1.11"))
+        self.assertEqual(readme_releases("Old website versions: Pro 1.7"), ())
 
 
 if __name__ == "__main__":

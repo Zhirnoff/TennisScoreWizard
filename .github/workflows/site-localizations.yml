@@ -5,12 +5,14 @@ on:
     paths:
       - "docs/**"
       - "scripts/check_site_locales.py"
+      - "README.md"
       - ".github/workflows/site-localizations.yml"
   push:
     branches: [main]
     paths:
       - "docs/**"
       - "scripts/check_site_locales.py"
+      - "README.md"
       - ".github/workflows/site-localizations.yml"
 
 jobs:
