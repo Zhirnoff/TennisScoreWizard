@@ -6,11 +6,13 @@ from html.parser import HTMLParser
 from pathlib import Path
 import re
 from urllib.parse import urlsplit
+from xml.etree import ElementTree
 
 
 REPOSITORY = Path(__file__).resolve().parents[1]
 DOCS = REPOSITORY / "docs"
-LANGUAGES = ("de", "es", "fr", "it", "ja", "ko", "ru", "tr", "zh-Hans")
+LANGUAGES = ("de", "es", "fr", "it", "ja", "ko", "ru", "tr", "zh-Hans",
+             "pt-BR", "zh-Hant", "nl", "ar")
 PAGES = ("index", "whats-new", "help", "privacy")
 STRUCTURAL_TAGS = ("section", "article", "h1", "h2", "h3", "a", "li", "img")
 STRUCTURAL_CLASSES = ("badge", "version-card", "season-recap-card", "app-store-button")
@@ -34,6 +36,7 @@ class SitePage(HTMLParser):
         self.aria_labels = []
         self.aria_sites = []
         self.lang = None
+        self.direction = None
         self.canonical = None
         self.hreflangs = {}
 
@@ -52,6 +55,7 @@ class SitePage(HTMLParser):
             self.aria_sites.append((tag, tuple(attrs.get("class", "").split())))
         if tag == "html":
             self.lang = attrs.get("lang")
+            self.direction = attrs.get("dir")
         if tag == "img":
             self.images.append(attrs.get("src", ""))
             self.image_candidates.extend(
@@ -129,6 +133,22 @@ def release_record_path(releases):
 def main():
     parsed = {}
     errors = []
+    site_base = "https://zhirnoff.github.io/TennisScoreWizard"
+    expected_sitemap = {
+        f"{site_base}{'' if lang == 'en' else '/' + lang}{'/' if name == 'index' else '/' + name + '.html'}"
+        for lang in ("en", *LANGUAGES) for name in PAGES
+    }
+    sitemap_path = DOCS / "sitemap.xml"
+    try:
+        sitemap = ElementTree.parse(sitemap_path)
+        actual_sitemap = {
+            element.text for element in sitemap.findall(".//{*}loc") if element.text
+        }
+        missing = expected_sitemap - actual_sitemap
+        for url in sorted(missing):
+            errors.append(f"{sitemap_path}: missing {url}")
+    except (ElementTree.ParseError, OSError) as error:
+        errors.append(f"{sitemap_path}: cannot read sitemap: {error}")
     for old_record in REPOSITORY.glob("RELEASE-*.md"):
         errors.append(f"{old_record}: release records belong in release-history/")
 
@@ -158,6 +178,13 @@ def main():
     for name in PAGES:
         english_path = DOCS / f"{name}.html"
         english = get(english_path)
+        expected_hreflangs = {"en", *LANGUAGES, "x-default"}
+        if set(english.hreflangs) != expected_hreflangs:
+            errors.append(f"{english_path}: missing or unexpected hreflang alternatives")
+        for lang in ("en", *LANGUAGES):
+            expected = f"{site_base}{'' if lang == 'en' else '/' + lang}{'/' if name == 'index' else '/' + name + '.html'}"
+            if english.hreflangs.get(lang) != expected:
+                errors.append(f"{english_path}: incorrect hreflang URL for {lang}")
         releases = tuple(re.findall(r"(?:Pro|Standalone) \d+(?:\.\d+)*",
                                     english.meta.get("og:description", "")))
         if name == "index" and len(releases) != 2:
@@ -184,6 +211,8 @@ def main():
                     errors.append(f"{path}: {field} differs from English")
             if page.lang != lang:
                 errors.append(f"{path}: expected lang={lang}, got {page.lang}")
+            if page.direction != ("rtl" if lang == "ar" else None):
+                errors.append(f"{path}: incorrect text direction for {lang}")
             image_paths = [(path.parent / urlsplit(src).path).resolve() for src in page.images]
             english_images = [(english_path.parent / urlsplit(src).path).resolve()
                               for src in english.images]

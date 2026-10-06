@@ -1,0 +1,3574 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
+<title>Tennis Score Wizard — pontuação de tênis no Apple Watch e iPhone</title>
+<meta content="Marque os pontos no Apple Watch. Veja resumos mensais e anuais no Watch e no Pro para iPhone, com histórico de partidas, Momentum, conquistas e compartilhamento." name="description"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/pt-BR/" rel="canonical"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/" hreflang="en" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/de/" hreflang="de" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/es/" hreflang="es" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/fr/" hreflang="fr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ko/" hreflang="ko" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ru/" hreflang="ru" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/tr/" hreflang="tr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/" hreflang="zh-Hans" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/it/" hreflang="it" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/pt-BR/" hreflang="pt-BR" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hant/" hreflang="zh-Hant" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/nl/" hreflang="nl" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ar/" hreflang="ar" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Tennis Score Wizard" property="og:site_name"/>
+<meta content="Tennis Score Wizard — pontuação de tênis no Apple Watch e iPhone" property="og:title"/>
+<meta content="Pro 1.8 e Standalone 1.11 trazem resumos mensais e anuais do seu tênis para o iPhone e o Apple Watch." property="og:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/pt-BR/" property="og:url"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
+<meta content="Ícone do aplicativo Tennis Score Wizard" property="og:image:alt"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Tennis Score Wizard — pontuação de tênis no Apple Watch e iPhone" name="twitter:title"/>
+<meta content="Reviva um mês ou um ano de tênis no Pro 1.8 e no Standalone 1.11, com atividade, comparações e conquistas." name="twitter:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --panel-2: #111511;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-2: #00d84a;
+      --green-soft: rgba(40,255,95,0.10);
+      --yellow: #ffe34d;
+      --red: #ff4b55;
+    }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 16px;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    rgba(5,7,5,0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: 21px;
+}
+
+.brand-title {
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+.app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14),
+    0 0 32px rgba(40,255,95,0.20),
+    0 14px 34px rgba(0,0,0,0.52);
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 0 28px rgba(40,255,95,0.10);
+}
+.eyebrow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(40,255,95,0.75);
+}
+
+.eyebrow-copy-compact {
+  display: none;
+}
+
+h1 {
+  margin: 0;
+  max-width: 740px;
+  font-size: clamp(46px, 7.4vw, 88px);
+  line-height: 0.91;
+  letter-spacing: -0.078em;
+}
+.hero-copy p {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  color: #e9e9ed;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 780;
+}
+.hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  box-shadow:
+    0 42px 130px rgba(0,0,0,0.72),
+    0 0 90px rgba(40,255,95,0.16);
+}
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
+}
+section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px;
+}
+.section-subtitle {
+  max-width: 760px;
+  margin: -6px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 158px;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.card p,
+.faq p,
+.help-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.screenshot-card {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(40,255,95,0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 30px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.26);
+}
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(255,255,255,0.11);
+}
+.screenshot-card h3 {
+  margin: 17px 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.help-item,
+.faq {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.028);
+  border-radius: 23px;
+  padding: 18px;
+}
+.help-item strong,
+.faq strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacy-box {
+  border: 1px solid rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at top left, rgba(40,255,95,0.16), transparent 22rem),
+    rgba(40,255,95,0.06);
+  border-radius: 25px;
+  padding: 22px;
+  color: #eaffdf;
+  box-shadow: 0 0 46px rgba(40,255,95,0.08);
+}
+.privacy-box p {
+  color: #d8f7d0;
+  margin: 8px 0 0;
+}
+.support-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 22px;
+  min-height: 142px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+}
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.feedback-grid > .support-card {
+  border-color: rgba(40,255,95,0.3);
+  background: radial-gradient(circle at top right, rgba(40,255,95,0.1), transparent 18rem), var(--panel);
+}
+.review-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.review-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(20,21,20,0.98), rgba(6,7,6,0.98)) padding-box,
+    linear-gradient(110deg, #127a34, #28ff5f, #aaff72, #1bcf50, #127a34) border-box;
+  background-size: 100% 100%, 260% 100%;
+  background-position: 0 0, 0% 50%;
+  box-shadow:
+    0 12px 32px rgba(0,0,0,0.28),
+    0 0 24px rgba(40,255,95,0.22),
+    0 0 11px rgba(170,255,114,0.12);
+  font-weight: 750;
+  text-decoration: none;
+  animation: review-cta-glow 3.8s ease-in-out infinite;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+.review-actions a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  filter: brightness(1.12) saturate(1.08);
+}
+.review-actions a:active {
+  transform: translateY(0);
+}
+.review-actions a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+@keyframes review-cta-glow {
+  0%, 100% {
+    background-position: 0 0, 0% 50%;
+    box-shadow:
+      0 12px 32px rgba(0,0,0,0.28),
+      0 0 24px rgba(40,255,95,0.22),
+      0 0 11px rgba(170,255,114,0.12);
+  }
+  50% {
+    background-position: 0 0, 100% 50%;
+    box-shadow:
+      0 15px 38px rgba(0,0,0,0.34),
+      0 0 38px rgba(40,255,95,0.4),
+      0 0 19px rgba(170,255,114,0.24);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .review-actions a {
+    animation: none;
+    background-position: 0 0, 50% 50%;
+    transition: none;
+  }
+}
+@media (max-width: 760px) {
+  .feedback-grid { grid-template-columns: 1fr; }
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px 28px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-meta,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-meta,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .eyebrow {
+    max-width: 100%;
+    gap: 7px;
+    padding-right: 10px;
+    padding-left: 10px;
+    white-space: nowrap;
+  }
+  .eyebrow-copy-full {
+    display: none;
+  }
+  .eyebrow-copy-compact {
+    display: inline;
+  }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .hero-copy p {
+    font-size: 18px;
+  }
+  .hero-visual {
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
+  }
+  .hero-ball {
+    border-radius: 66px;
+  }
+  .grid,
+  .help,
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Language selector */
+.nav {
+  overflow: visible;
+}
+
+.nav-links {
+  align-items: center;
+  overflow: visible;
+}
+
+.language-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  cursor: pointer;
+  color: #f5f7f5;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.045);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.language-menu summary::marker {
+  content: "";
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+.language-menu[open] summary {
+  border-color: var(--line-green);
+  background:
+    linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+    rgba(255,255,255,0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 0 24px rgba(40,255,95,0.13);
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: 210px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+    rgba(7,9,7,0.98);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,24,20,0.98);
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: #f2f4f2;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.language-options a:hover {
+  background: rgba(40,255,95,0.10);
+  text-decoration: none;
+}
+
+.language-options a.active {
+  color: var(--green);
+  background: rgba(40,255,95,0.11);
+}
+
+.language-options a.active::after {
+  content: "✓";
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
+/* Keep language dropdown above hero content */
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.language-menu {
+  z-index: 1100;
+}
+
+.language-options {
+  z-index: 1200;
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .language-menu {
+    position: relative;
+  }
+
+  .language-options {
+    left: 0;
+    right: auto;
+    width: min(210px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+  }
+
+  .language-options::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+/* Product-focused navigation */
+.nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "brand links language";
+  align-items: center;
+  column-gap: 26px;
+  min-height: 92px;
+  padding: 14px 16px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    column-gap: 14px;
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    font-size: 12px;
+  }
+
+
+  .language-options {
+    right: 0;
+    left: auto;
+  }
+
+  .language-options::before {
+    right: 22px;
+    left: auto;
+  }
+}
+
+
+/* App version chooser */
+.hero-version-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: fit-content;
+  margin-top: 28px;
+  padding: 10px 11px 10px 18px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #ffffff;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(17,21,17,0.98),
+      rgba(5,7,5,0.98)
+    ) padding-box,
+    linear-gradient(
+      110deg,
+      rgba(40,255,95,0.18),
+      var(--green),
+      #aaff72,
+      var(--green-2),
+      rgba(40,255,95,0.22)
+    ) border-box;
+  background-size: 100% 100%, 240% 100%;
+  background-position: 0 0, 0% 50%;
+  box-shadow:
+    0 16px 42px rgba(0,0,0,0.38),
+    0 0 22px rgba(40,255,95,0.10);
+  font-size: 15px;
+  font-weight: 900;
+  text-decoration: none;
+  animation: version-cta-glow 4.8s ease-in-out infinite;
+  transition:
+    transform 160ms ease,
+    filter 160ms ease;
+}
+
+.hero-version-link > span {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  color: #001407;
+  background: var(--green);
+  box-shadow:
+    0 0 16px rgba(40,255,95,0.46),
+    inset 0 1px 0 rgba(255,255,255,0.34);
+  font-size: 15px;
+  line-height: 1;
+  transform: translateY(1px);
+  transition: transform 160ms ease;
+}
+
+.hero-version-link:hover {
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.hero-version-link:hover > span {
+  transform: translateY(3px);
+}
+
+.hero-version-link:active {
+  transform: translateY(0);
+}
+
+.hero-version-link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+@keyframes version-cta-glow {
+  0%,
+  100% {
+    background-position: 0 0, 0% 50%;
+    box-shadow:
+      0 16px 42px rgba(0,0,0,0.38),
+      0 0 20px rgba(40,255,95,0.09);
+  }
+
+  50% {
+    background-position: 0 0, 100% 50%;
+    box-shadow:
+      0 18px 48px rgba(0,0,0,0.44),
+      0 0 34px rgba(40,255,95,0.22);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+
+  .hero-version-link {
+    animation: none;
+    background-position: 0 0, 50% 50%;
+  }
+
+  .hero-version-link,
+  .hero-version-link > span {
+    transition: none;
+  }
+}
+
+.version-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.version-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 410px;
+  padding: 28px;
+  border-radius: 30px;
+}
+
+.version-card-companion {
+  border-color: var(--line-green);
+  background:
+    radial-gradient(circle at top right, rgba(40,255,95,0.15), transparent 44%),
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+}
+
+.version-kicker {
+  width: fit-content;
+  margin-bottom: 18px;
+  padding: 7px 11px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: var(--green-soft);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.version-card h3 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: -0.05em;
+}
+
+.version-card > p {
+  max-width: 540px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.version-list {
+  display: grid;
+  gap: 11px;
+  margin: 24px 0 28px;
+  padding: 0;
+  color: #e9e9ed;
+  list-style: none;
+}
+
+.version-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 14.5px;
+}
+
+.version-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 900;
+}
+
+.version-card .app-store-button {
+  margin-top: auto;
+}
+
+.app-store-button-status {
+  cursor: default;
+  user-select: none;
+}
+
+.app-store-button-status:hover {
+  transform: none;
+  border-color: rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+}
+
+.version-availability {
+  margin-top: 10px;
+  color: var(--muted-2);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.versions-compare-link {
+  display: flex;
+  width: fit-content;
+  margin: 28px auto 0;
+}
+
+@media (max-width: 760px) {
+  .version-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .version-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-version-link {
+    width: 100%;
+  }
+
+  .version-card {
+    padding: 22px;
+    border-radius: 24px;
+  }
+}
+
+
+/* Pro paired-device experience and iPhone gallery */
+.companion-showcase {
+  position: relative;
+  padding: 40px;
+  overflow: hidden;
+  border: 1px solid var(--line-green);
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(40,255,95,0.10), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(40,255,95,0.12), transparent 36%),
+    linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
+    var(--panel);
+  box-shadow:
+    0 32px 90px rgba(0,0,0,0.36),
+    0 0 64px rgba(40,255,95,0.07);
+}
+
+.companion-heading {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.companion-heading h2 {
+  margin: 0;
+  font-size: clamp(46px, 6.8vw, 76px);
+  line-height: 0.96;
+  letter-spacing: -0.065em;
+}
+
+.companion-heading .section-subtitle {
+  max-width: 760px;
+  margin: 22px auto 0;
+  font-size: 18px;
+}
+
+.companion-section-kicker {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 7px 11px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: var(--green-soft);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.companion-system {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 106px minmax(0, 1fr);
+  gap: 0;
+  align-items: stretch;
+  margin-top: 38px;
+}
+
+.companion-device-panel {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 610px;
+  flex-direction: column;
+  padding: 28px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.02)),
+    rgba(5,7,5,0.88);
+  box-shadow:
+    0 26px 70px rgba(0,0,0,0.34),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.companion-phone-panel {
+  border-color: rgba(40,255,95,0.28);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(40,255,95,0.11), transparent 38%),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.018)),
+    rgba(5,7,5,0.9);
+}
+
+.companion-device-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.companion-device-label {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.companion-device-copy h3 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 3.2vw, 38px);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.companion-device-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.companion-watch-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 34px;
+}
+
+.companion-watch-card {
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.companion-watch-card:first-child {
+  transform: translateY(14px) rotate(-3deg);
+}
+
+.companion-watch-card:nth-child(2) {
+  position: relative;
+  z-index: 2;
+  transform: scale(1.05);
+}
+
+.companion-watch-card:last-child {
+  transform: translateY(14px) rotate(3deg);
+}
+
+.companion-watch-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 27px;
+  background: #000000;
+  box-shadow:
+    0 20px 42px rgba(0,0,0,0.48),
+    0 0 28px rgba(40,255,95,0.06);
+}
+
+.companion-watch-card figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.companion-phone-preview {
+  position: relative;
+  width: min(100%, 232px);
+  height: 390px;
+  margin: auto auto -30px;
+  padding: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 36px 36px 0 0;
+  background: #020302;
+  box-shadow:
+    0 24px 56px rgba(0,0,0,0.52),
+    0 0 38px rgba(40,255,95,0.10);
+}
+
+.companion-phone-preview::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 88px;
+  background: linear-gradient(transparent, rgba(5,7,5,0.94));
+  pointer-events: none;
+}
+
+.companion-phone-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 29px 29px 0 0;
+}
+
+.companion-connection {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 58px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  align-self: center;
+  padding: 0 7px;
+}
+
+.companion-connection span {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green));
+  box-shadow: 0 0 12px rgba(40,255,95,0.34);
+}
+
+.companion-connection span:last-child {
+  background: linear-gradient(90deg, var(--green), transparent);
+}
+
+.companion-connection strong {
+  box-sizing: border-box;
+  width: 58px;
+  padding: 7px 4px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  box-shadow: 0 0 22px rgba(40,255,95,0.10);
+}
+
+.companion-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.companion-benefit-card {
+  position: relative;
+  min-height: 180px;
+}
+
+.companion-benefit-number {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.companion-benefit-card h3 {
+  margin: 0 0 9px;
+  font-size: 18px;
+}
+
+.companion-benefit-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.iphone-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.iphone-screenshot-card {
+  display: flex;
+  grid-column: span 2;
+  flex-direction: column;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
+    var(--panel);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.26);
+}
+
+.iphone-screenshot-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.iphone-screenshot-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.iphone-screenshot-frame {
+  width: min(100%, 290px);
+  margin: 0 auto 18px;
+  padding: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 35px;
+  background: #020302;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.46),
+    0 0 34px rgba(40,255,95,0.08);
+}
+
+.iphone-screenshot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 29px;
+}
+
+.iphone-screenshot-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+
+.iphone-screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 980px) {
+  .companion-system {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .companion-device-panel {
+    min-height: 0;
+  }
+
+  .companion-connection {
+    width: min(100%, 260px);
+    margin: 0 auto;
+    padding: 18px 0;
+  }
+
+  .companion-watch-preview {
+    margin-top: 18px;
+  }
+
+  .companion-phone-preview {
+    margin-top: 28px;
+  }
+
+  .companion-benefits-grid,
+  .iphone-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .iphone-screenshot-card,
+  .iphone-screenshot-card:nth-child(4),
+  .iphone-screenshot-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .companion-showcase {
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  .companion-heading h2 {
+    font-size: clamp(42px, 13vw, 62px);
+  }
+
+  .companion-heading .section-subtitle {
+    font-size: 16px;
+  }
+
+  .companion-device-panel {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .companion-device-copy h3 {
+    font-size: 28px;
+  }
+
+  .companion-watch-preview {
+    gap: 6px;
+  }
+
+  .companion-watch-card img {
+    border-radius: 20px;
+  }
+
+  .companion-watch-card figcaption {
+    font-size: 9px;
+  }
+
+  .companion-phone-preview {
+    width: min(100%, 250px);
+    height: 360px;
+  }
+
+  .companion-benefits-grid,
+  .iphone-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .companion-benefit-card {
+    min-height: 0;
+  }
+
+  .iphone-screenshot-frame {
+    width: min(100%, 310px);
+  }
+}
+
+
+/* Standalone product chapter */
+.standalone-intro {
+  position: relative;
+  isolation: isolate;
+  margin-top: 120px;
+  padding: 84px 40px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 40px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.075),
+      rgba(255,255,255,0.018)
+    ),
+    var(--panel);
+  box-shadow:
+    0 34px 100px rgba(0,0,0,0.38),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+  text-align: center;
+}
+
+.standalone-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      circle at 50% -18%,
+      rgba(255,255,255,0.16),
+      transparent 46%
+    ),
+    radial-gradient(
+      circle at 88% 88%,
+      rgba(40,255,95,0.08),
+      transparent 36%
+    );
+  pointer-events: none;
+}
+
+.standalone-kicker,
+.product-section-kicker {
+  display: inline-flex;
+  width: fit-content;
+  padding: 7px 11px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: var(--green-soft);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.standalone-kicker {
+  margin-bottom: 24px;
+}
+
+.product-section-kicker {
+  margin-bottom: 14px;
+}
+
+.standalone-intro h2 {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: clamp(48px, 7.5vw, 84px);
+  line-height: 0.96;
+  letter-spacing: -0.07em;
+}
+
+.standalone-intro p {
+  max-width: 760px;
+  margin: 26px auto 0;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+#versions,
+#companion-benefits,
+#iphone-screenshots,
+#standalone,
+#features,
+#screenshots,
+#complications,
+#comparison,
+#stats-guide {
+  scroll-margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .standalone-intro {
+    margin-top: 90px;
+    padding: 56px 22px;
+    border-radius: 28px;
+  }
+
+  .standalone-intro h2 {
+    font-size: clamp(42px, 13vw, 62px);
+  }
+
+  .standalone-intro p {
+    margin-top: 22px;
+    font-size: 17px;
+  }
+}
+
+
+/* Standalone and Pro comparison */
+.comparison-section {
+  position: relative;
+  margin-top: 110px;
+  padding: 44px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(40,255,95,0.10), transparent 32%),
+    linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.018)),
+    var(--panel);
+  box-shadow:
+    0 32px 90px rgba(0,0,0,0.34),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.comparison-heading {
+  max-width: 900px;
+}
+
+.comparison-heading h2 {
+  max-width: 860px;
+  margin: 0;
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+.comparison-heading .section-subtitle {
+  max-width: 760px;
+  margin: 22px 0 0;
+  font-size: 18px;
+}
+
+.comparison-grid {
+  margin-top: 36px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(0,0,0,0.22);
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.35fr) minmax(210px, 1fr) minmax(210px, 1fr);
+}
+
+.comparison-row + .comparison-row {
+  border-top: 1px solid var(--line);
+}
+
+.comparison-row > div {
+  display: flex;
+  min-width: 0;
+  min-height: 74px;
+  align-items: center;
+  padding: 18px 20px;
+  color: #ededf1;
+  font-size: 14px;
+}
+
+.comparison-row > div + div {
+  border-left: 1px solid var(--line);
+}
+
+.comparison-row .comparison-feature {
+  color: var(--muted);
+  font-weight: 760;
+}
+
+.comparison-header {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
+}
+
+.comparison-header > div {
+  min-height: 104px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comparison-header .comparison-feature {
+  color: var(--muted-2);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comparison-header strong {
+  font-size: 19px;
+  letter-spacing: -0.03em;
+}
+
+.comparison-title-compact {
+  display: none;
+}
+
+.comparison-version-label {
+  margin-bottom: 6px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comparison-companion-column {
+  background: rgba(40,255,95,0.045);
+}
+
+.comparison-difference > div:nth-child(2) {
+  color: #efffed;
+  background: rgba(40,255,95,0.045);
+  font-weight: 780;
+}
+
+.comparison-check {
+  margin-right: 8px;
+  color: var(--green);
+  font-weight: 950;
+}
+
+.comparison-muted {
+  color: var(--muted-2);
+}
+
+.comparison-best-for > div {
+  min-height: 96px;
+}
+
+.comparison-best-for > div:not(.comparison-feature) {
+  align-items: flex-start;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+@media (max-width: 760px) {
+  .comparison-section {
+    margin-top: 90px;
+    padding: 24px;
+    border-radius: 28px;
+  }
+
+  .comparison-heading h2 {
+    font-size: clamp(39px, 12vw, 58px);
+  }
+
+  .comparison-heading .section-subtitle {
+    font-size: 16px;
+  }
+
+  .comparison-grid {
+    border-radius: 22px;
+  }
+
+  .comparison-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .comparison-row .comparison-feature {
+    grid-column: 1 / -1;
+    min-height: 0;
+    padding: 16px 16px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .comparison-row > div {
+    min-height: 70px;
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .comparison-row > div:nth-child(2) {
+    border-left: 0;
+  }
+
+  .comparison-header .comparison-feature {
+    display: none;
+  }
+
+  .comparison-header > div {
+    min-height: 92px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .comparison-header strong {
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .comparison-title-full {
+    display: none;
+  }
+
+  .comparison-title-compact {
+    display: inline;
+  }
+
+  .comparison-best-for > div:not(.comparison-feature) {
+    min-height: 112px;
+    font-size: 12.5px;
+  }
+}
+
+
+
+/* Shared experience across both versions */
+.shared-experience-chapter {
+  position: relative;
+  margin-top: 110px;
+  padding-bottom: 18px;
+}
+
+.shared-experience-chapter::before {
+  content: "";
+  position: absolute;
+  inset: 140px -36px 0;
+  z-index: 0;
+  border-radius: 48px;
+  background:
+    radial-gradient(circle at 16% 0%, rgba(40,255,95,0.07), transparent 28%),
+    linear-gradient(180deg, rgba(255,255,255,0.018), transparent 34%);
+  pointer-events: none;
+}
+
+.shared-experience-intro {
+  position: relative;
+  z-index: 1;
+  padding: 58px 48px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(40,255,95,0.12), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.018)),
+    var(--panel);
+  box-shadow:
+    0 32px 90px rgba(0,0,0,0.34),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.shared-experience-kicker {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 7px 11px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: var(--green-soft);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.shared-experience-intro h2 {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(42px, 6.4vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+.shared-experience-intro p {
+  max-width: 780px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.shared-experience-chapter > section {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 760px) {
+  .shared-experience-chapter {
+    margin-top: 90px;
+  }
+
+  .shared-experience-chapter::before {
+    inset: 110px -14px 0;
+    border-radius: 32px;
+  }
+
+  .shared-experience-intro {
+    padding: 38px 24px;
+    border-radius: 28px;
+  }
+
+  .shared-experience-intro h2 {
+    font-size: clamp(39px, 12vw, 58px);
+  }
+
+  .shared-experience-intro p {
+    font-size: 16px;
+  }
+}
+
+
+/* Keep the animated brand compact and consistent on mobile */
+@media (max-width: 640px) {
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+/* Let translated hero copy shrink, wrap and balance inside the mobile viewport. */
+@media (max-width: 700px) {
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-copy,
+  .hero-copy > *,
+  .hero-visual,
+  .badges {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-copy {
+    width: 100%;
+  }
+
+  .eyebrow {
+    width: fit-content;
+    max-width: calc(100% - 8px);
+    align-items: flex-start;
+    white-space: normal;
+    line-height: 1.28;
+    text-align: left;
+  }
+
+  .eyebrow-dot {
+    flex: 0 0 auto;
+    margin-top: 0.18em;
+  }
+
+  .eyebrow-copy-compact {
+    min-width: 0;
+    text-wrap: balance;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(40px, 11.5vw, 50px);
+    line-height: 0.95;
+    letter-spacing: -0.065em;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  html[lang="fr"] .hero h1 {
+    font-size: clamp(38px, 10.8vw, 47px);
+  }
+
+  html[lang="zh-Hans"] .hero h1,
+  html[lang="ja"] .hero h1 {
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-copy p {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .hero-version-link {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 14px;
+    padding-right: 10px;
+    text-align: center;
+  }
+
+  .hero-version-link > span {
+    flex: 0 0 27px;
+  }
+
+  .badges {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 10px;
+  }
+
+  .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    min-height: 54px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.25;
+    overflow-wrap: break-word;
+  }
+
+  .section-heading h2,
+  .companion-heading h2,
+  .standalone-intro h2,
+  .comparison-section h2,
+  .shared-experience-intro h2,
+  .shared-experience-chapter > section > h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .shared-experience-chapter::before {
+    inset-inline: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: clamp(36px, 12vw, 43px);
+  }
+
+  .hero-copy p {
+    font-size: 16px;
+  }
+
+  .hero-version-link {
+    font-size: 14px;
+  }
+
+  .badge {
+    padding: 8px 11px;
+    font-size: 12px;
+  }
+
+  .comparison-header strong,
+  .comparison-title-compact {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-header strong {
+    font-size: 14px;
+  }
+
+  .shared-experience-chapter > section > h2 {
+    font-size: 28px;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+</style>
+<link href="../release-1-1.css" rel="stylesheet"/>
+<link href="../rivalries-landing.css" rel="stylesheet"/>
+<link href="../core-scoring-formats-en.css?v=20260905-promo-cards" rel="stylesheet"/>
+<script defer="" src="../support-development.js"></script>
+<link href="../release-1-6-en.css?v=20260922-flow" rel="stylesheet"/>
+<link href="../season-recaps-en.css?v=20261001-review" rel="stylesheet"/>
+<script defer="" src="../navigation-en.js?v=20260911-nav"></script>
+<link href="../back-to-top.css?v=20261001" rel="stylesheet"/>
+<script defer="" src="../back-to-top.js?v=20261001"></script>
+<style>html[lang="pt-BR"] h1 { font-size: clamp(44px, 6vw, 76px); line-height: 1.1; letter-spacing: -0.03em; }@media (max-width: 640px) { html[lang="pt-BR"] .brand-title { font-size: 11px; letter-spacing: -0.045em; } html[lang="pt-BR"] .language-menu summary { font-size: 11px; padding-inline: 8px; } }</style></head>
+<body>
+<main class="page">
+<nav aria-label="Navegação primária" class="nav">
+<div class="brand">
+<img alt="Ícone do aplicativo Tennis Score Wizard" class="app-icon" decoding="async" height="1024" sizes="62px" src="../assets/tennis_ball_app_icon_1024-128.webp" srcset="../assets/tennis_ball_app_icon_1024-128.webp 128w, ../assets/tennis_ball_app_icon_1024-256.webp 256w" width="1024"/>
+<span class="brand-title">Tennis Score Wizard</span>
+</div>
+<div class="nav-links">
+<a href="#versions">Versões</a>
+<a href="#comparison">Comparar</a>
+<a href="#stats-guide">Guia de estatísticas</a>
+<a href="whats-new.html">Novidades</a>
+<a href="help.html">Ajuda</a>
+<a href="#contact">Contato</a>
+</div>
+<details class="language-menu">
+<summary>🇧🇷 Português (Brasil)</summary>
+<div class="language-options">
+<a href="../index.html">🇺🇸 English</a>
+<a href="../ja/index.html">🇯🇵 日本語</a>
+<a href="../de/index.html">🇩🇪 Deutsch</a>
+<a href="../fr/index.html">🇫🇷 Français</a>
+<a href="../ru/index.html">🇷🇺 Русский</a>
+<a href="../tr/index.html">🇹🇷 Türkçe</a>
+<a href="../es/index.html">🇪🇸 Español</a>
+<a href="../zh-Hans/index.html">🇨🇳 简体中文</a>
+<a href="../ko/index.html">🇰🇷 한국어</a>
+<a href="../it/index.html">🇮🇹 Italiano</a>
+<a class="active" href="index.html">🇧🇷 Português (Brasil)</a>
+<a href="../zh-Hant/index.html">🇹🇼 繁體中文</a>
+<a href="../nl/index.html">🇳🇱 Nederlands</a>
+<a href="../ar/index.html">🇸🇦 العربية</a>
+</div>
+</details>
+</nav>
+<section class="hero">
+<div class="hero-copy">
+<div class="eyebrow">
+<span class="eyebrow-dot"></span>
+<span class="eyebrow-copy-full">Pontuação de tênis para Apple Watch — com ou sem iPhone</span>
+<span class="eyebrow-copy-compact"><span class="eyebrow-segment">Pontuar no Relógio</span><span aria-hidden="true" class="eyebrow-separator">·</span><span class="eyebrow-segment">Explore mais no iPhone</span></span>
+</div>
+<h1>Marque cada ponto. Entenda cada partida.</h1>
+<p>
+      O Pro une a marcação de pontos no Apple Watch à análise das partidas no iPhone. Adicione e edite partidas que você jogou, explore rivalidades e destaques e compartilhe seus resultados. Se você só precisa do app para Watch, escolha o Standalone. Nas duas versões, você pode rever seu mês ou ano no tênis.
+    </p>
+<div class="hero-actions">
+<a class="hero-version-link" href="#versions">
+        Explore versões
+        <span aria-hidden="true">↓</span>
+</a>
+<a aria-label="Siga o Tennis Score Wizard no Instagram (abre em uma nova guia)" class="hero-instagram-link" href="https://www.instagram.com/tennisscorewizard/" rel="noopener noreferrer" target="_blank">
+<span aria-hidden="true" class="instagram-icon">
+<svg viewbox="0 0 24 24">
+<rect height="20.6" rx="6.3" width="20.6" x="1.7" y="1.7"></rect>
+<circle cx="12" cy="12" r="5"></circle>
+<circle cx="18.2" cy="5.9" fill="currentColor" r="1.25" stroke="none"></circle>
+</svg>
+</span>
+<span>Siga no Instagram</span>
+</a>
+</div>
+<div class="badges">
+<span class="badge">Estatísticas automáticas de partidas</span>
+<span class="badge">Formatos de pontuação flexíveis</span>
+<span class="badge">Rivalidades diretas</span>
+<span class="badge">Dados de saque e devolução</span>
+<span class="badge">Pontos de quebra</span>
+<span class="badge">Treinos no app Saúde</span>
+<span class="badge">Frequência cardíaca ao vivo</span>
+<span class="badge">Sincronização de partida do iCloud</span>
+<span class="badge">Adicionar partidas jogadas no iPhone</span>
+<span class="badge">Contexto e destaques da partida</span>
+<span class="badge">Resumos do mês e do ano</span>
+</div>
+</div>
+<div aria-label="Ícone do aplicativo Tennis Score Wizard" class="hero-visual">
+<div class="hero-ball-frame">
+<img alt="" class="hero-ball" decoding="async" fetchpriority="high" height="1024" sizes="(max-width: 640px) 82vw, 500px" src="../assets/tennis_ball_app_icon_1024-512.webp" srcset="../assets/tennis_ball_app_icon_1024-512.webp 512w, ../assets/tennis_ball_app_icon_1024-1024.webp 1024w" width="1024"/>
+</div>
+</div>
+</section>
+<section id="versions">
+<h2>Escolha seu Tennis Score Wizard</h2>
+<p class="section-subtitle">
+    Escolha o Pro para marcar pontos no Apple Watch e analisar suas partidas no iPhone. Se você só precisa do relógio, escolha o Standalone. Os dois aplicativos podem sincronizar as partidas salvas pelo iCloud.
+  </p>
+<div class="version-grid">
+<article class="card version-card version-card-companion">
+<span class="version-kicker">Pro</span>
+<h3>Marcação de pontos e estatísticas de partidas</h3>
+<p>
+        O Pro inclui o aplicativo de pontuação completo do Apple Watch e análise de partidas no iPhone. Não é necessário comprar separadamente o Tennis Score Wizard (Standalone).
+      </p>
+<ul class="version-list">
+<li>Configuração flexível de partidas e pontuação ao vivo no Apple Watch</li>
+<li>Histórico, estatísticas, treinos e complicações no Apple Watch</li>
+<li>Resumos mensais e anuais, rivalidades e compartilhamento no iPhone</li>
+</ul>
+<a aria-label="Baixe o Tennis Score Wizard Pro na App Store" class="app-store-button" href="https://apps.apple.com/app/id6789285015">
+<span class="app-store-logo"></span>
+<span class="app-store-text">
+<small>Baixe no</small>
+<strong>App Store</strong>
+</span>
+</a>
+<span class="version-availability">Versão 1.8</span>
+</article>
+<article class="card version-card">
+<span class="version-kicker">Standalone</span>
+<h3>Apenas Apple Watch</h3>
+<p>
+        Instale diretamente no Apple Watch e acompanhe a partida inteira pelo pulso. Não é necessário instalar um app no iPhone.
+      </p>
+<ul class="version-list">
+<li>Um set, sets curtos, No-Ad e set personalizado</li>
+<li>Estatísticas automáticas, seleção de oponentes sincronizada e sincronização de partidas do iCloud</li>
+<li>Filtros de histórico e resumo de mês e ano</li>
+<li>Treinos opcionais em Saúde</li>
+</ul>
+<a aria-label="Baixe o Tennis Score Wizard Standalone na App Store" class="app-store-button" href="https://apps.apple.com/app/tennis-score-wizard/id6782709004">
+<span class="app-store-logo"></span>
+<span class="app-store-text">
+<small>Baixe no</small>
+<strong>App Store</strong>
+</span>
+</a>
+<span class="version-availability">Versão 1.11</span>
+</article>
+</div>
+<a class="hero-version-link versions-compare-link" href="#comparison">Compare recursos <span aria-hidden="true">↓</span></a>
+</section>
+<section class="companion-showcase" id="companion-benefits">
+<div class="companion-heading">
+<span class="companion-section-kicker">Experiência Pro</span>
+<h2>Uma experiência completa. Duas telas.</h2>
+<p class="section-subtitle">
+      O Pro inclui o app completo para Apple Watch e oferece, no iPhone, registro manual de partidas, informações da quadra, rivalidades, destaques, estatísticas e compartilhamento.
+    </p>
+</div>
+<div class="companion-system">
+<article class="companion-device-panel companion-watch-panel">
+<div class="companion-device-copy">
+<span class="companion-device-label">Na quadra · Apple Watch</span>
+<h3>A experiência completa de partida no seu pulso.</h3>
+<p>
+          Configure a partida, marque cada ponto, acompanhe a posição de saque, desfaça um lance, registre treinos e consulte o histórico e as estatísticas. Você também pode abrir o app pelas complicações, assim como no Standalone.
+        </p>
+</div>
+<div aria-label="Complete a experiência do Tennis Score Wizard no Apple Watch" class="companion-watch-preview">
+<figure class="companion-watch-card">
+<img alt="Configuração de partida no Apple Watch com Um set e set Personalizado" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-one-set-custom.png" width="422"/>
+<figcaption>organização</figcaption>
+</figure>
+<figure class="companion-watch-card">
+<img alt="set curto ao vivo com pontuação No-Ad no Apple Watch" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-short-set-live.png" width="422"/>
+<figcaption>Pontuação ao vivo</figcaption>
+</figure>
+<figure class="companion-watch-card">
+<img alt="Complicação do assistente de pontuação de tênis no Apple Watch" decoding="async" height="514" loading="lazy" src="../assets/complication_accessory_corner.webp" width="422"/>
+<figcaption>Complicações</figcaption>
+</figure>
+</div>
+</article>
+<div aria-hidden="true" class="companion-connection">
+<span></span>
+<strong>Sincronizar</strong>
+<span></span>
+</div>
+<article class="companion-device-panel companion-phone-panel">
+<div class="companion-device-copy">
+<span class="companion-device-label">Além da quadra · iPhone</span>
+<h3>Uma visão maior quando você quiser.</h3>
+<p>
+          Revise partidas registradas no Apple Watch ou adicione, no iPhone, o resultado de uma partida já disputada. Guarde informações da quadra e notas particulares junto do resultado e consulte as estatísticas e os dados de treino disponíveis.
+        </p>
+</div>
+<div class="companion-phone-preview">
+<img alt="Tennis Score Wizard Pro no iPhone com partidas sincronizadas do Apple Watch" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_home_latest_matches-720.webp" srcset="../assets/companion_home_latest_matches-720.webp 720w, ../assets/companion_home_latest_matches-1080.webp 1080w" width="1320"/>
+</div>
+</article>
+</div>
+<div class="companion-benefits-grid">
+<article class="card companion-benefit-card">
+<span class="companion-benefit-number">01</span>
+<h3>Aplicativo completo do Apple Watch</h3>
+<p>Tudo o que você pode fazer no Standalone permanece disponível no Apple Watch.</p>
+</article>
+<article class="card companion-benefit-card">
+<span class="companion-benefit-number">02</span>
+<h3>Calendário e histórico de partidas</h3>
+<p>Navegue por cada partida salva por data, mês ou ano e veja vitórias, derrotas e partidas paradas de relance.</p>
+</article>
+<article class="card companion-benefit-card">
+<span class="companion-benefit-number">03</span>
+<h3>Estatísticas e tendências de desempenho</h3>
+<p>Filtre por período e modalidade para explorar resultados, saques, devoluções, break points, treinos e tendências de desempenho.</p>
+</article>
+<article class="card companion-benefit-card">
+<span class="companion-benefit-number">04</span>
+<h3>Cartões de resultado compartilháveis</h3>
+<p>Compartilhe uma partida com até seis destaques e contexto opcional da quadra, uma visão geral do desempenho ou a tendência selecionada. As notas pessoais permanecem privadas.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="season-recaps-title" class="season-recaps" id="season-recaps">
+<div class="season-recaps-heading">
+<span class="season-recaps-kicker">Pro 1.8 · Standalone 1.11</span>
+<h2 id="season-recaps-title">Seu mês. Sua temporada. Sua história.</h2>
+<p>Relembre suas partidas por semana, mês ou ano. Os dois apps para Apple Watch mostram esses resumos no pulso. No Pro, você também pode vê-los em uma tela maior e compartilhar um cartão pelo iPhone.</p>
+</div>
+<div class="season-recaps-grid">
+<article class="season-recap-card">
+<div class="season-recap-copy">
+<span class="season-recap-label">01 · PRO NO IPHONE</span>
+<h3>Veja seu mês em quadra.</h3>
+<p>Vitórias, derrotas e partidas interrompidas têm cores distintas no gráfico de atividade semanal. Compare o número de partidas e a taxa de vitórias com o último mês. Os limites da semana seguem as configurações do seu calendário.</p>
+</div>
+<a aria-label="Abra a captura de tela do mês completo em tamanho real de tênis do Pro" href="../assets/season-recaps-en/pro-month.png" rel="noopener" target="_blank">
+<img alt="Mês Pro no Tênis: 11 partidas salvas, atividade semanal codificada por cores e comparação com o mês passado" decoding="async" height="2868" loading="lazy" src="../assets/season-recaps-en/pro-month-900.webp" width="1320"/>
+</a>
+</article>
+<article class="season-recap-card">
+<div class="season-recap-copy">
+<span class="season-recap-label">02 · PRO NO IPHONE</span>
+<h3>Reveja seu ano inteiro.</h3>
+<p>Revise a atividade mês a mês, seu registro concluído e uma comparação com o ano anterior. Revise as conquistas alcançadas no período selecionado ou compartilhe um cartão de resumo.</p>
+</div>
+<a aria-label="Abra a captura de tela completa do Ano no Tênis em tamanho real do Pro" href="../assets/season-recaps-en/pro-year.png" rel="noopener" target="_blank">
+<img alt="Ano Pro no Tênis: histórico completo, atividade mensal codificada por cores e comparação anual" decoding="async" height="2868" loading="lazy" src="../assets/season-recaps-en/pro-year-900.webp" width="1320"/>
+</a>
+</article>
+<article class="season-recap-card season-recap-watch">
+<div class="season-recap-copy">
+<span class="season-recap-label">03 · AMBOS OS APLICATIVOS DE RELÓGIOS</span>
+<h3>Mais detalhes direto no pulso.</h3>
+<p>Abra o Histórico para explorar o Mês no Tênis ou o Ano no Tênis. Veja a atividade de partidas salvas, as vitórias e derrotas concluídas e as conquistas apoiadas pelo seu histórico.</p>
+</div>
+<a aria-label="Abra o gráfico completo do Ano no Tênis do Relógio Standalone" href="../assets/season-recaps-en/standalone-watch-year.png" rel="noopener" target="_blank">
+<img alt="Relógio Standalone para acompanhar o ano de tênis com totais mensais de partidas e barras de resultados verdes, vermelhas e amarelas." decoding="async" height="496" loading="lazy" src="../assets/season-recaps-en/standalone-watch-year.png" width="416"/>
+</a>
+</article>
+</div>
+<a class="season-recaps-more" href="whats-new.html">O que há de novo nas duas versões <span aria-hidden="true">→</span></a>
+<a class="season-recaps-more" href="help.html#period-recaps">Como encontrar seu resumo <span aria-hidden="true">→</span></a>
+</section>
+<section id="iphone-screenshots">
+<span class="companion-section-kicker">O lado do iPhone do Pro</span>
+<h2>De cada partida à visão geral</h2>
+<p class="section-subtitle">
+    Marque os pontos no Apple Watch ou adicione o resultado pelo iPhone. Consulte o histórico, o calendário e as estatísticas disponíveis para acompanhar sua evolução.
+  </p>
+<div class="iphone-gallery">
+<div class="release-gallery-heading">
+<h3>Partidas em detalhes</h3>
+<p>Comece pelo resultado mais recente, abra o histórico completo e reveja o placar. Partidas registradas no Apple Watch podem incluir estatísticas automáticas de pontos. Partidas adicionadas manualmente mostram apenas os dados informados por você.</p>
+</div>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Tela inicial do Tennis Score Wizard Pro com o última partida e as partidas recentes sincronizados do Apple Watch" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_home_latest_matches-720.webp" srcset="../assets/companion_home_latest_matches-720.webp 720w, ../assets/companion_home_latest_matches-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Resultado mais recente e partidas recentes</h3>
+<p>
+        Abra o Pro para ver o resultado mais recente e as últimas partidas, registradas no Apple Watch ou adicionadas pelo iPhone.
+      </p>
+</article>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Histórico de partidas do Tennis Score Wizard Pro com partidas concluídas e paradas" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_match_history-720.webp" srcset="../assets/companion_match_history-720.webp 720w, ../assets/companion_match_history-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Histórico completo de partidas</h3>
+<p>
+        Consulte partidas concluídas ou interrompidas, inclusive empates, com modalidade, resultado, total de games e duração, quando disponível.
+      </p>
+</article>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Detalhes da partida Pro com um resultado adicionado manualmente e destaques suportados pelo histórico salvo" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights-900.webp" width="1320"/>
+</div>
+<h3>Destaques da partida</h3>
+<p>
+        Veja os destaques disponíveis com base nas partidas salvas. Eles incluem viradas após perder dois sets, marcas de vitórias, sequências recordes e melhores resultados na devolução. Os destaques refletem apenas o histórico registrado no app.
+      </p>
+</article>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Detalhes da partida do Tennis Score Wizard Pro com um Tie-Break decisivo." decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_match_tiebreak_details-720.webp" srcset="../assets/companion_match_tiebreak_details-720.webp 720w, ../assets/companion_match_tiebreak_details-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Match tie-break no resultado</h3>
+<p>
+        Veja o match tie-break decisivo ao lado dos sets convencionais, do placar de sets e do total de games.
+      </p>
+</article>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Estatísticas do Tennis Score Wizard Pro para saque, devolução, fluxo da partida e pontos de quebra." decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_match_stats-720.webp" srcset="../assets/companion_match_stats-720.webp 720w, ../assets/companion_match_stats-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Saque, devolução e pontos de quebra</h3>
+<p>
+        Explore o desempenho no saque e na devolução, o andamento da partida, a duração dos games e as situações de ponto de quebra.
+      </p>
+</article>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Dados de treinamento do Tennis Score Wizard Pro mostrando frequência cardíaca e energia ativa" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_workout_stats-720.webp" srcset="../assets/companion_workout_stats-720.webp 720w, ../assets/companion_workout_stats-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Dados do treino</h3>
+<p>
+        Veja a duração do treino, a frequência cardíaca média e máxima e a energia ativa no iPhone.
+      </p>
+</article>
+<div class="release-gallery-heading">
+<h3>Calendário</h3>
+<p>Veja quando jogou, consulte várias partidas do mesmo dia e alterne entre o mês selecionado e o ano inteiro.</p>
+</div>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Calendário mensal de tênis com resultados das partidas e várias partidas em um dia" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_calendar_month-720.webp" srcset="../assets/companion_calendar_month-720.webp 720w, ../assets/companion_calendar_month-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Visualização por mês</h3>
+<p>Vitórias, derrotas e partidas interrompidas ficam associadas ao dia em que foram disputadas.</p>
+</article>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Calendário anual de tênis resumindo partidas e resultados por mês" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_calendar_year-720.webp" srcset="../assets/companion_calendar_year-720.webp 720w, ../assets/companion_calendar_year-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Visualização anual</h3>
+<p>Consulte a temporada inteira e veja o total de partidas e os resultados de cada mês em que jogou.</p>
+</article>
+<div class="release-gallery-heading">
+<h3>Estatísticas de desempenho</h3>
+<p>Escolha os últimos 7 dias, 30 dias, 3 meses, 1 ano ou todo o histórico. Depois, filtre por todas as partidas, simples ou duplas, sem precisar inserir dados extras.</p>
+</div>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Visão geral do desempenho com histórico de partidas, tempo de quadra, sets e resultados recentes" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_stats_overview-720.webp" srcset="../assets/companion_stats_overview-720.webp 720w, ../assets/companion_stats_overview-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Visão geral do desempenho</h3>
+<p>Revise partidas, taxa de vitórias, tempo de partida, sets, partidas paradas e resultados recentes para os filtros selecionados.</p>
+</article>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Forma de tênis, resultados de pontuação, saque e estatísticas de desempenho de devolução" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_stats_profile-720.webp" srcset="../assets/companion_stats_profile-720.webp 720w, ../assets/companion_stats_profile-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Forma e perfil de partida</h3>
+<p>Veja sequências, resultados de sets decisivos, aproveitamento em sets e games, vitórias após vencer o primeiro set e viradas.</p>
+</article>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Pontos de ruptura, fluxo de partida, ponto e desempenho do treino de saúde" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_stats_performance-720.webp" srcset="../assets/companion_stats_performance-720.webp 720w, ../assets/companion_stats_performance-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Saque, devolução, pontos decisivos e treino</h3>
+<p>Relacione o desempenho no saque e na devolução com pontos de quebra, padrões de pontuação, frequência cardíaca e energia ativa.</p>
+</article>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Recorde de empate e taxa de vitória dividida por metas de 7 pontos e 10 pontos." decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_stats_match_tiebreak-720.webp" srcset="../assets/companion_stats_match_tiebreak-720.webp 720w, ../assets/companion_stats_match_tiebreak-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Desempenho no match tie-break</h3>
+<p>Se houver match tie-breaks concluídos, veja o retrospecto geral, a taxa de vitórias e os resultados separados para disputas até 7 e até 10 pontos.</p>
+</article>
+<div class="release-gallery-heading">
+<h3>Tendências de desempenho</h3>
+<p>Acompanhe a evolução das taxas de vitórias, pontos ganhos, saque e devolução, junto com a atividade e os resumos mensais recentes.</p>
+</div>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Tendência de taxa de vitória de tênis em rolagem com atividade mensal de partidas" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_trends_win-720.webp" srcset="../assets/companion_trends_win-720.webp 720w, ../assets/companion_trends_win-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Tendência de taxa de vitória</h3>
+<p>Acompanhe a evolução dos resultados recentes considerando até cinco partidas válidas por vez.</p>
+</article>
+<article class="iphone-screenshot-card">
+<div class="iphone-screenshot-frame">
+<img alt="Tendência de jogos de serviço em andamento com atividade de partidas mensais" decoding="async" height="2868" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_trends_serve-720.webp" srcset="../assets/companion_trends_serve-720.webp 720w, ../assets/companion_trends_serve-1080.webp 1080w" width="1320"/>
+</div>
+<h3>Tendências de saque e devolução</h3>
+<p>Mude o gráfico entre vitórias, pontos, games de saque vencidos e games de devolução vencidos.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="release-next-title" class="release-next" id="new-release">
+<div class="release-next-heading">
+<div class="release-next-kicker"><span>Pro no iPhone</span><span>Sincroniza com ambos os aplicativos Watch</span></div>
+<h2 id="release-next-title">A partida inteira.<br/>Muito além do placar.</h2>
+<p>Registre uma partida já disputada e corrija os detalhes quando precisar. Guarde informações sobre a quadra e as condições de partida. Compartilhe os momentos especiais, sempre junto ao histórico do Apple Watch.</p>
+</div>
+<div class="release-next-grid">
+<article class="release-next-card">
+<span class="release-card-number">01 · REGISTRE UMA PARTIDA DISPUTADA</span>
+<h3>Já jogou? Registre a partida.</h3>
+<p>No iPhone, registre o resultado com placares dos sets e, se quiser, pontos de tie-break. Salve partidas concluídas ou interrompidas, inclusive empates. Informe início e fim ou deixe a duração em branco.</p>
+<a aria-label="Abrir captura de tela da entrada de partida manual em tamanho normal" href="../assets/release-1-6-en/manual-score.png" rel="noopener" target="_blank"><img alt="Entrada manual Pro com um resultado de 7-6, 6-4 e um tie-break de sets de 12-10." decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-score-900.webp" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">02 · LEMBRE-SE DO CONTEXTO</span>
+<h3>Cada quadra tem uma história.</h3>
+<p>Acrescente o tipo de piso, quadra coberta ou descoberta, clube, quadra e uma nota particular. Reutilize quadras recentes ou favoritas e adicione essas informações a partidas antigas registradas no Apple Watch.</p>
+<a aria-label="Abrir captura de tela do contexto da quadra em tamanho real" href="../assets/release-1-6-en/favorite-court.png" rel="noopener" target="_blank"><img alt="Editor Pro de quadra com o Central Tennis Club, Quadra 3, favoritos e uma nota de partida separada" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/favorite-court-900.webp" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">03 · ENCONTRAR OS DESTAQUES</span>
+<h3>Mais momentos que valem a pena guardar.</h3>
+<p>Veja todos os destaques disponíveis nos Detalhes da partida, de uma virada a um recorde pessoal ou uma vitória marcante. Os cartões compartilhados mostram até seis momentos selecionados.</p>
+<a aria-label="Abra a captura de tela dos destaques da partida em tamanho real." href="../assets/release-1-6-en/match-highlights.png" rel="noopener" target="_blank"><img alt="Uma partida adicionado manualmente com highlights de sequência de vitórias consecutivas e gravadas no Pro." decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/match-highlights-900.webp" width="1320"/></a>
+</article>
+</div>
+<figure class="highlights-catalog" id="match-highlights-catalog">
+<figcaption>
+<span class="release-card-number">DESTAQUES DA PARTIDA</span>
+<h3>Cada partida tem seus momentos.</h3>
+<p>Viradas, tie-breaks disputados, vitórias marcantes e recordes pessoais. Conheça 26 tipos de destaque em 44 exemplos visuais.</p>
+</figcaption>
+<a aria-label="Abra todos os 44 exemplos de destaques das partidas em tamanho real." href="../assets/release-1-6-en/all-match-highlights.png" rel="noopener" target="_blank">
+<img alt="Todos os 26 tipos de destaques de partidas exibidos como 44 cartões de exemplo, incluindo comebacks, partidas de desempate, rivalidades, recordes, saque, devolução e partidas longas." decoding="async" height="1501" loading="lazy" src="../assets/release-1-6-en/all-match-highlights.png" width="2160"/>
+</a>
+</figure>
+<article class="release-watch-proof" id="edit-played-match">
+<div>
+<div class="release-next-kicker"><span>Partidas inseridas manualmente · iPhone</span></div>
+<h3>Uma pontuação para corrigir?<br/>Mantenha a partida. Conserte os detalhes.</h3>
+<p>Abra uma partida adicionada manualmente e toque <strong>Editar partida</strong>. Corrija a data, hora, regras de pontuação ou resultado — sem excluir a partida e começar de novo.</p>
+<p>Ao salvar, você atualiza a mesma partida, inclusive no histórico do Apple Watch. Placar registrado no relógio não pode ser alterado por esse editor; adversário e informações da quadra têm controles próprios.</p>
+<a href="help.html#manual-matches">Como adicionar e editar partidas →</a>
+</div>
+<a aria-label="Abrir captura de tela do editor de partida manual de tamanho normal" href="../assets/release-1-6-en/manual-edit-form.png" rel="noopener" target="_blank"><img alt="Edite o formulário de partida no iPhone com os detalhes da partida existentes, contexto da quadra e controles de tempo." decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-edit-form-900.webp" width="1320"/></a>
+</article>
+<article class="release-watch-proof">
+<div>
+<div class="release-next-kicker"><span>Os dois apps para Apple Watch</span></div>
+<h3>Adicionada no iPhone.<br/>Também disponível no pulso.</h3>
+<p>Partidas adicionadas manualmente, inclusive correções posteriores, aparecem no histórico do Pro no Apple Watch e podem chegar ao Standalone pela sincronização privada do iCloud, usando a mesma Conta Apple.</p>
+<p>Elas recebem a identificação <strong>Adicionado manualmente</strong>. Eles mostram o resultado salvo sem estatísticas de pontos vazias ou cartões de treino.</p>
+<a href="help.html#manual-matches">Como funcionam as partidas manuais →</a>
+</div>
+<a aria-label="Abra o histórico completo de partidas manuais em tamanho normal no Apple Watch" href="../assets/release-1-6-en/watch-manual-history.png" rel="noopener" target="_blank"><img alt="Histórico do Apple Watch Standalone marcando um empate parado como adicionado manualmente" decoding="async" height="514" loading="lazy" src="../assets/release-1-6-en/watch-manual-history.png" width="422"/></a>
+</article>
+</section>
+<section aria-labelledby="match-flow-title" class="release-next" id="match-flow">
+<div class="release-next-heading">
+<div class="release-next-kicker"><span>Fluxo de partida no Pro</span><span>Momentum nos dois apps para Apple Watch</span></div>
+<h2 id="match-flow-title">Veja como a partida se desenrolou.</h2>
+<p>Quando há um histórico de pontos, o Match Flow mostra como cada game se desenrolou. As novas partidas registradas no Apple Watch preservam a sequência dos pontos; as antigas também exibem o recurso quando os dados salvos permitem.</p>
+</div>
+<div class="release-next-grid">
+<article class="release-next-card">
+<span class="release-card-number">01 · MOMENTUM</span>
+<h3>Acompanhe cada virada da partida.</h3>
+<p>Barras verdes e vermelhas mostram quem venceu cada game. A altura representa o número de pontos disputados; pequenos cartões exibem a evolução do placar de games.</p>
+<a aria-label="Abra a captura de tela do Pro Match Flow Momentum em tamanho real" href="../assets/release-1-7-en/iphone-momentum.png" rel="noopener" target="_blank"><img alt="Tela de Fluxo de Jogo Pro Match Atual com barras de jogo verdes e vermelhas e quadros de pontuação em execução" decoding="async" height="2868" loading="lazy" src="../assets/release-1-7-en/iphone-momentum-900.webp" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">02 · PLACAR</span>
+<h3>Veja a pontuação se desenvolver.</h3>
+<p>Navegue pelo placar após cada game, incluindo o número do game e o número de pontos registrados. Não são necessários cliques extras enquanto joga.</p>
+<a aria-label="Abra a captura de tela dos Pontos de Fluxo Pro Match em tamanho real." href="../assets/release-1-7-en/iphone-scores.png" rel="noopener" target="_blank"><img alt="Tela de Pontuação de Fluxo de Jogo Pro Atual mostrando o resultado em andamento após cada jogo gravado" decoding="async" height="2868" loading="lazy" src="../assets/release-1-7-en/iphone-scores-900.webp" width="1320"/></a>
+</article>
+<article class="release-next-card">
+<span class="release-card-number">03 · MOMENTOS CHAVE</span>
+<h3>Lembre-se dos pontos de virada.</h3>
+<p>Encontre momentos como games longos e vitórias na devolução, com o game relevante e a pontuação em andamento, quando o histórico de pontos estiver disponível.</p>
+<a aria-label="Abra a captura de tela dos Momentos Chave do Pro Match Flow em tamanho normal." href="../assets/release-1-7-en/iphone-key-moments.png" rel="noopener" target="_blank"><img alt="Tela de Momentos Chave do Fluxo de Jogo Atual do Pro Match com um jogo longo e uma vitória na devolução" decoding="async" height="2868" loading="lazy" src="../assets/release-1-7-en/iphone-key-moments-900.webp" width="1320"/></a>
+</article>
+</div>
+<article class="release-watch-proof">
+<div><div class="release-next-kicker"><span>Os dois apps para Apple Watch</span></div><h3>A história cabe no seu pulso.</h3><p>Abra uma partida no Histórico do Apple Watch para ver o Momentum compacto e a evolução do placar. O gráfico aparece apenas quando existe um registro válido dos pontos.</p><a href="help.html#match-flow-help">Como o Match Flow funciona →</a></div>
+<a aria-label="Abra a captura de tela do Watch Momentum em tamanho real" href="../assets/release-1-7-en/watch-momentum.png" rel="noopener" target="_blank"><img alt="Visualização do histórico atual do Watch Momentum com barras de game compactas e rótulos de pontuação" decoding="async" height="496" loading="lazy" src="../assets/release-1-7-en/watch-momentum.png" width="416"/></a>
+</article>
+<article class="release-watch-proof" id="history-files">
+<div><div class="release-next-kicker"><span>Pro · iPhone</span></div><h3>Leve seu histórico consigo.</h3><p>Exporte um relatório CSV, Excel ou PDF legível. Para uma cópia restaurável, crie um backup JSON ou ZIP e importe-o posteriormente no Pro. A importação adiciona partidas ausentes sem duplicar registros existentes; os IDs de partida excluídos permanecem excluídos.</p><a href="help.html#history-files-help">Guia de exportação e backup →</a></div>
+<a aria-label="Abrir captura de tela dos arquivos de histórico de partidas em tamanho normal" class="release-history-files-shot" href="../assets/release-1-7-en/iphone-history-files.png" rel="noopener" target="_blank"><img alt="Tela de arquivos de histórico de partidas profissionais atuais com as ações Exportar uma cópia e Importar backup" decoding="async" height="2868" loading="lazy" src="../assets/release-1-7-en/iphone-history-files-900.webp" width="1320"/></a>
+</article>
+</section>
+<section aria-labelledby="rivalries-title" class="rivalries-showcase" id="rivalries">
+<div class="rivalries-heading">
+<div class="rivalries-intro-copy">
+<span class="rivalries-kicker">Rivalidades · iPhone</span>
+<h2 id="rivalries-title">Todo oponente tem uma história.</h2>
+<p>
+        Escolha um adversário antes de uma partida de simples. O Tennis Score Wizard organiza automaticamente o histórico de confrontos com resultados, pontos decisivos, viradas, sequências, treinos e encontros em um só lugar.
+      </p>
+<a class="rivalries-action" href="help.html#rivalries">Saiba como as rivalidades funcionam</a>
+<p class="rivalries-singles-note">Os registros de rivalidade atualmente usam partidas individuais. A pontuação de duplas continua normalmente sem atribuir um oponente.</p>
+</div>
+<figure class="rivalries-phone">
+<img alt="Lista de rivalidades mostrando oponentes salvos e registros completos de Head-to-Head" decoding="async" height="2868" loading="lazy" sizes="(max-width: 900px) 78vw, 360px" src="../assets/rivalries/rivalries-list-720.webp" srcset="../assets/rivalries/rivalries-list-720.webp 720w, ../assets/rivalries/rivalries-list-1080.webp 1080w" width="1320"/>
+</figure>
+</div>
+<div class="rivalries-chapter rivalries-watch-chapter">
+<div class="rivalries-chapter-copy">
+<span class="rivalries-chapter-number">01 · Na quadra</span>
+<h3>Escolha o oponente. Então apenas jogue.</h3>
+<p>Ao configurar uma partida de simples, escolha Convidado ou um jogador salvo. O nome curto aparece durante a marcação de pontos, que continua funcionando como antes e alimenta o histórico automaticamente.</p>
+<ul class="rivalries-checklist">
+<li>Crie e gerencie jogadores no Pro no iPhone</li>
+<li>Sincronize a lista em privado para o Apple Watch através do iCloud</li>
+<li>Vincule depois uma partida de simples já salva</li>
+<li>Deixe partidas com Convidado fora dos confrontos</li>
+</ul>
+</div>
+<div class="rivalries-watch">
+<figure>
+<img alt="Selecionador de oponentes do Apple Watch mostrando convidados e jogadores salvos" decoding="async" height="496" loading="lazy" src="../assets/rivalries/watch-opponent-picker.png" width="416"/>
+<figcaption>Escolha Convidado ou um jogador salvo</figcaption>
+</figure>
+<figure>
+<img alt="Tela de pontuação ao vivo do Apple Watch mostrando o oponente selecionado" decoding="async" height="496" loading="lazy" src="../assets/rivalries/watch-live-opponent.png" width="416"/>
+<figcaption>Veja o nome selecionado enquanto pontua</figcaption>
+</figure>
+</div>
+</div>
+<div class="rivalries-chapter rivalries-record-chapter">
+<div class="rivalries-chapter-copy">
+<span class="rivalries-chapter-number">02 · O registro completo</span>
+<h3>Um jogador. Todos os ângulos.</h3>
+<p>Filtre os confrontos por todo o histórico, este ano ou os últimos 30 dias. Compare o desempenho recente com o período completo, reveja cada partida e consulte apenas as estatísticas registradas.</p>
+<div class="rivalries-benefits">
+<article class="rivalries-benefit"><strong>Confrontos diretos</strong><p>Partidas decididas, vitórias, sets, games, tie-breaks e match tie-breaks.</p></article>
+<article class="rivalries-benefit"><strong>Desempenho da partida</strong><p>Pontos, games de saque confirmados, quebras de saque, desempenho no saque e na devolução e pontos decisivos.</p></article>
+<article class="rivalries-benefit"><strong>Padrões e esforço</strong><p>Vitórias após perder o Set 1, séries, tempo em quadra, frequência cardíaca e energia.</p></article>
+</div>
+</div>
+<div class="rivalries-app-screens">
+<figure><img alt="Detalhes da rivalidade com filtros de período, confronto direto, forma recente e visão geral da série" decoding="async" height="2868" loading="lazy" sizes="(max-width: 700px) 72vw, 245px" src="../assets/rivalries/rivalry-details-720.webp" srcset="../assets/rivalries/rivalry-details-720.webp 720w, ../assets/rivalries/rivalry-details-1080.webp 1080w" width="1320"/><figcaption>Confronto direto e resultados recentes</figcaption></figure>
+<figure><img alt="Pontos de pressão da rivalidade, padrões de partidas, tempo em quadra e estatísticas de treinos" decoding="async" height="2868" loading="lazy" sizes="(max-width: 700px) 72vw, 245px" src="../assets/rivalries/rivalry-patterns-720.webp" srcset="../assets/rivalries/rivalry-patterns-720.webp 720w, ../assets/rivalries/rivalry-patterns-1080.webp 1080w" width="1320"/><figcaption>Desempenho, padrões e esforço</figcaption></figure>
+<figure><img alt="Lista completa de confrontos salvas contra um oponente" decoding="async" height="2868" loading="lazy" sizes="(max-width: 700px) 72vw, 245px" src="../assets/rivalries/rivalry-meetings-720.webp" srcset="../assets/rivalries/rivalry-meetings-720.webp 720w, ../assets/rivalries/rivalry-meetings-1080.webp 1080w" width="1320"/><figcaption>Todos os confrontos salvos</figcaption></figure>
+</div>
+</div>
+<div class="rivalries-chapter rivalries-share-chapter">
+<div class="rivalries-share-heading">
+<span class="rivalries-chapter-number">03 · Compartilhe a série</span>
+<h3>Três cartões. Uma história de rivalidade.</h3>
+<p>Ao compartilhar, os cartões seguem esta ordem: histórico e confrontos recentes, desempenho nas partidas e, por fim, padrões de partida e treinos. As notas privadas nunca aparecem nos cartões compartilhados.</p>
+</div>
+<div class="rivalries-share-grid">
+<figure><img alt="Cartão de compartilhamento de rivalidade com Head-to-Head, visão geral da série e confrontos recentes" decoding="async" height="1920" loading="lazy" src="../assets/rivalries/rivalry-story-overview.png" width="1080"/><figcaption>1 · Histórico e confrontos recentes</figcaption></figure>
+<figure><img alt="Cartão de compartilhamento de rivalidade com estatísticas de desempenho da partida" decoding="async" height="1920" loading="lazy" src="../assets/rivalries/rivalry-story-performance.png" width="1080"/><figcaption>2 · Desempenho da partida</figcaption></figure>
+<figure><img alt="Cartão de compartilhamento de rivalidade com padrões, tempo e estatísticas de treino" decoding="async" height="1920" loading="lazy" src="../assets/rivalries/rivalry-story-patterns.png" width="1080"/><figcaption>3 · Padrões, tempo e treino</figcaption></figure>
+</div>
+</div>
+<div class="rivalries-footer-notes">
+<article><strong>Privado por design</strong><p>Perfis, notas e vínculos entre jogadores e partidas ficam nos seus dispositivos e podem ser sincronizados pelo seu iCloud privado. Notas particulares nunca são incluídas no compartilhamento.</p></article>
+<article><strong>Sem trabalho extra durante uma partida</strong><p>A seleção do oponente adiciona contexto antes da partida. Pontuação, Desfazer, gravação de treino e o resto do fluxo da partida permanecem inalterados.</p></article>
+</div>
+</section>
+<section class="share-showcase" id="share-results">
+<span class="companion-section-kicker">Feito para compartilhar</span>
+<h2>Compartilhe sua história no tênis</h2>
+<p class="section-subtitle">
+    Compartilhe a pontuação com até seis destaques relevantes da partida e condições e localização opcionais da quadra. O layout se adapta aos dados disponíveis e sua nota pessoal da partida nunca aparece no cartão compartilhado. Você também pode compartilhar resumos de desempenho e tendências.
+  </p>
+<div class="share-gallery core-sharing-grid">
+<article class="share-card">
+<a aria-label="Abra o cartão de compartilhamento de partidas em tamanho normal com contexto e destaques" href="../assets/release-1-6-en/share-recorded-context.png" rel="noopener" target="_blank"><img alt="Cartão de partida de cinco sets exportado para o aplicativo com duração de 3 horas e 2 minutos, contexto da quadra, estatísticas gravadas e cinco destaques." decoding="async" height="1937" loading="lazy" src="../assets/release-1-6-en/share-recorded-context.png" width="1080"/></a>
+<h3>O resultado, a quadra e os destaques.</h3>
+<p>Acrescente informações a uma partida já registrada no Apple Watch e compartilhe o placar original, a duração e as estatísticas disponíveis. As informações da quadra podem aparecer; sua nota particular, não.</p>
+</article>
+<article class="share-card">
+<a aria-label="Abra o cartão de compartilhamento do set Personalizado em tamanho normal." href="../assets/release-1-6-en/share-custom-score.png" rel="noopener" target="_blank"><img alt="Jogo manual exportado para o aplicativo com cinco sets personalizados, pontuações de jogo de dois dígitos e pontuações de desempate e dois destaques suportados" decoding="async" height="924" loading="lazy" src="../assets/release-1-6-en/share-custom-score.png" width="1080"/></a>
+<h3>Somente os detalhes que você conhece.</h3>
+<p>As partidas manuais recebem um cartão de resultado claro com suas pontuações salvas e destaques suportados.</p>
+</article>
+<article class="share-card">
+<img alt="Cartão de partida de tênis compartilhável com duas pontuações de tie-break por set e estatísticas detalhadas da partida" decoding="async" height="1920" loading="lazy" src="../assets/core-scoring-formats-en/share-set-tiebreaks.png" width="1080"/>
+<h3>Resultados do tie-break em cada set</h3>
+<p>Os pontos do tie-break aparecem em sobrescrito, sem desalinhar o placar principal do set, mesmo quando têm dois dígitos.</p>
+</article>
+<article class="share-card">
+<img alt="Cartão de partida de tênis compartilhável com um tie-break decisivo mostrado como 10 a 7" decoding="async" height="1920" loading="lazy" src="../assets/core-scoring-formats-en/share-match-tiebreak.png" width="1080"/>
+<h3>Match tie-break decisivo</h3>
+<p>O Tie-Break da partida decisiva permanece separado dos sets regulares e aparece claramente como [<span class="score-nowrap">10-7</span>].</p>
+</article>
+<article class="share-card">
+<img alt="Cartão de estatísticas de desempenho de tênis compartilhável" decoding="async" height="1350" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_share_stats-720.webp" srcset="../assets/companion_share_stats-720.webp 720w, ../assets/companion_share_stats-1080.webp 1080w" width="1080"/>
+<h3>Visão geral do desempenho</h3>
+<p>Exporte o período e a modalidade selecionados, incluindo os resultados de match tie-break quando houver dados.</p>
+</article>
+<article class="share-card">
+<img alt="Cartão de tendências de desempenho de tênis compartilhável com gráficos" decoding="async" height="1572" loading="lazy" sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 980px) 42vw, 290px" src="../assets/companion_share_trends-720.webp" srcset="../assets/companion_share_trends-720.webp 720w, ../assets/companion_share_trends-1080.webp 1080w" width="1254"/>
+<h3>Tendências de desempenho</h3>
+<p>Compartilhe a tendência selecionada junto com a atividade mensal e o último resumo mensal.</p>
+</article>
+</div>
+<div class="share-destination-callout">
+<span aria-hidden="true" class="share-destination-icon">
+<svg viewbox="0 0 24 24">
+<circle cx="6" cy="12" r="2.6"></circle>
+<circle cx="18" cy="5.5" r="2.6"></circle>
+<circle cx="18" cy="18.5" r="2.6"></circle>
+<path d="m8.3 10.8 7.4-4.1"></path>
+<path d="m8.3 13.2 7.4 4.1"></path>
+</svg>
+</span>
+<div class="share-destination-copy">
+<strong>Sua partida. Sua história. Pronta para compartilhar.</strong>
+<span>Publique um cartão polido no Instagram, envie-o por Mensagens ou WhatsApp ou compartilhe-o com qualquer aplicativo compatível da folha de compartilhamento do iPhone.</span>
+</div>
+</div>
+</section>
+<section class="standalone-intro" id="standalone">
+<span class="standalone-kicker">Standalone para Apple Watch</span>
+<h2>Tudo o que você precisa. Bem no seu pulso.</h2>
+<p>
+    Escolha um set, melhor de três ou melhor de cinco; use um formato de set oficial ou personalizado; marque cada ponto e consulte seu histórico e estatísticas. Tudo no Apple Watch, sem precisar do iPhone.
+  </p>
+</section>
+<section id="features">
+<span class="product-section-kicker">Recursos do Standalone</span>
+<h2>Uma experiência completa de partida no Apple Watch</h2>
+<p class="section-subtitle">
+    Configure a partida, marque cada ponto, grave um treino opcional e reveja o histórico e as estatísticas automáticas sem depender do iPhone.
+  </p>
+<div class="grid">
+<article class="card">
+<h3>Pontuação de tênis de verdade</h3>
+<p>faixa <span class="score-nowrap">0–15</span>–<span class="score-nowrap">30–40</span>, games tradicionais ou No-Ad, sets oficiais ou personalizados, tie-breaks e, se você escolher, um match tie-break decisivo.</p>
+</article>
+<article class="card">
+<h3>Estatísticas automáticas de partidas</h3>
+<p>Após a partida, o Histórico pode mostrar estatísticas de pontos, saque, devolução, pontos de quebra, tie-break e andamento da partida geradas durante a marcação normal dos pontos.</p>
+</article>
+<article class="card">
+<h3>Registro de treino</h3>
+<p>Opcionalmente, salve um treino de tênis no aplicativo Saúde e reveja a Frequência Cardíaca Média, a Frequência Cardíaca Máxima e a Energia Ativa.</p>
+</article>
+<article class="card">
+<h3>Controle de partidas</h3>
+<p>Use o sorteio para escolher o primeiro sacador, acompanhe a posição de saque, troque o sacador, desfaça pontos e conte com o encerramento automático, retorno tátil e histórico local.</p>
+</article>
+</div>
+</section>
+<section id="screenshots">
+<span class="product-section-kicker">Galeria Standalone</span>
+<h2>Standalone no Apple Watch</h2>
+<p class="section-subtitle">
+    Siga o fluxo completo Standalone: configuração de partidas, gravação de treinos, pontuação ao vivo, desempates, partidas concluídas, histórico e estatísticas automáticas - tudo no Apple Watch.
+  </p>
+<div class="screenshots">
+<article class="screenshot-card">
+<img alt="Configuração da partida com Simples, Duplas, Um Set e um Set Personalizado configurado" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-one-set-custom.png" width="422"/>
+<h3>Configuração da partida</h3>
+<p>Escolha simples ou duplas, um set, melhor de três ou melhor de cinco. Depois, defina as regras dos sets e games.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Primeiro sacador, lançamento de moeda, gravação de treino e início da partida" decoding="async" height="496" loading="lazy" src="../assets/02_match_setup_workout_start.webp" width="416"/>
+<h3>Saque e treino</h3>
+<p>Escolha quem saca primeiro, use o cara ou coroa, ative Gravar treino se quiser e inicie a partida, tudo na mesma tela.</p>
+</article>
+<article class="screenshot-card">
+<img alt="set curto ao vivo com pontuação No-Ad, define o alvo e o indicador de saque" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-short-set-live.png" width="422"/>
+<h3>Pontuação ao vivo</h3>
+<p>Marque pontos em cartões grandes sem perder de vista o formato da partida, quem saca, a posição de saque, os sets, o estado do treino e a frequência cardíaca.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Pontuação de desempate em 6-6" decoding="async" height="496" loading="lazy" src="../assets/04_tiebreak_scoring.webp" width="416"/>
+<h3>Desempates</h3>
+<p>Acompanhe os pontos de desempate em <span class="score-nowrap">6–6</span> Com os mesmos controles de pontuação grandes e rápidos do Apple Watch.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Escolhendo um empate decisivo para 7 ou 10 no Apple Watch" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-match-tiebreak-targets.png" width="422"/>
+<h3>Escolha o match tie-break decisivo</h3>
+<p>Se houver empate em sets antes do set decisivo, substitua-o por um match tie-break até 7 ou 10 pontos, sempre com dois de diferença.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Pontuação de desempate de partidas ao vivo para 10 no Apple Watch" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-match-tiebreak-live.png" width="422"/>
+<h3>Marque cada ponto do match tie-break</h3>
+<p>Durante o jogo, o relógio mostra a pontuação-alvo, a necessidade de vencer por dois pontos, o empate em sets, o sacador e o placar dos pontos.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Combine a tela finalizada da partida com um resultado completo de cinco sets." decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-five-set-finish.png" width="422"/>
+<h3>Partida encerrada</h3>
+<p>Ao terminar a partida, o app mostra claramente o placar de um a cinco sets e oferece acesso rápido ao Histórico ou a Concluir.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Histórico do Apple Watch com filtros de tipo de partida e período e status de sincronização" decoding="async" height="496" loading="lazy" src="../assets/release-1-6-en/watch-history-period.png" width="416"/>
+<h3>Histórico e status de sincronização</h3>
+<p>Navegue por ano e mês, filtre simples ou duplas e verifique a sincronização no Apple Watch. O histórico completo permanece disponível enquanta partidas antigas são carregadas.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Resumo da partida salva com resultado, formato definido, duração, pontos e status do treino" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-match-summary.png" width="422"/>
+<h3>Resumo da partida</h3>
+<p>Abra uma partida salva para consultar o placar, os games, a duração, o total de pontos, os dados do treino e o estado de partidas interrompidas.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Pontuação de partida por partida com resultado de desempate" decoding="async" height="496" loading="lazy" src="../assets/watch_sets_detail.webp" width="416"/>
+<h3>Sets e tie-breaks</h3>
+<p>Revise cada set e a pontuação de desempate gravada no resumo por set.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Combine estatísticas de partidas com pontos e recorde de desempates." decoding="async" height="496" loading="lazy" src="../assets/watch_match_stats.webp" width="416"/>
+<h3>Estatísticas da partida</h3>
+<p>Veja o total de pontos, os pontos vencidos, o aproveitamento nos pontos e o histórico de tie-breaks.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Estatísticas de serviço e devolução no Apple Watch" decoding="async" height="496" loading="lazy" src="../assets/watch_serve_return_stats.webp" width="416"/>
+<h3>Saque e devolução</h3>
+<p>Veja quantos games e pontos de saque você venceu, além dos games e pontos de devolução.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Estatísticas de Match Flow no Apple Watch" decoding="async" height="496" loading="lazy" src="../assets/watch_match_flow_stats.webp" width="416"/>
+<h3>Match Flow</h3>
+<p>Veja os games registrados, o game mais longo, a média de pontos por game e a duração da partida.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Estatísticas de ponto de ruptura no Apple Watch" decoding="async" height="496" loading="lazy" src="../assets/watch_break_point_stats.webp" width="416"/>
+<h3>Pontos de quebra</h3>
+<p>Revise os pontos de quebra enfrentados, salvos, oportunidades e convertidos.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Estatísticas de treino com frequência cardíaca e energia ativa" decoding="async" height="496" loading="lazy" src="../assets/watch_workout_stats.webp" width="416"/>
+<h3>Estatísticas do treino</h3>
+<p>Treinos gravados podem mostrar a Frequência Cardíaca Média, a Frequência Cardíaca Máxima e a Energia Ativa.</p>
+</article>
+</div>
+</section>
+<section id="complications">
+<h2>Complicações do Apple Watch</h2>
+<p class="section-subtitle">
+    Adicione o Tennis Score Wizard a um mostrador do Apple Watch suportado e abra o aplicativo com um único toque.
+  </p>
+<div class="screenshots">
+<article class="screenshot-card">
+<img alt="Complicação de canto do Apple Watch Ultra" decoding="async" height="514" loading="lazy" src="../assets/complication_accessory_corner.webp" width="422"/>
+<h3>Complicação de canto</h3>
+<p>Adicione o Tennis Score Wizard a uma complicação de canto do mostrador para abrir o app rapidamente.</p>
+</article>
+<article class="screenshot-card">
+<img alt="Complicação Circular do Apple Watch" decoding="async" height="496" loading="lazy" src="../assets/complication_accessory_circular.webp" width="416"/>
+<h3>Complicação Circular</h3>
+<p>Adicione o Tennis Score Wizard a uma complicação circular e comece a pontuar com um único toque.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="scoring-formats-title" class="core-formats-showcase" id="scoring-formats">
+<div class="core-formats-heading">
+<span class="core-formats-kicker"><span>Construído em ambas as versões</span><span>Pontuação do Apple Watch</span></span>
+<h2 id="scoring-formats-title">Jogue no formato que você prefere.</h2>
+<p>
+      As duas versões usam o mesmo sistema automático de pontuação no Apple Watch, com formatos oficiais rápidos, games No-Ad e criação de sets personalizados, mantendo os controles familiares durante o game.
+    </p>
+</div>
+<div class="core-proof-grid watch-promo-grid">
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Configuração de One Set e Custom Set</h3><p>Jogue uma partida completa como um único set quando o tempo estiver limitado.</p><p>Defina a meta de games, a diferença necessária para vencer e quando começa e termina o tie-break. O conjunto de regras fica salvo como uma configuração.</p><p>Mantenha sets de vantagem de seis games ou comece um tie-break regular em <span class="score-nowrap">6–6</span>.</p></div><img alt="Configuração do Apple Watch mostrando um set único e um set personalizado configurado" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-one-set-custom.png" width="422"/></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Escolhas oficiais do Short Set</h3><p>Primeiro a quatro games, com um game de desempate em <span class="score-nowrap">3-3</span> ou <span class="score-nowrap">4–4</span> E um final de 7 pontos ou 5 pontos decisivos.</p></div><img alt="Configuração de sets curtos do Apple Watch com opções de início e alvo de desempate." decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-short-set-options.png" width="422"/></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>No-Ad no empate</h3><p>Um ponto decisivo no deuce mantém todo o formato de set selecionado em movimento.</p></div><img alt="Selecionador de regras de games do Apple Watch com No-Ad selecionado" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-no-ad.png" width="422"/></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Sua vitória, set a set.</h3><p>Veja a pontuação final, os games e o tempo na quadra juntos em um resultado claro.</p></div><img alt="Cartão de resultado do Apple Watch para uma vitória de partida concluída" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-completed-win.png" width="422"/></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Cada resultado conta uma história.</h3><p>Revise a pontuação e a duração da partida após uma derrota, em seguida, abra o Histórico para olhar para trás na partida.</p></div><img alt="Cartão de resultado do Apple Watch para uma perda de partida concluída" decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-completed-loss.png" width="422"/></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>De um a cinco sets, com clareza</h3><p>Vitórias, derrotas e partidas interrompidas são fáceis de distinguir, com placares legíveis de um a cinco sets e seus tie-breaks.</p></div><img alt="O Apple Watch terminou a tela de partida mostrando um resultado completo de cinco sets." decoding="async" height="514" loading="lazy" src="../assets/core-scoring-formats-en/watch-five-set-finish.png" width="422"/></article>
+</div>
+</section>
+<section aria-labelledby="watch-history-title" class="core-formats-showcase" id="watch-history">
+<div class="core-formats-heading">
+<span class="core-formats-kicker"><span>Os dois apps para Apple Watch</span></span>
+<h2 id="watch-history-title">Encontre aquela partida.</h2>
+<p>Quer encontrar uma partida do mês passado ou de outra temporada? Filtre o Histórico do Apple Watch por ano, mês, simples ou duplas. Partidas antigas são carregadas durante a navegação, sem apagar nada.</p>
+</div>
+<div class="core-proof-grid watch-promo-grid">
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Comece escolhendo o período.</h3><p>Abra o Histórico e toque em Período. Mantenha todas as datas ou escolha um intervalo. Combine esse filtro com Todas, 1v1 ou 2v2.</p></div><img alt="Histórico do Apple Watch Pro com todos os filtros, 1v1 e 2v2 e o controle de período." decoding="async" height="496" loading="lazy" src="../assets/release-1-6-en/watch-history-period.png" width="416"/></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Escolha o seu ano.</h3><p>Escolha entre anos com partidas salvas. Todas as datas colocam a linha do tempo completa de volta à vista.</p></div><img alt="Veja o menu do período de histórico com todas as datas e anos disponíveis" decoding="async" height="496" loading="lazy" src="../assets/release-1-6-en/watch-history-years.png" width="416"/></article>
+<article class="watch-promo-card"><div class="watch-promo-copy"><h3>Um mês ou uma temporada inteira.</h3><p>Escolha um mês com partidas, ou todo o ano para revisar a temporada juntos.</p></div><img alt="Filtro de Histórico de Relógio Standalone para 2024 com todo o ano, setembro e outubro" decoding="async" height="496" loading="lazy" src="../assets/release-1-6-en/watch-history-months-entire-year.png" width="416"/></article>
+</div>
+</section>
+<section aria-labelledby="icloud-title" class="icloud-showcase" id="icloud-sync">
+<div class="icloud-heading">
+<span class="icloud-kicker">Sincronização de partida do iCloud</span>
+<h2 id="icloud-title">Seu histórico de partidas no Apple Watch e iPhone.</h2>
+<p>
+      Standalone e Pro podem sincronizar as mesmas partidas salvas pelo iCloud com a mesma Conta Apple. Cada conta mantém um histórico privado separado. Marque pontos no Apple Watch ou adicione uma partida pelo Pro no iPhone. Partidas manuais, adversários e informações da quadra acompanham o registro salvo. Partidas sincronizadas podem ser restauradas após a reinstalação.
+    </p>
+</div>
+<div class="icloud-ecosystem">
+<div class="icloud-endpoint">
+<picture class="icloud-ui-proof icloud-ui-proof-watch">
+<img alt="Histórico do Apple Watch com status de sincronização e o filtro Período" decoding="async" height="496" loading="lazy" src="../assets/release-1-6-en/watch-history-period.png" width="416"/>
+</picture>
+<strong>Relógio Apple Watch</strong>
+<p>Marque partidas com Standalone ou Pro e verifique o status de sincronização mais recente no Histórico.</p>
+</div>
+<div class="icloud-hub">
+<div aria-hidden="true" class="icloud-cloud-icon">
+<svg viewbox="0 0 64 64">
+<path d="M18 47h29a11 11 0 0 0 1.7-21.9A17 17 0 0 0 16.2 21 13 13 0 0 0 18 47Z"></path>
+<path d="m24 34 5.5 5.5L41 28"></path>
+</svg>
+</div>
+<strong>Sincronização privada do iCloud</strong>
+<p>Os registros de partidas sincronizadas com sucesso são armazenados na base de dados privada do CloudKit para sua Conta Apple, não em um servidor do Tennis Score Wizard.</p>
+<div class="icloud-status-sample">✓ <span>Sincronizado</span></div>
+</div>
+<div class="icloud-endpoint">
+<picture class="icloud-ui-proof icloud-ui-proof-phone">
+<source srcset="../assets/companion_icloud_synced-720.webp" type="image/webp"/>
+<img alt="Cartão de Histórico de partida Pro iCloud mostrando armazenamento privado e o último horário de sincronização" decoding="async" height="650" loading="lazy" src="../assets/companion_icloud_synced.png" width="1224"/>
+</picture>
+<strong>iPhone</strong>
+<p>Adicione e edite partidas jogadas, mantenha o contexto da quadra, reveja estatísticas gravadas e verifique a sincronização privada do iCloud no Pro.</p>
+</div>
+</div>
+<div class="icloud-benefits">
+<article class="icloud-benefit">
+<strong>Dois caminhos independentes</strong>
+<p>O Pro transfere dados diretamente entre os dispositivos emparelhados. O CloudKit sincroniza e restaura os dados pelo iCloud de forma independente. Qualquer um dos caminhos pode terminar primeiro.</p>
+</article>
+<article class="icloud-benefit">
+<strong>Veja o status de sincronização</strong>
+<p>A história mostra <b>Sincronizado</b>, <b>Sincronizando</b>, <b>Aguardando</b> / <b>Salvando</b>, ou <b>Sincronização pausada</b> / <b>Tentar novamente</b>.</p>
+</article>
+<article class="icloud-benefit">
+<strong>Mantenha as contas separadas</strong>
+<p>Ao trocar de Conta Apple, os históricos não são misturados. Partidas ainda não sincronizadas da conta anterior ficam em uma cópia de recuperação criptografada no dispositivo.</p>
+</article>
+<article class="icloud-benefit">
+<strong>Marque agora, restaure mais tarde</strong>
+<p>Você pode continuar marcando pontos sem iCloud. Após reinstalar o app com a mesma Conta Apple, as partidas já sincronizadas podem ser baixadas novamente.</p>
+</article>
+</div>
+</section>
+<section class="comparison-section" id="comparison">
+<span class="product-section-kicker">Comparação de versões</span>
+<div class="comparison-heading">
+<h2>A mesma marcação no Watch. Mais formas de registrar partidas no iPhone.</h2>
+<p class="section-subtitle">
+      O Pro combina o aplicativo de pontuação completo do Apple Watch com entrada de partidas, análise, rivalidades e compartilhamento no iPhone. O Standalone mantém toda a experiência de pontuação no seu Watch sem um aplicativo do iPhone.
+    </p>
+</div>
+<div aria-label="Comparação do Tennis Score Wizard Standalone e Pro" class="comparison-grid" role="table">
+<div class="comparison-row comparison-header" role="row">
+<div class="comparison-feature" role="columnheader">experiência</div>
+<div class="comparison-companion-column" role="columnheader">
+<span class="comparison-version-label">Pro</span>
+<strong>
+<span class="comparison-title-full">iPhone + Apple Watch</span>
+<span class="comparison-title-compact">Watch + iPhone</span>
+</strong>
+</div>
+<div role="columnheader">
+<span class="comparison-version-label">Standalone</span>
+<strong>Relógio Apple Watch</strong>
+</div>
+</div>
+<div class="comparison-row" role="row">
+<div class="comparison-feature" role="rowheader">Aplicativo completo do Apple Watch</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluído</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluído</div>
+</div>
+<div class="comparison-row" role="row">
+<div class="comparison-feature" role="rowheader">Formatos flexíveis, pontuação ao vivo, Desfazer e orientação de saque</div>
+<div role="cell">No Apple Watch</div>
+<div role="cell">No Apple Watch</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Histórico de partidas e estatísticas detalhadas</div>
+<div role="cell">No Apple Watch e iPhone</div>
+<div role="cell">No Apple Watch</div>
+</div>
+<div class="comparison-row" role="row">
+<div class="comparison-feature" role="rowheader">Filtre o histórico do Apple Watch por ano e mês</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluído</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluído</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Resumos do mês e do ano</div>
+<div role="cell">No Apple Watch e iPhone, com comparações e compartilhamento</div>
+<div role="cell">Atividade e conquistas no Apple Watch</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Detalhes do treino e da frequência cardíaca</div>
+<div role="cell">No Apple Watch e iPhone</div>
+<div role="cell">No Apple Watch</div>
+</div>
+<div class="comparison-row" role="row">
+<div class="comparison-feature" role="rowheader">Complicações do Apple Watch</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluído</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluído</div>
+</div>
+<div class="comparison-row" role="row">
+<div class="comparison-feature" role="rowheader">Sincronização de partida do iCloud</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluído</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluído</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Perfis de adversários e rivalidades</div>
+<div role="cell">Crie e gerencie no iPhone, selecione no Apple Watch</div>
+<div role="cell">Seleção de oponentes sincronizada no Apple Watch</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Experiência sincronizada do iPhone</div>
+<div role="cell"><span class="comparison-check">✓</span> Incluído</div>
+<div role="cell"><span class="comparison-muted">Não requerido</span></div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Calendário mensal e anual de partidas</div>
+<div role="cell">No iPhone</div>
+<div role="cell"><span class="comparison-muted">Não incluído</span></div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Estatísticas e tendências de desempenho a longo prazo</div>
+<div role="cell">No iPhone</div>
+<div role="cell"><span class="comparison-muted">Não incluído</span></div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Resumos de texto compartilháveis e cartões visuais</div>
+<div role="cell">No iPhone, incluindo resumos de períodos</div>
+<div role="cell"><span class="comparison-muted">Não incluído</span></div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Adicione e edite partidas jogadas</div>
+<div role="cell">Adicione e edite no iPhone; sincronize com o histórico do Watch</div>
+<div role="cell">Recebe pelo iCloud as partidas manuais e as correções</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Contexto da quadra e notas de partida privadas</div>
+<div role="cell">Adicionar e editar no iPhone</div>
+<div role="cell">Preservado com registros de partidas sincronizadas</div>
+</div>
+<div class="comparison-row comparison-difference" role="row">
+<div class="comparison-feature" role="rowheader">Destaques da partida</div>
+<div role="cell">Todos os destaques disponíveis nos detalhes do iPhone; até seis ao compartilhar</div>
+<div role="cell"><span class="comparison-muted">Não exibido no Relógio</span></div>
+</div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Match Flow com pontos registrados</div><div role="cell">Momentum no Apple Watch + três visualizações no iPhone</div><div role="cell">Momentum compacto no Apple Watch</div></div>
+<div class="comparison-row comparison-difference" role="row"><div class="comparison-feature" role="rowheader">Relatórios de histórico e backups restauráveis</div><div role="cell">Exportar e importar no iPhone</div><div role="cell"><span class="comparison-muted">Não incluído</span></div></div>
+<div class="comparison-row comparison-best-for" role="row">
+<div class="comparison-feature" role="rowheader">Melhor para</div>
+<div role="cell">Jogadores que querem o aplicativo Watch completo, além de uma visualização maior após a partida.</div>
+<div role="cell">Jogadores que querem tudo no pulso</div>
+</div>
+</div>
+</section>
+<div class="shared-experience-chapter">
+<div class="shared-experience-intro">
+<span class="shared-experience-kicker">Compartilhado em ambas as versões</span>
+<h2>As duas versões compartilham a mesma análise de jogo.</h2>
+<p>
+      As duas versões incluem um set, sets curtos, No-Ad, set personalizado, estatísticas automáticas, histórico local com resumos mensais e anuais, sincronização pelo iCloud e treinos opcionais. O Pro acrescenta no iPhone o registro manual de resultados, edição e ferramentas para analisar partidas. A marcação ponto a ponto continua no Apple Watch.
+    </p>
+</div>
+<section id="stats-guide">
+<h2>Guia de estatísticas das partidas</h2>
+<p class="section-subtitle">
+    Os dois apps para Apple Watch calculam estatísticas ponto a ponto enquanto você marca o placar normalmente. Não é necessário informar aces, winners ou duração das trocas. Partidas inseridas manualmente entram nos resultados, mas não geram dados de pontos ou treinos que não foram registrados.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Pontos</strong>
+<p>Mostra o total de pontos disputados e quantos cada lado venceu. Totais próximos podem indicar uma partida mais equilibrada do que o placar de sets sugere.</p>
+</div>
+<div class="help-item">
+<strong>Saque</strong>
+<p>Mostra seu desempenho nos games em que você sacou. Pontos de saque são os pontos disputados durante esses games.</p>
+</div>
+<div class="help-item">
+<strong>Devolução</strong>
+<p>Mostra seu desempenho quando o adversário sacou. Games de devolução vencidos são quebras de saque. Pontos de devolução vencidos mostram quantos pontos você ganhou contra o saque do adversário.</p>
+</div>
+<div class="help-item">
+<strong>Pontos de quebra</strong>
+<p>Pontos de quebra salvos são chances do adversário que você neutralizou ao sacar. Pontos de quebra convertidos são chances que você aproveitou quando o adversário sacava.</p>
+</div>
+<div class="help-item">
+<strong>Match Flow</strong>
+<p>Mostra padrões extraídos dos pontos registrados: game mais longo, média de pontos por game, games registrados e retrospecto em tie-breaks.</p>
+</div>
+<div class="help-item">
+<strong>Treino</strong>
+<p>Se Gravar treino estiver ativado e você permitir acesso ao app Saúde, o Histórico pode mostrar frequência cardíaca média e máxima e energia ativa do treino de tênis salvo.</p>
+</div>
+<div class="help-item stat-guide-wide">
+<strong>Exemplos rápidos</strong>
+<p>Veja como interpretar algumas estatísticas após uma partida.</p>
+<div class="stat-examples-grid">
+<div class="stat-example-card">
+<strong>Pontos <span class="score-nowrap">67–72</span></strong>
+<p>Você venceu 67 pontos e o adversário, 72. Uma diferença pequena pode indicar uma partida mais equilibrada do que o placar de sets sugere.</p>
+</div>
+<div class="stat-example-card">
+<strong>Games de saque 3/10</strong>
+<p>Você sacou em 10 games e venceu 3. Esse número mostra quantas vezes confirmou o próprio saque.</p>
+</div>
+<div class="stat-example-card">
+<strong>Games de devolução 6/11</strong>
+<p>O adversário sacou em 11 games e você quebrou o saque 6 vezes.</p>
+</div>
+<div class="stat-example-card">
+<strong>Pontos de quebra salvos 4/11</strong>
+<p>Você enfrentou 11 pontos de quebra no próprio saque e salvou 4.</p>
+</div>
+<div class="stat-example-card">
+<strong>Pontos de quebra convertidos 6/13</strong>
+<p>Você teve 13 chances de quebrar o saque do adversário e aproveitou 6.</p>
+</div>
+<div class="stat-example-card">
+<strong>Pontos médios/game 6,3</strong>
+<p>Cada game teve, em média, cerca de 6 pontos. Números maiores costumam indicar games mais longos e disputados.</p>
+</div>
+</div>
+</div>
+<div class="help-item">
+<strong>Partidas mais antigas</strong>
+<p>Partidas salvas antes da introdução das estatísticas automáticas podem não ter esses dados. Partidas adicionadas manualmente não têm estatísticas ponto a ponto, seja qual for a versão do app.</p>
+</div>
+<div class="help-item">
+<strong>Privacidade</strong>
+<p>O histórico de partidas é armazenado localmente. Quando o iCloud estiver disponível, as partidas salvas também podem ser sincronizadas através da base de dados privada do CloudKit para sua Conta Apple. O acesso à saúde permanece opcional e é usado apenas para gravação de treinos e detalhes relacionados aos treinos.</p>
+</div>
+</div>
+</section>
+<section id="help">
+<h2>Ajuda rápida</h2>
+<div class="help">
+<div class="help-item">
+<strong>Como eu começo uma partida?</strong>
+<p>Escolha Simples ou Duplas, selecione Um set, Melhor de 3 ou Melhor de 5, escolha o set e as regras do game, escolha o primeiro sacador manualmente ou com lançamento de moeda, ative opcionalmente Gravar Treino e, em seguida, comece a pontuar.</p>
+</div>
+<div class="help-item">
+<strong>Como eu gravo um treino?</strong>
+<p>Ative Gravar Treino na configuração. Se você permitir o acesso aos dados de Saúde, a partida poderá ser salva como treino de tênis no app Saúde.</p>
+</div>
+<div class="help-item">
+<strong>Como funciona a frequência cardíaca ao vivo?</strong>
+<p>A frequência cardíaca ao vivo é exibida durante os treinos gravados quando o acesso é permitido e os dados da frequência cardíaca estão disponíveis no Apple Watch.</p>
+</div>
+<div class="help-item">
+<strong>O que o Menu faz?</strong>
+<p>Durante uma partida ao vivo, o Menu oferece acesso a ações como Mudar de Sacador, parar uma partida incompleta, abrir o histórico ou iniciar uma nova partida.</p>
+</div>
+<div class="help-item">
+<strong>Como funciona o Desfazer?</strong>
+<p>Desfazer inverte o último ponto marcado e restaura o estado anterior do jogo, incluindo pontos, jogos, sets, sacador, posição de saque, estado de desempate e contadores de estatísticas automáticos.</p>
+</div>
+<div class="help-item">
+<strong>Como funciona o marcador de saque?</strong>
+<p>Quando você serve, a bola de tênis destaca o lado de onde você deve servir. Quando o oponente serve, ela destaca o lado de saque do oponente da sua visão do relógio.</p>
+</div>
+</div>
+</section>
+<section id="history-help">
+<h2>Entenda o histórico de partidas</h2>
+<p class="section-subtitle">
+    Ambas as versões mantêm os resultados salvos legíveis no Apple Watch. O Pro também traz o mesmo histórico de partidas para o iPhone para uma visualização maior.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>O que significam Vitória e Derrota?</strong>
+<p>Vitória significa que você venceu a partida concluída por sets. Derrota significa que o adversário venceu a partida concluída por sets.</p>
+</div>
+<div class="help-item">
+<strong>O que significa Interrompida?</strong>
+<p>Interrompida significa que a partida foi salva antes de terminar. O app preserva sets, games, duração, pontos e estatísticas registrados até aquele momento. Se houver um jogador à frente, o resultado conta para o histórico de resultados, a taxa de vitórias e as sequências. Se estiver empatada, é neutra.</p>
+</div>
+<div class="help-item">
+<strong>O que são S1, S2 e S3?</strong>
+<p>S1, S2 e S3 significam set 1, set 2 e set 3. Por exemplo, S1 <span class="score-nowrap">6-3</span> Significa que o primeiro set terminou em 6 games a 3.</p>
+</div>
+<div class="help-item">
+<strong>O que significa TB <span class="score-nowrap">7-3</span> Significa?</strong>
+<p>TB mostra os pontos do tie-break em um set de <span class="score-nowrap">7-6</span> . Por exemplo, <span class="score-nowrap">7-6</span> · TB <span class="score-nowrap">7-3</span> significa que o set terminou em <span class="score-nowrap">7-6</span> e o tie-break terminou em <span class="score-nowrap">7-3</span>.</p>
+</div>
+<div class="help-item">
+<strong>O que faz <span class="score-nowrap">7-6</span><sup>(6)</sup> Significa?</strong>
+<p>Na linha resumida do resultado, o número pequeno entre parênteses indica os pontos de quem perdeu o tie-break. Neste exemplo, o tie-break terminou em <span class="score-nowrap">8-6</span>. A tabela por set pode mostrar os pontos de desempate de ambos os jogadores quando registrados.</p>
+</div>
+<div class="help-item">
+<strong>Como é definido o resultado de uma partida interrompida?</strong>
+<p>O app compara primeiro os sets concluídos. Se houver empate, considera os games do set em andamento e depois os pontos registrados no tie-break ou game atual. Games de sets anteriores não são somados para definir quem está à frente. Se a partida for interrompida entre sets empatados, o resultado também fica empatado. Quando há um líder claro, o resultado conta como vitória ou derrota nas estatísticas, mas a partida continua identificada como Interrompida.</p>
+</div>
+<div class="help-item">
+<strong>O que acontece com um set incompleto?</strong>
+<p>Para partidas paradas, o set incompleto atual é salvo se tivesse progresso, então o histórico mantém o contexto real da partida, por exemplo S3. <span class="score-nowrap">0–1</span>.</p>
+</div>
+</div>
+</section>
+<section id="manual-match-help">
+<h2>Já jogou? Registre a partida mesmo assim.</h2>
+<div class="help">
+<div class="help-item"><strong>Posso adicionar uma partida depois de jogar?</strong><p>Sim. No Pro para iPhone, toque em Adicionar partida jogada. Informe o placar, escolha Concluída ou Interrompida e acrescente os horários de que se lembrar. O resultado salvo pode ser sincronizado com os dois apps para Apple Watch.</p></div>
+<div class="help-item"><strong>Posso corrigir uma partida adicionada manualmente?</strong><p>Sim. Em Detalhes da partida, toque em Editar partida para corrigir data, horário, regras ou placar. Ao salvar, o resultado existente é atualizado e a correção é sincronizada com o histórico do Apple Watch. A edição está disponível apenas para partidas adicionadas manualmente.</p></div>
+<div class="help-item"><strong>Posso salvar um empate?</strong><p>Sim. Escolha Interrompida se a partida terminou antes de haver um vencedor. Você pode salvar o placar mesmo que esteja empatado.</p></div>
+<div class="help-item"><strong>Posso acrescentar informações a partidas antigas?</strong><p>Sim. Abra Detalhes da partida no iPhone e adicione ou edite as informações da partida. O placar, os horários e as estatísticas registrados originalmente no Apple Watch permanecem intactos.</p></div>
+<div class="help-item"><strong>O que muda quando eu edito o oponente ou o contexto?</strong><p>Alterar o adversário atualiza a associação da partida e os dados de rivalidade correspondentes. Os destaques são calculados com base no histórico salvo atual. Informações opcionais sobre a quadra e notas pessoais não criam novas conquistas estatísticas.</p></div>
+</div>
+<p><a href="help.html#manual-matches">Guia de entrada manual →</a>   <a href="help.html#match-context">Informações da quadra e privacidade →</a></p>
+</section>
+<section id="faq">
+<h2>Perguntas frequentes</h2>
+<div class="help">
+<div class="faq">
+<strong>O aplicativo coleta dados?</strong>
+<p>Os aplicativos não exigem uma conta do Tennis Score Wizard ou usam rastreadores de publicidade. O Tennis Score Wizard não opera um servidor de histórico de partidas. O histórico de partidas é armazenado localmente e, quando o iCloud estiver disponível, pode ser sincronizado através da base de dados privada do CloudKit para sua conta Apple.</p>
+</div>
+<div class="faq">
+<strong>O acesso à Saúde precisa ser ativado?</strong>
+<p>Não. O acesso à saúde é opcional. Você pode marcar partidas de tênis sem registrar um treino.</p>
+</div>
+<div class="faq">
+<strong>As estatísticas de partidas exigem cliques extras?</strong>
+<p>Ao marcar os pontos no Apple Watch, as estatísticas são geradas automaticamente. Partidas adicionadas manualmente contribuem com os resultados salvos. Estatísticas ponto a ponto e dados de treino aparecem quando foram registrados.</p>
+</div>
+<div class="faq">
+<strong>Como as rivalidades funcionam?</strong>
+<p>Crie um adversário no Pro para iPhone e selecione-o antes de uma partida de simples no Apple Watch. Depois, marque os pontos normalmente. O app associa a partida ao jogador e organiza confrontos diretos, resultados recentes, desempenho, padrões de partida, tempo em quadra, treinos e histórico dos encontros. O Standalone pode usar perfis sincronizados pela mesma Conta Apple. Partidas com Convidado ficam fora de Rivalidades.</p>
+</div>
+<div class="faq">
+<strong>Posso usá-lo para duplas e jogos de desempate?</strong>
+<p>Sim. O aplicativo suporta Singles, Doubles, One Set, Best of 3, Best of 5, sets de vantagem e desempate, Short Sets oficiais, No-Ad, Set personalizado e um desempate de partida opcional até 7 ou 10.</p>
+</div>
+<div class="faq">
+<strong>Posso excluir o histórico de partidas?</strong>
+<p>Sim. Você pode excluir partidas salvas na tela de histórico. A exclusão é sincronizada quando a sincronização pelo iCloud está disponível.</p>
+</div>
+</div>
+</section>
+<section>
+<h2>Privacidade</h2>
+<div class="privacy-box">
+<strong>Seu histórico de partidas permanece privado.</strong>
+<p>O histórico de partidas e os perfis de jogadores de Rivalry são armazenados localmente e podem ser sincronizados através da base de dados privada CloudKit para sua Conta Apple. O Tennis Score Wizard não opera um servidor de histórico de partidas e não vende dados de partidas ou Rivalry nem os usa para publicidade.</p>
+<p>O acesso à saúde é opcional e é usado apenas para registrar treinos de tênis e mostrar dados de treinamento disponíveis quando a permissão é concedida.</p>
+<p><a href="privacy.html">Leia a Política de Privacidade</a></p>
+</div>
+</section>
+</div>
+<section aria-labelledby="development-support-title" class="development-support" id="support-development">
+<div class="development-support-heading">
+<span class="development-support-kicker">Desenvolvedor independente</span>
+<h2 id="development-support-title">Apoie a próxima partida.</h2>
+<p>O Tennis Score Wizard é projetado, construído e mantido por um desenvolvedor independente. Se isso ajudar seu game, você pode apoiar o desenvolvimento contínuo do aplicativo.</p>
+</div>
+<div class="development-support-grid">
+<article class="development-support-card">
+<div class="development-support-card-header">
+<span aria-hidden="true" class="development-support-icon">♥</span>
+<h3>Contribua pelo app com a Apple</h3>
+</div>
+<p>Deixe uma gorjeta única usando o método de pagamento conectado à sua conta do App Store e confirme com segurança com o Face ID ou Touch ID.</p>
+<div aria-label="Opções de gorjetas da Apple" class="development-support-options">
+<span class="development-support-option">Pequena contribuição <strong>App Store</strong></span>
+<span class="development-support-option">Match point <strong>App Store</strong></span>
+<span class="development-support-option">Apoiador <strong>App Store</strong></span>
+</div>
+<span class="development-support-status">Disponível no app em Informações → Apoiar o desenvolvimento.</span>
+</article>
+<article class="development-support-card">
+<div class="development-support-card-header">
+<span aria-hidden="true" class="development-support-icon">₿</span>
+<h3>Apoie com criptomoedas</h3>
+</div>
+<p>Envie suporte opcional diretamente usando uma carteira de projeto verificada. A rede sempre será exibida ao lado da moeda.</p>
+<div aria-label="Carteiras de criptomoedas verificadas" class="development-support-options" data-copied-label="Copiado" data-copy-failed-label="Tente novamente" data-copy-label="Copiar" data-qr-code-label="Código QR" data-qr-instruction="Escaneie com uma carteira compatível e confirme a rede e o endereço." data-show-qr-label="Mostrar código QR" data-wallet-list=""></div>
+<span class="development-support-status">Toque em uma moeda para copiar o endereço ou abrir seu código QR. Não é necessário nenhum memorando para USDT ou GRAM.</span>
+</article>
+</div>
+<p class="development-support-disclaimer">O suporte é completamente opcional e não desbloqueia recursos do aplicativo ou conteúdo digital. Verifique sempre o endereço da carteira e a rede antes de enviar criptomoedas.</p>
+</section>
+<section id="contact">
+<h2>Suporte</h2>
+<div class="feedback-grid">
+<div class="support-card">
+<h3>Precisa de ajuda ou quer sugerir um recurso?</h3>
+<p>Contato: <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a></p>
+</div>
+<div class="support-card review-card">
+<h3>Compartilhe sua experiência.</h3>
+<p>Seu feedback ajuda a melhorar o aplicativo e a moldar as atualizações futuras. Compartilhe sua experiência com o Pro ou Standalone na App Store.</p>
+<div class="review-actions">
+<a href="https://apps.apple.com/app/id6789285015?action=write-review" rel="noopener noreferrer" target="_blank">Avaliar o Pro</a>
+<a href="https://apps.apple.com/app/id6782709004?action=write-review" rel="noopener noreferrer" target="_blank">Avaliar o Standalone</a>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-meta">
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch é uma marca registrada da Apple Inc.</span>
+</div>
+<nav aria-label="Navegação secundária" class="footer-links">
+<a aria-label="Tennis Score Wizard no Instagram (abre em uma nova guia)" href="https://www.instagram.com/tennisscorewizard/" rel="noopener noreferrer" target="_blank">Instagram</a>
+<a href="#support-development">Apoie o projeto</a>
+<a href="privacy.html">Privacidade</a>
+</nav>
+</footer>
+</main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
+<script defer="" src="../analytics.js"></script>
+</body>
+</html>

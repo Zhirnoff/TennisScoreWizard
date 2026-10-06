@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
+<title>幫助 – Tennis Score Wizard</title>
+<meta content="Tennis Score Wizard 幫助：Apple Watch 記分、比賽歷史、月度和年度總結、體能訓練、iCloud 同步，以及 iPhone 上的 Pro 功能。" name="description"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hant/help.html" rel="canonical"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="en" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html" hreflang="de" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/es/help.html" hreflang="es" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/fr/help.html" hreflang="fr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ja/help.html" hreflang="ja" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ko/help.html" hreflang="ko" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ru/help.html" hreflang="ru" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/tr/help.html" hreflang="tr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/help.html" hreflang="zh-Hans" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/it/help.html" hreflang="it" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/pt-BR/help.html" hreflang="pt-BR" rel="alternate"/><link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hant/help.html" hreflang="zh-Hant" rel="alternate"/><link href="https://zhirnoff.github.io/TennisScoreWizard/nl/help.html" hreflang="nl" rel="alternate"/><link href="https://zhirnoff.github.io/TennisScoreWizard/ar/help.html" hreflang="ar" rel="alternate"/><link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Tennis Score Wizard" property="og:site_name"/>
+<meta content="幫助 – Tennis Score Wizard" property="og:title"/>
+<meta content="Pro 1.8 和 Standalone 1.11 在 iPhone 和 Apple Watch 的比賽記錄中新增月度與年度總結。" property="og:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/zh-Hant/help.html" property="og:url"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
+<meta content="Tennis Score Wizard 應用圖示" property="og:image:alt"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="幫助 – Tennis Score Wizard" name="twitter:title"/>
+<meta content="透過 Pro 1.8 和 Standalone 1.11 回顧一個月或一年的網球表現，包括活動、對比和成就。" name="twitter:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --panel-2: #111511;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-2: #00d84a;
+      --green-soft: rgba(40,255,95,0.10);
+      --yellow: #ffe34d;
+      --red: #ff4b55;
+    }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 16px;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    rgba(5,7,5,0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: 21px;
+}
+.app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14),
+    0 0 32px rgba(40,255,95,0.20),
+    0 14px 34px rgba(0,0,0,0.52);
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 0 28px rgba(40,255,95,0.10);
+}
+.eyebrow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(40,255,95,0.75);
+}
+h1 {
+  margin: 0;
+  max-width: 740px;
+  font-size: clamp(46px, 7.4vw, 88px);
+  line-height: 0.91;
+  letter-spacing: -0.078em;
+}
+.hero-copy p {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  color: #e9e9ed;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 780;
+}
+.hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  box-shadow:
+    0 42px 130px rgba(0,0,0,0.72),
+    0 0 90px rgba(40,255,95,0.16);
+}
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
+}
+section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px;
+}
+.section-subtitle {
+  max-width: 760px;
+  margin: -6px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 158px;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.card p,
+.faq p,
+.help-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.screenshot-card {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(40,255,95,0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 30px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.26);
+}
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(255,255,255,0.11);
+}
+.screenshot-card h3 {
+  margin: 17px 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.help-item,
+.faq {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.028);
+  border-radius: 23px;
+  padding: 18px;
+}
+.help-item strong,
+.faq strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacy-box {
+  border: 1px solid rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at top left, rgba(40,255,95,0.16), transparent 22rem),
+    rgba(40,255,95,0.06);
+  border-radius: 25px;
+  padding: 22px;
+  color: #eaffdf;
+  box-shadow: 0 0 46px rgba(40,255,95,0.08);
+}
+.privacy-box p {
+  color: #d8f7d0;
+  margin: 8px 0 0;
+}
+.support-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 22px;
+  min-height: 142px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+}
+footer {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .hero-copy p {
+    font-size: 18px;
+  }
+  .hero-visual {
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
+  }
+  .hero-ball {
+    border-radius: 66px;
+  }
+  .grid,
+  .help,
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Language selector */
+.nav {
+  overflow: visible;
+}
+
+.nav-links {
+  align-items: center;
+  overflow: visible;
+}
+
+.language-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  cursor: pointer;
+  color: #f5f7f5;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.045);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.language-menu summary::marker {
+  content: "";
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+.language-menu[open] summary {
+  border-color: var(--line-green);
+  background:
+    linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+    rgba(255,255,255,0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 0 24px rgba(40,255,95,0.13);
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: 210px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+    rgba(7,9,7,0.98);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,24,20,0.98);
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: #f2f4f2;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.language-options a:hover {
+  background: rgba(40,255,95,0.10);
+  text-decoration: none;
+}
+
+.language-options a.active {
+  color: var(--green);
+  background: rgba(40,255,95,0.11);
+}
+
+.language-options a.active::after {
+  content: "✓";
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
+/* Keep language dropdown above hero content */
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.language-menu {
+  z-index: 1100;
+}
+
+.language-options {
+  z-index: 1200;
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .language-menu {
+    position: relative;
+  }
+
+  .language-options {
+    left: 0;
+    right: auto;
+    width: min(210px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+  }
+
+  .language-options::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+/* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+/* Clickable brand and Help badge */
+.brand-home-link,
+.help-badge-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  min-width: 0;
+}
+
+.brand-home-link:hover,
+.brand-home-link:focus-visible,
+.help-badge-home-link:hover,
+.help-badge-home-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link:focus-visible,
+.help-badge-home-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.help-home-badge {
+  cursor: pointer;
+}
+
+/* CJK headings need a slightly clearer gap below the badge. */
+html[lang="ja"] .hero .help-home-badge,
+html[lang="zh-Hans"] .hero .help-home-badge {
+  margin-bottom: 22px;
+}
+
+
+/* Unified global product navigation */
+.nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "brand links language";
+  align-items: center;
+  column-gap: 26px;
+  min-height: 92px;
+  padding: 14px 16px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-links > a[aria-current="page"] {
+  color: var(--green);
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+.footer-meta,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    column-gap: 14px;
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: grid;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    font-size: 12px;
+  }
+
+  .nav-links > a[aria-current="page"] {
+    border-color: var(--line-green);
+    background: var(--green-soft);
+  }
+
+  .language-options {
+    right: 0;
+    left: auto;
+  }
+
+  .language-options::before {
+    right: 22px;
+    left: auto;
+  }
+
+  footer,
+  .footer-meta,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Shared animated brand treatment */
+.brand-title {
+  display: inline-block;
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-home-link {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .hero-copy,
+  .hero-copy > *,
+  .help,
+  .help-item,
+  .faq {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1,
+  section > h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero-copy p,
+  .help-item,
+  .faq {
+    overflow-wrap: break-word;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+</style>
+<link href="../release-1-1.css" rel="stylesheet"/>
+<link href="../release-1-6-en.css?v=20260922-flow" rel="stylesheet"/>
+<script defer="" src="../navigation-en.js?v=20260911-i18n"></script>
+<link href="../back-to-top.css?v=20261001" rel="stylesheet"/>
+<script defer="" src="../back-to-top.js?v=20261001"></script>
+<style>html[lang="zh-Hant"] h1 { line-height: 1.16; letter-spacing: -0.025em; }</style>
+</head>
+<body>
+<main class="page">
+<nav aria-label="主要導航" class="nav">
+<div class="brand">
+<a aria-label="Tennis Score Wizard — 首頁" class="brand-home-link" href="index.html">
+<img alt="Tennis Score Wizard" class="app-icon" decoding="async" height="1024" sizes="62px" src="../assets/tennis_ball_app_icon_1024-128.webp" srcset="../assets/tennis_ball_app_icon_1024-128.webp 128w, ../assets/tennis_ball_app_icon_1024-256.webp 256w" width="1024"/>
+<span class="brand-title">Tennis Score Wizard</span>
+</a>
+</div>
+<div class="nav-links">
+<a href="index.html#versions">版本</a>
+<a href="index.html#comparison">比較</a>
+<a href="index.html#stats-guide">統計指南</a>
+<a href="whats-new.html">產品更新</a>
+<a aria-current="page" href="help.html">幫助</a>
+<a href="index.html#contact">聯絡我們</a>
+</div>
+<details class="language-menu">
+<summary>🇹🇼 繁體中文</summary>
+<div class="language-options">
+<a href="../help.html">🇺🇸 English</a>
+<a href="../ja/help.html">🇯🇵 日本語</a>
+<a href="../de/help.html">🇩🇪 Deutsch</a>
+<a href="../fr/help.html">🇫🇷 Français</a>
+<a href="../ru/help.html">🇷🇺 Русский</a>
+<a href="../tr/help.html">🇹🇷 Türkçe</a>
+<a href="../es/help.html">🇪🇸 Español</a>
+<a href="../zh-Hans/help.html">🇨🇳 简体中文</a>
+<a href="../ko/help.html">🇰🇷 한국어</a>
+<a href="../it/help.html">🇮🇹 Italiano</a>
+<a href="../pt-BR/help.html">🇧🇷 Português (Brasil)</a><a class="active" href="help.html">🇹🇼 繁體中文</a><a href="../nl/help.html">🇳🇱 Nederlands</a><a href="../ar/help.html">🇸🇦 العربية</a></div>
+</details>
+</nav>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — 首頁" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
+<h1>幫助中心</h1>
+<p>學習 Watch 記分或 iPhone Pro 補錄。涵蓋球場、私人備註、亮點、分享、對手交鋒、賽制、訓練與 iCloud。</p>
+</div>
+</section>
+<section id="getting-started">
+<h2>開始使用</h2>
+<p class="section-subtitle">
+    設定 Tennis Score Wizard 並開始記錄第一場比賽所需的基本資訊。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>使用 Tennis Score Wizard 需要什麼？</strong>
+<p>即時記分需要安裝 Tennis Score Wizard 的相容 Apple Watch。iPhone Pro 也可新增已進行比賽。健康資料存取為可選，僅用於記錄訓練和可用測量值。</p>
+</div>
+<div class="help-item"><strong>如何開始第一場比賽？</strong><p>在 Apple Watch 開啟應用，選擇單打或雙打、一盤或三盤兩勝或五盤三勝、盤與局規則、首位發球者。如需訓練記錄可開啟，然後開始比賽。</p></div>
+<div class="help-item">
+<strong>應用會記住我的設定嗎？</strong>
+<p>會。應用會儲存最近一次使用的比賽設定，以便下次更快地準備相同型別的比賽。在比賽開始前，您仍然可以修改任何選項。</p>
+</div>
+<div class="help-item">
+<strong>不使用「健康」App 也可以記分嗎？</strong>
+<p>可以。記分、比賽統計和歷史記錄都不依賴「健康」App 權限。只有記錄體能訓練以及心率、活動能量等健康資料時才需要授權。</p>
+</div>
+</div>
+</section>
+<section id="manual-matches">
+<h2>新增和編輯已打過的比賽</h2>
+<p class="section-subtitle">在 iPhone 的 Pro 中，把已知結果和 Watch 歷史記錄儲存在一起。</p>
+<div class="help"><div class="help-item"><strong>手動新增的比賽可以編輯嗎？</strong><p>可以。開啟比賽詳情，輕點「編輯比賽」，即可修改日期、時間、時長、規則、各盤比分、搶七分數和結束狀態。Save 會更新現有記錄，不會生成副本；Cancel 會放棄修改。此表單不會更改單打或雙打型別，也不會更換球員。對手關聯和球場資訊請透過各自的入口修改。</p></div><div class="help-item"><strong>修改會同步到 Apple Watch 嗎？</strong><p>會。配對的 Pro 手錶會更新同一場比賽；使用同一 Apple 帳號時，修改也可透過私有 iCloud 同步到 Standalone。請更新應用並等待同步完成。相關統計和基於歷史記錄的亮點會採用修正後的結果。比賽仍會標明為手動新增，不會推算出未記錄的逐分或體能訓練資料。</p></div>
+<div class="help-item"><strong>如何補錄比賽？</strong><p>在比賽標籤頁中點按新增已進行的比賽。選擇單打或雙打，可選填對手姓名，單打也可選擇已儲存的球員。選擇賽制，輸入各盤比分，填寫完畢後儲存。</p></div>
+<div class="help-item"><strong>可以儲存中止或打平的比賽嗎？</strong><p>可以。如果比賽在所選賽制決出勝者之前結束，請選中止，並輸入當時比分，包括尚未打完的一盤。平局也能儲存。只有當比分符合所選規則的獲勝條件時，才選擇完整結束。</p></div>
+<div class="help-item"><strong>如何輸入盤內搶七？</strong><p>先輸入局數。當比分按所選規則代表搶七結果，例如 <span class="score-nowrap">7–6</span>，會出現雙方搶七分數輸入框。記得就填寫雙方分數，不記得則全部留空。決勝盤的比賽搶十或搶七應直接輸入分數，而非局數，見下方說明。</p></div>
+<div class="help-item"><strong>如何輸入決勝搶七或搶十？</strong><p>在三盤兩勝或五盤三勝中，啟用決勝盤的 Match Tie-Break，選擇 7 分或 10 分目標，並在決勝行直接填寫分數，例如 <span class="score-nowrap">10–8</span>，而不是按局填寫 <span class="score-nowrap">1–0</span>。如果整場比賽就是一次 Match Tie-Break，請在盤規則中選擇 Match Tie-break。完整結束時必須領先兩分。</p></div>
+<div class="help-item"><strong>如果比賽在盤內搶七中停止呢？</strong><p>選擇中止，輸入啟動搶七時的平局局分，例如 <span class="score-nowrap">6–6</span>。出現搶七輸入框後，填寫停止時雙方的分數；不記得就全部留空。應用不會猜測缺失分數。</p></div>
+<div class="help-item"><strong>只記得開始時間，不記得時長怎麼辦？</strong><p>選擇開始與結束，填寫兩個日期和時間，時長會自動計算。如果打過午夜，請將結束日期設為次日。也可選擇結束與時長，按分鐘輸入。不記得時長則留空；填寫時須在 1 分鐘至 24 小時之間。</p></div>
+<div class="help-item"><strong>為什麼不能選擇未來時間？</strong><p>此表單用於記錄已經進行的比賽，不是安排未來比賽。結束時間不能在未來；開始與結束模式下，開始必須早於結束。</p></div>
+<div class="help-item"><strong>如何切換比分輸入框？</strong><p>直接點按目標格子，或使用鍵盤上方的上一個、下一個。輸入一位數字後游標不會自動跳走，便於輸入兩位數。點完成、輸入框外部或滾動頁面，都能收起鍵盤。</p></div>
+<div class="help-item"><strong>手動比賽會計入哪些統計？</strong><p>已知結果、盤數、局數、輸入的搶七結果和可選時長可計入相關歷史和彙總。逐分過程、發球、接發、破發點和訓練測量不會重建。比賽會標為手動新增，沒有資料的卡片會隱藏。</p></div>
+<div class="help-item"><strong>會顯示在 Apple Watch 上嗎？</strong><p>會。手動記錄可同步到配對的 Pro Watch，也可透過同一 Apple 帳號的私有 iCloud 傳到 Standalone。兩款應用都會保留手動標記並隱藏不存在的統計。請更新兩款應用並等待同步完成。</p></div>
+<div class="help-item"><strong>能在 iPhone 修改 Watch 記錄的比分嗎？</strong><p>不能。補錄比賽與編輯 Watch 原始記錄是兩回事。現有比賽可修改對手和可選的比賽資訊，不會改變已記錄的比分或統計。</p></div>
+</div>
+</section>
+<div aria-label="手動比賽與球場資訊示例" class="release-proof-pair">
+<figure><a href="../assets/release-1-6-en/manual-edit-details.png" rel="noopener" target="_blank"><img alt="手動新增的比賽 · iPhone — Edit match" decoding="async" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-edit-details-900.webp" width="1320"/></a><figcaption>瞭解比賽的新增與編輯. Edit match.</figcaption></figure>
+<figure><a href="../assets/release-1-6-en/court-conditions.png" rel="noopener" target="_blank"><img alt="已選擇紅土和室外的比賽資訊編輯器" height="2868" loading="lazy" src="../assets/release-1-6-en/court-conditions-900.webp" width="1320"/></a><figcaption>場地材質和環境均為選填。</figcaption></figure>
+</div>
+<section id="match-context">
+<h2>記住球場，也記住比賽</h2>
+<p class="section-subtitle">全部為選填。可在手動錄入時填寫，或稍後在 iPhone 比賽詳情中補充。</p>
+<div class="help">
+<div class="help-item"><strong>能新增哪些資訊？</strong><p>場地材質、室內或室外、地點或俱樂部、球場名稱或編號，以及僅屬於這場比賽的私人備註。舊的 Apple Watch 比賽也能補充。</p></div>
+<div class="help-item"><strong>需要地圖或定位權限嗎？</strong><p>不需要。地點和球場名稱手動輸入，此功能不搜尋地圖上的球場，也不記錄 GPS 位置。</p></div>
+<div class="help-item"><strong>可以再次使用儲存的球場嗎？</strong><p>可以從最近使用和收藏的球場中選擇。收藏儲存在這臺 iPhone 上，按 Apple 帳號分開。選擇球場會填入地點和條件，但不替換當前比賽的備註。收藏列表本身不透過 iCloud 同步。</p></div>
+<div class="help-item"><strong>哪些內容會同步？</strong><p>球場資訊和比賽備註隨結果，透過配對裝置傳輸和私有 iCloud 同步。原比分和統計不變。新增、檢視與編輯在 iPhone 上進行；Watch 為同步保留這些資訊，但不提供編輯器。</p></div>
+<div class="help-item"><strong>分享圖片會顯示什麼？</strong><p>已填寫的球場條件和地點。私人比賽備註與對手交鋒備註不會顯示。分享前請檢視預覽，尤其是不希望公開比賽地點時。</p></div>
+<div class="help-item"><strong>球場資訊會產生統計成就嗎？</strong><p>不會。材質、室內外、地點和備註用於描述比賽環境，不影響亮點，也不會生成某種場地或某個球場的專屬紀錄。</p></div>
+</div>
+</section>
+<section id="match-highlights">
+<h2>比賽亮點與分享</h2>
+<div class="help">
+<div class="help-item"><strong>最多能看到多少亮點？</strong><p>應用提供 26 種事件型別，並不意味著每場都有 26 張卡片。iPhone 詳情會顯示儲存資料支援的所有適用亮點；分享圖片優先展示最值得關注的專案，最多六個。沒有符合條件的亮點時不顯示該區域。</p></div>
+<div class="help-item"><strong>會出現哪些亮點？</strong><p>例如逆轉、決勝盤或 Match Tie-Break、膠著的搶七、直落各盤的結果、連勝或連敗、勝場里程碑、個人紀錄，以及發球或接發特點。有些需要逐分統計，有些可由盤比分和歷史記錄證實。</p></div>
+<div class="help-item"><strong>紀錄和里程碑是永久的職業生涯成就嗎？</strong><p>不是。它們描述應用內儲存的歷史。補錄舊結果、刪除比賽或更換對手，可能改變比較結果和交鋒亮點。評估舊比賽時，不會把之後的比賽當作此前歷史。勝場里程碑以符合條件、完整結束的勝利為基礎。</p></div>
+<div class="help-item"><strong>為什麼 Stats 的連勝數可能與亮點不同？</strong><p>Stats 和對手交鋒可將中止時有明確領先方的比賽計為有勝負的結果。連勝和勝場里程碑亮點只使用完整結束的勝利，因此未打完的比賽不算入該成就。各項計算都使用對應比較所需的已儲存歷史。</p></div>
+<div class="help-item"><strong>Apple Watch 上有亮點嗎？</strong><p>沒有。亮點顯示在 Pro 的 iPhone 比賽詳情和分享圖片中。Watch 歷史保留結果及可用統計，不設單獨的亮點區域。</p></div>
+<div class="help-item"><strong>為什麼手動比賽的亮點較少？</strong><p>最終比分無法證明每一分的過程。手動比賽只顯示比分或歷史支援的事件，不會編造發球、接發、破發點或訓練資料。</p></div>
+</div>
+</section>
+<section id="match-flow-help">
+<h2>Match Flow 與 Momentum</h2>
+<p class="section-subtitle">Pro 在比賽詳情中提供三種 Match Flow 檢視；兩款手錶應用都能在歷史記錄中顯示精簡的 Momentum。</p>
+<div class="help">
+<div class="help-item"><strong>Match Flow 何時顯示？</strong><p>只有儲存的比賽包含有效的逐分記錄時才會顯示。手錶上新記錄的比賽會自動保留這一順序。部分舊比賽可能已經有足夠的資料；其他舊比賽和手動輸入的結果無法根據最終比分補出缺失的分數記錄。沒有可靠資料時，該部分不會顯示。</p></div>
+<div class="help-item"><strong>柱形和比分方框代表什麼？</strong><p>每根柱形對應一局已記錄的比賽：綠色表示您贏得該局，紅色表示對手贏得該局。柱形越高表示記錄的得分次數越多，並非獲勝優勢越大。旁邊的方框顯示該局結束後的累計局分。搶七會單獨標明。</p></div>
+<div class="help-item"><strong>Scores 和 Key Moments 顯示什麼？</strong><p>Scores 列出每局結束後的累計比分及記錄的得分次數。Key Moments 挑選逐分歷史能夠證實的事件，例如漫長的一局、破發或轉折點。Pro 在比賽詳情中提供這些檢視；手錶歷史記錄則顯示精簡的 Momentum。</p></div>
+<div class="help-item"><strong>比賽中需要額外操作嗎？</strong><p>不需要。像往常一樣記錄比分即可。Match Flow 使用已儲存的得分順序，不會增加場上的操作控制元件或點選次數。</p></div>
+</div>
+</section>
+<section id="history-files-help">
+<h2>匯出與恢復比賽歷史</h2>
+<p class="section-subtitle">Match History Files 可在 iPhone 上的 Pro 中使用。</p>
+<div class="help">
+<div class="help-item"><strong>應選擇哪種檔案格式？</strong><p>如需閱讀或分析報告，請選擇 CSV、Excel 或 PDF。如需日後在 Pro 中恢復比賽，請選擇 JSON 或完整備份 ZIP。ZIP 包含 JSON 存檔、比賽與得分的 CSV 檔案、Excel 工作簿、PDF 報告和簡短說明。單獨的報告無法匯入。</p></div>
+<div class="help-item"><strong>如何匯出或匯入？</strong><p>在 Pro 中開啟 Match History Files，點選 Export a Copy，選擇格式後儲存或分享檔案。需要恢復時，點選 Import Backup 並選擇 JSON 或 ZIP 備份。匯入缺失比賽之前，請先檢視預覽。</p></div>
+<div class="help-item"><strong>匯入會造成重複或恢復已刪除的比賽嗎？</strong><p>不會。已有比賽的 ID 會被跳過，此前刪除的 ID 仍保持刪除狀態。只會新增符合條件且缺失的比賽。請將備份檔案另存一份到您可自行管理的位置。</p></div>
+<div class="help-item"><strong>備份會包含完整的逐分歷史嗎？</strong><p>JSON 和 ZIP 會保留已儲存的原始比賽資料，包括存在的逐分記錄。舊比賽和手動輸入的比賽可能沒有逐分歷史。匯出不會生成不存在的測量資料。</p></div>
+</div>
+</section>
+<section id="match-setup">
+<h2>比賽設定</h2>
+<p class="section-subtitle">
+    根據實際比賽選擇正確的比賽形式和規則。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>單打和雙打有什麼區別？</strong>
+<p>每方一名球員時請選擇單打，每方兩名球員時請選擇雙打。所選形式會隨比賽一起儲存，並在記錄體能訓練時使用。</p>
+</div>
+<div class="help-item">
+<strong>三盤兩勝和五盤三勝是什麼意思？</strong>
+<p>三盤兩勝中，率先贏得兩盤的一方獲勝。五盤三勝中，率先贏得三盤的一方獲勝。</p>
+</div><div class="help-item"><strong>One Set 是什麼？</strong><p>所選的一盤就是整場比賽。局數目標和搶七仍由盤規則決定。</p></div>
+<div class="help-item"><strong>盤規則如何工作？</strong><p>請選擇與實際比賽相符的規則。傳統盤通常先贏六局，官方 Short Sets 先贏四局，Custom Set 則可以自行設定各項引數。App 會自動應用完整配置。</p></div><div class="help-item"><strong>官方 Short Sets 如何進行？</strong><p>先贏四局者獲勝。可選擇在 <span class="score-nowrap">3–3</span> 或 <span class="score-nowrap">4–4</span> 開始搶七，再選擇領先兩分的 7 分制或 <span class="score-nowrap">4–4</span> 決勝分。</p></div><div class="help-item"><strong>No‑Ad 改變了什麼？</strong><p>只改變局規則：平分後下一分決定該局。它可與所有可用盤制組合。</p></div><div class="help-item"><strong>Custom Set 如何工作？</strong><p>Custom Set 可設定目標局數、獲勝差值、是否及何時進入搶七、目標分數及分差。例如可以設為八局目標。設定摘要彙總全部規則，便於核對。</p></div><div class="help-item"><strong>這些設定會互相沖突嗎？</strong><p>不會。比賽長度決定所需盤數，盤規則決定每盤如何結束，Standard 或 No‑Ad 處理平分，可選的 Match Tie‑Break 只替代最後的決勝盤。</p></div>
+<div class="help-item">
+<strong>如何選擇首先發球的一方？</strong>
+<p>您可以在設定過程中手動選擇，也可以使用內建的擲硬幣功能隨機決定。</p>
+</div>
+<div class="help-item">
+<strong>擲硬幣功能有什麼作用？</strong>
+<p>它會生成一個隨機結果，幫助決定首先發球的一方。比賽開始前，您可以確認結果或繼續調整設定。</p>
+</div>
+<div class="help-item">
+<strong>“記錄體能訓練”有什麼作用？</strong>
+<p>啟用該選項並授予「健康」App 權限後，比賽開始時會同時啟動一項網球體能訓練。可用的心率、活動能量和時長資料可以記錄並儲存到「健康」App。</p>
+</div>
+</div>
+</section>
+<section id="scoring">
+<h2>比賽記分</h2>
+<p class="section-subtitle">
+    記錄每一分，應用會自動處理網球比賽中的比分變化。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>如何記錄一分？</strong>
+<p>使用記分按鈕選擇這一分由您還是對手贏得。選擇後，比分會立即更新。</p>
+</div>
+<div class="help-item">
+<strong>應用會自動計算局數和盤數嗎？</strong>
+<p>會。應用會根據所選規則自動處理分、局、盤、平分、佔先和搶七。</p>
+</div>
+<div class="help-item"><strong>平分和佔先如何處理？</strong><p>使用 Standard Game 時，<span class="score-nowrap">40–40</span> 後進入平分：一方必須先取得佔先，再贏得下一分才能拿下該局。使用 No‑Ad 時，<span class="score-nowrap">40–40</span> 後的下一分直接決定該局。</p></div>
+<div class="help-item">
+<strong>搶七如何記分？</strong>
+<p>當所選規則要求進行搶七時，應用會從普通網球計分切換為數字搶七比分。</p>
+</div>
+<div class="help-item"><strong>什麼是決勝搶七/搶十？如何開始？</strong><p>決勝搶七/搶十用於替代最後一盤。三盤兩勝制打成 <span class="score-nowrap">1–1</span>，或五盤三勝制打成 <span class="score-nowrap">2–2</span> 時，請在決勝盤開始前開啟選單，選擇 Match Tie‑Break，再選擇 7 分制或 10 分制。必須領先兩分才能獲勝。單打和雙打都可使用；結果會儲存到歷史記錄、比賽詳情、統計和分享卡片中。</p></div>
+<div class="help-item"><strong>它與盤內搶七有什麼區別？</strong><p>盤內搶七通常在 <span class="score-nowrap">6–6</span> 時決定一盤，盤分記為 <span class="score-nowrap">7–6</span>。決勝搶七/搶十會替代整盤決勝盤，並以 [<span class="score-nowrap">10–7</span>] 等形式單獨顯示。</p></div>
+<div class="help-item">
+<strong>發球標記如何工作？</strong>
+<p>當您發球時，網球圖示會顯示正確的發球側。當對手發球時，應用會從您檢視手錶的視角顯示對手的發球側。</p>
+</div>
+<div class="help-item">
+<strong>應用如何跟蹤發球方？</strong>
+<p>發球方會隨著每局和搶七中的比分程序自動切換。如果顯示與實際比賽不一致，可以在選單中手動修正。</p>
+</div>
+<div class="help-item">
+<strong>什麼時候需要交換場地？</strong>
+<p>在適當的局數結束後，應用會顯示交換場地提醒。該提醒僅用於提示，並會在繼續記錄下一分後消失。</p>
+</div>
+</div>
+</section>
+<section id="match-controls">
+<h2>比賽控制</h2>
+<p class="section-subtitle">
+    修正輸入錯誤、管理當前比賽，並安全地停止未完成的比賽。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Undo 如何工作？</strong>
+<p>撤銷會移除最後記錄的一分，並恢復之前的分數、局數、盤數、發球方、發球位置、搶七狀態和相關統計資料。</p>
+</div>
+<div class="help-item">
+<strong>Menu 有什麼作用？</strong>
+<p>比賽進行中，可以透過選單修正發球方、檢視歷史記錄、停止當前比賽或準備一場新比賽。</p>
+</div>
+<div class="help-item">
+<strong>什麼時候使用“切換髮球方”？</strong>
+<p>當應用顯示的發球方與實際比賽不一致時使用。該操作只修正當前發球方，不會改變比分。</p>
+</div>
+<div class="help-item">
+<strong>停止比賽後會發生什麼？</strong>
+<p>未完成的比賽可以連同當前比分、比賽時長、已完成的盤、正在進行的盤、得分和可用統計資料一起儲存。在歷史記錄中仍會顯示為“已停止”。如果一方領先，結果還會計入勝負記錄、勝率和連勝或連敗；如果比分相同，則按中立結果處理。</p>
+</div>
+<div class="help-item">
+<strong>比賽結束或停止後可以開始新比賽嗎？</strong>
+<p>可以。返回設定介面即可開始一場新比賽。上一次的比賽配置也可以再次使用。</p>
+</div>
+<div class="help-item">
+<strong>如果記錄錯了一分，該怎麼辦？</strong>
+<p>請儘快使用撤銷。這樣可以準確恢復到錯誤輸入之前的完整狀態，而不是透過再新增一分來抵消錯誤。</p>
+</div>
+<div class="help-item"><strong>在記錄第一分之前中止比賽會怎樣？</strong><p>App 只儲存實際記錄的進度，不會為一場空比賽新增虛構的分數、局數、統計或體能訓練資料。</p></div></div>
+</section>
+<section id="rivalries"><h2>對手與交手記錄</h2><p class="section-subtitle">在 Apple Watch 上選擇已儲存的單打對手，自動生成私密交手戰績。</p><div class="help"><div class="help-item"><strong>如何建立對手？</strong><p>在 iPhone Pro 中開啟“交手記錄”，輸入完整姓名和用於 Watch 顯示的簡稱。Watch 名稱最多 16 個字元，以確保在比賽設定和即時記分中清晰可讀。Apple Watch 上的 Standalone 可以選擇已同步的對手，但不能建立或編輯球員檔案。</p></div><div class="help-item"><strong>如何刪除對手？</strong><p>在 iPhone 的“交手記錄”中長按球員卡片，選擇“刪除球員”並確認。原先關聯到該球員的比賽會保留在比賽記錄中，但變為未指定狀態，之後可以再指定給其他球員。</p></div><div class="help-item"><strong>如何在 Apple Watch 上選擇對手？</strong><p>設定比賽時選擇單打，開啟“對手”，然後選擇「訪客」或已儲存的球員。訪客比賽會正常儲存，但不會加入交手記錄。雙打比賽不會把整場團隊比賽關聯到某一個對手。</p></div><div class="help-item"><strong>交手戰績包含哪些比賽？</strong><p>統計已關聯到該球員且結果明確的單打比賽。已完成的比賽，以及停止時一方明確領先的比賽會計入戰績；平分時停止的比賽保持中立。若有實際記錄，還會顯示盤、局、搶七、得分、發球與接發球、破發點、時長、體能訓練摘要和比賽列表。</p></div><div class="help-item"><strong>“最近 5 場與全部時間”是什麼意思？</strong><p>它會比較最近五場結果明確的交手勝率與所選完整時段的勝率。如果不足五場，就使用已有比賽。切換全部時間、今年或最近 30 天時，比較結果也會變化。</p></div><div class="help-item"><strong>先丟第一盤後的逆轉勝是什麼？</strong><p>指先輸掉已經結束的第一盤，最後仍贏得比賽。比如“5 場中 2 勝”表示在五場先丟第一盤的比賽中贏了兩場，並不是嘗試次數上限。</p></div><div class="help-item"><strong>當前連續記錄和最長連勝是什麼？</strong><p>當前連續記錄是結果明確的比賽中，最近連續獲勝或連續失利的序列。最長連勝是所選時段內連續獲勝場次最多的一段。</p></div><div class="help-item"><strong>可以把舊比賽關聯到球員嗎？</strong><p>可以。在 iPhone 上開啟已儲存的單打比賽，在“對手”區域輕點“指定”，然後選擇球員。之後可更改或移除關聯，而不會改變比分和統計。更新會傳送到配對 Apple Watch 的 Pro 歷史，並透過私密 iCloud 同步傳到 Standalone。</p></div><div class="help-item"><strong>如何避免建立重複球員？</strong><p>每位球員都有固定的內部識別符號。建立時還會比較統一格式後的完整姓名和 Watch 名稱。同步使用固定識別符號和刪除記錄，因此其他裝置會更新同一檔案，而不是重新建立。</p></div><div class="help-item"><strong>私密備註會被分享嗎？</strong><p>不會。備註只儲存在交手檔案中，不會出現在分享文字或圖片卡片裡。分享卡片使用當前時間篩選，並固定按以下順序排列：戰績與近期交手、比賽表現、比賽規律與體能資訊。</p></div></div></section><section id="statistics">
+<h2>瞭解比賽統計</h2>
+<p class="section-subtitle">
+    瞭解已儲存的統計資料代表什麼，以及它們如何計算。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>總得分是什麼？</strong>
+<p>它表示比賽中記錄的全部得分數量。統計摘要會分別顯示您贏得的分數和對手贏得的分數。</p>
+</div>
+<div class="help-item">
+<strong>已記錄局數是什麼？</strong>
+<p>指包含逐分資料的局。中止比賽時可能包括當前尚未結束的一局，因此該數值並非官方局分。</p>
+</div>
+<div class="help-item">
+<strong>破發點統計顯示什麼？</strong>
+<p>顯示您在發球時面臨和挽救的破發點，以及接發球時獲得的機會和兌現的破發點。搶七中的分數不計入。</p>
+</div>
+<div class="help-item">
+<strong>統計資料會自動更新嗎？</strong>
+<p>會。統計資料根據已記錄的得分自動計算。使用撤銷時，最後一分對統計資料產生的影響也會一併撤銷。</p>
+</div>
+<div class="help-item">
+<strong>為什麼停止比賽後的統計可能不完整？</strong>
+<p>已停止的比賽只包含停止之前實際發生的得分和比賽情況。需要後續比賽程序或正常結束才能計算的資料可能不會顯示。</p>
+</div>
+<div class="help-item">
+<strong>為什麼舊比賽顯示的統計資料較少？</strong>
+<p>由舊版本應用儲存的比賽可能不包含後來新增的資料欄位。應用會保留當時實際儲存的資訊，而不會推測缺失的資料。</p>
+</div>
+</div>
+</section>
+<section id="companion-sync"><h2>Pro 的 iPhone 與 Apple Watch 同步</h2>
+<p>Pro 包含完整的 Apple Watch 記分應用和 iPhone 比賽分析功能。您無需另行購買 Tennis Score Wizard（Standalone）。</p><p class="section-subtitle">在 Apple Watch 上記分，然後在 iPhone 上檢視同步的比賽歷史、結果、統計和體能訓練資料。</p><div class="help"><div class="help-item"><strong>如何在 Pro 中設定比賽和記分？</strong><p>即時比賽設定和逐分記分仍在 Watch。iPhone 可補錄結果、編輯資訊、檢視比賽和分享亮點。手動輸入並不是 iPhone 即時記分牌。</p></div><div class="help-item"><strong>iPhone 上會顯示什麼內容？</strong><p>iPhone 顯示最新結果與歷史，包括手動比賽、盤與搶七比分、可選資訊和有依據的亮點。Watch 記錄還可包含逐分、發球、接發、破發點、比賽程序和訓練概要。</p></div><div class="help-item"><strong>比賽歷史如何同步？</strong><p>Pro 有兩條相互獨立的同步路徑。Watch Connectivity 可在配對的 Apple Watch 與 iPhone 之間直接傳輸已儲存的比賽；兩臺裝置都可用時，這通常是最快的本地路徑。CloudKit 則獨立為使用同一 Apple 帳號的 Standalone 和 Pro 提供持久可靠的 iCloud 同步與恢復。兩條路徑無需互相等待；如果同一場比賽透過兩條路徑送達，App 只保留一條最新記錄。</p></div><div class="help-item"><strong>如果比賽沒有出現在 iPhone 上，該怎麼辦？</strong><p>請確認配對的是正確的 Apple Watch，將兩臺裝置放在附近，並分別在 Apple Watch 和 iPhone 上開啟 Tennis Score Wizard。還要確認兩臺裝置登入的是您打算使用的 Apple 帳號，並檢查“歷史記錄”中的 iCloud 狀態。已儲存的比賽在等待同步時仍會受到本地保護，並可在配對裝置連線或 iCloud 可用時同步。</p></div><div class="help-item"><strong>體能訓練詳情也會同步嗎？</strong><p>如果體能訓練資料可用，Pro 可以在兩臺裝置上隨已儲存的比賽顯示比賽時長、平均心率、最高心率和活動能量。</p></div><div class="help-item"><strong>刪除比賽歷史會有什麼影響？</strong><p>在 Pro 中刪除單場比賽或全部歷史後，更改會在 iPhone 與 Apple Watch 之間同步，並在 iCloud 可用時透過 iCloud 同步。刪除全部歷史前，App 會要求確認。</p></div><div class="help-item"><strong>稍後在 iPhone 指定的對手會出現在 Watch 歷史中嗎？</strong><p>會。Pro 可將更新後的關聯直接傳送到配對的 Apple Watch。使用同一 Apple 帳號時，Standalone 也會透過私密 iCloud 同步收到更新。</p></div></div></section>
+<section id="icloud-sync"><h2>透過 iCloud 同步與恢復</h2><p class="section-subtitle">無需建立 Tennis Score Wizard 帳號，即可在 Standalone 與 Pro 之間同步已儲存的比賽。</p><div class="help"><div class="help-item"><strong>使用 iCloud 同步比賽需要什麼？</strong><p>請確保 Apple Watch 以及 Pro 使用的 iPhone 登入同一 Apple 帳號。啟用 iCloud 雲盤，保持網路連線，並等待首次同步完成。iCloud 不可用時仍可繼續記分。</p></div><div class="help-item"><strong>Standalone 與 Pro 可以共享比賽嗎？</strong><p>可以。兩個版本使用相同的 iCloud 儲存空間儲存比賽。使用同一 Apple 帳號時，Standalone 中儲存的比賽可以出現在 Pro 中，反之亦然。</p></div><div class="help-item"><strong>如何確認同步已經完成？</strong><p>開啟“歷史記錄”並檢視 iCloud 行。<b>Synced</b> 表示最近一次同步已成功完成，該行會顯示日期和時間。<b>Syncing</b> 表示正在同步。<b>Waiting</b> 與 <b>Saving</b> 表示本地更改已安全排隊，正等待傳送到 iCloud。<b>Sync paused</b> 與 <b>Retry</b> 表示最近一次嘗試未能完成；輕點該行即可重試。</p></div><div class="help-item"><strong>更換 Apple 帳號後會怎樣？</strong><p>每個 Apple 帳號都有各自獨立的私有 CloudKit 比賽歷史，不同帳號的記錄不會混合或合併。App 檢測到帳號變更後，會顯示當前 Apple 帳號對應的本地和 iCloud 歷史；切換回上一個帳號後，同步完成即可再次看到該帳號的歷史。在從這臺裝置移除上一個帳號的本地快取前，仍在等待同步的比賽會保留在與該帳號繫結的加密恢復副本中。這些比賽不會上傳到新帳號；更換帳號也不會刪除任一帳號的 iCloud 資料庫中已儲存的記錄。</p></div><div class="help-item"><strong>重新安裝 App 後會恢復比賽嗎？</strong><p>如果在移除 App 前比賽已成功同步，就可以恢復。請先確認“歷史記錄”顯示 <b>Synced</b>。重新安裝後，使用同一 Apple 帳號，保持 iCloud 雲盤開啟，開啟 App 並等待比賽下載。</p></div><div class="help-item"><strong>移除 App 會刪除 iCloud 歷史嗎？</strong><p>不會。僅移除 App 不會刪除已經同步到 iCloud 的比賽記錄。重新安裝後可以再次下載。在 Tennis Score Wizard 中刪除比賽後，iCloud 可用時也會同步刪除操作。</p></div><div class="help-item"><strong>開發者能看到我同步的比賽嗎？</strong><p>不能。CloudKit 會將同步記錄儲存在您的 Apple 帳號的私有資料庫中。預設情況下，Apple 只允許該使用者存取私有資料庫。</p></div></div></section>
+<section id="health-workouts">
+<h2>「健康」App 與體能訓練</h2>
+<p class="section-subtitle">
+    記錄網球體能訓練，並瞭解比賽結束後顯示的健康資料。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>如何記錄網球體能訓練？</strong>
+<p>在比賽設定中啟用“記錄體能訓練”，並授予「健康」App 權限。體能訓練會隨比賽開始，並在比賽完成或停止時結束。</p>
+</div>
+<div class="help-item">
+<strong>即時心率如何工作？</strong>
+<p>在體能訓練記錄期間，如果「健康」App 已授權並且 Apple Watch 提供了心率測量值，App 會顯示當前心率。</p>
+</div>
+<div class="help-item">
+<strong>平均心率和最高心率是什麼？</strong>
+<p>平均心率根據體能訓練期間可用的心率測量值計算。最高心率是該次體能訓練中記錄到的最高值。</p>
+</div>
+<div class="help-item">
+<strong>什麼是活動能量？</strong>
+<p>活動能量是體能訓練期間因身體活動而消耗的估算能量。Apple Watch 和「健康」App 會根據可用的健康和運動資料進行計算。</p>
+</div>
+<div class="help-item">
+<strong>體能訓練儲存在哪裡？</strong>
+<p>成功結束後，體能訓練會儲存到「健康」App。根據權限和同步狀態，它也可能顯示在 Apple 的“健身”應用中。</p>
+</div>
+<div class="help-item">
+<strong>為什麼體能訓練統計有時會延遲顯示？</strong>
+<p>部分資料會在體能訓練結束後由「健康」App 完成最終計算。請等待一段時間完成處理和同步，然後重新開啟已完成的比賽。</p>
+</div>
+<div class="help-item">
+<strong>為什麼某項健康資料沒有顯示？</strong>
+<p>可能的原因包括未授予權限、感測器收集的測量值不足、未啟用體能訓練記錄，或「健康」App 尚未完成資料處理。</p>
+</div>
+<div class="help-item">
+<strong>如果體能訓練記錄失敗，比賽還會儲存嗎？</strong>
+<p>會。比賽比分和歷史記錄與「健康」App 分開儲存。「健康」App 權限或體能訓練資料出現問題不會阻止比賽記錄儲存。</p>
+</div>
+</div>
+</section>
+<section id="match-history">
+<h2>比賽歷史</h2>
+<p class="section-subtitle">按年、月以及單打或雙打篩選比賽歷史。較早的記錄隨瀏覽逐步載入，全部已儲存的歷史仍然可用。</p>
+<div class="help"><div class="help-item"><strong>如何在手錶上找到以前的比賽？</strong><p>在 History 中輕點 Period，選擇年份，再選擇月份或 Entire year（全年）。列表只顯示有比賽記錄的年份和月份。All dates 清除時間範圍篩選，All、1v1 和 2v2 用於篩選比賽型別。Pro 和 Standalone 均支援。</p></div><div class="help-item"><strong>歷史記錄只能顯示 50 場比賽嗎？</strong><p>不是。最初顯示符合條件的 50 條記錄，之後在瀏覽時每次再載入 50 條較早的記錄。也可以輕點 Load older matches。彙總涵蓋所有符合條件的記錄，而不只是第一頁。時間範圍選單基於全部已儲存的歷史，舊比賽不會被刪除。</p></div>
+<div class="help-item">
+<strong>Win 和 Loss 是什麼意思？</strong>
+<p>Win 表示您按盤數贏下了已完成比賽。Loss 表示對手按盤數贏下了已完成比賽。</p>
+</div>
+<div class="help-item">
+<strong>Stopped 是什麼意思？</strong>
+<p>表示比賽在正常結束之前被儲存。停止時已經記錄的真實比賽狀態會被保留。如果一方領先，結果會計入勝負記錄、勝率和連勝或連敗；如果比分相同，則按中立結果處理。</p>
+</div>
+<div class="help-item"><strong>S1 至 S5 是什麼？</strong><p>S1 至 S5 表示第一至第五盤。結束或中止的結果可顯示一至五個常規盤。例如 S1 <span class="score-nowrap">6–3</span> 表示第一盤以六局比三局結束。</p></div>
+<div class="help-item">
+<strong>TB <span class="score-nowrap">7–3</span> 是什麼意思？</strong>
+<p>TB 表示該盤中的搶七比分。例如，“<span class="score-nowrap">7–6</span> · TB <span class="score-nowrap">7–3</span>”表示該盤以 <span class="score-nowrap">7–6</span> 結束，搶七比分為 <span class="score-nowrap">7–3</span>。</p>
+</div><div class="help-item"><strong><span class="score-nowrap">7–6</span><sup>(6)</sup> 表示什麼？</strong><p>簡略行的小括號數字為搶七失利方得分。例如 <span class="score-nowrap">7–6</span><sup>(6)</sup> 表示搶七以 <span class="score-nowrap">8–6</span> 獲勝。分盤表在有記錄時可顯示雙方分數。</p></div>
+<div class="help-item">
+<strong>中止比賽如何判斷？</strong>
+<p>先比較已完成的盤數；相同時比較當前未完成盤的局數，再比較已記錄的搶七或局內分數。不會累計之前各盤的局數來判斷領先。盤間中止且雙方獲勝盤數相等時視為平局。若有明確領先方，統計中計為勝負，但保留中止標記。</p>
+</div>
+<div class="help-item">
+<strong>未完成的一盤會怎樣？</strong>
+<p>如果當前一盤已經開始，其進行中的比分會與比賽一起儲存，例如“S3 <span class="score-nowrap">0–1</span>”。</p>
+</div>
+<div class="help-item"><strong>比賽會儲存哪些資訊？</strong><p>比賽記錄可包含賽制、結果、盤與搶七比分、時間和對手關聯。手動錄入會明確標註。iPhone 可新增球場條件、地點和私人備註。逐分與訓練統計只有實際記錄時才提供，不從手動比分推算。</p></div>
+<div class="help-item">
+<strong>可以刪除已儲存的比賽嗎？</strong>
+<p>可以。在比賽歷史中選擇刪除操作並確認。之後該歷史記錄會從應用中移除。</p>
+</div>
+<div class="help-item"><strong>自定義賽制在歷史中如何顯示？</strong><p>搶七分數位於局分旁。局數為兩位數時單元格可加寬，讓數字分開且清晰。決勝 Match Tie-Break 單獨放在方括號中，例如 [<span class="score-nowrap">10–7</span>]。分享文字也包含完整結果。</p></div><div class="help-item"><strong>分享結果時如何顯示搶七？</strong><p>盤內搶七使用緊湊上標，不會改變主要盤分的字號和間距。決勝 Match Tie‑Break 會單獨顯示在方括號中，例如 [<span class="score-nowrap">10–7</span>]。</p></div></div>
+</section>
+<section id="period-recaps"><h2>月度和年度總結</h2><p class="section-subtitle">兩款 Apple Watch 應用都可回顧已儲存的比賽。Pro 還可在 iPhone 上檢視更詳細的總結。</p><div class="help"><div class="help-item"><strong>在哪裡檢視總結？</strong><p>在 Apple Watch 上開啟歷史記錄，輕點 Period，選擇有已儲存比賽的年份或月份，再開啟 Year in Tennis 或 Month in Tennis。在 Pro 的 iPhone 應用中，開啟日曆，然後進入所選月份或年份的總結。</p></div><div class="help-item"><strong>圖表中的顏色和數字是什麼意思？</strong><p>每個柱形統計對應一週或一個月內儲存的比賽。綠色表示獲勝，紅色表示失利，黃色表示中途結束的比賽。柱形上方的數字是比賽總場數。概覽會將已完成比賽的勝負與中途結束的比賽分開統計。</p></div><div class="help-item"><strong>每週如何劃分？</strong><p>每週的起始日期依照裝置的日曆設定。一個月可能跨越五個或六個日曆周。所選月份內有兩個完整的週可供比較時，才會顯示周度對比。</p></div><div class="help-item"><strong>與上一時段比較哪些資料？</strong><p>如果有可比記錄，總結會對比本月與上月或今年與去年的比賽場數和勝率。對於尚未結束的月份或年份，兩個時段都比較到同一進度。勝率只統計已完成比賽的勝負，不包括平局和中途結束的比賽。</p></div><div class="help-item"><strong>在哪裡檢視成就和分享總結？</strong><p>兩款 Apple Watch 應用均可顯示所選時段的成就。在 Pro 的 iPhone 應用中，輕點成就可開啟對應比賽，也可透過“分享”生成月度或年度總結卡片。</p></div></div></section>
+<section id="support-development"><h2>自願贊助開發</h2><p class="section-subtitle">一次性支援有助於後續開發，但不會解鎖功能，也不會改變 App 的使用權限。</p><div class="help"><div class="help-item"><strong>讚賞會解鎖功能嗎？</strong><p>不會。透過 Apple 讚賞或使用加密貨幣支援完全自願。無論是否支援，您購買的產品所包含的功能都保持可用。</p></div><div class="help-item"><strong>如何透過 Apple 讚賞？</strong><p>在“資訊 → 支援開發”中選擇一次性金額，並在 Apple 購買頁面確認。Apple 會使用與您的 App Store 帳號關聯的付款方式處理。</p></div><div class="help-item"><strong>使用加密貨幣支援前需要確認什麼？</strong><p>請在錢包中核對幣種、網路和完整收款地址。區塊鏈轉賬通常無法撤銷。Tennis Score Wizard 不會把比賽、交手記錄、體能訓練或健康資料附加到交易中。</p></div></div></section><section id="complications-help">
+<h2>Apple Watch 錶盤複雜功能</h2>
+<p class="section-subtitle">
+    從支援的錶盤快速開啟 Tennis Score Wizard。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Tennis Score Wizard 複雜功能有什麼作用？</strong>
+<p>它可以作為應用快捷入口。輕點後會在 Apple Watch 上開啟 Tennis Score Wizard。</p>
+</div>
+<div class="help-item">
+<strong>支援哪些複雜功能系列？</strong>
+<p>Tennis Score Wizard 支援相容 Apple Watch 錶盤上的圓形和角落複雜功能位置。</p>
+</div>
+<div class="help-item">
+<strong>如何新增複雜功能？</strong>
+<p>在 Apple Watch 或 iPhone 的 Watch 應用中編輯相容表盤，選擇一個受支援的位置，然後從可用複雜功能中選擇 Tennis Score Wizard。</p>
+</div>
+<div class="help-item">
+<strong>為什麼找不到該複雜功能？</strong>
+<p>請確認應用已安裝到 Apple Watch，並且所選錶盤位置支援相應的複雜功能系列。不同錶盤提供的位置可能不同。</p>
+</div>
+<div class="help-item">
+<strong>為什麼它在不同錶盤上的外觀不同？</strong>
+<p>每個錶盤位置的形狀和可用空間由 Apple Watch 決定。Tennis Score Wizard 會自動適配圓形或角落位置。</p>
+</div>
+</div>
+</section>
+<section id="troubleshooting">
+<h2>故障排除</h2>
+<p class="section-subtitle">
+    當記分、體能訓練資料或錶盤快捷入口未按預期工作時，可檢查以下專案。
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>即時心率沒有顯示。</strong>
+<p>請確認已啟用體能訓練記錄、「健康」App 已授權，並且手錶正確佩戴在手腕上。只有 Apple Watch 提供測量值後，心率才會顯示。</p>
+</div>
+<div class="help-item">
+<strong>體能訓練沒有出現在「健康」App 中。</strong>
+<p>請等待資料處理完成，檢查 Health 權限並確認比賽設定中已啟用體能訓練記錄。同時確保比賽已正常完成或停止。</p>
+</div>
+<div class="help-item">
+<strong>平均心率、最高心率或活動能量沒有顯示。</strong>
+<p>請等待「健康」App 完成體能訓練資料處理，然後重新開啟已完成的比賽。如果原始資料不足，相應數值可能仍然不可用。</p>
+</div>
+<div class="help-item">
+<strong>顯示的發球方不正確。</strong>
+<p>開啟選單並使用“切換髮球方”。該操作會修正發球方，但不會改變比分。</p>
+</div>
+<div class="help-item">
+<strong>我記錄錯了一分。</strong>
+<p>請使用撤銷。應用會恢復到最後一分輸入之前的狀態，包括比分、發球方、搶七狀態和相關統計資料。</p>
+</div>
+<div class="help-item">
+<strong>我的錶盤無法使用該複雜功能。</strong>
+<p>請嘗試圓形或角落複雜功能位置。並非每個錶盤上的每個位置都支援同一種複雜功能。</p>
+</div>
+<div class="help-item"><strong>重新安裝 App 後，歷史記錄會保留嗎？</strong><p>請先開啟“歷史記錄”，確認 iCloud 行顯示 <b>Synced</b>。重新安裝後，使用同一 Apple 帳號並啟用 iCloud 雲盤，然後等待恢復完成。未完成 iCloud 同步的比賽只會保留在原裝置上。</p></div><div class="help-item"><strong>“歷史記錄”顯示 Waiting、Saving，或顯示 Sync paused 與 Retry。</strong><p><b>Waiting</b> 與 <b>Saving</b> 表示本地更改正在排隊，可在 iCloud 可用後上傳。如果顯示 <b>Sync paused</b> 與 <b>Retry</b>，請確認裝置已登入您打算使用的 Apple 帳號、iCloud 雲盤已啟用、網路可用且 iCloud 儲存空間未滿，然後輕點狀態行。iCloud 不可用不會刪除本地比賽。</p></div>
+</div>
+</section>
+<section id="contact">
+<h2>支援</h2>
+<div class="support-card">
+<h3>需要幫助或想建議新功能？</h3>
+<p>
+      聯絡：
+      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+</p>
+</div>
+</section>
+<footer>
+<div class="footer-meta">
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch 是 Apple Inc. 的商標。</span>
+</div>
+<nav aria-label="次級導航" class="footer-links">
+<a href="privacy.html">隱私</a>
+</nav>
+</footer>
+</main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
+<script defer="" src="../analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
+<title>مركز المساعدة - Tennis Score Wizard</title>
+<meta content="مساعدة لTennis Score Wizard: تسجيل Apple Watch، وإدخال المباراة يدويا وتحريرها، وفلاتر التاريخ، وسياق الملعب، وأبرز اللحظات على المباريات، والتدريبات، ومزامنة iCloud." name="description"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ar/help.html" rel="canonical"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="en" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html" hreflang="de" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/es/help.html" hreflang="es" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/fr/help.html" hreflang="fr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ja/help.html" hreflang="ja" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ko/help.html" hreflang="ko" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ru/help.html" hreflang="ru" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/tr/help.html" hreflang="tr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/help.html" hreflang="zh-Hans" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/it/help.html" hreflang="it" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/pt-BR/help.html" hreflang="pt-BR" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hant/help.html" hreflang="zh-Hant" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/nl/help.html" hreflang="nl" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ar/help.html" hreflang="ar" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Tennis Score Wizard" property="og:site_name"/>
+<meta content="مركز المساعدة - Tennis Score Wizard" property="og:title"/>
+<meta content="تعرف على تنسيقات التسجيل والمباريات اليدوية وسياق الملعب وأبرز المباريات والمشاركة والتدريبات الصحية ومزامنة iCloud الخاصة." property="og:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/ar/help.html" property="og:url"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
+<meta content="أيقونة تطبيق Tennis Score Wizard" property="og:image:alt"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="مركز المساعدة - Tennis Score Wizard" name="twitter:title"/>
+<meta content="احصل على المساعدة في تسجيل Apple Watch والمباريات اليدوية وسياق الملعب واللحظات البارزة والمشاركة والإحصائيات والمزامنة." name="twitter:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --panel-2: #111511;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-2: #00d84a;
+      --green-soft: rgba(40,255,95,0.10);
+      --yellow: #ffe34d;
+      --red: #ff4b55;
+    }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 16px;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    rgba(5,7,5,0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: 21px;
+}
+.app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14),
+    0 0 32px rgba(40,255,95,0.20),
+    0 14px 34px rgba(0,0,0,0.52);
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 0 28px rgba(40,255,95,0.10);
+}
+.eyebrow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(40,255,95,0.75);
+}
+h1 {
+  margin: 0;
+  max-width: 740px;
+  font-size: clamp(46px, 7.4vw, 88px);
+  line-height: 0.91;
+  letter-spacing: -0.078em;
+}
+.hero-copy p {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  color: #e9e9ed;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 780;
+}
+.hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  box-shadow:
+    0 42px 130px rgba(0,0,0,0.72),
+    0 0 90px rgba(40,255,95,0.16);
+}
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
+}
+section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px;
+}
+.section-subtitle {
+  max-width: 760px;
+  margin: -6px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 158px;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.card p,
+.faq p,
+.help-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.screenshot-card {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(40,255,95,0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 30px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.26);
+}
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(255,255,255,0.11);
+}
+.screenshot-card h3 {
+  margin: 17px 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.help-item,
+.faq {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.028);
+  border-radius: 23px;
+  padding: 18px;
+}
+.help-item strong,
+.faq strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacy-box {
+  border: 1px solid rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at top left, rgba(40,255,95,0.16), transparent 22rem),
+    rgba(40,255,95,0.06);
+  border-radius: 25px;
+  padding: 22px;
+  color: #eaffdf;
+  box-shadow: 0 0 46px rgba(40,255,95,0.08);
+}
+.privacy-box p {
+  color: #d8f7d0;
+  margin: 8px 0 0;
+}
+.support-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 22px;
+  min-height: 142px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+}
+footer {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .hero-copy p {
+    font-size: 18px;
+  }
+  .hero-visual {
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
+  }
+  .hero-ball {
+    border-radius: 66px;
+  }
+  .grid,
+  .help,
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Language selector */
+.nav {
+  overflow: visible;
+}
+
+.nav-links {
+  align-items: center;
+  overflow: visible;
+}
+
+.language-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  cursor: pointer;
+  color: #f5f7f5;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.045);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.language-menu summary::marker {
+  content: "";
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+.language-menu[open] summary {
+  border-color: var(--line-green);
+  background:
+    linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+    rgba(255,255,255,0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 0 24px rgba(40,255,95,0.13);
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: 210px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+    rgba(7,9,7,0.98);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,24,20,0.98);
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: #f2f4f2;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.language-options a:hover {
+  background: rgba(40,255,95,0.10);
+  text-decoration: none;
+}
+
+.language-options a.active {
+  color: var(--green);
+  background: rgba(40,255,95,0.11);
+}
+
+.language-options a.active::after {
+  content: "✓";
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
+/* Keep language dropdown above hero content */
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.language-menu {
+  z-index: 1100;
+}
+
+.language-options {
+  z-index: 1200;
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .language-menu {
+    position: relative;
+  }
+
+  .language-options {
+    left: 0;
+    right: auto;
+    width: min(210px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+  }
+
+  .language-options::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+/* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+/* Clickable brand and Help badge */
+.brand-home-link,
+.help-badge-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  min-width: 0;
+}
+
+.brand-home-link:hover,
+.brand-home-link:focus-visible,
+.help-badge-home-link:hover,
+.help-badge-home-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link:focus-visible,
+.help-badge-home-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.help-home-badge {
+  cursor: pointer;
+}
+
+/* CJK headings need a slightly clearer gap below the badge. */
+html[lang="ja"] .hero .help-home-badge,
+html[lang="zh-Hans"] .hero .help-home-badge {
+  margin-bottom: 22px;
+}
+
+
+/* Unified global product navigation */
+.nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "brand links language";
+  align-items: center;
+  column-gap: 26px;
+  min-height: 92px;
+  padding: 14px 16px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-links > a[aria-current="page"] {
+  color: var(--green);
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+.footer-meta,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    column-gap: 14px;
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: grid;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    font-size: 12px;
+  }
+
+  .nav-links > a[aria-current="page"] {
+    border-color: var(--line-green);
+    background: var(--green-soft);
+  }
+
+  .language-options {
+    right: 0;
+    left: auto;
+  }
+
+  .language-options::before {
+    right: 22px;
+    left: auto;
+  }
+
+  footer,
+  .footer-meta,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Shared animated brand treatment */
+.brand-title {
+  display: inline-block;
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-home-link {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .hero-copy,
+  .hero-copy > *,
+  .help,
+  .help-item,
+  .faq {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1,
+  section > h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero-copy p,
+  .help-item,
+  .faq {
+    overflow-wrap: break-word;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+</style>
+<link href="../release-1-1.css" rel="stylesheet"/>
+<link href="../release-1-6-en.css?v=20260922-flow" rel="stylesheet"/>
+<script defer="" src="../navigation-en.js?v=20260911-nav"></script>
+<link href="../back-to-top.css?v=20261001" rel="stylesheet"/>
+<script defer="" src="../back-to-top.js?v=20261001"></script>
+<style>html[dir=rtl] { direction: rtl; }
+html[dir=rtl] body, html[dir=rtl] .page { text-align: right; }
+html[dir=rtl] h1 { font-size: clamp(42px, 6.1vw, 72px); line-height: 1.28; letter-spacing: 0; }
+html[dir=rtl] h2, html[dir=rtl] h3 { line-height: 1.3; letter-spacing: 0; }
+html[dir=rtl] .language-options { text-align: right; }
+html[dir=rtl] input, html[dir=rtl] textarea { direction: rtl; text-align: right; }
+html[dir=rtl] .chart, html[dir=rtl] .stat-value { direction: ltr; }
+html[dir=rtl] .development-support-copy { text-align: right; }
+html[dir=rtl] .development-support-wallet code,
+html[dir=rtl] .development-support-qr-details code {
+  direction: ltr; unicode-bidi: isolate; text-align: left;
+}
+</style></head>
+<body>
+<main class="page">
+<nav aria-label="الملاحة الأساسية" class="nav">
+<div class="brand">
+<a aria-label="Tennis Score Wizard - الصفحة الرئيسية" class="brand-home-link" href="index.html">
+<img alt="أيقونة تطبيق Tennis Score Wizard" class="app-icon" decoding="async" height="1024" sizes="62px" src="../assets/tennis_ball_app_icon_1024-128.webp" srcset="../assets/tennis_ball_app_icon_1024-128.webp 128w, ../assets/tennis_ball_app_icon_1024-256.webp 256w" width="1024"/>
+<span class="brand-title">Tennis Score Wizard</span>
+</a>
+</div>
+<div class="nav-links">
+<a href="index.html#versions">الإصدارات</a>
+<a href="index.html#comparison">المقارنة</a>
+<a href="index.html#stats-guide">دليل الإحصاءات</a>
+<a href="whats-new.html">تحديثات التطبيق</a>
+<a aria-current="page" href="help.html">المساعدة</a>
+<a href="index.html#contact">تواصل معنا</a>
+</div>
+<details class="language-menu">
+<summary>🇸🇦 العربية</summary>
+<div class="language-options">
+<a href="../help.html">🇺🇸 English</a>
+<a href="../ja/help.html">🇯🇵 日本語</a>
+<a href="../de/help.html">🇩🇪 Deutsch</a>
+<a href="../fr/help.html">🇫🇷 Français</a>
+<a href="../ru/help.html">🇷🇺 Русский</a>
+<a href="../tr/help.html">🇹🇷 Türkçe</a>
+<a href="../es/help.html">🇪🇸 Español</a>
+<a href="../zh-Hans/help.html">🇨🇳 简体中文</a>
+<a href="../ko/help.html">🇰🇷 한국어</a>
+<a href="../it/help.html">🇮🇹 Italiano</a>
+<a href="../pt-BR/help.html">🇧🇷 Português (Brasil)</a>
+<a href="../zh-Hant/help.html">🇹🇼 繁體中文</a>
+<a href="../nl/help.html">🇳🇱 Nederlands</a>
+<a class="active" href="help.html">🇸🇦 العربية</a>
+</div>
+</details>
+</nav>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard - الصفحة الرئيسية" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
+<h1>مركز المساعدة</h1>
+<p>
+      سجّل نقاط المباراة على Apple Watch، أو أضف مباراة لعبتها سابقًا في Pro على iPhone. ستجد هنا مساعدة بشأن ملخصات الأشهر والسنوات، واللحظات البارزة، والمنافسات، ومشاركة النتائج، وأنظمة التسجيل، والتمارين، ومزامنة iCloud.
+    </p>
+</div>
+</section>
+<section id="getting-started">
+<h2>البدء</h2>
+<p class="section-subtitle">
+    كل ما تحتاجه لإعداد Tennis Score Wizard والبدء في تسجيل مباراتك الأولى.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>ما الذي أحتاجه لاستخدام Tennis Score Wizard؟</strong>
+<p>يتطلب تسجيل النقاط مباشرةً ساعة Apple Watch متوافقة مثبّتًا عليها Tennis Score Wizard. ويتيح لك Pro على iPhone إضافة مباراة لعبتها سابقًا. الوصول إلى بيانات تطبيق «صحتي» اختياري، ويُستخدم فقط لتسجيل التمارين والقياسات المتاحة.</p>
+</div>
+<div class="help-item">
+<strong>كيف أبدأ مباراتي الأولى؟</strong>
+<p>افتح التطبيق على Apple Watch واختر اللعب الفردي أو الزوجي. حدّد مجموعة واحدة أو الأفضل من ثلاث أو خمس مجموعات، ثم اختر قواعد المجموعات والأشواط ومن سيبدأ الإرسال. يمكنك تفعيل تسجيل التمرين إن أردت، ثم بدء المباراة.</p>
+</div>
+<div class="help-item">
+<strong>هل يتذكر التطبيق الإعداد الخاص بي؟</strong>
+<p>يتذكر التطبيق تكوين المباراة السابق حتى تتمكن من إعداد مباراة مماثلة بسرعة أكبر في المرة القادمة التي تلعب فيها. لا يزال بإمكانك تغيير أي خيار قبل البدء.</p>
+</div>
+<div class="help-item">
+<strong>هل يمكنني تسجيل مباراة بدون الوصول إلى الصحة؟</strong>
+<p>نعم. مباراة التسجيل والإحصاءات والتاريخ يعمل دون الوصول إلى الصحة. هناك حاجة إلى إذن فقط لتسجيل التمرين والقياسات ذات الصلة مثل معدل ضربات القلب والطاقة النشطة.</p>
+</div>
+</div>
+</section>
+<section id="manual-matches">
+<h2>أضف مباراة لعبتها أو عدّلها</h2>
+<p class="section-subtitle">Pro على iPhone · احفظ النتيجة التي تعرفها، ثم احتفظ بها بجانب سجل ساعتك.</p>
+<div class="help">
+<div class="help-item"><strong>كيف أضيف مباراة لعبتها سابقًا؟</strong><p>في تبويب «المباريات»، اضغط «إضافة مباراة سابقة». اختر اللعب الفردي أو الزوجي. في اللعب الفردي، يمكنك إدخال اسم الخصم أو اختيار لاعب محفوظ. بعد ذلك، حدّد نظام التسجيل وأدخل نتائج المجموعات، ثم اضغط «حفظ».</p></div>
+<div class="help-item"><strong>هل يمكنني تعديل مباراة أدخلتها يدويًا؟</strong><p>نعم. افتح تفاصيل المباراة واضغط «تعديل المباراة». يمكنك تصحيح التاريخ والوقت والمدة وقواعد التسجيل ونتائج المجموعات ونقاط كسر التعادل وحالة «مكتملة» أو «متوقفة». يحدّث «حفظ» السجل نفسه دون إنشاء نسخة أخرى، بينما يُبقي «إلغاء» البيانات كما هي. لا يغيّر المحرر نوع المباراة أو اللاعبين؛ استخدم الخيارات المنفصلة لتغيير الخصم أو معلومات المباراة الأخرى.</p></div>
+<div class="help-item"><strong>هل ستصل تصحيحاتي إلى Apple Watch؟</strong><p>نعم. يؤدي تعديل مباراة أُدخلت يدويًا إلى تحديث السجل المحفوظ نفسه على ساعة Pro المقترنة. ويمكن مزامنته مع Standalone عبر iCloud الخاص باستخدام حساب Apple نفسه. حدّث التطبيقين وانتظر اكتمال المزامنة. ستعتمد الإحصاءات واللحظات البارزة ذات الصلة على النتيجة المصححة.</p></div>
+<div class="help-item"><strong>هل يمكنني حفظ مباراة متوقفة أو نتيجة متعادلة؟</strong><p>نعم. اختر «متوقفة» إذا انتهى اللعب قبل تحديد فائز وفق القواعد المختارة. أدخل النتيجة التي وصلتم إليها، بما في ذلك أي مجموعة غير مكتملة. يمكنك حفظ التعادل. اختر «مكتملة» فقط عندما تُظهر النتيجة فائزًا.</p></div>
+<div class="help-item"><strong>كيف أدخل نتيجة شوط كسر التعادل في المجموعة؟</strong><p>أدخل نتائج الأشواط أولًا. عندما تشير النتيجة إلى شوط كسر تعادل وفق قواعد المجموعة التي اخترتها، مثل <span class="score-nowrap">7–6</span> — تظهر حقول إضافية لنقاط كسر التعادل لكل لاعب. أدخل النتيجتين إذا كنت تعرفهما أو اترك الحقلين فارغين. أما شوط كسر التعادل الحاسم، فأدخل نقاطه مباشرة بدلًا من الأشواط، كما هو موضح أدناه.</p></div>
+<div class="help-item"><strong>كيف أُدخل شوط كسر التعادل الحاسم؟</strong><p>لإدخال شوط كسر تعادل حاسم في مباراة من ثلاث أو خمس مجموعات، فعّل خيار «كسر التعادل في المجموعة الحاسمة»، واختر 7 أو 10 نقاط، ثم أدخل النقاط مباشرة في صف المجموعة الحاسمة، مثل <span class="score-nowrap">10–8</span>، ليس <span class="score-nowrap">1–0</span> كأشواط. وإذا كانت المباراة كلها شوط كسر تعادل، فاختر هذه القاعدة للمجموعة. ولا يكتمل شوط كسر التعادل إلا بفارق نقطتين.</p></div>
+<div class="help-item"><strong>ماذا لو توقف اللعب أثناء فاصل التعادل المحدد؟</strong><p>اختر «متوقفة» وأدخل نتيجة الأشواط المتعادلة التي بدأ عندها كسر التعادل في المجموعة، مثل <span class="score-nowrap">6–6</span>. تظهر حقول لنقاط كسر التعادل عند توقف اللعب. أدخل النتيجتين إذا عرفتهما، أو اتركهما فارغتين.</p></div>
+<div class="help-item"><strong>ماذا لو تذكرت وقت البدء، وليس المدة؟</strong><p>اختر البدء والانتهاء وأدخل كل من التواريخ والأوقات؛ يتم حساب المدة تلقائيا. إذا لعبت بعد منتصف الليل، فقم بتعيين تاريخ الانتهاء إلى اليوم التالي. بدلا من ذلك، اختر النهاية والمدة وأدخل المدة بالدقائق. إذا كنت لا تتذكر المدة التي لعبت فيها، فاترك المدة الاختيارية فارغة. عند توفيرها، يجب أن تكون المدة دقيقة واحدة على الأقل ولا تزيد عن 24 ساعة.</p></div>
+<div class="help-item"><strong>لماذا لا يمكنني اختيار وقت مستقبلي؟</strong><p>هذا النموذج مخصص لمباراة لُعبت بالفعل، وليس لمباراة مجدولة. لا يمكن أن يكون وقت انتهائها في المستقبل، ويجب أن يسبق وقت البدء وقت الانتهاء.</p></div>
+<div class="help-item"><strong>كيف يمكنني الانتقال بين حقول النتيجة؟</strong><p>اضغط على أي مربع درجة مباشرة، أو استخدم "الخلف" و"التالي" فوق لوحة المفاتيح. لا يقفز المؤشر بعد رقم واحد، حتى تتمكن من إدخال درجات مكونة من رقمين. يتم إغلاق لوحة المفاتيح؛ النقر خارج الحقل أو التمرير يرفضه أيضا.</p></div>
+<div class="help-item"><strong>ما الإحصاءات التي تضيفها مباراة أُدخلت يدويًا؟</strong><p>تساهم النتيجة المحفوظة والمجموعات والألعاب ونتائج التعادل التي تم إدخالها والمدة الاختيارية في التاريخ والملخصات ذات الصلة. تظهر قياسات نقطة تلو النقطة، والإرسال، والاستقبال، ونقطة كسر الإرسال، وقياسات التمرين للمباريات المسجلة على الساعة عند توفرها. يتم وضع علامة على المباريات اليدوية تمت إضافتها يدويا.</p></div>
+<div class="help-item"><strong>هل ستظهر المباراة على Apple Watch؟</strong><p>نعم. يمكن مزامنة الإدخالات اليدوية المحفوظة مع Pro Watch المقترنة ومن خلال iCloud الخاص إلى Standalone تحت نفس حساب Apple. يحتفظ كلا تطبيقي Watch بملصق الإدخال اليدوي ويخفيان الإحصاءات غير المتوفرة. حافظ على تحديث كلا المنتجين والسماح بالمزامنة حتى تنتهي.</p></div>
+<div class="help-item"><strong>هل يمكنني تغيير نتيجة سُجّلت على الساعة من iPhone؟</strong><p>لا. إضافة مباراة تم لعبها منفصلة عن تحرير تسجيل الساعة. يمكنك تغيير تعيين الخصم وسياق المطابقة الاختياري لمباراة موجودة دون تغيير درجاتها المسجلة أو إحصائياتها.</p></div>
+</div>
+</section>
+<div aria-label="أمثلة على المباراة اليدوية وسياق الملعب" class="release-proof-pair">
+<figure><a href="../assets/release-1-6-en/manual-edit-details.png" rel="noopener" target="_blank"><img alt="تمت إضافة المباراة يدويا في تفاصيل مباراة iPhone باستخدام زر تحرير المباراة" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-edit-details-900.webp" width="1320"/></a><figcaption>افتح مباراة أُدخلت يدويًا واضغط «تعديل المباراة» لتصحيح الوقت أو القواعد أو النتيجة.</figcaption></figure>
+<figure><a href="../assets/release-1-6-en/court-conditions.png" rel="noopener" target="_blank"><img alt="محرر سياق المباراة الاختياري مع اختيار كلاي وفي الهواء الطلق" height="2868" loading="lazy" src="../assets/release-1-6-en/court-conditions-900.webp" width="1320"/></a><figcaption>السطح والإعداد اختياريان.</figcaption></figure>
+</div>
+<section id="match-context">
+<h2>تذكر الملعب والمباراة</h2>
+<p class="section-subtitle">كل شيء اختياري. أضف سياقا أثناء الإدخال اليدوي أو أحدث في تفاصيل المباراة على iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>ماذا يمكنني أن أضيف؟</strong><p>اختر السطح والإعداد الداخلي أو الخارجي، وأدخل المكان أو النادي واسم الملعب أو رقمه، وأضف ملاحظة خاصة لهذه المباراة بالذات. يمكنك أيضا إضافة سياق إلى المباريات القديمة المسجلة على Apple Watch.</p></div>
+<div class="help-item"><strong>هل أحتاج إلى خرائط أو الوصول إلى الموقع؟</strong><p>لا. تُدخل أسماء الأماكن والملاعب يدويًا. لا تبحث هذه الميزة عن الملاعب على الخريطة ولا تسجّل موقعك عبر GPS.</p></div>
+<div class="help-item"><strong>هل يمكنني إعادة استخدام الملعب؟</strong><p>نعم. اختر من بين الملاعب الحديثة والمفضلة. يتم حفظ المفضلة على جهاز iPhone هذا ويتم الاحتفاظ بها منفصلة عن طريق حساب Apple. اختيار الملعب يملأ مكانه وشروطه، ولكنه لا يحل محل الملاحظة للمباراة الحالية. المفضلة نفسها ليست قائمة متزامنة مع iCloud.</p></div>
+<div class="help-item"><strong>ما الذي تتم مزامنته؟</strong><p>تتم مزامنة تفاصيل الملعب وملاحظات المباراة مع النتيجة المحفوظة من خلال نقل الجهاز المقترن ومزامنة iCloud الخاصة. لا تزال النتيجة الأصلية والإحصاءات المسجلة دون تغيير. إضافة السياق وعرضه وتحريره على iPhone؛ تحتفظ سجلات الساعة بالمزامنة، ولكنها لا توفر محرر سياق.</p></div>
+<div class="help-item"><strong>ماذا يظهر عندما أشارك؟</strong><p>تظهر شروط الملعب والموقع الذي تم إدخاله على صورة المباراة. ملاحظات المباراة الشخصية وملاحظات التنافس الخاصة لا تفعل ذلك. تحقق من المعاينة قبل المشاركة، خاصة إذا كنت لا ترغب في الكشف عن مكان.</p></div>
+<div class="help-item"><strong>هل يخلق سياق الملعب إنجازات إحصائية؟</strong><p>لا. يصف السطح والإعداد الداخلي/الخارجي والمكان والملاحظات أين وكيف لعبت. لا تؤثر على Match Highlights أو تنشئ سجلات خاصة بالسطح أو خاصة بالملعب.</p></div>
+</div>
+</section>
+<section id="match-highlights">
+<h2>اللحظات البارزة والمشاركة</h2>
+<div class="help">
+<div class="help-item"><strong>كم عدد اللحظات البارزة التي يمكنني رؤيتها؟</strong><p>يتعرّف التطبيق على 26 نوعًا من اللحظات المميزة، لكن هذا لا يعني ظهور 26 بطاقة في كل مباراة. تعرض «تفاصيل المباراة» على iPhone كل اللحظات التي تدعمها البيانات المحفوظة. وتضم الصورة المشتركة حتى ست لحظات، مع إعطاء الأولوية لأبرزها. وإذا لم توجد لحظات مناسبة، لا يظهر هذا القسم.</p></div>
+<div class="help-item"><strong>ما هي اللحظات التي يمكن أن تظهر؟</strong><p>قد تظهر الاستقبال بعد التأخر، ومجموعة أو شوط كسر تعادل حاسم، وأشواط كسر تعادل متقاربة، والفوز بمجموعات متتالية، وسلاسل الانتصارات، ومحطات الفوز المهمة، والأرقام الشخصية، وأنماط الإرسال والاستقبال. يتطلب بعضها إحصاءات النقاط، بينما يكفي لبعضها الآخر نتائج المجموعات والسجل المحفوظ.</p></div>
+<div class="help-item"><strong>هل تبقى الأرقام القياسية والمحطات المهمة ثابتة للأبد؟</strong><p>لا. يصفون التاريخ المسجل في التطبيق. يمكن أن تؤدي إضافة نتيجة قديمة أو تصحيح نتيجة أو تاريخ المباراة اليدوية أو حذف مباراة أو تغيير خصمها إلى تغيير المقارنات ذات الصلة وأبرز المنافسة. لا يتم استخدام المباريات اللاحقة كسجل سابق لنتيجة قديمة. تعتمد الانتصارات البارزة على الانتصارات المكتملة المؤهلة.</p></div>
+<div class="help-item"><strong>لماذا يمكن أن تختلف سلسلة الانتصارات في الإحصائيات عن تسليط الضوء على المباراة؟</strong><p>يمكن للإحصائيات والمنافسات حساب المباريات المتوقفة مع قائد واضح كنتائج مقررة. تستخدم متتاسلة الانتصارات واللحظات البارزة انتصارات مكتملة، لذلك لا تكسب المباراة غير المكتملة إنجازا مكتملا. يستخدم كلاهما السجل المحفوظ المتاح للمقارنة ذات الصلة.</p></div>
+<div class="help-item"><strong>هل تظهر اللحظات البارزة على Apple Watch؟</strong><p>لا. تظهر أبرز لحظات المباراة في «تفاصيل المباراة» بإصدار Pro على iPhone وفي الصور المشتركة. يحتفظ سجل الساعة بالنتيجة والإحصاءات المتاحة، من دون قسم منفصل لهذه اللحظات.</p></div>
+<div class="help-item"><strong>لماذا تظهر المباراة اليدوية عددا أقل من اللحظات البارزة؟</strong><p>يمكن أن تظهر المباريات اليدوية اللحظات البارزة بناء على درجاتها المحفوظة أو سجل المباريات. تحتاج نقاط الإرسال والاستقبال ونقاط كسر الإرسال إلى بيانات نقاط مسجلة.</p></div>
+</div>
+</section>
+<section id="match-flow-help">
+<h2>Match Flow وMomentum</h2>
+<p class="section-subtitle">يعرض Pro ثلاث طرق عرض لتدفق المباراة في تفاصيل المباراة المسجلة؛ يعرض كلا تطبيقي Watch الزخم المدمج في السجل.</p>
+<div class="help">
+<div class="help-item"><strong>متى يظهر Match Flow؟</strong><p>عندما تحتوي المباراة المحفوظة على سجل صالح نقطة تلو النقطة. تحتفظ المباريات المسجلة حديثا بهذا السجل تلقائيا، وبعض السجلات القديمة تحتوي على بيانات كافية أيضا. خلاف ذلك، يتم إخفاء قسم Match Flow.</p></div>
+<div class="help-item"><strong>ماذا تعني أشرطة Momentum وبلاط النتيجة؟</strong><p>يمثل كل عمود شوطًا مسجلًا: أخضر إذا فزت به، وأحمر إذا فاز به الخصم. تعني الأعمدة الأطول أن الشوط احتوى على نقاط أكثر، لا أن الفائز تقدم بفارق أكبر. وتعرض الخانة المجاورة نتيجة الأشواط بعد ذلك الشوط. وتُميّز أشواط كسر التعادل على حدة.</p></div>
+<div class="help-item"><strong>ماذا يوجد في الدرجات واللحظات الرئيسية؟</strong><p>يعرض قسم «النتائج» تطور النتيجة بعد كل شوط وعدد نقاطه المسجلة. ويختار قسم «اللحظات المهمة» أحداثًا يثبتها سجل النقاط، مثل شوط طويل أو كسر إرسال أو نقطة تحول. تظهر هذه العروض في «تفاصيل المباراة» بإصدار Pro، بينما يعرض سجل الساعة مخطط Momentum المختصر.</p></div>
+<div class="help-item"><strong>هل أحتاج إلى إدخال أي شيء أثناء المباراة؟</strong><p>لا. استمر في تسجيل النقاط كالمعتاد. يستخدم Match Flow تسلسل التسجيل المحفوظ، بدون عناصر تحكم جديدة في الملعب أو نقرات إضافية.</p></div>
+</div>
+</section>
+<section id="history-files-help">
+<h2>تصدير سجل المباريات واستعادته</h2>
+<p class="section-subtitle">تتوفر ملفات سجل المباريات في Pro على iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>أي ملف يجب أن أختار؟</strong><p>استخدم CSV أو Excel أو PDF لقراءة تقرير أو تحليله. وإذا أردت استعادة المباريات في Pro لاحقًا، فاستخدم JSON أو النسخة الاحتياطية الكاملة بصيغة ZIP. تحتوي النسخة الكاملة على أرشيف JSON وملفات CSV للمباريات والنقاط وملف Excel وتقرير PDF ودليل مختصر. لا يمكن استيراد التقارير وحدها.</p></div>
+<div class="help-item"><strong>كيف يمكنني التصدير أو الاستيراد؟</strong><p>افتح «ملفات سجل المباريات» في Pro واضغط «تصدير نسخة»، ثم اختر الصيغة واحفظ الملف أو شاركه. للاستعادة، اضغط «استيراد نسخة احتياطية» واختر ملف JSON أو ZIP. راجع المعاينة قبل استيراد المباريات المفقودة.</p></div>
+<div class="help-item"><strong>هل يؤدي الاستيراد إلى تكرار المباريات أو إعادة المباريات المحذوفة؟</strong><p>لا. يتم تخطي معرف المباراة الحالي، وتظل المعرفات التي تم حذفها سابقا من سجلك محذوفة. يضيف الاستيراد فقط المباريات المفقودة المؤهلة. احتفظ بنسخة منفصلة من ملف النسخ الاحتياطي الخاص بك في موقع تتحكم فيه.</p></div>
+<div class="help-item"><strong>هل ستحتوي النسخة الاحتياطية على سجل النقاط الكامل؟</strong><p>تحافظ صيغتا JSON وZIP على بيانات المباراة الأصلية المحفوظة، بما فيها النقاط المسجلة إن توفرت. وقد لا تحتوي المباريات القديمة أو المدخلة يدويًا على سجل نقطة بنقطة. ولا يضيف التصدير بيانات لم تُسجّل.</p></div>
+</div>
+</section>
+<section id="match-setup">
+<h2>إعداد مباراة</h2>
+<p class="section-subtitle">
+    اختر نظام المباراة والقواعد التي تناسب طريقة لعبك.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>ما الفرق بين الفردي والزوجي؟</strong>
+<p>اختر الفردي للاعب واحد على كل جانب والزوجي للاعبين على كل جانب. يتم حفظ التنسيق المحدد مع المباراة ويستخدم أيضا عند تسجيل التمرين.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يعني الأفضل من ثلاث أو خمس مجموعات؟</strong>
+<p>أفضل 3 يعني أن الجانب الأول الذي يفوز بمجموعتين يفوز بالمباراة. أفضل 5 يعني أن الجانب الأول الذي يفوز بثلاث مجموعات يفوز بالمباراة.</p>
+</div>
+<div class="help-item">
+<strong>ماذا تعني مجموعة واحدة؟</strong>
+<p>في خيار المجموعة الواحدة، تنتهي المباراة بنهاية المجموعة المختارة. وتحدد قواعد هذه المجموعة عدد الأشواط المطلوبة وما إذا كان سيُقام شوط كسر تعادل.</p>
+</div>
+<div class="help-item">
+<strong>كيف تعمل قواعد المجموعات؟</strong>
+<p>اختر قواعد المجموعة المناسبة لنظام مباراتك. تحافظ خيارتا المجموعة دون كسر تعادل والمجموعة مع كسر تعادل على نظام الستة أشواط التقليدي، بينما توفر المجموعات القصيرة خيارات رسمية أسرع. ويمكنك ضبط كل قاعدة بنفسك في المجموعة المخصصة. يطبق التطبيق القواعد التي اخترتها تلقائيًا.</p>
+</div>
+<div class="help-item">
+<strong>كيف تعمل المجموعات القصيرة الرسمية؟</strong>
+<p>يفوز بالمجموعة القصيرة من يصل أولًا إلى أربعة أشواط. اختر ما إذا كان شوط كسر التعادل يبدأ عند <span class="score-nowrap">3–3</span> أَوْ <span class="score-nowrap">4–4</span>، ثم اختر فاصل التعادل العادي إلى 7، والفوز ب 2، أو كسر التعادل 5 نقاط مع نقطة حسمة في <span class="score-nowrap">4–4</span>. يتم عرض المجموعة المحددة في الإعداد والتسجيل المباشر والتاريخ.</p>
+</div>
+<div class="help-item">
+<strong>ما الذي يغيره No-Ad؟</strong>
+<p>يغيّر No-Ad قاعدة الشوط فقط: عند التعادل 40–40 تحسم النقطة التالية الشوط. ويمكن دمجه مع أنظمة المجموعات المتاحة دون تغيير عدد الأشواط المستهدف أو إعدادات كسر التعادل.</p>
+</div>
+<div class="help-item">
+<strong>كيف تعمل المجموعة المخصصة؟</strong>
+<p>في المجموعة المخصصة، تحدد عدد الأشواط المطلوبة وفارق الفوز، وما إذا كان شوط كسر التعادل سيُقام ومتى يبدأ، وعدد نقاطه وفارق الفوز فيه. يمكنك مثلًا اختيار مجموعة من ثمانية أشواط. يجمع ملخص الإعداد هذه القواعد لتراجع النظام كاملًا.</p>
+</div>
+<div class="help-item">
+<strong>هل يمكن أن تتعارض قواعد طول المباراة والمجموعات والأشواط مع شوط كسر التعادل الحاسم؟</strong>
+<p>لا. يحدد طول المباراة عدد المجموعات المطلوبة، وتحدد قواعد المجموعة كيفية انتهائها، ويحدد نظام الشوط القياسي أو No-Ad ما يحدث عند التعادل 40–40. ولا يحل شوط كسر التعادل الحاسم الاختياري إلا محل المجموعة الأخيرة الفاصلة عندما يصبح هذا الخيار متاحًا.</p>
+</div>
+<div class="help-item">
+<strong>كيف يمكنني اختيار المرسل الأول؟</strong>
+<p>يمكنك تحديد من يبدأ الإرسال بنفسك أو استخدام القرعة المدمجة لاتخاذ القرار عشوائيًا.</p>
+</div>
+<div class="help-item">
+<strong>ما فائدة القرعة؟</strong>
+<p>تحدد القرعة النتيجة عشوائيًا لتساعدك على اختيار من يبدأ الإرسال. ويمكنك مراجعة الإعداد وتأكيده قبل بدء المباراة.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يفعل Record Workout؟</strong>
+<p>عند تفعيل تسجيل التمرين ومنح الإذن اللازم، يبدأ تمرين تنس مع المباراة. ويمكن للتطبيق جمع بيانات نبض القلب والطاقة النشطة والمدة المتاحة، ثم حفظ التمرين في تطبيق «صحتي».</p>
+</div>
+</div>
+</section>
+<section id="scoring">
+<h2>تسجيل مباراة</h2>
+<p class="section-subtitle">
+    سجل كل نقطة بينما يدير التطبيق تسجيل التنس تلقائيا.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>كيف يمكنني تسجيل نقطة؟</strong>
+<p>استخدم عناصر التحكم في التسجيل لتسجيل ما إذا كنت أنت أو الخصم قد فزت بالنقطة. يتم تحديث النتيجة مباشرة بعد كل اختيار.</p>
+</div>
+<div class="help-item">
+<strong>هل يقوم التطبيق بحساب الأشواط والمجموعات تلقائيا؟</strong>
+<p>نعم. يتابع Tennis Score Wizard النقاط والأشواط والمجموعات وحالات التعادل والأفضلية وكسر التعادل تلقائيًا وفق قواعد المباراة المختارة.</p>
+</div>
+<div class="help-item">
+<strong>كيف يُحسب التعادل 40–40 والأفضلية؟</strong>
+<p>مع الشوط القياسية، <span class="score-nowrap">40–40</span> تصبح النتيجة تعادلاً 40–40: يجب التقدم بنقطة ثم الفوز بالنقطة التالية لحسم الشوط. في نظام No-Ad، تحسم النقطة التالية بعد التعادل الشوط.</p>
+</div>
+<div class="help-item">
+<strong>كيف تُحسب نقاط شوط كسر التعادل؟</strong>
+<p>عندما تتطلب القاعدة المحددة فاصل التعادل، يتحول التطبيق من نقاط التنس العادية إلى نقاط التعادل الرقمية ويحدد الفائز باستخدام قاعدة التعادل التي تم تكوينها.</p>
+</div>
+<div class="help-item">
+<strong>ما شوط كسر التعادل الحاسم وكيف أبدأه؟</strong>
+<p>يحل شوط كسر التعادل الحاسم محل المجموعة الأخيرة. إذا تعادل اللاعبان بمجموعة لكل منهما في نظام الأفضل من ثلاث، أو بمجموعتين لكل منهما في الأفضل من خمس، فافتح القائمة قبل بدء المجموعة الحاسمة واختر Match Tie-Break. ثم اختر اللعب حتى 7 أو 10 نقاط. يجب أن يبلغ الفائز العدد المحدد ويتقدم بفارق نقطتين. يعمل هذا الخيار في الفردي والزوجي، وتظهر النتيجة في السجل وتفاصيل المباراة والإحصاءات وبطاقات المشاركة.</p>
+</div>
+<div class="help-item">
+<strong>كيف يختلف كسر التعادل في المباراة عن كسر التعادل المحدد؟</strong>
+<p>يحسم شوط كسر التعادل مجموعة واحدة، عادةً عندما تصبح النتيجة <span class="score-nowrap">6–6</span>، ويتم تسجيل المجموعة على أنها <span class="score-nowrap">7–6</span>. أما شوط كسر التعادل الحاسم فيحل محل المجموعة الأخيرة كاملة ويظهر منفصلًا بين معقوفين، مثل [<span class="score-nowrap">10–7</span>].</p>
+</div>
+<div class="help-item">
+<strong>كيف تعمل علامة الإرسال؟</strong>
+<p>عندما تخدم، تسلط كرة التنس الضوء على الجانب الذي يجب أن تخدم منه. عندما يخدم الخصم، فإنه يظهر جانب إرسال الخصم من وجهة نظر ساعتك.</p>
+</div>
+<div class="help-item">
+<strong>كيف يعرف التطبيق من يرسل الكرة؟</strong>
+<p>يبدّل التطبيق اللاعب المرسل تلقائيًا مع انتهاء الأشواط وتقدّم نقاط كسر التعادل. وإذا اختلف ما تعرضه الساعة عن المباراة الفعلية، يمكنك تصحيح المرسل من قائمة المباراة.</p>
+</div>
+<div class="help-item">
+<strong>متى يغيّر اللاعبون جهتي الملعب؟</strong>
+<p>يعرض التطبيق تذكيرا بالتغيير الجانبي عند تغييرات الشوط المناسبة. التذكير إعلامي ويختفي بعد استئناف اللعب.</p>
+</div>
+</div>
+</section>
+<section id="match-controls">
+<h2>عناصر التحكم في المباراة</h2>
+<p class="section-subtitle">
+    تصحيح الأخطاء، وإدارة المباراة الحالية، وإيقاف الجلسة غير المكتملة بأمان.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>كيف يعمل التراجع؟</strong>
+<p>يزيل التراجع آخر نقطة سُجّلت ويعيد حالة المباراة السابقة، بما فيها النقاط والأشواط والمجموعات والمرسل وجهة الإرسال وحالة كسر التعادل والإحصاءات المرتبطة.</p>
+</div>
+<div class="help-item">
+<strong>ماذا تفعل القائمة؟</strong>
+<p>أثناء المباراة المباشرة، توفر القائمة إمكانية الوصول إلى إجراءات إضافية مثل تصحيح الخادم أو فتح سجل المباريات أو إيقاف المباراة الحالية أو إعداد مباراة جديدة.</p>
+</div>
+<div class="help-item">
+<strong>متى يجب أن أستخدم Switch Server؟</strong>
+<p>استخدم «تغيير المرسل» إذا عرض التطبيق مرسلًا مختلفًا عمن يرسل فعليًا. يصحح ذلك جهة الإرسال دون إضافة نقطة أو حذفها.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يحدث عندما أوقف المباراة؟</strong>
+<p>يمكن حفظ المباراة غير المكتملة بنتيجتها الحالية والوقت المنقضي والمجموعات المنتهية وتقدم المجموعة الجارية والنقاط والإحصاءات المتاحة. وتبقى حالتها «متوقفة» في السجل. إذا كان أحد الطرفين متقدمًا، تُحتسب النتيجة ضمن سجل المباريات ونسبة الفوز وسلاسل النتائج. أما التوقف عند التعادل فنتيجته محايدة.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يحدث إذا توقفت قبل تسجيل نقطة؟</strong>
+<p>المباراة الفارغة ليس لديها تقدم في النتيجة لحفظها. تظهر معلومات التمرين فقط عند تسجيل التمرين.</p>
+</div>
+<div class="help-item">
+<strong>هل يمكنني بدء مباراة جديدة بعد إكمال مباراة أو إيقافها؟</strong>
+<p>نعم. بعد إكمال المباراة الحالية أو إيقافها، يمكنك العودة إلى الإعداد وبدء مباراة أخرى، مع إمكانية إعادة استخدام إعدادات المباراة السابقة.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يجب أن أفعل بعد تسجيل نقطة عن طريق الخطأ؟</strong>
+<p>استخدم التراجع في أقرب وقت ممكن. إنه يعيد الحالة الكاملة من قبل النقطة غير الصحيحة وهو أكثر أمانا من محاولة التعويض عن طريق منح نقطة أخرى.</p>
+</div>
+</div>
+</section>
+<section id="rivalries">
+<h2>الخصوم وسجل المواجهات</h2>
+<p class="section-subtitle">
+    اختر خصما فرديا محفوظا على Apple Watch وقم بإنشاء سجل خاص وجها لوجه تلقائيا.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>كيف يمكنني إنشاء خصم؟</strong>
+<p>افتح قسم «المنافسات» في Pro على iPhone وأدخل اسم اللاعب الكامل واسمًا قصيرًا للساعة. يقتصر الاسم القصير على 16 حرفًا ليبقى واضحًا أثناء الإعداد وتسجيل النقاط. يمكن اختيار الخصوم المتزامنين في Standalone على Apple Watch، لكن لا يمكن إنشاء ملفات اللاعبين أو تعديلها هناك.</p>
+</div>
+<div class="help-item">
+<strong>كيف يمكنني حذف الخصم؟</strong>
+<p>في «المنافسات» على iPhone، اضغط مطولًا بطاقة اللاعب، واختر «حذف اللاعب»، ثم أكّد العملية. تبقى مبارياته في السجل من دون خصم مرتبط بها، ويمكنك ربطها بلاعب آخر لاحقًا.</p>
+</div>
+<div class="help-item">
+<strong>كيف يمكنني اختيار خصم على Apple Watch؟</strong>
+<p>اختر الفردي أثناء إعداد المباراة، وافتح الخصم، وحدد ضيفا أو لاعبا محفوظا قبل البدء. يسجل الضيف مباراة عادية دون إضافتهاا إلى التنافس. لا يعين الزوجي خصما واحدا لمباراة الفريق.</p>
+</div>
+<div class="help-item">
+<strong>ما الذي يتضمنه وجها لوجه؟</strong>
+<p>يعتمد سجل المواجهات المباشرة على مباريات الفردي المرتبطة بهذا اللاعب ذات النتيجة الواضحة. تُحتسب المباريات المكتملة والمتوقفة التي يتقدم فيها أحد الطرفين، بينما يظل التعادل محايدًا. وقد يعرض أيضًا المجموعات والأشواط وكسر التعادل والنقاط والإرسال والاستقبال وفرص كسر الإرسال والمدة والتمارين وقائمة المباريات، بحسب البيانات المسجلة.</p>
+</div>
+<div class="help-item">
+<strong>ما المقصود بآخر خمس مواجهات مقارنة بكل المواجهات؟</strong>
+<p>تُقارن نسبة فوزك في آخر خمس مواجهات ذات نتيجة واضحة بنسبة فوزك خلال الفترة المختارة كلها. وإذا كان عدد المواجهات أقل من خمس، تُستخدم المواجهات المتاحة. وتتغير المقارنة بحسب اختيار «كل الفترة» أو «هذا العام» أو «آخر 30 يومًا».</p>
+</div>
+<div class="help-item">
+<strong>ما هو الفوز بعد خسارة المجموعة 1؟</strong>
+<p>إنها مباراة حاسمة فزت بها بعد خسارة المجموعة الأولى المكتملة. يوضح النص التفصيلي عدد هذه الانتصارات التي سجلتها وعدد المباريات المؤهلة التي بدأت بخسارة المجموعة الأولى. على سبيل المثال، 2 من 5 يعني فوزين من خمس مباريات مؤهلة، وليس محاولتين خارج الحد التعسفي.</p>
+</div>
+<div class="help-item">
+<strong>ما هي السلسلة الحالية وأفضل سلسلة انتصارات؟</strong>
+<p>السلسلة الحالية هي أحدث تسلسل غير منقطع من الانتصارات أو الخسائر المقررة. أفضل سلسلة انتصارات هي أطول فترة غير منقطعة من انتصارات المباراة المقررة في الفترة المحددة.</p>
+</div>
+<div class="help-item">
+<strong>هل يمكنني تعيين مباراة أقدم للاعب؟</strong>
+<p>نعم. افتح مباراة الفردي المحفوظ على iPhone، واختر تعيين في قسم الخصم، وحدد المشغل الصحيح. يمكنك تغيير المهمة أو إزالتها لاحقا دون تغيير النتيجة أو الإحصاءات المسجلة. يتم إرسال المهمة المحدثة مرة أخرى إلى سجل Pro المقترن ويمكن أيضا الوصول إلى Standalone من خلال مزامنة iCloud الخاصة.</p>
+</div>
+<div class="help-item">
+<strong>كيف يتم منع اللاعبين المكررين؟</strong>
+<p>يحتوي كل لاعب على معرف داخلي مستقر، في حين يتحقق الإنشاء أيضا من الأسماء الكاملة والمشاهدة الطبيعية لمنع التكرارات العرضية. تستخدم المزامنة المعرف المستقر وسجلات الحذف حتى يتم تحديث نفس الملف الشخصي بدلا من إعادة إنشائه على جهاز آخر.</p>
+</div>
+<div class="help-item">
+<strong>هل تتم مشاركة الملاحظات الخاصة؟</strong>
+<p>لا. تبقى الملاحظة الخاصة في ملف تعريف المنافسة ويتم استبعادها من النصوص المشتركة والبطاقات المرئية. تستخدم البطاقات المرئية المشتركة مرشح الوقت النشط وتحافظ على ترتيب ثابت: التسجيل والاجتماعات الأخيرة، ومباراة الأداء، ثم الأنماط وسياق التمرين.</p>
+</div>
+</div>
+</section>
+<section id="statistics">
+<h2>فهم إحصائيات المباراة</h2>
+<p class="section-subtitle">
+    تعرّف معنى إحصاءات المباريات المحفوظة وكيفية حسابها.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>ما هو مجموع النقاط؟</strong>
+<p>يظهر إجمالي النقاط عدد النقاط المسجلة التي تم تسجيلها خلال المباراة. يفصل ملخص النقاط النقاط التي فزت بها عن النقاط التي فاز بها الخصم.</p>
+</div>
+<div class="help-item">
+<strong>ما هي الأشواط المسجلة؟</strong>
+<p>الألعاب المسجلة هي ألعاب تحتوي على بيانات نقطة تلو النقطة. في المباراة المتوقفة، يمكن أن يشمل ذلك اللعبة الحالية غير المكتملة، لذلك هذه القيمة ليست النتيجة الرسمية للعبة.</p>
+</div>
+<div class="help-item">
+<strong>ما هي إحصائيات نقطة الكسر؟</strong>
+<p>تعرض فرص كسر إرسالك التي واجهتها وأنقذتها، وفرص كسر إرسال الخصم التي حصلت عليها واستغللتها. ولا تُحتسب نقاط شوط كسر التعادل ضمنها.</p>
+</div>
+<div class="help-item">
+<strong>هل يتم تحديث الإحصائيات تلقائيا؟</strong>
+<p>نعم. يتم تحديث الإحصائيات من النقاط التي تسجلها. يعكس التراجع أيضا التأثير الإحصائي للنقطة الأخيرة حتى تستمر الأرقام في مطابقة النتيجة المستعادة.</p>
+</div>
+<div class="help-item">
+<strong>لماذا يمكن أن تحتوي المباراة المتوقفة على إحصائيات غير مكتملة؟</strong>
+<p>تتضمن المباراة المتوقفة فقط النقاط والمواقف التي حدثت قبل إيقافها. لذلك قد تكون الإحصاءات التي تتطلب أحداث مباراة لاحقة أو إكمالا طبيعيا غائبة أو أقل اكتمالا.</p>
+</div>
+<div class="help-item">
+<strong>لماذا يمكن أن تظهر المباراة القديمة المحفوظة إحصائيات أقل؟</strong>
+<p>قد لا تتضمن المباريات المحفوظة بإصدارات أقدم جميع الإحصاءات التي أُضيفت لاحقًا. يعرض التطبيق فقط التفاصيل التي سُجلت عند لعب المباراة.</p>
+</div>
+</div>
+</section>
+<section id="companion-sync">
+<h2>مزامنة Pro وiPhone</h2>
+<p>يتضمن Pro تطبيق تسجيل النقاط الكامل على Apple Watch، إلى جانب تحليل المباريات على iPhone. لست بحاجة إلى شراء Tennis Score Wizard (Standalone) بشكل منفصل.</p>
+<p class="section-subtitle">
+    سجل نقاطك على Apple Watch، ثم استكشف سجل المباريات المتزامنة والنتائج والإحصائيات ورؤى التمرين على iPhone.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>أين يمكنني إعداد وتسجيل المباريات في Pro؟</strong>
+<p>يُعدّ إعداد المباراة وتسجيل نقاطها مباشرةً على Apple Watch. ويمكنك في Pro على iPhone إدخال نتيجة مباراة لعبتها، وإضافة تفاصيل اختيارية عن الملعب، ومراجعة المباريات المحفوظة ومشاركة أبرز لحظاتها. إدخال النتائج يدويًا لا يحوّل iPhone إلى لوحة لتسجيل النقاط أثناء اللعب.</p>
+</div>
+<div class="help-item">
+<strong>ما الذي يظهر على iPhone؟</strong>
+<p>يعرض تطبيق iPhone آخر نتيجة وسجل المباريات، بما فيها المباريات المضافة يدويًا، ونتائج المجموعات وأشواط كسر التعادل، وتفاصيل الملعب الاختيارية وأبرز اللحظات المتاحة. ويمكن أن تتضمن المباريات المسجلة على Apple Watch إحصاءات النقاط والإرسال والاستقبال ونقاط كسر الإرسال ومجريات المباراة، إضافةً إلى ملخصات التمرين المتاحة.</p>
+</div>
+<div class="help-item">
+<strong>كيف يتزامن سجل المباراة؟</strong>
+<p>يستخدم Pro طريقتين مستقلتين للمزامنة. يستطيع Watch Connectivity إرسال المباراة المحفوظة مباشرةً بين Apple Watch وiPhone المقترنين، وهو عادةً الخيار المحلي الأسرع عند توفر الجهازين. أما CloudKit فيزامن السجل عبر iCloud ويتيح استعادته بين Standalone وPro عند استخدام حساب Apple نفسه. لا تعتمد إحدى الطريقتين على الأخرى، وإذا وصلت المباراة بالطريقتين يحتفظ التطبيقان بسجل واحد محدّث.</p>
+</div>
+<div class="help-item">
+<strong>إذا أضفتُ الخصم لاحقًا على iPhone، فهل يظهر في سجل Apple Watch؟</strong>
+<p>نعم. تعيين الخصم هو جزء من المباراة المحفوظة. يمكن ل Pro تقديم التحديث مباشرة إلى Apple Watch المقترنة، ويمكن لمزامنة iCloud الخاصة تسليمها إلى Standalone عندما تستخدم التطبيقات نفس حساب Apple. احتفظ بالتطبيقات متاحة لفترة وجيزة إذا لم يظهر التحديث بعد.</p>
+</div>
+<div class="help-item">
+<strong>ماذا علي أن أفعل إذا لم تظهر المباراة على iPhone؟</strong>
+<p>تأكد من إقران Apple Watch الصحيحة، وأبق كلا الجهازين قريبين، وافتح Tennis Score Wizard على Apple Watch وiPhone. تأكد أيضا من أن كلا الجهازين يستخدمان حساب Apple المقصود وتحقق من حالة iCloud في "السجل". تظل المباراة المحفوظة محمية محليا أثناء انتظارها ويمكنها المزامنة عندما يصبح اتصال الجهاز المقترن أو iCloud متاحا.</p>
+</div>
+<div class="help-item">
+<strong>هل تفاصيل التمرين متزامنة أيضا؟</strong>
+<p>عندما تكون بيانات التمرين متاحة، يمكن ل Pro إظهار مدة المباراة ومتوسط معدل ضربات القلب والحد الأقصى لمعدل ضربات القلب والطاقة النشطة مع المباراة المحفوظة على كلا الجهازين.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يحدث عندما أحذف سجل المباريات؟</strong>
+<p>يؤدي حذف مباراة فردي أو السجل الكامل في Pro إلى مزامنة هذا التغيير بين iPhone وApple Watch، وعند توفره، من خلال iCloud. يطلب التطبيق التأكيد قبل حذف السجل الكامل.</p>
+</div>
+</div>
+</section>
+<section id="icloud-sync">
+<h2>مزامنة المباريات واستعادتها عبر iCloud</h2>
+<p class="section-subtitle">
+    قم بمزامنة المباريات المحفوظة بين Standalone وPro دون إنشاء حساب Tennis Score Wizard.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>ما المطلوب لمزامنة المباريات عبر iCloud؟</strong>
+<p>تأكد من استخدام حساب Apple نفسه على Apple Watch وiPhone عند استخدام Pro. فعّل iCloud Drive، واتصل بالإنترنت، وانتظر حتى تكتمل المزامنة الأولى. يمكنك متابعة تسجيل النقاط حتى عندما لا يتوفر iCloud.</p>
+</div>
+<div class="help-item">
+<strong>هل يمكن ل Standalone وPro مشاركة المباريات؟</strong>
+<p>نعم. يستخدم كلا الإصدارين نفس مساحة تخزين iCloud للمباريات المحفوظة. عندما يستخدم كلا التطبيقين نفس حساب Apple، يمكن أن تظهر المباراة المحفوظة في Standardone في Pro، ويمكن أن تظهر المباراة المحفوظة في Pro في Standalone.</p>
+</div>
+<div class="help-item">
+<strong>كيف أعرف أن المزامنة انتهت؟</strong>
+<p>افتح "السجل" وتحقق من صف حالة iCloud. <b>تمت المزامنة</b> يعني أن أحدث مزامنة انتهت بنجاح وتظهر تاريخها ووقتها. <b>جارٍ المزامنة</b> يعني أن المزامنة نشطة. <b>بانتظار الاتصال</b> مع <b>جارٍ الحفظ</b> يعني أن التغيير المحلي يتم وضعه في قائمة الانتظار بأمان على iCloud. <b>المزامنة متوقفة مؤقتًا</b> مع <b>إعادة المحاولة</b> يعني أن المزامنة الأخيرة لم تكتمل؛ اضغط على هذا السطر للمحاولة مجددًا.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يحدث إذا غيرت حساب Apple الخاص بي؟</strong>
+<p>لكل حساب Apple سجل مباريات خاص به في قاعدة بيانات CloudKit الخاصة. تبقى سجلات الحسابات المختلفة منفصلة ولا تُدمج. عند تغيير الحساب، يعرض التطبيق السجل المحلي وسجل iCloud الخاصين بالحساب الحالي. وإذا عدت إلى الحساب السابق، يظهر سجله مجددًا بعد المزامنة. وقبل إزالة نسخته المحلية من الجهاز، يحتفظ التطبيق بالمباريات التي لم تُزامَن بعد في نسخة استعادة مشفّرة مرتبطة بذلك الحساب. لا تُرسل هذه المباريات إلى الحساب الجديد، ولا يؤدي تبديل الحساب إلى حذف ما حُفظ سابقًا في iCloud لأي منهما.</p>
+</div>
+<div class="help-item">
+<strong>هل ستستعيد إعادة تثبيت التطبيق مبارياتي؟</strong>
+<p>نعم، إذا اكتملت مزامنة المباريات قبل حذف التطبيق. تأكد أولًا من ظهور الحالة <b>تمت المزامنة</b> في السجل. بعد إعادة التثبيت، استخدم حساب Apple نفسه، واترك iCloud Drive مفعّلًا، وافتح التطبيق وانتظر تنزيل المباريات.</p>
+</div>
+<div class="help-item">
+<strong>هل حذف التطبيق يحذف سجل iCloud؟</strong>
+<p>لا. لا تقوم إزالة التطبيق في حد ذاته بحذف سجلات المباراة التي تمت مزامنتها بالفعل مع iCloud. يمكن تنزيل هذه السجلات مرة أخرى بعد إعادة التثبيت. يؤدي حذف المباريات من داخل Tennis Score Wizard إلى مزامنة عمليات الحذف هذه عندما يصبح iCloud متاحا.</p>
+</div>
+<div class="help-item">
+<strong>هل يمكن للمطور رؤية مبارياتي المتزامنة؟</strong>
+<p>لا. يخزن CloudKit السجلات المتزامنة في قاعدة البيانات الخاصة لحساب Apple الخاص بك. بشكل افتراضي، يمكن لهذا المستخدم فقط الوصول إلى قاعدة البيانات الخاصة.</p>
+</div>
+</div>
+</section>
+<section id="health-workouts">
+<h2>الصحة والتدريبات</h2>
+<p class="section-subtitle">
+    سجل جلسة التنس الخاصة بك وفهم المعلومات الصحية المعروضة بعد المباراة.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>كيف يمكنني تسجيل تمرين التنس؟</strong>
+<p>فعّل «تسجيل التمرين» عند إعداد المباراة واسمح بالوصول المطلوب إلى تطبيق «صحتي». يبدأ التمرين مع المباراة وينتهي عند إكمالها أو إيقافها.</p>
+</div>
+<div class="help-item">
+<strong>كيف يعمل معدل ضربات القلب المباشر؟</strong>
+<p>أثناء تسجيل التمرين، يعرض التطبيق نبض القلب لحظيًا إذا منحت الإذن وكانت Apple Watch ترسل قياسات النبض.</p>
+</div>
+<div class="help-item">
+<strong>ما هو متوسط ومعدل ضربات القلب الأقصى؟</strong>
+<p>يُحسب متوسط نبض القلب من القياسات المتاحة خلال التمرين. أما الحد الأقصى فهو أعلى قياس مسجّل خلاله.</p>
+</div>
+<div class="help-item">
+<strong>ما هي الطاقة النشطة؟</strong>
+<p>الطاقة النشطة هي الطاقة المقدرة التي يتم حرقها من خلال النشاط أثناء التمرين. تقدر Apple Watch هذه القيمة من معلومات الصحة والحركة المتاحة لها، ويعرض التطبيق إجمالي التمرين المقدم من خلال HealthKit.</p>
+</div>
+<div class="help-item">
+<strong>أين يتم حفظ التمرين؟</strong>
+<p>بعد الانتهاء بنجاح، يتم حفظ التمرين في الصحة ويمكن أن يظهر أيضا في تطبيق اللياقة البدنية على iPhone، وفقا للأذونات وسلوك المزامنة لأجهزتك.</p>
+</div>
+<div class="help-item">
+<strong>لماذا قد تظهر إحصائيات التمرين بعد التأخير؟</strong>
+<p>قد يحتاج تطبيق «صحتي» إلى وقت قصير لحفظ قياسات التمرين بعد انتهائه. انتظر قليلًا ثم افتح المباراة المكتملة مجددًا.</p>
+</div>
+<div class="help-item">
+<strong>لماذا الإحصاءات الصحية مفقودة؟</strong>
+<p>يمكن أن تكون القيمة غير متاحة عندما لا يتم منح الإذن، أو لم يقدم المستشعر عينات كافية، أو تم تعطيل تسجيل التمرين، أو لم تنته الصحة بعد من حفظ بيانات التمرين.</p>
+</div>
+<div class="help-item">
+<strong>هل سيظل يتم حفظ المباراة إذا فشل تسجيل التمرين؟</strong>
+<p>درجة المباراة وسجل المباراة منفصلان عن الصحة. لا تمنع مشكلة الإذن أو بيانات التمرين حفظ سجل التسجيل نفسه.</p>
+</div>
+</div>
+</section>
+<section id="match-history">
+<h2>سجل المباريات</h2>
+<p class="section-subtitle">
+    ابحث عن المباريات المحفوظة حسب السنة والشهر على Apple Watch، ثم راجع النتائج بصيغة التنس المختصرة.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>كيف يمكنني العثور على مباراة قديم على Apple Watch؟</strong>
+<p>في السجل، اضغط على "الفترة"، واختر سنة، ثم شهرا أو سنة كاملة. يتم تقديم سنوات وشهور فقط مع المباريات المحفوظة. اختر جميع التواريخ لمسح الفترة، واستخدم الكل أو 1v1 أو 2v2 لتصفية نوع المباراة. تتوفر عناصر التحكم هذه في كل من Pro و Standalone.</p>
+</div>
+<div class="help-item">
+<strong>هل يعرض سجل Apple Watch أول 50 مباراة فقط؟</strong>
+<p>لا. يعرض أولًا 50 مباراة مطابقة، ثم يحمّل المباريات الأقدم على دفعات من 50 أثناء التصفح. ويمكنك أيضًا اختيار «تحميل مباريات أقدم». يشمل الملخص كل المباريات المحفوظة المطابقة، وليس الدفعة الأولى فقط. تعرض قائمة الفترات سنوات السجل المحفوظ وأشهره كاملةً؛ ولا تُحذف المباريات القديمة.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يعني الفوز والخسارة؟</strong>
+<p>الفوز يعني أنك فزت بالمباراة المكتملة بالمجموعات. الخسارة تعني أن الخصم فاز بالمباراة المكتملة بالمجموعات.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يعني توقف؟</strong>
+<p>توقف يعني أنه تم حفظ المباراة قبل الانتهاء العادي. يحافظ التطبيق على سياق المطابقة الحقيقي الذي تم جمعه حتى تلك اللحظة. يتم احتساب المباراة المتوقفة مع القائد في سجل المباراة ومعدل الفوز والشرائط؛ المباراة المتوقفة متعادلة محايدة.</p>
+</div>
+<div class="help-item">
+<strong>ما هي S1 من خلال S5؟</strong>
+<p>S1 من خلال S5 تعني المجموعة 1 من خلال المجموعة 5. يعتمد عدد الأعمدة على المباراة: يمكن أن تظهر النتيجة المكتملة أو المتوقفة مجموعة إلى خمس مجموعات منتظمة. على سبيل المثال، S1 <span class="score-nowrap">6–3</span> يعني أن المجموعة الأولى انتهت بستة أشواط مقابل ثلاثة.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يعني TB <span class="score-nowrap">7–3</span> ؟</strong>
+<p>يشير TB إلى نقاط شوط كسر التعادل المسجلة ضمن المجموعة. مثلًا، <span class="score-nowrap">7–6</span> · كسر التعادل <span class="score-nowrap">7–3</span> يعني أن المجموعة انتهت <span class="score-nowrap">7–6</span> وكانت درجة كسر التعادل <span class="score-nowrap">7–3</span>.</p>
+</div>
+<div class="help-item">
+<strong>ماذا يعني <span class="score-nowrap">7–6</span><sup>(6)</sup> ؟</strong>
+<p>في النتيجة المختصرة، يشير الرقم الصغير بين قوسين إلى نقاط اللاعب الخاسر في شوط كسر التعادل. مثلًا، <span class="score-nowrap">7–6</span><sup>(6)</sup> يعني الفوز بشوط كسر التعادل <span class="score-nowrap">8–6</span>. وقد يعرض جدول المجموعات نقاط كلا اللاعبين في شوط كسر التعادل إذا كانت مسجلة.</p>
+</div>
+<div class="help-item">
+<strong>كيف يتم تقييم المباريات المتوقفة؟</strong>
+<p>يقارن التطبيق المجموعات المكتملة أولًا. إذا تعادل الطرفان، ينظر إلى أشواط المجموعة غير المكتملة، ثم إلى نقاط كسر التعادل أو الشوط المسجلة. لا تُجمع أشواط المجموعات السابقة لتحديد المتقدم. وإذا توقفت المباراة بين مجموعتين مع تعادل النتيجة، تُعدّ متعادلة. أما إذا كان أحد الطرفين متقدمًا بوضوح، فتُحتسب النتيجة فوزًا أو خسارة في الإحصاءات مع بقاء حالة المباراة «متوقفة».</p>
+</div>
+<div class="help-item">
+<strong>ماذا يحدث لمجموعة غير مكتملة؟</strong>
+<p>إذا كانت المجموعة الحالية تحتوي على تقدم عند إيقاف المباراة، فسيتم تخزينها مع المباراة. هذا يحافظ على السياق الحقيقي، مثل S3 <span class="score-nowrap">0–1</span>.</p>
+</div>
+<div class="help-item">
+<strong>ما هي المعلومات المحفوظة مع المباراة؟</strong>
+<p>يمكن أن تتضمن المباراة المحفوظة صيغة التسجيل والنتيجة ونتائج المجموعات وأشواط كسر التعادل والوقت والخصم. وتُميَّز المباريات المُدخلة يدويًا بعبارة «أُضيفت يدويًا». على iPhone، يمكنك إضافة ظروف الملعب والموقع وملاحظة خاصة. ولا تظهر إحصاءات النقاط والتمرين إلا إذا سُجّلت فعلًا.</p>
+</div>
+<div class="help-item">
+<strong>كيف تظهر التنسيقات المخصصة في السجل؟</strong>
+<p>يعرض السجل اسم صيغة اللعب والقواعد المرتبطة بها، مثل عدد الأشواط المطلوب وفارق الفوز ووقت بدء كسر التعادل وعدد نقاطه المستهدف. تعرض القائمة المعلومات الأساسية، بينما تعرض تفاصيل المباراة الإعدادات كاملةً.</p>
+</div>
+<div class="help-item">
+<strong>كيف تظهر فواصل التعادل في النتائج المشتركة؟</strong>
+<p>تظهر نقاط كسر التعادل إلى جانب نتيجة الأشواط. تتسع الخانات عند وجود نتائج من رقمين لتبقى واضحة. ويظهر شوط كسر التعادل الحاسم منفصلًا بين معقوفين، مثل [<span class="score-nowrap">10–7</span>]. يتضمن النص المشترك أيضا النتيجة الكاملة في شكل قابل للقراءة.</p>
+</div>
+<div class="help-item">
+<strong>هل يمكنني حذف مباراة محفوظة؟</strong>
+<p>نعم. استخدم إجراء الحذف في سجل المباراة وقم بتأكيد الإزالة. يؤدي حذف المباراة إلى إزالة إدخال السجل المحفوظ من التطبيق.</p>
+</div>
+</div>
+</section>
+<section id="period-recaps">
+<h2>ملخصات الشهر والسنة</h2>
+<p class="section-subtitle">راجع نشاط المباراة المحفوظة على أي من تطبيقي Watch، أو استخدم الملخص الأكبر في Pro على iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>أين أجد ملخصا؟</strong><p>على Apple Watch، افتح «السجل»، واضغط على «الفترة»، ثم اختر سنة أو شهرًا يحتوي على مباريات محفوظة. بعد ذلك، افتح ملخص السنة أو الشهر. وفي Pro على iPhone، افتح «التقويم» واضغط على زر الملخص للشهر أو السنة المختارة.</p></div>
+<div class="help-item"><strong>ماذا تعني ألوان وأرقام المخطط؟</strong><p>يمثل كل عمود عدد المباريات المحفوظة في ذلك الأسبوع أو الشهر. الأخضر للفوز في المباريات المكتملة، والأحمر للخسارة فيها، والأصفر للمباريات المتوقفة. الرقم فوق العمود هو إجمالي المباريات. وفي الملخص، تظهر نتائج المباريات المكتملة منفصلةً عن المباريات المتوقفة.</p></div>
+<div class="help-item"><strong>كيف يتم تقسيم الأسابيع؟</strong><p>تتبع حدود الأسبوع إعدادات تقويم جهازك. يمكن أن يحتوي الشهر على أجزاء من خمسة أو ستة أسابيع تقويمية. تظهر المقارنة من أسبوع إلى أسبوع عندما يحتوي الشهر المحدد على أسبوعين كاملين للمقارنة.</p></div>
+<div class="help-item"><strong>ما الذي يقارن بالفترة السابقة؟</strong><p>يقارن الملخص عدد المباريات ومعدل الفوز بالشهر أو السنة السابقة عندما يتوفر سجل مماثل. لمدة شهر أو سنة لا تزال قيد التقدم، يقارن من خلال نفس النقطة في كلتا الفترتين. يستخدم معدل الفوز الانتصارات والخسائر المكتملة فقط، لذلك لا تؤثر المباريات المتوقفة والمتعادلة عليه.</p></div>
+<div class="help-item"><strong>أين الإنجازات والمشاركة؟</strong><p>يعرض كلا تطبيقي Apple Watch إنجازات الفترة المختارة. في Pro على iPhone، اضغط على إنجاز لفتح مباراته، أو استخدم «مشاركة» لإنشاء بطاقة للشهر أو العام.</p></div>
+</div>
+</section>
+<section id="support-development">
+<h2>دعم التطوير الاختياري</h2>
+<p class="section-subtitle">
+    يساعد الدعم لمرة واحدة في التطوير المستقبلي ولكنه لا يفتح الميزات أو يغير التطبيق أبدا.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>هل تفتح المساهمة التطوعية أي ميزات؟</strong>
+<p>لا. المساهمة عبر Apple أو بالعملة المشفرة اختيارية. تظل جميع الميزات التي اشتريتها متاحة سواء ساهمت أم لا.</p>
+</div>
+<div class="help-item">
+<strong>كيف يعمل Apple Tip؟</strong>
+<p>في «المعلومات ← دعم التطوير»، اختر مبلغًا تدفعه مرة واحدة وأكّد الشراء في نافذة Apple. تعالج Apple الدفع باستخدام طريقة الدفع المرتبطة بحسابك في App Store.</p>
+</div>
+<div class="help-item">
+<strong>ما الذي يجب علي التحقق منه قبل دعم العملة المشفرة؟</strong>
+<p>قم بتأكيد العملة والشبكة وعنوان الوجهة الكامل في محفظتك قبل الإرسال. عمليات نقل البلوكشين لا رجعة فيها بشكل عام. لا يرفق Tennis Score Wizard بيانات المباراة أو التنافس أو التمرين أو الصحة بالمعاملة.</p>
+</div>
+</div>
+</section>
+<section id="complications-help">
+<h2>عناصر الوصول السريع على واجهة Apple Watch</h2>
+<p class="section-subtitle">
+    أضف الوصول السريع إلى Tennis Score Wizard مباشرة من واجهة الساعة المدعومة.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>ما وظيفة عنصر Tennis Score Wizard على واجهة الساعة؟</strong>
+<p>يعمل العنصر كاختصار سريع؛ عند الضغط عليه، يُفتح Tennis Score Wizard مباشرةً من واجهة Apple Watch.</p>
+</div>
+<div class="help-item">
+<strong>أين يمكن إضافة عنصر الوصول السريع؟</strong>
+<p>يدعم Tennis Score Wizard المواضع الدائرية ومواضع الزوايا في واجهات Apple Watch المتوافقة.</p>
+</div>
+<div class="help-item">
+<strong>كيف يمكنني إضافة اختصار واجهة الساعة؟</strong>
+<p>قم بتحرير واجهة ساعة متوافقة على Apple Watch أو في تطبيق Watch على iPhone، وحدد موضع تضميد مدعوم، واختر Tennis Score Wizard من الإضافات المتاحة.</p>
+</div>
+<div class="help-item">
+<strong>لماذا لا أجد عنصر الوصول السريع؟</strong>
+<p>تأكد من تثبيت التطبيق على Apple Watch وأن موضع واجهة الساعة المحدد يدعم إحدى عائلات اختصارات واجهة الساعة المتاحة. تختلف المواضع المتاحة بين واجهات الساعة.</p>
+</div>
+<div class="help-item">
+<strong>لماذا يبدو العنصر مختلفًا على واجهة ساعة أخرى؟</strong>
+<p>تتحكم Apple Watch في الشكل والمساحة المتاحة لكل موضع اختصار واجهة الساعة. يكيف Tennis Score Wizard المشغل الخاص به مع العرض التقديمي الدائري أو الزاوية المدعوم.</p>
+</div>
+</div>
+</section>
+<section id="troubleshooting">
+<h2>استكشاف الأخطاء وإصلاحها</h2>
+<p class="section-subtitle">
+    خطوات بسيطة للتحقق عندما لا تعمل النتائج أو بيانات التمرين أو اختصارات واجهة الساعة كما هو متوقع.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>معدل ضربات القلب الحي لا يظهر. ما الذي يجب أن أتحقق منه؟</strong>
+<p>تأكد من تمكين Record Workout، والسماح بالوصول إلى "الصحة"، وأن الساعة يتم ارتداؤها بشكل آمن. لا يظهر معدل نبض القلب إلا عندما توفر Apple Watch عينة متاحة.</p>
+</div>
+<div class="help-item">
+<strong>التمرين غير مرئي في تطبيق "صحة". ماذا يجب أن أفعل؟</strong>
+<p>اترك وقتا للمعالجة، ثم تحقق من أذونات الصحة وتأكد من تمكين تسجيل التمرين للمباراة. تحقق أيضا من اكتمال التمرين بشكل صحيح عن طريق إنهاء المباراة أو إيقافها.</p>
+</div>
+<div class="help-item">
+<strong>متوسط معدل ضربات القلب أو الحد الأقصى لمعدل ضربات القلب أو الطاقة النشطة مفقود.</strong>
+<p>افتح المباراة المكتملة مرة أخرى بعد أن يكون لدى الصحة الوقت لإنهاء حفظ التمرين. يمكن أن يظل القياس غير متاح عندما لا تقدم الصحة بيانات أساسية كافية.</p>
+</div>
+<div class="help-item">
+<strong>المرسل المعروض غير صحيح.</strong>
+<p>افتح القائمة واختر «تغيير المرسل» لتصحيح اللاعب الذي يرسل الكرة دون تغيير النتيجة.</p>
+</div>
+<div class="help-item">
+<strong>لقد دخلت النقطة الخاطئة.</strong>
+<p>استخدم «تراجع» لاستعادة حالة المباراة قبل آخر نقطة تمامًا، بما فيها النتيجة والمرسل وكسر التعادل والإحصاءات المرتبطة.</p>
+</div>
+<div class="help-item">
+<strong>اختصار واجهة الساعة غير متوفر على واجهة الساعة التي اخترتها.</strong>
+<p>جرب وضع اختصار واجهة الساعة دائري أو زاوية. لا يدعم كل موضع على كل واجهة ساعة نفس النوع من اختصار واجهة الساعةات.</p>
+</div>
+<div class="help-item">
+<strong>هل ستحافظ إعادة تثبيت التطبيق على سجل المباراة؟</strong>
+<p>افتح "السجل" أولا وتأكد من أن صف iCloud يظهر <b>تمت المزامنة</b>. بعد إعادة التثبيت، استخدم نفس حساب Apple مع تمكين iCloud Drive وامنح الوقت للاستعادة. تظل المباريات التي لم تكمل مزامنة iCloud أبدا على الجهاز الأصلي فقط.</p>
+</div>
+<div class="help-item">
+<strong>يعرض السجل «بانتظار الاتصال» أو «جارٍ الحفظ»، أو «المزامنة متوقفة مؤقتًا» مع خيار «إعادة المحاولة».</strong>
+<p><b>بانتظار الاتصال</b> مع <b>جارٍ الحفظ</b> يعني أن التغيير المحلي في قائمة الانتظار ويمكن تحميله عندما يصبح iCloud متاحا. لِ <b>المزامنة متوقفة مؤقتًا</b> مع <b>إعادة المحاولة</b>، تأكد من تسجيل دخول الجهاز إلى حساب Apple المقصود، وتم تمكين iCloud Drive، وأن الشبكة متاحة، وأن مساحة تخزين iCloud غير ممتلئة، ثم اضغط على صف الحالة. لا تتم إزالة المباريات المحلية لمجرد أن iCloud غير متاح.</p>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2>الدعم</h2>
+<div class="support-card">
+<h3>هل تحتاج إلى مساعدة أو تريد اقتراح ميزة؟</h3>
+<p>
+      الاتصال:
+      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+</p>
+</div>
+</section>
+<footer>
+<div class="footer-meta">
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch هي علامة تجارية لشركة Apple Inc.</span>
+</div>
+<nav aria-label="الملاحة الثانوية" class="footer-links">
+<a href="privacy.html">الخصوصية</a>
+</nav>
+</footer>
+</main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
+<script defer="" src="../analytics.js"></script>
+</body>
+</html>

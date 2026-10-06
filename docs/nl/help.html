@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
+<title>Helpcentrum — Tennis Score Wizard</title>
+<meta content="Hulp voor Tennis Score Wizard: Apple Watch scoren, handmatige wedstrijd invoer en bewerking, geschiedenisfilters, courtcontext, Match Highlights, workouts en iCloud synchronisatie." name="description"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/nl/help.html" rel="canonical"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="en" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html" hreflang="de" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/es/help.html" hreflang="es" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/fr/help.html" hreflang="fr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ja/help.html" hreflang="ja" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ko/help.html" hreflang="ko" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ru/help.html" hreflang="ru" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/tr/help.html" hreflang="tr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/help.html" hreflang="zh-Hans" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/it/help.html" hreflang="it" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/pt-BR/help.html" hreflang="pt-BR" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hant/help.html" hreflang="zh-Hant" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/nl/help.html" hreflang="nl" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ar/help.html" hreflang="ar" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Tennis Score Wizard" property="og:site_name"/>
+<meta content="Helpcentrum — Tennis Score Wizard" property="og:title"/>
+<meta content="Leer meer over scoreformaten, handmatige wedstrijden, courtcontext, Match Highlights, delen, gezondheidstrainingen en privé iCloud-synchronisatie." property="og:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/nl/help.html" property="og:url"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
+<meta content="Tennis Score Wizard app-pictogram" property="og:image:alt"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Helpcentrum — Tennis Score Wizard" name="twitter:title"/>
+<meta content="Krijg hulp met Apple Watch-score, handmatige wedstrijden, tennisbaancontext, Match Highlights, delen, statistieken en synchronisatie." name="twitter:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --panel-2: #111511;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-2: #00d84a;
+      --green-soft: rgba(40,255,95,0.10);
+      --yellow: #ffe34d;
+      --red: #ff4b55;
+    }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 16px;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    rgba(5,7,5,0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: 21px;
+}
+.app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14),
+    0 0 32px rgba(40,255,95,0.20),
+    0 14px 34px rgba(0,0,0,0.52);
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 0 28px rgba(40,255,95,0.10);
+}
+.eyebrow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(40,255,95,0.75);
+}
+h1 {
+  margin: 0;
+  max-width: 740px;
+  font-size: clamp(46px, 7.4vw, 88px);
+  line-height: 0.91;
+  letter-spacing: -0.078em;
+}
+.hero-copy p {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  color: #e9e9ed;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 780;
+}
+.hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  box-shadow:
+    0 42px 130px rgba(0,0,0,0.72),
+    0 0 90px rgba(40,255,95,0.16);
+}
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
+}
+section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px;
+}
+.section-subtitle {
+  max-width: 760px;
+  margin: -6px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 158px;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.card p,
+.faq p,
+.help-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.screenshot-card {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(40,255,95,0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 30px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.26);
+}
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(255,255,255,0.11);
+}
+.screenshot-card h3 {
+  margin: 17px 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.help-item,
+.faq {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.028);
+  border-radius: 23px;
+  padding: 18px;
+}
+.help-item strong,
+.faq strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacy-box {
+  border: 1px solid rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at top left, rgba(40,255,95,0.16), transparent 22rem),
+    rgba(40,255,95,0.06);
+  border-radius: 25px;
+  padding: 22px;
+  color: #eaffdf;
+  box-shadow: 0 0 46px rgba(40,255,95,0.08);
+}
+.privacy-box p {
+  color: #d8f7d0;
+  margin: 8px 0 0;
+}
+.support-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 22px;
+  min-height: 142px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+}
+footer {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .hero-copy p {
+    font-size: 18px;
+  }
+  .hero-visual {
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
+  }
+  .hero-ball {
+    border-radius: 66px;
+  }
+  .grid,
+  .help,
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Language selector */
+.nav {
+  overflow: visible;
+}
+
+.nav-links {
+  align-items: center;
+  overflow: visible;
+}
+
+.language-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  cursor: pointer;
+  color: #f5f7f5;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.045);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.language-menu summary::marker {
+  content: "";
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+.language-menu[open] summary {
+  border-color: var(--line-green);
+  background:
+    linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+    rgba(255,255,255,0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 0 24px rgba(40,255,95,0.13);
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: 210px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+    rgba(7,9,7,0.98);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,24,20,0.98);
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: #f2f4f2;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.language-options a:hover {
+  background: rgba(40,255,95,0.10);
+  text-decoration: none;
+}
+
+.language-options a.active {
+  color: var(--green);
+  background: rgba(40,255,95,0.11);
+}
+
+.language-options a.active::after {
+  content: "✓";
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
+/* Keep language dropdown above hero content */
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.language-menu {
+  z-index: 1100;
+}
+
+.language-options {
+  z-index: 1200;
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .language-menu {
+    position: relative;
+  }
+
+  .language-options {
+    left: 0;
+    right: auto;
+    width: min(210px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+  }
+
+  .language-options::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+/* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+/* Clickable brand and Help badge */
+.brand-home-link,
+.help-badge-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  min-width: 0;
+}
+
+.brand-home-link:hover,
+.brand-home-link:focus-visible,
+.help-badge-home-link:hover,
+.help-badge-home-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link:focus-visible,
+.help-badge-home-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.help-home-badge {
+  cursor: pointer;
+}
+
+/* CJK headings need a slightly clearer gap below the badge. */
+html[lang="ja"] .hero .help-home-badge,
+html[lang="zh-Hans"] .hero .help-home-badge {
+  margin-bottom: 22px;
+}
+
+
+/* Unified global product navigation */
+.nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "brand links language";
+  align-items: center;
+  column-gap: 26px;
+  min-height: 92px;
+  padding: 14px 16px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-links > a[aria-current="page"] {
+  color: var(--green);
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+.footer-meta,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    column-gap: 14px;
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: grid;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    font-size: 12px;
+  }
+
+  .nav-links > a[aria-current="page"] {
+    border-color: var(--line-green);
+    background: var(--green-soft);
+  }
+
+  .language-options {
+    right: 0;
+    left: auto;
+  }
+
+  .language-options::before {
+    right: 22px;
+    left: auto;
+  }
+
+  footer,
+  .footer-meta,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Shared animated brand treatment */
+.brand-title {
+  display: inline-block;
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-home-link {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .hero-copy,
+  .hero-copy > *,
+  .help,
+  .help-item,
+  .faq {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1,
+  section > h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero-copy p,
+  .help-item,
+  .faq {
+    overflow-wrap: break-word;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+</style>
+<link href="../release-1-1.css" rel="stylesheet"/>
+<link href="../release-1-6-en.css?v=20260922-flow" rel="stylesheet"/>
+<script defer="" src="../navigation-en.js?v=20260911-nav"></script>
+<link href="../back-to-top.css?v=20261001" rel="stylesheet"/>
+<script defer="" src="../back-to-top.js?v=20261001"></script>
+<style>html[lang="nl"] h1 { font-size: clamp(44px, 5.6vw, 70px); line-height: 1.1; letter-spacing: 0; }@media (max-width: 640px) { html[lang="nl"] .brand-title { font-size: 11px; letter-spacing: -0.045em; } html[lang="nl"] .language-menu summary { font-size: 11px; padding-inline: 8px; } }</style></head>
+<body>
+<main class="page">
+<nav aria-label="Primaire navigatie" class="nav">
+<div class="brand">
+<a aria-label="Tennis Score Wizard — Startpagina" class="brand-home-link" href="index.html">
+<img alt="Tennis Score Wizard app-pictogram" class="app-icon" decoding="async" height="1024" sizes="62px" src="../assets/tennis_ball_app_icon_1024-128.webp" srcset="../assets/tennis_ball_app_icon_1024-128.webp 128w, ../assets/tennis_ball_app_icon_1024-256.webp 256w" width="1024"/>
+<span class="brand-title">Tennis Score Wizard</span>
+</a>
+</div>
+<div class="nav-links">
+<a href="index.html#versions">Versies</a>
+<a href="index.html#comparison">Vergelijken</a>
+<a href="index.html#stats-guide">Statistiekgids</a>
+<a href="whats-new.html">Productupdates</a>
+<a aria-current="page" href="help.html">Hulp</a>
+<a href="index.html#contact">Contact</a>
+</div>
+<details class="language-menu">
+<summary>🇳🇱 Nederlands</summary>
+<div class="language-options">
+<a href="../help.html">🇺🇸 English</a>
+<a href="../ja/help.html">🇯🇵 日本語</a>
+<a href="../de/help.html">🇩🇪 Deutsch</a>
+<a href="../fr/help.html">🇫🇷 Français</a>
+<a href="../ru/help.html">🇷🇺 Русский</a>
+<a href="../tr/help.html">🇹🇷 Türkçe</a>
+<a href="../es/help.html">🇪🇸 Español</a>
+<a href="../zh-Hans/help.html">🇨🇳 简体中文</a>
+<a href="../ko/help.html">🇰🇷 한국어</a>
+<a href="../it/help.html">🇮🇹 Italiano</a>
+<a href="../pt-BR/help.html">🇧🇷 Português (Brasil)</a>
+<a href="../zh-Hant/help.html">🇹🇼 繁體中文</a>
+<a class="active" href="help.html">🇳🇱 Nederlands</a>
+<a href="../ar/help.html">🇸🇦 العربية</a>
+</div>
+</details>
+</nav>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Startpagina" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
+<h1>Helpcentrum</h1>
+<p>
+      Houd de score bij op Apple Watch of voeg in Pro op de iPhone een eerder gespeelde wedstrijd toe. Hier vind je hulp bij maand- en jaaroverzichten, hoogtepunten, rivaliteiten, delen, spelvormen, trainingen en iCloud-synchronisatie.
+    </p>
+</div>
+</section>
+<section id="getting-started">
+<h2>Aan de slag gaan</h2>
+<p class="section-subtitle">
+    Alles wat je nodig hebt om Tennis Score Wizard voor te bereiden en te beginnen met het scoren van je eerste wedstrijd.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Wat heb ik nodig om Tennis Score Wizard te gebruiken?</strong>
+<p>Voor live scoreverloop heb je een geschikte Apple Watch met Tennis Score Wizard nodig. In Pro op de iPhone kun je ook een eerder gespeelde wedstrijd toevoegen. Toegang tot Gezondheid is optioneel en wordt alleen gebruikt om trainingen en beschikbare meetwaarden vast te leggen.</p>
+</div>
+<div class="help-item">
+<strong>Hoe begin ik mijn eerste wedstrijd?</strong>
+<p>Open de app op Apple Watch en kies enkelspel of dubbelspel. Selecteer één set, best of 3 of best of 5, stel de set- en gameregels in en kies wie als eerste serveert. Schakel desgewenst Training vastleggen in en start de wedstrijd.</p>
+</div>
+<div class="help-item">
+<strong>Herinnert de app mijn instellingen?</strong>
+<p>De app onthoudt uw vorige wedstrijdconfiguratie, zodat u de volgende keer dat u speelt sneller een vergelijkbare wedstrijd kunt voorbereiden. U kunt nog steeds elke optie wijzigen voordat u begint.</p>
+</div>
+<div class="help-item">
+<strong>Kan ik een wedstrijd scoren zonder toegang tot Gezondheid?</strong>
+<p>Ja. Wedstrijdscoren, statistieken en geschiedenis werken zonder toegang tot Gezondheid. Er is alleen toestemming nodig voor het opnemen van trainingen en gerelateerde metingen zoals hartslag en actieve energie.</p>
+</div>
+</div>
+</section>
+<section id="manual-matches">
+<h2>Voeg of bewerk een wedstrijd toe die je hebt gespeeld</h2>
+<p class="section-subtitle">Pro op iPhone · Bewaar het resultaat dat je kent, en bewaar het naast je Watch-geschiedenis.</p>
+<div class="help">
+<div class="help-item"><strong>Hoe voeg ik een eerder gespeelde wedstrijd toe?</strong><p>Tik op het tabblad Wedstrijden op Gespeelde wedstrijd toevoegen. Kies enkelspel of dubbelspel. Bij enkelspel kun je een tegenstander invoeren of een opgeslagen speler kiezen. Selecteer daarna de spelvorm, voer de setscores in en tik op Bewaar.</p></div>
+<div class="help-item"><strong>Kan ik een handmatig toegevoegde wedstrijd aanpassen?</strong><p>Ja. Open de wedstrijdgegevens en tik op Wedstrijd bewerken. Je kunt datum, tijd, duur, spelregels, setscores, tiebreakpunten en de status Voltooid of Gestopt aanpassen. Met Bewaar werk je dezelfde wedstrijd bij, zonder duplicaat; met Annuleer blijft alles ongewijzigd. Enkelspel/dubbelspel en de spelers blijven gelijk. Gebruik de aparte opties om de tegenstander of wedstrijdgegevens te wijzigen.</p></div>
+<div class="help-item"><strong>Zullen mijn correcties Apple Watch bereiken?</strong><p>Ja. Een aangepaste handmatige wedstrijd werkt hetzelfde opgeslagen record op de gekoppelde Pro Watch bij en kan via privé-iCloud worden gesynchroniseerd met Standalone onder hetzelfde Apple-account. Houd de apps bijgewerkt en geef de synchronisatie tijd. Relevante statistieken en hoogtepunten gebruiken daarna de gecorrigeerde uitslag.</p></div>
+<div class="help-item"><strong>Kan ik een afgebroken wedstrijd of gelijke stand bewaren?</strong><p>Ja. Kies Gestopt als het spel eindigde voordat er volgens de gekozen regels een winnaar was. Vul de bereikte stand in, ook van een onvoltooide set. Een gelijke stand kun je bewaren. Kies Voltooid alleen wanneer de stand een winnaar oplevert.</p></div>
+<div class="help-item"><strong>Hoe voer ik een tiebreak in een set in?</strong><p>Vul eerst de games in. Als de stand volgens de gekozen setregels op een tiebreak wijst, bijvoorbeeld <span class="score-nowrap">7-6</span> — verschijnen extra velden voor de tiebreakpunten van beide spelers. Vul beide scores in als je ze weet, of laat beide leeg. Bij een beslissende matchtiebreak vul je direct de punten in, niet de games.</p></div>
+<div class="help-item"><strong>Hoe voer ik een matchtiebreak in?</strong><p>Schakel voor een beslissende tiebreak in een best-of-three- of best-of-fivewedstrijd Matchtiebreak in beslissende set in. Kies 7 of 10 punten en vul de punten direct in op de beslissende rij, bijvoorbeeld <span class="score-nowrap">10-8</span>, niet <span class="score-nowrap">1-0</span> in games. Als de hele wedstrijd uit een matchtiebreak bestond, kies je Matchtiebreak als setregel. Een voltooide matchtiebreak moet met twee punten verschil zijn gewonnen.</p></div>
+<div class="help-item"><strong>Wat als het spel tijdens een set tie-break stopte?</strong><p>Kies Gestopt en vul de gelijke gamestand in waarop de settiebreak begon, bijvoorbeeld <span class="score-nowrap">6-6</span>. Er verschijnen velden voor de tiebreakpunten op het moment dat het spel stopte. Vul beide in als je ze weet, of laat beide leeg.</p></div>
+<div class="help-item"><strong>Wat als ik me de starttijd herinner, niet de duur?</strong><p>Kies Start &amp; eind en voer beide data en tijden in; de duur wordt automatisch berekend. Als je na middernacht hebt gespeeld, stel de einddatum in op de volgende dag. Kies als alternatief Eind &amp; duur en voer de duur in minuten. Als je je niet meer herinnert hoe lang je hebt gespeeld, laat de optionele duur dan leeg. Bij levering moet de duur minimaal één minuut zijn en niet meer dan 24 uur.</p></div>
+<div class="help-item"><strong>Waarom kan ik geen toekomstige tijd kiezen?</strong><p>Dit formulier registreert een al gespeelde wedstrijd, niet een geplande wedstrijd. De eindtijd kan niet in de toekomst zijn. In de start- en eindmodus moet de start voor de eindtijd zijn.</p></div>
+<div class="help-item"><strong>Hoe beweeg ik tussen scorevelden?</strong><p>Tik rechtstreeks op een scorevlakje, of gebruik Back en Next boven het toetsenbord. De cursor springt niet na één cijfer, dus je kunt tweecijferige scores invoeren. Done sluit het toetsenbord; tikken buiten een veld of scrollen sluit het ook af.</p></div>
+<div class="help-item"><strong>Welke statistieken levert een handmatig toegevoegde wedstrijd op?</strong><p>De opgeslagen uitslag, sets, games, ingevoerde tiebreakscores en eventuele duur tellen mee in de geschiedenis en overzichten. Punt-voor-punt-, service-, return-, breakpoint- en trainingsgegevens verschijnen wanneer ze op de Watch zijn vastgelegd. Handmatige wedstrijden krijgen het label Handmatig toegevoegd.</p></div>
+<div class="help-item"><strong>Verschijnt de wedstrijd op Apple Watch?</strong><p>Ja. Opgeslagen handmatige opnames kunnen synchroniseren met de gepaarde Pro Watch en via privé iCloud naar Standalone onder hetzelfde Apple-account. Beide Watch-apps behouden het label voor handmatige opname en verbergen niet-beschikbare statistieken. Houd beide producten up-to-date en laat de synchronisatie afronden.</p></div>
+<div class="help-item"><strong>Kan ik een op de Watch opgenomen score op de iPhone wijzigen?</strong><p>Nee. Het toevoegen van een gespeelde wedstrijd is afzonderlijk van het bewerken van een Watch-opname. U kunt de tegenstandertoewijzing en optionele wedstrijdcontext wijzigen voor een bestaande wedstrijd zonder de opgenomen score of statistieken te wijzigen.</p></div>
+</div>
+</section>
+<div aria-label="Voorbeelden van handmatige wedstrijd en rechtscontext" class="release-proof-pair">
+<figure><a href="../assets/release-1-6-en/manual-edit-details.png" rel="noopener" target="_blank"><img alt="Handmatig toegevoegde wedstrijd in iPhone wedstrijd Details met de knop wedstrijd bewerken" height="2868" loading="lazy" src="../assets/release-1-6-en/manual-edit-details-900.webp" width="1320"/></a><figcaption>Open een handmatige wedstrijd en tik op Bewerken wedstrijd om de tijd, regels of score ervan te corrigeren.</figcaption></figure>
+<figure><a href="../assets/release-1-6-en/court-conditions.png" rel="noopener" target="_blank"><img alt="Optionele wedstrijd contexteditor met Clay en Outdoor geselecteerd" height="2868" loading="lazy" src="../assets/release-1-6-en/court-conditions-900.webp" width="1320"/></a><figcaption>Ondergrond en binnen- of buitenbaan zijn optioneel.</figcaption></figure>
+</div>
+<section id="match-context">
+<h2>Onthoud de tennisbaan en de wedstrijd</h2>
+<p class="section-subtitle">Alle gegevens zijn optioneel. Voeg wedstrijdinformatie toe tijdens de handmatige invoer of later via Wedstrijddetails op de iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>Wat kan ik toevoegen?</strong><p>Kies de ondergrond en de binnen- of buitensetting, voer de naam of het nummer van de plaats of club en het veld in en voeg een privébericht toe voor deze specifieke wedstrijd. U kunt ook context toevoegen aan oudere wedstrijden die zijn opgenomen op de Apple Watch.</p></div>
+<div class="help-item"><strong>Heb ik kaarten of toegang tot de locatie nodig?</strong><p>Nee. Locatie- en baannamen voer je handmatig in. Deze functie zoekt geen tennisbanen op een kaart en registreert je GPS-locatie niet.</p></div>
+<div class="help-item"><strong>Kan ik een tennisbaan hergebruiken?</strong><p>Ja. Kies uit recente en favoriete banen. Favorieten worden opgeslagen op deze iPhone en gescheiden door Apple-account. Het kiezen van een baan vervangt de plaats en voorwaarden ervan, maar vervangt de notitie voor de huidige wedstrijd niet. Favorieten zelf zijn geen iCloud-gesynchroniseerde lijst.</p></div>
+<div class="help-item"><strong>Wat wordt gesynchroniseerd?</strong><p>Details van het veld en wedstrijdnotities synchroniseren met het opgeslagen resultaat via overdracht tussen gekoppelde apparaten en privé iCloud-synchronisatie. De originele score en opgenomen statistieken blijven ongewijzigd. Voeg, bekijk en bewerk context op iPhone; Watch-records bewaren deze voor synchronisatie, maar bieden geen contexteditor.</p></div>
+<div class="help-item"><strong>Wat verschijnt er wanneer ik deel?</strong><p>Ingegeven tennisbaanvoorwaarden en locatie verschijnen op de wedstrijdafbeelding. Persoonlijke wedstrijdnotities en privé Rivalry-notities niet. Controleer de voorafgaande weergave voordat u deze deelt, vooral als u geen locatie wilt onthullen.</p></div>
+<div class="help-item"><strong>Creëert de tennisbaancontext statistische prestaties?</strong><p>Nee. Oppervlak, binnen-/buitenomgeving, locatie en opmerkingen beschrijven waar en hoe je hebt gespeeld. Ze beïnvloeden geen Match Highlights of creëren oppervlakte-specifieke of baan-specifieke records.</p></div>
+</div>
+</section>
+<section id="match-highlights">
+<h2>Wedstrijdhoogtepunten en delen</h2>
+<div class="help">
+<div class="help-item"><strong>Hoeveel hoogtepunten kan ik zien?</strong><p>De app kent 26 soorten hoogtepunten, maar toont niet automatisch 26 kaarten per wedstrijd. In Wedstrijddetails op de iPhone zie je alle hoogtepunten die door de opgeslagen gegevens worden ondersteund. Een gedeelde afbeelding bevat maximaal zes van de opvallendste momenten. Zonder hoogtepunten wordt de sectie verborgen.</p></div>
+<div class="help-item"><strong>Welke momenten kunnen voorkomen?</strong><p>Voorbeelden zijn comebacks, een beslissende set of matchtiebreak, nauwe tie-break-gevechten, resultaten met één set, reeksen, mijlpaaloverwinningen, persoonlijke records en serve- of terugslagpatronen. Sommige vereisen opgenomen puntstatistieken; anderen kunnen worden ondersteund door de setscore en de opgeslagen geschiedenis.</p></div>
+<div class="help-item"><strong>Zijn records en mijlpalen blijvende carrièreprestaties?</strong><p>Nee. Ze beschrijven de geschiedenis die in de app is vastgelegd. Het toevoegen van een oudere uitslag, het corrigeren van de score of datum van een handmatige wedstrijd, het verwijderen van een wedstrijd of het wijzigen van de tegenstander kan relevante vergelijkingen en Rivalry-highlights veranderen. Later wedstrijden worden niet gebruikt als eerdere geschiedenis voor een oudere uitslag. Milestone-overwinningen zijn gebaseerd op kwalificerende voltooide overwinningen.</p></div>
+<div class="help-item"><strong>Waarom kan een winstreeks in Statistieken verschillen van een wedstrijd Highlight?</strong><p>Statistieken en rivaliteiten kunnen gestopte wedstrijden met een duidelijke leider tellen als besloten resultaten. Winstreeks en mijlpalen Highlights gebruiken voltooide overwinningen, dus een onvoltooide wedstrijd verdient geen voltooide overwinningsprestatie. Beide gebruiken de opgeslagen geschiedenis die beschikbaar is voor de relevante vergelijking.</p></div>
+<div class="help-item"><strong>Worden de hoogtepunten weergegeven op de Apple Watch?</strong><p>Nee. Wedstrijdhoogtepunten staan in Pro bij Wedstrijddetails op de iPhone en op gedeelde afbeeldingen. De Watch-geschiedenis toont de uitslag en beschikbare statistieken, zonder aparte sectie voor hoogtepunten.</p></div>
+<div class="help-item"><strong>Waarom toont een handmatige wedstrijd minder hoogtepunten?</strong><p>Handmatige wedstrijden kunnen hoogtepunten weergeven op basis van hun opgeslagen score of wedstrijdgeschiedenis. Hoogtepunten voor service, return en breakpoint vereisen opgeslagen puntgegevens.</p></div>
+</div>
+</section>
+<section id="match-flow-help">
+<h2>Match Flow en Momentum</h2>
+<p class="section-subtitle">Pro toont drie Match Flow-weergaven in opgenomen wedstrijdgegevens; beide Watch-apps tonen compacte Momentum in Geschiedenis.</p>
+<div class="help">
+<div class="help-item"><strong>Wanneer verschijnt Match Flow?</strong><p>Wanneer een opgeslagen wedstrijd een geldig punt-voor-punt-record heeft. Nieuw opgeslagen wedstrijden bewaren deze geschiedenis automatisch, en sommige oudere records hebben ook voldoende gegevens. Anders wordt het gedeelte Match Flow verborgen.</p></div>
+<div class="help-item"><strong>Wat betekenen de Momentum-balken en score-tegels?</strong><p>Elke balk stelt één geregistreerde game voor: groen als jij won, rood als je tegenstander won. Een hogere balk betekent dat er meer punten in die game zijn gespeeld, niet dat de winnaar meer voorsprong had. Het vakje naast de balk toont de gamestand na die game. Tiebreaks worden apart aangeduid.</p></div>
+<div class="help-item"><strong>Wat staat er in Scores en Key Moments?</strong><p>Scores toont de stand na elke game en het aantal geregistreerde punten. Belangrijke momenten kiest gebeurtenissen die uit de puntenreeks blijken, zoals een lange game, een servicebreak of een omslagpunt. In Pro vind je dit bij Wedstrijddetails; de Watch-geschiedenis toont de compactere Momentum-weergave.</p></div>
+<div class="help-item"><strong>Moet ik tijdens de wedstrijd iets invoeren?</strong><p>Nee. Blijf punten scoren zoals gewoonlijk. Match Flow gebruikt de opgeslagen scorevolgorde, zonder nieuwe controles op het veld of extra tikken.</p></div>
+</div>
+</section>
+<section id="history-files-help">
+<h2>Wedstrijdgeschiedenis exporteren en herstellen</h2>
+<p class="section-subtitle">Wedstrijdgeschiedenisbestanden zijn beschikbaar in Pro op de iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>Welk bestand kan ik het beste kiezen?</strong><p>Gebruik CSV, Excel of PDF om een verslag te lezen of te analyseren. Wil je wedstrijden later in Pro kunnen herstellen, kies dan JSON of de volledige ZIP-back-up. De ZIP bevat het JSON-archief, CSV-bestanden met wedstrijden en punten, een Excel-werkmap, een PDF-verslag en een korte handleiding. Losse verslagen kun je niet importeren.</p></div>
+<div class="help-item"><strong>Hoe exporteer ik of importeer ik?</strong><p>Open in Pro Wedstrijdgeschiedenisbestanden, tik op Exporteer een kopie en kies een indeling. Bewaar of deel het bestand. Om te herstellen, tik je op Importeer back-up en selecteer je een JSON- of ZIP-bestand. Controleer de voorvertoning voordat je ontbrekende wedstrijden importeert.</p></div>
+<div class="help-item"><strong>Leidt importeren tot dubbele wedstrijden of komen verwijderde wedstrijden terug?</strong><p>Nee. Een bestaande wedstrijd-ID wordt overgeslagen en ID's die eerder uit uw geschiedenis zijn verwijderd, blijven verwijderd. Import voegt alleen in aanmerking komende ontbrekende wedstrijden toe. Houd een aparte kopie van uw back-upbestand op een locatie die u controleert.</p></div>
+<div class="help-item"><strong>Zal een back-up de volledige puntgeschiedenis bevatten?</strong><p>JSON en ZIP bewaren de oorspronkelijke opgeslagen wedstrijdgegevens, inclusief punten als die zijn geregistreerd. Oudere en handmatig toegevoegde wedstrijden hebben mogelijk geen punt-voor-puntgeschiedenis. Exporteren kan ontbrekende gegevens niet aanvullen.</p></div>
+</div>
+</section>
+<section id="match-setup">
+<h2>Een wedstrijd instellen</h2>
+<p class="section-subtitle">
+    Kies het formaat en de regels die overeenkomen met de manier waarop je speelt.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Wat is het verschil tussen singles en dubbelspel?</strong>
+<p>Kies enkelspel voor één speler per kant of dubbelspel voor twee spelers per kant. De gekozen spelvorm wordt bij de wedstrijd bewaard en ook gebruikt als je een training vastlegt.</p>
+</div>
+<div class="help-item">
+<strong>Wat betekenen best of 3 en best of 5?</strong>
+<p>Beste van 3 betekent dat de eerste partij die twee sets wint, de wedstrijd wint. Beste van 5 betekent dat de eerste partij die drie sets wint, de wedstrijd wint.</p>
+</div>
+<div class="help-item">
+<strong>Wat betekent één set?</strong>
+<p>Bij één set bestaat de hele wedstrijd uit die set. De gekozen setregels bepalen hoeveel games nodig zijn en of er een tiebreak wordt gespeeld.</p>
+</div>
+<div class="help-item">
+<strong>Hoe werken de setregels?</strong>
+<p>Kies de setregels die bij je wedstrijd passen. Zonder tiebreak en Tiebreakset gebruiken traditionele sets van zes games; korte sets zijn officiële snellere varianten. Bij een aangepaste set kies je de instellingen zelf. De app past de gekozen regels automatisch toe.</p>
+</div>
+<div class="help-item">
+<strong>Hoe werken officiële Short Sets?</strong>
+<p>Bij een korte set wint wie het eerst vier games haalt. Kies of de tiebreak begint bij <span class="score-nowrap">3-3</span> of <span class="score-nowrap">4-4</span>, kies dan een reguliere tiebreak tot 7, win met 2, of een 5-punts tiebreak met een beslissend punt op <span class="score-nowrap">4-4</span>. De geselecteerde combinatie wordt weergegeven in de instellingen, live scoren en Geschiedenis.</p>
+</div>
+<div class="help-item">
+<strong>Wat verandert er met No-Ad?</strong>
+<p>No-Ad verandert alleen de spelregel: bij deuce beslist het volgende punt de game. Je kunt het combineren met de beschikbare setvormen zonder het doel voor games of de tiebreakinstellingen te veranderen.</p>
+</div>
+<div class="help-item">
+<strong>Hoe werkt Custom Set?</strong>
+<p>Bij een aangepaste set kies je het aantal games, het vereiste verschil om te winnen en of en wanneer een tiebreak begint. Ook het aantal tiebreakpunten en het vereiste verschil bepaal je zelf. Zo kun je bijvoorbeeld een set tot acht games instellen. Het configuratieoverzicht toont alle regels samen.</p>
+</div>
+<div class="help-item">
+<strong>Kunnen de wedstrijdlengte, setregels, gameregels en matchtiebreak elkaar tegenspreken?</strong>
+<p>Nee. De wedstrijdlengte bepaalt hoeveel sets nodig zijn. De setregels bepalen hoe een set eindigt; standaardgame of No-Ad bepaalt wat er gebeurt bij deuce. Een optionele matchtiebreak vervangt alleen de beslissende laatste set wanneer die optie beschikbaar is.</p>
+</div>
+<div class="help-item">
+<strong>Hoe kies ik de eerste serveerder?</strong>
+<p>Je kunt zelf kiezen wie eerst serveert of de ingebouwde muntworp gebruiken om dat willekeurig te bepalen.</p>
+</div>
+<div class="help-item">
+<strong>Wat doet de muntworp?</strong>
+<p>De muntworp kiest willekeurig het openingsresultaat en helpt je te beslissen wie als eerste serveert. Je kunt de resulterende instelling bevestigen voordat je de wedstrijd begint.</p>
+</div>
+<div class="help-item">
+<strong>Wat doet Record Workout?</strong>
+<p>Als Training vastleggen is ingeschakeld en je toestemming hebt gegeven, start tegelijk met de wedstrijd een tennistraining. De app kan beschikbare hartslag-, actieve-energie- en tijdgegevens verzamelen en de training opslaan in Gezondheid.</p>
+</div>
+</div>
+</section>
+<section id="scoring">
+<h2>Een wedstrijd scoren</h2>
+<p class="section-subtitle">
+    Registreer elk punt terwijl de app automatisch de tennisscore beheert.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Hoe registreer ik een punt?</strong>
+<p>Gebruik de scorebedieningen om vast te leggen of jij of de tegenstander het punt hebt gewonnen. De score wordt onmiddellijk bijgewerkt na elke selectie.</p>
+</div>
+<div class="help-item">
+<strong>Telt de app games en sets automatisch?</strong>
+<p>Ja. Tennis Score Wizard verhoogt automatisch punten, games, sets, deuce, voordeel en tiebreak-toestanden volgens de geselecteerde wedstrijdregels.</p>
+</div>
+<div class="help-item">
+<strong>Hoe worden deuce en voordeel afgehandeld?</strong>
+<p>Met Standard Game, <span class="score-nowrap">40-40</span> wordt deuce: je moet voordeel behalen en daarna ook het volgende punt winnen. Met No-Ad beslist het eerstvolgende punt bij deuce de game.</p>
+</div>
+<div class="help-item">
+<strong>Hoe werkt de puntentelling in een tiebreak?</strong>
+<p>Wanneer de geselecteerde regel een tiebreak vereist, schakelt de app van normale tennispunten naar numerieke tiebreakpunten en bepaalt de winnaar met behulp van de geconfigureerde tiebreakregel.</p>
+</div>
+<div class="help-item">
+<strong>Wat is een matchtiebreak en hoe start ik er een?</strong>
+<p>Een matchtiebreak vervangt de beslissende set. Staat het 1–1 in sets bij best of 3 of 2–2 bij best of 5, open dan vóór de laatste set het menu en kies Matchtiebreak. Kies vervolgens tot 7 of tot 10 punten. De winnaar moet minstens dat aantal halen en twee punten verschil hebben. Dit werkt bij enkel- en dubbelspel; de uitslag verschijnt in Geschiedenis, wedstrijdgegevens, statistieken en deelkaarten.</p>
+</div>
+<div class="help-item">
+<strong>Hoe verschilt een matchtiebreak van een set tie-break?</strong>
+<p>Een set tiebreak besluit één set, meestal op <span class="score-nowrap">6-6</span>, en de set wordt opgenomen als <span class="score-nowrap">7-6</span>. Een matchtiebreak vervangt de hele beslissende set en wordt afzonderlijk in haakjes weergegeven, zoals [<span class="score-nowrap">10-7</span>].</p>
+</div>
+<div class="help-item">
+<strong>Hoe werkt de serveermarker?</strong>
+<p>Wanneer je serveert, markeert de tennisbal de kant waarop je moet serveren. Wanneer de tegenstander serveert, toont het de servekant van de tegenstander vanuit je horlogeweergave.</p>
+</div>
+<div class="help-item">
+<strong>Hoe houdt de app bij wie serveert?</strong>
+<p>De app wisselt automatisch van serveerder na games en tijdens de tiebreak. Klopt de aanduiding op je Watch niet met de echte wedstrijd, dan kun je de serveerder in het wedstrijdmenu corrigeren.</p>
+</div>
+<div class="help-item">
+<strong>Wanneer moeten de spelers van speelhelft wisselen?</strong>
+<p>De app toont op het juiste moment een herinnering om van speelhelft te wisselen. De melding verdwijnt zodra het spel doorgaat.</p>
+</div>
+</div>
+</section>
+<section id="match-controls">
+<h2>Wedstrijdbediening</h2>
+<p class="section-subtitle">
+    Corrigeer fouten, beheer de huidige wedstrijd en stop een onvoltooide sessie veilig.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Hoe werkt Ongedaan maken?</strong>
+<p>Ongedaan maken verwijdert het laatst geregistreerde punt en herstelt de vorige wedstrijdstand, inclusief punten, games, sets, serveerder, servicekant, tiebreak en bijbehorende statistieken.</p>
+</div>
+<div class="help-item">
+<strong>Wat doet Menu?</strong>
+<p>Tijdens een live wedstrijd biedt Menu toegang tot aanvullende acties zoals het corrigeren van de server, het openen van de wedstrijdgeschiedenis, het stoppen van de huidige wedstrijd of het voorbereiden van een nieuwe wedstrijd.</p>
+</div>
+<div class="help-item">
+<strong>Wanneer gebruik ik Wissel serveerder?</strong>
+<p>Gebruik serveerder wisselen als de app de verkeerde serveerder toont. Hiermee corrigeer je de servicekant zonder een punt toe te voegen of te verwijderen.</p>
+</div>
+<div class="help-item">
+<strong>Wat gebeurt er als ik een wedstrijd stop?</strong>
+<p>Je kunt een afgebroken wedstrijd bewaren met de huidige stand, verstreken tijd, afgeronde sets, voortgang van de lopende set, punten en beschikbare statistieken. In Geschiedenis blijft de status Gestopt staan. Stond één partij voor, dan telt de uitslag mee voor het wedstrijdrecord, winstpercentage en reeksen. Een gelijke stand blijft neutraal.</p>
+</div>
+<div class="help-item">
+<strong>Wat gebeurt er als ik stop voordat ik een punt scoor?</strong>
+<p>Een wedstrijd zonder geregistreerde punten heeft geen scoreverloop om te bewaren. Trainingsgegevens verschijnen alleen als er een training is vastgelegd.</p>
+</div>
+<div class="help-item">
+<strong>Kan ik een nieuwe wedstrijd starten nadat ik een wedstrijd heb voltooid of gestopt?</strong>
+<p>Ja. Nadat de huidige wedstrijd is voltooid of gestopt, kunt u terugkeren naar de configuratie en een nieuwe wedstrijd starten met de vorige configuratie die opnieuw kan worden gebruikt.</p>
+</div>
+<div class="help-item">
+<strong>Wat moet ik doen nadat ik per ongeluk een punt heb opgenomen?</strong>
+<p>Gebruik Ongedaan maken zo snel mogelijk. Het herstelt de volledige staat van vóór het onjuiste punt en is veiliger dan proberen te compenseren door een ander punt toe te kennen.</p>
+</div>
+</div>
+</section>
+<section id="rivalries">
+<h2>Tegenstanders en onderlinge resultaten</h2>
+<p class="section-subtitle">
+    Kies op Apple Watch een opgeslagen tegenstander voor het enkelspel en bouw automatisch een privéonderlinge balans op.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Hoe creëer ik een tegenstander?</strong>
+<p>Open Rivaliteiten in Pro op de iPhone. Vul de volledige naam en een korte naam voor de Watch in. Die korte naam heeft maximaal 16 tekens, zodat hij tijdens het instellen en scoren leesbaar blijft. In Standalone op Apple Watch kun je gesynchroniseerde tegenstanders kiezen, maar geen profielen maken of bewerken.</p>
+</div>
+<div class="help-item">
+<strong>Hoe verwijder ik een tegenstander?</strong>
+<p>Houd in Rivaliteiten op de iPhone de spelerskaart ingedrukt, kies Verwijder speler en bevestig. De bijbehorende wedstrijden blijven in de geschiedenis staan, maar zijn niet meer aan een tegenstander gekoppeld. Je kunt ze later opnieuw toewijzen.</p>
+</div>
+<div class="help-item">
+<strong>Hoe kies ik een tegenstander op Apple Watch?</strong>
+<p>Kies Singles tijdens het instellen van de wedstrijd, open Opponent en selecteer Gast of een opgeslagen speler voordat u begint. Gast neemt een normale wedstrijd op zonder deze toe te voegen aan een Rivaliteit. Dubbelspel wijst geen enkele tegenstander toe aan de teamwedstrijd.</p>
+</div>
+<div class="help-item">
+<strong>Wat is inbegrepen in Head-to-Head?</strong>
+<p>De onderlinge balans gebruikt enkelspelwedstrijden met een duidelijke uitslag die aan deze speler zijn gekoppeld. Voltooide wedstrijden en gestopte wedstrijden met een koploper tellen mee; een gestopte wedstrijd bij gelijke stand blijft neutraal. Als de gegevens beschikbaar zijn, zie je ook sets, games, tiebreaks, punten, service, return, breakpoints, speeltijd, trainingen en de wedstrijdlijst.</p>
+</div>
+<div class="help-item">
+<strong>Wat betekent Laatste 5 tegenover alle wedstrijden?</strong>
+<p>Dit vergelijkt je winstpercentage in de vijf recentste onderlinge wedstrijden met uitslag met het percentage over de gekozen periode. Zijn er minder dan vijf, dan gebruikt de app alle beschikbare wedstrijden. De vergelijking verandert als je Alle wedstrijden, Dit jaar of Laatste 30 dagen kiest.</p>
+</div>
+<div class="help-item">
+<strong>Wat is een overwinning na het verliezen van Set 1?</strong>
+<p>Het is een beslissende wedstrijd die je hebt gewonnen nadat je de eerste voltooide set had verloren. De details tekst toont hoeveel dergelijke overwinningen je hebt behaald en hoeveel kwalificatiewedstrijden begonnen met een verlies in de eerste set. Bijvoorbeeld, 2 van 5 betekent twee overwinningen uit vijf kwalificatiewedstrijden, niet twee pogingen uit een willekeurige limiet.</p>
+</div>
+<div class="help-item">
+<strong>Wat zijn de huidige reeks en de beste winstrek?</strong>
+<p>Huidige reeks is je recentste ononderbroken reeks van overwinningen of nederlagen met een duidelijke uitslag. Beste winstreeks is de langste ononderbroken reeks overwinningen binnen de gekozen periode.</p>
+</div>
+<div class="help-item">
+<strong>Kan ik een oudere wedstrijd aan een speler toewijzen?</strong>
+<p>Ja. Open de opgeslagen enkelspelwedstrijd op de iPhone, kies Toewijzen in het gedeelte tegenstander en selecteer de juiste speler. U kunt de toewijzing later wijzigen of verwijderen zonder de score of de opgeslagen statistieken te wijzigen. De bijgewerkte toewijzing wordt teruggestuurd naar de gepaarde Pro-geschiedenis en kan ook via privé iCloud-synchronisatie de Standalone bereiken.</p>
+</div>
+<div class="help-item">
+<strong>Hoe worden dubbele spelers voorkomen?</strong>
+<p>Elke speler heeft een stabiele interne identificator, terwijl de creatie ook geïnormaliseerde volledige en Watch-namen controleert om onbedoelde duplicaten te voorkomen. Synchronisatie gebruikt de stabiele identificator en verwijderingsrecords, zodat hetzelfde profiel wordt bijgewerkt in plaats van opnieuw wordt aangemaakt op een ander apparaat.</p>
+</div>
+<div class="help-item">
+<strong>Worden privénotities gedeeld?</strong>
+<p>Nee. Een privébericht blijft in het Rivalry-profiel en is uitgesloten van gedeelde tekst- en visuele kaarten. Gedeelde visuele kaarten gebruiken het actietijdfilter en houden een vaste volgorde aan: recente en recente ontmoetingen, wedstrijdprestaties, vervolgens patronen en trainingscontext.</p>
+</div>
+</div>
+</section>
+<section id="statistics">
+<h2>Het begrijpen van wedstrijdstatistieken</h2>
+<p class="section-subtitle">
+    Ontdek wat de opgeslagen wedstrijdstatistieken betekenen en hoe ze worden berekend.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Wat zijn totale punten?</strong>
+<p>De totale punten tonen hoeveel gescoord punten tijdens de wedstrijd zijn geregistreerd. De puntenoverzicht scheidt de punten die u hebt gewonnen van de punten die de tegenstander heeft gewonnen.</p>
+</div>
+<div class="help-item">
+<strong>Wat zijn opgenomen games?</strong>
+<p>Opgenomen games zijn games die punt voor punt gegevens bevatten. In een gestopt spel kan dit het huidige onvoltooide spel omvatten, dus deze waarde is niet de officiële spelscore.</p>
+</div>
+<div class="help-item">
+<strong>Wat zijn Break Point-statistieken?</strong>
+<p>Je ziet hoeveel breakpoints je op je eigen service tegen kreeg en redde, en hoeveel kansen je op de service van je tegenstander kreeg en benutte. Tiebreakpunten tellen niet mee.</p>
+</div>
+<div class="help-item">
+<strong>Worden statistieken automatisch bijgewerkt?</strong>
+<p>Ja. De statistieken worden bijgewerkt op basis van de punten die u vastlegt. Ongedaan maken herstelt ook het statistische effect van het laatste punt, zodat de cijfers blijven overeenkomen met de herstelde score.</p>
+</div>
+<div class="help-item">
+<strong>Waarom zijn de statistieken van een gestopte wedstrijd soms onvolledig?</strong>
+<p>Een gestopt wedstrijd omvat alleen de punten en situaties die zich voordeden voordat deze werd gestopt. Statistieken die latere wedstrijdgebeurtenissen of normale voltooiing vereisen, kunnen daarom afwezig of minder volledig zijn.</p>
+</div>
+<div class="help-item">
+<strong>Waarom toont een oudere opgeslagen wedstrijd minder statistieken?</strong>
+<p>Wedstrijden die zijn opgeslagen door eerdere appversies bevatten mogelijk niet alle statistieken die later zijn geïntroduceerd. Hun beschikbare details weerspiegelen wat op dat moment werd vastgelegd.</p>
+</div>
+</div>
+</section>
+<section id="companion-sync">
+<h2>Synchronisatie tussen Pro en iPhone</h2>
+<p>Pro bevat de complete Apple Watch score-app en wedstrijdanalyse op iPhone. Er is geen aparte aankoop van Tennis Score Wizard (standalone) nodig.</p>
+<p class="section-subtitle">
+    Score op Apple Watch, en ontdek vervolgens gesynchroniseerde wedstrijdgeschiedenis, resultaten, statistieken en trainingsinzichten op iPhone.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Waar stel ik in Pro een wedstrijd in en houd ik de score bij?</strong>
+<p>Live wedstrijdinstelling en punt voor punt scoren blijven op de Apple Watch. Pro op iPhone laat je ook het resultaat van een wedstrijd invoeren die je hebt gespeeld, optionele courtcontext bewerken, opgeslagen wedstrijden bekijken en hoogtepunten delen. Handmatige invoer is geen live iPhone-scorebord.</p>
+</div>
+<div class="help-item">
+<strong>Wat verschijnt er op de iPhone?</strong>
+<p>De iPhone-app toont je laatste resultaat en wedstrijdgeschiedenis. Daaronder vallen handmatig toegevoegde wedstrijden, set- en tiebreakstanden, optionele gegevens over de baan en beschikbare wedstrijdhoogtepunten. Wedstrijden die je op Apple Watch hebt bijgehouden, kunnen ook statistieken over punten, service, return, breakpoints en wedstrijdverloop bevatten, evenals beschikbare trainingsgegevens.</p>
+</div>
+<div class="help-item">
+<strong>Hoe synchroniseert de wedstrijdgeschiedenis?</strong>
+<p>Pro synchroniseert wedstrijden op twee onafhankelijke manieren. Via Watch Connectivity kan een opgeslagen wedstrijd rechtstreeks tussen de gekoppelde Apple Watch en iPhone worden verstuurd. Dat is meestal de snelste route als beide apparaten beschikbaar zijn. CloudKit synchroniseert en herstelt de geschiedenis via iCloud tussen Standalone en Pro, zolang beide hetzelfde Apple-account gebruiken. Als een wedstrijd via beide routes aankomt, bewaren de apps één actuele versie.</p>
+</div>
+<div class="help-item">
+<strong>Zal een later toegewezen tegenstander op iPhone in de watchgeschiedenis verschijnen?</strong>
+<p>Ja. De tegenstandertoewijzing maakt deel uit van de opgeslagen wedstrijd. Pro kan de update rechtstreeks leveren aan de gekoppelde Apple Watch en privé iCloud-synchronisatie kan deze leveren aan Standalone wanneer de apps hetzelfde Apple-account gebruiken. Houd de apps kort beschikbaar als de update nog niet is verschenen.</p>
+</div>
+<div class="help-item">
+<strong>Wat kan ik doen als een wedstrijd niet op mijn iPhone verschijnt?</strong>
+<p>Controleer of de juiste Apple Watch is gekoppeld, houd beide apparaten in de buurt en open de Tennis Score Wizard op Apple Watch en iPhone. Controleer ook of beide apparaten het beoogde Apple-account gebruiken en controleer de iCloud-status in de geschiedenis. Een opgeslagen wedstrijd blijft lokaal beschermd terwijl deze wacht en kan synchroniseren wanneer de verbinding met het gekoppelde apparaat of iCloud beschikbaar wordt.</p>
+</div>
+<div class="help-item">
+<strong>Zijn trainingsdetails ook gesynchroniseerd?</strong>
+<p>Wanneer trainingsgegevens beschikbaar zijn, kan Pro Matchduur, Gemiddelde Hartslag, Maximale Hartslag en Actieve Energie tonen met de opgeslagen wedstrijd op beide apparaten.</p>
+</div>
+<div class="help-item">
+<strong>Wat gebeurt er als ik de matchgeschiedenis verwijder?</strong>
+<p>Het verwijderen van een individuele wedstrijd of de volledige geschiedenis in Pro synchroniseert die wijziging tussen iPhone en Apple Watch en, indien beschikbaar, via iCloud. De app vraagt om bevestiging voordat de volledige geschiedenis wordt verwijderd.</p>
+</div>
+</div>
+</section>
+<section id="icloud-sync">
+<h2>Wedstrijden synchroniseren en herstellen via iCloud</h2>
+<p class="section-subtitle">
+    Synchroniseer opgeslagen wedstrijden tussen Standalone en Pro zonder een account voor de Tennis Score Wizard aan te maken.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Wat heb ik nodig om wedstrijden via iCloud te synchroniseren?</strong>
+<p>Zorg ervoor dat Apple Watch en, voor Pro, iPhone hetzelfde Apple-account gebruiken. Schakel iCloud Drive in, houd een internetverbinding beschikbaar en laat tijd vrij voor het voltooien van de eerste synchronisatie. U kunt doorgaan met scoren wanneer iCloud niet beschikbaar is.</p>
+</div>
+<div class="help-item">
+<strong>Kunnen Standalone en Pro wedstrijden delen?</strong>
+<p>Ja. Beide releases gebruiken dezelfde iCloud-opslag voor opgeslagen wedstrijden. Wanneer beide apps hetzelfde Apple-account gebruiken, kan een wedstrijd die is opgeslagen in Standalone in Pro verschijnen, en een wedstrijd die is opgeslagen in Pro kan in Standalone verschijnen.</p>
+</div>
+<div class="help-item">
+<strong>Hoe weet ik dat de synchronisatie is voltooid?</strong>
+<p>Open Geschiedenis en controleer de iCloud-statusregel. <b>Gesynchroniseerd</b> betekent dat de laatste synchronisatie met succes is voltooid en toont de datum en tijd. <b>Synchroniseren</b> betekent dat synchronisatie actief is. <b>Wachten</b> met <b>Opslaan</b> betekent dat een lokale wijziging veilig klaarstaat om met iCloud te worden gesynchroniseerd. <b>Synchronisatie onderbroken</b> met <b>Opnieuw proberen</b> betekent dat de laatste poging niet kon worden voltooid; tik op de rij om opnieuw te proberen.</p>
+</div>
+<div class="help-item">
+<strong>Wat gebeurt er als ik mijn Apple-account verander?</strong>
+<p>Elk Apple-account heeft een eigen wedstrijdgeschiedenis in de privédatabase van CloudKit. Geschiedenissen van verschillende accounts blijven gescheiden en worden niet samengevoegd. Als de app een accountwisseling detecteert, toont hij de lokale en iCloud-geschiedenis van het huidige account. Schakel je terug, dan verschijnt de eerdere geschiedenis weer na synchronisatie. Voordat de lokale cache van het vorige account wordt verwijderd, bewaart de app nog niet gesynchroniseerde wedstrijden in een versleutelde herstelkopie die bij dat account hoort. Ze worden niet naar het nieuwe account geüpload. Een accountwisseling verwijdert ook geen wedstrijden die al in iCloud zijn opgeslagen.</p>
+</div>
+<div class="help-item">
+<strong>Krijg ik mijn wedstrijden terug als ik de app opnieuw installeer?</strong>
+<p>Ja, als de wedstrijden vóór het verwijderen van de app met succes zijn gesynchroniseerd. Controleer eerst of bij Geschiedenis de status <b>Gesynchroniseerd</b> staat. Gebruik na de herinstallatie hetzelfde Apple-account, laat iCloud Drive ingeschakeld, open de app en wacht tot de wedstrijden zijn gedownload.</p>
+</div>
+<div class="help-item">
+<strong>Verdwijnt mijn iCloud-geschiedenis als ik de app verwijder?</strong>
+<p>Nee. Het verwijderen van de app verwijdert niet per se matchrecords die al met iCloud zijn gesynchroniseerd. Die records kunnen opnieuw worden gedownload na opnieuw installeren. Het verwijderen van wedstrijden vanuit Tennis Score Wizard synchroniseert die verwijderingen wanneer iCloud beschikbaar wordt.</p>
+</div>
+<div class="help-item">
+<strong>Kan de ontwikkelaar mijn gesynchroniseerde wedstrijden zien?</strong>
+<p>Nee. CloudKit slaat gesynchroniseerde records op in de privédatabase voor uw Apple-account. Standaard kan alleen die gebruiker toegang krijgen tot de privédatabase.</p>
+</div>
+</div>
+</section>
+<section id="health-workouts">
+<h2>Gezondheid en trainingen</h2>
+<p class="section-subtitle">
+    Neem je tennissessie op en begrijp de gezondheidsinformatie die na de wedstrijd wordt weergegeven.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Hoe registreer ik een tennistraining?</strong>
+<p>Schakel Training registreren in wanneer je de wedstrijd instelt en geef de gevraagde toegang tot Gezondheid. De training begint tegelijk met de wedstrijd en eindigt wanneer je de wedstrijd afrondt of stopt.</p>
+</div>
+<div class="help-item">
+<strong>Hoe werkt live hartslag?</strong>
+<p>Tijdens een geregistreerde training toont de app je actuele hartslag als je toegang hebt verleend en Apple Watch op dat moment een meting beschikbaar heeft.</p>
+</div>
+<div class="help-item">
+<strong>Wat zijn de gemiddelde en maximale hartslag?</strong>
+<p>De gemiddelde hartslag is gebaseerd op de beschikbare metingen tijdens de training. De maximale hartslag is de hoogste gemeten waarde tijdens die training.</p>
+</div>
+<div class="help-item">
+<strong>Wat is actieve energie?</strong>
+<p>Actieve energie is een schatting van de energie die je tijdens de training door beweging hebt verbruikt. Apple Watch berekent deze waarde aan de hand van beschikbare gezondheids- en bewegingsgegevens. De app toont het trainingstotaal uit HealthKit.</p>
+</div>
+<div class="help-item">
+<strong>Waar wordt de training opgeslagen?</strong>
+<p>Na succesvolle voltooiing wordt de training opgeslagen in Gezondheid en kan deze ook verschijnen in de Fitness-app op de iPhone, afhankelijk van de toestemmingen en synchronisatiegedrag van uw apparaten.</p>
+</div>
+<div class="help-item">
+<strong>Waarom kunnen trainingsstatistieken na een vertraging verschijnen?</strong>
+<p>Het kan even duren voordat Gezondheid alle metingen heeft opgeslagen. Wacht kort en bekijk de afgeronde wedstrijd opnieuw.</p>
+</div>
+<div class="help-item">
+<strong>Waarom ontbreekt er een gezondheidsstatistiek?</strong>
+<p>Een waarde kan niet beschikbaar zijn wanneer toestemming niet is verleend, de sensor niet voldoende monsters heeft geleverd, de trainingsopname is uitgeschakeld of Health nog niet klaar was met het opslaan van de trainingsgegevens.</p>
+</div>
+<div class="help-item">
+<strong>Zal de wedstrijd nog steeds worden opgeslagen als de trainingsopname mislukt?</strong>
+<p>De wedstrijdscore en de wedstrijdgeschiedenis zijn los van de gezondheid. Een toestemmings- of trainingsgegevensprobleem verhindert niet dat het scorerecord zelf wordt opgeslagen.</p>
+</div>
+</div>
+</section>
+<section id="match-history">
+<h2>Wedstrijdgeschiedenis</h2>
+<p class="section-subtitle">
+    Zoek opgeslagen wedstrijden op jaar en maand op Apple Watch en bekijk de uitslag in compacte tennisnotatie.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Hoe vind ik een oudere wedstrijd op Apple Watch?</strong>
+<p>In Geschiedenis, tik op Periode, kies een jaar, vervolgens een maand of Hele jaar. Alleen jaren en maanden met opgeslagen wedstrijden worden aangeboden. Kies Alle data om de periode te wissen en gebruik Alle, 1v1 of 2v2 om het wedstrijdtype te filteren. Deze bedieningselementen zijn beschikbaar in zowel Pro als Standalone.</p>
+</div>
+<div class="help-item">
+<strong>Laat Geschiedenis op Apple Watch maar 50 wedstrijden zien?</strong>
+<p>Nee. Eerst verschijnen 50 passende wedstrijden. Tijdens het bladeren worden telkens 50 oudere wedstrijden geladen. Je kunt ook Oudere wedstrijden laden kiezen. Het overzicht gebruikt alle opgeslagen wedstrijden die aan het filter voldoen, niet alleen de eerste 50. In het periodemenu staan jaren en maanden uit je volledige geschiedenis; oudere wedstrijden worden niet verwijderd.</p>
+</div>
+<div class="help-item">
+<strong>Wat betekenen Win en Verlies?</strong>
+<p>Winst betekent dat jij de voltooide wedstrijd op basis van sets hebt gewonnen. Verlies betekent dat je tegenstander de wedstrijd op basis van sets heeft gewonnen.</p>
+</div>
+<div class="help-item">
+<strong>Wat betekent Gestopt?</strong>
+<p>Gestopt betekent dat de wedstrijd is opgeslagen voordat de normale voltooiing plaatsvond. De app houdt de echte wedstrijdcontext die tot dat moment is verzameld bij. Een gestopt spel met een leider telt mee voor Wedstrijdrecord, Winrate en reeksen; een gelijkspelend gestopt spel is neutraal.</p>
+</div>
+<div class="help-item">
+<strong>Wat zijn S1 tot en met S5?</strong>
+<p>S1 tot S5 betekent Set 1 tot Set 5. Het aantal kolommen hangt af van de wedstrijd: een voltooid of gestopt resultaat kan één tot vijf reguliere sets laten zien. Bijvoorbeeld S1 <span class="score-nowrap">6-3</span> betekent dat de eerste set eindigde in zes games tegen drie.</p>
+</div>
+<div class="help-item">
+<strong>Wat betekent TB <span class="score-nowrap">7-3</span> Betekent?</strong>
+<p>TB toont de geregistreerde tiebreakpunten binnen een set. Bijvoorbeeld: <span class="score-nowrap">7-6</span> · TB <span class="score-nowrap">7-3</span> Betekent dat de set eindigde <span class="score-nowrap">7-6</span> En de tiebreakscore was <span class="score-nowrap">7-3</span>.</p>
+</div>
+<div class="help-item">
+<strong>Wat doet <span class="score-nowrap">7-6</span><sup>(6)</sup> Betekent?</strong>
+<p>In de compacte uitslag is het kleine getal tussen haakjes het aantal tiebreakpunten van de verliezer. Bijvoorbeeld: <span class="score-nowrap">7-6</span><sup>(6)</sup> betekent dat de tiebreak werd gewonnen <span class="score-nowrap">8-6</span>. De set-voor-set tabel kan zowel de tie-break punten van beide spelers weergeven wanneer ze zijn opgenomen.</p>
+</div>
+<div class="help-item">
+<strong>Hoe wordt de uitslag van een gestopte wedstrijd bepaald?</strong>
+<p>De app vergelijkt eerst de afgeronde sets. Staat het dan gelijk, dan kijkt hij naar de games in de onvoltooide set en vervolgens naar eventuele geregistreerde tiebreak- of gamepunten. Games uit eerdere sets worden niet bij elkaar opgeteld om een leider aan te wijzen. Wordt een wedstrijd tussen twee sets gestopt terwijl de setstand gelijk is, dan blijft de uitslag gelijk. Een duidelijke voorsprong telt in de statistieken als winst of verlies, maar de wedstrijd behoudt het label Gestopt.</p>
+</div>
+<div class="help-item">
+<strong>Wat gebeurt er met een onvoltooide set?</strong>
+<p>Als de huidige set voortgang bevat wanneer de wedstrijd wordt gestopt, wordt deze opgeslagen met de wedstrijd. Dit behoudt de echte context, zoals S3 <span class="score-nowrap">0-1</span>.</p>
+</div>
+<div class="help-item">
+<strong>Welke informatie wordt opgeslagen met een wedstrijd?</strong>
+<p>Een opgeslagen wedstrijd kan het scoreformaat, de uitslag, set- en tiebreakstanden, tijden en een tegenstander bevatten. Handmatig ingevoerde wedstrijden krijgen het label Handmatig toegevoegd. Op iPhone kun je ook baanomstandigheden, een locatie en een privénotitie toevoegen. Punt-voor-puntstatistieken en trainingsgegevens verschijnen alleen wanneer ze zijn geregistreerd.</p>
+</div>
+<div class="help-item">
+<strong>Hoe verschijnen aangepaste formaten in de geschiedenis?</strong>
+<p>Geschiedenis toont de naam van het gekozen formaat en de belangrijkste regels, zoals het aantal benodigde games, de vereiste voorsprong en wanneer een tiebreak begint en eindigt. In de lijst staan de hoofdgegevens; de wedstrijddetails tonen alle instellingen.</p>
+</div>
+<div class="help-item">
+<strong>Hoe worden tiebreaks weergegeven in gedeelde resultaten?</strong>
+<p>Tiebreakpunten van een set staan naast de gamestand. Vakken worden breder bij tweecijferige gamestanden, zodat de cijfers leesbaar blijven. Een beslissende matchtiebreak verschijnt apart tussen vierkante haken, bijvoorbeeld [<span class="score-nowrap">10-7</span>]. Gedeelde tekst bevat ook het volledige resultaat in een leesbare vorm.</p>
+</div>
+<div class="help-item">
+<strong>Kan ik een opgeslagen wedstrijd verwijderen?</strong>
+<p>Ja. Gebruik de verwijderingsactie in de wedstrijdgeschiedenis en bevestig de verwijdering. Het verwijderen van een wedstrijd verwijdert die opgeslagen geschiedenisitem uit de app.</p>
+</div>
+</div>
+</section>
+<section id="period-recaps">
+<h2>Maand- en jaaroverzichten</h2>
+<p class="section-subtitle">Bekijk de opgeslagen wedstrijdactiviteit in de Watch-app of gebruik de grotere samenvatting in Pro op iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>Waar vind ik een samenvatting?</strong><p>Op Apple Watch open je Geschiedenis, tik je op Periode en kies je een jaar of een maand met opgeslagen wedstrijden. Tik vervolgens op Jaar in Tennis of Maand in Tennis. In Pro op iPhone open je de Kalender en tik je op de samenvattingknop voor de geselecteerde maand of het jaar.</p></div>
+<div class="help-item"><strong>Wat betekenen de kleuren en cijfers in de grafiek?</strong><p>Elke balk toont het aantal opgeslagen wedstrijden in een week of maand. Groen staat voor afgeronde overwinningen, rood voor afgeronde nederlagen en geel voor gestopte wedstrijden. Het getal boven de balk is het totale aantal wedstrijden. In het overzicht staan afgeronde uitslagen los van gestopte wedstrijden.</p></div>
+<div class="help-item"><strong>Hoe worden weken verdeeld?</strong><p>Weekgrenzen volgen de kalenderinstellingen van uw apparaat. Een maand kan delen bevatten van vijf of zes kalenderweken. Een vergelijking van week tot week verschijnt wanneer de geselecteerde maand twee volledige weken bevat om te vergelijken.</p></div>
+<div class="help-item"><strong>Wat wordt vergeleken met de vorige periode?</strong><p>De samenvatting vergelijkt het aantal wedstrijden en het winstpercentage met de vorige maand of het vorige jaar wanneer vergelijkbare geschiedenis beschikbaar is. Voor een maand of jaar dat nog in uitvoering is, vergelijkt het door dezelfde keerpunt in beide perioden. Het winstpercentage gebruikt alleen voltooide overwinningen en verliezen, dus gestopte en gelijkspelende wedstrijden hebben er geen invloed op.</p></div>
+<div class="help-item"><strong>Waar vind ik prestaties en deelopties?</strong><p>Beide Watch-apps tonen prestaties uit de geselecteerde periode. In Pro op iPhone kun je op een prestatie tikken om de bijbehorende wedstrijd te openen. Met Delen maak je een kaart van de maand of het jaar.</p></div>
+</div>
+</section>
+<section id="support-development">
+<h2>Vrijwillige bijdrage aan de ontwikkeling</h2>
+<p class="section-subtitle">
+    Eenmalige ondersteuning helpt bij toekomstige ontwikkeling, maar ontgrendelt nooit functies of wijzigt de app.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Ontgrendelt een tip iets?</strong>
+<p>Nee. Apple-tips en ondersteuning voor cryptocurrency zijn optioneel. Elke app-functie blijft beschikbaar volgens het product dat u hebt gekocht, of u nu een tip achterlaat of niet.</p>
+</div>
+<div class="help-item">
+<strong>Hoe werkt een Apple-tip?</strong>
+<p>Kies in Info → Ondersteun de ontwikkeling een eenmalig bedrag en bevestig de aankoop via Apple. Apple verwerkt de betaling met de betaalmethode van je App Store-account.</p>
+</div>
+<div class="help-item">
+<strong>Wat moet ik controleren voordat ik met cryptovaluta steun?</strong>
+<p>Bevestig de valuta, het netwerk en het volledige bestemmingadres in uw portemonnee voordat u verzendt. Blockchain-transfers zijn over het algemeen onherroepelijk. Tennis Score Wizard voegt geen wedstrijd-, rivaliteit-, trainings- of gezondheidsgegevens toe aan de transactie.</p>
+</div>
+</div>
+</section>
+<section id="complications-help">
+<h2>Complicaties op de Apple Watch-wijzerplaat</h2>
+<p class="section-subtitle">
+    Voeg snelle toegang toe tot Tennis Score Wizard rechtstreeks vanaf een ondersteunde wijzerplaat.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Wat doet de complicatie Tennis Score Wizard?</strong>
+<p>De complicatie fungeert als een snelle launcher. Als je erop tikt, wordt Tennis Score Wizard geopend op de Apple Watch, zodat je de app rechtstreeks vanaf je wijzerplaat kunt bereiken.</p>
+</div>
+<div class="help-item">
+<strong>Welke soorten complicaties worden ondersteund?</strong>
+<p>Tennis Score Wizard ondersteunt ronde complicaties en complicaties in de hoek van geschikte Apple Watch-wijzerplaten.</p>
+</div>
+<div class="help-item">
+<strong>Hoe voeg ik de complicatie toe?</strong>
+<p>Bewerk een compatibele wijzerplaat op Apple Watch of in de Watch-app op iPhone, selecteer een ondersteunde complicatiepositie en kies Tennis Score Wizard uit de beschikbare complicaties.</p>
+</div>
+<div class="help-item">
+<strong>Waarom kan ik de complicatie niet vinden?</strong>
+<p>Controleer of de app is geïnstalleerd op Apple Watch en dat de geselecteerde wijzerplaatpositie een van de beschikbare complicatiefamilies ondersteunt. De beschikbare posities variëren tussen wijzerplaten.</p>
+</div>
+<div class="help-item">
+<strong>Waarom ziet de complicatie er anders uit op een ander wijzerplaatje?</strong>
+<p>Apple Watch controleert de vorm en beschikbare ruimte van elke complicatiepositie. Tennis Score Wizard past zijn launcher aan aan de ondersteunde cirkelvormige of hoekpresentatie.</p>
+</div>
+</div>
+</section>
+<section id="troubleshooting">
+<h2>Probleemoplossing</h2>
+<p class="section-subtitle">
+    Veelvoorkomende controles wanneer het scoren, trainingsinformatie of toegang tot het horlogevenster niet zoals verwacht werkt.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>De hartslag in realtime verschijnt niet. Wat moet ik controleren?</strong>
+<p>Controleer of Record Workout is ingeschakeld, toegang tot gezondheid is toegestaan en de watch veilig wordt gedragen. De hartslag verschijnt alleen wanneer de Apple Watch een beschikbare monster levert.</p>
+</div>
+<div class="help-item">
+<strong>De training is niet zichtbaar in de Gezondheid-app. Wat moet ik doen?</strong>
+<p>Geef tijd voor verwerking, controleer vervolgens de bevoegdheden Gezondheid en bevestig dat de trainingsopname is ingeschakeld voor de wedstrijd. Controleer ook of de training correct is voltooid door de wedstrijd af te maken of te stoppen.</p>
+</div>
+<div class="help-item">
+<strong>Gemiddelde hartslag, maximale hartslag of actieve energie ontbreekt.</strong>
+<p>Open de voltooide wedstrijd opnieuw nadat Health de tijd heeft gehad om de training te beherenen. Een meting kan niet beschikbaar blijven als Health niet voldoende onderliggende gegevens heeft verstrekt.</p>
+</div>
+<div class="help-item">
+<strong>De verkeerde serveerder wordt getoond.</strong>
+<p>Open het menu en kies Wissel serveerder om aan te geven wie er echt serveert. De score verandert hierdoor niet.</p>
+</div>
+<div class="help-item">
+<strong>Ik heb het verkeerde punt ingevoerd.</strong>
+<p>Kies Ongedaan maken om de situatie van vóór het laatste punt te herstellen, inclusief score, serveerder, tiebreak en bijbehorende statistieken.</p>
+</div>
+<div class="help-item">
+<strong>De complicatie is niet beschikbaar op mijn geselecteerde wijzerplaat.</strong>
+<p>Probeer een cirkelvormige of hoekcomplicatiepositie. Niet elke positie op elk wijzerplaat ondersteunt hetzelfde type complicatie.</p>
+</div>
+<div class="help-item">
+<strong>Zal het opnieuw installeren van de app de matchgeschiedenis behouden?</strong>
+<p>Open eerst Geschiedenis en bevestig dat de iCloud-rij wordt weergegeven <b>Gesynchroniseerd</b>. Gebruik na herinstallatie hetzelfde Apple-account, schakel iCloud Drive in en wacht tot het herstel is voltooid. Wedstrijden die nooit met iCloud zijn gesynchroniseerd, staan alleen op het oorspronkelijke apparaat.</p>
+</div>
+<div class="help-item">
+<strong>Geschiedenis toont Wachten of Opslaan, of Synchronisatie onderbroken met Opnieuw proberen.</strong>
+<p><b>Wachten</b> met <b>Opslaan</b> Betekent dat een lokale wijziging in de wachtrij staat en kan worden geüpload wanneer iCloud beschikbaar wordt. voor <b>Synchronisatie onderbroken</b> met <b>Opnieuw proberen</b>, bevestig dat het apparaat is aangemeld bij het beoogde Apple-account, iCloud Drive is ingeschakeld, het netwerk beschikbaar is en iCloud-opslag niet vol is, tik dan op de statusregel. Lokale overeenkomsten worden niet verwijderd alleen omdat iCloud niet beschikbaar is.</p>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2>Ondersteuning</h2>
+<div class="support-card">
+<h3>Heb je hulp nodig of een idee voor een functie?</h3>
+<p>
+      Contact:
+      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+</p>
+</div>
+</section>
+<footer>
+<div class="footer-meta">
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch is een handelsmerk van Apple Inc.</span>
+</div>
+<nav aria-label="Secundaire navigatie" class="footer-links">
+<a href="privacy.html">Privacy</a>
+</nav>
+</footer>
+</main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
+<script defer="" src="../analytics.js"></script>
+</body>
+</html>

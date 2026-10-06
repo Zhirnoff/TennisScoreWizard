@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
+<title>Central de Ajuda — Tennis Score Wizard</title>
+<meta content="Ajuda para o Tennis Score Wizard: pontuação do Apple Watch, entrada e edição manual de partidas, filtros de histórico, contexto da quadra, Destaques da Partida, treinos e sincronização com o iCloud." name="description"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/pt-BR/help.html" rel="canonical"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="en" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/de/help.html" hreflang="de" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/es/help.html" hreflang="es" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/fr/help.html" hreflang="fr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ja/help.html" hreflang="ja" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ko/help.html" hreflang="ko" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ru/help.html" hreflang="ru" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/tr/help.html" hreflang="tr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/help.html" hreflang="zh-Hans" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/it/help.html" hreflang="it" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/pt-BR/help.html" hreflang="pt-BR" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hant/help.html" hreflang="zh-Hant" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/nl/help.html" hreflang="nl" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ar/help.html" hreflang="ar" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/help.html" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Tennis Score Wizard" property="og:site_name"/>
+<meta content="Central de Ajuda — Tennis Score Wizard" property="og:title"/>
+<meta content="Saiba mais sobre formatos de pontuação, partidas manuais, contexto da quadra, destaques das partidas, compartilhamento, treinos de saúde e sincronização privada do iCloud." property="og:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/pt-BR/help.html" property="og:url"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
+<meta content="Ícone do aplicativo Tennis Score Wizard" property="og:image:alt"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Central de Ajuda — Tennis Score Wizard" name="twitter:title"/>
+<meta content="Obtenha ajuda com a pontuação do Apple Watch, partidas manuais, contexto da quadra, destaques das partidas, compartilhamento, estatísticas e sincronização." name="twitter:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --panel-2: #111511;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --muted-2: #73757d;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-2: #00d84a;
+      --green-soft: rgba(40,255,95,0.10);
+      --yellow: #ffe34d;
+      --red: #ff4b55;
+    }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+    radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(40,255,95,0.08), transparent 38rem),
+    linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 16px;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    rgba(5,7,5,0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: 21px;
+}
+.app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14),
+    0 0 32px rgba(40,255,95,0.20),
+    0 14px 34px rgba(0,0,0,0.52);
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line-green);
+  border-radius: 999px;
+  color: #e7ffe5;
+  background: rgba(40,255,95,0.09);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 0 28px rgba(40,255,95,0.10);
+}
+.eyebrow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(40,255,95,0.75);
+}
+h1 {
+  margin: 0;
+  max-width: 740px;
+  font-size: clamp(46px, 7.4vw, 88px);
+  line-height: 0.91;
+  letter-spacing: -0.078em;
+}
+.hero-copy p {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 10px 18px 11px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.42),
+    0 0 28px rgba(40,255,95,0.10);
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.app-store-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 22px 54px rgba(0,0,0,0.50),
+    0 0 34px rgba(40,255,95,0.16);
+}
+
+.app-store-logo {
+  font-size: 31px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.app-store-text small {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.78);
+}
+
+.app-store-text strong {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  color: #e9e9ed;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 780;
+}
+.hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-ball-frame {
+  width: min(500px, 82vw);
+  height: min(500px, 82vw);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 120px;
+  background:
+    radial-gradient(circle at center, rgba(40,255,95,0.13), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  box-shadow:
+    0 42px 130px rgba(0,0,0,0.72),
+    0 0 90px rgba(40,255,95,0.16);
+}
+.hero-ball {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 102px;
+  filter: saturate(1.2) contrast(1.06);
+}
+section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px;
+}
+.section-subtitle {
+  max-width: 760px;
+  margin: -6px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 158px;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.card p,
+.faq p,
+.help-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.screenshot-card {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(40,255,95,0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 30px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.26);
+}
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(255,255,255,0.11);
+}
+.screenshot-card h3 {
+  margin: 17px 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+.screenshot-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.screenshot-pair img {
+  max-width: 100%;
+}
+
+.screenshot-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .screenshot-card.wide {
+    grid-column: span 1;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.help-item,
+.faq {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.028);
+  border-radius: 23px;
+  padding: 18px;
+}
+.help-item strong,
+.faq strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.help-item.stat-guide-wide {
+  grid-column: 1 / -1;
+}
+
+.stat-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.stat-example-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-example-card strong {
+  color: #f7f7f7;
+}
+
+.stat-example-card p {
+  margin: 7px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .stat-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacy-box {
+  border: 1px solid rgba(40,255,95,0.34);
+  background:
+    radial-gradient(circle at top left, rgba(40,255,95,0.16), transparent 22rem),
+    rgba(40,255,95,0.06);
+  border-radius: 25px;
+  padding: 22px;
+  color: #eaffdf;
+  box-shadow: 0 0 46px rgba(40,255,95,0.08);
+}
+.privacy-box p {
+  color: #d8f7d0;
+  margin: 8px 0 0;
+}
+.support-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025)),
+    var(--panel);
+  border-radius: 25px;
+  padding: 22px;
+  min-height: 142px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+}
+footer {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .hero-copy p {
+    font-size: 18px;
+  }
+  .hero-visual {
+    min-height: 360px;
+  }
+  .hero-ball-frame {
+    width: min(330px, 88vw);
+    height: min(330px, 88vw);
+    border-radius: 78px;
+    padding: 12px;
+  }
+  .hero-ball {
+    border-radius: 66px;
+  }
+  .grid,
+  .help,
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Language selector */
+.nav {
+  overflow: visible;
+}
+
+.nav-links {
+  align-items: center;
+  overflow: visible;
+}
+
+.language-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  cursor: pointer;
+  color: #f5f7f5;
+  border: 1px solid rgba(255,255,255,0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.045);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.language-menu summary::marker {
+  content: "";
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+.language-menu[open] summary {
+  border-color: var(--line-green);
+  background:
+    linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+    rgba(255,255,255,0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 0 24px rgba(40,255,95,0.13);
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: 210px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+    rgba(7,9,7,0.98);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.62),
+    0 0 0 1px rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,24,20,0.98);
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: #f2f4f2;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.language-options a:hover {
+  background: rgba(40,255,95,0.10);
+  text-decoration: none;
+}
+
+.language-options a.active {
+  color: var(--green);
+  background: rgba(40,255,95,0.11);
+}
+
+.language-options a.active::after {
+  content: "✓";
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* Version 1.2 screenshot gallery */
+.screenshots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.screenshot-card,
+.screenshot-card.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.screenshot-card img,
+.screenshot-pair img {
+  width: min(100%, 230px);
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+}
+
+.screenshot-card h3 {
+  margin-top: 0;
+}
+
+.screenshot-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img,
+  .screenshot-pair img {
+    width: min(100%, 220px);
+  }
+}
+
+/* Keep language dropdown above hero content */
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.language-menu {
+  z-index: 1100;
+}
+
+.language-options {
+  z-index: 1200;
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .language-menu {
+    position: relative;
+  }
+
+  .language-options {
+    left: 0;
+    right: auto;
+    width: min(210px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+  }
+
+  .language-options::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+/* Stable localized navigation */
+.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-areas:
+    "brand language"
+    "links links";
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  min-height: 104px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  min-width: 0;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 78px;
+  gap: 10px 22px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    column-gap: 12px;
+    row-gap: 10px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    padding-left: 0;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+/* Clickable brand and Help badge */
+.brand-home-link,
+.help-badge-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  min-width: 0;
+}
+
+.brand-home-link:hover,
+.brand-home-link:focus-visible,
+.help-badge-home-link:hover,
+.help-badge-home-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-home-link:focus-visible,
+.help-badge-home-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.help-home-badge {
+  cursor: pointer;
+}
+
+/* CJK headings need a slightly clearer gap below the badge. */
+html[lang="ja"] .hero .help-home-badge,
+html[lang="zh-Hans"] .hero .help-home-badge {
+  margin-bottom: 22px;
+}
+
+
+/* Unified global product navigation */
+.nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "brand links language";
+  align-items: center;
+  column-gap: 26px;
+  min-height: 92px;
+  padding: 14px 16px;
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+}
+
+.nav-links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+
+.nav-links > a {
+  flex: 0 0 auto;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-links > a[aria-current="page"] {
+  color: var(--green);
+}
+
+.language-menu {
+  grid-area: language;
+  justify-self: end;
+  margin: 0;
+}
+
+.footer-meta,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    column-gap: 14px;
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: grid;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    font-size: 12px;
+  }
+
+  .nav-links > a[aria-current="page"] {
+    border-color: var(--line-green);
+    background: var(--green-soft);
+  }
+
+  .language-options {
+    right: 0;
+    left: auto;
+  }
+
+  .language-options::before {
+    right: 22px;
+    left: auto;
+  }
+
+  footer,
+  .footer-meta,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Shared animated brand treatment */
+.brand-title {
+  display: inline-block;
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-home-link {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .hero-copy,
+  .hero-copy > *,
+  .help,
+  .help-item,
+  .faq {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1,
+  section > h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero-copy p,
+  .help-item,
+  .faq {
+    overflow-wrap: break-word;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+</style>
+<link href="../release-1-1.css" rel="stylesheet"/>
+<link href="../release-1-6-en.css?v=20260922-flow" rel="stylesheet"/>
+<script defer="" src="../navigation-en.js?v=20260911-nav"></script>
+<link href="../back-to-top.css?v=20261001" rel="stylesheet"/>
+<script defer="" src="../back-to-top.js?v=20261001"></script>
+<style>html[lang="pt-BR"] h1 { font-size: clamp(44px, 6vw, 76px); line-height: 1.1; letter-spacing: -0.03em; }@media (max-width: 640px) { html[lang="pt-BR"] .brand-title { font-size: 11px; letter-spacing: -0.045em; } html[lang="pt-BR"] .language-menu summary { font-size: 11px; padding-inline: 8px; } }</style></head>
+<body>
+<main class="page">
+<nav aria-label="Navegação primária" class="nav">
+<div class="brand">
+<a aria-label="Tennis Score Wizard — Página inicial" class="brand-home-link" href="index.html">
+<img alt="Ícone do aplicativo Tennis Score Wizard" class="app-icon" decoding="async" height="1024" sizes="62px" src="../assets/tennis_ball_app_icon_1024-128.webp" srcset="../assets/tennis_ball_app_icon_1024-128.webp 128w, ../assets/tennis_ball_app_icon_1024-256.webp 256w" width="1024"/>
+<span class="brand-title">Tennis Score Wizard</span>
+</a>
+</div>
+<div class="nav-links">
+<a href="index.html#versions">Versões</a>
+<a href="index.html#comparison">Comparar</a>
+<a href="index.html#stats-guide">Guia de estatísticas</a>
+<a href="whats-new.html">Novidades</a>
+<a aria-current="page" href="help.html">Ajuda</a>
+<a href="index.html#contact">Contato</a>
+</div>
+<details class="language-menu">
+<summary>🇧🇷 Português (Brasil)</summary>
+<div class="language-options">
+<a href="../help.html">🇺🇸 English</a>
+<a href="../ja/help.html">🇯🇵 日本語</a>
+<a href="../de/help.html">🇩🇪 Deutsch</a>
+<a href="../fr/help.html">🇫🇷 Français</a>
+<a href="../ru/help.html">🇷🇺 Русский</a>
+<a href="../tr/help.html">🇹🇷 Türkçe</a>
+<a href="../es/help.html">🇪🇸 Español</a>
+<a href="../zh-Hans/help.html">🇨🇳 简体中文</a>
+<a href="../ko/help.html">🇰🇷 한국어</a>
+<a href="../it/help.html">🇮🇹 Italiano</a>
+<a class="active" href="help.html">🇧🇷 Português (Brasil)</a>
+<a href="../zh-Hant/help.html">🇹🇼 繁體中文</a>
+<a href="../nl/help.html">🇳🇱 Nederlands</a>
+<a href="../ar/help.html">🇸🇦 العربية</a>
+</div>
+</details>
+</nav>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow help-home-badge"><a aria-label="Tennis Score Wizard — Página inicial" class="help-badge-home-link" href="index.html">Tennis Score Wizard</a></p>
+<h1>Central de Ajuda</h1>
+<p>
+      Marque pontos no Apple Watch ou adicione uma partida já disputada no Pro para iPhone. Aqui você encontra ajuda sobre resumos mensais e anuais, destaques, rivalidades, compartilhamento, formatos de pontuação, treinos e sincronização com o iCloud.
+    </p>
+</div>
+</section>
+<section id="getting-started">
+<h2>Começando</h2>
+<p class="section-subtitle">
+    Tudo o que você precisa para preparar o Tennis Score Wizard e começar a marcar sua primeira partida.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>O que é preciso para usar o Tennis Score Wizard?</strong>
+<p>Para marcar pontos ao vivo, você precisa de um Apple Watch compatível com o Tennis Score Wizard instalado. O Pro no iPhone também permite adicionar partidas que você já disputou. O acesso ao app Saúde é opcional e usado apenas para registrar treinos e as métricas disponíveis.</p>
+</div>
+<div class="help-item">
+<strong>Como começo minha primeira partida?</strong>
+<p>Abra o app no Apple Watch e escolha Simples ou Duplas. Selecione um set, melhor de três ou melhor de cinco, defina as regras dos sets e dos games e escolha quem começa sacando. Se quiser, ative o registro de treino. Depois, inicie a partida.</p>
+</div>
+<div class="help-item">
+<strong>O aplicativo lembra minha configuração?</strong>
+<p>O aplicativo lembra sua configuração de partida anterior para que você possa preparar uma partida semelhante mais rapidamente da próxima vez que jogar. Você ainda pode alterar qualquer opção antes de começar.</p>
+</div>
+<div class="help-item">
+<strong>Posso marcar uma partida sem acesso à Saúde?</strong>
+<p>Sim. A pontuação de partidas, estatísticas e histórico funcionam sem acesso à Saúde. A permissão é necessária apenas para gravação de treinos e medições relacionadas, como frequência cardíaca e energia ativa.</p>
+</div>
+</div>
+</section>
+<section id="manual-matches">
+<h2>Adicione ou edite uma partida que você jogou</h2>
+<p class="section-subtitle">Pro no iPhone · Salve o resultado que você conhece, então mantenha-o ao lado do seu histórico de relógio.</p>
+<div class="help">
+<div class="help-item"><strong>Como adiciono uma partida já disputada?</strong><p>Na aba Partidas, toque em Adicionar Partida Disputada. Escolha Simples ou Duplas. Para uma partida de simples, você pode informar o nome do adversário ou selecionar um jogador salvo. Em seguida, escolha o formato, digite os placares dos sets e toque em Salvar.</p></div>
+<div class="help-item"><strong>Posso editar uma partida adicionada manualmente?</strong><p>Sim. Abra os detalhes da partida e toque em Editar Partida. Você pode corrigir data, horário, duração, regras, placares dos sets, pontos de tie-break e estado Concluída ou Interrompida. Salvar atualiza a partida existente, sem criar outra cópia; Cancelar mantém os dados anteriores. A edição não altera o tipo Simples/Duplas nem os jogadores. Para mudar o adversário ou as informações da partida, use os controles específicos.</p></div>
+<div class="help-item"><strong>Minhas correções chegarão ao Apple Watch?</strong><p>Sim. Uma partida manual editada atualiza o mesmo registro salvo no Pro Watch emparelhado e pode sincronizar com o Standalone através do iCloud privado sob a mesma Conta Apple. Mantenha os aplicativos atualizados e permita que a sincronização termine. Estatísticas relevantes e destaques baseados em histórico usam o resultado corrigido.</p></div>
+<div class="help-item"><strong>Posso salvar uma partida interrompida ou empatada?</strong><p>Sim. Escolha Interrompida se a partida terminou antes de haver um vencedor conforme as regras selecionadas. Informe o placar alcançado, inclusive do set incompleto. É possível salvar um empate. Escolha Concluída apenas quando o placar definir um vencedor.</p></div>
+<div class="help-item"><strong>Como registro o tie-break de um set?</strong><p>Informe primeiro os games. Quando o placar indicar um tie-break conforme as regras do set escolhido, por exemplo <span class="score-nowrap">7-6</span> — aparecem campos adicionais para os pontos de cada jogador no tie-break. Preencha os dois placares se souber ou deixe ambos em branco. No match tie-break decisivo, informe diretamente os pontos, não os games, como explicado abaixo.</p></div>
+<div class="help-item"><strong>Como registro um match tie-break?</strong><p>Para um tie-break decisivo em uma partida melhor de três ou cinco sets, ative Match tie-break no set decisivo, escolha a meta de 7 ou 10 pontos e informe os pontos diretamente na linha decisiva, por exemplo <span class="score-nowrap">10-8</span>, não <span class="score-nowrap">1-0</span> em games. Se a partida inteira foi um match tie-break, selecione Match tie-break como regra do set. Para concluir um match tie-break, é preciso vencer por dois pontos de diferença.</p></div>
+<div class="help-item"><strong>E se o jogo parar durante um tie-break de sets?</strong><p>Escolha Interrompida e informe o placar empatado em games no qual o tie-break do set começou, por exemplo <span class="score-nowrap">6–6</span>. Os campos dos pontos do tie-break aparecem para você registrar o placar no momento da interrupção. Preencha os dois valores se souber ou deixe ambos em branco.</p></div>
+<div class="help-item"><strong>E se eu me lembrar da hora de início, não da duração?</strong><p>Escolha Iniciar e Terminar e insira ambas as datas e horários; a duração é calculada automaticamente. Se você jogou depois da meia-noite, defina a data de término para o dia seguinte. Em alternativa, escolha Terminar e duração e insira a duração em minutos. Se você não se lembrar por quanto tempo jogou, deixe a duração opcional em branco. Quando fornecida, a duração deve ser de pelo menos um minuto e não mais de 24 horas.</p></div>
+<div class="help-item"><strong>Por que eu não posso escolher um horário futuro?</strong><p>Este formulário registra uma partida já disputada, não uma partida futura. O horário de término não pode estar no futuro. No modo Início e fim, o início deve ser anterior ao término.</p></div>
+<div class="help-item"><strong>Como eu me movo entre os campos de pontuação?</strong><p>Toque em qualquer tile de pontuação diretamente, ou use Voltar e Próximo acima do teclado. O cursor não salta após um dígito, então você pode inserir pontuações de dois dígitos. Fim fecha o teclado; tocar fora de um campo ou rolar também o encerra.</p></div>
+<div class="help-item"><strong>Quais estatísticas uma partida adicionada manualmente pode fornecer?</strong><p>O resultado salvo, sets, jogos, resultados de desempate inseridos e duração opcional contribuem para o histórico e resumos relevantes. As medições ponto a ponto, saque, devolução, ponto de desempate e treino aparecem para partidas gravadas no Watch, quando disponíveis. As partidas manuais são marcadas como Adicionadas manualmente.</p></div>
+<div class="help-item"><strong>A partida aparecerá no Apple Watch?</strong><p>Sim. As entradas manuais salvas podem ser sincronizadas com o Pro Watch emparelhado e através do iCloud privado para o Standalone sob a mesma Conta Apple. Ambas os aplicativos do Watch preservam a etiqueta de entrada manual e ocultam estatísticas indisponíveis. Mantenha ambos os produtos atualizados e permita que a sincronização termine.</p></div>
+<div class="help-item"><strong>Posso alterar no iPhone um placar registrado no Apple Watch?</strong><p>Não. Adicionar uma partida disputada é separado da edição de uma gravação do Watch. Você pode alterar a atribuição do oponente e o contexto opcional da partida para uma partida existente sem alterar sua pontuação ou estatísticas gravadas.</p></div>
+</div>
+</section>
+<div aria-label="Exemplos de partida manual e contexto de quadra" class="release-proof-pair">
+<figure><a href="../assets/release-1-6-en/manual-edit-details.png" rel="noopener" target="_blank"><img alt="Partida adicionada manualmente nos Detalhes da Partida do iPhone com o botão Editar partida." height="2868" loading="lazy" src="../assets/release-1-6-en/manual-edit-details-900.webp" width="1320"/></a><figcaption>Abra uma partida adicionada manualmente e toque em Editar partida para corrigir horário, regras ou placar.</figcaption></figure>
+<figure><a href="../assets/release-1-6-en/court-conditions.png" rel="noopener" target="_blank"><img alt="Editor de contexto de partida opcional com Clay e Outdoor selecionados" height="2868" loading="lazy" src="../assets/release-1-6-en/court-conditions-900.webp" width="1320"/></a><figcaption>Superfície e configuração são opcionais.</figcaption></figure>
+</div>
+<section id="match-context">
+<h2>Lembre-se da quadra e da partida</h2>
+<p class="section-subtitle">Tudo opcional. Adicione contexto durante a entrada manual ou mais tarde nos Detalhes da partida no iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>O que posso adicionar?</strong><p>Escolha a superfície e o ambiente interno ou externo, insira o nome ou número do local ou clube e quadra e adicione uma nota privada para este partida em particular. Você também pode adicionar contexto a partidas mais antigas gravados no Apple Watch.</p></div>
+<div class="help-item"><strong>Eu preciso de mapas ou acesso à localização?</strong><p>Não. Os nomes dos locais e das quadras são inseridos manualmente. O app não pesquisa quadras em mapas nem registra sua posição por GPS.</p></div>
+<div class="help-item"><strong>Posso reutilizar uma quadra?</strong><p>Sim. Escolha entre quadras recentes e favoritas. Os favoritos são salvos neste iPhone e mantidos separados pela Conta Apple. Escolher uma quadra preenche seu lugar e condições, mas não substitui a nota para a partida atual. Os favoritos em si não são uma lista sincronizada com o iCloud.</p></div>
+<div class="help-item"><strong>O que é sincronizado?</strong><p>Os detalhes da quadra e as notas da partida são sincronizados com o resultado salvo por meio da transferência de dispositivos emparelhados e da sincronização privada do iCloud. A pontuação original e as estatísticas gravadas permanecem inalteradas. Adicione, visualize e edite o contexto no iPhone; os registros do Watch preservam-no para sincronização, mas não fornecem um editor de contexto.</p></div>
+<div class="help-item"><strong>O que aparece quando eu compartilho?</strong><p>As condições e localização da quadra inseridas aparecem na imagem da partida. As notas pessoais da partida e as notas privadas de Rivalidade não aparecem. Verifique a prévia antes de compartilhar, especialmente se você não quiser divulgar um local.</p></div>
+<div class="help-item"><strong>O contexto da quadra cria conquistas estatísticas?</strong><p>Não. A superfície, o ambiente interno/externo, o local e as notas descrevem onde e como você jogou. Eles não afetam os destaques da partida ou criam registros específicos da superfície ou da quadra.</p></div>
+</div>
+</section>
+<section id="match-highlights">
+<h2>Destaques e compartilhamento de partidas</h2>
+<div class="help">
+<div class="help-item"><strong>Quantos destaques posso ver?</strong><p>O app reconhece 26 tipos de acontecimento, mas isso não significa 26 cartões em cada partida. Os Detalhes da partida no iPhone mostram todos os destaques sustentados pelos dados salvos. Uma imagem compartilhada inclui até seis, priorizando os momentos mais marcantes. Se não houver destaques, a seção não aparece.</p></div>
+<div class="help-item"><strong>Que momentos podem aparecer?</strong><p>Exemplos incluem comebacks, um set decisivo ou Tie-Break de partida, batalhas de Tie-Break apertadas, resultados de sets diretos, séries, vitórias de marco, recordes pessoais e padrões de saque ou devolução. Alguns exigem estatísticas de pontos gravadas; outros podem ser suportados pela pontuação do set e pelo histórico salvo.</p></div>
+<div class="help-item"><strong>Recordes e marcos são conquistas permanentes?</strong><p>Não. Eles descrevem a história registrada no aplicativo. Adicionar um resultado mais antigo, corrigir a pontuação ou data de uma partida manual, excluir uma partida ou alterar seu oponente pode alterar comparações relevantes e destaques da Rivalidade. As partidas posteriores não são usados como história anterior para um resultado mais antigo. As vitórias de marco são baseadas em vitórias qualificadas concluídas.</p></div>
+<div class="help-item"><strong>Por que uma sequência de vitórias em Estatísticas pode diferir de um Destaque da partida?</strong><p>Estatísticas e rivalidades podem contar partidas paradas com um líder claro como resultados decididos. Os destaques da sequência de vitórias e marcos usam vitórias concluídas, então uma partida não concluída não ganha a conquista de vitória concluída. Ambos usam o histórico salvo disponível para a comparação relevante.</p></div>
+<div class="help-item"><strong>Os destaques são exibidos no Apple Watch?</strong><p>Não. Os destaques aparecem nos Detalhes da partida do Pro para iPhone e nas imagens compartilhadas. No Apple Watch, o histórico mostra o resultado salvo e as estatísticas disponíveis, sem uma seção separada de destaques.</p></div>
+<div class="help-item"><strong>Por que uma partida manual mostra menos destaques?</strong><p>As partidas manuais podem mostrar destaques com base em sua pontuação salva ou histórico de partidas. Os destaques de saque, devolução e ponto de quebra precisam de dados de pontos registrados.</p></div>
+</div>
+</section>
+<section id="match-flow-help">
+<h2>Match Flow e Momentum</h2>
+<p class="section-subtitle">O Pro mostra três visualizações do Match Flow nos detalhes da partida gravada; ambos os aplicativos Watch mostram o Momentum Compacto na História.</p>
+<div class="help">
+<div class="help-item"><strong>Quando o Match Flow aparece?</strong><p>Quando uma partida salva tem um registro válido ponto a ponto. As partidas recém-gravadas mantêm esse histórico automaticamente, e alguns registros mais antigos também têm dados suficientes. Caso contrário, a seção Match Flow é ocultada.</p></div>
+<div class="help-item"><strong>O que as barras de Momentum e os quadrados de pontuação significam?</strong><p>Cada barra representa um game registrado: verde quando você venceu, vermelha quando o adversário venceu. Barras mais altas indicam games com mais pontos, não uma vitória por margem maior. O quadro ao lado mostra o placar acumulado em games. Os tie-breaks são identificados separadamente.</p></div>
+<div class="help-item"><strong>O que mostram Placar e Momentos-chave?</strong><p>Placar mostra a evolução do resultado após cada game e o número de pontos registrados. Momentos-chave destaca acontecimentos como um game longo, uma quebra de saque ou uma virada, quando o histórico de pontos permite. No Pro, essas visualizações ficam em Detalhes da partida; o histórico do Apple Watch mostra uma versão compacta de Momentum.</p></div>
+<div class="help-item"><strong>Eu preciso inserir alguma coisa durante a partida?</strong><p>Não. Continue marcando pontos como de costume. O Match Flow usa a sequência de pontuação salva, sem novos controles na quadra ou toques extras.</p></div>
+</div>
+</section>
+<section id="history-files-help">
+<h2>Exportar e restaurar o histórico de partidas</h2>
+<p class="section-subtitle">Arquivos do histórico de partidas está disponível no Pro para iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>Qual arquivo eu devo escolher?</strong><p>Use CSV, Excel ou PDF para ler e analisar relatórios. Para restaurar partidas no Pro mais tarde, use JSON ou o backup completo em ZIP. O ZIP contém o arquivo JSON, CSV de partidas e pontos, planilha Excel, relatório PDF e um guia breve. Relatórios isolados não podem ser importados.</p></div>
+<div class="help-item"><strong>Como exporto ou importo?</strong><p>No Pro, abra Arquivos do histórico de partidas e toque em Exportar uma cópia. Escolha o formato e salve ou compartilhe o arquivo. Para restaurar, toque em Importar backup e selecione um arquivo JSON ou ZIP. Confira a prévia antes de importar partidas ausentes.</p></div>
+<div class="help-item"><strong>A importação duplica partidas ou restaura partidas excluídas?</strong><p>Não. Um ID de partida existente é ignorado e os IDs previamente excluídos do seu histórico permanecem excluídos. A importação adiciona apenas partidas ausentes elegíveis. Mantenha uma cópia separada do seu arquivo de backup em um local que você controle.</p></div>
+<div class="help-item"><strong>Um backup conterá o histórico completo dos pontos?</strong><p>JSON e ZIP preservam os dados originais das partidas, inclusive os pontos registrados quando disponíveis. Partidas antigas ou adicionadas manualmente podem não ter histórico ponto a ponto. A exportação não cria dados que não foram registrados.</p></div>
+</div>
+</section>
+<section id="match-setup">
+<h2>Configurando uma partida</h2>
+<p class="section-subtitle">
+    Escolha o formato e as regras que combinem com a maneira como você está jogando.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Qual é a diferença entre Simples e Duplas?</strong>
+<p>Escolha Simples para um jogador em cada lado e Duplas para dois jogadores em cada lado. O formato selecionado é salvo com a partida e também é usado quando um treino é gravado.</p>
+</div>
+<div class="help-item">
+<strong>O que significa Melhor de 3 e Melhor de 5?</strong>
+<p>Melhor de 3 significa que o primeiro lado a vencer dois sets vence a partida. Melhor de 5 significa que o primeiro lado a vencer três sets vence a partida.</p>
+</div>
+<div class="help-item">
+<strong>O que significa jogar um set?</strong>
+<p>Nessa opção, a partida termina após um único set. A regra escolhida para esse set define quantos games são necessários e se haverá tie-break.</p>
+</div>
+<div class="help-item">
+<strong>Como funcionam as regras dos sets?</strong>
+<p>Escolha a regra adequada ao formato da partida. As opções sem tie-break e com tie-break usam sets tradicionais de seis games. Os sets curtos oferecem formatos oficiais mais rápidos. No set personalizado, você define cada parâmetro. O app aplica automaticamente a regra completa escolhida.</p>
+</div>
+<div class="help-item">
+<strong>Como funcionam os Short Sets oficiais?</strong>
+<p>Um Set Curto é o primeiro de quatro games. Escolha se o game de desempate começa em <span class="score-nowrap">3-3</span> ou <span class="score-nowrap">4–4</span>, então escolha um empate regular até 7, ganhe por 2 ou um empate de 5 pontos com um ponto decisivo em <span class="score-nowrap">4–4</span>. A combinação selecionada é exibida na configuração, pontuação ao vivo e Histórico.</p>
+</div>
+<div class="help-item">
+<strong>O que a No-Ad muda?</strong>
+<p>O No-Ad muda apenas a regra do game: em 40–40, o ponto seguinte decide o game. Pode ser combinado com os formatos de set disponíveis, sem alterar a meta de games ou as regras de tie-break.</p>
+</div>
+<div class="help-item">
+<strong>Como funciona o Custom Set?</strong>
+<p>No set personalizado, você define a quantidade de games, a vantagem necessária para vencer e se haverá tie-break, quando ele começa e até quantos pontos vai. É possível, por exemplo, configurar um set de oito games. O resumo da configuração mostra todas as regras juntas para você conferir o formato.</p>
+</div>
+<div class="help-item">
+<strong>As regras de duração, set, game e match tie-break podem entrar em conflito?</strong>
+<p>Não. A duração determina quantos sets são necessários; a regra do set define quando cada set termina; o game padrão ou No-Ad define o que acontece em 40–40. O match tie-break opcional substitui apenas o último set decisivo quando essa opção estiver disponível.</p>
+</div>
+<div class="help-item">
+<strong>Como eu escolho o primeiro sacador?</strong>
+<p>Você pode escolher manualmente quem saca primeiro ou usar o cara ou coroa do app para fazer o sorteio.</p>
+</div>
+<div class="help-item">
+<strong>Para que serve o cara ou coroa?</strong>
+<p>O cara ou coroa sorteia o resultado inicial para ajudar a decidir quem começa sacando. Antes de iniciar a partida, você pode conferir e confirmar a configuração.</p>
+</div>
+<div class="help-item">
+<strong>O que o Registro de Treino faz?</strong>
+<p>Quando ativado e autorizado, o Registro de Treino inicia um treino de tênis ao lado da partida. Ele pode coletar dados disponíveis de frequência cardíaca, energia ativa e duração e salvar o treino no aplicativo Saúde.</p>
+</div>
+</div>
+</section>
+<section id="scoring">
+<h2>Marcação de pontos da partida</h2>
+<p class="section-subtitle">
+    Registre cada ponto enquanto o aplicativo gerencia a pontuação de tênis automaticamente.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Como eu registro um ponto?</strong>
+<p>Use os controles de pontuação para registrar se você ou o oponente venceram o ponto. A pontuação é atualizada imediatamente após cada seleção.</p>
+</div>
+<div class="help-item">
+<strong>O aplicativo calcula games e sets automaticamente?</strong>
+<p>Sim. O Tennis Score Wizard avança automaticamente os pontos, jogos, sets, deuce, vantagem e estados de tie-break de acordo com as regras da partida selecionadas.</p>
+</div>
+<div class="help-item">
+<strong>Como funcionam o empate em 40–40 e a vantagem?</strong>
+<p>Com o game Padrão, <span class="score-nowrap">40–40</span> vira 40–40: para vencer o game, é preciso ganhar a vantagem e depois o ponto seguinte. Com No-Ad, o ponto seguinte ao 40–40 decide o game.</p>
+</div>
+<div class="help-item">
+<strong>Como funciona a pontuação de desempate?</strong>
+<p>Quando a regra selecionada requer um desempate, o aplicativo muda dos pontos normais de tênis para pontos numéricos de desempate e determina o vencedor usando a regra de desempate configurada.</p>
+</div>
+<div class="help-item">
+<strong>O que é um match tie-break e como iniciá-lo?</strong>
+<p>O match tie-break substitui o set decisivo. Se a partida estiver empatada em 1–1 nos sets em melhor de três, ou 2–2 em melhor de cinco, abra o Menu antes do início do último set e escolha Match Tie-Break. Depois selecione até 7 ou até 10 pontos. É preciso atingir essa pontuação com dois pontos de vantagem. A opção funciona em simples e duplas, e o resultado aparece no Histórico, nos detalhes, nas estatísticas e nos cartões compartilhados.</p>
+</div>
+<div class="help-item">
+<strong>Como é que um Tie-Break de partida é diferente de um Tie-Break de set?</strong>
+<p>O tie-break de set decide apenas um set, normalmente quando o placar chega a <span class="score-nowrap">6–6</span>, e o set é gravado como <span class="score-nowrap">7-6</span>. Já o match tie-break substitui todo o set decisivo e aparece separadamente entre colchetes, por exemplo [<span class="score-nowrap">10-7</span>].</p>
+</div>
+<div class="help-item">
+<strong>Como funciona o marcador de saque?</strong>
+<p>Quando você serve, a bola de tênis destaca o lado de onde você deve servir. Quando o oponente serve, mostra o lado de saque do oponente da sua visão do relógio.</p>
+</div>
+<div class="help-item">
+<strong>Como o app acompanha quem está sacando?</strong>
+<p>O app alterna automaticamente o sacador após os games e durante o tie-break. Se a indicação no relógio não corresponder à partida real, você pode corrigir o sacador pelo menu da partida.</p>
+</div>
+<div class="help-item">
+<strong>Quando os jogadores devem mudar de lado?</strong>
+<p>O aplicativo exibe um lembrete de mudança lateral nas alterações apropriadas do game. O lembrete é informativo e desaparece após o game ser retomado.</p>
+</div>
+</div>
+</section>
+<section id="match-controls">
+<h2>Controles de partida</h2>
+<p class="section-subtitle">
+    Corrija erros, gerencie a partida atual e pare uma sessão incompleta com segurança.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Como funciona o Desfazer?</strong>
+<p>Desfazer remove o último ponto registrado e restaura o estado anterior da partida: pontos, games, sets, sacador, lado do saque, tie-break e estatísticas relacionadas.</p>
+</div>
+<div class="help-item">
+<strong>O que o Menu faz?</strong>
+<p>Durante uma partida ao vivo, o Menu fornece acesso a ações adicionais, como corrigir o servidor, abrir o histórico de partidas, parar a partida atual ou preparar uma nova partida.</p>
+</div>
+<div class="help-item">
+<strong>Quando devo usar o Switch Server?</strong>
+<p>Use o Switch Server quando o sacador mostrado pelo aplicativo não corresponder à partida real. Isso corrige o lado de saque atual sem adicionar ou remover um ponto.</p>
+</div>
+<div class="help-item">
+<strong>O que acontece quando eu paro uma partida?</strong>
+<p>Uma partida inacabada pode ser salva com o placar atual, tempo decorrido, sets concluídos, andamento do set em curso, pontos e estatísticas disponíveis. Ela aparece no Histórico como Interrompida. Se um dos lados estava à frente quando a partida parou, o resultado entra no histórico de vitórias e derrotas, na taxa de vitórias e nas sequências. Se estava empatada, o resultado é neutro.</p>
+</div>
+<div class="help-item">
+<strong>O que acontece se eu parar antes de marcar um ponto?</strong>
+<p>Uma partida sem pontos registrados não tem placar para salvar. Os dados de treino só aparecem se um treino tiver sido registrado.</p>
+</div>
+<div class="help-item">
+<strong>Posso começar outra partida depois de concluir ou interromper a atual?</strong>
+<p>Sim. Depois que a partida atual for concluída ou interrompida, você pode retornar à configuração e iniciar outra partida com a configuração anterior disponível para reutilização.</p>
+</div>
+<div class="help-item">
+<strong>O que devo fazer depois de registrar um ponto por engano?</strong>
+<p>Use Desfazer o mais rápido possível. Ele restaura o estado completo antes do ponto incorreto e é mais seguro do que tentar compensar concedendo outro ponto.</p>
+</div>
+</div>
+</section>
+<section id="rivalries">
+<h2>Oponentes e rivalidades</h2>
+<p class="section-subtitle">
+    Escolha um adversário salvo antes de uma partida de simples no Apple Watch. O confronto direto é atualizado automaticamente e permanece privado.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Como eu crio um oponente?</strong>
+<p>Abra Rivalidades no Pro para iPhone e informe o nome completo e um nome curto para o Apple Watch. O nome exibido no relógio tem limite de 16 caracteres para permanecer legível durante a configuração e a partida. O Standalone pode selecionar adversários sincronizados no Apple Watch, mas não criar nem editar perfis.</p>
+</div>
+<div class="help-item">
+<strong>Como eu excluo um oponente?</strong>
+<p>Em Rivalidades no iPhone, mantenha pressionado o cartão do jogador, toque em Excluir jogador e confirme. As partidas desse adversário permanecem no histórico, mas ficam sem associação, para que você possa atribuí-las a outro jogador depois.</p>
+</div>
+<div class="help-item">
+<strong>Como eu escolho um oponente no Apple Watch?</strong>
+<p>Escolha Simples durante a configuração da partida, abra o Adversário e selecione Convidado ou um jogador salvo antes de iniciar. O Convidado registra uma partida normal sem adicioná-lo a uma Rivalidade. Os Duplas não atribuem um adversário à partida da equipe.</p>
+</div>
+<div class="help-item">
+<strong>O que está incluído no Head-to-Head?</strong>
+<p>O confronto direto considera as partidas de simples atribuídas ao jogador que tiveram resultado definido. Partidas concluídas e partidas interrompidas com um líder claro entram no histórico; uma partida interrompida e empatada é neutra. A rivalidade também pode mostrar sets, games, tie-breaks, pontos, saque, devolução, pontos de quebra, tempo em quadra, resumos de treinos e partidas salvas, conforme os dados disponíveis.</p>
+</div>
+<div class="help-item">
+<strong>O que significa Últimos 5 vs Todos os Tempos?</strong>
+<p>Compara sua taxa de vitórias nos últimos cinco confrontos com resultado definido à taxa de todo o período selecionado. Se houver menos de cinco, usa os confrontos disponíveis. A comparação muda ao escolher Todo o período, Este ano ou Últimos 30 dias.</p>
+</div>
+<div class="help-item">
+<strong>O que é uma vitória depois de perder o Set 1?</strong>
+<p>É uma partida definida que você ganhou depois de perder o primeiro set concluído. O texto detalhado mostra quantas dessas vitórias você registrou e quantas partidas qualificatórias começaram com uma derrota no primeiro set. Por exemplo, 2 de 5 significa duas vitórias em cinco partidas qualificatórias, não duas tentativas de um limite arbitrário.</p>
+</div>
+<div class="help-item">
+<strong>O que são Sequência Atual e Melhor Sequência de Vitórias?</strong>
+<p>Sequência Atual é a última sequência ininterrupta de vitórias ou derrotas decididas. Melhor Sequência de Vitórias é a sequência ininterrupta mais longa de vitórias decisivas em partidas no período selecionado.</p>
+</div>
+<div class="help-item">
+<strong>Posso atribuir uma partida mais antiga a um jogador?</strong>
+<p>Sim. Abra a partida simples salvo no iPhone, escolha Atribuir na seção Adversário e selecione o jogador correto. Você pode alterar ou remover a atribuição mais tarde sem alterar a pontuação ou as estatísticas gravadas. A atribuição atualizada é enviada de volta ao histórico de Pro emparelhado e também pode chegar ao Standalone através da sincronização privada do iCloud.</p>
+</div>
+<div class="help-item">
+<strong>Como os jogadores duplicados são impedidos?</strong>
+<p>Cada jogador tem um identificador interno estável, enquanto a criação também verifica os nomes normatizados completos e de Observação para evitar duplicatas acidentais. A sincronização usa o identificador estável e os registros de exclusão para que o mesmo perfil seja atualizado em vez de recriado em outro dispositivo.</p>
+</div>
+<div class="help-item">
+<strong>As notas privadas são compartilhadas?</strong>
+<p>Não. Uma nota privada permanece no perfil Rivalry e é excluída de textos e cartões visuais compartilhados. Os cartões visuais compartilhados usam o filtro de tempo ativo e mantêm uma ordem fixa: confrontos registrados e recentes, desempenho da partida, depois padrões e contexto de treino.</p>
+</div>
+</div>
+</section>
+<section id="statistics">
+<h2>Entendendo as estatísticas de partidas</h2>
+<p class="section-subtitle">
+    Entenda o que representam as estatísticas salvas e como são calculadas.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Quais são os pontos totais?</strong>
+<p>Os pontos totais mostram quantos pontos marcados foram registrados durante a partida. O resumo de pontos separa os pontos ganhos por você dos pontos ganhos pelo oponente.</p>
+</div>
+<div class="help-item">
+<strong>O que são games Gravados?</strong>
+<p>Games registrados são os games que têm dados ponto a ponto. Em uma partida interrompida, isso pode incluir o game em andamento; portanto, esse número não é o placar oficial em games.</p>
+</div>
+<div class="help-item">
+<strong>O que mostram as estatísticas de pontos de quebra?</strong>
+<p>Eles mostram os Pontos de Quebra enfrentados e salvos em seu saque, além de Oportunidades de Pontos de Quebra e Pontos de Quebra Convertidos na devolução. Pontos de desempate são excluídos.</p>
+</div>
+<div class="help-item">
+<strong>As estatísticas são atualizadas automaticamente?</strong>
+<p>Sim. As estatísticas são atualizadas a partir dos pontos que você registra. Desfazer também inverte o efeito estatístico do último ponto, para que os números continuem a corresponder à pontuação restaurada.</p>
+</div>
+<div class="help-item">
+<strong>Por que uma partida interrompida pode ter estatísticas incompletas?</strong>
+<p>Uma partida interrompida inclui apenas os pontos e as situações que ocorreram antes de ser interrompido. Estatísticas que exigem eventos de partida posteriores ou conclusão normal podem, portanto, estar ausentes ou menos completas.</p>
+</div>
+<div class="help-item">
+<strong>Por que uma partida salva mais antigo pode mostrar menos estatísticas?</strong>
+<p>As partidas salvas por versões anteriores do aplicativo podem não conter todas as estatísticas introduzidas posteriormente. Os detalhes disponíveis refletem o que foi registrado na época.</p>
+</div>
+</div>
+</section>
+<section id="companion-sync">
+<h2>Sincronização Pro e iPhone</h2>
+<p>O Pro inclui o aplicativo de pontuação completo do Apple Watch e análise de partidas no iPhone. Não é necessário comprar separadamente o Tennis Score Wizard (Standalone).</p>
+<p class="section-subtitle">
+    Marque pontos no Apple Watch, depois explore o histórico de partidas sincronizadas, resultados, estatísticas e insights sobre treinos no iPhone.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Onde configuro e marco os pontos de uma partida no Pro?</strong>
+<p>A configuração e a marcação de pontos ao vivo são feitas no Apple Watch. No Pro para iPhone, você também pode adicionar o resultado de uma partida já disputada, editar informações opcionais da quadra, rever partidas salvas e compartilhar destaques. A inserção manual não transforma o iPhone em um placar ao vivo.</p>
+</div>
+<div class="help-item">
+<strong>O que aparece no iPhone?</strong>
+<p>O app para iPhone mostra o resultado mais recente e o histórico, inclusive partidas inseridas manualmente, placares dos sets e tie-breaks, informações opcionais da quadra e destaques disponíveis. Partidas registradas no Apple Watch também podem trazer estatísticas de pontos, saque, devolução, pontos de quebra e andamento da partida, além dos dados de treino disponíveis.</p>
+</div>
+<div class="help-item">
+<strong>Como o histórico de partidas se sincroniza?</strong>
+<p>O Pro sincroniza partidas de duas formas independentes. O Watch Connectivity envia uma partida salva diretamente entre o Apple Watch e o iPhone emparelhados, geralmente da forma mais rápida quando ambos estão disponíveis. O CloudKit sincroniza e restaura o histórico pelo iCloud entre Standalone e Pro, desde que usem a mesma Conta Apple. Se a mesma partida chegar pelos dois meios, os apps mantêm um único registro atualizado.</p>
+</div>
+<div class="help-item">
+<strong>Um oponente atribuído mais tarde no iPhone aparecerá no Histórico do Relógio?</strong>
+<p>Sim. A atribuição do oponente faz parte da partida salva. O Pro pode entregar a atualização diretamente para o Apple Watch emparelhado e a sincronização privada do iCloud pode entregá-la ao Standalone quando os aplicativos usam a mesma Conta Apple. Mantenha os aplicativos disponíveis por um curto período se a atualização ainda não aparecer.</p>
+</div>
+<div class="help-item">
+<strong>O que devo fazer se uma partida não aparecer no iPhone?</strong>
+<p>Confirme que o Apple Watch correto está emparelhado, mantenha ambos os dispositivos próximos e abra o Tennis Score Wizard no Apple Watch e no iPhone. Também confirme que ambos os dispositivos usam a Conta Apple pretendida e verifique o status do iCloud no Histórico. Uma partida salva permanece protegida localmente enquanto estiver aguardando e pode ser sincronizada quando a conexão do dispositivo emparelhado ou o iCloud estiver disponíveis.</p>
+</div>
+<div class="help-item">
+<strong>Os detalhes do treino também são sincronizados?</strong>
+<p>Quando os dados do treino estão disponíveis, o Pro pode mostrar a Duração da partida, a Frequência Cardíaca Média, a Frequência Cardíaca Máxima e a Energia Ativa com a partida salva em ambos os dispositivos.</p>
+</div>
+<div class="help-item">
+<strong>O que acontece quando eu excluo o histórico de partidas?</strong>
+<p>A exclusão de uma partida individual ou do histórico completo no Pro sincroniza essa alteração entre o iPhone e o Apple Watch e, quando disponível, através do iCloud. O aplicativo solicita a confirmação antes de excluir o histórico completo.</p>
+</div>
+</div>
+</section>
+<section id="icloud-sync">
+<h2>Sincronização e restauração de partidas do iCloud</h2>
+<p class="section-subtitle">
+    Sincronize partidas salvas entre Standalone e Pro sem criar uma conta do Tennis Score Wizard.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>O que é necessário para sincronizar partidas pelo iCloud?</strong>
+<p>Certifique-se de que o Apple Watch e, para o Pro, o iPhone usem a mesma Conta Apple. Ative o iCloud Drive, mantenha uma conexão com a internet disponível e permita tempo para que a primeira sincronização termine. Você pode continuar pontuando quando o iCloud estiver indisponível.</p>
+</div>
+<div class="help-item">
+<strong>O Standalone e o Pro podem compartilhar partidas?</strong>
+<p>Sim. Ambas as versões usam o mesmo armazenamento do iCloud para partidas salvas. Quando ambos os aplicativos usam a mesma Conta Apple, uma partida salva no Standalone pode aparecer no Pro e uma partida salva no Pro pode aparecer no Standalone.</p>
+</div>
+<div class="help-item">
+<strong>Como sei que a sincronização terminou?</strong>
+<p>Abra o Histórico e verifique a linha de status do iCloud. <b>Sincronizado</b> significa que a última sincronização foi concluída e mostra sua data e hora. <b>Sincronizando</b> significa que a sincronização está em andamento. <b>Aguardando</b> com <b>Salvando</b> significa que uma alteração local está guardada e aguardando envio ao iCloud. <b>Sincronização pausada</b> com <b>Tentar novamente</b> significa que a última tentativa falhou; toque nessa linha para tentar novamente.</p>
+</div>
+<div class="help-item">
+<strong>O que acontece se eu mudar minha conta Apple?</strong>
+<p>Cada Conta Apple tem um histórico de partidas próprio no banco privado do CloudKit. Históricos de contas diferentes ficam separados e não são mesclados. Ao detectar uma troca de conta, o app mostra o histórico local e do iCloud da conta atual. Se você voltar à conta anterior, a visualização dela será restaurada após a sincronização. Antes de remover o cache local da conta anterior, o app guarda em uma cópia de recuperação criptografada as partidas que ainda aguardam sincronização. Essas partidas não são enviadas à nova conta. A troca também não apaga registros já salvos no iCloud de nenhuma das contas.</p>
+</div>
+<div class="help-item">
+<strong>Reinstalar o app restaura minhas partidas?</strong>
+<p>Sim, desde que as partidas tenham sido sincronizadas antes da remoção do app. Primeiro, confirme se o Histórico mostra o status <b>Sincronizado</b> antes de apagar o app. Depois da reinstalação, use a mesma Conta Apple, mantenha o iCloud Drive ativado, abra o app e aguarde o download das partidas.</p>
+</div>
+<div class="help-item">
+<strong>Apagar o app exclui o histórico do iCloud?</strong>
+<p>Não. Remover o app não apaga, por si só, as partidas já sincronizadas com o iCloud. Elas podem ser baixadas novamente após a reinstalação. Já a exclusão de partidas dentro do Tennis Score Wizard é sincronizada quando o iCloud estiver disponível.</p>
+</div>
+<div class="help-item">
+<strong>O desenvolvedor pode ver minhas partidas sincronizadas?</strong>
+<p>Não. O CloudKit armazena registros sincronizados no banco de dados privado para sua Conta Apple. Por padrão, apenas esse usuário pode acessar o banco de dados privado.</p>
+</div>
+</div>
+</section>
+<section id="health-workouts">
+<h2>Saúde e treinos</h2>
+<p class="section-subtitle">
+    Grave sua sessão de tênis e entenda as informações de saúde exibidas após a partida.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Como eu gravo um treino de tênis?</strong>
+<p>Ative a opção Gravar treino ao configurar a partida e permita o acesso solicitado ao app Saúde. O treino começa junto com a partida e termina quando ela é concluída ou interrompida.</p>
+</div>
+<div class="help-item">
+<strong>Como funciona a frequência cardíaca ao vivo?</strong>
+<p>Durante um treino gravado, o aplicativo exibe a frequência cardíaca ao vivo quando o acesso é permitido e o Apple Watch está atualmente fornecendo uma amostra da frequência cardíaca.</p>
+</div>
+<div class="help-item">
+<strong>Quais são a frequência cardíaca média e máxima?</strong>
+<p>A frequência cardíaca média resume as amostras de frequência cardíaca disponíveis coletadas durante o treino. A frequência cardíaca máxima é a amostra de frequência cardíaca mais alta disponível registrada para aquele treino.</p>
+</div>
+<div class="help-item">
+<strong>O que é energia ativa?</strong>
+<p>A energia ativa é a energia estimada que é consumida durante a atividade durante o treino. O Apple Watch estima esse valor a partir das informações de saúde e movimento disponíveis para ele, e o aplicativo exibe o total do treino fornecido através do HealthKit.</p>
+</div>
+<div class="help-item">
+<strong>Onde o treino está salvo?</strong>
+<p>Após a conclusão bem-sucedida, o treino é salvo na Saúde e também pode aparecer no aplicativo Fitness no iPhone, sujeito às permissões e comportamento de sincronização dos seus dispositivos.</p>
+</div>
+<div class="help-item">
+<strong>Por que as estatísticas de treinos podem aparecer com um atraso?</strong>
+<p>O app Saúde pode levar alguns instantes para salvar as medições após o fim do treino. Aguarde um pouco e consulte a partida novamente.</p>
+</div>
+<div class="help-item">
+<strong>Por que uma estatística de saúde está faltando?</strong>
+<p>Um valor pode estar indisponível quando a permissão não foi concedida, o sensor não forneceu amostras suficientes, a gravação do treino foi desativada ou a Saúde ainda não terminou de salvar os dados do treino.</p>
+</div>
+<div class="help-item">
+<strong>A partida será salva se o registro do treino falhar?</strong>
+<p>A pontuação da partida e o histórico da partida são separados da Saúde. Um problema de permissão ou dados de treinamento não impede que o próprio registro de pontuação seja salvo.</p>
+</div>
+</div>
+</section>
+<section id="match-history">
+<h2>Histórico de partidas</h2>
+<p class="section-subtitle">
+    Encontre partidas salvas por ano e mês no Apple Watch, depois reveja o resultado em notação de tênis compacta.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Como eu encontro uma partida mais antiga no Apple Watch?</strong>
+<p>No Histórico, toque em Período, escolha um ano e depois um mês ou Ano inteiro. Só aparecem períodos com partidas salvas. Use Todas as datas para remover o filtro de período e Todas, 1v1 ou 2v2 para filtrar a modalidade. Esses controles estão disponíveis no Pro e no Standalone.</p>
+</div>
+<div class="help-item">
+<strong>O Histórico do Apple Watch mostra só 50 partidas?</strong>
+<p>Não. Começa exibindo 50 registros correspondentes e carrega partidas mais antigas em grupos adicionais de 50 à medida que você navega. Você também pode usar Carregar partidas mais antigas. O resumo cobre todos os registros correspondentes salvos, não apenas a primeira página. O menu de período lista anos e meses do seu histórico completo salvo; seus registros mais antigos não são excluídos.</p>
+</div>
+<div class="help-item">
+<strong>O que significam Vitória e Derrota?</strong>
+<p>Vitória significa que você venceu a partida concluída por sets. Derrota significa que o adversário venceu a partida concluída por sets.</p>
+</div>
+<div class="help-item">
+<strong>O que significa Interrompida?</strong>
+<p>Interrompida significa que a partida foi salva antes do fim normal. O app preserva o placar e os dados registrados até aquele momento. Se um dos lados estava à frente, o resultado entra no histórico, na taxa de vitórias e nas sequências. Se estava empatada, é neutro.</p>
+</div>
+<div class="help-item">
+<strong>O que são S1 a S5?</strong>
+<p>S1 a S5 significam set 1 a set 5. O número de colunas depende da partida: um resultado concluído ou interrompido pode mostrar de um a cinco sets regulares. Por exemplo, S1 <span class="score-nowrap">6-3</span> Significa que o primeiro set terminou com seis games a três.</p>
+</div>
+<div class="help-item">
+<strong>O que significa TB <span class="score-nowrap">7-3</span> Significa?</strong>
+<p>O TB mostra os pontos de desempate registrados dentro do set. Por exemplo, <span class="score-nowrap">7-6</span> · TB <span class="score-nowrap">7-3</span> Significa que o set terminou <span class="score-nowrap">7-6</span> E a pontuação do jogo de desempate foi <span class="score-nowrap">7-3</span>.</p>
+</div>
+<div class="help-item">
+<strong>O que faz <span class="score-nowrap">7-6</span><sup>(6)</sup> Significa?</strong>
+<p>Na linha de resultados compacta, o pequeno número entre parênteses é a pontuação de desempate do jogador que perdeu. Por exemplo, <span class="score-nowrap">7-6</span><sup>(6)</sup> Significa que o jogo de desempate foi vencido <span class="score-nowrap">8-6</span>. A tabela por set pode mostrar os pontos de desempate de ambos os jogadores quando registrados.</p>
+</div>
+<div class="help-item">
+<strong>Como é definido o resultado de uma partida interrompida?</strong>
+<p>O app compara primeiro os sets concluídos. Se houver empate, considera os games do set em andamento e depois os pontos registrados no tie-break ou game atual. Games de sets anteriores não são somados para definir quem está à frente. Se a partida for interrompida entre sets empatados, o resultado também fica empatado. Quando há um líder claro, o resultado conta como vitória ou derrota nas estatísticas, mas a partida continua identificada como Interrompida.</p>
+</div>
+<div class="help-item">
+<strong>O que acontece com um set incompleto?</strong>
+<p>Se o set atual contiver progresso quando a partida for interrompido, ele é armazenado junto com a partida. Isso preserva o contexto real, como o S3 <span class="score-nowrap">0–1</span>.</p>
+</div>
+<div class="help-item">
+<strong>Que informações são salvas com uma partida?</strong>
+<p>Uma partida salva pode conter formato de pontuação, resultado, placares dos sets e tie-breaks, horários e adversário. Partidas inseridas no iPhone são identificadas como Adicionadas manualmente. Você também pode incluir condições da quadra, local e uma nota particular. Estatísticas ponto a ponto e dados de treino aparecem quando foram registrados.</p>
+</div>
+<div class="help-item">
+<strong>Como os formatos personalizados aparecem no Histórico?</strong>
+<p>O Histórico mostra o nome do formato e as regras principais, como a meta de games, a diferença para vencer e quando começa o tie-break e até quantos pontos vai. A lista apresenta o essencial; os detalhes da partida mostram a configuração completa.</p>
+</div>
+<div class="help-item">
+<strong>Como os jogos de desempate são mostrados nos resultados compartilhados?</strong>
+<p>Os pontos do tie-break de set aparecem ao lado do placar de games. As células se ajustam a resultados de dois dígitos para manter os números legíveis. Um match tie-break decisivo aparece separadamente entre colchetes, por exemplo [<span class="score-nowrap">10-7</span>]. O texto compartilhado também inclui o resultado completo em uma forma legível.</p>
+</div>
+<div class="help-item">
+<strong>Posso excluir uma partida salva?</strong>
+<p>Sim. Use a ação de excluir no histórico de partidas e confirme a remoção. Excluir uma partida remove essa entrada de histórico salva do aplicativo.</p>
+</div>
+</div>
+</section>
+<section id="period-recaps">
+<h2>Resumos do mês e do ano</h2>
+<p class="section-subtitle">Revise a atividade de partidas salvas em qualquer um dos aplicativos Watch ou use o resumo maior no Pro no iPhone.</p>
+<div class="help">
+<div class="help-item"><strong>Onde eu encontro um resumo?</strong><p>No Apple Watch, abra Histórico, toque em Período e escolha um ano ou um mês com partidas salvas. Em seguida, toque em Ano em Tênis ou Mês em Tênis. No Pro no iPhone, abra o Calendário e toque no botão de resumo para o mês ou ano selecionados.</p></div>
+<div class="help-item"><strong>O que significam as cores e os números do gráfico?</strong><p>Cada barra representa as partidas salvas naquela semana ou mês. Verde indica vitórias concluídas, vermelho indica derrotas concluídas e amarelo indica partidas interrompidas. O número acima da barra é o total de partidas. No resumo, os resultados concluídos aparecem separados das partidas interrompidas.</p></div>
+<div class="help-item"><strong>Como as semanas são divididas?</strong><p>Os limites da semana seguem as configurações do calendário do seu dispositivo. Um mês pode conter partes de cinco ou seis semanas do calendário. A comparação semana a semana aparece quando o mês selecionado contém duas semanas completas para comparar.</p></div>
+<div class="help-item"><strong>O que é comparado com o período anterior?</strong><p>O resumo compara o número de partidas e a taxa de vitórias com o mês ou ano anterior quando o histórico comparável estiver disponível. Para um mês ou ano ainda em andamento, ele compara através do mesmo ponto em ambos os períodos. A taxa de vitórias usa apenas vitórias e derrotas concluídas, portanto, partidas interrompidas e empatados não afetam isso.</p></div>
+<div class="help-item"><strong>Onde estão as conquistas e o compartilhamento?</strong><p>Os dois apps para Apple Watch mostram as conquistas do período selecionado. No Pro para iPhone, toque em uma conquista para abrir a partida relacionada ou use Compartilhar para criar um cartão do mês ou do ano.</p></div>
+</div>
+</section>
+<section id="support-development">
+<h2>Apoio voluntário ao desenvolvimento</h2>
+<p class="section-subtitle">
+    O suporte único ajuda no desenvolvimento futuro, mas nunca desbloqueia recursos ou altera o aplicativo.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>Uma gorjeta desbloqueia alguma coisa?</strong>
+<p>Não. As contribuições pela Apple ou por criptomoeda são opcionais. Todos os recursos incluídos no produto que você comprou continuam disponíveis mesmo sem contribuição.</p>
+</div>
+<div class="help-item">
+<strong>Como funciona uma gorjeta da Apple?</strong>
+<p>Em Informações → Apoiar o desenvolvimento, escolha um valor único e confirme a compra na tela da Apple. O pagamento é processado com a forma de pagamento da sua conta da App Store.</p>
+</div>
+<div class="help-item">
+<strong>O que devo verificar antes do suporte de criptomoedas?</strong>
+<p>Confirme a moeda, a rede e o endereço de destino completo em sua carteira antes de enviar. As transferências de blockchain são geralmente irreversíveis. O Tennis Score Wizard não anexa dados de partida, rivalidade, treino ou saúde à transação.</p>
+</div>
+</div>
+</section>
+<section id="complications-help">
+<h2>Complicações do mostrador do Apple Watch</h2>
+<p class="section-subtitle">
+    Adicione acesso rápido ao Tennis Score Wizard diretamente de uma tela de relógio compatível.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>O que a complicação do Tennis Score Wizard faz?</strong>
+<p>A complicação atua como um lançador rápido. Tocando nele, você abre o Tennis Score Wizard no Apple Watch para que você possa acessar o aplicativo diretamente do mostrador do seu relógio.</p>
+</div>
+<div class="help-item">
+<strong>Quais tipos de complicação são compatíveis?</strong>
+<p>O Tennis Score Wizard suporta posições de complicação circulares e de canto em mostradores compatíveis do Apple Watch.</p>
+</div>
+<div class="help-item">
+<strong>Como eu adiciono a complicação?</strong>
+<p>Edite uma face de relógio compatível no Apple Watch ou no aplicativo Watch no iPhone, selecione uma posição de complicação suportada e escolha o Tennis Score Wizard entre as complicações disponíveis.</p>
+</div>
+<div class="help-item">
+<strong>Por que eu não consigo encontrar a complicação?</strong>
+<p>Confirme que o aplicativo está instalado no Apple Watch e que a posição da face do relógio selecionada suporta uma das famílias de complicações disponíveis. As posições disponíveis variam entre as faces do relógio.</p>
+</div>
+<div class="help-item">
+<strong>Por que a complicação parece diferente em outro mostrador do relógio?</strong>
+<p>O Apple Watch controla a forma e o espaço disponível de cada posição de complicação. O Tennis Score Wizard adapta seu lançador à apresentação circular ou em canto suportada.</p>
+</div>
+</div>
+</section>
+<section id="troubleshooting">
+<h2>Solução de problemas</h2>
+<p class="section-subtitle">
+    Verificações comuns quando a pontuação, informações de treino ou acesso à tela do relógio não se comportam como esperado.
+  </p>
+<div class="help">
+<div class="help-item">
+<strong>A frequência cardíaca ao vivo não está aparecendo. O que devo verificar?</strong>
+<p>Confirme que o Treino Registrado foi ativado, o acesso à saúde foi permitido e o relógio está sendo usado com segurança. A frequência cardíaca aparece apenas quando o Apple Watch fornece uma amostra disponível.</p>
+</div>
+<div class="help-item">
+<strong>O treino não é visível no aplicativo Saúde. O que devo fazer?</strong>
+<p>Permita tempo para processamento, depois verifique as permissões de saúde e confirme que a gravação do treino foi ativada para a partida. Verifique também se o treino foi concluído corretamente terminando ou interrompendo a partida.</p>
+</div>
+<div class="help-item">
+<strong>A frequência cardíaca média, a frequência cardíaca máxima ou a energia ativa estão faltando.</strong>
+<p>Abra a partida concluída novamente depois que a Saúde tiver tido tempo para terminar de salvar o treino. Uma medição pode permanecer indisponível quando a Saúde não forneceu dados subjacentes suficientes.</p>
+</div>
+<div class="help-item">
+<strong>O sacador exibido está errado.</strong>
+<p>Abra o Menu e use Trocar sacador para indicar quem está sacando na partida real. Isso altera o lado do saque sem mudar o placar.</p>
+</div>
+<div class="help-item">
+<strong>Eu entrei no ponto errado.</strong>
+<p>Use Desfazer para voltar exatamente ao estado anterior ao último ponto, incluindo placar, sacador, tie-break e estatísticas relacionadas.</p>
+</div>
+<div class="help-item">
+<strong>A complicação não está disponível no mostrador do relógio que selecionei.</strong>
+<p>Experimente uma posição de complicação circular ou em canto. Nem todas as posições em cada mostrador suportam o mesmo tipo de complicação.</p>
+</div>
+<div class="help-item">
+<strong>A reinstalação do aplicativo preservará o histórico de partidas?</strong>
+<p>Primeiro abra o Histórico e confirme que a linha iCloud está exibindo <b>Sincronizado</b>. Depois de reinstalar, use a mesma Conta Apple com o iCloud Drive ativado e aguarde a restauração. Partidas que nunca foram sincronizadas com o iCloud ficam apenas no dispositivo original.</p>
+</div>
+<div class="help-item">
+<strong>O Histórico mostra Aguardando ou Salvando, ou Sincronização pausada com Tentar novamente.</strong>
+<p><b>Aguardando</b> com <b>Salvando</b> Significa que uma mudança local está em fila e pode ser carregada quando o iCloud estiver disponível. para <b>Sincronização pausada</b> com <b>Tentar novamente</b>, confirme que o dispositivo está conectado à conta Apple pretendida, o iCloud Drive está ativado, a rede está disponível e o armazenamento do iCloud não está cheio, em seguida, toque na linha de status. As partidas locais não são removidas simplesmente porque o iCloud não está disponível.</p>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2>Suporte</h2>
+<div class="support-card">
+<h3>Precisa de ajuda ou quer sugerir um recurso?</h3>
+<p>
+      Contato:
+      <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+</p>
+</div>
+</section>
+<footer>
+<div class="footer-meta">
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch é uma marca registrada da Apple Inc.</span>
+</div>
+<nav aria-label="Navegação secundária" class="footer-links">
+<a href="privacy.html">Privacidade</a>
+</nav>
+</footer>
+</main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
+<script defer="" src="../analytics.js"></script>
+</body>
+</html>

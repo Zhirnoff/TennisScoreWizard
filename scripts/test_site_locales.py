@@ -33,6 +33,10 @@ class LocalizationCheckTests(unittest.TestCase):
         self.assertEqual(parsed.image_candidates,
                          ["photo-720.webp", "photo-1080.webp"])
 
+    def test_arabic_page_direction_is_read(self):
+        parsed = page('<html lang="ar" dir="rtl"><body>مرحبا</body></html>')
+        self.assertEqual((parsed.lang, parsed.direction), ("ar", "rtl"))
+
     def test_localized_link_matches_english_destination(self):
         self.assertTrue(matching_link(
             DOCS / "index.html", DOCS / "es" / "index.html",
@@ -53,6 +57,51 @@ class LocalizationCheckTests(unittest.TestCase):
     def test_current_release_record_uses_current_versions(self):
         self.assertEqual(release_record_path(("Pro 1.8", "Standalone 1.11")).name,
                          "RELEASE-1.8-1.11-WEBSITE.md")
+
+    def test_new_locales_do_not_regress_to_known_literal_translation_errors(self):
+        forbidden = {
+            "pt-BR": (
+                "Standalones", "Histórico de Observação", "os partidas",
+                "Atribua uma partida de solteiros", "ALTURAIS DESTAQUES",
+                "Rel confiabilidade", "uma partida jogado",
+                "Complicações do visor do Apple Watch",
+            ),
+            "nl": (
+                "maand- en jaarcijfers", "wedstrijdvideo's die zijn opgenomen",
+                "spelletalletjes", "Gevonden wedstrijden",
+                "Spel gespeelde wedstrijden", "Rechtscontext",
+                "Optionele ontwikkelingsondersteuning", "beslissingsrondes",
+            ),
+            "ar": (
+                "سجل المشاهدة", "ماذا يفعل السل", "عائلات المضاعفات",
+                "المباريات التي لعبتهاا", "ربطة عنق", "خَدَمَ",
+                "عَوْدة", "مَسار", "الدورة الشهرية", "نصيحة صغيرة",
+                "مراجعة للمحترفين", "مراجعة مستقلة", "دبوس Tennis",
+                "مجموعات مزايا ست مباريات", "· السل",
+            ),
+            "zh-Hant": (
+                "雙屏呈現", "網站訪問統計", "鍛鍊可靠性", "許可權",
+                "證即時", "將精美卡片釋出", "自願支援開發",
+            ),
+        }
+        for locale, phrases in forbidden.items():
+            for page_name in ("index", "whats-new", "help", "privacy"):
+                content = (DOCS / locale / f"{page_name}.html").read_text()
+                for phrase in phrases:
+                    with self.subTest(locale=locale, page=page_name, phrase=phrase):
+                        self.assertNotIn(phrase, content)
+
+    def test_localized_stat_examples_keep_the_english_numerators(self):
+        for locale in ("pt-BR", "nl", "ar", "zh-Hant"):
+            content = (DOCS / locale / "index.html").read_text()
+            for score in ("3/10", "6/11", "4/11", "6/13"):
+                with self.subTest(locale=locale, score=score):
+                    self.assertIn(score, content)
+
+    def test_support_email_is_not_translated(self):
+        for locale in ("pt-BR", "nl", "ar", "zh-Hant"):
+            content = (DOCS / locale / "index.html").read_text()
+            self.assertIn("tennisscorewizard@gmail.com", content)
 
 
 if __name__ == "__main__":

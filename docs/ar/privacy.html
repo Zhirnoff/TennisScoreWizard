@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../assets/tennis_ball_app_icon_128.png" rel="icon"/>
+<title>سياسة الخصوصية - Tennis Score Wizard</title>
+<meta content="سياسة الخصوصية لTennis Score Wizard Standalone والمحترف، بما في ذلك بيانات المباراة المحلية والمنافسة، ومزامنة iCloud الخاصة، ونقل الجهاز المقترن، والوصول الاختياري إلى HealthKit، ومدفوعات الدعم الاختيارية." name="description"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ar/privacy.html" rel="canonical"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/privacy.html" hreflang="en" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/de/privacy.html" hreflang="de" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/es/privacy.html" hreflang="es" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/fr/privacy.html" hreflang="fr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ja/privacy.html" hreflang="ja" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ko/privacy.html" hreflang="ko" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ru/privacy.html" hreflang="ru" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/tr/privacy.html" hreflang="tr" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hans/privacy.html" hreflang="zh-Hans" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/it/privacy.html" hreflang="it" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/pt-BR/privacy.html" hreflang="pt-BR" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/zh-Hant/privacy.html" hreflang="zh-Hant" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/nl/privacy.html" hreflang="nl" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/ar/privacy.html" hreflang="ar" rel="alternate"/>
+<link href="https://zhirnoff.github.io/TennisScoreWizard/privacy.html" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Tennis Score Wizard" property="og:site_name"/>
+<meta content="سياسة الخصوصية - Tennis Score Wizard" property="og:title"/>
+<meta content="سياسة الخصوصية التي تغطي بيانات المباراة والمنافسة المحلية، ومزامنة iCloud الخاصة، ونقل الجهاز المقترن، والوصول الاختياري إلى HealthKit، ومدفوعات الدعم الاختيارية." property="og:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/ar/privacy.html" property="og:url"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" property="og:image"/>
+<meta content="أيقونة تطبيق Tennis Score Wizard" property="og:image:alt"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="سياسة الخصوصية - Tennis Score Wizard" name="twitter:title"/>
+<meta content="سياسة الخصوصية التي تغطي بيانات المباراة والمنافسة المحلية، ومزامنة iCloud الخاصة، ونقل الجهاز المقترن، والوصول الاختياري إلى HealthKit، ومدفوعات الدعم الاختيارية." name="twitter:description"/>
+<meta content="https://zhirnoff.github.io/TennisScoreWizard/assets/tennis_ball_app_icon_1024.png" name="twitter:image"/>
+<style>
+    :root {
+      --bg: #000000;
+      --panel: #0b0d0b;
+      --text: #ffffff;
+      --muted: #a2a3aa;
+      --line: rgba(255,255,255,0.12);
+      --line-green: rgba(40,255,95,0.34);
+      --green: #28ff5f;
+      --green-soft: rgba(40,255,95,0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: clip;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 14% 0%, rgba(40,255,95,0.18), transparent 31rem),
+        radial-gradient(circle at 88% 14%, rgba(120,255,20,0.10), transparent 28rem),
+        linear-gradient(180deg, #000000 0%, #020402 48%, #000000 100%);
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 60px;
+    }
+
+    .nav {
+      position: relative;
+      z-index: 1000;
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr) max-content;
+      grid-template-areas: "brand links language";
+      align-items: center;
+      column-gap: 26px;
+      min-height: 92px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+        rgba(7,9,7,0.92);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    .brand-home-link {
+      grid-area: brand;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      color: #ffffff;
+      font-size: 21px;
+      font-weight: 850;
+      letter-spacing: -0.035em;
+    }
+
+    .brand-home-link:hover,
+    .brand-home-link:focus-visible {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .brand-home-link:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 4px;
+    }
+
+    .app-icon {
+      width: 62px;
+      height: 62px;
+      flex: 0 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 12px 34px rgba(0,0,0,0.46), 0 0 24px rgba(40,255,95,0.12);
+    }
+
+    .nav-links {
+      grid-area: links;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      min-width: 0;
+      gap: 10px 20px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .language-menu {
+      position: relative;
+      z-index: 1100;
+      grid-area: language;
+      justify-self: end;
+      display: inline-flex;
+      align-items: center;
+      margin: 0;
+    }
+
+    .language-menu summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      list-style: none;
+      cursor: pointer;
+      color: #f5f7f5;
+      border: 1px solid rgba(255,255,255,0.16);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)),
+        rgba(255,255,255,0.045);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 850;
+      line-height: 1;
+      white-space: nowrap;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+
+    .language-menu summary::marker {
+      content: "";
+    }
+
+    .language-menu summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .language-menu summary::after {
+      content: "⌄";
+      color: var(--muted);
+      font-size: 13px;
+      transform: translateY(-1px);
+    }
+
+    .language-menu[open] summary {
+      border-color: var(--line-green);
+      background:
+        linear-gradient(180deg, rgba(40,255,95,0.15), rgba(40,255,95,0.055)),
+        rgba(255,255,255,0.05);
+      box-shadow: 0 0 24px rgba(40,255,95,0.13);
+    }
+
+    .language-options {
+      position: absolute;
+      z-index: 1200;
+      top: calc(100% + 4px);
+      right: 0;
+      width: 210px;
+      max-height: 320px;
+      overflow-y: auto;
+      padding: 8px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 18px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035)),
+        rgba(7,9,7,0.98);
+      box-shadow: 0 26px 80px rgba(0,0,0,0.62);
+      backdrop-filter: blur(20px);
+    }
+
+    .language-options a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 11px;
+      border-radius: 12px;
+      color: #f2f4f2;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    .language-options a:hover {
+      background: rgba(40,255,95,0.10);
+      text-decoration: none;
+    }
+
+    .language-options a.active {
+      color: var(--green);
+      background: rgba(40,255,95,0.11);
+    }
+
+    .language-options a.active::after {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .privacy-content {
+      width: min(820px, 100%);
+      margin: 82px auto 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 7px 12px;
+      border: 1px solid var(--line-green);
+      border-radius: 999px;
+      color: var(--green);
+      background: var(--green-soft);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(46px, 7vw, 76px);
+      line-height: 0.96;
+      letter-spacing: -0.065em;
+    }
+
+    .updated {
+      margin: 0 0 34px;
+      color: var(--muted);
+    }
+
+    .card {
+      margin-bottom: 42px;
+      padding: 26px;
+      border: 1px solid var(--line-green);
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at 92% 10%, rgba(40,255,95,0.12), transparent 18rem),
+        linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025));
+    }
+
+    .card p {
+      margin: 0;
+    }
+
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 24px;
+      letter-spacing: -0.035em;
+    }
+
+    p,
+    li {
+      color: #d7d7dc;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-meta,
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 10px 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      justify-content: flex-end;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible,
+    .footer-links a[aria-current="page"] {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 980px) {
+      .nav {
+        grid-template-columns: minmax(0, 1fr) max-content;
+        grid-template-areas:
+          "brand language"
+          "links links";
+        column-gap: 14px;
+        row-gap: 14px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 24px, 1180px);
+        padding-top: 18px;
+      }
+
+      .nav {
+        padding: 14px;
+        border-radius: 24px;
+      }
+
+      .brand-home-link {
+        gap: 10px;
+        font-size: 18px;
+      }
+
+      .app-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+      }
+
+      .nav-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .nav-links a {
+        display: flex;
+        min-height: 36px;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 10px;
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 999px;
+        background: rgba(255,255,255,0.035);
+        font-size: 12px;
+      }
+
+      .language-options {
+        right: 0;
+        width: min(210px, calc(100vw - 48px));
+      }
+
+      .privacy-content {
+        margin-top: 60px;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      footer,
+      .footer-meta,
+      .footer-links {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+/* Shared animated brand treatment */
+.brand-title {
+  display: inline-block;
+  white-space: nowrap;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff 28%,
+      #b8ffc4 40%,
+      #28ff5f 50%,
+      #effff2 60%,
+      #ffffff 72%,
+      #ffffff 100%
+    );
+  background-size: 220% 100%;
+  background-position: 100% 50%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(40,255,95,0.18);
+  animation: brand-title-shimmer 5.2s ease-in-out infinite;
+}
+
+@media (min-width: 981px) {
+  .brand-title {
+    font-size: clamp(36px, 3vw, 42px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+}
+
+@keyframes brand-title-shimmer {
+  0%,
+  18% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+  48% {
+    filter: drop-shadow(0 0 8px rgba(40,255,95,0.30));
+  }
+  82%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(40,255,95,0));
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-home-link {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title {
+    animation: none;
+    background-position: 50% 50%;
+    filter: none;
+  }
+}
+/* Wide editorial privacy layout */
+.privacy-content {
+  width: 100%;
+  margin: 82px auto 0;
+}
+
+.privacy-hero {
+  max-width: 900px;
+}
+
+.privacy-content > .card {
+  margin: 34px 0 24px;
+  padding: 30px 32px;
+}
+
+.privacy-content > .card p {
+  max-width: 980px;
+  font-size: 17px;
+}
+
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.privacy-section {
+  min-width: 0;
+  padding: 24px 26px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(40,255,95,0.065), transparent 15rem),
+    linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.018));
+}
+
+.privacy-section h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  line-height: 1.16;
+}
+
+.privacy-section p {
+  margin: 0;
+}
+
+.privacy-section a {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .privacy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .privacy-content {
+    margin-top: 60px;
+  }
+
+  .privacy-content > .card {
+    padding: 22px;
+  }
+
+  .privacy-content > .card p {
+    font-size: 16px;
+  }
+
+  .privacy-section {
+    padding: 21px;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_START */
+/* Keep the shared header stable when labels and language names vary in length. */
+@media (max-width: 700px) {
+  .page,
+  .nav,
+  .brand,
+  .brand-home-link,
+  .brand-title,
+  .nav-links,
+  .language-menu {
+    min-width: 0;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand,
+  .brand-home-link {
+    max-width: 100%;
+  }
+
+  .brand-title {
+    max-width: 100%;
+    font-size: clamp(12px, 3.3vw, 14px);
+  }
+
+  .nav-links > a {
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .language-menu summary {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    column-gap: 6px;
+    padding: 10px;
+  }
+
+  .brand,
+  .brand-home-link {
+    gap: 6px;
+  }
+
+  .app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .brand-title {
+    font-size: 12px;
+    letter-spacing: -0.045em;
+  }
+
+  .language-menu summary {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 700px) {
+  .privacy-content,
+  .privacy-hero,
+  .privacy-content > .card,
+  .privacy-grid,
+  .privacy-section {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .privacy-hero h1,
+  .privacy-section h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .privacy-content > .card p,
+  .privacy-section p {
+    overflow-wrap: break-word;
+  }
+}
+
+/* MOBILE_LOCALIZATION_SAFE_END */
+
+/* Keep desktop navigation on one clean row; use a full second row before it gets tight. */
+@media (min-width: 641px) {
+  .nav {
+    column-gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links > a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "brand language"
+      "links links";
+    row-gap: 14px;
+    min-height: auto;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+</style>
+<link href="../release-1-1.css" rel="stylesheet"/>
+<link href="../release-1-6-en.css?v=20260911-nav" rel="stylesheet"/>
+<script defer="" src="../navigation-en.js?v=20260911-nav"></script>
+<link href="../back-to-top.css?v=20261001" rel="stylesheet"/>
+<script defer="" src="../back-to-top.js?v=20261001"></script>
+<style>html[dir=rtl] { direction: rtl; }
+html[dir=rtl] body, html[dir=rtl] .page { text-align: right; }
+html[dir=rtl] h1 { font-size: clamp(42px, 6.1vw, 72px); line-height: 1.28; letter-spacing: 0; }
+html[dir=rtl] h2, html[dir=rtl] h3 { line-height: 1.3; letter-spacing: 0; }
+html[dir=rtl] .language-options { text-align: right; }
+html[dir=rtl] input, html[dir=rtl] textarea { direction: rtl; text-align: right; }
+html[dir=rtl] .chart, html[dir=rtl] .stat-value { direction: ltr; }
+html[dir=rtl] .development-support-copy { text-align: right; }
+html[dir=rtl] .development-support-wallet code,
+html[dir=rtl] .development-support-qr-details code {
+  direction: ltr; unicode-bidi: isolate; text-align: left;
+}
+</style></head>
+<body>
+<main class="page">
+<nav aria-label="الملاحة الأساسية" class="nav">
+<a aria-label="Tennis Score Wizard - الصفحة الرئيسية" class="brand-home-link" href="index.html">
+<img alt="أيقونة تطبيق Tennis Score Wizard" class="app-icon" decoding="async" height="1024" sizes="62px" src="../assets/tennis_ball_app_icon_1024-128.webp" srcset="../assets/tennis_ball_app_icon_1024-128.webp 128w, ../assets/tennis_ball_app_icon_1024-256.webp 256w" width="1024"/>
+<span class="brand-title">Tennis Score Wizard</span>
+</a>
+<div class="nav-links">
+<a href="index.html#versions">الإصدارات</a>
+<a href="index.html#comparison">المقارنة</a>
+<a href="index.html#stats-guide">دليل الإحصاءات</a>
+<a href="whats-new.html">تحديثات التطبيق</a>
+<a href="help.html">المساعدة</a>
+<a href="index.html#contact">تواصل معنا</a>
+</div>
+<details class="language-menu">
+<summary>🇸🇦 العربية</summary>
+<div class="language-options">
+<a href="../privacy.html">🇺🇸 English</a>
+<a href="../ja/privacy.html">🇯🇵 日本語</a>
+<a href="../de/privacy.html">🇩🇪 Deutsch</a>
+<a href="../fr/privacy.html">🇫🇷 Français</a>
+<a href="../ru/privacy.html">🇷🇺 Русский</a>
+<a href="../tr/privacy.html">🇹🇷 Türkçe</a>
+<a href="../es/privacy.html">🇪🇸 Español</a>
+<a href="../zh-Hans/privacy.html">🇨🇳 简体中文</a>
+<a href="../ko/privacy.html">🇰🇷 한국어</a>
+<a href="../it/privacy.html">🇮🇹 Italiano</a>
+<a href="../pt-BR/privacy.html">🇧🇷 Português (Brasil)</a>
+<a href="../zh-Hant/privacy.html">🇹🇼 繁體中文</a>
+<a href="../nl/privacy.html">🇳🇱 Nederlands</a>
+<a class="active" href="privacy.html">🇸🇦 العربية</a>
+</div>
+</details>
+</nav>
+<article class="privacy-content">
+<header class="privacy-hero">
+<span class="eyebrow">Tennis Score Wizard</span>
+<h1>سياسة الخصوصية</h1>
+<p class="updated">آخر تحديث: سبتمبر 2026</p>
+</header>
+<div class="card">
+<p>
+          تسري سياسة الخصوصية هذه على كلٍّ من <strong>Tennis Score Wizard</strong> وَ <strong>Tennis Score Wizard Pro</strong>. تحفظ التطبيقات بيانات المباريات وملفات اللاعبين في Rivalries محليًا، ويمكن مزامنتها عبر قاعدة بيانات CloudKit الخاصة بحساب Apple. لا تتطلب التطبيقات حسابًا لدى Tennis Score Wizard، ولا تستخدم خادمًا لسجل المباريات يديره المطوّر. ولا يتلقى المطوّر بيانات المباريات أو Rivalries المتزامنة أو يبيعها أو يستخدمها للإعلانات.
+        </p>
+</div>
+<div class="privacy-grid">
+<section class="privacy-section" id="manual-match-data">
+<h2>المباريات المُدخلة يدويًا ومعلومات المباراة الاختيارية</h2>
+<p>يتيح لك Pro على iPhone إدخال نتيجة مباراة لعبتها سابقًا، مع إضافة الوقت والمدة اختياريًا. ويمكنك أيضًا إضافة نوع أرضية الملعب، وما إذا كان الملعب داخليًا أو خارجيًا، واسم المكان والملعب، وملاحظة شخصية إلى مباراة جديدة أو محفوظة. تُحفظ هذه المعلومات مع المباراة وقد تُزامن عبر iCloud الخاص أو بين الجهازين المقترنين. لا يؤدي الإدخال اليدوي إلى إنشاء تمرين في تطبيق «صحتي»، ولا يستعيد قياسات نبض القلب أو النقاط التي لم تُسجَّل.</p>
+<p>تُدخل أسماء الأماكن والملاعب نصيًا. لا تطلب هذه الميزة موقع GPS ولا ترسل بحثًا عن الملاعب إلى خدمة خرائط. تُحفظ الملاعب المفضلة محليًا على iPhone وتُفصل بحسب حساب Apple. إعادة استخدام ملعب لا تنسخ الملاحظة الشخصية من مباراة أخرى.</p>
+<p>عند مشاركة صورة مباراة، تتضمن الصورة ظروف الملعب والموقع اللذين أدخلتهما. لا تُضمَّن ملاحظات المباراة الشخصية ولا الملاحظات الخاصة في Rivalries. راجع الصورة قبل مشاركتها، ثم يتعامل التطبيق أو الخدمة المستقبِلة مع المعلومات التي اخترت مشاركتها.</p>
+</section>
+<section class="privacy-section" id="history-files-privacy"><h2>سجل النقاط المحفوظ وملفات السجل</h2><p>قد تحتفظ المباريات المسجلة حديثًا بتسلسل النقاط المستخدم في Match Flow. ويُحفظ هذا التسلسل مع المباراة ويمكن مزامنته عبر المسارات الخاصة نفسها المستخدمة لبقية بياناتها. لا يُنشئ التطبيق نقاطًا مفقودة لنتائج قديمة أو مدخلة يدويًا. وفي Pro، يمكنك تصدير تقرير أو نسخة احتياطية من سجل المباريات. يُنشأ الملف على جهازك ولا يُشارك إلا عبر الوجهة التي تختارها. راجعه قبل مشاركته، إذ يتعامل التطبيق أو الخدمة المستقبلة مع النسخة وفق شروطها.</p></section>
+<section class="privacy-section" id="website-analytics"><h2>تحليلات الموقع الإلكتروني</h2><p>يستخدم هذا الموقع GoatCounter لقياس زيارات الصفحات ومصادر الإحالة والمواقع التقريبية والمتصفحات واللغات وأحجام الشاشة والنقرات على روابط متجر التطبيقات. يعالج GoatCounter عناوين IP لتقدير الموقع والتعرف على الزيارات المتكررة لمدة تصل إلى ثماني ساعات؛ لا يتم تخزين عناوين IP في قاعدة بيانات التحليلات الخاصة بها. نحن نستخدم التقارير المجمعة، دون تتبع ملفات تعريف الارتباط أو سجلات عرض الصفحة الفردية. لا تتلقى تحليلات موقع الويب هذا بيانات من التطبيقات، بما في ذلك المباريات أو ملفات تعريف اللاعبين أو الملاحظات أو البيانات الصحية.</p><p><a href="https://www.goatcounter.com/help/privacy" rel="noopener noreferrer" target="_blank">معلومات خصوصية GoatCounter</a> · <a href="#toggle-goatcounter">استبعاد أو تضمين هذا المتصفح</a></p></section>
+<section class="privacy-section">
+<h2>جمع البيانات</h2>
+<p>
+            لا يتطلب Tennis Score Wizard أو Tennis Score Wizard Pro إنشاء حساب أو التسجيل أو تقديم عنوان بريد إلكتروني أو إنشاء ملف شخصي يستضيفه المطوّر. ولا يتلقى المطوّر عبر خوادمه سجل المباريات أو ملفات المنافسين أو الملاحظات الخاصة أو الإحصاءات أو ملخصات التمارين أو بيانات «صحتي». وقد تعالج Apple البيانات اللازمة لتقديم iCloud وApp Store والمشتريات وخدمات نظام التشغيل وفق شروطها وسياسة الخصوصية الخاصة بها.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>سجل المباريات المحلي والمزامنة مع الجهاز المقترن</h2>
+<p>
+            يُحفظ سجل المباريات محليًا على Apple Watch، وكذلك على iPhone المقترن عند استخدام Tennis Score Wizard Pro. تُحفظ إحصاءات المباراة التلقائية ضمن سجلها، ومنها النقاط والإرسال والاستقبال ونقاط كسر الإرسال ومجريات المباراة وكسر التعادل وملخص التمرين المتاح. ويمكن لـPro نقل بيانات المباراة مباشرةً بين Apple Watch وiPhone المقترنين عبر Watch Connectivity من Apple. يعمل هذا النقل والمزامنة عبر CloudKit بشكل مستقل، وقد يكتمل أيّهما أولًا.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>ملفات المنافسين والملاحظات الخاصة</h2>
+<p>
+            يمكن لقسم المواجهات حفظ الاسم الكامل للاعب، واسم مختصر يظهر على Apple Watch، وملاحظة خاصة اختيارية، ومعرّف داخلي ثابت، وروابط بين اللاعب ومباريات الفردي المحفوظة. تُحفظ هذه البيانات محليًا ويمكن مزامنتها عبر قاعدة بيانات CloudKit الخاصة بحساب Apple. تساعد معرّفات اللاعبين وسجلات الحذف في إبقاء ملف موحد على الأجهزة ومنع استعادة نسخ محذوفة أو قديمة.
+          </p>
+<p>
+            يستطيع Pro إرسال قائمة اللاعبين الحالية مباشرةً بين iPhone وApple Watch المقترنين عبر Watch Connectivity لتحديث قائمة الاختيار على الساعة دون انتظار iCloud. لا تتضمن هذه القائمة الملاحظات الخاصة ولا روابط اللاعبين بالمباريات. ولا تظهر الملاحظات الخاصة في نصوص المواجهات أو بطاقاتها المشتركة.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>مزامنة iCloud الخاصة</h2>
+<p>
+            عند تسجيل الدخول إلى حساب Apple وتفعيل iCloud Drive، يمكن للتطبيقين مزامنة المباريات المحفوظة وبيانات المواجهات عبر CloudKit من Apple. تُخزَّن السجلات في قاعدة البيانات الخاصة بذلك الحساب وتُحتسب ضمن مساحة iCloud للمستخدم. لا يستطيع الوصول إلى هذه القاعدة افتراضيًا إلا صاحب الحساب؛ ولا يستطيع المطوّر الاطلاع على سجلاتها. يستخدم Standalone وPro حاوية CloudKit نفسها، لذا يمكن مزامنة المباريات وبيانات المواجهات بين التطبيقين على Apple Watch وiPhone عند استخدام حساب Apple نفسه. لكل حساب سجل خاص منفصل، ولا يؤدي تغيير الحساب إلى دمج السجلات أو نقلها بين الحسابات.
+          </p>
+<p>
+            عند اكتشاف تغيير حساب Apple، يعرض التطبيقان النسخة المحلية المرتبطة بالحساب الحالي. وقبل إزالة النسخة المحلية للحساب السابق من الجهاز، تُحفظ السجلات التي تنتظر المزامنة في نسخة استعادة محلية مشفّرة مرتبطة بالحساب السابق. لا تُرفع هذه السجلات إلى الحساب الجديد. ولا يؤدي تغيير الحساب إلى حذف السجلات الموجودة في قاعدة CloudKit الخاصة بأيٍّ من الحسابين.
+          </p>
+<p class="privacy-source-note">
+            توفر Apple خدمات iCloud بموجب <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">سياسة خصوصية Apple</a> والأحكام السارية في <a href="https://www.apple.com/legal/internet-services/icloud/" rel="noopener noreferrer" target="_blank">شروط خدمة iCloud</a>.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>الصحة وHealthKit</h2>
+<p>
+            قد يطلب التطبيقان إذنًا اختياريًا للوصول إلى بيانات تطبيق «صحتي» كي يحفظا مباراة التنس كتمرين، ويعرضا نبض القلب لحظيًا أثناء تسجيل المباراة، ثم يظهرا ملخص التمرين بعد حفظه، مثل متوسط النبض وأقصاه والطاقة النشطة ومدة المباراة.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>الوصول إلى الصحة اختياري</h2>
+<p>
+            الوصول إلى بيانات «صحتي» اختياري وتتحكم فيه أذونات Apple. إذا منحت الإذن، يعالج HealthKit بيانات التمرين ونبض القلب والطاقة النشطة على أجهزتك، ولا يستخدمها التطبيقان إلا للميزات المتعلقة بالتمرين. لا يرسل التطبيقان بيانات «صحتي» إلى المطوّر، ولا يبيعها المطوّر أو يشاركها.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>الوصول إلى الشبكة</h2>
+<p>
+            لا يحتاج تسجيل نقاط المباريات إلى اتصال بالشبكة. يُستخدم الاتصال عندما يتواصل نظام التشغيل مع خدمات Apple، مثل مزامنة iCloud وعمليات الشراء الاختيارية في App Store، أو عندما تختار فتح محفظة خارجية لدعم المشروع بالعملة المشفرة. لا يرسل التطبيقان النتائج أو سجل المباريات أو ملفات المنافسين أو الملاحظات الخاصة أو الإحصاءات أو بيانات التمارين ونبض القلب إلى أي خادم يديره المطوّر.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>مدفوعات الدعم الاختيارية</h2>
+<p>
+            تعالج Apple المساهمات الاختيارية لمرة واحدة التي تتم عبر نظام الشراء داخل التطبيق. لا يتلقى المطوّر بيانات بطاقة الدفع الخاصة بك. وقد توفر Apple تقارير عن المشتريات والبيانات المالية وفق شروطها وسياسة الخصوصية الخاصة بها. لا تفتح المساهمة ميزات إضافية ولا تزيل حدودًا ولا تغيّر طريقة عمل التطبيقين.
+          </p>
+<p>
+            إذا اخترت دعم المشروع بالعملة المشفرة، يعرض التطبيق عنوان محفظة المشروع أو يفتح محفظة خارجية متوافقة. يتم التحويل خارج التطبيق، ولا يمكن عادةً التراجع عنه، ويُسجَّل في سلسلة كتل عامة. قد تكشف المعاملة العامة عناوين المحافظ والمبلغ ووقت التحويل. لا يُرفق التطبيق بها سجل مبارياتك أو بيانات المواجهات أو البيانات الصحية أو ملاحظاتك الخاصة.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>التحليلات والتتبع</h2>
+<p>
+            لا تستخدم التطبيقات تحليلات الجهات الخارجية أو أجهزة تتبع الإعلانات أو تقنيات التتبع.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>مشاركة البيانات</h2>
+<p>
+            لا يبيع المطوّر سجل المباريات أو ملفات المنافسين أو الملاحظات الخاصة أو الإحصاءات أو بيانات التمارين ونبض القلب والطاقة النشطة، ولا يؤجرها أو يكشفها للمعلنين أو وسطاء البيانات. للمزامنة عبر iCloud، تُرسل سجلات المباريات وبيانات المواجهات إلى خدمة CloudKit من Apple. ويمكن لـPro أيضًا نقل سجلات المباريات وقائمة اللاعبين المناسبة للساعة مباشرةً بين Apple Watch وiPhone المقترنين عبر Watch Connectivity.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>الحذف وإعادة التثبيت والاحتفاظ</h2>
+<p>
+            إذا حذفت مباراة محفوظة من داخل التطبيق، تتزامن عملية الحذف عند توفر iCloud. أما حذف التطبيق من الجهاز فلا يحذف بحد ذاته المباريات التي سبق مزامنتها مع iCloud؛ ويمكن تنزيلها مجددًا بعد إعادة التثبيت باستخدام حساب Apple نفسه. وقد تبقى المباراة التي لم تكتمل مزامنتها بنجاح على الجهاز الأصلي فقط.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>التواصل مع الدعم</h2>
+<p>
+            إذا اتصلت بنا عبر البريد الإلكتروني، فسنتلقى المعلومات التي تدرجها طواعية في رسالتك، مثل عنوان بريدك الإلكتروني ومحتويات طلبك. تستخدم هذه المعلومات فقط للرد على طلب الدعم الخاص بك وحله.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>تغييرات على سياسة الخصوصية هذه</h2>
+<p>
+            قد يتم تحديث سياسة الخصوصية هذه عندما تتغير التطبيقات أو ممارسات البيانات الخاصة بها. سيتم نشر أحدث إصدار دائما على هذه الصفحة.
+          </p>
+</section>
+<section class="privacy-section">
+<h2>تواصل معنا</h2>
+<p>
+            إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، فاتصل ب: <a href="mailto:tennisscorewizard@gmail.com">tennisscorewizard@gmail.com</a>
+</p>
+</section>
+</div>
+</article>
+<footer>
+<div class="footer-meta">
+<span>© 2026 Tennis Score Wizard</span>
+<span>Apple Watch هي علامة تجارية لشركة Apple Inc.</span>
+</div>
+<nav aria-label="الملاحة الثانوية" class="footer-links">
+<a aria-current="page" href="privacy.html">الخصوصية</a>
+</nav>
+</footer>
+</main>
+<script>
+(() => {
+  const menus = document.querySelectorAll(".language-menu");
+  if (!menus.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.removeAttribute("open");
+      menu.querySelector("summary")?.focus();
+    });
+  });
+})();
+</script>
+<script defer="" src="../analytics.js"></script>
+</body>
+</html>

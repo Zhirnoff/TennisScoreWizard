@@ -24,19 +24,19 @@ The GitHub Pages site is stored in `docs/`:
 - `docs/privacy.html` — Privacy Policy
 - `docs/whats-new.html` — Standalone and Pro release history
 - `docs/assets/` — app icons, Apple Watch screenshots, Pro screenshots, and optimized image variants
-- `docs/de`, `docs/es`, `docs/fr`, `docs/it`, `docs/ja`, `docs/ko`, `docs/ru`, `docs/tr`, `docs/zh-Hans` — localized pages
+- `docs/de`, `docs/es`, `docs/fr`, `docs/it`, `docs/ja`, `docs/ko`, `docs/ru`, `docs/tr`, `docs/zh-Hans`, `docs/pt-BR`, `docs/zh-Hant`, `docs/nl`, `docs/ar` — localized pages
 - `release-history/` — dated records of past website releases, separate from the current site overview
 - `scripts/check_site_locales.py` — English-first checks for localized page structure, links, images, accessibility labels, release metadata, and this README
 - `.github/workflows/site-localizations.yml` — runs those checks on site changes
 
-The site currently supports English, German, Spanish, French, Italian, Japanese, Korean, Russian, Turkish, and Simplified Chinese.
+The site supports English, German, Spanish, French, Italian, Japanese, Korean, Russian, Turkish, Simplified Chinese, Brazilian Portuguese, Traditional Chinese, Dutch, and Arabic.
 
 ## Current site content
 
 - The landing page introduces Pro before Standalone and shows their current website versions, feature comparison, and product screenshots.
 - Product Updates includes release details and screenshots for the latest Pro and Standalone versions. Older releases remain in the history.
 - Help explains recaps, match history, manual match editing, Match Flow, sharing, and related features. Privacy describes the site's analytics and the apps' data handling.
-- All four main pages are available in ten languages. English is the content and structure reference; translations should be natural to native readers while preserving the same facts, links, screenshots, and accessibility information.
+- All four main pages are available in fourteen languages. English is the content and structure reference; translations should be natural to native readers while preserving the same facts, links, screenshots, and accessibility information.
 - The [website release history](release-history/README.md) keeps implementation and asset provenance, including the [current 1.8/1.11 website record](release-history/RELEASE-1.8-1.11-WEBSITE.md).
 
 ## Local preview
@@ -61,7 +61,7 @@ python3 -m unittest discover -s scripts -p 'test_site_locales.py'
 GoatCounter dashboard: https://tennisscorewizard.goatcounter.com/ (login required).
 The shared `docs/analytics.js` loads the counter only on the production GitHub
 Pages host under `/TennisScoreWizard/`; local previews do not send analytics.
-All ten localizations and the promotional landing page use this one loader.
+All thirteen localized language editions and the promotional landing page use this one loader.
 
 App Store links record separate `app-store-standalone:<page>` and
 `app-store-companion:<page>` events. These measure website interactions, not
@@ -79,7 +79,7 @@ Keep original PNG assets as the high-quality source. Where responsive variants e
 ## Release workflow
 
 - `main` represents the public website and is published through GitHub Pages.
-- Start with the English landing page, Product Updates, Help, and Privacy page as needed. Then update all nine translations against those English pages, including metadata and accessibility text.
+- Start with the English landing page, Product Updates, Help, and Privacy page as needed. Then update all thirteen translations against those English pages, including metadata and accessibility text.
 - Update this README's current website versions and feature summary whenever the site changes. The localization check fails if the version line falls behind the English page.
 - Keep release records in `release-history/`, one file per website release. They describe the facts and checks at that time: never rename an old release to the current version or reuse its record. If a past fact needs correction, add a dated correction without erasing the original context.
 - The top-level README is the current GitHub overview; move superseded release records out of the repository root and keep their links working. Add a new website release record when publishing a substantive new version.
