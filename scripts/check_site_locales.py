@@ -23,6 +23,7 @@ class SitePage(HTMLParser):
         self.classes = Counter()
         self.ids = []
         self.images = []
+        self.image_candidates = []
         self.image_alts = []
         self.image_alt_presence = []
         self.links = []
@@ -53,6 +54,11 @@ class SitePage(HTMLParser):
             self.lang = attrs.get("lang")
         if tag == "img":
             self.images.append(attrs.get("src", ""))
+            self.image_candidates.extend(
+                candidate.strip().split()[0]
+                for candidate in attrs.get("srcset", "").split(",")
+                if candidate.strip()
+            )
             self.image_alts.append(attrs.get("alt", ""))
             self.image_alt_presence.append(bool(attrs.get("alt")))
         if tag == "a":
@@ -207,11 +213,16 @@ def main():
                 if copied:
                     errors.append(f"{path}: untranslated {field}: {copied[0]}")
 
-    for path, page in list(parsed.items()):
-        for src in page.images:
+    for path in DOCS.rglob("*.html"):
+        page = get(path)
+        for src in page.images + page.image_candidates:
             target, _ = local_target(path, src)
             if target and not target.is_file():
                 errors.append(f"{path}: missing image {src}")
+            elif target and target.stat().st_size > 1_000_000:
+                errors.append(f"{path}: displayed image exceeds 1 MB: {src}")
+
+    for path, page in list(parsed.items()):
         for href in page.links:
             if href == "#toggle-goatcounter":  # Handled by analytics.js.
                 continue

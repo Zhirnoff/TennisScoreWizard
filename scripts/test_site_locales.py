@@ -27,6 +27,12 @@ class LocalizationCheckTests(unittest.TestCase):
         localized = page('<a href="photo.png">Foto</a>')
         self.assertNotEqual(english.aria_sites, localized.aria_sites)
 
+    def test_responsive_image_candidates_are_checked(self):
+        parsed = page('<img src="photo-720.webp" '
+                      'srcset="photo-720.webp 720w, photo-1080.webp 1080w" alt="Photo">')
+        self.assertEqual(parsed.image_candidates,
+                         ["photo-720.webp", "photo-1080.webp"])
+
     def test_localized_link_matches_english_destination(self):
         self.assertTrue(matching_link(
             DOCS / "index.html", DOCS / "es" / "index.html",
