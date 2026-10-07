@@ -966,6 +966,25 @@
   text-overflow: ellipsis;
 }
 
+/* On RTL pages the picker sits at the left edge, so open it toward the page. */
+html[dir="rtl"] .language-options {
+  left: 0 !important;
+  right: auto !important;
+  width: min(316px, calc(100vw - 48px)) !important;
+  max-width: calc(100vw - 48px) !important;
+}
+
+html[dir="rtl"] .language-options::before {
+  left: 22px !important;
+  right: auto !important;
+}
+
+html[dir="rtl"] .language-options > a {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-overflow: clip;
+}
+
 .icloud-kicker::before {
   width: 8px;
   height: 8px;

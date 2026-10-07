@@ -37,6 +37,19 @@ class LocalizationCheckTests(unittest.TestCase):
         parsed = page('<html lang="ar" dir="rtl"><body>مرحبا</body></html>')
         self.assertEqual((parsed.lang, parsed.direction), ("ar", "rtl"))
 
+    def test_arabic_language_picker_opens_into_the_viewport(self):
+        css = (DOCS / "release-1-1.css").read_text()
+        self.assertRegex(
+            css,
+            r'html\[dir="rtl"\] \.language-options\s*\{[^}]*'
+            r'left:\s*0\s*!important;[^}]*right:\s*auto\s*!important;',
+        )
+        for page_name in ("index", "whats-new", "help", "privacy"):
+            with self.subTest(page=page_name):
+                content = (DOCS / "ar" / f"{page_name}.html").read_text()
+                self.assertIn('release-1-1.css?v=20261007-rtl-language-menu-2', content)
+                self.assertIn('<details class="language-menu">', content)
+
     def test_localized_link_matches_english_destination(self):
         self.assertTrue(matching_link(
             DOCS / "index.html", DOCS / "es" / "index.html",
