@@ -45,18 +45,21 @@ function render({ locale = 'en', scrollHeight = 2000, innerHeight = 800 } = {}) 
 
 const page = render();
 assert.equal(page.properties.get('--scroll-progress'), '0.00%');
+assert.equal(page.properties.get('--scroll-progress-offset'), '100.00');
 assert.equal(page.classes.has('is-visible'), false);
 assert.equal(page.button.tabIndex, -1);
 
 page.window.scrollY = 600;
 page.windowListeners.scroll();
 assert.equal(page.properties.get('--scroll-progress'), '50.00%');
+assert.equal(page.properties.get('--scroll-progress-offset'), '50.00');
 assert.equal(page.classes.has('is-visible'), true);
 assert.equal(page.button.tabIndex, 0);
 
 page.window.scrollY = 1200;
 page.windowListeners.scroll();
 assert.equal(page.properties.get('--scroll-progress'), '100.00%');
+assert.equal(page.properties.get('--scroll-progress-offset'), '0.00');
 
 page.window.scrollY = 2000;
 page.windowListeners.scroll();
@@ -75,6 +78,7 @@ shortPage.window.scrollY = 50;
 shortPage.windowListeners.scroll();
 assert.equal(shortPage.classes.has('is-visible'), false);
 assert.equal(shortPage.properties.get('--scroll-progress'), '100.00%');
+assert.equal(shortPage.properties.get('--scroll-progress-offset'), '0.00');
 
 for (const [locale, label] of Object.entries({
   ar: 'العودة إلى الأعلى',
@@ -94,12 +98,14 @@ function htmlFiles(directory) {
 
 for (const file of htmlFiles(docs)) {
   const html = fs.readFileSync(file, 'utf8');
-  assert.match(html, /back-to-top\.css\?v=20261008-scroll-progress/, file);
-  assert.match(html, /back-to-top\.js\?v=20261008-scroll-progress/, file);
+  assert.match(html, /back-to-top\.css\?v=20261008-glass-ring/, file);
+  assert.match(html, /back-to-top\.js\?v=20261008-glass-ring/, file);
 }
 
 const css = fs.readFileSync(path.join(docs, 'back-to-top.css'), 'utf8');
-assert.match(css, /conic-gradient\(from -90deg/);
-assert.match(css, /var\(--scroll-progress\)/);
+assert.match(page.button.innerHTML, /class="back-to-top-ring-value"/);
+assert.match(page.button.innerHTML, /class="back-to-top-icon"/);
+assert.match(css, /stroke-dashoffset: var\(--scroll-progress-offset\)/);
+assert.doesNotMatch(css, /conic-gradient/);
 
-console.log('Back-to-top progress and locale checks passed.');
+console.log('Back-to-top glass ring, progress and locale checks passed.');
