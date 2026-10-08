@@ -41,7 +41,17 @@
     text.className = 'section-menu-link-text';
     text.textContent = section.label;
     link.append(number, text);
-    link.addEventListener('click', () => closeMenu());
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      closeMenu(true);
+      if (window.location.hash) {
+        window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search);
+      }
+      section.element.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+        block: 'start'
+      });
+    });
     panel.append(link);
   }
   wrapper.append(toggle, panel);
@@ -51,7 +61,7 @@
     if (panel.hidden) return;
     panel.hidden = true;
     toggle.setAttribute('aria-expanded', 'false');
-    if (restoreFocus) toggle.focus();
+    if (restoreFocus) toggle.focus({ preventScroll: true });
   }
 
   toggle.addEventListener('click', () => {
