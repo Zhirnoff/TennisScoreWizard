@@ -1,5 +1,6 @@
 (() => {
   const labels = {
+    ar: 'العودة إلى الأعلى',
     de: 'Nach oben',
     en: 'Back to top',
     es: 'Volver arriba',
@@ -7,12 +8,15 @@
     it: 'Torna su',
     ja: 'ページの先頭へ',
     ko: '맨 위로',
+    nl: 'Terug naar boven',
+    'pt-br': 'Voltar ao topo',
     ru: 'Наверх',
     tr: 'Yukarı dön',
-    zh: '返回顶部'
+    zh: '返回顶部',
+    'zh-hant': '返回頁首'
   };
-  const language = document.documentElement.lang.toLowerCase().split('-')[0];
-  const label = labels[language] || labels.en;
+  const locale = document.documentElement.lang.toLowerCase();
+  const label = labels[locale] || labels[locale.split('-')[0]] || labels.en;
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'back-to-top';
@@ -22,7 +26,10 @@
   document.body.append(button);
 
   const update = () => {
-    const canScroll = document.documentElement.scrollHeight > window.innerHeight + 120;
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const progress = maxScroll ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
+    button.style.setProperty('--scroll-progress', `${(progress * 100).toFixed(2)}%`);
+    const canScroll = maxScroll > 120;
     const visible = canScroll && window.scrollY > Math.max(500, window.innerHeight * .7);
     button.classList.toggle('is-visible', visible);
     button.tabIndex = visible ? 0 : -1;
