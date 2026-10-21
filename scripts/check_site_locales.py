@@ -29,6 +29,8 @@ class SitePage(HTMLParser):
         self.image_alts = []
         self.image_alt_presence = []
         self.links = []
+        self.video_sources = []
+        self.caption_tracks = []
         self.card_items = []
         self._article_stack = []
         self.meta = {}
@@ -67,6 +69,10 @@ class SitePage(HTMLParser):
             self.image_alt_presence.append(bool(attrs.get("alt")))
         if tag == "a":
             self.links.append(attrs.get("href", ""))
+        if tag == "source" and attrs.get("type", "").startswith("video/"):
+            self.video_sources.append(attrs.get("src", ""))
+        if tag == "track" and attrs.get("kind") == "captions":
+            self.caption_tracks.append((attrs.get("src", ""), attrs.get("srclang", "")))
         if tag == "article":
             self._article_stack.append([attrs.get("id", ""), 0])
         if tag == "li" and self._article_stack:
@@ -250,6 +256,16 @@ def main():
                 errors.append(f"{path}: missing image {src}")
             elif target and target.stat().st_size > 1_000_000:
                 errors.append(f"{path}: displayed image exceeds 1 MB: {src}")
+        for src in page.video_sources:
+            target, _ = local_target(path, src)
+            if target and not target.is_file():
+                errors.append(f"{path}: missing video {src}")
+        for src, language in page.caption_tracks:
+            target, _ = local_target(path, src)
+            if target and not target.is_file():
+                errors.append(f"{path}: missing captions {src}")
+            if path.parent.name in LANGUAGES and language != path.parent.name:
+                errors.append(f"{path}: captions language {language} differs from page language")
 
     for path, page in list(parsed.items()):
         for href in page.links:

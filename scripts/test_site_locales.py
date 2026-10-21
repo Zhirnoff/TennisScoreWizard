@@ -1,8 +1,11 @@
 """Regression tests for the site's English-first localization check."""
 
+from html import escape, unescape
+import json
+import re
 import unittest
 
-from check_site_locales import DOCS, SitePage, matching_link, readme_releases, release_record_path
+from check_site_locales import DOCS, LANGUAGES, SitePage, matching_link, readme_releases, release_record_path
 
 
 def page(html):
@@ -33,9 +36,54 @@ class LocalizationCheckTests(unittest.TestCase):
         self.assertEqual(parsed.image_candidates,
                          ["photo-720.webp", "photo-1080.webp"])
 
+    def test_video_captions_exist_for_every_locale(self):
+        for locale in LANGUAGES:
+            parsed = page((DOCS / locale / "index.html").read_text())
+            self.assertEqual(len(parsed.video_sources), 3)
+            self.assertEqual(len(parsed.caption_tracks), 3)
+            self.assertIn("../assets/site-refresh-en-20261021/watch-time-machine-30s.mp4", parsed.video_sources)
+            for source, language in parsed.caption_tracks:
+                with self.subTest(locale=locale, source=source):
+                    self.assertEqual(language, locale)
+                    captions = DOCS / locale / source
+                    self.assertTrue(captions.is_file())
+                    self.assertTrue(captions.read_text().startswith("WEBVTT\n"))
+
     def test_arabic_page_direction_is_read(self):
         parsed = page('<html lang="ar" dir="rtl"><body>مرحبا</body></html>')
         self.assertEqual((parsed.lang, parsed.direction), ("ar", "rtl"))
+
+    def test_wallet_widget_retains_localized_labels(self):
+        for locale in LANGUAGES:
+            content = (DOCS / locale / "index.html").read_text()
+            for attribute in ("copy-label", "copied-label", "copy-failed-label",
+                              "show-qr-label", "qr-code-label", "qr-instruction"):
+                with self.subTest(locale=locale, attribute=attribute):
+                    match = re.search(r'data-' + attribute + r'="([^"]+)"', content)
+                    self.assertIsNotNone(match)
+                    if attribute == "copy-label":
+                        self.assertNotEqual(match.group(1), "Copy")
+
+    def test_tip_cards_keep_app_store_as_a_store_name(self):
+        for locale in LANGUAGES:
+            content = (DOCS / locale / "index.html").read_text()
+            labels = re.findall(
+                r'<span class="development-support-option">[^<]*<strong>([^<]*)</strong>',
+                content,
+            )
+            with self.subTest(locale=locale):
+                self.assertEqual(labels, ["App Store"] * 3)
+
+    def test_score_examples_do_not_glue_words_to_digits(self):
+        spaced_languages = ("de", "es", "fr", "it", "nl", "pt-BR", "ru", "tr", "ar")
+        for locale in spaced_languages:
+            for page_name in ("index", "help", "privacy"):
+                content = (DOCS / locale / f"{page_name}.html").read_text()
+                with self.subTest(locale=locale, page=page_name):
+                    self.assertNotRegex(
+                        content,
+                        r'<span class="score-nowrap">[^<]+</span>[^\W\d_]',
+                    )
 
     def test_arabic_language_picker_opens_into_the_viewport(self):
         css = (DOCS / "release-1-1.css").read_text()
@@ -103,6 +151,52 @@ class LocalizationCheckTests(unittest.TestCase):
                 for phrase in phrases:
                     with self.subTest(locale=locale, page=page_name, phrase=phrase):
                         self.assertNotIn(phrase, content)
+
+    def test_watch_time_machine_copy_matches_reviewed_localizations(self):
+        translations = json.loads((DOCS.parent / "scripts" / "site_2_0_translations.json").read_text())
+        for locale in LANGUAGES:
+            content = (DOCS / locale / "index.html").read_text()
+            updates = (DOCS / locale / "whats-new.html").read_text()
+            data = translations[locale]
+            with self.subTest(locale=locale):
+                self.assertTrue(f'<h3>{escape(data["spot_replay_title"], quote=False)}</h3>' in content,
+                                f"{locale}: spotlight replay title differs from translation source")
+                self.assertTrue(f'<p>{escape(data["spot_replay_copy"], quote=False)}</p>' in content,
+                                f"{locale}: spotlight replay copy differs from translation source")
+                self.assertTrue(f'<h3>{escape(data["tm_watch_title"], quote=False)}</h3>' in content,
+                                f"{locale}: Watch replay title differs from translation source")
+                self.assertIn(data["updates_pro_media2_caption"], updates)
+
+    def test_awkward_literal_watch_copy_does_not_return(self):
+        forbidden = {
+            "ru": ("Каждое очко снова на запястье", "Повтор прямо на запястье",
+                   "Всё, что вам нужно. Прямо на вашем запястье"),
+            "zh-Hans": ("再见那场难忘的比赛",),
+            "tr": ("Bileğinizde saklandı.",),
+            "ar": ("على كلتا ساعتي التطبيق", "القصة تناسب معصمك"),
+        }
+        for locale, phrases in forbidden.items():
+            for page_name in ("index", "whats-new", "help", "privacy"):
+                content = (DOCS / locale / f"{page_name}.html").read_text()
+                for phrase in phrases:
+                    with self.subTest(locale=locale, page=page_name, phrase=phrase):
+                        self.assertNotIn(phrase, content)
+
+    def test_stopped_match_faq_uses_current_rule_without_duplicate(self):
+        translations = json.loads((DOCS.parent / "scripts" / "site_2_0_translations.json").read_text())
+        for locale in LANGUAGES:
+            answer = translations[locale]["help_stopped_a"]
+            detail_answer = translations[locale]["help_stopped_detail_a"]
+            home = unescape((DOCS / locale / "index.html").read_text())
+            help_page = unescape((DOCS / locale / "help.html").read_text())
+            history_help = re.search(r'<section id="match-history">.*?</section>', help_page, re.S)
+            with self.subTest(locale=locale):
+                self.assertIsNotNone(history_help)
+                self.assertTrue(f"<p>{answer}</p>" in home,
+                                f"{locale}: homepage stopped-match answer differs")
+                self.assertTrue(f"<p>{detail_answer}</p>" in history_help.group(),
+                                f"{locale}: Help stopped-match answer differs")
+                self.assertEqual(history_help.group().count('<div class="help-item">'), 13)
 
     def test_localized_stat_examples_keep_the_english_numerators(self):
         for locale in ("pt-BR", "nl", "ar", "zh-Hant"):

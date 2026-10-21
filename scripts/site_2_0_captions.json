@@ -1,0 +1,54 @@
+{
+  "ru": {
+    "watch": ["Табло Apple Watch: пульс 126 уд/мин в демонстрации. Каждый счёт перелистывается со звуком.","У обоих игроков по 40; счёт сетов остаётся на экране.","Ровно: 40–40.","По ходу розыгрышей преимущество переходит от одного игрока к другому.","Снова ровно, затем преимущество получает игрок You."],
+    "phone": ["Time Machine начинает запись с начала матча. До первого очка в карточках сетов стоят прочерки.","Запись идёт по очкам: вместе меняются счёт, сеты и игровой моментум.","При перелистывании со звуком появляются «Ровно» и «Больше».","Ползунок переносит линию матча и график Match Flow к другому очку.","Просмотр продолжается горизонтально: счёт и моментум расположены рядом."]
+  },
+  "de": {
+    "watch": ["Apple-Watch-Anzeige mit einem für die Demo simulierten Puls von 126 Schlägen pro Minute. Jeder Punkt klappt hörbar um.","Beide erreichen 40; der Satzstand bleibt sichtbar.","Einstand: 40–40.","Der Vorteil wechselt im Spiel zwischen den beiden Seiten.","Wieder Einstand, dann erhält You erneut Vorteil."],
+    "phone": ["Time Machine beginnt am Anfang eines gespeicherten Matches. Vor dem ersten Punkt zeigen die Satzfelder Striche.","Die Wiedergabe folgt den Punkten: Spielstand, Satzfelder und Game Momentum ändern sich gemeinsam.","Einstand und Vorteil erscheinen beim Weiterschalten mit dem Klang der Klappanzeige.","Der Regler springt mit Zeitleiste und Match-Flow-Kurve zu einem anderen Punkt.","Im Querformat geht die Wiedergabe weiter; Spielstand und Momentum liegen nebeneinander."]
+  },
+  "fr": {
+    "watch": ["Tableau Apple Watch avec une fréquence cardiaque simulée à 126 battements par minute. Chaque point bascule avec un son.","Les deux joueurs atteignent 40 ; le score des sets reste visible.","Égalité : 40–40.","L’avantage change de camp pendant le jeu.","Retour à l’égalité, puis You reprend l’avantage."],
+    "phone": ["Time Machine démarre au début d’un match enregistré. Avant le premier point, les cases des sets affichent des tirets.","Le replay suit les points : score, sets et élan du jeu évoluent ensemble.","Égalité et avantage apparaissent au fil du replay, avec le son du score qui bascule.","Le curseur déplace la chronologie et la courbe Match Flow vers un autre point.","Le replay continue en paysage, avec le score et l’élan côte à côte."]
+  },
+  "es": {
+    "watch": ["Marcador del Apple Watch con una frecuencia cardíaca simulada de 126 pulsaciones por minuto. Cada punto cambia con sonido.","Ambos jugadores llegan a 40; el resultado de los sets sigue visible.","Iguales: 40–40.","La ventaja cambia de lado durante el juego.","Vuelven los iguales y luego You recupera la ventaja."],
+    "phone": ["Time Machine empieza al inicio de un partido guardado. Antes del primer punto, las casillas de los sets muestran guiones.","La repetición avanza punto a punto: cambian juntos el marcador, los sets y el impulso del juego.","Aparecen iguales y ventaja mientras avanza la repetición, con el sonido del marcador.","El control deslizante mueve la cronología y la línea Match Flow a otro punto.","La repetición continúa en horizontal, con el marcador y el impulso uno junto al otro."]
+  },
+  "it": {
+    "watch": ["Tabellone su Apple Watch con frequenza cardiaca simulata di 126 battiti al minuto. Ogni punto cambia con un suono.","Entrambi arrivano a 40; il punteggio dei set resta visibile.","Parità: 40–40.","Il vantaggio passa da un giocatore all’altro durante il game.","Torna la parità, poi You conquista di nuovo il vantaggio."],
+    "phone": ["Time Machine parte dall’inizio di un incontro salvato. Prima del primo punto, i riquadri dei set mostrano dei trattini.","Il replay scorre punto per punto: punteggio, set e andamento del game cambiano insieme.","Nel replay compaiono parità e vantaggio, accompagnati dal suono del tabellone.","Il cursore sposta la cronologia e la linea Match Flow su un altro punto.","Il replay continua in orizzontale, con punteggio e andamento affiancati."]
+  },
+  "pt-BR": {
+    "watch": ["Placar no Apple Watch com frequência cardíaca simulada de 126 batimentos por minuto. Cada ponto vira com som.","Os dois jogadores chegam a 40; o placar dos sets continua visível.","Iguais: 40–40.","A vantagem muda de lado durante o game.","Volta a iguais, e então You ganha a vantagem novamente."],
+    "phone": ["A Time Machine começa no início de uma partida salva. Antes do primeiro ponto, os quadros dos sets mostram traços.","O replay avança ponto a ponto: placar, sets e ritmo do game mudam juntos.","Iguais e vantagem aparecem conforme o replay avança, com o som da virada do placar.","O controle deslizante leva a linha do tempo e o gráfico Match Flow a outro ponto.","O replay continua na horizontal, com placar e ritmo lado a lado."]
+  },
+  "nl": {
+    "watch": ["Scorebord op Apple Watch met een voor de demo gesimuleerde hartslag van 126 slagen per minuut. Elk punt klapt om met geluid.","Beide spelers komen op 40; de setstand blijft in beeld.","Deuce: 40–40.","Het voordeel wisselt tijdens het spel van kant.","Opnieuw deuce; daarna krijgt You weer voordeel."],
+    "phone": ["Time Machine begint bij de start van een opgeslagen wedstrijd. Voor het eerste punt tonen de setvakjes streepjes.","De herhaling loopt punt voor punt: score, setvakjes en spelmomentum veranderen samen.","Deuce en voordeel verschijnen tijdens het terugkijken, met het geluid van de omslaande score.","De schuifregelaar verplaatst de tijdlijn en de Match Flow-lijn naar een ander punt.","De herhaling gaat verder in liggende stand, met score en momentum naast elkaar."]
+  },
+  "tr": {
+    "watch": ["Apple Watch skor ekranında demo için 126 atım/dk olarak canlandırılmış nabız görünür. Her puan sesle çevrilir.","İki oyuncu da 40’a ulaşır; set skoru ekranda kalır.","Beraberlik: 40–40.","Oyun sürerken avantaj taraf değiştirir.","Yeniden beraberlik; ardından avantaj tekrar You tarafına geçer."],
+    "phone": ["Time Machine kayıtlı maçın başından başlar. İlk puandan önce set kutularında çizgi görünür.","Tekrar puan puan ilerler; skor, set kutuları ve oyun momentumu birlikte değişir.","Skor çevirme sesiyle birlikte beraberlik ve avantaj durumları görünür.","Kaydırıcı, maç zaman çizelgesini ve Match Flow çizgisini başka bir puana taşır.","Tekrar yatay görünümde sürer; skor ve momentum yan yana görünür."]
+  },
+  "ja": {
+    "watch": ["Apple Watchのスコアボード。デモ用に再現した心拍数は毎分126回。ポイントごとに音とともに表示が切り替わります。","両者が40に到達しても、セットのスコアは表示されたままです。","デュース：40–40。","ラリーが続く中、アドバンテージが相手側へ移ります。","再びデュースになり、Youがアドバンテージを取り返します。"],
+    "phone": ["Time Machineは保存された試合の開始時点から始まります。最初のポイント前はセット欄に横線が表示されます。","記録したポイントを順に再生し、スコア、セット欄、ゲームの流れが一緒に変わります。","スコアが音とともに切り替わり、デュースとアドバンテージが現れます。","スライダーを動かすと、タイムラインとMatch Flowの線が別のポイントへ移ります。","横向きにしても再生は続き、スコアと流れが並んで表示されます。"]
+  },
+  "ko": {
+    "watch": ["Apple Watch 점수판에 시연용으로 만든 분당 126회의 심박수가 표시됩니다. 각 포인트는 소리와 함께 뒤집힙니다.","두 선수 모두 40점에 이르러도 세트 점수는 계속 보입니다.","듀스: 40–40.","경기가 계속되면서 어드밴티지가 반대쪽으로 넘어갑니다.","다시 듀스가 된 뒤 You가 어드밴티지를 되찾습니다."],
+    "phone": ["Time Machine은 저장된 경기의 시작부터 재생합니다. 첫 포인트 전에는 세트 칸에 대시가 표시됩니다.","기록된 포인트를 따라 점수, 세트 칸과 게임 흐름이 함께 바뀝니다.","점수판 넘기는 소리와 함께 듀스와 어드밴티지가 나타납니다.","슬라이더를 움직이면 타임라인과 Match Flow 선이 다른 포인트로 이동합니다.","가로 화면에서도 재생이 이어지고 점수와 흐름이 나란히 보입니다."]
+  },
+  "zh-Hans": {
+    "watch": ["Apple Watch 记分牌显示演示用的每分钟 126 次心率。每一分都伴着声音翻动。","双方都来到 40 分，盘数比分仍清晰可见。","平分：40–40。","比赛继续，优势方发生变化。","再次平分，随后 You 重新取得优势。"],
+    "phone": ["Time Machine 从已保存比赛的起点开始。第一分之前，盘数卡片显示横线。","回放逐分推进，比分、盘数卡片和局势同步变化。","伴着翻牌声，回放中出现平分和优势。","拖动滑块，时间轴和 Match Flow 曲线一起跳到另一分。","回放在横屏下继续，比分和比赛走势并排呈现。"]
+  },
+  "zh-Hant": {
+    "watch": ["Apple Watch 計分板顯示示範用的每分鐘 126 次心率。每一分都伴著聲音翻動。","雙方都來到 40 分，盤數比分仍清楚可見。","平分：40–40。","比賽繼續，優勢方隨之改變。","再次平分，隨後 You 重新取得優勢。"],
+    "phone": ["Time Machine 從已儲存比賽的起點開始。第一分之前，盤數卡片顯示橫線。","重播逐分推進，比分、盤數卡片和局勢同步變化。","伴著翻牌聲，重播中出現平分和優勢。","拖動滑桿，時間軸和 Match Flow 曲線一起跳到另一分。","重播在橫向畫面下繼續，比分和比賽走勢並排呈現。"]
+  },
+  "ar": {
+    "watch": ["تعرض لوحة Apple Watch نبضًا تجريبيًا محاكى يبلغ 126 نبضة في الدقيقة. يتقلب عرض كل نقطة مع صوت.","يصل اللاعبان إلى 40 وتبقى نتيجة المجموعات ظاهرة.","تعادل: 40–40.","تنتقل الأفضلية من جانب إلى آخر مع استمرار اللعب.","يعود التعادل، ثم يستعيد You الأفضلية."],
+    "phone": ["يبدأ Time Machine من بداية مباراة محفوظة. قبل النقطة الأولى، تظهر شرطات في بطاقات المجموعات.","تتقدم الإعادة عبر النقاط المسجلة، فتتغير النتيجة وبطاقات المجموعات وزخم اللعب معًا.","يظهر التعادل والأفضلية أثناء الإعادة مع صوت تقلب النتيجة.","ينقل شريط التمرير الخط الزمني ومنحنى Match Flow إلى نقطة أخرى.","تستمر الإعادة بالوضع الأفقي، وتظهر النتيجة والزخم جنبًا إلى جنب."]
+  }
+}

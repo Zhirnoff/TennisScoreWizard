@@ -1,0 +1,55 @@
+/* English-first editorial refresh. Created by Mikhail Zhirnov on 21.10.2026. */
+.hero-copy h1 { text-wrap: balance; }
+.hero-copy > p, .section-subtitle, .section-heading > p,
+.release-next-heading > p, .release-spotlight-heading > p {
+  text-wrap: pretty;
+}
+.help-item p, .faq p { overflow-wrap: break-word; }
+.help-item strong { text-wrap: pretty; }
+.help-item p + p { margin-top: .75em; }
+.help-item ol, .help-item ul { padding-inline-start: 1.4em; }
+.help-item li + li { margin-top: .5em; }
+.result-win { color: #28ff5f; }
+.result-loss { color: #ff4b55; }
+.result-tie { color: #ffe34d; }
+.score-nowrap { white-space: nowrap; }
+.media-provenance {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: #c3c9c5;
+  max-width: 72ch;
+  margin: 1.5rem auto 0;
+}
+.release-spotlight-card video { max-width: 100%; object-fit: contain; }
+.updates-latest-release li { padding-inline-start: .15em; }
+.updates-latest-release li + li { margin-top: .85em; }
+.privacy-content p { text-wrap: pretty; }
+#history-files > div { min-width: 0; }
+#history-files .release-history-files-shot {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  box-sizing: border-box;
+}
+#history-files .release-history-files-shot img {
+  position: static;
+  top: auto;
+  max-width: 100%;
+  border-radius: 20px;
+}
+.icloud-ui-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+}
+.icloud-ui-proof img {
+  width: auto;
+  max-width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .hero-copy h1 { font-size: clamp(2.1rem, 10.8vw, 3.3rem); }
+  .help-item p { line-height: 1.65; }
+}

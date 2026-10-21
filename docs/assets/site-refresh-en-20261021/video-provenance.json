@@ -1,0 +1,45 @@
+{
+  "prepared": "2026-10-21",
+  "source": "appstore-refresh-20261020/video/time-machine-landscape-30s-cbr-v2.mp4",
+  "sourceBuild": "Pro 74",
+  "content": "Real simulator recording using synthetic demonstration match data",
+  "output": "iphone-time-machine-30s.mp4",
+  "durationSeconds": 30,
+  "width": 1920,
+  "height": 886,
+  "processing": "H.264 web compression; original UI and audio retained; poster extracted at 2 seconds",
+  "captions": "iphone-time-machine.en.vtt",
+  "historicalAssets": "Existing videos and non-English references are not overwritten",
+  "watch": {
+    "captured": "2026-10-21",
+    "build": "Pro 75",
+    "device": "Dedicated demonstration Apple Watch Series 11 46mm, watchOS 26.5",
+    "scoring": {
+      "source": "raw/watch-video/watch-score-take1.mov",
+      "output": "watch-score-30s.mp4",
+      "sourceTrimSeconds": 3,
+      "sourceDurationSeconds": 40,
+      "outputDurationSeconds": 30,
+      "playbackRate": 1.3333333333,
+      "content": "Real taps change the score through 30–30, 40–30, Deuce, Advantage and Deuce again; heart-rate value is a synthetic demo reading"
+    },
+    "replay": {
+      "source": "raw/watch-video/watch-time-machine-take1.mov",
+      "output": "watch-time-machine-30s.mp4",
+      "sourceTrimSeconds": 6,
+      "outputDurationSeconds": 30,
+      "playbackRate": 1,
+      "content": "Real arrow taps revisit a set tie-break through its final 15–13 points and 7–6 games"
+    },
+    "processing": "H.264 web compression and extracted posters. UI pixels are not retouched. Original MatchFlap.wav application sound is synchronized to recorded action timestamps at the app's 0.30 gain; the simulator recorder itself does not capture audio. Original takes and action logs are retained in task artifacts.",
+    "captions": ["watch-score.en.vtt", "watch-time-machine.en.vtt"]
+  },
+  "watchFaces": {
+    "status": "Not used on the website. Original complication_accessory_corner.webp and complication_accessory_circular.webp restored at the user's request; no further face changes requested.",
+    "captured": "2026-10-21",
+    "build": "Pro 75",
+    "corner": "World Time with the actual Tennis Score Wizard Pro accessoryCorner widget",
+    "circular": "Meridian with the actual Tennis Score Wizard Pro accessoryCircular widget in its left slot",
+    "processing": "Real full-face simulator captures, resized/compressed as WebP only. System rendering controls each face's widget tint. No application code changed."
+  }
+}

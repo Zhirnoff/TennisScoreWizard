@@ -113,7 +113,10 @@ h1 em { color: var(--green); font-style: normal; }
   background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.015));
   box-shadow: 0 44px 100px rgba(0, 0, 0, .55), 0 0 60px rgba(39, 242, 90, .10);
 }
-.hero-visual img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; border-radius: 24px; }
+.hero-device-pair { position: relative; display: grid; place-items: center; min-height: 560px; padding: 26px 18px 76px; border-radius: 24px; background: radial-gradient(circle at 70% 30%, rgba(39,242,90,.18), transparent 56%), #020803; }
+.hero-device-pair img { display: block; max-width: 100%; height: auto; object-fit: contain; }
+.hero-device-pair .hero-phone { width: min(58%, 300px); margin-left: 27%; border-radius: 35px; box-shadow: 0 22px 55px #000; }
+.hero-device-pair .hero-watch { position: absolute; bottom: 12%; left: 5%; width: min(49%, 250px); filter: drop-shadow(0 20px 28px #000); }
 .hero-visual figcaption {
   position: absolute;
   inset: auto 28px 28px;
@@ -209,7 +212,7 @@ footer a:hover { color: white; }
   .requirements { max-width: 260px; }
   .trust-list { display: grid; gap: 8px; text-align: left; }
   .hero-visual { padding: 8px; border-radius: 24px; }
-  .hero-visual img { border-radius: 17px; }
+  .hero-device-pair { min-height: 450px; padding-bottom: 64px; border-radius: 17px; }
   .hero-visual figcaption { inset: auto 18px 18px; }
   .proof { padding: 88px 0 74px; }
   .screens figure { display: block; }

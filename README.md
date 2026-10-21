@@ -9,9 +9,11 @@ This repository contains the public website, Help Center, Privacy Policy, releas
 - **Standalone** — the complete Apple Watch-only tennis scorekeeper
 - **Pro** — Apple Watch scoring plus an iPhone app for played-match entry, match history, Rivalries, statistics, period recaps, and sharing
 
-Current website versions: Pro 1.8 · Standalone 1.11
+Current website versions: Pro 2.0 · Standalone 2.0
 
-The published pages describe month and year recaps on both Watch apps, expanded recaps and shareable cards in Pro on iPhone, period comparisons, achievements, Match Flow and Momentum, and the existing history export and backup tools. Website content and App Store approval are separate; the developer controls app submissions and releases.
+The 2.0 website includes the approved English edition and all thirteen aligned translations, refreshed demonstration media, expanded Help and reviewed accessibility text. Website publication and App Store approval are separate; this repository does not establish the apps' review or release status.
+
+The English 2.0 site adds an immediately visible latest-release spotlight, Watch scoring, iPhone Time Machine, and Watch Time Machine videos, Time Machine details, and current score displays while preserving month and year recaps on both Watch apps, expanded recaps and shareable cards in Pro on iPhone, period comparisons, achievements, Match Flow and Momentum, and the existing history export and backup tools. Website content and App Store approval are separate; the developer controls app submissions and releases.
 
 Live website: https://zhirnoff.github.io/TennisScoreWizard/
 
@@ -37,7 +39,8 @@ The site supports English, German, Spanish, French, Italian, Japanese, Korean, R
 - Product Updates includes release details and screenshots for the latest Pro and Standalone versions. Older releases remain in the history.
 - Help explains recaps, match history, manual match editing, Match Flow, sharing, and related features. Privacy describes the site's analytics and the apps' data handling.
 - All four main pages are available in fourteen languages. English is the content and structure reference; translations should be natural to native readers while preserving the same facts, links, screenshots, and accessibility information.
-- The [website release history](release-history/README.md) keeps implementation and asset provenance, including the [current 1.8/1.11 website record](release-history/RELEASE-1.8-1.11-WEBSITE.md).
+- The [website release history](release-history/README.md) keeps implementation and asset provenance, including the [2.0 website release record](release-history/RELEASE-2.0-2.0-WEBSITE.md) and the [earlier 1.8/1.11 website record](release-history/RELEASE-1.8-1.11-WEBSITE.md).
+- The [website release workflow](WEBSITE_RELEASE_WORKFLOW.md) defines where future announcements, permanent feature sections, videos, and older release notes belong.
 
 ## Local preview
 
