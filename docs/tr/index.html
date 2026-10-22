@@ -3911,5 +3911,12 @@ footer {
 })();
 </script>
 <script defer src="../analytics.js"></script>
+<script>
+if (new URLSearchParams(location.search).get('video-check') === '1') {
+  const diagnostics = document.createElement('script');
+  diagnostics.src = '../video-diagnostics.js?v=20261022-1';
+  document.body.append(diagnostics);
+}
+</script>
 </body>
 </html>
