@@ -21,35 +21,6 @@
   margin: 1.5rem auto 0;
 }
 .release-spotlight-card video { max-width: 100%; object-fit: contain; }
-.inline-video-player { position: relative; }
-.inline-video-start {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  border-radius: 17px;
-  color: #fff;
-  background: transparent;
-  cursor: pointer;
-  touch-action: manipulation;
-}
-.inline-video-start[hidden] { display: none; }
-.inline-video-start span {
-  display: grid;
-  place-items: center;
-  width: 64px;
-  height: 64px;
-  padding-left: 4px;
-  border: 1px solid rgba(255,255,255,.25);
-  border-radius: 50%;
-  background: rgba(25,29,26,.9);
-  font-size: 30px;
-  line-height: 1;
-}
-.inline-video-start:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
 .updates-latest-release li { padding-inline-start: .15em; }
 .updates-latest-release li + li { margin-top: .85em; }
 .privacy-content p { text-wrap: pretty; }

@@ -49,6 +49,10 @@ class LocalizationCheckTests(unittest.TestCase):
                     self.assertTrue(captions.is_file())
                     self.assertTrue(captions.read_text().startswith("WEBVTT\n"))
 
+    def test_native_video_source_is_checked(self):
+        parsed = page('<video controls src="demo.mp4"></video>')
+        self.assertEqual(parsed.video_sources, ["demo.mp4"])
+
     def test_arabic_page_direction_is_read(self):
         parsed = page('<html lang="ar" dir="rtl"><body>مرحبا</body></html>')
         self.assertEqual((parsed.lang, parsed.direction), ("ar", "rtl"))

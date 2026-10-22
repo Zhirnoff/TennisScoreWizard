@@ -71,6 +71,8 @@ class SitePage(HTMLParser):
             self.links.append(attrs.get("href", ""))
         if tag == "source" and attrs.get("type", "").startswith("video/"):
             self.video_sources.append(attrs.get("src", ""))
+        if tag == "video" and attrs.get("src"):
+            self.video_sources.append(attrs["src"])
         if tag == "track" and attrs.get("kind") == "captions":
             self.caption_tracks.append((attrs.get("src", ""), attrs.get("srclang", "")))
         if tag == "article":
