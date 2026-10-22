@@ -13,7 +13,9 @@ for (const locale of locales) {
   const videos = [...html.matchAll(/<video\b([^>]*)>([\s\S]*?)<\/video>/g)];
   assert.equal(videos.length, 3, locale + ': keep all three videos');
   assert.doesNotMatch(html, /video-player\.js|inline-video-start|inline-video-player/);
-  assert.match(html, /english-refresh\.css\?v=20261022-native-video/);
+  assert.match(html, /english-refresh\.css\?v=20261022-system-video/);
+  assert.match(html, /video-links\.js\?v=20261022-system-video/);
+  assert.doesNotMatch(html, /video-diagnostics|video-check/);
   for (const [, attrs, content] of videos) {
     assert.match(attrs, /\bcontrols\b/, 'Use native browser controls');
     assert.match(attrs, /\bplaysinline\b/, 'Keep playback inside the page');
